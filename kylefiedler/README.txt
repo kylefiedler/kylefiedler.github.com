@@ -1,1 +1,0 @@
-This is the code for my new site use and abuse how you like.
