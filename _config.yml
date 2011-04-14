@@ -1,2 +1,3 @@
+permalink: /writing/:title
 exclude:
 - README
