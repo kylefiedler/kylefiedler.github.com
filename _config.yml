@@ -1,3 +1,5 @@
 permalink: /writing/:title
+auto: true
+lsi: true
 exclude:
 - README
