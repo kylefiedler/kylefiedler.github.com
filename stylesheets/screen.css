@@ -1,0 +1,64 @@
+/*
+Syntax error: Invalid CSS after "$body: ": expected expression (e.g. 1px, bold), was ";"
+        on line 73 of stylesheets/sass/./_base.scss
+        from line 1 of stylesheets/sass/screen.scss
+
+68: }
+69: 
+70: 
+71: /* Variables
+72: ---------------------------------------- */
+73: $body: ;
+74: $header: ;
+75: 
+76: $unit: ;
+77: $gutter: ;
+
+Backtrace:
+stylesheets/sass/./_base.scss:73
+stylesheets/sass/screen.scss:1
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:838:in `expected'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/lexer.rb:193:in `expected!'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/parser.rb:377:in `assert_expr'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/parser.rb:49:in `parse'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:765:in `send'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:765:in `sass_script'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:314:in `variable'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:356:in `block_child'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:350:in `block_contents'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:57:in `stylesheet'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:26:in `parse'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/engine.rb:213:in `_to_tree'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/engine.rb:178:in `to_tree'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/files.rb:44:in `tree_for'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/import_node.rb:75:in `perform!'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:305:in `_perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/import_node.rb:64:in `_perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:213:in `perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:37:in `perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `perform_children'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `map'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `perform_children'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:317:in `perform!'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:305:in `_perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:213:in `perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:37:in `perform'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:29:in `render'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:223:in `update_stylesheet'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:75:in `update_stylesheets'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:73:in `each'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:73:in `update_stylesheets'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:142:in `watch'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:457:in `watch_or_update'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:360:in `process_result'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:41:in `parse'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:21:in `parse!'
+/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/sass:8
+/usr/local/bin/sass:19:in `load'
+/usr/local/bin/sass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"$body: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 73 of stylesheets/sass/./_base.scss\A         from line 1 of stylesheets/sass/screen.scss\A \A 68: }\A 69: \A 70: \A 71: /* Variables\A 72: ---------------------------------------- */\A 73: $body: ;\A 74: $header: ;\A 75: \A 76: $unit: ;\A 77: $gutter: ;"; }
