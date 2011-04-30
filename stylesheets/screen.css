@@ -1,64 +1,200 @@
-/*
-Syntax error: Invalid CSS after "$body: ": expected expression (e.g. 1px, bold), was ";"
-        on line 73 of stylesheets/sass/./_base.scss
-        from line 1 of stylesheets/sass/screen.scss
+/* CSS Reset
+---------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-68: }
-69: 
-70: 
-71: /* Variables
-72: ---------------------------------------- */
-73: $body: ;
-74: $header: ;
-75: 
-76: $unit: ;
-77: $gutter: ;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-Backtrace:
-stylesheets/sass/./_base.scss:73
-stylesheets/sass/screen.scss:1
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:838:in `expected'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/lexer.rb:193:in `expected!'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/parser.rb:377:in `assert_expr'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/script/parser.rb:49:in `parse'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:765:in `send'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:765:in `sass_script'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:314:in `variable'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:356:in `block_child'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:350:in `block_contents'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:57:in `stylesheet'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/scss/parser.rb:26:in `parse'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/engine.rb:213:in `_to_tree'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/engine.rb:178:in `to_tree'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/files.rb:44:in `tree_for'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/import_node.rb:75:in `perform!'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:305:in `_perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/import_node.rb:64:in `_perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:213:in `perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:37:in `perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `map'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:327:in `perform_children'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:317:in `perform!'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:59:in `perform!'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:305:in `_perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/node.rb:213:in `perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:37:in `perform'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/tree/root_node.rb:29:in `render'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:223:in `update_stylesheet'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:75:in `update_stylesheets'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:73:in `each'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:73:in `update_stylesheets'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/sass/plugin.rb:142:in `watch'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:457:in `watch_or_update'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:360:in `process_result'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:41:in `parse'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/../lib/haml/exec.rb:21:in `parse!'
-/Users/kylefiedler/.gem/ruby/1.8/gems/haml-3.0.25/bin/sass:8
-/usr/local/bin/sass:19:in `load'
-/usr/local/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"$body: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 73 of stylesheets/sass/./_base.scss\A         from line 1 of stylesheets/sass/screen.scss\A \A 68: }\A 69: \A 70: \A 71: /* Variables\A 72: ---------------------------------------- */\A 73: $body: ;\A 74: $header: ;\A 75: \A 76: $unit: ;\A 77: $gutter: ;"; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* Mixins
+---------------------------------------- */
+/* this hack is courtesy of gbbowers on github
+   https://gist.github.com/601810 */
+/* Variables
+---------------------------------------- */
+/*fonts*/
+/*grid*/
+/*colors*/
+/* Extended classes
+---------------------------------------- */
+/* Clearfix hack I love you */
+.clearfix:after, header.main:after, footer.main:after, #primary-row:after, #primary-row section:after, #secondary-row:after, #tertiary-row:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix, header.main, footer.main, #primary-row, #primary-row section, #secondary-row, #tertiary-row {
+  display: inline-block; }
+
+/* Hide from IE Mac \*/
+.clearfix, header.main, footer.main, #primary-row, #primary-row section, #secondary-row, #tertiary-row {
+  display: block; }
+
+/* End hide from IE Mac */
+.wrapper, header.main, footer.main, #main-header, #primary-row, #secondary-row, #tertiary-row {
+  width: 1224px;
+  text-align: left;
+  margin: 0 auto; }
+
+/* Base styles
+---------------------------------------- */
+body {
+  text-align: center;
+  font: 14px "Helvetica";
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4); }
+
+h2 {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
+header.main {
+  background: rgba(136, 200, 129, 0.9);
+  padding: 30px 24px;
+  width: 1176px; }
+  header.main nav h1 {
+    float: left;
+    display: block; }
+    header.main nav h1 a {
+      color: #fff; }
+  header.main nav ul {
+    list-style: none;
+    float: right; }
+    header.main nav ul li {
+      float: left;
+      display: block; }
+      header.main nav ul li a {
+        color: #fff; }
+
+footer.main p {
+  float: left; }
+footer.main ul {
+  float: right;
+  list-style: none; }
+  footer.main ul li {
+    float: left;
+    padding-right: 12px; }
+    footer.main ul li a {
+      display: inline-block;
+      padding-right: 12px; }
+
+#main-header {
+  padding: 260px 0 76px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.15); }
+  #main-header h1 {
+    font: italic bold 56px "Georgia";
+    line-height: 60px;
+    color: #fff;
+    padding: 20px 5px;
+    background: rgba(60, 123, 53, 0.8);
+    display: inline-block; }
+
+#primary-row {
+  margin-top: 40px; }
+  #primary-row section {
+    width: 184px;
+    margin-right: 24px;
+    float: left; }
+    #primary-row section#readernaut ul {
+      list-style: none; }
+      #primary-row section#readernaut ul li {
+        max-width: 88px;
+        max-height: 80px;
+        margin: 0 8px 10px 0;
+        float: left;
+        overflow: hidden; }
+        #primary-row section#readernaut ul li:nth-child(even) {
+          margin-right: 0; }
+        #primary-row section#readernaut ul li a {
+          display: block;
+          overflow: hidden; }
+    #primary-row section#flickr div {
+      width: 88px;
+      max-height: 80px;
+      margin: 0 8px 10px 0;
+      float: left;
+      overflow: hidden; }
+      #primary-row section#flickr div:nth-child(even) {
+        margin-right: 0; }
+      #primary-row section#flickr div a {
+        display: block;
+        overflow: hidden; }
+    #primary-row section#posts {
+      margin-right: 0;
+      width: 600px; }
+      #primary-row section#posts ul {
+        list-style: none; }
+        #primary-row section#posts ul li {
+          margin-bottom: 20px; }
+          #primary-row section#posts ul li span {
+            float: right;
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.2); }
+
+#secondary-row {
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 20px -1; }
+  #secondary-row section#dribbble {
+    width: 808px;
+    float: left;
+    margin-right: 24px; }
+    #secondary-row section#dribbble ul {
+      list-style: none; }
+      #secondary-row section#dribbble ul li {
+        width: 392px;
+        max-height: 280px;
+        margin: 0 24px 20px 0;
+        float: left;
+        overflow: hidden; }
+        #secondary-row section#dribbble ul li:nth-child(2n) {
+          margin-right: 0; }
+        #secondary-row section#dribbble ul li a img {
+          width: 392px; }
+  #secondary-row section#tumblr {
+    width: 392px;
+    float: left; }
+    #secondary-row section#tumblr ul {
+      list-style: none; }
+      #secondary-row section#tumblr ul li {
+        margin-bottom: 20px; }
+
+#tertiary-row {
+  margin-top: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 20px -1; }
+  #tertiary-row section#about {
+    width: 808px;
+    float: left;
+    margin-right: 24px; }
+  #tertiary-row section#twitter {
+    width: 392px;
+    float: left; }
+    #tertiary-row section#twitter ul {
+      list-style: none; }

@@ -1,0 +1,161 @@
+#main-header {
+  @extend .wrapper;
+  
+  padding: $lh*13 0 ($lh*4)-(4);
+  border-bottom: 4px solid rgba($base, .15);
+  
+  h1 {
+    font: italic bold 56px $header;
+    line-height: $lh*3;
+    color: #fff;
+    padding: $lh 5px;
+    background: darken(rgba($primary, .8), 30%);
+    display: inline-block;
+  }
+}
+
+#primary-row {
+  @extend .clearfix;
+  @extend .wrapper;
+  margin-top: $lh*2;
+
+  section {
+    @extend .clearfix;
+
+    width: ($unit*2)+($gutter);
+    margin-right: $gutter;
+    float: left;
+    
+    &#lastfm {
+
+    }
+
+    &#readernaut {
+      ul {
+        list-style: none;
+        li {
+          max-width: ($unit)+($gutter/3);
+          max-height: ($lh*4);
+          margin: 0 ($gutter/3) ($lh/2) 0;
+          float: left;
+          overflow: hidden;
+          
+          &:nth-child(even) {
+            margin-right: 0;
+          }
+          
+          a {
+            display: block;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    &#flickr {
+      div {
+        width: ($unit)+($gutter/3);
+        max-height: ($lh*4);
+        margin: 0 ($gutter/3) ($lh/2) 0;
+        float: left;
+        overflow: hidden;
+        
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+        
+        a {
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    
+    &#posts {
+      margin-right: 0;
+      width: ($unit*6)+($gutter*5);
+      
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: $lh;
+          span {
+            float: right;
+            font-style: italic;
+            color: rgba($base, .2);
+          }
+        }
+      }
+    }
+  }
+}
+
+#secondary-row {
+  @extend .clearfix;
+  @extend .wrapper;
+  margin-top: $lh*2;
+  border-top: 1px solid rgba($base, .15);
+  padding-top: ($lh)-1;
+  
+  section#dribbble {
+    width: ($unit*8)+($gutter*7);
+    float: left;
+    margin-right: $gutter;
+    
+    ul {
+      list-style: none;
+      
+      li {
+        width: ($unit*4)+($gutter*3);
+        max-height: ($lh*14);
+        margin: 0 ($gutter) ($lh) 0;
+        float: left;
+        overflow: hidden;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        
+        a {
+          img {
+            width: ($unit*4)+($gutter*3);
+          }
+        }
+      }
+    }
+  }
+  
+  section#tumblr {
+    width: ($unit*4)+($gutter*3);
+    float: left;
+    
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: $lh;
+      }
+    }
+  }
+}
+
+#tertiary-row {
+  @extend .clearfix;
+  @extend .wrapper;
+  margin-top: $lh*2;
+  border-top: 1px solid rgba($base, .15);
+  padding-top: ($lh)-1;
+  
+  section#about {
+    width: ($unit*8)+($gutter*7);
+    float: left;
+    margin-right: $gutter;
+  }
+  
+  section#twitter {
+    width: ($unit*4)+($gutter*3);
+    float: left;
+    
+    ul {
+      list-style: none;
+    }
+  }
+}

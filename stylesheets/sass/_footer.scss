@@ -1,0 +1,21 @@
+footer.main {
+  @extend .clearfix;
+  @extend .wrapper;
+  p {
+    float: left;
+  }
+  
+  ul {
+    float: right;
+    list-style: none;
+    
+    li {
+      float: left;
+      padding-right: $gutter/2;
+      a {
+        display: inline-block;
+        padding-right: $gutter/2;
+      }
+    }
+  }
+}

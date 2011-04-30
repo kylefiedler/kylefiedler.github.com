@@ -1,0 +1,34 @@
+header.main {
+  @extend .wrapper;
+  @extend .clearfix;
+  
+  background: rgba($primary, .9);
+  padding: $lh*1.5 $gutter;
+  width: ($unit*12)+($gutter*11)-($gutter*2);
+  
+  nav {
+    
+    h1 {
+      float: left;
+      display: block;
+      
+      a {
+        color: #fff;
+      }
+    }
+    
+    ul {
+      list-style: none;
+      float: right;
+      
+      li {
+        float: left;
+        display: block;
+        
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
