@@ -63,7 +63,7 @@ input, select {
 ---------------------------------------- */
 body {
   text-align: center;
-  font: 14px "Helvetica";
+  font: 14px "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", serif;
   margin: 0;
   color: rgba(0, 0, 0, 0.4); }
 
@@ -74,46 +74,85 @@ h2 {
   margin-top: 30px;
   margin-bottom: 10px; }
 
+a:link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 20px -1px; }
+a:active {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic; }
+a:visited {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic; }
+a:hover {
+  color: #f3faf8;
+  background: rgba(52, 135, 110, 0.7);
+  border-bottom: 1px solid #2e7862; }
+
 header.main {
   background: rgba(136, 200, 129, 0.9);
-  padding: 30px 24px;
-  width: 1176px; }
+  padding: 30px 48px;
+  width: 1128px;
+  position: relative;
+  -webkit-transform-origin: 100% -100%; }
   header.main nav h1 {
     float: left;
-    display: block; }
+    display: block;
+    font: italic 800 24px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+    line-height: 20px; }
     header.main nav h1 a {
-      color: #fff; }
+      color: #fff;
+      border-bottom: 0; }
+      header.main nav h1 a:hover {
+        background: none;
+        color: #2b5726;
+        text-shadow: 0 1px 0 #aad7a5; }
   header.main nav ul {
     list-style: none;
     float: right; }
     header.main nav ul li {
       float: left;
+      margin-left: 72px;
       display: block; }
       header.main nav ul li a {
-        color: #fff; }
+        color: #fff;
+        font: 400 14px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+        line-height: 20px;
+        border-bottom: 0; }
+        header.main nav ul li a:hover {
+          background: none;
+          color: #2b5726;
+          text-shadow: 0 1px 0 #aad7a5; }
 
-footer.main p {
-  float: left; }
-footer.main ul {
-  float: right;
-  list-style: none; }
-  footer.main ul li {
-    float: left;
-    padding-right: 12px; }
-    footer.main ul li a {
-      display: inline-block;
+footer.main {
+  margin: 80px auto; }
+  footer.main p {
+    float: left; }
+  footer.main ul {
+    float: right;
+    list-style: none; }
+    footer.main ul li {
+      float: left;
       padding-right: 12px; }
+      footer.main ul li a {
+        display: inline-block;
+        margin-right: 12px; }
+
+body#index {
+  background: url("/images/index/astro.png") 70% -20px no-repeat; }
 
 #main-header {
-  padding: 260px 0 76px;
-  border-bottom: 4px solid rgba(0, 0, 0, 0.15); }
+  padding: 260px 0 100px; }
   #main-header h1 {
-    font: italic bold 56px "Georgia";
+    font: italic 800 56px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
     line-height: 60px;
     color: #fff;
     padding: 20px 5px;
-    background: rgba(60, 123, 53, 0.8);
-    display: inline-block; }
+    background: rgba(52, 135, 110, 0.8);
+    display: inline-block;
+    letter-spacing: -1px; }
 
 #primary-row {
   margin-top: 40px; }
@@ -121,25 +160,37 @@ footer.main ul {
     width: 184px;
     margin-right: 24px;
     float: left; }
-    #primary-row section#readernaut ul {
+    #primary-row section#lastfm .lastFMHeader, #primary-row section#readernaut .lastFMHeader {
+      display: none; }
+    #primary-row section#lastfm ul, #primary-row section#readernaut ul {
       list-style: none; }
-      #primary-row section#readernaut ul li {
+      #primary-row section#lastfm ul li, #primary-row section#readernaut ul li {
         max-width: 88px;
         max-height: 80px;
         margin: 0 8px 10px 0;
         float: left;
-        overflow: hidden; }
-        #primary-row section#readernaut ul li:nth-child(even) {
+        overflow: hidden;
+        -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
+        #primary-row section#lastfm ul li:nth-child(even), #primary-row section#readernaut ul li:nth-child(even) {
           margin-right: 0; }
-        #primary-row section#readernaut ul li a {
+        #primary-row section#lastfm ul li a, #primary-row section#readernaut ul li a {
           display: block;
           overflow: hidden; }
+          #primary-row section#lastfm ul li a img, #primary-row section#readernaut ul li a img {
+            max-width: 88px; }
     #primary-row section#flickr div {
       width: 88px;
       max-height: 80px;
       margin: 0 8px 10px 0;
       float: left;
-      overflow: hidden; }
+      overflow: hidden;
+      -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+      -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
       #primary-row section#flickr div:nth-child(even) {
         margin-right: 0; }
       #primary-row section#flickr div a {
@@ -159,7 +210,7 @@ footer.main ul {
 
 #secondary-row {
   margin-top: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px dotted rgba(0, 0, 0, 0.15);
   padding-top: 20px -1; }
   #secondary-row section#dribbble {
     width: 808px;
@@ -187,14 +238,34 @@ footer.main ul {
 
 #tertiary-row {
   margin-top: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px dotted rgba(0, 0, 0, 0.15);
   padding-top: 20px -1; }
   #tertiary-row section#about {
-    width: 808px;
+    width: 600px;
+    padding-left: 184px;
     float: left;
-    margin-right: 24px; }
+    margin-right: 24px;
+    background: url("/images/index/kyle.png") -20px no-repeat; }
+    #tertiary-row section#about section#description {
+      width: 392px;
+      float: left;
+      margin-right: 24px; }
+      #tertiary-row section#about section#description p {
+        margin-bottom: 20px; }
+    #tertiary-row section#about section#linkage {
+      width: 184px;
+      float: left;
+      margin-top: 60px; }
+      #tertiary-row section#about section#linkage ul {
+        list-style: none;
+        margin-bottom: 20px; }
   #tertiary-row section#twitter {
     width: 392px;
     float: left; }
     #tertiary-row section#twitter ul {
       list-style: none; }
+      #tertiary-row section#twitter ul li span {
+        font: 400 24px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+        line-height: 40px;
+        display: block;
+        margin-bottom: 20px; }

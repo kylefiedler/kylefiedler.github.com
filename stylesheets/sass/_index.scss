@@ -1,16 +1,20 @@
+body#index {
+  background: url('/images/index/astro.png') 70% -20px no-repeat;
+}
+
 #main-header {
   @extend .wrapper;
   
-  padding: $lh*13 0 ($lh*4)-(4);
-  border-bottom: 4px solid rgba($base, .15);
+  padding: $lh*13 0 ($lh*5);
   
   h1 {
-    font: italic bold 56px $header;
+    font: italic 800 56px $header;
     line-height: $lh*3;
     color: #fff;
     padding: $lh 5px;
-    background: darken(rgba($primary, .8), 30%);
+    background: rgba($secondary, .8);
     display: inline-block;
+    letter-spacing: -1px;
   }
 }
 
@@ -26,19 +30,21 @@
     margin-right: $gutter;
     float: left;
     
-    &#lastfm {
-
-    }
-
-    &#readernaut {
+    &#lastfm, &#readernaut {
+      .lastFMHeader {
+        display: none;
+      }
+      
       ul {
         list-style: none;
+        
         li {
           max-width: ($unit)+($gutter/3);
           max-height: ($lh*4);
           margin: 0 ($gutter/3) ($lh/2) 0;
           float: left;
           overflow: hidden;
+          @include box-shadow(0 0 0 1px rgba($base, .2));
           
           &:nth-child(even) {
             margin-right: 0;
@@ -47,6 +53,10 @@
           a {
             display: block;
             overflow: hidden;
+            
+            img {
+              max-width: ($unit)+($gutter/3);
+            }
           }
         }
       }
@@ -59,6 +69,7 @@
         margin: 0 ($gutter/3) ($lh/2) 0;
         float: left;
         overflow: hidden;
+        @include box-shadow(0 0 0 1px rgba($base, .2));
         
         &:nth-child(even) {
           margin-right: 0;
@@ -94,7 +105,7 @@
   @extend .clearfix;
   @extend .wrapper;
   margin-top: $lh*2;
-  border-top: 1px solid rgba($base, .15);
+  border-top: 1px dotted rgba($base, .15);
   padding-top: ($lh)-1;
   
   section#dribbble {
@@ -141,13 +152,35 @@
   @extend .clearfix;
   @extend .wrapper;
   margin-top: $lh*2;
-  border-top: 1px solid rgba($base, .15);
+  border-top: 1px dotted rgba($base, .15);
   padding-top: ($lh)-1;
   
   section#about {
-    width: ($unit*8)+($gutter*7);
+    width: ($unit*6)+($gutter*5);
+    padding-left: ($unit*2)+($gutter);
     float: left;
     margin-right: $gutter;
+    background: url('/images/index/kyle.png') 0 -$lh no-repeat;
+    
+    section#description {
+      width: ($unit*4)+($gutter*3);
+      float: left;
+      margin-right: $gutter;
+      
+      p {
+        margin-bottom: $lh;
+      }
+    }
+    
+    section#linkage {
+      width: ($unit*2)+($gutter);
+      float: left;
+      margin-top: $lh*3;
+      ul {
+        list-style: none;
+        margin-bottom: $lh;
+      }
+    }
   }
   
   section#twitter {
@@ -156,6 +189,19 @@
     
     ul {
       list-style: none;
+      
+      li {
+        span {
+          font: 400 24px $header;
+          line-height: $lh*2;
+          display: block;
+          margin-bottom: $lh;
+        }
+        
+        a {
+          
+        }
+      }
     }
   }
 }

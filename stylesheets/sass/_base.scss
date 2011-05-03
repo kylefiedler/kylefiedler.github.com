@@ -98,8 +98,8 @@ input, select { vertical-align: middle; }
 ---------------------------------------- */
 
 /*fonts*/
-$body: "Helvetica";
-$header: "Georgia";
+$header: "ronnia-1","ronnia-2","Gill Sans", Helvetica, sans-serif;
+$body: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", "Georgia", serif;
 
 /*grid*/
 $unit: 80px;
@@ -108,6 +108,7 @@ $lh: 20px;
 
 /*colors*/
 $primary: #88c881;
+$secondary: #34876e;
 $base: #000;
 
 /* Extended classes
@@ -152,4 +153,28 @@ h2 {
   line-height: $lh;
   margin-top: $lh*1.5;
   margin-bottom: $lh*.5;
+}
+
+
+a {
+  &:link {
+    text-decoration: none;
+    color: rgba($base, .7);
+    font-style: italic;
+    border-bottom: 1px solid rgba($base, .1);
+    line-height: ($lh)-1px;
+  }
+  &:active {
+    color: rgba($base, .7);
+    font-style: italic;
+  }
+  &:visited {
+    color: rgba($base, .7);
+    font-style: italic;
+  }
+  &:hover {
+    color: lighten($secondary, 60%);
+    background: rgba($secondary, .7);
+    border-bottom: 1px solid darken($secondary, 4%);
+  }
 }

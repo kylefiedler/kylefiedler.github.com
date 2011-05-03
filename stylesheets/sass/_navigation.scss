@@ -3,17 +3,28 @@ header.main {
   @extend .clearfix;
   
   background: rgba($primary, .9);
-  padding: $lh*1.5 $gutter;
-  width: ($unit*12)+($gutter*11)-($gutter*2);
+  padding: $lh*1.5 $gutter*2;
+  width: ($unit*12)+($gutter*11)-($gutter*4);
+  position: relative;
+  -webkit-transform-origin: 100% -100%;
   
   nav {
     
     h1 {
       float: left;
       display: block;
+      font: italic 800 24px $header;
+      line-height: $lh;
       
       a {
         color: #fff;
+        border-bottom: 0;
+        
+        &:hover {
+          background: none;
+          color: darken($primary, 40%);
+          text-shadow: 0 1px 0 lighten($primary, 10%);
+        }
       }
     }
     
@@ -23,10 +34,20 @@ header.main {
       
       li {
         float: left;
+        margin-left: $gutter*3;
         display: block;
         
         a {
           color: #fff;
+          font: 400 14px $header;
+          line-height: $lh;
+          border-bottom: 0;
+          
+          &:hover {
+            background: none;
+            color: darken($primary, 40%);
+            text-shadow: 0 1px 0 lighten($primary, 10%);
+          }
         }
       }
     }
