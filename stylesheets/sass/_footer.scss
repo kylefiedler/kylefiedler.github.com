@@ -2,6 +2,7 @@ footer.main {
   @extend .clearfix;
   @extend .wrapper;
   margin: ($lh*4) auto;
+  
   p {
     float: left;
   }
@@ -13,6 +14,7 @@ footer.main {
     li {
       float: left;
       padding-right: $gutter/2;
+
       a {
         display: inline-block;
         margin-right: $gutter/2;

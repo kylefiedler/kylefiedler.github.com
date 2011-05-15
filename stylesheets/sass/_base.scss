@@ -141,22 +141,19 @@ body {
   font: 14px $body;
   margin: 0;
   color: rgba($base, .4);
-}
-
-h1 {
-  
+  background:rgba($base, .08);
 }
 
 h2 {
   font-weight: bold;
-  color: rgba($base, .6);
+  color: rgba($base,.6);
   line-height: $lh;
   margin-top: $lh*1.5;
   margin-bottom: $lh*.5;
 }
 
-
 a {
+
   &:link {
     text-decoration: none;
     color: rgba($base, .7);
@@ -164,17 +161,21 @@ a {
     border-bottom: 1px solid rgba($base, .1);
     line-height: ($lh)-1px;
   }
+  
   &:active {
     color: rgba($base, .7);
     font-style: italic;
   }
+  
   &:visited {
     color: rgba($base, .7);
     font-style: italic;
   }
+  
   &:hover {
-    color: lighten($secondary, 60%);
-    background: rgba($secondary, .7);
-    border-bottom: 1px solid darken($secondary, 4%);
+    color: rgba($base, .9);
+    background: rgba($base, .06);
+    text-shadow: 0 1px 0 #fff;
+    border-bottom: 1px solid rgba($base, .1);
   }
 }

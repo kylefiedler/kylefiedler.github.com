@@ -11,10 +11,11 @@ body#index {
     font: italic 800 56px $header;
     line-height: $lh*3;
     color: #fff;
-    padding: $lh 5px;
-    background: rgba($secondary, .8);
+    padding: $lh 30px;
+    background: rgba($secondary, .7);
     display: inline-block;
     letter-spacing: -1px;
+    text-shadow: 0 -1px 1px $secondary;
   }
 }
 

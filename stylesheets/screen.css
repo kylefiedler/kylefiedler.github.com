@@ -65,7 +65,8 @@ body {
   text-align: center;
   font: 14px "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", serif;
   margin: 0;
-  color: rgba(0, 0, 0, 0.4); }
+  color: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.08); }
 
 h2 {
   font-weight: bold;
@@ -87,16 +88,21 @@ a:visited {
   color: rgba(0, 0, 0, 0.7);
   font-style: italic; }
 a:hover {
-  color: #f3faf8;
-  background: rgba(52, 135, 110, 0.7);
-  border-bottom: 1px solid #2e7862; }
+  color: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.06);
+  text-shadow: 0 1px 0 #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 header.main {
   background: rgba(136, 200, 129, 0.9);
+  border: 1px solid #66b95d;
+  border-top: 0;
   padding: 30px 48px;
   width: 1128px;
-  position: relative;
-  -webkit-transform-origin: 100% -100%; }
+  -moz-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
+  -o-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8); }
   header.main nav h1 {
     float: left;
     display: block;
@@ -149,10 +155,11 @@ body#index {
     font: italic 800 56px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
     line-height: 60px;
     color: #fff;
-    padding: 20px 5px;
-    background: rgba(52, 135, 110, 0.8);
+    padding: 20px 30px;
+    background: rgba(52, 135, 110, 0.7);
     display: inline-block;
-    letter-spacing: -1px; }
+    letter-spacing: -1px;
+    text-shadow: 0 -1px 1px #34876e; }
 
 #primary-row {
   margin-top: 40px; }
