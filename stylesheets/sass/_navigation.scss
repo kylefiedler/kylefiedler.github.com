@@ -2,24 +2,24 @@ header.main {
   @extend .wrapper;
   @extend .clearfix;
   background: rgba($primary, .9);
-  border:1px solid darken($primary, 10%);
+  border:1px solid darken($primary, 5%);
   border-top: 0;
-  padding: $lh*1.5 $gutter*2;
-  width: ($unit*12)+($gutter*11)-($gutter*4);
-  @include box-shadow(inset 0 -1px 0 lighten($primary, 15%), 0 1px 0 rgba(#fff, .8));
-  
+  padding: $lh*.5 $gutter;
+  width: ($unit*12)+($gutter*11);
+  @include box-shadow(inset 0 -1px 0 lighten($primary, 15%), 0 1px 3px rgba(#000, .2));
+
   nav {
-    
+
     h1 {
       float: left;
       display: block;
-      font: italic 800 24px $header;
-      line-height: $lh;
-      
+      font: italic 800 18px $header;
+      line-height: $lh*2;
+
       a {
         color: #fff;
         border-bottom: 0;
-        
+
         &:hover {
           background: none;
           color: darken($primary, 40%);
@@ -27,22 +27,22 @@ header.main {
         }
       }
     }
-    
+
     ul {
       list-style: none;
       float: right;
-      
+
       li {
         float: left;
         margin-left: $gutter*3;
         display: block;
-        
+
         a {
           color: #fff;
           font: 400 14px $header;
-          line-height: $lh;
+          line-height: $lh*2;
           border-bottom: 0;
-          
+
           &:hover {
             background: none;
             color: darken($primary, 40%);

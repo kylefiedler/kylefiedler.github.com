@@ -29,32 +29,32 @@ input, select {
 
 /* Mixins
 ---------------------------------------- */
-/* this hack is courtesy of gbbowers on github
-   https://gist.github.com/601810 */
 /* Variables
 ---------------------------------------- */
 /*fonts*/
 /*grid*/
 /*colors*/
+/* Functions
+---------------------------------------- */
 /* Extended classes
 ---------------------------------------- */
 /* Clearfix hack I love you */
-.clearfix:after, header.main:after, footer.main:after, #primary-row:after, #primary-row section:after, #secondary-row:after, #tertiary-row:after {
+.clearfix:after, header.main:after, footer.main:after, div.main-content:after, div.main-content #primary-column:after, div.main-content #primary-column section#posts ul:after, div.main-content #primary-column section#posts ul li a:after, div.main-content #primary-column section#dribbble:after, div.main-content #primary-column div.reading-and-something:after, div.main-content #secondary-column:after, div.main-content #secondary-column div.music-and-stuff section#lastfm:after, div.main-content #secondary-column div.music-and-stuff section#flickr:after, div.main-content #secondary-column section#twitter div:after, div.main-content #secondary-column section#about:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, header.main, footer.main, #primary-row, #primary-row section, #secondary-row, #tertiary-row {
+.clearfix, header.main, footer.main, div.main-content, div.main-content #primary-column, div.main-content #primary-column section#posts ul, div.main-content #primary-column section#posts ul li a, div.main-content #primary-column section#dribbble, div.main-content #primary-column div.reading-and-something, div.main-content #secondary-column, div.main-content #secondary-column div.music-and-stuff section#lastfm, div.main-content #secondary-column div.music-and-stuff section#flickr, div.main-content #secondary-column section#twitter div, div.main-content #secondary-column section#about {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, header.main, footer.main, #primary-row, #primary-row section, #secondary-row, #tertiary-row {
+.clearfix, header.main, footer.main, div.main-content, div.main-content #primary-column, div.main-content #primary-column section#posts ul, div.main-content #primary-column section#posts ul li a, div.main-content #primary-column section#dribbble, div.main-content #primary-column div.reading-and-something, div.main-content #secondary-column, div.main-content #secondary-column div.music-and-stuff section#lastfm, div.main-content #secondary-column div.music-and-stuff section#flickr, div.main-content #secondary-column section#twitter div, div.main-content #secondary-column section#about {
   display: block; }
 
 /* End hide from IE Mac */
-.wrapper, header.main, footer.main, #main-header, #primary-row, #secondary-row, #tertiary-row {
+.wrapper, header.main, footer.main, #main-header, div.main-content {
   width: 1224px;
   text-align: left;
   margin: 0 auto; }
@@ -66,7 +66,7 @@ body {
   font: 14px "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", serif;
   margin: 0;
   color: rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 0.08); }
+  background: white url(/images/bg.png) 0 0 repeat; }
 
 h2 {
   font-weight: bold;
@@ -95,19 +95,19 @@ a:hover {
 
 header.main {
   background: rgba(136, 200, 129, 0.9);
-  border: 1px solid #66b95d;
+  border: 1px solid #77c06f;
   border-top: 0;
-  padding: 30px 48px;
-  width: 1128px;
-  -moz-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
-  -o-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0 -1px 0 #badfb6, 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: 10px 24px;
+  width: 1224px;
+  -webkit-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 3px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: inset 0 -1px 0 #badfb6, 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 0 #badfb6, 0 1px 3px rgba(0, 0, 0, 0.2); }
   header.main nav h1 {
     float: left;
     display: block;
-    font: italic 800 24px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
-    line-height: 20px; }
+    font: italic 800 18px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+    line-height: 40px; }
     header.main nav h1 a {
       color: #fff;
       border-bottom: 0; }
@@ -125,7 +125,7 @@ header.main {
       header.main nav ul li a {
         color: #fff;
         font: 400 14px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
-        line-height: 20px;
+        line-height: 40px;
         border-bottom: 0; }
         header.main nav ul li a:hover {
           background: none;
@@ -146,133 +146,252 @@ footer.main {
         display: inline-block;
         margin-right: 12px; }
 
-body#index {
-  background: url("/images/index/astro.png") 70% -20px no-repeat; }
+body.home {
+  background: url("/images/index/astro.png") 45% 10px no-repeat, url(/images/bg.png) 0 0 repeat; }
+  body.home h2 a {
+    border-bottom: none; }
+    body.home h2 a span {
+      display: none;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    body.home h2 a:hover {
+      background: none; }
+      body.home h2 a:hover span {
+        display: inline;
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: 400; }
 
-#main-header {
-  padding: 260px 0 100px; }
-  #main-header h1 {
-    font: italic 800 56px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
-    line-height: 60px;
-    color: #fff;
-    padding: 20px 30px;
-    background: rgba(52, 135, 110, 0.7);
-    display: inline-block;
-    letter-spacing: -1px;
-    text-shadow: 0 -1px 1px #34876e; }
+#main-header h1 {
+  font: 200 50px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+  line-height: 52px;
+  color: rgba(0, 0, 0, 0.3);
+  padding: 110px 0 180px 720px;
+  display: block;
+  letter-spacing: -1px; }
+  #main-header h1 strong {
+    font-weight: 900;
+    display: block;
+    color: rgba(0, 0, 0, 0.4); }
+  #main-header h1 span {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.2); }
 
-#primary-row {
-  margin-top: 40px; }
-  #primary-row section {
-    width: 184px;
-    margin-right: 24px;
-    float: left; }
-    #primary-row section#lastfm .lastFMHeader, #primary-row section#readernaut .lastFMHeader {
-      display: none; }
-    #primary-row section#lastfm ul, #primary-row section#readernaut ul {
-      list-style: none; }
-      #primary-row section#lastfm ul li, #primary-row section#readernaut ul li {
-        max-width: 88px;
-        max-height: 80px;
-        margin: 0 8px 10px 0;
-        float: left;
-        overflow: hidden;
-        -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-        -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
-        #primary-row section#lastfm ul li:nth-child(even), #primary-row section#readernaut ul li:nth-child(even) {
-          margin-right: 0; }
-        #primary-row section#lastfm ul li a, #primary-row section#readernaut ul li a {
-          display: block;
-          overflow: hidden; }
-          #primary-row section#lastfm ul li a img, #primary-row section#readernaut ul li a img {
-            max-width: 88px; }
-    #primary-row section#flickr div {
-      width: 88px;
-      max-height: 80px;
-      margin: 0 8px 10px 0;
-      float: left;
-      overflow: hidden;
-      -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-      -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2); }
-      #primary-row section#flickr div:nth-child(even) {
-        margin-right: 0; }
-      #primary-row section#flickr div a {
-        display: block;
-        overflow: hidden; }
-    #primary-row section#posts {
-      margin-right: 0;
-      width: 600px; }
-      #primary-row section#posts ul {
+div.main-content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  div.main-content #primary-column {
+    margin-top: 40px;
+    float: left;
+    width: 611px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1); }
+    div.main-content #primary-column section#posts {
+      width: 600px;
+      padding-right: 11px;
+      background: #fff;
+      padding-top: 30px;
+      -webkit-box-shadow: -8px 5px 0 5px white;
+      -moz-box-shadow: -8px 5px 0 5px white;
+      -o-box-shadow: -8px 5px 0 5px white;
+      box-shadow: -8px 5px 0 5px white; }
+      div.main-content #primary-column section#posts h2 {
+        margin-top: 0; }
+      div.main-content #primary-column section#posts ul {
         list-style: none; }
-        #primary-row section#posts ul li {
+        div.main-content #primary-column section#posts ul li {
           margin-bottom: 20px; }
-          #primary-row section#posts ul li span {
-            float: right;
-            font-style: italic;
-            color: rgba(0, 0, 0, 0.2); }
-
-#secondary-row {
-  margin-top: 40px;
-  border-top: 1px dotted rgba(0, 0, 0, 0.15);
-  padding-top: 20px -1; }
-  #secondary-row section#dribbble {
-    width: 808px;
-    float: left;
-    margin-right: 24px; }
-    #secondary-row section#dribbble ul {
-      list-style: none; }
-      #secondary-row section#dribbble ul li {
-        width: 392px;
-        max-height: 280px;
-        margin: 0 24px 20px 0;
+          div.main-content #primary-column section#posts ul li a {
+            font: 500 16px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+            border: 0;
+            color: rgba(0, 0, 0, 0.5); }
+            div.main-content #primary-column section#posts ul li a span {
+              float: right;
+              font: italic 14px "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", serif;
+              color: rgba(0, 0, 0, 0.2); }
+            div.main-content #primary-column section#posts ul li a:hover {
+              background: none;
+              color: rgba(0, 0, 0, 0.9); }
+              div.main-content #primary-column section#posts ul li a:hover span {
+                color: rgba(0, 0, 0, 0.4); }
+    div.main-content #primary-column section#dribbble {
+      width: 600px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 11px; }
+      div.main-content #primary-column section#dribbble ul {
+        list-style: none; }
+        div.main-content #primary-column section#dribbble ul li {
+          width: 288px;
+          max-height: 280px;
+          margin: 0 24px 20px 0;
+          float: left;
+          overflow: hidden;
+          -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8); }
+          div.main-content #primary-column section#dribbble ul li:nth-child(2n) {
+            margin-right: 0; }
+          div.main-content #primary-column section#dribbble ul li a {
+            display: block; }
+            div.main-content #primary-column section#dribbble ul li a img {
+              width: 288px;
+              display: block; }
+            div.main-content #primary-column section#dribbble ul li a:hover {
+              background: none; }
+    div.main-content #primary-column div.reading-and-something {
+      width: 600px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 11px; }
+      div.main-content #primary-column div.reading-and-something section#air {
         float: left;
-        overflow: hidden; }
-        #secondary-row section#dribbble ul li:nth-child(2n) {
-          margin-right: 0; }
-        #secondary-row section#dribbble ul li a img {
-          width: 392px; }
-  #secondary-row section#tumblr {
-    width: 392px;
-    float: left; }
-    #secondary-row section#tumblr ul {
-      list-style: none; }
-      #secondary-row section#tumblr ul li {
-        margin-bottom: 20px; }
-
-#tertiary-row {
-  margin-top: 40px;
-  border-top: 1px dotted rgba(0, 0, 0, 0.15);
-  padding-top: 20px -1; }
-  #tertiary-row section#about {
-    width: 600px;
-    padding-left: 184px;
+        width: 288px;
+        min-height: 200px;
+        margin-right: 12px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: 11px; }
+      div.main-content #primary-column div.reading-and-something section#readernaut {
+        float: left;
+        width: 288px;
+        margin-left: -13px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 11px; }
+        div.main-content #primary-column div.reading-and-something section#readernaut ul {
+          list-style: none; }
+          div.main-content #primary-column div.reading-and-something section#readernaut ul li {
+            max-width: 140px;
+            max-height: 180px;
+            margin: 0 8px 10px 0;
+            float: left;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8); }
+            div.main-content #primary-column div.reading-and-something section#readernaut ul li:nth-child(even) {
+              margin-right: 0; }
+            div.main-content #primary-column div.reading-and-something section#readernaut ul li a {
+              display: block;
+              overflow: hidden; }
+              div.main-content #primary-column div.reading-and-something section#readernaut ul li a img {
+                max-width: 140px; }
+  div.main-content #secondary-column {
     float: left;
-    margin-right: 24px;
-    background: url("/images/index/kyle.png") -20px no-repeat; }
-    #tertiary-row section#about section#description {
-      width: 392px;
+    width: 612px;
+    margin: 40px 0 0 -1px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 0;
+    border-bottom: 0; }
+    div.main-content #secondary-column section#tumblr {
+      width: 288px;
       float: left;
-      margin-right: 24px; }
-      #tertiary-row section#about section#description p {
-        margin-bottom: 20px; }
-    #tertiary-row section#about section#linkage {
-      width: 184px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 11px;
+      padding-left: 12px; }
+      div.main-content #secondary-column section#tumblr ul {
+        list-style: none; }
+        div.main-content #secondary-column section#tumblr ul li {
+          margin-bottom: 20px; }
+    div.main-content #secondary-column div.music-and-stuff {
       float: left;
-      margin-top: 60px; }
-      #tertiary-row section#about section#linkage ul {
-        list-style: none;
-        margin-bottom: 20px; }
-  #tertiary-row section#twitter {
-    width: 392px;
-    float: left; }
-    #tertiary-row section#twitter ul {
-      list-style: none; }
-      #tertiary-row section#twitter ul li span {
-        font: 400 24px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
-        line-height: 40px;
-        display: block;
-        margin-bottom: 20px; }
+      width: 300px; }
+      div.main-content #secondary-column div.music-and-stuff section#lastfm {
+        padding-left: 12px; }
+        div.main-content #secondary-column div.music-and-stuff section#lastfm .lastFMHeader {
+          display: none; }
+        div.main-content #secondary-column div.music-and-stuff section#lastfm ul {
+          list-style: none; }
+          div.main-content #secondary-column div.music-and-stuff section#lastfm ul li {
+            max-width: 89px;
+            /*needs to change*/
+            max-height: 80px;
+            margin: 0 10px 10px 0;
+            /*right margin needs to change*/
+            float: left;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8); }
+            div.main-content #secondary-column div.music-and-stuff section#lastfm ul li:nth-child(3n) {
+              margin-right: 0; }
+            div.main-content #secondary-column div.music-and-stuff section#lastfm ul li a {
+              display: block;
+              overflow: hidden; }
+              div.main-content #secondary-column div.music-and-stuff section#lastfm ul li a img {
+                max-width: 89px; }
+      div.main-content #secondary-column div.music-and-stuff section#flickr {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 12px; }
+        div.main-content #secondary-column div.music-and-stuff section#flickr div {
+          width: 140px;
+          max-height: 140px;
+          margin: 0 8px 10px 0;
+          float: left;
+          overflow: hidden;
+          -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8); }
+          div.main-content #secondary-column div.music-and-stuff section#flickr div:nth-child(even) {
+            margin-right: 0; }
+          div.main-content #secondary-column div.music-and-stuff section#flickr div a {
+            display: block;
+            overflow: hidden; }
+    div.main-content #secondary-column section#twitter {
+      clear: both;
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      div.main-content #secondary-column section#twitter div {
+        margin-left: 12px;
+        background: #fff;
+        padding: 0 0 20px 20px;
+        -webkit-box-shadow: 10px 8px 0 8px white;
+        -moz-box-shadow: 10px 8px 0 8px white;
+        -o-box-shadow: 10px 8px 0 8px white;
+        box-shadow: 10px 8px 0 8px white; }
+        div.main-content #secondary-column section#twitter div h2 {
+          margin-top: 0;
+          padding-top: 30px; }
+        div.main-content #secondary-column section#twitter div ul {
+          list-style: none; }
+          div.main-content #secondary-column section#twitter div ul span {
+            font: 500 24px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
+            line-height: 40px; }
+            div.main-content #secondary-column section#twitter div ul span a {
+              display: inline;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+              margin-top: 0;
+              font-size: 24px !important;
+              color: rgba(0, 0, 0, 0.6); }
+              div.main-content #secondary-column section#twitter div ul span a:hover {
+                color: rgba(0, 0, 0, 0.8); }
+          div.main-content #secondary-column section#twitter div ul a {
+            display: block;
+            margin-top: 20px;
+            border-bottom: 0;
+            font-size: 13px !important;
+            color: rgba(0, 0, 0, 0.4); }
+            div.main-content #secondary-column section#twitter div ul a:hover {
+              background: 0;
+              color: rgba(0, 0, 0, 0.6); }
+    div.main-content #secondary-column section#about {
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      div.main-content #secondary-column section#about section#description {
+        float: left;
+        width: 288px;
+        padding-left: 208px;
+        background: transparent url("/images/index/kyle.png") 20px 30px no-repeat; }
+        div.main-content #secondary-column section#about section#description p {
+          margin-bottom: 20px; }
+      div.main-content #secondary-column section#about section#linkage {
+        float: left;
+        width: 95.84px;
+        margin-left: 7.92px;
+        margin-top: 60px; }
+        div.main-content #secondary-column section#about section#linkage ul {
+          list-style: none; }

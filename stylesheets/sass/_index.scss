@@ -1,208 +1,367 @@
-body#index {
-  background: url('/images/index/astro.png') 70% -20px no-repeat;
+body.home {
+  background: url('/images/index/astro.png') 45% 10px no-repeat,
+  url(/images/bg.png) 0 0 repeat;
+
+  h2 {
+    a {
+      border-bottom: none;
+
+      span {
+        display: none;
+        @include transition(all .3s);
+      }
+
+      &:hover {
+        background: none;
+
+        span {
+          display: inline;
+          color: rgba($base, .3);
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
 
 #main-header {
   @extend .wrapper;
-  
-  padding: $lh*13 0 ($lh*5);
-  
+
   h1 {
-    font: italic 800 56px $header;
-    line-height: $lh*3;
-    color: #fff;
-    padding: $lh 30px;
-    background: rgba($secondary, .7);
-    display: inline-block;
+    font: 200 50px $header;
+    line-height: 52px;
+    color: rgba($base, .3);
+    padding: ($lh*5.5) 0 ($lh*9) 720px;
+    display: block;
     letter-spacing: -1px;
-    text-shadow: 0 -1px 1px $secondary;
+
+    strong {
+      font-weight: 900;
+      display: block;
+      color: rgba($base, .4);
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 500;
+      display: block;
+      letter-spacing: 1px;
+      line-height: $lh;
+      color: rgba($base, .2);
+    }
   }
 }
 
-#primary-row {
-  @extend .clearfix;
+div.main-content {
   @extend .wrapper;
-  margin-top: $lh*2;
+  @extend .clearfix;
+  border-bottom: 1px solid rgba(#000, .1);
 
-  section {
+  #primary-column {
     @extend .clearfix;
-
-    width: ($unit*2)+($gutter);
-    margin-right: $gutter;
+    margin-top: $lh*2;
     float: left;
-    
-    &#lastfm, &#readernaut {
-      .lastFMHeader {
-        display: none;
+    width: grid-width(6)+($gutter/2)-(1);
+    border-top: 1px solid rgba(#000, .1);
+    border-right: 1px solid rgba(#000, .1);
+
+    section#posts {
+      width: grid-width(6);
+      padding-right: ($gutter/2)-(1);
+      background: #fff;
+      padding-top: $lh*1.5;
+      @include box-shadow(-8px 5px 0 5px #fff);
+
+      h2 {
+        margin-top: 0;
       }
-      
+
       ul {
+        @extend .clearfix;
         list-style: none;
-        
+
         li {
-          max-width: ($unit)+($gutter/3);
-          max-height: ($lh*4);
-          margin: 0 ($gutter/3) ($lh/2) 0;
-          float: left;
-          overflow: hidden;
-          @include box-shadow(0 0 0 1px rgba($base, .2));
-          
-          &:nth-child(even) {
-            margin-right: 0;
-          }
-          
+          margin-bottom: $lh;
+
           a {
-            display: block;
-            overflow: hidden;
-            
-            img {
-              max-width: ($unit)+($gutter/3);
+            @extend .clearfix;
+            font: 500 16px $header;
+            border: 0;
+            color: rgba($base, .5);
+
+            span {
+              float: right;
+              font: italic 14px $body;
+              color: rgba($base, .2);
+            }
+
+            &:hover {
+              background:none;
+              color: rgba($base, .9);
+
+              span {
+                color: rgba($base, .4);
+              }
             }
           }
         }
       }
     }
 
-    &#flickr {
-      div {
-        width: ($unit)+($gutter/3);
-        max-height: ($lh*4);
-        margin: 0 ($gutter/3) ($lh/2) 0;
-        float: left;
-        overflow: hidden;
-        @include box-shadow(0 0 0 1px rgba($base, .2));
-        
-        &:nth-child(even) {
-          margin-right: 0;
-        }
-        
-        a {
-          display: block;
+    section#dribbble {
+      @extend .clearfix;
+      width: grid-width(6);
+      border-top: 1px solid rgba(#000, .1);
+      padding-right: ($gutter/2)-(1);
+
+      ul {
+        list-style: none;
+
+        li {
+          width: grid-width(3);
+          max-height: ($lh*14);
+          margin: 0 ($gutter) ($lh) 0;
+          float: left;
           overflow: hidden;
+          @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+
+          a {
+            display: block;
+
+            img {
+              width: grid-width(3);
+              display: block;
+            }
+
+            &:hover {
+              background: none;
+            }
+          }
         }
       }
     }
-    
-    &#posts {
-      margin-right: 0;
-      width: ($unit*6)+($gutter*5);
-      
+
+    div.reading-and-something {
+      @extend .clearfix;
+      width: grid-width(6);
+      border-top: 1px solid rgba(#000, .1);
+      padding-right: ($gutter/2)-(1);
+
+      section#air {
+        float: left;
+        width: grid-width(3);
+        min-height: $lh*10;
+        margin-right: ($gutter)/2;
+        border-right: 1px solid rgba(#000, .1);
+        padding-right: ($gutter/2)-(1);
+      }
+
+      section#readernaut {
+        float: left;
+        width: grid-width(3);
+        margin-left: -($gutter/2)-(1);
+        border-left: 1px solid rgba(#000, .1);
+        padding-left: ($gutter/2)-(1);
+
+        ul {
+          list-style: none;
+
+          li {
+            max-width: grid-width(1)+(60);
+            max-height: ($lh*9);
+            margin: 0 8px ($lh/2) 0;
+            float: left;
+            overflow: hidden;
+            @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
+
+            &:nth-child(even) {
+              margin-right: 0;
+            }
+
+            a {
+              display: block;
+              overflow: hidden;
+
+              img {
+                max-width: grid-width(1)+(60);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #secondary-column {
+    @extend .clearfix;
+    float: left;
+    width: grid-width(6)+($gutter/2);
+    margin: $lh*2 0 0 -1px;
+    border: 1px solid rgba(#000, .1);
+    border-right: 0;
+    border-bottom: 0;
+
+    section#tumblr {
+      width: grid-width(3);
+      float: left;
+      border-right: 1px solid rgba(#000, .1);
+      padding-right: ($gutter/2)-(1);
+      padding-left: $gutter/2;
+
       ul {
         list-style: none;
         li {
           margin-bottom: $lh;
+        }
+      }
+    }
+
+    div.music-and-stuff {
+      float: left;
+      width: grid-width(3)+($gutter/2);
+
+      section#lastfm {
+        @extend .clearfix;
+        padding-left: $gutter/2;
+
+        .lastFMHeader {
+          display: none;
+        }
+
+        ul {
+          list-style: none;
+
+          li {
+            max-width: 89px;/*needs to change*/
+            max-height: ($lh*4);
+            margin: 0 10px ($lh/2) 0;/*right margin needs to change*/
+            float: left;
+            overflow: hidden;
+            @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
+
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+
+            a {
+              display: block;
+              overflow: hidden;
+
+              img {
+                max-width: 89px;
+              }
+            }
+          }
+        }
+      }
+
+      section#flickr {
+        @extend .clearfix;
+        border-top: 1px solid rgba(#000, .1);
+        padding-left: $gutter/2;
+
+        div {
+          width: grid-width(1)+(60);
+          max-height: ($lh*7);
+          margin: 0 ($gutter/3) ($lh/2) 0;
+          float: left;
+          overflow: hidden;
+          @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
+
+          &:nth-child(even) {
+            margin-right: 0;
+          }
+
+          a {
+            display: block;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    section#twitter {
+      clear: both;
+      border-top: 1px solid rgba(#000, .1);
+
+      div {
+        @extend .clearfix;
+        margin-left: $gutter/2;
+        background: #fff;
+        padding: 0 0 $lh $lh;
+        @include box-shadow(10px 8px 0 8px #fff);
+
+        h2 {
+          margin-top: 0;
+          padding-top: 30px;
+        }
+
+        ul {
+          list-style: none;
+
           span {
-            float: right;
-            font-style: italic;
-            color: rgba($base, .2);
+            font: 500 24px $header;
+            line-height: $lh*2;
+            a {
+              display: inline;
+              border-bottom: 1px solid rgba($base, .2);
+              margin-top: 0;
+              font-size: 24px !important;
+              color: rgba($base, .6);
+
+              &:hover {
+                color: rgba($base, .8);
+              }
+            }
+          }
+
+          a {
+            display: block;
+            margin-top: $lh;
+            border-bottom: 0;
+            font-size: 13px !important;
+            color: rgba($base, .4);
+
+            &:hover {
+              background: 0;
+              color: rgba($base, .6);
+            }
           }
         }
       }
     }
-  }
-}
 
-#secondary-row {
-  @extend .clearfix;
-  @extend .wrapper;
-  margin-top: $lh*2;
-  border-top: 1px dotted rgba($base, .15);
-  padding-top: ($lh)-1;
-  
-  section#dribbble {
-    width: ($unit*8)+($gutter*7);
-    float: left;
-    margin-right: $gutter;
-    
-    ul {
-      list-style: none;
-      
-      li {
-        width: ($unit*4)+($gutter*3);
-        max-height: ($lh*14);
-        margin: 0 ($gutter) ($lh) 0;
+    section#about {
+      @extend .clearfix;
+      border-top: 1px solid rgba(#000, .1);
+
+      section#description {
         float: left;
-        overflow: hidden;
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-        
-        a {
-          img {
-            width: ($unit*4)+($gutter*3);
-          }
-        }
-      }
-    }
-  }
-  
-  section#tumblr {
-    width: ($unit*4)+($gutter*3);
-    float: left;
-    
-    ul {
-      list-style: none;
-      li {
-        margin-bottom: $lh;
-      }
-    }
-  }
-}
+        width: grid-width(3);
+        padding-left: ($unit*2)+($gutter*2);
+        background: transparent url('/images/index/kyle.png') 20px 30px no-repeat;
 
-#tertiary-row {
-  @extend .clearfix;
-  @extend .wrapper;
-  margin-top: $lh*2;
-  border-top: 1px dotted rgba($base, .15);
-  padding-top: ($lh)-1;
-  
-  section#about {
-    width: ($unit*6)+($gutter*5);
-    padding-left: ($unit*2)+($gutter);
-    float: left;
-    margin-right: $gutter;
-    background: url('/images/index/kyle.png') 0 -$lh no-repeat;
-    
-    section#description {
-      width: ($unit*4)+($gutter*3);
-      float: left;
-      margin-right: $gutter;
-      
-      p {
-        margin-bottom: $lh;
-      }
-    }
-    
-    section#linkage {
-      width: ($unit*2)+($gutter);
-      float: left;
-      margin-top: $lh*3;
-      ul {
-        list-style: none;
-        margin-bottom: $lh;
-      }
-    }
-  }
-  
-  section#twitter {
-    width: ($unit*4)+($gutter*3);
-    float: left;
-    
-    ul {
-      list-style: none;
-      
-      li {
-        span {
-          font: 400 24px $header;
-          line-height: $lh*2;
-          display: block;
+        p {
           margin-bottom: $lh;
         }
-        
-        a {
-          
+      }
+
+      section#linkage {
+        float: left;
+        width: ($unit)+($gutter*.66);
+        margin-left: ($gutter*.33);
+        margin-top: $lh*3;
+
+        ul {
+          list-style: none;
         }
       }
     }
   }
 }
+

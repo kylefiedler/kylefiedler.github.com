@@ -1,87 +1,90 @@
 ---
-layout: index
+layout: default
 title: Kyle Fiedler - designer, developer and part time astronaut
 keyword: home
 meta_keywords:
-meta_description: 
+meta_description:
 ---
 
 <section id="main-header">
-  <h1>Training to become an astronaut since 1990.</h1>
+  <h1>Training to become <strong>an astronaut</strong><span>since 1990</span></h1>
 </section>
-
-<div id="primary-row">
-  
-  <section id="lastfm">
-    <h2><a href="#">Listening <span>via Last.fm</span></a></h2>
-    <ul>
-    </ul>
-  </section>
-
-  <section id="readernaut">
-    <h2><a href="#">Reading <span>via Readernaut</span></a></h2>
-    <ul id="bookshelf">
-    </ul>
-  </section>
-
-  <section id="flickr">
-    <h2><a href="#">Seeing <span>via Flickr</span></a></h2>
-    <!-- Start of Flickr Badge -->
-    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=4&display=latest&size=m&layout=x&source=user_set&user=26729097%40N07&set=72157626386838895&context=in%2Fset-72157626386838895%2F"></script>
-    <!-- End of Flickr Badge -->
-  </section>
-
-  <section id="posts">
-    <h2><a href="#">Writing <span>via Blog</span></a></h2>
-    <ul>
-      {% for post in site.posts limit: 4 %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a> <span>{{ post.date | date:"%Y-%m-%d" }}</span></li>
-      {% endfor %}
-    </ul>
-  </section>
-  
-</div>
-
-<div id="secondary-row">
-  
-  <section id="dribbble">
-    <h2><a href="#">Dribbbling <span>via Dribbble</span></a></h2>
-  </section>
-  
-  <section id="tumblr">
-    <h2><a href="#">Finding <span>via Tumblr</span></a></h2>
-    <span class="loading">Loading...</span>
-  </section>
-  
-</div>
-
-<div id="tertiary-row">
-
-  <section id="about">
-    <section id="description">
-      <h2>About</h2>
-      <p>During the day, you’ll find Kyle hacking away at rails apps at thoughtbot as a web designer. At night, he throws on a cape and parades around as Atedrake, designing and developing for web and print.</p>
-      <p>Kyle is a good listener and loves to play in the snow. He has red hair and hopes one day to grow a mustache.</p>
-    </section>
-      
-    <section id="linkage">
+<div class="main-content">
+  <div id="primary-column">
+    <section id="posts">
+      <h2><a href="#">Writing <span>via Blog</span></a></h2>
       <ul>
-        <li><a href="mailto:hello@kylefiedler.com">hello@kylefiedler.com</a></li>
-        <li><a href="http://twitter.com/kylefiedler">@kylfiedler</a></li>
-      </ul>
-      
-      <ul>
-        <li><a href="">github</a></li>
-        <li><a href="">linked in</a></li>
-        <li><a href="">forrest</a></li>
+        {% for post in site.posts limit: 4 %}
+          <li><a href="{{ post.url }}">{{ post.title }}<span>{{ post.date | date:"%Y-%m-%d" }}</span></a></li>
+        {% endfor %}
       </ul>
     </section>
-  </section>
-  
-  <section id="twitter">
-    <h2><a href="#">Saying <span>via Twitter</span></a></h2>
-    <ul id="twitter_update_list">
-    </ul>
-  </section>
-  
+
+    <section id="dribbble">
+      <h2><a href="#">Dribbbling <span>via Dribbble</span></a></h2>
+    </section>
+
+    <div class="reading-and-something">
+      <section id="air">
+
+      </section>
+
+      <section id="readernaut">
+        <h2><a href="#">Reading <span>via Readernaut</span></a></h2>
+        <ul id="bookshelf">
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div id="secondary-column">
+    <section id="tumblr">
+      <h2><a href="#">Finding <span>via Tumblr</span></a></h2>
+      <span class="loading">Loading...</span>
+    </section>
+
+    <div class="music-and-stuff">
+      <section id="lastfm">
+        <h2><a href="#">Listening <span>via Last.fm</span></a></h2>
+        <ul>
+        </ul>
+      </section>
+
+      <section id="flickr">
+        <h2><a href="#">Seeing <span>via Flickr</span></a></h2>
+        <!-- Start of Flickr Badge -->
+        <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=2&display=latest&size=m&layout=x&source=user_set&user=26729097%40N07&set=72157626386838895&context=in%2Fset-72157626386838895%2F"></script>
+        <!-- End of Flickr Badge -->
+      </section>
+    </div>
+
+    <section id="twitter">
+      <div>
+        <h2><a href="#">Saying <span>via Twitter</span></a></h2>
+        <ul id="twitter_update_list">
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <section id="description">
+        <h2>About</h2>
+        <p>During the day, you’ll find Kyle hacking away at rails apps at thoughtbot as a web designer. At night, he throws on a cape and parades around as Atedrake, designing and developing for web and print.</p>
+        <p>Kyle is a good listener and loves to play in the snow. He has red hair and hopes one day to grow a mustache.</p>
+      </section>
+
+      <section id="linkage">
+        <ul>
+          <li><a href="">github</a></li>
+          <li><a href="">linked in</a></li>
+          <li><a href="">forrest</a></li>
+          <li><a href="#">daytum</a></li>
+          <li><a href="#">ballgame names</a></li>
+          <li><a href="#">gowalla</a></li>
+          <li><a href="#">instapaper</a></li>
+        </ul>
+      </section>
+    </section>
+
+  </div>
 </div>
