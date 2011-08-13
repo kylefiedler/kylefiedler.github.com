@@ -1,53 +1,32 @@
 header.main {
   @extend .wrapper;
-  @extend .clearfix;
-  background: rgba($primary, .9);
-  border:1px solid darken($primary, 5%);
-  border-top: 0;
-  padding: $lh*.5 $gutter;
-  width: ($unit*12)+($gutter*11);
-  @include box-shadow(inset 0 -1px 0 lighten($primary, 15%), 0 1px 3px rgba(#000, .2));
+  position: relative;
 
   nav {
+    position: absolute;
+    top: 10px;
+    left: 20px;
 
     h1 {
-      float: left;
-      display: block;
-      font: italic 800 18px $header;
-      line-height: $lh*2;
+      display: none;
 
       a {
-        color: #fff;
-        border-bottom: 0;
+        &:link, &:active, &:visited {
+          border-bottom: 0;
+          display: block;
+          font: italic 900 48px $header;
+          letter-spacing: -1px;
+          line-height: $lh*2;
+
+          span.first {
+            display: block;
+            padding-left: 23px;
+          }
+        }
 
         &:hover {
+          opacity: .8;
           background: none;
-          color: darken($primary, 40%);
-          text-shadow: 0 1px 0 lighten($primary, 10%);
-        }
-      }
-    }
-
-    ul {
-      list-style: none;
-      float: right;
-
-      li {
-        float: left;
-        margin-left: $gutter*3;
-        display: block;
-
-        a {
-          color: #fff;
-          font: 400 14px $header;
-          line-height: $lh*2;
-          border-bottom: 0;
-
-          &:hover {
-            background: none;
-            color: darken($primary, 40%);
-            text-shadow: 0 1px 0 lighten($primary, 10%);
-          }
         }
       }
     }

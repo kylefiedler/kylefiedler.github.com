@@ -94,25 +94,53 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 header.main {
-  position: relative; }
+  position: relative;
+  /*  @extend .clearfix;
+      background: rgba($primary, .9);
+      border:1px solid darken($primary, 5%);
+      border-top: 0;
+      padding: $lh*.5 $gutter;
+      width: ($unit*12)+($gutter*11);
+      @include box-shadow(inset 0 -1px 0 lighten($primary, 15%), 0 1px 3px rgba(#000, .2));
+    */ }
   header.main nav {
     position: absolute;
     top: 10px;
-    left: 20px; }
-    header.main nav h1 {
-      display: none; }
-      header.main nav h1 a:link, header.main nav h1 a:active, header.main nav h1 a:visited {
-        border-bottom: 0;
-        display: block;
-        font: italic 900 48px "ronnia-1", "ronnia-2", "Gill Sans", Helvetica, sans-serif;
-        letter-spacing: -1px;
-        line-height: 40px; }
-        header.main nav h1 a:link span.first, header.main nav h1 a:active span.first, header.main nav h1 a:visited span.first {
-          display: block;
-          padding-left: 23px; }
+    left: 20px;
+    /*    ul {
+              list-style: none;
+              float: right;
+        
+              li {
+                float: left;
+                margin-left: $gutter*3;
+                display: block;
+        
+                a {
+                  color: #fff;
+                  font: 400 14px $header;
+                  line-height: $lh*2;
+                  border-bottom: 0;
+        
+                  &:hover {
+                    background: none;
+                    color: darken($primary, 40%);
+                    text-shadow: 0 1px 0 lighten($primary, 10%);
+                  }
+                }
+              }
+            }
+        */ }
+    header.main nav h1 a {
+      color: #fff;
+      border-bottom: 0;
+      display: block;
+      text-indent: -9999px;
+      width: 133px;
+      height: 133px;
+      background: transparent url("/images/index/logo.png") left top no-repeat; }
       header.main nav h1 a:hover {
-        opacity: .8;
-        background: none; }
+        opacity: .8; }
 
 footer.main {
   margin: 40px auto; }
@@ -159,12 +187,10 @@ body.home {
     color: rgba(0, 0, 0, 0.2); }
 
 div.main-content {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  display: table; }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   div.main-content #primary-column {
-    display: table-cell;
-    vertical-align: top;
     margin-top: 40px;
+    float: left;
     width: 611px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1); }
@@ -226,8 +252,7 @@ div.main-content {
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       padding-right: 11px; }
       div.main-content #primary-column div.reading-and-something section#air {
-        display: table-cell;
-        vertical-align: top;
+        float: left;
         width: 288px;
         min-height: 200px;
         margin-right: 12px;
@@ -239,11 +264,11 @@ div.main-content {
           -o-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.8); }
       div.main-content #primary-column div.reading-and-something section#readernaut {
-        display: table-cell;
-        vertical-align: top;
+        float: left;
         width: 288px;
-        margin-left: -12px;
-        padding-left: 12px; }
+        margin-left: -13px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 11px; }
         div.main-content #primary-column div.reading-and-something section#readernaut ul {
           list-style: none; }
           div.main-content #primary-column div.reading-and-something section#readernaut ul li {
@@ -264,25 +289,27 @@ div.main-content {
               div.main-content #primary-column div.reading-and-something section#readernaut ul li a img {
                 max-width: 140px; }
   div.main-content #secondary-column {
-    display: table-cell;
+    float: left;
     width: 612px;
-    vertical-align: top;
-    margin: 40px 0 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    margin: 40px 0 0 -1px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 0;
+    border-bottom: 0; }
     div.main-content #secondary-column section#tumblr {
       width: 288px;
-      display: table-cell;
+      float: left;
       border-right: 1px solid rgba(0, 0, 0, 0.1);
-      padding-right: 12px;
+      padding-right: 11px;
       padding-left: 12px; }
       div.main-content #secondary-column section#tumblr ul {
         list-style: none; }
         div.main-content #secondary-column section#tumblr ul li {
           margin-bottom: 20px; }
     div.main-content #secondary-column div.music-and-stuff {
-      display: table-cell;
-      vertical-align: top;
-      width: 300px; }
+      float: left;
+      width: 300px;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      margin-left: -2px; }
       div.main-content #secondary-column div.music-and-stuff section#lastfm {
         padding-left: 12px; }
         div.main-content #secondary-column div.music-and-stuff section#lastfm .lastFMHeader {

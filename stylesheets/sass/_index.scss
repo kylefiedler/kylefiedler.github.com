@@ -1,25 +1,25 @@
 body.home {
-  background: url('/images/index/astro.png') 45% 10px no-repeat,
+  background: url('/images/index/astro.png') 45% -10px no-repeat,
   url(/images/bg.png) 0 0 repeat;
 
   h2 {
-    a {
-      border-bottom: none;
+    span {
+      display: none;
+      @include transition(all .3s);
+    }
+
+    &:hover {
+      background: none;
 
       span {
-        display: none;
-        @include transition(all .3s);
+        display: inline;
+        color: rgba($base, .3);
+        font-weight: 400;
       }
+    }
 
-      &:hover {
-        background: none;
-
-        span {
-          display: inline;
-          color: rgba($base, .3);
-          font-weight: 400;
-        }
-      }
+    a {
+      border-bottom: none;
     }
   }
 }
@@ -57,11 +57,13 @@ div.main-content {
   @extend .wrapper;
   @extend .clearfix;
   border-bottom: 1px solid rgba(#000, .1);
+  display: table;
 
   #primary-column {
     @extend .clearfix;
+    display: table-cell;
+    vertical-align: top;
     margin-top: $lh*2;
-    float: left;
     width: grid-width(6)+($gutter/2)-(1);
     border-top: 1px solid rgba(#000, .1);
     border-right: 1px solid rgba(#000, .1);
@@ -153,20 +155,27 @@ div.main-content {
       padding-right: ($gutter/2)-(1);
 
       section#air {
-        float: left;
+        display: table-cell;
+        vertical-align: top;
         width: grid-width(3);
         min-height: $lh*10;
         margin-right: ($gutter)/2;
         border-right: 1px solid rgba(#000, .1);
         padding-right: ($gutter/2)-(1);
+
+        p {
+          img {
+            @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
+          }
+        }
       }
 
       section#readernaut {
-        float: left;
+        display: table-cell;
+        vertical-align: top;
         width: grid-width(3);
-        margin-left: -($gutter/2)-(1);
-        border-left: 1px solid rgba(#000, .1);
-        padding-left: ($gutter/2)-(1);
+        margin-left: -($gutter/2);
+        padding-left: ($gutter/2);
 
         ul {
           list-style: none;
@@ -199,22 +208,22 @@ div.main-content {
 
   #secondary-column {
     @extend .clearfix;
-    float: left;
+    display: table-cell;
     width: grid-width(6)+($gutter/2);
-    margin: $lh*2 0 0 -1px;
-    border: 1px solid rgba(#000, .1);
-    border-right: 0;
-    border-bottom: 0;
+    vertical-align: top;
+    margin: $lh*2 0 0;
+    border-top: 1px solid rgba(#000, .1);
 
     section#tumblr {
       width: grid-width(3);
-      float: left;
+      display: table-cell;
       border-right: 1px solid rgba(#000, .1);
-      padding-right: ($gutter/2)-(1);
+      padding-right: ($gutter/2);
       padding-left: $gutter/2;
 
       ul {
         list-style: none;
+
         li {
           margin-bottom: $lh;
         }
@@ -222,7 +231,8 @@ div.main-content {
     }
 
     div.music-and-stuff {
-      float: left;
+      display: table-cell;
+      vertical-align: top;
       width: grid-width(3)+($gutter/2);
 
       section#lastfm {
@@ -273,7 +283,7 @@ div.main-content {
           overflow: hidden;
           @include box-shadow(0 0 0 1px rgba($base, .6), 0 0 4px rgba($base, .8));
 
-          &:nth-child(even) {
+          &#flickr_badge_image2 {
             margin-right: 0;
           }
 
@@ -307,6 +317,7 @@ div.main-content {
           span {
             font: 500 24px $header;
             line-height: $lh*2;
+
             a {
               display: inline;
               border-bottom: 1px solid rgba($base, .2);
