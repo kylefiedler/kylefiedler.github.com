@@ -83,7 +83,7 @@ input, select { vertical-align: middle; }
 ---------------------------------------- */
 
 /*fonts*/
-$header: "ronnia-1","ronnia-2","Gill Sans", Helvetica, sans-serif;
+$header: freight-sans-pro-1,freight-sans-pro-2, "Gill Sans", Helvetica, sans-serif;
 $body: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", "Georgia", serif;
 
 /*grid*/
@@ -92,8 +92,8 @@ $gutter: 24px;
 $lh: 20px;
 
 /*colors*/
-$primary: #88c881;
-$secondary: #34876e;
+$primary: #8D72AC;
+$secondary: #5b2f69;
 $base: #000;
 
 /* Functions
@@ -132,15 +132,16 @@ body {
   font: 14px $body;
   margin: 0;
   color: rgba($base, .4);
-  background: #fff url(/images/bg.png) 0 0 repeat;
-}
+  background: #fff;
+/*  background: #fff url(/images/bg.png) 0 0 repeat;
+  */}
 
 h2 {
   font-weight: bold;
   color: rgba($base,.6);
   line-height: $lh;
-  margin-top: $lh*1.5;
-  margin-bottom: $lh*.5;
+  margin-top: $lh;
+  margin-bottom: $lh;
 }
 
 a {
@@ -165,7 +166,7 @@ a {
 
   &:hover {
     color: rgba($base, .9);
-    background: rgba($base, .06);
+    background: rgba(#fcffe0, .6);
     text-shadow: 0 1px 0 #fff;
     border-bottom: 1px solid rgba($base, .1);
   }

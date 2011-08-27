@@ -5,9 +5,20 @@ footer.main {
   
   p {
     float: left;
+  }
 
-    &.home-link {
-      float: right;
+  ul {
+    float: right;
+    list-style: none;
+    
+    li {
+      float: left;
+      padding-right: $gutter/2;
+
+      a {
+        display: inline-block;
+        margin-right: $gutter/2;
+      }
     }
   }
 }

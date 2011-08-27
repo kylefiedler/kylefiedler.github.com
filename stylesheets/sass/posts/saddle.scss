@@ -1,0 +1,25 @@
+@import "base";
+body.saddle {
+  nav {
+    background: rgba(#0b0805, .7);
+    border: none;
+    @include box-shadow(none);
+  }
+  
+  article {
+    @extend .clearfix;
+
+    div.header-wrapper {
+      background: #3f311c;
+      color: #fff;
+      padding-top: $lh*5;
+
+      header {
+        @extend .wrapper;
+      }
+    }
+    section {
+      @extend .wrapper;
+    }
+  }
+}

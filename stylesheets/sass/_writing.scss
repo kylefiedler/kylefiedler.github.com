@@ -1,0 +1,40 @@
+ul.writing {
+  list-style: none;
+  border-bottom: 1px solid rgba(#000, .1);
+  border-top: 1px solid rgba(#000, .1);
+  margin-top: $lh*4;
+  @extend .wrapper;
+
+  li {
+    width: grid-width(4);
+    display: table-cell;
+    margin-right: $gutter;
+    padding: $lh;
+    border-right: 1px solid rgba(#000, .1);
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n) {
+      border: 0;
+    }
+
+    a {
+
+      h2 {
+        font: 500 24px $header;
+        margin-top: 0;
+      }
+
+      p {
+        font-style: normal;
+
+        &.date {
+          font-style: italic;
+          color: rgba(#000, .4);
+        }
+      }
+    }
+  }
+}
