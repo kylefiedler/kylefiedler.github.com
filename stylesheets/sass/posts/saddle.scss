@@ -1,25 +1,104 @@
+@import "bourbon/bourbon";
 @import "base";
 body.saddle {
+  header.main {
   nav {
-    background: rgba(#0b0805, .7);
-    border: none;
-    @include box-shadow(none);
+    a {
+      color: #fff;
+      &:hover {
+        color: rgba(#fff, .8);
+        text-shadow: none;
+      }
+    }
+  }
   }
   
   article {
     @extend .clearfix;
 
     div.header-wrapper {
-      background: #3f311c;
+      background: #3f311c url('/images/posts/saddle/header-bg.png') repeat;
       color: #fff;
-      padding-top: $lh*5;
+      padding: $lh*4 0 $lh;
+      border-bottom: 1px solid #2d2d2d;
 
       header {
         @extend .wrapper;
+        @extend .clearfix;
+        h1 {
+          display: block;
+          text-indent: -9999px;
+          background: transparent url('/images/posts/saddle/back-in-the-saddle.png') left top no-repeat;
+          width: 599px;
+          height: 331px;
+          float: left;
+        }
+
+        div.header-description {
+          float: right;
+          width: grid-width(6);
+
+          h2 {
+            color: rgba(#fff, .4);
+            font: 32px ostrich-sans-1,ostrich-sans-2, helvetica, sans-serif;
+            margin-top: $lh*3;
+          }
+
+          p {
+            font-size: 22px;
+            line-height: $lh*1.5;
+            text-shadow: 0 1px 0 #000;
+            -webkit-font-smoothing: antialiased;
+          }
+        }
       }
     }
+
     section {
       @extend .wrapper;
+      @extend .clearfix;
+      margin-top: $lh*2;
+
+      iframe {
+        width: grid-width(5);
+        height: $lh*16;
+        float: left;
+      }
+
+      div.content-wrapper {
+        width: grid-width(6);
+        float: left;
+        margin-left: $gw-gutter;
+
+        h2 {
+          color: #5c4829;
+            font-family: ostrich-sans-1,ostrich-sans-2, helvetica, sans-serif;
+            text-transform: uppercase;
+
+          font-size: 32px;
+          line-height: $lh*2;
+          margin-top: 0;
+        }
+
+        div.columns {
+          -webkit-column-width: grid-width(3);
+          -webkit-column-gap: $gw-gutter;
+        }
+
+        p {
+          margin-bottom: $lh;
+        }
+      }
+
+      p.post-number {
+        margin-top: -($lh*2);
+        width: grid-width(1)+$gw-gutter;
+        text-indent: -9999px;
+        display: block;
+        background: transparent url('/images/posts/saddle/number-1.png') right top no-repeat;
+        height: 171px;
+        float: left;
+      }
     }
   }
 }

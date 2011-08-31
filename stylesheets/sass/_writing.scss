@@ -2,13 +2,13 @@ ul.writing {
   list-style: none;
   border-bottom: 1px solid rgba(#000, .1);
   border-top: 1px solid rgba(#000, .1);
-  margin-top: $lh*4;
+  margin-top: $lh*3;
   @extend .wrapper;
 
   li {
     width: grid-width(4);
     display: table-cell;
-    margin-right: $gutter;
+    margin-right: $gw-gutter;
     padding: $lh;
     border-right: 1px solid rgba(#000, .1);
 

@@ -24,61 +24,6 @@ footer, header, hgroup, menu, nav, section {
 table { border-collapse: collapse; border-spacing: 0; }
 input, select { vertical-align: middle; }
 
-/* Mixins
----------------------------------------- */
-
-@mixin border-radius ($radii) {
-  -moz-border-radius: $radii;
-  -webkit-border-radius: $radii;
-  border-radius: $radii;
-}
-
-@mixin box-shadow ($shadow-1,
-  $shadow-2: false, $shadow-3: false,
-  $shadow-4: false, $shadow-5: false,
-  $shadow-6: false, $shadow-7: false,
-  $shadow-8: false, $shadow-9: false)
-  {
-    $full: $shadow-1;
-    @each $shadow in
-      $shadow-2, $shadow-3,
-      $shadow-4, $shadow-5,
-      $shadow-6, $shadow-7,
-      $shadow-8, $shadow-9{
-        @if $shadow {
-          $full: $full, $shadow;
-        }
-      }
-  -webkit-box-shadow: $full;
-  -moz-box-shadow: $full;
-  -o-box-shadow: $full;
-  box-shadow: $full;
-}
-
-@mixin linear-gradient ($from, $to) {
-  background: $from;
-  background: -moz-linear-gradient(top, $from, $to);    // FF3.6
-  background: -ms-linear-gradient(top, $from, $to);     // IE10
-  background: -o-linear-gradient(top, $from, $to);      // Opera 11.10+
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to)); // Saf4+, Chrome
-  background: -webkit-linear-gradient(top, $from, $to); // Chrome 10+, Saf5.1+
-  background: linear-gradient(top, $from, $to);
-}
-
-@mixin transform ($transform) {
-  -moz-transform: $transform;
-  -webkit-transform: $transform;
-  -o-transform: $transform;
-  transform: $transform;
-}
-
-@mixin transition ($transition) {
-  -moz-transition: $transition;
-  -webkit-transition: $transition;
-  -o-transition: $transition;
-  transition: $transition;
-}
-
 /* Variables
 ---------------------------------------- */
 
@@ -87,20 +32,13 @@ $header: freight-sans-pro-1,freight-sans-pro-2, "Gill Sans", Helvetica, sans-ser
 $body: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", "Georgia", serif;
 
 /*grid*/
-$unit: 80px;
-$gutter: 24px;
+$gw-column: 80px;
+$gw-gutter: 24px;
 $lh: 20px;
 
 /*colors*/
 $primary: #8D72AC;
-$secondary: #5b2f69;
 $base: #000;
-
-/* Functions
----------------------------------------- */
-@function grid-width($n) {
-  @return $n * $unit + ($n - 1) * $gutter;
-}
 
 /* Extended classes
 ---------------------------------------- */
@@ -119,7 +57,7 @@ $base: #000;
 /* End hide from IE Mac */
 
 .wrapper {
-  width: ($unit*12)+($gutter*11);
+  width: grid-width(12);
   text-align: left;
   margin: 0 auto;
 }
@@ -144,6 +82,9 @@ h2 {
   margin-bottom: $lh;
 }
 
+p {
+  line-height: $lh;
+}
 a {
 
   &:link {

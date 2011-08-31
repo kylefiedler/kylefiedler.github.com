@@ -1,3 +1,45 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fade-out {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
 /* CSS Reset
 ---------------------------------------- */
 html, body, div, span, object, iframe,
@@ -27,30 +69,26 @@ table {
 input, select {
   vertical-align: middle; }
 
-/* Mixins
----------------------------------------- */
 /* Variables
 ---------------------------------------- */
 /*fonts*/
 /*grid*/
 /*colors*/
-/* Functions
----------------------------------------- */
 /* Extended classes
 ---------------------------------------- */
 /* Clearfix hack I love you */
-.clearfix:after, body.saddle article:after {
+.clearfix:after, body.saddle article:after, body.saddle article div.header-wrapper header:after, body.saddle article section:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, body.saddle article {
+.clearfix, body.saddle article, body.saddle article div.header-wrapper header, body.saddle article section {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, body.saddle article {
+.clearfix, body.saddle article, body.saddle article div.header-wrapper header, body.saddle article section {
   display: block; }
 
 /* End hide from IE Mac */
@@ -77,6 +115,9 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px; }
 
+p {
+  line-height: 20px; }
+
 a:link {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
@@ -95,14 +136,62 @@ a:hover {
   text-shadow: 0 1px 0 #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-body.saddle nav {
-  background: rgba(11, 8, 5, 0.7);
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none; }
+body.saddle header.main nav a {
+  color: #fff; }
+  body.saddle header.main nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: none; }
 body.saddle article div.header-wrapper {
-  background: #3f311c;
+  background: #3f311c url("/images/posts/saddle/header-bg.png") repeat;
   color: #fff;
-  padding-top: 100px; }
+  padding: 80px 0 20px;
+  border-bottom: 1px solid #2d2d2d; }
+  body.saddle article div.header-wrapper header h1 {
+    display: block;
+    text-indent: -9999px;
+    background: transparent url("/images/posts/saddle/back-in-the-saddle.png") left top no-repeat;
+    width: 599px;
+    height: 331px;
+    float: left; }
+  body.saddle article div.header-wrapper header div.header-description {
+    float: right;
+    width: 600px; }
+    body.saddle article div.header-wrapper header div.header-description h2 {
+      color: rgba(255, 255, 255, 0.4);
+      font: 32px ostrich-sans-1, ostrich-sans-2, helvetica, sans-serif;
+      margin-top: 60px; }
+    body.saddle article div.header-wrapper header div.header-description p {
+      font-size: 22px;
+      line-height: 30px;
+      text-shadow: 0 1px 0 #000;
+      -webkit-font-smoothing: antialiased; }
+body.saddle article section {
+  margin-top: 40px; }
+  body.saddle article section iframe {
+    width: 496px;
+    height: 320px;
+    float: left; }
+  body.saddle article section div.content-wrapper {
+    width: 600px;
+    float: left;
+    margin-left: 24px; }
+    body.saddle article section div.content-wrapper h2 {
+      color: #5c4829;
+      font-family: ostrich-sans-1, ostrich-sans-2, helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: 0; }
+    body.saddle article section div.content-wrapper div.columns {
+      -webkit-column-width: 288px;
+      -webkit-column-gap: 24px; }
+    body.saddle article section div.content-wrapper p {
+      margin-bottom: 20px; }
+  body.saddle article section p.post-number {
+    margin-top: -40px;
+    width: 104px;
+    text-indent: -9999px;
+    display: block;
+    background: transparent url("/images/posts/saddle/number-1.png") right top no-repeat;
+    height: 171px;
+    float: left; }
