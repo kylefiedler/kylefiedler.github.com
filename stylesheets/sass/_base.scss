@@ -24,6 +24,10 @@ footer, header, hgroup, menu, nav, section {
 table { border-collapse: collapse; border-spacing: 0; }
 input, select { vertical-align: middle; }
 
+* {
+  @include box-sizing(border-box);
+}
+
 /* Variables
 ---------------------------------------- */
 
@@ -60,6 +64,7 @@ $base: #000;
   width: grid-width(12);
   text-align: left;
   margin: 0 auto;
+  padding: $gw-gutter;
 }
 
 
@@ -70,29 +75,34 @@ body {
   font: 14px $body;
   margin: 0;
   color: rgba($base, .4);
-  background: #fff;
-/*  background: #fff url(/images/bg.png) 0 0 repeat;
-  */}
+  background: #f9f9f9;
+}
 
 h2 {
   font-weight: bold;
   color: rgba($base,.6);
   line-height: $lh;
-  margin-top: $lh;
-  margin-bottom: $lh;
+  margin: $lh/2 0;
 }
 
-p {
+p, li {
   line-height: $lh;
 }
+
 a {
+  @include transition (background, .4s, ease-in-out);
+  display: inline-block;
+
+  &:empty {
+    display: none;
+  }
 
   &:link {
     text-decoration: none;
     color: rgba($base, .7);
     font-style: italic;
-    border-bottom: 1px solid rgba($base, .1);
-    line-height: ($lh)-1px;
+    line-height: ($lh)-1;
+    border-bottom: 1px solid rgba($base, .05);
   }
 
   &:active {

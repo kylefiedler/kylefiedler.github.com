@@ -3,6 +3,7 @@ header.main {
   @extend .clearfix;
   position: relative;
   width: grid-width(12);
+  padding: 0;
 
   nav {
     @extend .clearfix;

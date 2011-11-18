@@ -90,7 +90,7 @@
         $ul = $('#tumblr ul');
         for (var i=0; i<posts.length; i++) {
           var p = posts[i];
-                      var title = p['regular-title'] || p['link-text'] || p['quote-source'] || p['photo-caption'] || p['video-caption'] || p['converation-title'] || null;
+                      var title = p['regular-title'] || p['link-text'] || p['quote-source'] || p['photo-caption'] || p['video-caption'] || null;
                       var date = date;
           if (title)
             $ul.append('<li><a href="'+p['url']+'">'+title+'</a></li>');

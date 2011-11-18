@@ -1,0 +1,29 @@
+body.missing {
+  article {
+
+    div.header-wrapper {
+      @include linear-gradient(#B50033, #B83D3D);
+
+      header {
+        @extend .wrapper;
+        padding-top: $lh*4;
+        font: 72px ostrich-sans-1,ostrich-sans-2;
+
+        h1 {
+          font-weight: bold;
+          color: #fff;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        h2 {
+          font-weight: normal;
+          font-size: 36px;
+          line-height: $lh*2;
+          padding-bottom: $lh*2;
+        }
+      }
+    }
+    section {
+    }
+  }
+}
