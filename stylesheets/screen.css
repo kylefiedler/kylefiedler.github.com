@@ -1,0 +1,185 @@
+/* CSS Reset
+---------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* Clearfix hack I love you */
+.clearfix:after, body > section:after, body > section section#dribbble ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix, body > section, body > section section#dribbble ul {
+  display: inline-block; }
+
+/* Hide from IE Mac \*/
+.clearfix, body > section, body > section section#dribbble ul {
+  display: block; }
+
+/* End hide from IE Mac */
+/* Variables
+---------------------------------------- */
+/*fonts*/
+/*grid*/
+/* Base styles
+---------------------------------------- */
+body {
+  text-align: center;
+  margin: 0;
+  background: #295967 url("/images/bg-grid.png"); }
+
+h1 {
+  font: 800 47.123px superclarendon-1, superclarendon-2, claredon, georgia, serif;
+  text-transform: uppercase; }
+
+h2 {
+  font: 200 22.652px franklin-gothic-comp-urw-1, franklin-gothic-comp-urw-2, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #444; }
+
+body > section {
+  width: 1164.112px;
+  text-align: left;
+  margin: 76.245px auto; }
+  body > section header {
+    float: left;
+    height: 157.142px;
+    margin-right: 22.652px;
+    margin-top: 197.794px;
+    margin-bottom: 98.897px;
+    text-align: right;
+    width: 372.936px;
+    border-bottom: 18px solid rgba(23, 38, 39, 0.7); }
+    body > section header h1 {
+      line-height: 1em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased; }
+      body > section header h1 span {
+        display: block; }
+    body > section header h2 {
+      color: rgba(255, 255, 255, 0.3);
+      -webkit-font-smoothing: antialiased; }
+  body > section section#dribbble {
+    float: left;
+    height: 471.833px;
+    width: 372.936px;
+    margin-right: 22.652px; }
+    body > section section#dribbble h2 {
+      text-transform: uppercase;
+      margin-bottom: 22.652px;
+      margin-top: 49.245px;
+      /*&:before {*/
+      /*content: "01";*/
+      /*display: inline-block;*/
+      /*}*/ }
+    body > section section#dribbble ul {
+      list-style: none;
+      width: 372.936px; }
+      body > section section#dribbble ul li {
+        float: left;
+        height: 175.142px;
+        margin-bottom: 22.652px;
+        margin-right: 22.652px;
+        overflow: hidden;
+        width: 175.142px; }
+        body > section section#dribbble ul li:nth-child(even) {
+          margin-right: 0; }
+        body > section section#dribbble ul li a {
+          display: block;
+          height: 175.142px;
+          overflow: hidden;
+          width: 175.142px;
+          -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+          -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+          -ms-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+          -o-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+          body > section section#dribbble ul li a img {
+            z-index: -1;
+            position: relative; }
+  body > section section.readernaut {
+    float: left;
+    width: 372.936px;
+    height: 175.142px;
+    margin-top: 296.691px; }
+    body > section section.readernaut h2 {
+      font: 800 18px superclarendon-1, superclarendon-2, claredon, georgia, serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8.653px; }
+    body > section section.readernaut ul {
+      list-style: none; }
+      body > section section.readernaut ul li {
+        font: 200 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
+        margin-bottom: 5.348px; }
+  body > section section.twitter {
+    clear: both;
+    float: left;
+    margin: 22.652px 197.794px;
+    width: 768.524px;
+    height: 175.142px; }
+    body > section section.twitter h2 {
+      text-transform: uppercase;
+      margin-bottom: 8.653px; }
+    body > section section.twitter ul {
+      list-style: none; }
+      body > section section.twitter ul li {
+        font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif; }
+        body > section section.twitter ul li span {
+          font-size: 29.124px;
+          font-weight: 200; }
+  body > section section.lastfm {
+    margin-left: 372.936px;
+    margin-right: 22.652px;
+    width: 175.142px;
+    height: 372.936px;
+    float: left;
+    clear: both; }
+    body > section section.lastfm div.lastFMHeader {
+      display: none; }
+    body > section section.lastfm ul {
+      list-style: none; }
+      body > section section.lastfm ul li {
+        width: 76.245px;
+        height: 76.245px;
+        float: left;
+        overflow: hidden;
+        margin-right: 22.652px;
+        margin-bottom: 22.652px; }
+        body > section section.lastfm ul li:nth-child(2n) {
+          margin-right: 0; }
+  body > section section.tumblr {
+    width: 570.73px;
+    float: left; }
+    body > section section.tumblr ol {
+      list-style: none; }
+      body > section section.tumblr ol li {
+        margin-bottom: 22.652px; }

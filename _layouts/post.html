@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Description" name="Description" content="{{ page.meta_description }}" />
+  <meta http-equiv="Keywords" name="Keywords" content="{{ page.meta_keywords }}" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/stylesheets/screen.css" />
+  <link rel="stylesheet" href="/stylesheets/posts/{{ page.keyword }}.css" />
+</head>
+<body>
+  <header class="main">
+    <nav>
+      <h1><a href="/">Kyle Fiedler</a></h1>
+    </nav>
+  </header>
+  
+  <section>
+    {{ content }}
+  </section>
+
+  <footer class="main">
+    <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.  // <a href="mailto:hello@kylefiedler.com">hello@kylefiedler.com</a></p>
+    <p class="home-link"><a href="/">Home</a></p>
+  </footer>
+
+  <!-- jquery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+</body>
+</html>
