@@ -35,7 +35,7 @@
 
     <!-- dribbble -->
     <script type="text/javascript" src = "https://halfcourtshot.googlecode.com/svn/tags/1/js/half-court-shot.jsapp.mh.min.js"></script>
-    <script type="text/javascript">var hcs = new HalfCourtShot({ jersey: "kylefiedler", shots: 4, goal: 'dribbble' });</script>
+    <script type="text/javascript">var hcs = new HalfCourtShot({ jersey: "kylefiedler", shots: 1, goal: 'dribbble' });</script>
 
 
   <script type="text/javascript">
@@ -43,8 +43,8 @@
   function parseResponse(data) {
     var bookshelf=document.getElementById("bookshelf");
 
-    for(var i=0;i<4 ;i++) {
-      //var cover=data.reader_books[i].book_edition.covers.cover_medium;
+    for(var i=0;i<2 ;i++) {
+      var cover=data.reader_books[i].book_edition.covers.cover_medium;
       var title=data.reader_books[i].book_edition.title;
       var permalink=data.reader_books[i].permalink;
 
@@ -52,16 +52,16 @@
 
       var link=document.createElement("a");
       link.setAttribute("href",permalink);
-      link.appendChild(document.createTextNode(title));
+      //link.appendChild(document.createTextNode(title));
 
-      //var img=document.createElement("img");
-      //img.setAttribute("src",cover);
-     // img.setAttribute("alt",title);
-      //if(i%2==0) {
-       // img.setAttribute("class","odd");
-      //}
+      var img=document.createElement("img");
+      img.setAttribute("src",cover);
+      img.setAttribute("alt",title);
+      if(i%2==0) {
+       img.setAttribute("class","odd");
+      }
 
-      //link.appendChild(img);
+      link.appendChild(img);
       newLI.appendChild(link);
       bookshelf.appendChild(newLI);
     };
@@ -72,7 +72,7 @@
         $('.lastfm').lastfm('kylefiedler','recenttracks','657fe627bd2f7a579308d3cd75561670', {
           noimage: 'noimage.gif',
           header: false,
-          limit: 6,
+          limit: 7,
           imagesize: 'large',
           name: false,
           artist: false,

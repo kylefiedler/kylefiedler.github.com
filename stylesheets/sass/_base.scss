@@ -1,32 +1,54 @@
 /* Variables
 ---------------------------------------- */
-/*fonts*/
+// fonts
 $header-font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif;
-$sub-header-font-family: franklin-gothic-comp-urw-1,franklin-gothic-comp-urw-2,sans-serif;
+$sub-header-font-family: din-condensed-web-1,din-condensed-web-2, sans-serif;
+$body-font-family: etica-1,etica-2, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-size: 14px;
 
-/*grid*/
-$gw-column: 76.245px;
+// grid
+$gw-column: 59.301px;
 $gw-gutter: 22.652px;
 $lh: 22.652px;
+
+// colors
+$dark-gray: #333;
+$medium-gray: #888;
+$light-gray: #bbb;
+$extra-light-gray: #f3f3f3;
+$white: #fff;
+
+$first-color: $dark-gray;
+$second-color: $medium-gray;
+$third-color: $light-gray;
+$fourth-color: $extra-light-gray;
+
+$base-color: $extra-light-gray;
+$light-base-color: $white;
 
 /* Base styles
 ---------------------------------------- */
 body {
   text-align: center;
   margin: 0;
-  background: #295967 url('/images/bg-grid.png');
+  background-color: $base-color;
+  text-shadow: 0 1px 0 $light-base-color;
+  color: $second-color;
+  font: $body-font-size $body-font-family;
 }
 
 h1 {
   font: 800 47.123px $header-font-family;
   text-transform: uppercase;
+  color: $second-color;
 }
 
 h2 {
-  font: 200 22.652px $sub-header-font-family;
+  font: 200 21px $sub-header-font-family;
+  color: $first-color;
 }
 
 a {
   text-decoration: none;
-  color: #444;
+  color: $first-color;
 }
