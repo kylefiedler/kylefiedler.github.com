@@ -41,6 +41,9 @@ body {
       }
 
       section.about {
+        border-top: 1px dotted darken($fourth-color, 5%);
+        margin-top: 20px;
+        padding-top: 20px;
         line-height: 1.4em;
 
         p {
@@ -54,8 +57,6 @@ body {
       width: grid-width(8);
 
       section {
-        background: $light-base-color;
-        border-left: 4px solid darken($base-color, 5%);
 
         // h2 {
         //   font: 500 14px $header-font-family;
@@ -122,7 +123,6 @@ body {
 
         &.lastfm {
           @extend .clearfix;
-          background: $light-base-color;
           margin-bottom: $gw-gutter;
           margin-top: $gw-gutter;
           padding: $gw-gutter;
@@ -153,7 +153,6 @@ body {
 
         &.readernaut {
           padding: $gw-gutter;
-          background: $light-base-color;
           width: grid-width(4);
           margin-bottom: $gw-gutter;
 
@@ -189,7 +188,6 @@ body {
           width: grid-width(6);
           float: left;
           padding: $gw-gutter;
-          background: $light-base-color;
 
           ol {
             list-style: none;

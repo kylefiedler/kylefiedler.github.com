@@ -96,96 +96,93 @@ body > section {
       body > section header nav ul {
         list-style: none; }
     body > section header section.about {
+      border-top: 1px dotted #e6e6e6;
+      margin-top: 20px;
+      padding-top: 20px;
       line-height: 1.4em; }
       body > section header section.about p {
         margin-bottom: 1.4em; }
   body > section section.content {
     margin-left: 327.812px;
     width: 632.972px; }
-    body > section section.content section {
-      background: white;
-      border-left: 4px solid #e6e6e6; }
-      body > section section.content section h2 {
-        text-transform: uppercase;
-        margin-bottom: 22.652px;
-        font-family: din-condensed-web-1, din-condensed-web-2, sans-serif;
-        font-weight: 200;
-        letter-spacing: 1px; }
-        body > section section.content section h2 a {
-          color: #888888; }
-      body > section section.content section#dribbble {
-        margin-bottom: 22.652px;
-        padding: 22.652px;
-        width: 305.16px; }
-        body > section section.content section#dribbble ul {
-          list-style: none; }
-          body > section section.content section#dribbble ul li {
-            display: -moz-inline-box;
-            -moz-box-orient: vertical;
-            display: inline-block;
-            vertical-align: baseline;
-            zoom: 1;
-            *display: inline;
-            *vertical-align: auto; }
-            body > section section.content section#dribbble ul li img {
-              display: block;
-              border: 1px solid #d9d9d9; }
-      body > section section.content section.twitter {
-        padding: 22.652px;
-        text-shadow: #f3f3f3; }
-        body > section section.content section.twitter ul {
-          list-style: none; }
-          body > section section.content section.twitter ul li {
-            font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif; }
-            body > section section.content section.twitter ul li span {
-              font-size: 29.124px;
-              font-weight: 200; }
-      body > section section.content section.lastfm {
-        background: white;
-        margin-bottom: 22.652px;
-        margin-top: 22.652px;
-        padding: 22.652px; }
-        body > section section.content section.lastfm div.lastFMHeader {
-          display: none; }
-        body > section section.content section.lastfm ul {
-          list-style: none; }
-          body > section section.content section.lastfm ul li {
-            float: left;
-            height: 59.301px;
-            margin-bottom: 22.652px;
-            margin-right: 22.652px;
-            overflow: hidden;
-            width: 59.301px; }
-            body > section section.content section.lastfm ul li:last-child {
-              margin-right: 0; }
-      body > section section.content section.readernaut {
-        padding: 22.652px;
-        background: white;
-        width: 305.16px;
-        margin-bottom: 22.652px; }
-        body > section section.content section.readernaut ul {
-          list-style: none;
-          overflow: hidden; }
-          body > section section.content section.readernaut ul li {
-            font: 200 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
-            margin-bottom: 5.348px;
-            float: left;
-            margin-right: 22.652px;
+    body > section section.content section h2 {
+      text-transform: uppercase;
+      margin-bottom: 22.652px;
+      font-family: din-condensed-web-1, din-condensed-web-2, sans-serif;
+      font-weight: 200;
+      letter-spacing: 1px; }
+      body > section section.content section h2 a {
+        color: #888888; }
+    body > section section.content section#dribbble {
+      margin-bottom: 22.652px;
+      padding: 22.652px;
+      width: 305.16px; }
+      body > section section.content section#dribbble ul {
+        list-style: none; }
+        body > section section.content section#dribbble ul li {
+          display: -moz-inline-box;
+          -moz-box-orient: vertical;
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto; }
+          body > section section.content section#dribbble ul li img {
+            display: block;
+            border: 1px solid #d9d9d9; }
+    body > section section.content section.twitter {
+      padding: 22.652px;
+      text-shadow: #f3f3f3; }
+      body > section section.content section.twitter ul {
+        list-style: none; }
+        body > section section.content section.twitter ul li {
+          font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif; }
+          body > section section.content section.twitter ul li span {
+            font-size: 29.124px;
+            font-weight: 200; }
+    body > section section.content section.lastfm {
+      margin-bottom: 22.652px;
+      margin-top: 22.652px;
+      padding: 22.652px; }
+      body > section section.content section.lastfm div.lastFMHeader {
+        display: none; }
+      body > section section.content section.lastfm ul {
+        list-style: none; }
+        body > section section.content section.lastfm ul li {
+          float: left;
+          height: 59.301px;
+          margin-bottom: 22.652px;
+          margin-right: 22.652px;
+          overflow: hidden;
+          width: 59.301px; }
+          body > section section.content section.lastfm ul li:last-child {
+            margin-right: 0; }
+    body > section section.content section.readernaut {
+      padding: 22.652px;
+      width: 305.16px;
+      margin-bottom: 22.652px; }
+      body > section section.content section.readernaut ul {
+        list-style: none;
+        overflow: hidden; }
+        body > section section.content section.readernaut ul li {
+          font: 200 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
+          margin-bottom: 5.348px;
+          float: left;
+          margin-right: 22.652px;
+          max-width: 141.254px; }
+          body > section section.content section.readernaut ul li:last-child {
+            margin: 0; }
+          body > section section.content section.readernaut ul li a {
+            display: block;
             max-width: 141.254px; }
-            body > section section.content section.readernaut ul li:last-child {
-              margin: 0; }
-            body > section section.content section.readernaut ul li a {
+            body > section section.content section.readernaut ul li a img {
               display: block;
               max-width: 141.254px; }
-              body > section section.content section.readernaut ul li a img {
-                display: block;
-                max-width: 141.254px; }
-      body > section section.content section.tumblr {
-        width: 469.066px;
-        float: left;
-        padding: 22.652px;
-        background: white; }
-        body > section section.content section.tumblr ol {
-          list-style: none; }
-          body > section section.content section.tumblr ol li {
-            margin-bottom: 22.652px; }
+    body > section section.content section.tumblr {
+      width: 469.066px;
+      float: left;
+      padding: 22.652px; }
+      body > section section.content section.tumblr ol {
+        list-style: none; }
+        body > section section.content section.tumblr ol li {
+          margin-bottom: 22.652px; }
