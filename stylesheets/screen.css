@@ -53,7 +53,7 @@ body {
   background-color: #f3f3f3;
   text-shadow: 0 1px 0 white;
   color: #888888;
-  font: 14px etica-1, etica-2, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
 
 h1 {
   font: 800 47.123px superclarendon-1, superclarendon-2, claredon, georgia, serif;
@@ -85,9 +85,9 @@ body > section {
       body > section header h1 span {
         display: block; }
     body > section header h2 {
-      font-family: etica-1, etica-2, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: 200 16px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
       color: #bbbbbb;
-      font-weight: 200; }
+      margin-top: 8px; }
     body > section header nav {
       border-top: 1px dotted #e6e6e6;
       border-bottom: 1px dotted #e6e6e6;
@@ -102,103 +102,90 @@ body > section {
   body > section section.content {
     margin-left: 327.812px;
     width: 632.972px; }
-    body > section section.content section#dribbble {
+    body > section section.content section {
       background: white;
-      margin-bottom: 22.652px;
-      padding: 22.652px;
-      width: 305.16px; }
-      body > section section.content section#dribbble h2 {
-        font: 700 14px etica-1, etica-2, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border-left: 4px solid #e6e6e6; }
+      body > section section.content section h2 {
         text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 14px; }
-        body > section section.content section#dribbble h2 a {
-          color: #bbbbbb; }
-      body > section section.content section#dribbble ul {
-        list-style: none; }
-        body > section section.content section#dribbble ul li {
-          display: -moz-inline-box;
-          -moz-box-orient: vertical;
-          display: inline-block;
-          vertical-align: baseline;
-          zoom: 1;
-          *display: inline;
-          *vertical-align: auto; }
-          body > section section.content section#dribbble ul li img {
-            display: block;
-            border: 1px solid #d9d9d9; }
-    body > section section.content section.twitter {
-      background: white;
-      padding: 22.652px;
-      text-shadow: #f3f3f3;
-      border-left: 4px solid #d9d9d9; }
-      body > section section.content section.twitter h2 {
-        text-transform: uppercase;
-        margin-bottom: 22.652px; }
-      body > section section.content section.twitter ul {
-        list-style: none; }
-        body > section section.content section.twitter ul li {
-          font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif; }
-          body > section section.content section.twitter ul li span {
-            font-size: 29.124px;
-            font-weight: 200; }
-    body > section section.content section.lastfm {
-      background: white;
-      border-top: 4px solid #e6e6e6;
-      margin-bottom: 22.652px;
-      margin-top: 22.652px;
-      padding: 22.652px; }
-      body > section section.content section.lastfm h2 {
-        font: 500 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
-        letter-spacing: 2px;
         margin-bottom: 22.652px;
-        text-transform: uppercase; }
-      body > section section.content section.lastfm div.lastFMHeader {
-        display: none; }
-      body > section section.content section.lastfm ul {
-        list-style: none; }
-        body > section section.content section.lastfm ul li {
-          float: left;
-          height: 59.301px;
-          margin-bottom: 22.652px;
-          margin-right: 22.652px;
-          overflow: hidden;
-          width: 59.301px; }
-          body > section section.content section.lastfm ul li:last-child {
-            margin-right: 0; }
-    body > section section.content section.readernaut {
-      padding: 22.652px;
-      background: white;
-      width: 305.16px;
-      margin-bottom: 22.652px; }
-      body > section section.content section.readernaut h2 {
-        font: 800 18px superclarendon-1, superclarendon-2, claredon, georgia, serif;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 8.653px; }
-      body > section section.content section.readernaut ul {
-        list-style: none;
-        overflow: hidden; }
-        body > section section.content section.readernaut ul li {
-          font: 200 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
-          margin-bottom: 5.348px;
-          float: left;
-          margin-right: 22.652px;
-          max-width: 141.254px; }
-          body > section section.content section.readernaut ul li:last-child {
-            margin: 0; }
-          body > section section.content section.readernaut ul li a {
-            display: block;
+        font-family: din-condensed-web-1, din-condensed-web-2, sans-serif;
+        font-weight: 200;
+        letter-spacing: 1px; }
+        body > section section.content section h2 a {
+          color: #888888; }
+      body > section section.content section#dribbble {
+        margin-bottom: 22.652px;
+        padding: 22.652px;
+        width: 305.16px; }
+        body > section section.content section#dribbble ul {
+          list-style: none; }
+          body > section section.content section#dribbble ul li {
+            display: -moz-inline-box;
+            -moz-box-orient: vertical;
+            display: inline-block;
+            vertical-align: baseline;
+            zoom: 1;
+            *display: inline;
+            *vertical-align: auto; }
+            body > section section.content section#dribbble ul li img {
+              display: block;
+              border: 1px solid #d9d9d9; }
+      body > section section.content section.twitter {
+        padding: 22.652px;
+        text-shadow: #f3f3f3; }
+        body > section section.content section.twitter ul {
+          list-style: none; }
+          body > section section.content section.twitter ul li {
+            font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif; }
+            body > section section.content section.twitter ul li span {
+              font-size: 29.124px;
+              font-weight: 200; }
+      body > section section.content section.lastfm {
+        background: white;
+        margin-bottom: 22.652px;
+        margin-top: 22.652px;
+        padding: 22.652px; }
+        body > section section.content section.lastfm div.lastFMHeader {
+          display: none; }
+        body > section section.content section.lastfm ul {
+          list-style: none; }
+          body > section section.content section.lastfm ul li {
+            float: left;
+            height: 59.301px;
+            margin-bottom: 22.652px;
+            margin-right: 22.652px;
+            overflow: hidden;
+            width: 59.301px; }
+            body > section section.content section.lastfm ul li:last-child {
+              margin-right: 0; }
+      body > section section.content section.readernaut {
+        padding: 22.652px;
+        background: white;
+        width: 305.16px;
+        margin-bottom: 22.652px; }
+        body > section section.content section.readernaut ul {
+          list-style: none;
+          overflow: hidden; }
+          body > section section.content section.readernaut ul li {
+            font: 200 14px superclarendon-1, superclarendon-2, claredon, georgia, serif;
+            margin-bottom: 5.348px;
+            float: left;
+            margin-right: 22.652px;
             max-width: 141.254px; }
-            body > section section.content section.readernaut ul li a img {
+            body > section section.content section.readernaut ul li:last-child {
+              margin: 0; }
+            body > section section.content section.readernaut ul li a {
               display: block;
               max-width: 141.254px; }
-    body > section section.content section.tumblr {
-      width: 469.066px;
-      float: left;
-      padding: 22.652px;
-      background: white; }
-      body > section section.content section.tumblr ol {
-        list-style: none; }
-        body > section section.content section.tumblr ol li {
-          margin-bottom: 22.652px; }
+              body > section section.content section.readernaut ul li a img {
+                display: block;
+                max-width: 141.254px; }
+      body > section section.content section.tumblr {
+        width: 469.066px;
+        float: left;
+        padding: 22.652px;
+        background: white; }
+        body > section section.content section.tumblr ol {
+          list-style: none; }
+          body > section section.content section.tumblr ol li {
+            margin-bottom: 22.652px; }

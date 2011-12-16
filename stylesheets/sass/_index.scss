@@ -24,9 +24,9 @@ body {
       }
 
       h2 {
-        font-family: $body-font-family;
+        font: 200 16px $body-font-family;
         color: $third-color;
-        font-weight: 200;
+        margin-top: 8px;
       }
 
       nav {
@@ -53,152 +53,150 @@ body {
       margin-left: grid-width(4) + $gw-gutter;
       width: grid-width(8);
 
-      section#dribbble {
+      section {
         background: $light-base-color;
-        margin-bottom: $gw-gutter;
-        padding: $gw-gutter;
-        width: grid-width(4);
+        border-left: 4px solid darken($base-color, 5%);
+
+        // h2 {
+        //   font: 500 14px $header-font-family;
+        //   letter-spacing: 2px;
+        //   margin-bottom: $gw-gutter;
+        //   text-transform: uppercase;
+        // }
+
+        // h2 {
+        //   font: 700 $body-font-size $body-font-family;
+        //   text-transform: uppercase;
+        //   letter-spacing: 1px;
+        //   margin-bottom: $body-font-size;
+        // }
 
         h2 {
-          font: 700 $body-font-size $body-font-family;
           text-transform: uppercase;
+          margin-bottom: $gw-gutter;
+          font-family: $sub-header-font-family;
+          font-weight: 200;
           letter-spacing: 1px;
-          margin-bottom: $body-font-size;
 
           a {
-            color: $third-color;
+            color: $second-color;
           }
         }
 
-        ul {
-          list-style: none;
-
-          li {
-            @include inline-block();
-
-            img {
-              display: block;
-              border: 1px solid darken($base-color, 10%);
-            }
-          }
-        }
-      }
-
-      section.twitter {
-        background: $light-base-color;
-        padding: $gw-gutter;
-        text-shadow: $fourth-color;
-        border-left: 4px solid darken($base-color, 10%);
-
-        h2 {
-          text-transform: uppercase;
+        &#dribbble {
           margin-bottom: $gw-gutter;
-        }
+          padding: $gw-gutter;
+          width: grid-width(4);
 
-        ul {
-          list-style: none;
+          ul {
+            list-style: none;
 
-          li {
-            font-family: $header-font-family;
-
-            span {
-              font-size: 29.124px;
-              font-weight: 200;
-            }
-          }
-        }
-      }
-
-      section.lastfm {
-        @extend .clearfix;
-        background: $light-base-color;
-        border-top: 4px solid darken($base-color, 5%);
-        margin-bottom: $gw-gutter;
-        margin-top: $gw-gutter;
-        padding: $gw-gutter;
-
-        h2 {
-          font: 500 14px $header-font-family;
-          letter-spacing: 2px;
-          margin-bottom: $gw-gutter;
-          text-transform: uppercase;
-        }
-
-        div.lastFMHeader {
-          display: none;
-        }
-
-        ul {
-          @extend .clearfix;
-          list-style: none;
-
-          li {
-            float: left;
-            height: grid-width(1);
-            margin-bottom: $gw-gutter;
-            margin-right: $gw-gutter;
-            overflow: hidden;
-            width: grid-width(1);
-
-            &:last-child {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-
-      section.readernaut {
-        padding: $gw-gutter;
-        background: $light-base-color;
-        width: grid-width(4);
-        margin-bottom: $gw-gutter;
-
-        h2 {
-          font: 800 18px $header-font-family;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          margin-bottom: 8.653px;
-        }
-
-        ul {
-          list-style: none;
-          overflow: hidden;
-
-          li {
-            font: 200 14px $header-font-family;
-            margin-bottom: 5.348px;
-            float: left;
-            margin-right: $gw-gutter;
-            max-width: grid-width(2);
-
-            &:last-child {
-              margin: 0;
-            }
-
-            a {
-              display: block;
-              max-width: grid-width(2);
+            li {
+              @include inline-block();
 
               img {
                 display: block;
-                max-width: grid-width(2);
+                border: 1px solid darken($base-color, 10%);
               }
             }
           }
         }
-      }
 
-      section.tumblr {
-        width: grid-width(6);
-        float: left;
-        padding: $gw-gutter;
-        background: $light-base-color;
+        &.twitter {
+          padding: $gw-gutter;
+          text-shadow: $fourth-color;
 
-        ol {
-          list-style: none;
+          ul {
+            list-style: none;
 
-          li {
-            margin-bottom: $gw-gutter;
+            li {
+              font-family: $header-font-family;
+
+              span {
+                font-size: 29.124px;
+                font-weight: 200;
+              }
+            }
+          }
+        }
+
+        &.lastfm {
+          @extend .clearfix;
+          background: $light-base-color;
+          margin-bottom: $gw-gutter;
+          margin-top: $gw-gutter;
+          padding: $gw-gutter;
+
+
+          div.lastFMHeader {
+            display: none;
+          }
+
+          ul {
+            @extend .clearfix;
+            list-style: none;
+
+            li {
+              float: left;
+              height: grid-width(1);
+              margin-bottom: $gw-gutter;
+              margin-right: $gw-gutter;
+              overflow: hidden;
+              width: grid-width(1);
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+
+        &.readernaut {
+          padding: $gw-gutter;
+          background: $light-base-color;
+          width: grid-width(4);
+          margin-bottom: $gw-gutter;
+
+          ul {
+            list-style: none;
+            overflow: hidden;
+
+            li {
+              font: 200 14px $header-font-family;
+              margin-bottom: 5.348px;
+              float: left;
+              margin-right: $gw-gutter;
+              max-width: grid-width(2);
+
+              &:last-child {
+                margin: 0;
+              }
+
+              a {
+                display: block;
+                max-width: grid-width(2);
+
+                img {
+                  display: block;
+                  max-width: grid-width(2);
+                }
+              }
+            }
+          }
+        }
+
+        &.tumblr {
+          width: grid-width(6);
+          float: left;
+          padding: $gw-gutter;
+          background: $light-base-color;
+
+          ol {
+            list-style: none;
+
+            li {
+              margin-bottom: $gw-gutter;
+            }
           }
         }
       }
