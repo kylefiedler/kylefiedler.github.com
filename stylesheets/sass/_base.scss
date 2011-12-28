@@ -1,54 +1,56 @@
-/* Variables
----------------------------------------- */
-// fonts
-$header-font-family: superclarendon-1, superclarendon-2, claredon, georgia, serif;
-$sub-header-font-family:  din-condensed-web-1,din-condensed-web-2, sans-serif;
-$body-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-$body-font-size: 14px;
-
-// grid
-$gw-column: 59.301px;
-$gw-gutter: 22.652px;
-$lh: 22.652px;
-
-// colors
-$dark-gray: #333;
-$medium-gray: #888;
-$light-gray: #bbb;
-$extra-light-gray: #f3f3f3;
-$white: #fff;
-
-$first-color: $dark-gray;
-$second-color: $medium-gray;
-$third-color: $light-gray;
-$fourth-color: $extra-light-gray;
-
-$base-color: $extra-light-gray;
-$light-base-color: $white;
-
 /* Base styles
 ---------------------------------------- */
 body {
-  text-align: center;
-  margin: 0;
-  background-color: $base-color;
-  text-shadow: 0 1px 0 $light-base-color;
-  color: $second-color;
+  background-color: $background-color;
+  color: $text-color;
   font: $body-font-size $body-font-family;
 }
 
 h1 {
-  font: 800 47.123px $header-font-family;
+  font: 800 golden-ratio($body-font-size, 3) $header-font-family;
   text-transform: uppercase;
-  color: $second-color;
+  color: $header-color;
 }
 
 h2 {
-  font: 200 21px $sub-header-font-family;
-  color: $first-color;
+  font: 900 $body-font-size $body-font-family;
+  color: $header-color;
+  letter-spacing: 2px;
+  margin-bottom: $gw-gutter;
+
+  a {
+    background: none;
+
+    &:hover {
+      background-color: $link-background;
+    }
+  }
 }
 
 a {
   text-decoration: none;
-  color: $first-color;
+  color: $header-color;
+  background-color: $link-background;
+  font-family: $body-font-family;
+
+  &:hover {
+    background-color: darken($link-background, 10%);
+  }
+}
+
+ul, ol {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.img-double {
+  border: 1px solid darken($border-color, 10%);
+  background: transparent;
+  @include box-shadow(inset 0 0 0 1px $background-color);
+
+  img {
+    display: block;
+    z-index: -1;
+    position: relative;
+  }
 }

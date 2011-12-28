@@ -1,0 +1,53 @@
+// Percentage of container calculator
+@function perc($width, $container-width: $max-width) {
+  @return percentage($width / $container-width);
+}
+
+// Line-height
+@function lh($amount: 1) {
+  @return $base-line-height * $amount;
+}
+
+@mixin border-box {
+  @include box-sizing(border-box);
+}
+
+
+// Variables
+// ---------------------------------------- //
+
+// fonts
+$header-font-family: jubilat-1,jubilat-2, superclarendon-1,superclarendon-2, claredon, georgia, serif;
+$body-font-family: p22-underground-1,p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$body-font-size: 16px;
+
+// grid
+$columns: 12;
+$column-width: golden-ratio($body-font-size, 3);
+$gutter-width: golden-ratio($body-font-size, 1);
+$max-width: ($columns * $column-width) + (($columns - 1) * $gutter-width);
+
+$gw-column: perc($column-width);
+$gw-gutter: perc($gutter-width);
+$base-line-height: golden-ratio($body-font-size, 1);
+
+// colors
+$dark-gray: #333;
+$medium-gray: #888;
+$light-gray: #bbb;
+$extra-light-gray: #f3f3f3;
+$white: #fff;
+$light-yellow: #fdffe4;
+
+$header-color: $dark-gray;
+$text-color: $medium-gray;
+$light-text-color: $light-gray;
+
+$border-color: $extra-light-gray;
+$text-shadow-color: $white;
+
+$background-color: $white;
+$sidebar-background-color: $extra-light-gray;
+
+$link-background: $light-yellow;
+
