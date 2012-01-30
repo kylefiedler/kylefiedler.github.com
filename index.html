@@ -7,53 +7,48 @@ meta_description:
 ---
 
 <header>
-  <div class="header-wrapper">
     <h1>Kyle <span>Fiedler</span></h1>
-    <h2>has been working on this site since 2009.</h2>
-
-    <nav>
-      <ul>
-        <li><a href="#">Dribbble</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Last.fm</a></li>
-        <li><a href="#">Readernaut</a></li>
-        <li><a href="#">Tumblr</a></li>
-      </ul>
-    </nav>
-
-    <section class="about">
-      <p>Kyle is a good listener and loves to play in the snow. He has red hair and hopes one day to grow a mustache.</p>
-    </section>
-  </div>
+    <h2>is still iterating on this web site so please ignore any pixels out of place.</h2>
 </header>
 
 <section class="content">
   <section id="dribbble">
-    <h2><a href="http://dribbble.com/kylefiedler">What he is working on</a></h2>
+    <h2><a href="http://dribbble.com/kylefiedler">What he&rsquo;s working on</a></h2>
   </section>
 
   <section class="twitter">
     <div>
-      <h2><a href="http://twitter.com/kylefiedler">Stuff he is saying</a></h2>
+      <h2><a href="http://twitter.com/kylefiedler">Things he&rsquo;s saying</a></h2>
       <ul id="twitter_update_list">
       </ul>
     </div>
   </section>
 
   <section class="lastfm">
-    <h2><a href="http://last.fm/user/kylefiedler">Songs he is listening to</a></h2>
+    <h2><a href="http://last.fm/user/kylefiedler">Songs he&rsquo;s listening to</a></h2>
     <ul>
     </ul>
   </section>
 
   <section class="readernaut">
-    <h2><a href="#">Books that he has recently read</a></h2>
+    <h2><a href="#">Books he has recently read</a></h2>
     <ul id="bookshelf">
     </ul>
   </section>
 
+  <section class="blog">
+    <h2><a href="#">What he&rsquo;s thinking about</a></h2>
+    <!-- <ul> -->
+    <!-- {% for post in site.posts limit: 3 %} -->
+    <!--   <li><a href="{{ post.url }}">{{ post.title }}<span>{{ post.date | date:"%Y-%m-%d" }}</span></a></li> -->
+    <!-- {% endfor %} -->
+    <!-- </ul> -->
+    <p>Nothing yet&hellip;</p>
+  </section>
+
   <section class="tumblr">
-    <h2><a href="#">Things that he likes <span>and wants to share with you</span></a></h2>
-    <script type="text/javascript" src="http://stuff.kylefiedler.com/js"></script>
+    <h2><a href="#">Stuff he&rsquo;s found</a></h2>
+    <span class="loading">Loading...</span>
+    <!-- <script type="text/javascript" src="http://stuff.kylefiedler.com/js"></script> -->
   </section>
 </section>

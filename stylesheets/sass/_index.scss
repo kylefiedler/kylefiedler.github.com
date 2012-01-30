@@ -1,75 +1,30 @@
 body {
   > section {
     @extend .clearfix;
+    @include border-box();
+    padding: lh();
     text-align: left;
-    width: grid-width(12);
-
-    header {
-      @extend .clearfix;
-      @include border-box();
-      padding: (grid-width(1.5) + $gw-gutter) $gw-gutter $gw-gutter;
-      text-align: right;
-      width: grid-width(4);
-      background: $sidebar-background-color;
-      text-shadow: 0 1px 0 $text-shadow-color;
-      position: fixed;
-      min-width: 340px;
-      height: 100%;
-
-      div.header-wrapper {
-        max-width: ($column-width * 5 ) + ($gutter-width * 4 );
-        float: right;
-
-        h1 {
-          line-height: lh(2);
-
-          span {
-            display: block;
-          }
-        }
-
-        h2 {
-          font: 200 16px $body-font-family;
-          color: $light-text-color;
-          letter-spacing: 0;
-          margin-top: 8px;
-        }
-
-        nav {
-          margin: $gw-gutter 0;
-          padding: $gw-gutter 0;
-
-          ul {
-            list-style: none;
-
-            li {
-              @include inline-block();
-            }
-          }
-        }
-
-        section.about {
-          line-height: lh();
-
-          p {
-            margin-bottom: lh();
-          }
-        }
-      }
-    }
+    width: flex-grid(12);
+    max-width: $fg-max-width;
+    min-width: $fg-min-width;
+    margin: 0 auto;
 
     section.content {
-      @include border-box();
-      padding: $gw-gutter;
-      vertical-align: top;
-      width: grid-width(8) + $gw-gutter;
-      margin-left: grid-width(4);
+      @extend .clearfix;
 
       section {
+        @extend .clearfix;
+        width: flex-grid(4);
+        margin-right: flex-gutter();
+        margin-bottom: lh(2);
+        float: left;
 
         h2 {
           text-transform: uppercase;
           font-size: $body-font-size - 1;
+          font-weight: bold;
+          letter-spacing: 1px;
+          margin-bottom: lh();
 
           a {
             color: $text-color;
@@ -77,8 +32,6 @@ body {
         }
 
         &#dribbble {
-          margin-bottom: $gw-gutter;
-
           ul {
             li {
               @include inline-block();
@@ -86,6 +39,7 @@ body {
 
               img {
                 display: block;
+                width: 100%;
               }
             }
           }
@@ -94,16 +48,21 @@ body {
         &.twitter {
           ul {
             li {
-              font-family: $header-font-family;
-
-              a {
-                display: none;
-              }
 
               span {
+                display: block;
+                margin-bottom: lh(.5);
+                line-height: lh(2);
+                font-size: golden-ratio($body-font-size, 1);
+                font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
+
                 a {
                   display: inline;
                 }
+              }
+
+              a {
+                display: none;
               }
             }
           }
@@ -111,6 +70,7 @@ body {
 
         &.lastfm {
           @extend .clearfix;
+          margin-right: 0;
 
           div.lastFMHeader {
             display: none;
@@ -121,33 +81,38 @@ body {
 
             li {
               float: left;
-              margin-bottom: $gw-gutter;
-              margin-right: $gw-gutter;
+              margin-bottom: lh();
+              margin-right: flex-gutter(3);
               overflow: hidden;
+              width: flex-grid(1, 3);
+              // height: flex-grid(1, 3);
 
-              &:last-child {
+              &:nth-child(3n) {
                 margin-right: 0;
               }
 
               a {
                 @extend .img-double;
                 display: block;
+
+                img {
+                  max-width: 100%;
+                }
               }
             }
           }
         }
 
         &.readernaut {
-          margin-bottom: $gw-gutter;
+          clear: left;
 
           ul {
             overflow: hidden;
 
             li {
-              font: 200 14px $header-font-family;
-              margin-bottom: 5.348px;
               float: left;
-              margin-right: $gw-gutter;
+              width: flex-grid(1.5, 3);
+              margin-right: flex-gutter(3);
 
               &:last-child {
                 margin: 0;
@@ -156,15 +121,24 @@ body {
               a {
                 display: block;
                 @extend .img-double;
+
+                img {
+                  max-width: 100%;
+                }
               }
             }
           }
         }
 
+        &.blog {
+        }
+
         &.tumblr {
-          ol {
+          margin-right: 0;
+
+          ul {
             li {
-              margin-bottom: $gw-gutter;
+              margin-bottom: lh(.5);
             }
           }
         }

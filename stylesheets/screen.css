@@ -28,18 +28,18 @@ input, select {
   vertical-align: middle; }
 
 /* Clearfix hack I love you */
-.clearfix:after, body > section:after, body > section header:after, body > section section.content section.lastfm:after, body > section section.content section.lastfm ul:after {
+.clearfix:after, body > section:after, body > section section.content:after, body > section section.content section:after, body > section section.content section.lastfm:after, body > section section.content section.lastfm ul:after, body > section header:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, body > section, body > section header, body > section section.content section.lastfm, body > section section.content section.lastfm ul {
+.clearfix, body > section, body > section section.content, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, body > section, body > section header, body > section section.content section.lastfm, body > section section.content section.lastfm ul {
+.clearfix, body > section, body > section section.content, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
   display: block; }
 
 /* End hide from IE Mac */
@@ -48,28 +48,12 @@ input, select {
 body {
   background-color: white;
   color: #888888;
-  font: 16px p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
-
-h1 {
-  font: 800 67.773px jubilat-1, jubilat-2, superclarendon-1, superclarendon-2, claredon, georgia, serif;
-  text-transform: uppercase;
-  color: #333333; }
-
-h2 {
-  font: 900 16px p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  color: #333333;
-  letter-spacing: 2px;
-  margin-bottom: 2.358%; }
-  h2 a {
-    background: none; }
-    h2 a:hover {
-      background-color: #fdffe4; }
+  font: 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
 
 a {
   text-decoration: none;
   color: #333333;
-  background-color: #fdffe4;
-  font-family: p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+  background-color: #fdffe4; }
   a:hover {
     background-color: #f9ffb1; }
 
@@ -90,108 +74,112 @@ ul, ol {
     z-index: -1;
     position: relative; }
 
+footer {
+  color: #ccc;
+  margin-top: 25.888px;
+  margin-left: 34.119%;
+  clear: both;
+  padding-top: 25.888px; }
+  footer a {
+    color: #ddd;
+    background: none; }
+
 body > section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25.888px;
   text-align: left;
-  width: 100%; }
-  body > section header {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 12.795% 2.358% 2.358%;
-    text-align: right;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 700px;
+  margin: 0 auto; }
+  body > section section.content section {
     width: 31.762%;
-    background: #f3f3f3;
-    text-shadow: 0 1px 0 white;
-    position: fixed;
-    min-width: 340px;
-    height: 100%; }
-    body > section header div.header-wrapper {
-      max-width: 442.416px;
-      float: right; }
-      body > section header div.header-wrapper h1 {
-        line-height: 51.776px; }
-        body > section header div.header-wrapper h1 span {
-          display: block; }
-      body > section header div.header-wrapper h2 {
-        font: 200 16px p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-        color: #bbbbbb;
-        letter-spacing: 0;
-        margin-top: 8px; }
-      body > section header div.header-wrapper nav {
-        margin: 2.358% 0;
-        padding: 2.358% 0; }
-        body > section header div.header-wrapper nav ul {
-          list-style: none; }
-          body > section header div.header-wrapper nav ul li {
-            display: -moz-inline-box;
-            -moz-box-orient: vertical;
-            display: inline-block;
-            vertical-align: baseline;
-            zoom: 1;
-            *display: inline;
-            *vertical-align: auto; }
-      body > section header div.header-wrapper section.about {
-        line-height: 25.888px; }
-        body > section header div.header-wrapper section.about p {
-          margin-bottom: 25.888px; }
-  body > section section.content {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 2.358%;
-    vertical-align: top;
-    width: 68.238%;
-    margin-left: 31.762%; }
+    margin-right: 2.358%;
+    margin-bottom: 51.776px;
+    float: left; }
     body > section section.content section h2 {
       text-transform: uppercase;
-      font-size: 15px; }
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 25.888px; }
       body > section section.content section h2 a {
         color: #888888; }
-    body > section section.content section#dribbble {
-      margin-bottom: 2.358%; }
-      body > section section.content section#dribbble ul li {
-        display: -moz-inline-box;
-        -moz-box-orient: vertical;
-        display: inline-block;
-        vertical-align: baseline;
-        zoom: 1;
-        *display: inline;
-        *vertical-align: auto; }
-        body > section section.content section#dribbble ul li img {
-          display: block; }
-    body > section section.content section.twitter ul li {
-      font-family: jubilat-1, jubilat-2, superclarendon-1, superclarendon-2, claredon, georgia, serif; }
-      body > section section.content section.twitter ul li a {
-        display: none; }
+    body > section section.content section#dribbble ul li {
+      display: -moz-inline-box;
+      -moz-box-orient: vertical;
+      display: inline-block;
+      vertical-align: baseline;
+      zoom: 1;
+      *display: inline;
+      *vertical-align: auto; }
+      body > section section.content section#dribbble ul li img {
+        display: block;
+        width: 100%; }
+    body > section section.content section.twitter ul li span {
+      display: block;
+      margin-bottom: 12.944px;
+      line-height: 51.776px;
+      font-size: 25.888px;
+      font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2"; }
       body > section section.content section.twitter ul li span a {
         display: inline; }
-    body > section section.content section.lastfm div.lastFMHeader {
+    body > section section.content section.twitter ul li a {
       display: none; }
-    body > section section.content section.lastfm ul li {
-      float: left;
-      margin-bottom: 2.358%;
-      margin-right: 2.358%;
-      overflow: hidden; }
-      body > section section.content section.lastfm ul li:last-child {
-        margin-right: 0; }
-      body > section section.content section.lastfm ul li a {
-        display: block; }
+    body > section section.content section.lastfm {
+      margin-right: 0; }
+      body > section section.content section.lastfm div.lastFMHeader {
+        display: none; }
+      body > section section.content section.lastfm ul li {
+        float: left;
+        margin-bottom: 25.888px;
+        margin-right: 10.148%;
+        overflow: hidden;
+        width: 26.568%; }
+        body > section section.content section.lastfm ul li:nth-child(3n) {
+          margin-right: 0; }
+        body > section section.content section.lastfm ul li a {
+          display: block; }
+          body > section section.content section.lastfm ul li a img {
+            max-width: 100%; }
     body > section section.content section.readernaut {
-      margin-bottom: 2.358%; }
+      clear: left; }
       body > section section.content section.readernaut ul {
         overflow: hidden; }
         body > section section.content section.readernaut ul li {
-          font: 200 14px jubilat-1, jubilat-2, superclarendon-1, superclarendon-2, claredon, georgia, serif;
-          margin-bottom: 5.348px;
           float: left;
-          margin-right: 2.358%; }
+          width: 44.926%;
+          margin-right: 10.148%; }
           body > section section.content section.readernaut ul li:last-child {
             margin: 0; }
           body > section section.content section.readernaut ul li a {
             display: block; }
-    body > section section.content section.tumblr ol li {
-      margin-bottom: 2.358%; }
+            body > section section.content section.readernaut ul li a img {
+              max-width: 100%; }
+    body > section section.content section.tumblr {
+      margin-right: 0; }
+      body > section section.content section.tumblr ul li {
+        margin-bottom: 12.944px; }
+
+body > section header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 14.702% 0 10.437% 34.119%; }
+  body > section header h1 {
+    font-size: 41.887px;
+    font-weight: bold;
+    font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
+    color: #333333;
+    letter-spacing: -1px; }
+  body > section header h2 {
+    font: 200 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: #bbbbbb;
+    letter-spacing: 0;
+    margin-top: 8px; }

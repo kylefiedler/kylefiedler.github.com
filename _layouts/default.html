@@ -17,7 +17,7 @@
     {{ content }}
 
     <footer class="main">
-      <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.  // <a href="mailto:hello@kylefiedler.com">hello@kylefiedler.com</a></p>
+      <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
     </footer>
   </section>
 
@@ -73,7 +73,7 @@
         $('.lastfm').lastfm('kylefiedler','recenttracks','657fe627bd2f7a579308d3cd75561670', {
           noimage: 'noimage.gif',
           header: false,
-          limit: 7,
+          limit: 6,
           imagesize: 'large',
           name: false,
           artist: false,
@@ -84,26 +84,23 @@
 
     <!-- readernaut -->
     <script type="text/javascript"src="http://readernaut.com/api/v1/json/kylefiedler/books/finished/?callback=parseResponse"></script>
+
+    <script type="text/javascript">
+function tumblr(resp) {
+        var posts = resp.posts;
+        $('.tumblr .loading').replaceWith('<ul/>');
+        $ul = $('.tumblr ul');
+        for (var i=0; i<posts.length; i++) {
+          var p = posts[i];
+                      var title = p['regular-title'] || p['link-text'] || p['quote-source'] || p['photo-caption'] || p['video-caption'] || null;
+                      var date = date;
+          if (title)
+            $ul.append('<li><a href="'+p['url']+'">'+title+'</a></li>');
+        }
+      }
+</script>
+<script src="http://stuff.kylefiedler.com/api/read/json?callback=tumblr&amp;num=5" type="text/javascript"></script>
+
   {% endif %}
-
-  <!-- application js -->
-  <script src="/js/script.js" type="text/javascript"></script>
-
-
-
-  <!-- google analytics -->
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-4656943-9']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
 </body>
 </html>

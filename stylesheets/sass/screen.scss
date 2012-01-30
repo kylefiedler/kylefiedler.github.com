@@ -1,5 +1,5 @@
 @import "bourbon/bourbon";
 @import "reset";
 
-@import "base-variables", "base";
-@import "index";
+@import "base-functions", "base-variables", "base";
+@import "index", "index-header";

@@ -1,34 +1,14 @@
-// Percentage of container calculator
-@function perc($width, $container-width: $max-width) {
-  @return percentage($width / $container-width);
-}
-
-// Line-height
-@function lh($amount: 1) {
-  @return $base-line-height * $amount;
-}
-
-@mixin border-box {
-  @include box-sizing(border-box);
-}
-
-
-// Variables
-// ---------------------------------------- //
-
 // fonts
-$header-font-family: jubilat-1,jubilat-2, superclarendon-1,superclarendon-2, claredon, georgia, serif;
-$body-font-family: p22-underground-1,p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$body-font-family: "ratio-1","ratio-2", "rooney-web-1","rooney-web-2", p22-underground-1,p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 $body-font-size: 16px;
 
 // grid
-$columns: 12;
-$column-width: golden-ratio($body-font-size, 3);
-$gutter-width: golden-ratio($body-font-size, 1);
-$max-width: ($columns * $column-width) + (($columns - 1) * $gutter-width);
+$fg-max-columns: 12;
+$fg-column: golden-ratio($body-font-size, 3);
+$fg-gutter: golden-ratio($body-font-size, 1);
+$fg-max-width: 1200px;
+$fg-min-width: 700px;
 
-$gw-column: perc($column-width);
-$gw-gutter: perc($gutter-width);
 $base-line-height: golden-ratio($body-font-size, 1);
 
 // colors
@@ -47,7 +27,6 @@ $border-color: $extra-light-gray;
 $text-shadow-color: $white;
 
 $background-color: $white;
-$sidebar-background-color: $extra-light-gray;
 
 $link-background: $light-yellow;
 

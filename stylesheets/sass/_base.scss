@@ -6,32 +6,10 @@ body {
   font: $body-font-size $body-font-family;
 }
 
-h1 {
-  font: 800 golden-ratio($body-font-size, 3) $header-font-family;
-  text-transform: uppercase;
-  color: $header-color;
-}
-
-h2 {
-  font: 900 $body-font-size $body-font-family;
-  color: $header-color;
-  letter-spacing: 2px;
-  margin-bottom: $gw-gutter;
-
-  a {
-    background: none;
-
-    &:hover {
-      background-color: $link-background;
-    }
-  }
-}
-
 a {
   text-decoration: none;
   color: $header-color;
   background-color: $link-background;
-  font-family: $body-font-family;
 
   &:hover {
     background-color: darken($link-background, 10%);
@@ -52,5 +30,18 @@ ul, ol {
     display: block;
     z-index: -1;
     position: relative;
+  }
+}
+
+footer {
+  color: #ccc;
+  margin-top: lh();
+  margin-left: flex-grid(4) + flex-gutter();
+  clear: both;
+  padding-top: lh();
+
+  a {
+    color: #ddd;
+    background: none;
   }
 }
