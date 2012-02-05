@@ -182,4 +182,5 @@ body > section header {
     font: 200 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     color: #bbbbbb;
     letter-spacing: 0;
-    margin-top: 8px; }
+    margin-top: -4px;
+    margin-left: 3.5em; }
