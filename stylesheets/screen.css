@@ -94,13 +94,17 @@ body > section {
   text-align: left;
   width: 100%;
   max-width: 1200px;
-  min-width: 700px;
   margin: 0 auto; }
   body > section section.content section {
     width: 31.762%;
     margin-right: 2.358%;
     margin-bottom: 51.776px;
     float: left; }
+    @media screen and (max-width:575px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+      body > section section.content section {
+        float: none;
+        margin-right: 0;
+        width: 100%; } }
     body > section section.content section h2 {
       text-transform: uppercase;
       font-size: 15px;
@@ -116,7 +120,8 @@ body > section {
       vertical-align: baseline;
       zoom: 1;
       *display: inline;
-      *vertical-align: auto; }
+      *vertical-align: auto;
+      width: 100%; }
       body > section section.content section#dribbble ul li img {
         display: block;
         width: 100%; }
@@ -172,6 +177,9 @@ body > section header {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   padding: 14.702% 0 10.437% 34.119%; }
+  @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+    body > section header {
+      padding-left: 0; } }
   body > section header h1 {
     font-size: 41.887px;
     font-weight: bold;

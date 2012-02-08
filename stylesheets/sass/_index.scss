@@ -6,7 +6,7 @@ body {
     text-align: left;
     width: flex-grid(12);
     max-width: $fg-max-width;
-    min-width: $fg-min-width;
+    // min-width: $fg-min-width;
     margin: 0 auto;
 
     section.content {
@@ -18,6 +18,12 @@ body {
         margin-right: flex-gutter();
         margin-bottom: lh(2);
         float: left;
+
+        @media screen and (max-width:575px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
+          float: none;
+          margin-right: 0;
+          width: 100%;
+        }
 
         h2 {
           text-transform: uppercase;
@@ -36,6 +42,7 @@ body {
             li {
               @include inline-block();
               @extend .img-double;
+              width: 100%;
 
               img {
                 display: block;
