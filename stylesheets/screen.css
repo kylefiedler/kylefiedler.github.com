@@ -55,7 +55,7 @@ a {
   text-decoration: none;
   color: #333333; }
   a:hover {
-    color: #4d4d4d; }
+    color: rgba(51, 51, 51, 0.8); }
 
 ul, ol {
   list-style: none;
@@ -119,9 +119,12 @@ body > section {
       font-size: 15px;
       font-weight: bold;
       letter-spacing: 1px;
-      margin-bottom: 25.888px; }
+      margin-bottom: 25.888px;
+      text-shadow: 0 2px 0 #00b3dd; }
       body > section section.content section h2 a {
         color: #333333; }
+        body > section section.content section h2 a:hover {
+          color: rgba(51, 51, 51, 0.8); }
     body > section section.content section#dribbble ul li {
       display: -moz-inline-box;
       -moz-box-orient: vertical;
@@ -194,11 +197,12 @@ body > section header {
     body > section header {
       padding-left: 0; } }
   body > section header h1 {
+    color: #333333;
+    font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
     font-size: 41.887px;
     font-weight: bold;
-    font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
-    color: #333333;
-    letter-spacing: -1px; }
+    letter-spacing: -1px;
+    text-shadow: 0 2px 0 #00b3dd; }
   body > section header h2 {
     font: 200 18px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     color: rgba(255, 255, 255, 0.7);

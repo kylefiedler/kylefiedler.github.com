@@ -12,7 +12,7 @@ a {
   color: $header-color;
 
   &:hover {
-    color: lighten($header-color, 10%);
+    color: rgba($header-color, .8);
   }
 }
 
