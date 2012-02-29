@@ -19,14 +19,15 @@ $extra-light-gray: #f3f3f3;
 $white: #fff;
 $light-yellow: #fdffe4;
 
+$green: #009EC3;
+
 $header-color: $dark-gray;
-$text-color: $medium-gray;
+$text-color: $white;
 $light-text-color: $light-gray;
 
-$border-color: $extra-light-gray;
+$border-color: $white;
 $text-shadow-color: $white;
 
-$background-color: $white;
-
-$link-background: $light-yellow;
+$background-color: $green;
+$link-background: darken($green, 10%);
 

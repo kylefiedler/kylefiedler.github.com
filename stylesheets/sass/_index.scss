@@ -6,7 +6,6 @@ body {
     text-align: left;
     width: flex-grid(12);
     max-width: $fg-max-width;
-    // min-width: $fg-min-width;
     margin: 0 auto;
 
     section.content {
@@ -33,7 +32,7 @@ body {
           margin-bottom: lh();
 
           a {
-            color: $text-color;
+            color: $header-color;
           }
         }
 
@@ -146,6 +145,14 @@ body {
           ul {
             li {
               margin-bottom: lh(.5);
+
+              a {
+                color: rgba($white, .7);
+
+                &:hover {
+                  color: $white;
+                }
+              }
             }
           }
         }

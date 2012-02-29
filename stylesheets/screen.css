@@ -46,33 +46,42 @@ input, select {
 /* Base styles
 ---------------------------------------- */
 body {
-  background-color: white;
-  color: #888888;
-  font: 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+  background-color: #009ec3;
+  color: white;
+  font: 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   text-decoration: none;
-  color: #333333;
-  background-color: #fdffe4; }
+  color: #333333; }
   a:hover {
-    background-color: #f9ffb1; }
+    color: #4d4d4d; }
 
 ul, ol {
   list-style: none;
   margin-bottom: 0; }
 
 .img-double, body > section section.content section#dribbble ul li, body > section section.content section.lastfm ul li a, body > section section.content section.readernaut ul li a {
-  border: 1px solid #d9d9d9;
+  border: 1px solid #007d9a;
   background: transparent;
-  -webkit-box-shadow: inset 0 0 0 1px white;
-  -moz-box-shadow: inset 0 0 0 1px white;
-  -ms-box-shadow: inset 0 0 0 1px white;
-  -o-box-shadow: inset 0 0 0 1px white;
-  box-shadow: inset 0 0 0 1px white; }
+  -webkit-box-shadow: inset 0 0 0 1px #009ec3;
+  -moz-box-shadow: inset 0 0 0 1px #009ec3;
+  -ms-box-shadow: inset 0 0 0 1px #009ec3;
+  -o-box-shadow: inset 0 0 0 1px #009ec3;
+  box-shadow: inset 0 0 0 1px #009ec3; }
   .img-double img, body > section section.content section#dribbble ul li img, body > section section.content section.lastfm ul li a img, body > section section.content section.readernaut ul li a img {
     display: block;
     z-index: -1;
     position: relative; }
+
+::selection {
+  background: #007590; }
+
+::-moz-selection {
+  background: #007590; }
+
+::-webkit-selection {
+  background: #007590; }
 
 footer {
   color: #ccc;
@@ -112,7 +121,7 @@ body > section {
       letter-spacing: 1px;
       margin-bottom: 25.888px; }
       body > section section.content section h2 a {
-        color: #888888; }
+        color: #333333; }
     body > section section.content section#dribbble ul li {
       display: -moz-inline-box;
       -moz-box-orient: vertical;
@@ -169,6 +178,10 @@ body > section {
       margin-right: 0; }
       body > section section.content section.tumblr ul li {
         margin-bottom: 12.944px; }
+        body > section section.content section.tumblr ul li a {
+          color: rgba(255, 255, 255, 0.7); }
+          body > section section.content section.tumblr ul li a:hover {
+            color: white; }
 
 body > section header {
   -webkit-box-sizing: border-box;
@@ -176,7 +189,7 @@ body > section header {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 14.702% 0 10.437% 34.119%; }
+  padding: 10.437% 0 10.437% 34.119%; }
   @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
     body > section header {
       padding-left: 0; } }
@@ -187,8 +200,8 @@ body > section header {
     color: #333333;
     letter-spacing: -1px; }
   body > section header h2 {
-    font: 200 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    color: #bbbbbb;
+    font: 200 18px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
     letter-spacing: 0;
     margin-top: -4px;
     margin-left: 3.5em; }

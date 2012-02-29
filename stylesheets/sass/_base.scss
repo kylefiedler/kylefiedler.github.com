@@ -4,15 +4,15 @@ body {
   background-color: $background-color;
   color: $text-color;
   font: $body-font-size $body-font-family;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
   color: $header-color;
-  background-color: $link-background;
 
   &:hover {
-    background-color: darken($link-background, 10%);
+    color: lighten($header-color, 10%);
   }
 }
 
@@ -22,7 +22,7 @@ ul, ol {
 }
 
 .img-double {
-  border: 1px solid darken($border-color, 10%);
+  border: 1px solid darken($background-color, 8%);
   background: transparent;
   @include box-shadow(inset 0 0 0 1px $background-color);
 
@@ -31,6 +31,18 @@ ul, ol {
     z-index: -1;
     position: relative;
   }
+}
+
+::selection {
+    background: darken($green, 10%);
+}
+
+::-moz-selection {
+    background: darken($green, 10%);
+}
+
+::-webkit-selection {
+    background: darken($green, 10%);
 }
 
 footer {
