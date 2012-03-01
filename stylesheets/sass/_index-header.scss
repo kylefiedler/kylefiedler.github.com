@@ -4,13 +4,15 @@ body {
       @extend .clearfix;
       @include border-box();
       padding: flex-grid(1.5) 0 flex-grid(1.5) (flex-grid(4) + flex-gutter());
+      border-bottom: 1px solid $border-color;
+      margin-bottom: lh(3);
 
       @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
         padding-left: 0;
       }
 
       h1 {
-        color: $header-color;
+        color: $highlight-color;
         font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
         font-size: golden-ratio($body-font-size, 2);
         font-weight: bold;
@@ -20,7 +22,7 @@ body {
 
       h2 {
         font: 200 18px $body-font-family;
-        color: rgba($white, .7);
+        color: darken($text-color, 10%);
         letter-spacing: 0;
         margin-top: -4px;
         margin-left: 3.5em;

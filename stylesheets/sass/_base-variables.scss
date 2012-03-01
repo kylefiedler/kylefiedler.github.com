@@ -12,22 +12,16 @@ $fg-min-width: 700px;
 $base-line-height: golden-ratio($body-font-size, 1);
 
 // colors
-$dark-gray: #333;
-$medium-gray: #888;
-$light-gray: #bbb;
-$extra-light-gray: #f3f3f3;
 $white: #fff;
-$light-yellow: #fdffe4;
+$gray: #333;
 
-$green: #009EC3;
+$purple: #9C71B8;
+$green: #06967D;
 
-$header-color: $dark-gray;
-$text-color: $white;
-$light-text-color: $light-gray;
+$header-color: lighten($gray, 20%);
+$text-color: lighten($gray, 40%);
+$border-color: lighten($gray, 70%);
 
-$border-color: $white;
-$text-shadow-color: $white;
-
-$background-color: $green;
-$link-background: darken($green, 10%);
+$background-color: $white;
+$highlight-color: $purple;
 

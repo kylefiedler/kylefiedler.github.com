@@ -46,42 +46,70 @@ input, select {
 /* Base styles
 ---------------------------------------- */
 body {
-  background-color: #009ec3;
-  color: white;
+  border-top: 4px solid #cbb5da;
+  background-color: white;
+  color: #999999;
   font: 16px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 a {
   text-decoration: none;
-  color: #333333; }
+  color: gray;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -ms-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0;
+  -moz-transition-delay: 0;
+  -ms-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0; }
   a:hover {
-    color: rgba(51, 51, 51, 0.8); }
+    color: #9c71b8;
+    border-bottom: 1px solid #e6e6e6; }
 
 ul, ol {
   list-style: none;
   margin-bottom: 0; }
 
 .img-double, body > section section.content section#dribbble ul li, body > section section.content section.lastfm ul li a, body > section section.content section.readernaut ul li a {
-  border: 1px solid #007d9a;
+  border: 1px solid #e6e6e6;
   background: transparent;
-  -webkit-box-shadow: inset 0 0 0 1px #009ec3;
-  -moz-box-shadow: inset 0 0 0 1px #009ec3;
-  -ms-box-shadow: inset 0 0 0 1px #009ec3;
-  -o-box-shadow: inset 0 0 0 1px #009ec3;
-  box-shadow: inset 0 0 0 1px #009ec3; }
+  -webkit-box-shadow: inset 0 0 0 1px white;
+  -moz-box-shadow: inset 0 0 0 1px white;
+  -ms-box-shadow: inset 0 0 0 1px white;
+  -o-box-shadow: inset 0 0 0 1px white;
+  box-shadow: inset 0 0 0 1px white; }
   .img-double img, body > section section.content section#dribbble ul li img, body > section section.content section.lastfm ul li a img, body > section section.content section.readernaut ul li a img {
     display: block;
     z-index: -1;
     position: relative; }
 
 ::selection {
-  background: #007590; }
+  background: #8452a4;
+  color: #fff;
+  text-shadow: none; }
 
 ::-moz-selection {
-  background: #007590; }
+  background: #8452a4;
+  color: #fff;
+  text-shadow: none; }
 
 ::-webkit-selection {
-  background: #007590; }
+  background: #8452a4;
+  color: #fff;
+  text-shadow: none; }
 
 footer {
   color: #ccc;
@@ -120,11 +148,11 @@ body > section {
       font-weight: bold;
       letter-spacing: 1px;
       margin-bottom: 25.888px;
-      text-shadow: 0 2px 0 #00b3dd; }
+      text-shadow: 0 2px 0 white; }
       body > section section.content section h2 a {
-        color: #333333; }
+        color: #666666; }
         body > section section.content section h2 a:hover {
-          color: rgba(51, 51, 51, 0.8); }
+          color: #9c71b8; }
     body > section section.content section#dribbble ul li {
       display: -moz-inline-box;
       -moz-box-orient: vertical;
@@ -181,10 +209,6 @@ body > section {
       margin-right: 0; }
       body > section section.content section.tumblr ul li {
         margin-bottom: 12.944px; }
-        body > section section.content section.tumblr ul li a {
-          color: rgba(255, 255, 255, 0.7); }
-          body > section section.content section.tumblr ul li a:hover {
-            color: white; }
 
 body > section header {
   -webkit-box-sizing: border-box;
@@ -192,20 +216,22 @@ body > section header {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10.437% 0 10.437% 34.119%; }
+  padding: 10.437% 0 10.437% 34.119%;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 77.664px; }
   @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
     body > section header {
       padding-left: 0; } }
   body > section header h1 {
-    color: #333333;
+    color: #9c71b8;
     font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
     font-size: 41.887px;
     font-weight: bold;
     letter-spacing: -1px;
-    text-shadow: 0 2px 0 #00b3dd; }
+    text-shadow: 0 2px 0 white; }
   body > section header h2 {
     font: 200 18px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    color: rgba(255, 255, 255, 0.7);
+    color: gray;
     letter-spacing: 0;
     margin-top: -4px;
     margin-left: 3.5em; }

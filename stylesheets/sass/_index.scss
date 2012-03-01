@@ -36,7 +36,7 @@ body {
             color: $header-color;
 
             &:hover {
-              color: rgba($header-color, .8);
+              color: $highlight-color;
             }
           }
         }
@@ -150,14 +150,6 @@ body {
           ul {
             li {
               margin-bottom: lh(.5);
-
-              a {
-                color: rgba($white, .7);
-
-                &:hover {
-                  color: $white;
-                }
-              }
             }
           }
         }
