@@ -4,8 +4,6 @@ body {
       @extend .clearfix;
       @include border-box();
       padding: flex-grid(1.5) 0 flex-grid(1.5) (flex-grid(4) + flex-gutter());
-      border-bottom: 1px solid $border-color;
-      margin-bottom: lh(2);
 
       @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
         padding-left: 0;
