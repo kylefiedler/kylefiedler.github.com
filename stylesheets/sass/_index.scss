@@ -1,4 +1,7 @@
 body {
+  @include mask-image('/images/image-mask.png');
+  background-image: url('/images/main-bg.png');
+
   > section {
     @extend .clearfix;
     @include border-box();

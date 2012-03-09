@@ -18,10 +18,22 @@ $gray: #333;
 $purple: #9C71B8;
 $green: #06967D;
 
-$header-color: lighten($gray, 20%);
-$text-color: lighten($gray, 40%);
-$border-color: lighten($gray, 70%);
+$dark-green: #232a34;
+$peach: #a9bd71;
+$tan: #FFE2C7;
+$light-blue: #7a9dbb;
 
-$background-color: $white;
-$highlight-color: $purple;
+$header-color: lighten($light-blue, 5%);
+$text-color: $light-blue;
+$border-color: lighten($light-blue, 20%);
+
+$background-color: $dark-green;
+$highlight-color: #FFED82;
+
+@mixin mask-image($url){
+  -webkit-mask-image: url($url);
+  -o-mask-image: url($url);
+  -moz-mask-image: url($url);
+  mask-image: url($url);
+}
 

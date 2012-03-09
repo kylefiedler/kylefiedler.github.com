@@ -2,7 +2,7 @@
 ---------------------------------------- */
 
 body {
-  border-top: 4px solid lighten($highlight-color, 20%);
+  border-top: 6px solid darken($background-color, 20%);
   background-color: $background-color;
   color: $text-color;
   font: $body-font-size $body-font-family;
