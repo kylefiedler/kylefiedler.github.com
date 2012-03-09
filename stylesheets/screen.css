@@ -154,7 +154,7 @@ body {
         font-weight: bold;
         letter-spacing: 1px;
         margin-bottom: 25.888px;
-        text-shadow: 0 2px 0 #2d3643; }
+        text-shadow: 0 -2px 0 #191e25; }
         body > section section.content section h2 a {
           color: #8ba9c4; }
           body > section section.content section h2 a:hover {
@@ -232,7 +232,7 @@ body > section header {
     font-size: 41.887px;
     font-weight: bold;
     letter-spacing: -1px;
-    text-shadow: 0 2px 0 #2d3643; }
+    text-shadow: 0 -2px 0 #191e25; }
   body > section header h2 {
     font: 200 18px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     color: #5884aa;
