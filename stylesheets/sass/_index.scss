@@ -1,5 +1,9 @@
 body {
+  // border-top: 6px solid darken($background-color, 10%);
   @include mask-image('/images/image-mask.png');
+  // @include linear-gradient(top, #79AA5E, #54AC7F);
+  background: $background-color;
+  min-height: 100%;
   background-image: url('/images/main-bg.png');
 
   > section {
@@ -33,7 +37,7 @@ body {
           font-weight: bold;
           letter-spacing: 1px;
           margin-bottom: lh();
-          text-shadow: 0 -2px 0 darken($background-color, 5%);
+          // text-shadow: 0 -2px 0 darken($background-color, 10%);
 
           a {
             color: $header-color;
@@ -66,7 +70,7 @@ body {
               span {
                 display: block;
                 margin-bottom: lh(.5);
-                line-height: lh(2);
+                line-height: lh(1.5);
                 font-size: golden-ratio($body-font-size, 1);
                 font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
 

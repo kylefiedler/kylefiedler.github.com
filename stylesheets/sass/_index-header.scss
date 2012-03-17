@@ -3,7 +3,9 @@ body {
     header {
       @extend .clearfix;
       @include border-box();
-      padding: flex-grid(1.5) 0 flex-grid(1.5) (flex-grid(4) + flex-gutter());
+      padding: lh(4) 0 lh(3) (flex-grid(4) + flex-gutter());
+      margin-bottom: golden-ratio($body-font-size, 2);
+      border-bottom: 1px solid darken($background-color, 5%);
 
       @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
         padding-left: 0;
@@ -11,19 +13,17 @@ body {
 
       h1 {
         color: $highlight-color;
-        font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
-        font-size: golden-ratio($body-font-size, 2);
-        font-weight: bold;
+        font: bold golden-ratio($header-font-size, 2) $header-font-family;
         letter-spacing: -1px;
-        text-shadow: 0 -2px 0 darken($background-color, 5%);
+        // text-shadow: 0 -2px 0 darken($background-color, 10%);
       }
 
       h2 {
-        font: 200 18px $body-font-family;
-        color: darken($text-color, 10%);
+        font: 200 $header-font-size $body-font-family;
+        color: darken($background-color, 20%);
         letter-spacing: 0;
-        margin-top: -4px;
-        margin-left: 3.5em;
+        margin-top: -8px;
+        margin-left: 4em;
       }
     }
   }
