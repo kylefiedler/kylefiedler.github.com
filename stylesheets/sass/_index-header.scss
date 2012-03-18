@@ -5,7 +5,8 @@ body {
       @include border-box();
       padding: lh(4) 0 lh(3) (flex-grid(4) + flex-gutter());
       margin-bottom: golden-ratio($body-font-size, 2);
-      border-bottom: 1px solid darken($background-color, 5%);
+      // border-bottom: 1px solid darken($background-color, 5%);
+      // @include box-shadow(0 1px 0 #fff);
 
       @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
         padding-left: 0;
@@ -15,7 +16,6 @@ body {
         color: $highlight-color;
         font: bold golden-ratio($header-font-size, 2) $header-font-family;
         letter-spacing: -1px;
-        // text-shadow: 0 -2px 0 darken($background-color, 10%);
       }
 
       h2 {
@@ -23,7 +23,7 @@ body {
         color: darken($background-color, 20%);
         letter-spacing: 0;
         margin-top: -8px;
-        margin-left: 4em;
+        margin-left: 3.5em;
       }
     }
   }

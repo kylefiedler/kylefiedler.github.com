@@ -82,11 +82,11 @@ ul, ol {
   margin-bottom: 0; }
 
 .img-double, body > section section.content section#dribbble ul li, body > section section.content section.lastfm ul li a, body > section section.content section.readernaut ul li a {
-  border: 1px solid #c3c3c3;
+  border: 1px solid #d3d3d3;
   background: transparent;
-  -webkit-box-shadow: inset 0 0 0 1px #f6f6f6;
-  -moz-box-shadow: inset 0 0 0 1px #f6f6f6;
-  box-shadow: inset 0 0 0 1px #f6f6f6; }
+  -webkit-box-shadow: inset 0 0 0 1px #f9f9f9;
+  -moz-box-shadow: inset 0 0 0 1px #f9f9f9;
+  box-shadow: inset 0 0 0 1px #f9f9f9; }
   .img-double img, body > section section.content section#dribbble ul li img, body > section section.content section.lastfm ul li a img, body > section section.content section.readernaut ul li a img {
     display: block;
     z-index: -1;
@@ -122,9 +122,12 @@ body {
   -o-mask-image: url("/images/image-mask.png");
   -moz-mask-image: url("/images/image-mask.png");
   mask-image: url("/images/image-mask.png");
-  background: #f6f6f6;
+  background: #f9f9f9;
   min-height: 100%;
-  background-image: url("/images/main-bg.png"); }
+  background-image: url("/images/main-bg.png");
+  -webkit-box-shadow: inset 0 0 0 8px rgba(153, 153, 153, 0.15);
+  -moz-box-shadow: inset 0 0 0 8px rgba(153, 153, 153, 0.15);
+  box-shadow: inset 0 0 0 8px rgba(153, 153, 153, 0.15); }
   body > section {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -216,8 +219,7 @@ body > section header {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 103.552px 0 77.664px 34.119%;
-  margin-bottom: 41.887px;
-  border-bottom: 1px solid #e9e9e9; }
+  margin-bottom: 41.887px; }
   @media screen and (max-width: 750px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
     body > section header {
       padding-left: 0; } }
@@ -227,7 +229,7 @@ body > section header {
     letter-spacing: -1px; }
   body > section header h2 {
     font: 200 20px "ratio-1", "ratio-2", "rooney-web-1", "rooney-web-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    color: #c3c3c3;
+    color: #c6c6c6;
     letter-spacing: 0;
     margin-top: -8px;
-    margin-left: 4em; }
+    margin-left: 3.5em; }

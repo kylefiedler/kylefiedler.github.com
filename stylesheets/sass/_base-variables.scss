@@ -28,9 +28,9 @@ $light-blue: #2B4440;
 $header-color: #367a9d;
 $text-color: #626262;
 
-$background-color: #f6f6f6;
+$background-color: #f9f9f9;
 $highlight-color: #5a497f;
-$border-color: darken($background-color, 20%);
+$border-color: darken($background-color, 15%);
 
 @mixin mask-image($url){
   -webkit-mask-image: url($url);

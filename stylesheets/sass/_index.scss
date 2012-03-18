@@ -1,10 +1,31 @@
+$body-border: rgba(#999, .15);
+
+// body:before, body:after {
+//     content: "";
+//     position: fixed;
+//     background: $body-border;
+//     left: 0;
+//     right: 0;
+//     height: 10px;
+// }
+
+// body:before {
+//     top: 0;
+// }
+
+// body:after {
+//     bottom: 0;
+// }
+
 body {
-  // border-top: 6px solid darken($background-color, 10%);
   @include mask-image('/images/image-mask.png');
   // @include linear-gradient(top, #79AA5E, #54AC7F);
   background: $background-color;
   min-height: 100%;
   background-image: url('/images/main-bg.png');
+  // border-left: 10px solid $body-border;
+  // border-right: 10px solid $body-border;
+  @include box-shadow(inset 0 0 0 8px $body-border);
 
   > section {
     @extend .clearfix;
