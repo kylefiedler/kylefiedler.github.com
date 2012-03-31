@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+	<meta name="description" content="iPad App Design Showcase and Gallery" >
+	<meta name="keywords" content="iPad design, iPad app design, iPad app design showcase, iPad app design gallery, thoughtbot," >
+
+  <title>{Title} &mdash; an iPad App Gallery {block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+
+  <link rel="shortcut icon" href="http://ui.thoughtbot.com/assets/landing_pad/favicon.ico" type="image/ico" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+  <link media="all" rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+</head>
+
+<body>
+  <section>
+    <header>
+      <hgroup>
+        <h1>{Title}</h1>
+        <h2>{Description}</h2>
+      </hgroup>
+      <a href="/submit">Submit an app</a>
+    </header>
+
+    <ul>
+      {block:Posts}
+
+      {block:Regular}
+      <li class="regular">
+        {block:Title}<h2>{Title}</h2>{/block:Title}
+        <p>{Body}</p>
+      </li>
+      {/block:Regular}
+
+      {block:Photo}
+      L   <li class="photo">
+        {LinkOpenTag}
+        <p class="image">
+          <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+        </p>
+        {block:Caption}
+        <p class="caption">{Caption}</p>
+        {/block:Caption}
+        {LinkCloseTag}
+      </li>
+      {/block:Photo}
+
+      {block:Quote}
+      <li class="quote">
+        <span class="quote">
+          <big class="quote">&#147;</big>{Quote}
+        </span>
+        {block:Source}<span class="source">&mdash; {Source}</span>{/block:Source}
+      </li>
+      {/block:Quote}
+
+      {block:Link}
+      <li class="link">
+        <a href="{URL}" class="link" {Target}>{Name}</a>
+        {block:Description}
+        <span class="description">{Description}</span>
+        {/block:Description}
+      </li>
+      {/block:Link}
+
+      {block:Conversation}
+      <li class="conversation">
+        {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+        <ul>
+          {block:Lines}
+          <li>
+            {block:Label}<span class="label">{Label}</span>{/block:Label}
+            {Line}
+          </li>
+          {/block:Lines}
+        </ul>
+      </li>
+      {/block:Conversation}
+
+      {block:Audio}
+      <li class="audio">
+        <div class="music_icon"></div>
+        {AudioPlayerGrey}
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </li>
+      {/block:Audio}
+
+      {block:Video}
+      <li class="video">
+        {Video-732}
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
+      </li>
+      {/block:Video}
+
+      {/block:Posts}
+    </ul>
+
+
+    <div class="pagination">
+      {block:PreviousPage}
+      <a id="newer_posts" href="{PreviousPage}">Newer posts</a>
+      {/block:PreviousPage}
+
+      {block:NextPage}
+      <a id="older_posts" href="{NextPage}">Older posts</a>
+      {/block:NextPage}
+    </div>
+
+    <footer>
+      <p>Designed and maintained by <a href="http://kylefiedler.com">Kyle Fiedler</a></p>
+
+      <ul>
+        <li>
+          <a href="http://twitter.com/landing_pad" id="twitter">Follow @landing_pad on Twitter</a>
+        </li>
+        <li>
+          <a href="/submit">Submit an app</a>
+        </li>
+      </ul>
+    </footer>
+  </section>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-15525447-1");
+        pageTracker._trackPageview();
+      } catch(err) {}</script>
+</body>
+</html>
