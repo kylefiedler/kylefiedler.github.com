@@ -7,9 +7,9 @@
 
   <title>{Title} &mdash; an iPad App Gallery {block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
 
-  <link rel="shortcut icon" href="http://ui.thoughtbot.com/assets/landing_pad/favicon.ico" type="image/ico" />
+  <link rel="shortcut icon" href="http://kylefiedler.com/landingpad/images/favicon.ico" type="image/ico" />
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
-  <link media="all" rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+  <link media="all" rel="stylesheet" href="http://kylefiedler.com/landingpad/stylesheets/style.css" type="text/css" />
 </head>
 
 <body>
@@ -33,15 +33,16 @@
       {/block:Regular}
 
       {block:Photo}
-      L   <li class="photo">
+         <li class="photo">
         {LinkOpenTag}
         <p class="image">
           <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
         </p>
-        {block:Caption}
-        <p class="caption">{Caption}</p>
-        {/block:Caption}
         {LinkCloseTag}
+
+        {block:Caption}
+        <div class="caption">{Caption}</div>
+        {/block:Caption}
       </li>
       {/block:Photo}
 

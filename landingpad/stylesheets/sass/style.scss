@@ -109,19 +109,15 @@ body {
               }
             }
 
-            &.caption {
-              color: #595f5f;
-              padding: 0 30px;
-              text-align: left;
+          }
+        }
 
-              span.vertical {
-                padding: 0 140px;
-              }
+        div.caption {
+          color: #595f5f;
+          padding: 0 30px;
 
-              &:hover {
-                color: #878787;
-              }
-            }
+          &:hover {
+            color: #878787;
           }
         }
       }

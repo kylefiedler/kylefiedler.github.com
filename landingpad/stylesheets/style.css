@@ -108,14 +108,11 @@ body {
             *vertical-align: auto; }
             body section ul li a p.image img {
               border: 1px solid #c4c4c4; }
-          body section ul li a p.caption {
-            color: #595f5f;
-            padding: 0 30px;
-            text-align: left; }
-            body section ul li a p.caption span.vertical {
-              padding: 0 140px; }
-            body section ul li a p.caption:hover {
-              color: #878787; }
+        body section ul li div.caption {
+          color: #595f5f;
+          padding: 0 30px; }
+          body section ul li div.caption:hover {
+            color: #878787; }
     body section div.pagination a {
       display: inline-block;
       float: none; }
