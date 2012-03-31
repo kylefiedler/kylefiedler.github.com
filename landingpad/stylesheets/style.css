@@ -111,8 +111,11 @@ body {
         body section ul li div.caption {
           color: #595f5f;
           padding: 0 30px; }
-          body section ul li div.caption:hover {
-            color: #878787; }
+          body section ul li div.caption a {
+            color: #878787;
+            text-decoration: none; }
+            body section ul li div.caption a:hover {
+              color: #595f5f; }
     body section div.pagination a {
       display: inline-block;
       float: none; }

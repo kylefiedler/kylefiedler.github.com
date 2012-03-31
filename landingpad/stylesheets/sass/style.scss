@@ -116,8 +116,13 @@ body {
           color: #595f5f;
           padding: 0 30px;
 
-          &:hover {
+          a {
             color: #878787;
+            text-decoration: none;
+
+            &:hover {
+              color: #595f5f;
+            }
           }
         }
       }
