@@ -1,0 +1,51 @@
+.wrapper, body.mental > section {
+  padding: 0 25.888px 0;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body > section {
+  position: relative; }
+  body > section > header {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0; }
+    body > section > header h1 {
+      padding: 12.944px; }
+      body > section > header h1 a {
+        display: block;
+        background: url("/images/header-icon-white.png") center no-repeat;
+        -webkit-background-size: 70%;
+        -moz-background-size: 70%;
+        -ms-background-size: 70%;
+        -o-background-size: 70%;
+        background-size: 70%;
+        text-indent: -9999px;
+        width: 30px;
+        height: 30px; }
+
+body.mental {
+  background-color: #329427; }
+  body.mental > section {
+    padding-top: 258.88px;
+    padding-bottom: 155.328px;
+    color: #f9ff04;
+    max-width: 900px; }
+    body.mental > section blockquote {
+      font: 72px "vinyl",sans-serif; }
+      body.mental > section blockquote cite {
+        font-size: 62px;
+        color: #fff;
+        font-family: "felt-tip-senior",cursive; }
+        body.mental > section blockquote cite span {
+          letter-spacing: -10px; }
+
+footer p {
+  color: #246c1c; }
+  footer p a {
+    color: #1e5717; }

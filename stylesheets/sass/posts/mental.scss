@@ -1,0 +1,37 @@
+@import "posts-base";
+
+body.mental {
+  background-color: #329427;
+
+  > section {
+    @extend .wrapper;
+    padding-top: lh(10);
+    padding-bottom: lh(6);
+    color: #f9ff04;
+    max-width: 900px;
+
+    blockquote {
+      font: 72px "vinyl",sans-serif;
+
+      cite {
+        font-size: 62px;
+        color: #fff;
+        font-family: "felt-tip-senior",cursive;
+
+        span {
+          letter-spacing: -10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  p {
+    color: darken(#329427, 10%);
+
+    a {
+      color: darken(#329427, 15%);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "bourbon/bourbon";
+@import "base-functions", "base-variables";
+
+body {
+  > section {
+    position: relative;
+
+    > header {
+      position: absolute;
+      background: rgba(#000, .6);
+      top: 0;
+      left: 0;
+
+      h1 {
+        padding: lh(.5);
+
+        a {
+          // @include hide-text;
+          display: block;
+          background: url('/images/header-icon-white.png') center no-repeat;
+          @include background-size(70%);
+          text-indent: -9999px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

@@ -7,23 +7,28 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/stylesheets/screen.css" />
   <link rel="stylesheet" href="/stylesheets/posts/{{ page.keyword }}.css" />
-</head>
-<body>
 
-  <header class="main">
-    <nav>
-      <h1><a href="/">Kyle Fiedler</a></h1>
-    </nav>
-  </header>
+  <!-- typekit \\\ -->
+  <script type="text/javascript" src="http://use.typekit.com/bpf7lxl.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body class="{{ page.keyword }}">
+
 
   <section>
+    <header class="main">
+      <nav>
+        <h1 class="home"><a href="/">Kyle Fiedler</a></h1>
+      </nav>
+    </header>
+
     {{ content }}
   </section>
 
-  <footer class="main">
-    <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.  // <a href="mailto:hello@kylefiedler.com">hello@kylefiedler.com</a></p>
-    <p class="home-link"><a href="/">Home</a></p>
-  </footer>
+    <footer class="main">
+      <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+    </footer>
 
   <!-- jquery -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>

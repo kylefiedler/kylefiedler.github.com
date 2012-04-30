@@ -206,7 +206,7 @@ body {
               max-width: 100%; }
       body > section section.content section.blog {
         clear: left; }
-        body > section section.content section.blog p {
+        body > section section.content section.blog li {
           display: block;
           margin-bottom: 12.944px;
           line-height: 38.832px;

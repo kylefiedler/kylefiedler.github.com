@@ -34,12 +34,14 @@ meta_description:
 
   <section class="blog">
     <h2><a href="#">What he&rsquo;s thinking about</a></h2>
-    <!-- <ul> -->
-    <!-- {% for post in site.posts limit: 3 %} -->
-    <!--   <li><a href="{{ post.url }}">{{ post.title }}<span>{{ post.date | date:"%Y-%m-%d" }}</span></a></li> -->
-    <!-- {% endfor %} -->
-    <!-- </ul> -->
-    <p>Nothing yet&hellip;</p>
+    <ul>
+    {% for post in site.posts limit: 3 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <!-- <span>{{ post.date | date:"%Y-%m-%d" }}</span> -->
+    </li>
+    {% endfor %}
+    </ul>
   </section>
 
   <section class="readernaut">
