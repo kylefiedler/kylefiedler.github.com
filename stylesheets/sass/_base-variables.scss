@@ -1,5 +1,5 @@
 // fonts
-$body-font-family: "ratio-1","ratio-2", "rooney-web-1","rooney-web-2", p22-underground-1,p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$body-font-family:  p22-underground-1,p22-underground-2, "ratio-1","ratio-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 $body-font-size: 16px;
 $header-font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2";
 $header-font-size: 20px;
@@ -8,7 +8,7 @@ $header-font-size: 20px;
 $fg-max-columns: 12;
 $fg-column: golden-ratio($body-font-size, 5);
 $fg-gutter: golden-ratio($body-font-size, 3);
-$fg-max-width: 1160px;
+$fg-max-width: 1200px;
 $fg-min-width: 700px;
 
 $base-line-height: golden-ratio($body-font-size, 1);
@@ -16,20 +16,14 @@ $base-line-height: golden-ratio($body-font-size, 1);
 // colors
 $white: #fff;
 $gray: #333;
-
 $purple: #9C71B8;
-$green: #06967D;
+$dark-blue: #132936;
+$light-blue: #4181a2;
 
-$dark-green: #232a34;
-$peach: #a9bd71;
-$tan: #FFE2C7;
-$light-blue: #2B4440;
-
-$header-color: #367a9d;
 $text-color: #626262;
-
-$background-color: #fff;
-$highlight-color: #5a497f;
+$background-color: $white;
+$highlight-color: $dark-blue;
+$highlight-secondary-color: $light-blue;
 $border-color: darken($background-color, 15%);
 
 @mixin mask-image($url){
@@ -37,4 +31,15 @@ $border-color: darken($background-color, 15%);
   -o-mask-image: url($url);
   -moz-mask-image: url($url);
   mask-image: url($url);
+}
+
+//extends
+.wrapper {
+  padding: 0 lh() 0;
+  text-align: left;
+  width: flex-grid(12);
+  max-width: $fg-max-width;
+  margin: 0 auto;
+  @include border-box();
+  @extend .clearfix;
 }

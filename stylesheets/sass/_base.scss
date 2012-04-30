@@ -54,14 +54,16 @@ ul, ol {
 }
 
 footer {
-  color: #ccc;
-  margin-top: lh();
-  margin-left: flex-grid(4) + flex-gutter();
-  clear: both;
-  padding-top: lh();
+  @extend .wrapper;
 
-  a {
-    color: #ddd;
-    background: none;
+  p {
+    color: #ccc;
+    margin-left: flex-grid(4) + flex-gutter();
+    clear: both;
+
+    a {
+      color: #ddd;
+      background: none;
+    }
   }
 }
