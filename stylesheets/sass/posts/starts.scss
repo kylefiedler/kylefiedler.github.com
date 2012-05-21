@@ -1,0 +1,48 @@
+@import "posts-base";
+
+$base-font-size: 22px;
+$base-line-height: golden-ratio($base-font-size, 1);
+
+body.starts {
+  font-family: "rooney-web", serif;
+
+  > section {
+    @extend .wrapper;
+    max-width: 900px;
+
+    article {
+      margin-bottom: lh();
+      padding-top: lh(6);
+
+      h1  {
+        margin-bottom: lh(2);
+        text-align: center;
+        font-weight: bold;
+        font-size: 56px;
+
+        span  {
+          font-style: italic;
+          font-size: 36px;
+          color: #999;
+          @include inline-block;
+          border-bottom: 5px solid #ddd;
+          position: relative;
+          top: -15px;
+          margin-right: 4px;
+          padding-bottom: 4px;
+        }
+      }
+
+      p  {
+        font-size: $base-font-size;
+        text-indent: lh();
+        line-height: $base-line-height;
+
+        &:last-child  {
+          color: #000;
+          margin-top: lh();
+        }
+      }
+    }
+  }
+}
