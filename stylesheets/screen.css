@@ -57,7 +57,7 @@ input, select {
 ---------------------------------------- */
 body {
   color: #626262;
-  font: 16px p22-underground-1, p22-underground-2, "ratio-1", "ratio-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font: 16px "brevia-1", "brevia-2", p22-underground-1, p22-underground-2, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 a {
@@ -146,7 +146,7 @@ body {
       body > section section.content section h2 {
         text-transform: uppercase;
         font-size: 15px;
-        font-weight: bold;
+        font-weight: 800;
         letter-spacing: 1px;
         margin-bottom: 25.888px; }
         body > section section.content section h2 a {

@@ -14,7 +14,29 @@ body > section {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);
     top: 0;
-    left: 0; }
+    left: 0;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    -ms-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    -ms-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0; }
+    body > section > header:hover {
+      background: rgba(0, 0, 0, 0.8); }
     body > section > header h1 {
       padding: 12.944px; }
       body > section > header h1 a {
@@ -28,39 +50,51 @@ body > section {
         text-indent: -9999px;
         width: 30px;
         height: 30px; }
+        body > section > header h1 a:hover {
+          border-bottom: 0; }
+
+::selection {
+  background: #16c3d8;
+  color: #333; }
+
+::-moz-selection {
+  background: #16c3d8;
+  color: #333; }
+
+::-webkit-selection {
+  background: #16c3d8;
+  color: #333; }
 
 body.starts {
-  font-family: "rooney-web", serif; }
+  font-family: "rooney-web", serif;
+  border-top: 6px solid #16c3d8; }
   body.starts > section {
-    max-width: 900px; }
+    max-width: 800px; }
     body.starts > section article {
       margin-bottom: 35.596px;
-      padding-top: 213.576px; }
+      padding-top: 213.576px;
+      background: transparent url("/images/posts/starts/fresh.png") center 60px no-repeat; }
       body.starts > section article h1 {
         margin-bottom: 71.192px;
         text-align: center;
         font-weight: bold;
         font-size: 56px; }
-        body.starts > section article h1 span {
-          font-style: italic;
-          font-size: 36px;
-          color: #999;
-          display: -moz-inline-box;
-          -moz-box-orient: vertical;
-          display: inline-block;
-          vertical-align: baseline;
-          zoom: 1;
-          *display: inline;
-          *vertical-align: auto;
-          border-bottom: 5px solid #ddd;
-          position: relative;
-          top: -15px;
-          margin-right: 4px;
-          padding-bottom: 4px; }
+        body.starts > section article h1:before {
+          border-top: 1px solid #e3e3e3;
+          content: " ";
+          width: 300px;
+          display: block;
+          margin: 0 auto;
+          padding-top: 71.192px; }
       body.starts > section article p {
         font-size: 22px;
         text-indent: 35.596px;
         line-height: 35.596px; }
         body.starts > section article p:last-child {
-          color: #000;
           margin-top: 35.596px; }
+    body.starts > section > footer {
+      text-align: left;
+      padding: 0;
+      margin-bottom: 35.596px; }
+      body.starts > section > footer p {
+        margin-left: 0; }
