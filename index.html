@@ -37,7 +37,7 @@ meta_description:
     <ul>
     {% for post in site.posts limit: 3 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="{{ post.type }}">{{ post.title }}</a>
       <!-- <span>{{ post.date | date:"%Y-%m-%d" }}</span> -->
     </li>
     {% endfor %}
