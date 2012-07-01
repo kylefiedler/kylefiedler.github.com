@@ -1,0 +1,95 @@
+.wrapper, body.nike > section {
+  padding: 0 25.888px 0;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body > section {
+  position: relative; }
+  body > section > header {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    -ms-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    -ms-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0; }
+    body > section > header:hover {
+      background: rgba(0, 0, 0, 0.8); }
+    body > section > header h1 {
+      padding: 12.944px; }
+      body > section > header h1 a {
+        display: block;
+        background: url("/images/header-icon-white.png") center no-repeat;
+        -webkit-background-size: 70%;
+        -moz-background-size: 70%;
+        -ms-background-size: 70%;
+        -o-background-size: 70%;
+        background-size: 70%;
+        text-indent: -9999px;
+        width: 30px;
+        height: 30px; }
+        body > section > header h1 a:hover {
+          border-bottom: 0; }
+
+html {
+  background: url(/images/posts/nike/sponge.jpg) center center fixed no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+body.nike {
+  background-color: transparent; }
+  body.nike > section {
+    max-width: 800px;
+    color: #fff;
+    padding: 103.552px 0;
+    text-align: center; }
+    body.nike > section blockquote {
+      padding: 77.664px;
+      background: rgba(0, 23, 89, 0.5);
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      -moz-box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2); }
+      body.nike > section blockquote cite {
+        font: italic bold 16px "teimer-web", Georgia, serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 51.776px;
+        display: block; }
+        body.nike > section blockquote cite a {
+          color: #fff;
+          border-bottom: 1px solid #001759; }
+      body.nike > section blockquote p {
+        font: 300 60px "ff-basic-gothic-web-pro", Helvetica, Arial, sans-serif;
+        line-height: 76px; }
+        body.nike > section blockquote p em {
+          font-style: italic; }
+  body.nike footer p {
+    color: #001759; }
+    body.nike footer p a {
+      color: #001759;
+      border-color: #fff; }
