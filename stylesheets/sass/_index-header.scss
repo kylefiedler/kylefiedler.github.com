@@ -16,6 +16,7 @@ body {
         padding: lh(6) lh() lh(4);
 
         h1 {
+          @include fade-in(1s);
           color: lighten($highlight-secondary-color, 30%);
           font: 200 golden-ratio($header-font-size, 2) $header-font-family;
           line-height: lh(2);

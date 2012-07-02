@@ -18,22 +18,8 @@ meta_description:
     <h2><a href="http://dribbble.com/kylefiedler">What he&rsquo;s working on</a></h2>
   </section>
 
-  <section class="twitter">
-    <div>
-      <h2><a href="http://twitter.com/kylefiedler">Things he&rsquo;s saying</a></h2>
-      <ul id="twitter_update_list">
-      </ul>
-    </div>
-  </section>
-
-  <section class="lastfm">
-    <h2><a href="http://last.fm/user/kylefiedler">Songs he&rsquo;s listening to</a></h2>
-    <ul>
-    </ul>
-  </section>
-
   <section class="blog">
-    <h2><a href="#">What he&rsquo;s thinking about</a></h2>
+    <h2><a href="/writing">What he&rsquo;s thinking about</a></h2>
     <ul>
     {% for post in site.posts limit: 3 %}
     <li>
@@ -43,6 +29,21 @@ meta_description:
     {% endfor %}
     </ul>
   </section>
+
+  <section class="lastfm">
+    <h2><a href="http://last.fm/user/kylefiedler">Songs he&rsquo;s listening to</a></h2>
+    <ul>
+    </ul>
+  </section>
+
+  <section class="twitter">
+    <div>
+      <h2><a href="http://twitter.com/kylefiedler">Things he&rsquo;s saying</a></h2>
+      <ul id="twitter_update_list">
+      </ul>
+    </div>
+  </section>
+
 
   <section class="readernaut">
     <h2><a href="http://readernaut.com/kylefiedler/">Books he&rsquo;s recently read</a></h2>

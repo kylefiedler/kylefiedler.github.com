@@ -28,22 +28,86 @@ input, select {
   vertical-align: middle; }
 
 /* Clearfix hack I love you */
-.clearfix:after, .wrapper:after, footer:after, body > section section.content:after, body > section header div:after, body > section section.content section:after, body > section section.content section.lastfm:after, body > section section.content section.lastfm ul:after, body > section header:after {
+.clearfix:after, .wrapper:after, footer:after, body > section section.content:after, body > section header div:after, body.writing > section:after, body > section section.content section:after, body > section section.content section.lastfm:after, body > section section.content section.lastfm ul:after, body > section header:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, .wrapper, footer, body > section section.content, body > section header div, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
+.clearfix, .wrapper, footer, body > section section.content, body > section header div, body.writing > section, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, .wrapper, footer, body > section section.content, body > section header div, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
+.clearfix, .wrapper, footer, body > section section.content, body > section header div, body.writing > section, body > section section.content section, body > section section.content section.lastfm, body > section section.content section.lastfm ul, body > section header {
   display: block; }
 
 /* End hide from IE Mac */
-.wrapper, footer, body > section section.content, body > section header div {
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@-o-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+.wrapper, footer, body > section section.content, body > section header div, body.writing > section {
   padding: 0 25.888px 0;
   text-align: left;
   width: 100%;
@@ -82,10 +146,11 @@ a {
   -moz-transition-delay: 0;
   -ms-transition-delay: 0;
   -o-transition-delay: 0;
-  transition-delay: 0; }
+  transition-delay: 0;
+  border-bottom: 1px solid transparent; }
   a:hover {
     color: #132936;
-    border-bottom: 1px solid #afafaf; }
+    border-bottom-color: #afafaf; }
 
 ul, ol {
   list-style: none;
@@ -137,7 +202,43 @@ body {
       width: 31.762%;
       margin-right: 2.358%;
       margin-bottom: 51.776px;
-      float: left; }
+      float: left;
+      -webkit-animation-name: fade-in-down;
+      -moz-animation-name: fade-in-down;
+      animation-name: fade-in-down;
+      -webkit-animation-duration: 0.75s;
+      -moz-animation-duration: 0.75s;
+      animation-duration: 0.75s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      animation-fill-mode: both; }
+      body > section section.content section:nth-child(1) {
+        -webkit-animation-delay: 0.75s;
+        -moz-animation-delay: 0.75s;
+        animation-delay: 0.75s; }
+      body > section section.content section:nth-child(2) {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        animation-delay: 1s; }
+      body > section section.content section:nth-child(3) {
+        -webkit-animation-delay: 1.25s;
+        -moz-animation-delay: 1.25s;
+        animation-delay: 1.25s; }
+      body > section section.content section:nth-child(4) {
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        animation-delay: 1.5s; }
+      body > section section.content section:nth-child(5) {
+        -webkit-animation-delay: 1.75s;
+        -moz-animation-delay: 1.75s;
+        animation-delay: 1.75s; }
+      body > section section.content section:nth-child(6) {
+        -webkit-animation-delay: 2s;
+        -moz-animation-delay: 2s;
+        animation-delay: 2s; }
       @media screen and (max-width:575px), screen and (max-device-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) {
         body > section section.content section {
           float: none;
@@ -165,17 +266,19 @@ body {
         body > section section.content section#dribbble ul li img {
           display: block;
           max-width: 100%; }
-      body > section section.content section.twitter ul li span {
-        display: block;
-        margin-bottom: 12.944px;
-        line-height: 38.832px;
-        font-size: 25.888px;
-        font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2"; }
-        body > section section.content section.twitter ul li span a {
-          display: inline; }
-      body > section section.content section.twitter ul li a {
-        text-transform: uppercase;
-        color: #afafaf; }
+      body > section section.content section.twitter {
+        clear: left; }
+        body > section section.content section.twitter ul li span {
+          display: block;
+          margin-bottom: 12.944px;
+          line-height: 38.832px;
+          font-size: 25.888px;
+          font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2"; }
+          body > section section.content section.twitter ul li span a {
+            display: inline; }
+        body > section section.content section.twitter ul li a {
+          text-transform: uppercase;
+          color: #afafaf; }
       body > section section.content section.lastfm {
         margin-right: 0; }
         body > section section.content section.lastfm div.lastFMHeader {
@@ -204,14 +307,29 @@ body {
             display: block; }
             body > section section.content section.readernaut ul li a img {
               max-width: 100%; }
-      body > section section.content section.blog {
-        clear: left; }
-        body > section section.content section.blog li {
-          display: block;
-          margin-bottom: 12.944px;
-          line-height: 38.832px;
-          font-size: 25.888px;
-          font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2"; }
+      body > section section.content section.blog li {
+        display: block;
+        margin-bottom: 12.944px;
+        line-height: 38.832px;
+        font-size: 25.888px;
+        font-family: "jubilat-1","jubilat-2", "brevia-1","brevia-2"; }
+        body > section section.content section.blog li a {
+          display: block; }
+          body > section section.content section.blog li a:hover {
+            border-color: transparent;
+            color: #4181a2; }
+          body > section section.content section.blog li a.quote:after {
+            content: "quote";
+            display: block;
+            text-transform: uppercase;
+            font: 14px "soleil-1", "soleil-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            color: #AFAFAF; }
+          body > section section.content section.blog li a.article:after {
+            content: "article";
+            display: block;
+            text-transform: uppercase;
+            font: 14px "soleil-1", "soleil-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            color: #AFAFAF; }
       body > section section.content section.tumblr {
         margin-right: 0; }
         body > section section.content section.tumblr ul li {
@@ -226,6 +344,18 @@ body > section header {
   body > section header div {
     padding: 155.328px 25.888px 103.552px; }
     body > section header div h1 {
+      -webkit-animation-name: fade-in;
+      -moz-animation-name: fade-in;
+      animation-name: fade-in;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      animation-fill-mode: both;
       color: #a2c7da;
       font: 200 52.358px "jubilat-1", "jubilat-2", "brevia-1", "brevia-2";
       line-height: 51.776px;
@@ -234,3 +364,128 @@ body > section header {
       body > section header div h1 strong {
         font-weight: bold;
         color: white; }
+
+body.writing > section {
+  position: relative; }
+  body.writing > section header {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 25.888px;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -ms-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.15s;
+    -moz-transition-duration: 0.15s;
+    -ms-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    -ms-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0; }
+    body.writing > section header:hover {
+      background: rgba(0, 0, 0, 0.8); }
+    body.writing > section header h1 {
+      padding: 12.944px; }
+      body.writing > section header h1 a {
+        display: block;
+        background: url("/images/header-icon-white.png") center no-repeat;
+        -webkit-background-size: 70%;
+        -moz-background-size: 70%;
+        -ms-background-size: 70%;
+        -o-background-size: 70%;
+        background-size: 70%;
+        text-indent: -9999px;
+        width: 30px;
+        height: 30px; }
+        body.writing > section header h1 a:hover {
+          border-bottom: 0; }
+  body.writing > section section {
+    padding: 103.552px 0; }
+    body.writing > section section h1 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      font-size: 15px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 12.944px; }
+    body.writing > section section ul li {
+      zoom: 1;
+      padding: 25.888px 0;
+      border-bottom: 1px solid #eee;
+      -webkit-animation-name: fade-in-down;
+      -moz-animation-name: fade-in-down;
+      animation-name: fade-in-down;
+      -webkit-animation-duration: 0.75s;
+      -moz-animation-duration: 0.75s;
+      animation-duration: 0.75s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      animation-fill-mode: both; }
+      body.writing > section section ul li:before, body.writing > section section ul li:after {
+        content: "";
+        display: table; }
+      body.writing > section section ul li:after {
+        clear: both; }
+      body.writing > section section ul li:nth-child(1) {
+        -webkit-animation-delay: 0.25s;
+        -moz-animation-delay: 0.25s;
+        animation-delay: 0.25s; }
+      body.writing > section section ul li:nth-child(2) {
+        -webkit-animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        animation-delay: 0.5s; }
+      body.writing > section section ul li:nth-child(3) {
+        -webkit-animation-delay: 0.75s;
+        -moz-animation-delay: 0.75s;
+        animation-delay: 0.75s; }
+      body.writing > section section ul li h2 {
+        font: 300 41.887px "jubilat-1", "jubilat-2", "brevia-1", "brevia-2";
+        float: left;
+        color: #4181a2; }
+      body.writing > section section ul li p {
+        margin-top: 25.888px;
+        color: rgba(98, 98, 98, 0.8); }
+        body.writing > section section ul li p.date {
+          float: right;
+          margin-left: 12.944px; }
+        body.writing > section section ul li p.type {
+          float: left;
+          width: 14.702%;
+          text-transform: capitalize; }
+    body.writing > section section footer {
+      padding: 0;
+      -webkit-animation-name: fade-in;
+      -moz-animation-name: fade-in;
+      animation-name: fade-in;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-delay: 2s;
+      -moz-animation-delay: 2s;
+      animation-delay: 2s; }
+      body.writing > section section footer p {
+        width: 100%;
+        margin-left: 0; }
+        body.writing > section section footer p a {
+          display: block;
+          padding: 25.888px;
+          text-align: center; }
