@@ -2,6 +2,7 @@ body {
   background: $background-color;
   min-height: 100%;
   // background-image: url('/images/main-bg.png');
+  -webkit-font-smoothing: antialiased;
 
   > section {
 
@@ -12,11 +13,11 @@ body {
 
       section {
         @extend .clearfix;
-        width: flex-grid(4);
-        margin-right: flex-gutter();
-        margin-bottom: lh(2);
-        float: left;
         @include fade-in-down(.75s);
+        float: left;
+        margin-bottom: lh(2);
+        margin-right: flex-gutter();
+        width: flex-grid(4);
 
         @for $i from 1 through 6 {
           &:nth-child(#{$i}) {

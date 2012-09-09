@@ -192,17 +192,14 @@ footer p {
 
 body {
   background: white;
-  min-height: 100%; }
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased; }
   body > section section.content {
     -webkit-mask-image: url("/images/image-mask.png");
     -o-mask-image: url("/images/image-mask.png");
     -moz-mask-image: url("/images/image-mask.png");
     mask-image: url("/images/image-mask.png"); }
     body > section section.content section {
-      width: 31.762%;
-      margin-right: 2.358%;
-      margin-bottom: 51.776px;
-      float: left;
       -webkit-animation-name: fade-in-down;
       -moz-animation-name: fade-in-down;
       animation-name: fade-in-down;
@@ -214,7 +211,11 @@ body {
       animation-timing-function: ease-in-out;
       -webkit-animation-fill-mode: both;
       -moz-animation-fill-mode: both;
-      animation-fill-mode: both; }
+      animation-fill-mode: both;
+      float: left;
+      margin-bottom: 51.776px;
+      margin-right: 2.358%;
+      width: 31.762%; }
       body > section section.content section:nth-child(1) {
         -webkit-animation-delay: 0.75s;
         -moz-animation-delay: 0.75s;
