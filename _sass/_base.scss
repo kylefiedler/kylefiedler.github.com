@@ -1,0 +1,19 @@
+/* Base styles
+---------------------------------------- */
+
+body {
+  color: $text-color;
+  font: $body-font-size $body-font-family;
+  line-height: $base-line-height;
+}
+
+a {
+  text-decoration: none;
+  color: darken($text-color, 10%);
+  @include transition();
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom-color:lighten($text-color, 30%);
+  }
+}

@@ -5,7 +5,7 @@
   <meta http-equiv="Description" name="Description" content="{{ page.meta_description }}" />
   <meta http-equiv="Keywords" name="Keywords" content="{{ page.meta_keywords }}" />
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/stylesheets/screen.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 
   <!--Typekit-->
   <script type="text/javascript" src="http://use.typekit.com/vzw1iuz.js"></script>
@@ -15,11 +15,11 @@
 <body class="{{ page.keyword }}">
   <section>
     {{ content }}
-
-    <footer class="main">
-      <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
-    </footer>
   </section>
+
+  <footer class="main">
+    <p>&copy;Kyle Fiedler 2011, Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+  </footer>
 
 
   <!-- jquery -->
@@ -44,12 +44,12 @@
   function parseResponse(data) {
     var bookshelf=document.getElementById("bookshelf");
 
-    for(var i=0;i<2 ;i++) {
+    for(var i=0;i<1 ;i++) {
       var cover=data.reader_books[i].book_edition.covers.cover_medium;
       var title=data.reader_books[i].book_edition.title;
       var permalink=data.reader_books[i].permalink;
 
-      var newLI=document.createElement("li");
+      // var newLI=document.createElement("li");
 
       var link=document.createElement("a");
       link.setAttribute("href",permalink);
@@ -63,8 +63,8 @@
       }
 
       link.appendChild(img);
-      newLI.appendChild(link);
-      bookshelf.appendChild(newLI);
+     // newLI.appendChild(link);
+      bookshelf.appendChild(link);
     };
   };
 
@@ -73,7 +73,7 @@
         $('.lastfm').lastfm('kylefiedler','recenttracks','657fe627bd2f7a579308d3cd75561670', {
           noimage: '/images/missing.png',
           header: false,
-          limit: 6,
+          limit: 4,
           imagesize: 'large',
           name: false,
           artist: false,

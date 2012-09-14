@@ -1,0 +1,100 @@
+body {
+  background: #403e36;
+  min-height: 100%;
+
+  > section {
+    @include outer-container;
+    background: #fff;
+    margin-top: golden-ratio($body-font-size, 2);
+    @include box-shadow(0 0 10px darken(#31302a, 5%));
+
+    > header {
+      background: #999;
+      text-align: center;
+
+      h1 {
+        color: #fff;
+        font: 800 golden-ratio($body-font-size, 3) $header-font-family;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: em(18);
+        font-weight: normal;
+        color: rgba(#fff, .7);
+        margin: 0;
+
+        a {
+          color: rgba(#fff, .7);
+          font-style: italic;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    section {
+      @include clearfix;
+      -webkit-font-smoothing: antialiased;
+
+      h2 {
+        text-transform: uppercase;
+        font-family: $body-font-family;
+        letter-spacing: 1px;
+        font-size: em(18);
+
+        a {
+          color: rgba(#fff, .4);
+        }
+      }
+
+      ul {
+        padding-left: 0;
+        list-style: none;
+      }
+
+      &.top {
+        background: #664b8b;
+        color: #fff;
+
+        .blog {
+          @include span-columns(6);
+
+          li {
+            a {
+              color: #fff;
+              font-size: em(48);
+              line-height: $base-line-height;
+              font-family: $header-font-family;
+              font-weight: 100;
+
+              &:hover, &:focus {
+                color: rgba(#fff, .6);
+              }
+            }
+          }
+        }
+
+        .tumblr {
+          @include span-columns(4);
+          @include omega;
+        }
+      }
+
+      &.middle {
+        background: #8155bf;
+      }
+
+      &.twitter {
+
+      }
+
+      &.github {
+        background: #8c4a8a;
+      }
+    }
+  }
+
+}

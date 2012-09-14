@@ -7,53 +7,61 @@ meta_description:
 ---
 
 <header>
-    <div>
-      <h1><strong>Kyle Fiedler</strong> is struggling to keep his attention.</h1>
-      <!-- <h2>This site is slowly being iterated on so please ignore any pixels out of place.</h2> -->
-    </div>
+  <h1>Kyle Fiedler</h1>
+  <h2>A husband, father, designer at <a href="http://thoughtbot.com">thoughtbot</a>, one half of <a href="http://atedrake.com">Atedrake</a>, <a href="http://ballgamenames.tumblr.com">baseball enthusiast</a>, lover of beer, and an occasional wakeboarder.</h2>
 </header>
 
-<section class="content">
-  <section id="dribbble">
-    <h2><a href="http://dribbble.com/kylefiedler">What he&rsquo;s working on</a></h2>
-  </section>
 
+<section class="top">
   <section class="blog">
-    <h2><a href="/writing">What he&rsquo;s thinking about</a></h2>
+    <h2><a href="/writing">Blog</a></h2>
     <ul>
-    {% for post in site.posts limit: 3 %}
-    <li>
-      <a href="{{ post.url }}" class="{{ post.type }}">{{ post.title }}</a>
-      <!-- <span>{{ post.date | date:"%Y-%m-%d" }}</span> -->
-    </li>
-    {% endfor %}
-    </ul>
-  </section>
-
-  <section class="lastfm">
-    <h2><a href="http://last.fm/user/kylefiedler">Songs he&rsquo;s listening to</a></h2>
-    <ul>
-    </ul>
-  </section>
-
-  <section class="twitter">
-    <div>
-      <h2><a href="http://twitter.com/kylefiedler">Things he&rsquo;s saying</a></h2>
-      <ul id="twitter_update_list">
-      </ul>
-    </div>
-  </section>
-
-
-  <section class="readernaut">
-    <h2><a href="http://readernaut.com/kylefiedler/">Books he&rsquo;s recently read</a></h2>
-    <ul id="bookshelf">
+      {% for post in site.posts limit: 3 %}
+      <li>
+        <a href="{{ post.url }}" class="{{ post.type }}">{{ post.title }}</a>
+        <!-- <span>{{ post.date | date:"%Y-%m-%d" }}</span> -->
+      </li>
+      {% endfor %}
     </ul>
   </section>
 
   <section class="tumblr">
-    <h2><a href="http://stuff.kylefiedler.com">Stuff he&rsquo;s found</a></h2>
+    <h2><a href="http://stuff.kylefiedler.com">Tumblr</a></h2>
     <span class="loading">Loading...</span>
     <!-- <script type="text/javascript" src="http://stuff.kylefiedler.com/js"></script> -->
   </section>
+</section>
+
+<section class="middle">
+  <section id="dribbble">
+    <h2><a href="http://dribbble.com/kylefiedler">Dribbble</a></h2>
+  </section>
+
+
+  <section class="lastfm">
+    <h2><a href="http://last.fm/user/kylefiedler">Rdio</a></h2>
+    <ul>
+    </ul>
+  </section>
+
+  <section class="readernaut">
+    <h2><a href="http://readernaut.com/kylefiedler/">Books he&rsquo;s recently read</a></h2>
+    <article id="bookshelf">
+    </article>
+  </section>
+
+</section>
+
+<section class="twitter">
+  <h2><a href="http://twitter.com/kylefiedler">Twitter</a></h2>
+  <ul id="twitter_update_list">
+  </ul>
+</section>
+
+<section class="github">
+  <h2><a href="https://github.com/kylefiedler">Github</a></h2>
+  <ul>
+    <li><a href="https://github.com/thoughtbot/neat">Bourbon Neat</a></li>
+    <li><a href="https://github.com/kylefiedler/dotfiles">Dotfiles</a></li>
+  </ul>
 </section>

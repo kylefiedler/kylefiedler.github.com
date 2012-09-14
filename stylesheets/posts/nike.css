@@ -1,13 +1,3 @@
-.wrapper, body.nike > section {
-  padding: 0 25.888px 0;
-  text-align: left;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 body > section {
   position: relative; }
   body > section > header {
@@ -15,30 +5,15 @@ body > section {
     background: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -ms-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    -ms-transition-duration: 0.15s;
-    -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    -ms-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0; }
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    -ms-transition: all 0.15s ease-out 0;
+    -o-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0; }
     body > section > header:hover {
       background: rgba(0, 0, 0, 0.8); }
     body > section > header h1 {
-      padding: 12.944px; }
+      padding: 0.809em; }
       body > section > header h1 a {
         display: block;
         background: url("/images/header-icon-white.png") center no-repeat;
@@ -66,19 +41,18 @@ body.nike {
   body.nike > section {
     max-width: 800px;
     color: #fff;
-    padding: 103.552px 0;
+    padding: 6.472em 0;
     text-align: center; }
     body.nike > section blockquote {
-      padding: 77.664px;
+      padding: 4.854em;
       background: rgba(0, 23, 89, 0.5);
       -webkit-box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-      -moz-box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
       box-shadow: 0 0 0 1px rgba(0, 23, 89, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2); }
       body.nike > section blockquote cite {
         font: italic bold 16px "teimer-web", Georgia, serif;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 51.776px;
+        margin-bottom: 3.236em;
         display: block; }
         body.nike > section blockquote cite a {
           color: #fff;

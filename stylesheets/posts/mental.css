@@ -1,14 +1,4 @@
 @charset "UTF-8";
-.wrapper, body.mental > section {
-  padding: 0 25.888px 0;
-  text-align: left;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 body > section {
   position: relative; }
   body > section > header {
@@ -16,30 +6,15 @@ body > section {
     background: rgba(0, 0, 0, 0.6);
     top: 0;
     left: 0;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -ms-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    -ms-transition-duration: 0.15s;
-    -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    -ms-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0; }
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    -ms-transition: all 0.15s ease-out 0;
+    -o-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0; }
     body > section > header:hover {
       background: rgba(0, 0, 0, 0.8); }
     body > section > header h1 {
-      padding: 12.944px; }
+      padding: 0.809em; }
       body > section > header h1 a {
         display: block;
         background: url("/images/header-icon-white.png") center no-repeat;
@@ -65,8 +40,8 @@ body.mental {
     height: 564px;
     background: url("/images/posts/mental/paint-bottom.png") bottom repeat-x; }
   body.mental > section {
-    padding-top: 258.88px;
-    padding-bottom: 155.328px;
+    padding-top: 16.18em;
+    padding-bottom: 9.708em;
     color: #f9ff04;
     max-width: 900px; }
     body.mental > section blockquote {
@@ -78,7 +53,7 @@ body.mental {
         margin-left: -0.4em;
         content: "“";
         font-size: 1.6em;
-        margin-top: -18.122px;
+        margin-top: -1.1326em;
         color: #1e5717; }
       body.mental > section blockquote:after {
         position: absolute;
@@ -95,7 +70,7 @@ body.mental {
         font-family: "felt-tip-senior",cursive;
         display: block;
         margin-left: -0.7em;
-        margin-top: 12.944px; }
+        margin-top: 0.809em; }
         body.mental > section blockquote cite span {
           letter-spacing: -10px; }
 
