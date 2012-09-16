@@ -585,7 +585,8 @@ body {
       body > section > section.twitter li span {
         font-size: 3em;
         font-weight: 100;
-        font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+        font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        line-height: 1.2em; }
         body > section > section.twitter li span a {
           color: rgba(0, 0, 0, 0.4); }
           body > section > section.twitter li span a:hover {
