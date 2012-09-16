@@ -1,19 +1,14 @@
 // fonts
 $body-font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Tisa, Georgia;
 $body-font-size: 1em;
-$header-font-family: "soleil-1","soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$header-font-family: "adrianna-1","adrianna-2", "soleil-1","soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 $base-line-height: golden-ratio($body-font-size, 1);
 
 //Neat Grid
 $grid-columns: 10; // Total number of columns in the grid
 $max-width: golden-ratio(1em, 12); // Max-width of the outer container
+$column: golden-ratio(1em, 12); // Column width
+$gutter: golden-ratio(1em, 12); // Gutter between each two columns
 
 // colors
 $text-color: #626262;
-
-// grid
-$fg-max-columns: 12;
-$fg-column: golden-ratio($body-font-size, 5);
-$fg-gutter: golden-ratio($body-font-size, 3);
-$fg-max-width: 1200px;
-$fg-min-width: 700px;

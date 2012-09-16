@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -390,7 +391,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #494949;
+  color: rgba(255, 255, 255, 0.4);
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   -ms-transition: all 0.15s ease-out 0;
@@ -402,10 +403,17 @@ a {
 
 body {
   background: #403e36;
+  background-color: #403e36;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #403e36), color-stop(100%, #24231f));
+  background-image: -webkit-linear-gradient(top, #403e36, #24231f);
+  background-image: -moz-linear-gradient(top, #403e36, #24231f);
+  background-image: -ms-linear-gradient(top, #403e36, #24231f);
+  background-image: -o-linear-gradient(top, #403e36, #24231f);
+  background-image: linear-gradient(top, #403e36, #24231f);
   min-height: 100%; }
   body > section {
     zoom: 1;
-    max-width: 1200px;
+    max-width: 75.99879em;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -419,176 +427,327 @@ body {
     body > section:after {
       clear: both; }
     body > section > header {
-      background: #999;
-      text-align: center; }
+      background: #999999 url("/images/header-bg.jpg") center top no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      text-align: center;
+      padding: 8.09em 16.18em;
+      -webkit-font-smoothing: antialiased; }
       body > section > header h1 {
         color: #fff;
-        font: 800 4.2358em "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font: 800 4.2358em "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         margin: 0; }
+        body > section > header h1 span {
+          letter-spacing: -8px; }
       body > section > header h2 {
         font-size: 1.125em;
-        font-weight: normal;
-        color: rgba(255, 255, 255, 0.7);
-        margin: 0; }
+        font-weight: bold;
+        color: #ddd;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+        margin: 0.809em 0 0 0; }
         body > section > header h2 a {
-          color: rgba(255, 255, 255, 0.7);
+          color: #ddd;
           font-style: italic; }
           body > section > header h2 a:hover {
             color: #fff; }
-    body > section section {
+    body > section > section {
       zoom: 1;
+      padding: 3.236em 2.427em;
       -webkit-font-smoothing: antialiased; }
-      body > section section:before, body > section section:after {
+      body > section > section:before, body > section > section:after {
         content: "";
         display: table; }
-      body > section section:after {
+      body > section > section:after {
         clear: both; }
-      body > section section h2 {
+      body > section > section h2 {
         text-transform: uppercase;
         font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Tisa, Georgia;
-        letter-spacing: 1px;
-        font-size: 1.125em; }
-        body > section section h2 a {
+        font-size: 1em;
+        margin: 0 0 1.618em; }
+        body > section > section h2 a {
           color: rgba(255, 255, 255, 0.4); }
-      body > section section ul {
+      body > section > section ul {
         padding-left: 0;
         list-style: none; }
-      body > section section.top {
+      body > section > section.top {
         background: #664b8b;
+        background-color: #664b8b;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #664b8b), color-stop(100%, #5f4681));
+        background-image: -webkit-linear-gradient(top, #664b8b, #5f4681);
+        background-image: -moz-linear-gradient(top, #664b8b, #5f4681);
+        background-image: -ms-linear-gradient(top, #664b8b, #5f4681);
+        background-image: -o-linear-gradient(top, #664b8b, #5f4681);
+        background-image: linear-gradient(top, #664b8b, #5f4681);
+        -webkit-box-shadow: inset 0 1px 0 #72549c;
+        box-shadow: inset 0 1px 0 #72549c;
         color: #fff; }
-        body > section section.top .blog {
+        body > section > section.top .blog {
           display: block;
           float: left;
           margin-right: 2.84259%;
           width: 58.86297%; }
-          body > section section.top .blog:last-child {
+          body > section > section.top .blog:last-child {
             margin-right: 0; }
-          body > section section.top .blog li a {
+          body > section > section.top .blog li a {
             color: #fff;
             font-size: 3em;
             line-height: 1.618em;
-            font-family: "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
             font-weight: 100; }
-            body > section section.top .blog li a:hover, body > section section.top .blog li a:focus {
+            body > section > section.top .blog li a:hover, body > section > section.top .blog li a:focus {
               color: rgba(255, 255, 255, 0.6); }
-        body > section section.top .tumblr {
+        body > section > section.top .tumblr {
           display: block;
           float: left;
           margin-right: 2.84259%;
           width: 38.29445%;
           margin-right: 0; }
-          body > section section.top .tumblr:last-child {
+          body > section > section.top .tumblr:last-child {
             margin-right: 0; }
-      body > section section.middle {
-        background: #8155bf; }
-      body > section section.github {
-        background: #8c4a8a; }
-
-body.writing > section {
-  position: relative; }
-  body.writing > section header {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 1.618em;
-    -webkit-transition: all 0.15s ease-out 0;
-    -moz-transition: all 0.15s ease-out 0;
-    -ms-transition: all 0.15s ease-out 0;
-    -o-transition: all 0.15s ease-out 0;
-    transition: all 0.15s ease-out 0; }
-    body.writing > section header:hover {
-      background: rgba(0, 0, 0, 0.8); }
-    body.writing > section header h1 {
-      padding: 0.809em; }
-      body.writing > section header h1 a {
-        display: block;
-        background: url("/images/header-icon-white.png") center no-repeat;
-        -webkit-background-size: 70%;
-        -moz-background-size: 70%;
-        -ms-background-size: 70%;
-        -o-background-size: 70%;
-        background-size: 70%;
-        text-indent: -9999px;
-        width: 30px;
-        height: 30px; }
-        body.writing > section header h1 a:hover {
-          border-bottom: 0; }
-  body.writing > section section {
-    padding: 6.472em 0; }
-    body.writing > section section h1 {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-      font-size: 15px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.809em; }
-    body.writing > section section ul li {
-      zoom: 1;
-      padding: 1.618em 0;
-      border-bottom: 1px solid #eee;
-      -webkit-animation-name: fade-in-down;
-      -moz-animation-name: fade-in-down;
-      animation-name: fade-in-down;
-      -webkit-animation-duration: 0.75s;
-      -moz-animation-duration: 0.75s;
-      animation-duration: 0.75s;
-      -webkit-animation-timing-function: ease-in-out;
-      -moz-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out;
-      -webkit-animation-fill-mode: both;
-      -moz-animation-fill-mode: both;
-      animation-fill-mode: both; }
-      body.writing > section section ul li:before, body.writing > section section ul li:after {
-        content: "";
-        display: table; }
-      body.writing > section section ul li:after {
-        clear: both; }
-      body.writing > section section ul li:nth-child(1) {
-        -webkit-animation-delay: 0.25s;
-        -moz-animation-delay: 0.25s;
-        animation-delay: 0.25s; }
-      body.writing > section section ul li:nth-child(2) {
-        -webkit-animation-delay: 0.5s;
-        -moz-animation-delay: 0.5s;
-        animation-delay: 0.5s; }
-      body.writing > section section ul li:nth-child(3) {
-        -webkit-animation-delay: 0.75s;
-        -moz-animation-delay: 0.75s;
-        animation-delay: 0.75s; }
-      body.writing > section section ul li h2 {
-        font: 300 2.61792em "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-        float: left; }
-      body.writing > section section ul li p {
-        margin-top: 1.618em;
-        color: rgba(98, 98, 98, 0.8); }
-        body.writing > section section ul li p.date {
-          float: right;
-          margin-left: 0.809em; }
-        body.writing > section section ul li p.type {
-          float: left;
-          width: 14.70196%;
-          text-transform: capitalize; }
-    body.writing > section section footer {
-      padding: 0;
-      -webkit-animation-name: fade-in;
-      -moz-animation-name: fade-in;
-      animation-name: fade-in;
-      -webkit-animation-duration: 1s;
-      -moz-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-timing-function: ease-in-out;
-      -moz-animation-timing-function: ease-in-out;
-      animation-timing-function: ease-in-out;
-      -webkit-animation-fill-mode: both;
-      -moz-animation-fill-mode: both;
-      animation-fill-mode: both;
-      -webkit-animation-delay: 2s;
-      -moz-animation-delay: 2s;
-      animation-delay: 2s; }
-      body.writing > section section footer p {
-        width: 100%;
-        margin-left: 0; }
-        body.writing > section section footer p a {
+          body > section > section.top .tumblr li {
+            margin-bottom: 0.809em; }
+            body > section > section.top .tumblr li a {
+              color: rgba(255, 255, 255, 0.7); }
+      body > section > section.middle {
+        background: #8155bf;
+        background-color: #8155bf;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8155bf), color-stop(100%, #794abb));
+        background-image: -webkit-linear-gradient(top, #8155bf, #794abb);
+        background-image: -moz-linear-gradient(top, #8155bf, #794abb);
+        background-image: -ms-linear-gradient(top, #8155bf, #794abb);
+        background-image: -o-linear-gradient(top, #8155bf, #794abb);
+        background-image: linear-gradient(top, #8155bf, #794abb);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-shadow: inset 0 1px 0 #8f68c6;
+        box-shadow: inset 0 1px 0 #8f68c6;
+        border-bottom: 1px solid #50307e; }
+        body > section > section.middle a:hover {
+          border-bottom: none; }
+        body > section > section.middle #dribbble {
           display: block;
-          padding: 1.618em;
-          text-align: center; }
+          float: left;
+          margin-right: 2.84259%;
+          width: 38.29445%;
+          margin-right: 2.35765%; }
+          body > section > section.middle #dribbble:last-child {
+            margin-right: 0; }
+          body > section > section.middle #dribbble img {
+            width: 100%;
+            -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+        body > section > section.middle .rdio {
+          display: block;
+          float: left;
+          margin-right: 2.84259%;
+          width: 28.01019%;
+          margin-right: 2.35765%; }
+          body > section > section.middle .rdio:last-child {
+            margin-right: 0; }
+          body > section > section.middle .rdio .lastFMHeader {
+            display: none; }
+          body > section > section.middle .rdio ul {
+            zoom: 1; }
+            body > section > section.middle .rdio ul:before, body > section > section.middle .rdio ul:after {
+              content: "";
+              display: table; }
+            body > section > section.middle .rdio ul:after {
+              clear: both; }
+            body > section > section.middle .rdio ul li {
+              width: 47%;
+              margin-right: 6%;
+              margin-bottom: 0.809em;
+              float: left; }
+              body > section > section.middle .rdio ul li:nth-child(2n) {
+                margin-right: 0; }
+              body > section > section.middle .rdio ul li img {
+                width: 100%;
+                -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+        body > section > section.middle .readernaut {
+          display: block;
+          float: left;
+          margin-right: 2.84259%;
+          width: 28.01019%; }
+          body > section > section.middle .readernaut:last-child {
+            margin-right: 0; }
+          body > section > section.middle .readernaut img {
+            -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            max-width: 100%; }
+      body > section > section.twitter h2 a {
+        color: rgba(0, 0, 0, 0.3); }
+      body > section > section.twitter li span {
+        font-size: 3em;
+        font-weight: 100;
+        font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+        body > section > section.twitter li span a {
+          color: rgba(0, 0, 0, 0.4); }
+          body > section > section.twitter li span a:hover {
+            color: rgba(0, 0, 0, 0.8); }
+      body > section > section.twitter li > a {
+        display: none; }
+      body > section > section.github {
+        background: #8c4a8a;
+        background-color: #8c4a8a;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c4a8a), color-stop(100%, #7b417a));
+        background-image: -webkit-linear-gradient(top, #8c4a8a, #7b417a);
+        background-image: -moz-linear-gradient(top, #8c4a8a, #7b417a);
+        background-image: -ms-linear-gradient(top, #8c4a8a, #7b417a);
+        background-image: -o-linear-gradient(top, #8c4a8a, #7b417a);
+        background-image: linear-gradient(top, #8c4a8a, #7b417a);
+        border-top: 1px solid #6b3869;
+        text-align: center; }
+        body > section > section.github h2 {
+          line-height: 1em; }
+          body > section > section.github h2:after {
+            content: "•";
+            display: inline-block;
+            vertical-align: baseline;
+            zoom: 1;
+            *display: inline;
+            *vertical-align: auto;
+            padding: 1.618em;
+            color: rgba(255, 255, 255, 0.6); }
+        body > section > section.github h2, body > section > section.github ul, body > section > section.github li {
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto;
+          margin: 0; }
+        body > section > section.github li {
+          margin-right: 1.618em; }
+  body > footer {
+    zoom: 1;
+    max-width: 75.99879em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #5c594d;
+    padding: 3.236em;
+    text-shadow: 0 1px 0 #24231f; }
+    body > footer:before, body > footer:after {
+      content: "";
+      display: table; }
+    body > footer:after {
+      clear: both; }
+    body > footer a {
+      color: #5c594d; }
+      body > footer a:hover, body > footer a:focus {
+        color: #aaa; }
+
+body.writing > section ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  body.writing > section ul li {
+    zoom: 1;
+    padding: 1.618em 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    -webkit-animation-name: fade-in-down;
+    -moz-animation-name: fade-in-down;
+    animation-name: fade-in-down;
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    body.writing > section ul li:before, body.writing > section ul li:after {
+      content: "";
+      display: table; }
+    body.writing > section ul li:after {
+      clear: both; }
+    body.writing > section ul li:nth-child(1) {
+      -webkit-animation-delay: 0.25s;
+      -moz-animation-delay: 0.25s;
+      animation-delay: 0.25s; }
+    body.writing > section ul li:nth-child(2) {
+      -webkit-animation-delay: 0.5s;
+      -moz-animation-delay: 0.5s;
+      animation-delay: 0.5s; }
+    body.writing > section ul li:nth-child(3) {
+      -webkit-animation-delay: 0.75s;
+      -moz-animation-delay: 0.75s;
+      animation-delay: 0.75s; }
+    body.writing > section ul li h2 {
+      font: 300 2.61792em "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      color: #000;
+      display: block;
+      float: left;
+      margin-right: 2.84259%;
+      width: 58.86297%;
+      margin: 0; }
+      body.writing > section ul li h2:last-child {
+        margin-right: 0; }
+    body.writing > section ul li p {
+      color: rgba(98, 98, 98, 0.8);
+      margin: 0.375em 0 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      margin-right: 2.84259%;
+      width: 17.72593%; }
+      body.writing > section ul li p:last-child {
+        margin-right: 0; }
+      body.writing > section ul li p.date {
+        float: right;
+        padding-right: 2.35765%; }
+      body.writing > section ul li p.type {
+        text-transform: capitalize;
+        padding-left: 2.35765%;
+        margin-right: 2.35765%; }
+    body.writing > section ul li:hover {
+      background: #664b8b;
+      color: #fff; }
+      body.writing > section ul li:hover h2, body.writing > section ul li:hover p {
+        color: #fff; }
+body.writing > section footer {
+  padding: 0;
+  -webkit-animation-name: fade-in;
+  -moz-animation-name: fade-in;
+  animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s; }
+  body.writing > section footer p {
+    width: 100%;
+    margin-left: 0;
+    text-align: center; }
+    body.writing > section footer p a {
+      display: inline-block;
+      vertical-align: baseline;
+      zoom: 1;
+      *display: inline;
+      *vertical-align: auto;
+      margin: 1.618em;
+      color: #626262; }

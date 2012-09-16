@@ -22,9 +22,10 @@ $base-line-height: golden-ratio($base-font-size, 1);
 body.starts {
   font-family: "rooney-web", serif;
   border-top: 6px solid #16c3d8;
+  margin: 0;
 
   > section {
-    @extend .wrapper;
+    @include outer-container();
     max-width: 800px;
 
     article {

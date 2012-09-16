@@ -1,100 +1,74 @@
 body.writing {
   > section {
-    @extend .wrapper;
-    position: relative;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
 
-    header {
-      position: absolute;
-      background: rgba(#000, .6);
-      top: 0;
-      left: lh();
-      @include transition();
+      li {
+        @include clearfix;
+        padding: lh() 0;
+        @include box-sizing(border-box);
+        border-bottom: 1px solid #eee;
+        @include fade-in-down(.75s);
+        @include transition(all .3s);
 
-      &:hover {
-        background: rgba(#000, .8);
-      }
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            @include animation-delay(#{($i * .25)}s);
+          }
+        }
 
-      h1 {
-        padding: lh(.5);
+        h2 {
+          font: 300 golden-ratio($body-font-size, 2) $header-font-family;
+          color: #000;
+          @include span-columns(6);
+          margin: 0;
+        }
 
-        a {
-          display: block;
-          background: url('/images/header-icon-white.png') center no-repeat;
-          @include background-size(70%);
-          text-indent: -9999px;
-          width: 30px;
-          height: 30px;
+        p {
+          color: rgba($text-color, .8);
+          margin: em(6) 0 0;
+          @include box-sizing(border-box);
+          @include span-columns(2);
 
-          &:hover {
-            border-bottom: 0;
+          &.date {
+            float: right;
+            padding-right: flex-gutter();
+          }
+
+          &.type {
+            text-transform: capitalize;
+            padding-left: flex-gutter();
+            margin-right: flex-gutter();
+          }
+        }
+
+        &:hover {
+          background: #664b8b;
+          color: #fff;
+
+          h2, p {
+            color: #fff;
           }
         }
       }
     }
 
-    section {
-      padding: lh(4) 0;
+    footer {
+      padding: 0;
+      @include fade-in(1s);
+      @include animation-delay(2s);
 
-      h1 {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: bold;
-        font-size: 15px;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: lh(.5);
-      }
+      p {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
 
-      ul {
-
-        li {
-          @include clearfix;
-          padding: lh() 0;
-          border-bottom: 1px solid #eee;
-          @include fade-in-down(.75s);
-
-          @for $i from 1 through 3 {
-            &:nth-child(#{$i}) {
-              @include animation-delay(#{($i * .25)}s);
-            }
-          }
-
-          h2 {
-            font: 300 golden-ratio($body-font-size, 2) $header-font-family;
-            float: left;
-          }
-
-          p {
-            margin-top: lh();
-            color: rgba($text-color, .8);
-
-            &.date {
-              float: right;
-              margin-left: lh(.5);
-            }
-
-            &.type {
-              float: left;
-              width: flex-grid(2);
-              text-transform: capitalize;
-            }
-          }
-        }
-      }
-
-      footer {
-        padding: 0;
-        @include fade-in(1s);
-        @include animation-delay(2s);
-
-        p {
-          width: 100%;
-          margin-left: 0;
-
-          a {
-            display: block;
-            padding: lh();
-            text-align: center;
-          }
+        a {
+          @include inline-block;
+          margin: lh();
+          color: $text-color;
         }
       }
     }

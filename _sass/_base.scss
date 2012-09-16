@@ -9,7 +9,7 @@ body {
 
 a {
   text-decoration: none;
-  color: darken($text-color, 10%);
+  color: rgba(#fff, .4);
   @include transition();
   border-bottom: 1px solid transparent;
 

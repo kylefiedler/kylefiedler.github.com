@@ -1,8 +1,15 @@
-body > section {
-  position: relative; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+  body a {
+    text-decoration: none; }
   body > section > header {
     position: absolute;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
     -webkit-transition: all 0.15s ease-out 0;
@@ -13,18 +20,15 @@ body > section {
     body > section > header:hover {
       background: rgba(0, 0, 0, 0.8); }
     body > section > header h1 {
-      padding: 0.809em; }
+      padding: 0.809em;
+      margin: 0; }
       body > section > header h1 a {
         display: block;
         background: url("/images/header-icon-white.png") center no-repeat;
-        -webkit-background-size: 70%;
-        -moz-background-size: 70%;
-        -ms-background-size: 70%;
-        -o-background-size: 70%;
-        background-size: 70%;
-        text-indent: -9999px;
-        width: 30px;
-        height: 30px; }
+        color: #fff;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        font-family: "ff-tisa-web-pro", Georgia, serif; }
         body > section > header h1 a:hover {
           border-bottom: 0; }
 
@@ -39,10 +43,20 @@ html {
 body.nike {
   background-color: transparent; }
   body.nike > section {
+    zoom: 1;
+    max-width: 75.99879em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 800px;
     color: #fff;
     padding: 6.472em 0;
     text-align: center; }
+    body.nike > section:before, body.nike > section:after {
+      content: "";
+      display: table; }
+    body.nike > section:after {
+      clear: both; }
     body.nike > section blockquote {
       padding: 4.854em;
       background: rgba(0, 23, 89, 0.5);

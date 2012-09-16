@@ -9,7 +9,7 @@ body.nike {
   background-color: transparent;
 
   > section {
-    @extend .wrapper;
+    @include outer-container();
     max-width: 800px;
     color: #fff;
     padding: lh(4) 0;

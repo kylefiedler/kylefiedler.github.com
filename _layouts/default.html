@@ -14,6 +14,13 @@
 
 <body class="{{ page.keyword }}">
   <section>
+    <header>
+      <a href="/">
+        <h1><span class="k">K</span>yle Fiedler</h1>
+        <h2>A husband, father, designer at <a href="http://thoughtbot.com">thoughtbot</a>, one half of <a href="http://atedrake.com">Atedrake</a>, <a href="http://ballgamenames.tumblr.com">baseball enthusiast</a>, lover of beer, and an occasional wakeboarder.</h2>
+      </a>
+    </header>
+
     {{ content }}
   </section>
 
@@ -37,7 +44,6 @@
     <!-- dribbble -->
     <script type="text/javascript" src = "https://halfcourtshot.googlecode.com/svn/tags/1/js/half-court-shot.jsapp.mh.min.js"></script>
     <script type="text/javascript">var hcs = new HalfCourtShot({ jersey: "kylefiedler", shots: 1, goal: 'dribbble' });</script>
-
 
   <script type="text/javascript">
     //readernaut
@@ -70,7 +76,7 @@
 
       //lastfm — http://www.zazar.net/developers/zlastfm/
       $(document).ready(function () {
-        $('.lastfm').lastfm('kylefiedler','recenttracks','657fe627bd2f7a579308d3cd75561670', {
+        $('.rdio').lastfm('kylefiedler','recenttracks','657fe627bd2f7a579308d3cd75561670', {
           noimage: '/images/missing.png',
           header: false,
           limit: 4,

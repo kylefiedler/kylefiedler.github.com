@@ -1,13 +1,18 @@
 @import "bourbon/bourbon";
+@import "neat/neat";
 @import "base-functions", "base-variables";
 
 body {
-  > section {
-    position: relative;
+  margin: 0;
 
+  a {
+    text-decoration: none;
+  }
+
+  > section {
     > header {
       position: absolute;
-      background: rgba(#000, .6);
+      background: rgba(#000, .3);
       top: 0;
       left: 0;
       @include transition();
@@ -18,14 +23,15 @@ body {
 
       h1 {
         padding: lh(.5);
+        margin: 0;
 
         a {
           display: block;
           background: url('/images/header-icon-white.png') center no-repeat;
-          @include background-size(70%);
-          text-indent: -9999px;
-          width: 30px;
-          height: 30px;
+          color: #fff;
+          font-size: em(12);
+          text-transform: uppercase;
+          font-family: "ff-tisa-web-pro", Georgia, serif;
 
           &:hover {
             border-bottom: 0;
