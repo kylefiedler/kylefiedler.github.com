@@ -438,11 +438,9 @@ body {
       -webkit-font-smoothing: antialiased; }
       body > section > header h1 {
         color: #fff;
-        font: 800 4.2358em "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font: 800 4.2358em "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         margin: 0; }
-        body > section > header h1 span {
-          letter-spacing: -8px; }
       body > section > header h2 {
         font-size: 1.125em;
         font-weight: bold;
@@ -496,7 +494,7 @@ body {
             color: #fff;
             font-size: 3em;
             line-height: 1.618em;
-            font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            font-family: "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
             font-weight: 100; }
             body > section > section.top .blog li a:hover, body > section > section.top .blog li a:focus {
               color: rgba(255, 255, 255, 0.6); }
@@ -527,7 +525,7 @@ body {
         -webkit-box-shadow: inset 0 1px 0 #8f68c6;
         box-shadow: inset 0 1px 0 #8f68c6;
         border-bottom: 1px solid #50307e; }
-        body > section > section.middle a:hover {
+        body > section > section.middle a:hover, body > section > section.middle a:focus {
           border-bottom: none; }
         body > section > section.middle #dribbble {
           display: block;
@@ -585,7 +583,7 @@ body {
       body > section > section.twitter li span {
         font-size: 3em;
         font-weight: 100;
-        font-family: "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font-family: "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         line-height: 1.2em; }
         body > section > section.twitter li span a {
           color: rgba(0, 0, 0, 0.4); }
@@ -690,7 +688,7 @@ body.writing > section ul {
       -moz-animation-delay: 0.75s;
       animation-delay: 0.75s; }
     body.writing > section ul li h2 {
-      font: 300 2.61792em "adrianna-1", "adrianna-2", "soleil-1", "soleil-2", Soleil, "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font: 300 2.61792em "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
       color: #000;
       display: block;
       float: left;

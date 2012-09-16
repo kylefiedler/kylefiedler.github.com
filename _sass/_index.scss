@@ -21,10 +21,6 @@ body {
         font: 800 golden-ratio($body-font-size, 3) $header-font-family;
         text-shadow: 0 0 4px rgba(#000, .5);
         margin: 0;
-
-        span {
-          letter-spacing: -8px;
-        }
       }
 
       h2 {
@@ -113,7 +109,7 @@ body {
         border-bottom: 1px solid darken(#8155bf, 20%);
 
         a {
-          &:hover {
+          &:hover, &:focus {
             border-bottom: none;
           }
         }
