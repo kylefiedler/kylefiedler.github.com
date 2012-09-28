@@ -1,7 +1,8 @@
 @import "bourbon/bourbon";
+@import 'base-variables';
 @import "neat/neat";
 @import "normalize";
 
-@import "keyframes", "base-functions", "base-variables", "base";
+@import "keyframes", "base-functions", "base";
 @import "index", "index-header";
 @import "writing";
