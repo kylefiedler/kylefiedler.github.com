@@ -419,8 +419,8 @@ body {
     margin-right: auto;
     background: #fff;
     margin-top: 2.61792em;
-    -webkit-box-shadow: 0 0 10px #23231e;
-    box-shadow: 0 0 10px #23231e; }
+    -webkit-box-shadow: 0 0 6px #23231e, 0 0 0 1px #161512;
+    box-shadow: 0 0 6px #23231e, 0 0 0 1px #161512; }
     body > section:before, body > section:after {
       content: "";
       display: table; }

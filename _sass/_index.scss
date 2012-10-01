@@ -7,7 +7,7 @@ body {
     @include outer-container;
     background: #fff;
     margin-top: golden-ratio($body-font-size, 2);
-    @include box-shadow(0 0 10px darken(#31302a, 5%));
+    @include box-shadow(0 0 6px darken(#31302a, 5%), 0 0 0 1px darken(#31302a, 10%));
 
     > header {
       background: #999 url('/images/header-bg.jpg') center top no-repeat;
