@@ -18,24 +18,25 @@ body {
 
       h1 {
         color: #fff;
-        font: 800 golden-ratio($body-font-size, 3) $header-font-family;
+        font: 800 golden-ratio($body-font-size, 3) "bello-pro-1","bello-pro-2", $header-font-family;
         text-shadow: 0 0 4px rgba(#000, .5);
         margin: 0;
+        // font-style: italic;
+        // letter-spacing: -1px;
       }
 
       h2 {
         font-size: em(18);
-        font-weight: bold;
-        color: #ddd;
-        text-shadow: 0 1px 1px rgba(#000, .8);
-        margin: lh(.5) 0 0 0;
+        font-weight: 100;
+        color: rgba(#fff, .9);
+        margin: lh(.25) 0 0 0;
 
         a {
-          color: #ddd;
+          color: #fff;
           font-style: italic;
 
           &:hover {
-            color: #fff;
+            color: rgba(#fff, .8);
           }
         }
       }
@@ -49,12 +50,14 @@ body {
       h2 {
         text-transform: uppercase;
         font-family: $body-font-family;
-        // letter-spacing: 1px;
+        font-weight: bold;
+        letter-spacing: 1px;
         font-size: 1em;
         margin: 0 0 lh();
+        -webkit-font-smoothing: antialiased;
 
         a {
-          color: rgba(#fff, .4);
+          color: rgba(#fff, .5);
         }
       }
 

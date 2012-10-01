@@ -4,24 +4,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body:before {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, red 0, red 5.26316%, rgba(0, 0, 0, 0) 5.26316%, rgba(0, 0, 0, 0) 10.52632%, red 10.52632%, red 15.78947%, rgba(0, 0, 0, 0) 15.78947%, rgba(0, 0, 0, 0) 21.05263%, red 21.05263%, red 26.31579%, rgba(0, 0, 0, 0) 26.31579%, rgba(0, 0, 0, 0) 31.57895%, red 31.57895%, red 36.84211%, rgba(0, 0, 0, 0) 36.84211%, rgba(0, 0, 0, 0) 42.10526%, red 42.10526%, red 47.36842%, rgba(0, 0, 0, 0) 47.36842%, rgba(0, 0, 0, 0) 52.63158%, red 52.63158%, red 57.89474%, rgba(0, 0, 0, 0) 57.89474%, rgba(0, 0, 0, 0) 63.15789%, red 63.15789%, red 68.42105%, rgba(0, 0, 0, 0) 68.42105%, rgba(0, 0, 0, 0) 73.68421%, red 73.68421%, red 78.94737%, rgba(0, 0, 0, 0) 78.94737%, rgba(0, 0, 0, 0) 84.21053%, red 84.21053%, red 89.47368%, rgba(0, 0, 0, 0) 89.47368%, rgba(0, 0, 0, 0) 94.73684%, red 94.73684%, red 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  content: '';
-  display: inline-block;
-  height: 100%;
-  max-width: 75.99879em;
-  position: fixed;
-  width: 100%;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  margin: 0 auto; }
-
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -456,20 +438,19 @@ body {
       -webkit-font-smoothing: antialiased; }
       body > section > header h1 {
         color: #fff;
-        font: 800 4.2358em "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font: 800 4.2358em "bello-pro-1", "bello-pro-2", "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         margin: 0; }
       body > section > header h2 {
         font-size: 1.125em;
-        font-weight: bold;
-        color: #ddd;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
-        margin: 0.809em 0 0 0; }
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0.4045em 0 0 0; }
         body > section > header h2 a {
-          color: #ddd;
+          color: #fff;
           font-style: italic; }
           body > section > header h2 a:hover {
-            color: #fff; }
+            color: rgba(255, 255, 255, 0.8); }
     body > section > section {
       zoom: 1;
       padding: 3.236em 2.427em;
@@ -482,10 +463,13 @@ body {
       body > section > section h2 {
         text-transform: uppercase;
         font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Tisa, Georgia;
+        font-weight: bold;
+        letter-spacing: 1px;
         font-size: 1em;
-        margin: 0 0 1.618em; }
+        margin: 0 0 1.618em;
+        -webkit-font-smoothing: antialiased; }
         body > section > section h2 a {
-          color: rgba(255, 255, 255, 0.4); }
+          color: rgba(255, 255, 255, 0.5); }
       body > section > section ul {
         padding-left: 0;
         list-style: none; }
@@ -512,7 +496,7 @@ body {
             color: #fff;
             font-size: 3em;
             line-height: 1.618em;
-            font-family: "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            font-family: "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
             font-weight: 100; }
             body > section > section.top .blog li a:hover, body > section > section.top .blog li a:focus {
               color: rgba(255, 255, 255, 0.6); }
@@ -601,7 +585,7 @@ body {
       body > section > section.twitter li span {
         font-size: 3em;
         font-weight: 100;
-        font-family: "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font-family: "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         line-height: 1.2em; }
         body > section > section.twitter li span a {
           color: rgba(0, 0, 0, 0.4); }
@@ -706,7 +690,7 @@ body.writing > section ul {
       -moz-animation-delay: 0.75s;
       animation-delay: 0.75s; }
     body.writing > section ul li h2 {
-      font: 300 2.61792em "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font: 300 2.61792em "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
       color: #000;
       display: block;
       float: left;
