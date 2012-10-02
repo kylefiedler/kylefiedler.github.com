@@ -18,11 +18,8 @@ body {
 
       h1 {
         color: #fff;
-        font: 800 golden-ratio($body-font-size, 3) "bello-pro-1","bello-pro-2", $header-font-family;
-        text-shadow: 0 0 4px rgba(#000, .5);
+        font: 800 5em "bello-pro-1","bello-pro-2", $header-font-family;
         margin: 0;
-        // font-style: italic;
-        // letter-spacing: -1px;
       }
 
       h2 {
@@ -94,11 +91,18 @@ body {
           @include span-columns(4);
           @include omega;
 
+          .loading {
+            color: rgba(#fff, .3);
+          }
+
           li {
-            margin-bottom: lh(.5);
+            margin-bottom: lh(.25);
 
             a {
-              color: rgba(#fff, .7);
+              color: rgba(#fff, .3);
+              &:hover {
+                color: rgba(#fff, .6);
+              }
             }
           }
         }

@@ -438,8 +438,7 @@ body {
       -webkit-font-smoothing: antialiased; }
       body > section > header h1 {
         color: #fff;
-        font: 800 4.2358em "bello-pro-1", "bello-pro-2", "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-        text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        font: 800 5em "bello-pro-1", "bello-pro-2", "omnes-pro-1", "omnes-pro-2", "raleway-1", "raleway-2", "etica-display-1", "etica-display-2", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
         margin: 0; }
       body > section > header h2 {
         font-size: 1.125em;
@@ -508,10 +507,14 @@ body {
           margin-right: 0; }
           body > section > section.top .tumblr:last-child {
             margin-right: 0; }
+          body > section > section.top .tumblr .loading {
+            color: rgba(255, 255, 255, 0.3); }
           body > section > section.top .tumblr li {
-            margin-bottom: 0.809em; }
+            margin-bottom: 0.4045em; }
             body > section > section.top .tumblr li a {
-              color: rgba(255, 255, 255, 0.7); }
+              color: rgba(255, 255, 255, 0.3); }
+              body > section > section.top .tumblr li a:hover {
+                color: rgba(255, 255, 255, 0.6); }
       body > section > section.middle {
         background: #8155bf;
         background-color: #8155bf;
