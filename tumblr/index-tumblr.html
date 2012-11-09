@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{Title}</title>
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+    <!-- <script type="text/javascript" src="//use.typekit.net/vzw1iuz.js"></script> -->
+    <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+
+    <!--[if lt IE 9]>
+    <script src="dist/html5shiv.js"></script>
+    <![endif]-->
+
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1>{Title}</h1>
+        <ul>
+          <li class="dribbble"><a href="#">Dribbble</a></li>
+          <li class="twitter"><a href="#">Twitter</a></li>
+          <li class="rdio"><a href="#">Rdio</a></li>
+          <li class="github"><a href="#">Github</a></li>
+          <li class="readernaut"><a href="#">Readernaut</a></li>
+          <li class="gimmebar"><a href="#">Gimmebar</a></li>
+          <li class="quora"><a href="#">Quora</a></li>
+          <li class="email"><a href="#">Email</a></li>
+        </ul>
+        {block:Description}
+          <p>{Description}</p>
+        {/block:Description}
+      </div>
+    </header>
+
+    <section>
+      {block:Posts}
+      <ol>
+        {block:Link}
+        <li class="link">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            <h2>
+              <a href="{URL}" {Target}>{Name}</a>
+            </h2>
+            <div>
+              {Description}
+            </div>
+          </article>
+        </li>
+        {/block:Link}
+
+        {block:Photo}
+        <li class="image">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            <h2>
+              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+            </h2>
+            <div>{Caption}</div>
+          </article>
+        </li>
+        {/block:Photo}
+
+        {block:Quote}
+        <li class="quote">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            <blockquote>
+              {Quote}
+            </blockquote>
+            <cite>{Source}</cite>
+          </article>
+        </li>
+        {/block:Quote}
+
+        {block:Regular}
+        <li class="text">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            {Body}
+          </article>
+        </li>
+        {/block:Regular}
+
+        {block:Video}
+        <li class="video">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            {Video-500}
+            <div>{Caption}</div>
+          </article>
+        </li>
+        {/block:Video}
+
+        {block:Audio}
+        <li class="video">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            {AudioPlayerWhite}
+            <div>{block:Caption}{Caption}{/block:Caption}</div>
+          </article>
+        </li>
+        {/block:Audio}
+
+        {block:Conversation}
+        <li class="video">
+          <aside>
+            <p><a href="{Permalink}">{TimeAgo}</a></p>
+          </aside>
+          <article>
+            <ul>
+              {block:Lines}
+              <li class="{Alt}">
+                {block:Label}<span class="label">{Label}</span>{/block:Label}
+                {Line}
+              </li>
+              {/block:Lines}
+            </ul>
+          </article>
+        </li>
+        {/block:Conversation}
+
+      </ol>
+      {/block:Posts}
+
+      {block:Pagination}
+      <div id="pagination">
+        <div id="older-link">{block:NextPage}<a href="{NextPage}">&larr; Older</a>{/block:NextPage}</div>
+        <div id="page-count">{CurrentPage} <span>of</span> {TotalPages}</div>
+        <div id="newer-link">{block:PreviousPage}<a href="{PreviousPage}">Newer &rarr;</a>{/block:PreviousPage}</div>
+      </div>
+      {/block:Pagination}
+    </section>
+  </body>
+</html>
+

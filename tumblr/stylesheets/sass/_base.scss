@@ -1,0 +1,212 @@
+body {
+  background: $background-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  color: $secondary-color;
+  line-height: $body-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-size: em(20);
+  line-height: lh(1.25);
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  @include transition();
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+header {
+  color: $background-color;
+  background-color: #020202;
+  background-image: url(../images/image-small.jpg);
+  background-position: 40% 60%;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+  padding: lh(2) 0 lh(2);
+
+  @media screen and (min-width:29.1875em) and (max-width:58.25em) {
+    background-image: url(../images/image-medium.jpg);
+  }
+
+  @media screen and (min-width:58.251em) {
+    background-image: url(../images/image-high.jpg);
+  }
+
+  div {
+    @include outer-container;
+    text-align: center;
+  }
+
+  h1 {
+    text-indent: -999999em;
+    font-size: 1em;
+    display: block;
+    background-image: url('../images/kylefiedler.svg');
+    @include background-size(cover);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: em(140);
+    width: em(220);
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      height: 1px;
+      width: 100%;
+      @include linear-gradient(left, rgba($background-color, 0), rgba($background-color, .8), rgba($background-color, 0));
+      margin: lh(1.5) 0;
+    }
+  }
+
+  li {
+    @include inline-block;
+    margin-right: 1em;
+
+    a {
+      text-indent: -999999em;
+      display: block;
+      width: 2em;
+      height: 2em;
+      @include background-size(cover);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      opacity: .3;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    &.dribbble a {
+      background-image: url('../images/dribbble.svg');
+    }
+
+    &.github a {
+      background-image: url('../images/github.svg');
+    }
+
+    &.twitter a {
+      background-image: url('../images/twitter.svg');
+    }
+
+    &.rdio a {
+      background-image: url('../images/rdio.svg');
+    }
+
+    &.readernaut a {
+      background-image: url('../images/readernaut.svg');
+    }
+
+    &.email a {
+      background-image: url('../images/email.svg');
+    }
+
+    &.gimmebar a {
+      background-image: url('../images/gimme.svg');
+    }
+
+    &.quora a {
+      background-image: url('../images/quora.svg');
+    }
+  }
+
+  p {
+    @include span-columns(4);
+    @include shift(1);
+  }
+}
+
+section {
+  @include outer-container();
+  margin-top: lh(3);
+  // padding: lh();
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: lh(2);
+      @include row;
+
+      &.link aside {
+        @extend .icon-compass;
+      }
+
+      &.quote aside {
+        @extend .icon-quote-right;
+      }
+
+      &.image aside {
+        @extend .icon-picture;
+      }
+
+      &.text aside {
+        @extend .icon-doc-text;
+      }
+
+      &.video aside {
+        @extend .icon-video;
+      }
+    }
+  }
+
+  blockquote {
+    color: $primary-color;
+    font-size: em(20);
+    font-weight: bold;
+    line-height: lh(1.25);
+    margin: 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  cite {
+    &:before {
+      content: "—";
+      margin-right: lh();
+      @include inline-block;
+    }
+  }
+
+  aside {
+    text-align: right;
+    @include span-columns(1);
+    @extend .icon;
+    color: $primary-color;
+
+    a {
+      color: lighten($secondary-color, 20%);
+      font-size: em(12);
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  article {
+    @include span-columns(5);
+  }
+}
