@@ -55,7 +55,7 @@ header {
     text-align: center;
   }
 
-  h1 {
+  h1 a {
     text-indent: -999999em;
     font-size: 1em;
     display: block;
@@ -184,7 +184,7 @@ section {
         }
       }
 
-      &.image {
+      &.photo {
         img {
           margin-bottom: lh();
         }
@@ -270,16 +270,13 @@ section {
     @include row();
     @include shift(1);
     padding: lh(3) 0;
-    opacity: .7;
+    opacity: .4;
 
     &:hover {
       opacity: 1;
     }
 
     div {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-
       &.newer-link {
         float: right;
       }

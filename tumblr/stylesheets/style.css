@@ -355,7 +355,7 @@ table {
   content: '\e728'; }
 
 /* '' */
-.icon-picture:before, section > ol li.image aside:before {
+.icon-picture:before, section > ol li.photo aside:before {
   content: '🌄'; }
 
 /* '\1f304' */
@@ -437,7 +437,7 @@ header {
       display: table; }
     header div:after {
       clear: both; }
-  header h1 {
+  header h1 a {
     text-indent: -999999em;
     font-size: 1em;
     display: block;
@@ -553,7 +553,7 @@ section {
         margin: 0; }
         section > ol li.quote blockquote p:last-child {
           margin-bottom: 0; }
-      section > ol li.image img {
+      section > ol li.photo img {
         margin-bottom: 1.4rem; }
       section > ol li.text h2 {
         margin-bottom: 1.4rem; }
@@ -606,7 +606,7 @@ section {
     display: block;
     margin-left: 17.32295%;
     padding: 4.2rem 0;
-    opacity: .7; }
+    opacity: .4; }
     section footer:before, section footer:after {
       content: "";
       display: table; }
@@ -614,10 +614,7 @@ section {
       clear: both; }
     section footer:hover {
       opacity: 1; }
-    section footer div {
-      text-transform: uppercase;
-      letter-spacing: 1px; }
-      section footer div.newer-link {
-        float: right; }
-      section footer div.older-link {
-        float: left; }
+    section footer div.newer-link {
+      float: right; }
+    section footer div.older-link {
+      float: left; }
