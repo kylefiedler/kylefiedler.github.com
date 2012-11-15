@@ -160,7 +160,7 @@ section {
     padding: 0;
 
     li {
-      margin-bottom: lh(2);
+      margin-bottom: lh(3);
       @include row;
 
       &.link aside {
@@ -214,7 +214,6 @@ section {
         .video-container {
           position: relative;
           padding-bottom: 56.25%;
-          padding-top: 30px;
           height: 0;
           overflow: hidden;
           margin-bottom: lh();

@@ -537,7 +537,7 @@ section {
     margin: 0;
     padding: 0; }
     section > ol li {
-      margin-bottom: 2.8rem;
+      margin-bottom: 4.2rem;
       zoom: 1;
       display: block; }
       section > ol li:before, section > ol li:after {
@@ -560,7 +560,6 @@ section {
       section > ol li.video .video-container {
         position: relative;
         padding-bottom: 56.25%;
-        padding-top: 30px;
         height: 0;
         overflow: hidden;
         margin-bottom: 1.4rem; }
