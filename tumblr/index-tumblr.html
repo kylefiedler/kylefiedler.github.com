@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>{Title}</title>
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
     <link rel="stylesheet" href="http://labs.kylefiedler.com/tumblr/stylesheets/style.css" type="text/css" media="all" />
-    <!-- <script type="text/javascript" src="//use.typekit.net/vzw1iuz.js"></script> -->
-    <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+    <script type="text/javascript" src="//use.typekit.net/vzw1iuz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!--[if lt IE 9]>
     <script src="dist/html5shiv.js"></script>
@@ -26,8 +26,6 @@
           <li class="twitter"><a href="#">Twitter</a></li>
           <li class="rdio"><a href="#">Rdio</a></li>
           <li class="github"><a href="#">Github</a></li>
-          <!-- <li class="readernaut"><a href="#">Readernaut</a></li> -->
-          <!-- <li class="gimmebar"><a href="#">Gimmebar</a></li> -->
           <li class="quora"><a href="#">Quora</a></li>
           <li class="email"><a href="#">Email</a></li>
         </ul>
@@ -102,7 +100,9 @@
             <p><a href="{Permalink}">{TimeAgo}</a></p>
           </aside>
           <article>
+            <section class="video-contianer">
             {Video-500}
+            </section>
             <div>{Caption}</div>
           </article>
         </li>
@@ -121,7 +121,7 @@
         {/block:Audio}
 
         {block:Conversation}
-        <li class="video">
+        <li class="conversation">
           <aside>
             <p><a href="{Permalink}">{TimeAgo}</a></p>
           </aside>

@@ -31,18 +31,18 @@ a {
 header {
   color: $background-color;
   background-color: #020202;
-  background-image: url(../images/image-small.jpg);
+  background-image: url(http://labs.kylefiedler.com/tumblr/images/image-small.jpg);
   background-position: 40% 60%;
   background-repeat: no-repeat;
   @include background-size(cover);
   padding: lh(2) 0 lh(2);
 
   @media screen and (min-width:29.1875em) and (max-width:58.25em) {
-    background-image: url(../images/image-medium.jpg);
+    background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg);
   }
 
   @media screen and (min-width:58.251em) {
-    background-image: url(../images/image-high.jpg);
+    background-image: url(http://labs.kylefiedler.com/tumblr/images/image-high.jpg);
     @include background-size(80%);
   }
 
@@ -55,7 +55,7 @@ header {
     text-indent: -999999em;
     font-size: 1em;
     display: block;
-    background-image: url('../images/kylefiedler.svg');
+    background-image: url('http://labs.kylefiedler.com/tumblr/images/kylefiedler.svg');
     @include background-size(cover);
     background-position: center;
     background-repeat: no-repeat;
@@ -99,35 +99,35 @@ header {
     }
 
     &.dribbble a {
-      background-image: url('../images/dribbble.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/dribbble.svg');
     }
 
     &.github a {
-      background-image: url('../images/github.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/github.svg');
     }
 
     &.twitter a {
-      background-image: url('../images/twitter.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/twitter.svg');
     }
 
     &.rdio a {
-      background-image: url('../images/rdio.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/rdio.svg');
     }
 
     &.readernaut a {
-      background-image: url('../images/readernaut.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/readernaut.svg');
     }
 
     &.email a {
-      background-image: url('../images/email.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/email.svg');
     }
 
     &.gimmebar a {
-      background-image: url('../images/gimme.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/gimme.svg');
     }
 
     &.quora a {
-      background-image: url('../images/quora.svg');
+      background-image: url('http://labs.kylefiedler.com/tumblr/images/quora.svg');
     }
   }
 
@@ -150,7 +150,7 @@ section {
   margin-top: lh(3);
   // padding: lh();
 
-  ol {
+  > ol {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -187,8 +187,28 @@ section {
         }
       }
 
-      &.video aside {
-        @extend .icon-video;
+      &.video {
+        .video-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 30px;
+          height: 0;
+          overflow: hidden;
+        }
+
+        .video-container iframe,  
+        .video-container object,  
+        .video-container embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        aside {
+          @extend .icon-video;
+        }
       }
     }
   }

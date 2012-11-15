@@ -339,7 +339,7 @@ table {
   text-align: center;
   opacity: 0.7; }
 
-.icon-quote-right:before, section ol li.quote aside:before {
+.icon-quote-right:before, section > ol li.quote aside:before {
   content: '\275e'; }
 
 /* '❞' */
@@ -351,15 +351,15 @@ table {
   content: '\e720'; }
 
 /* '' */
-.icon-compass:before, section ol li.link aside:before {
+.icon-compass:before, section > ol li.link aside:before {
   content: '\e728'; }
 
 /* '' */
-.icon-picture:before, section ol li.image aside:before {
+.icon-picture:before, section > ol li.image aside:before {
   content: '🌄'; }
 
 /* '\1f304' */
-.icon-video:before, section ol li.video aside:before {
+.icon-video:before, section > ol li.video aside:before {
   content: '🎬'; }
 
 /* '\1f3ac' */
@@ -367,7 +367,7 @@ table {
   content: '🎵'; }
 
 /* '\1f3b5' */
-.icon-doc-text:before, section ol li.text aside:before {
+.icon-doc-text:before, section > ol li.text aside:before {
   content: '📄'; }
 
 /* '\1f4c4' */
@@ -402,7 +402,7 @@ a {
 header {
   color: white;
   background-color: #020202;
-  background-image: url(../images/image-small.jpg);
+  background-image: url(http://labs.kylefiedler.com/tumblr/images/image-small.jpg);
   background-position: 40% 60%;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -413,10 +413,10 @@ header {
   padding: 2.8rem 0 2.8rem; }
   @media screen and (min-width: 29.1875em) and (max-width: 58.25em) {
     header {
-      background-image: url(../images/image-medium.jpg); } }
+      background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg); } }
   @media screen and (min-width: 58.251em) {
     header {
-      background-image: url(../images/image-high.jpg);
+      background-image: url(http://labs.kylefiedler.com/tumblr/images/image-high.jpg);
       -webkit-background-size: 80%;
       -moz-background-size: 80%;
       -ms-background-size: 80%;
@@ -438,7 +438,7 @@ header {
     text-indent: -999999em;
     font-size: 1em;
     display: block;
-    background-image: url("../images/kylefiedler.svg");
+    background-image: url("http://labs.kylefiedler.com/tumblr/images/kylefiedler.svg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -489,21 +489,21 @@ header {
       header li a:hover {
         opacity: .9; }
     header li.dribbble a {
-      background-image: url("../images/dribbble.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/dribbble.svg"); }
     header li.github a {
-      background-image: url("../images/github.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/github.svg"); }
     header li.twitter a {
-      background-image: url("../images/twitter.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/twitter.svg"); }
     header li.rdio a {
-      background-image: url("../images/rdio.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/rdio.svg"); }
     header li.readernaut a {
-      background-image: url("../images/readernaut.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/readernaut.svg"); }
     header li.email a {
-      background-image: url("../images/email.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/email.svg"); }
     header li.gimmebar a {
-      background-image: url("../images/gimme.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/gimme.svg"); }
     header li.quora a {
-      background-image: url("../images/quora.svg"); }
+      background-image: url("http://labs.kylefiedler.com/tumblr/images/quora.svg"); }
   header p {
     display: block;
     float: left;
@@ -529,23 +529,37 @@ section {
     display: table; }
   section:after {
     clear: both; }
-  section ol {
+  section > ol {
     list-style: none;
     margin: 0;
     padding: 0; }
-    section ol li {
+    section > ol li {
       margin-bottom: 2.8rem;
       zoom: 1;
       display: block; }
-      section ol li:before, section ol li:after {
+      section > ol li:before, section > ol li:after {
         content: "";
         display: table; }
-      section ol li:after {
+      section > ol li:after {
         clear: both; }
-      section ol li.image img {
+      section > ol li.image img {
         max-width: 100%; }
-      section ol li.text h2 {
+      section > ol li.text h2 {
         margin-bottom: 1.4rem; }
+      section > ol li.video .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden; }
+      section > ol li.video .video-container iframe,
+      section > ol li.video .video-container object,
+      section > ol li.video .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
   section blockquote {
     color: #3b4043;
     font-size: 1.25em;
