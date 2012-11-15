@@ -269,7 +269,7 @@ section {
   footer {
     @include row();
     @include shift(1);
-    margin: lh(3) 0;
+    padding: lh(3) 0;
     opacity: .7;
 
     &:hover {
@@ -277,6 +277,9 @@ section {
     }
 
     div {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
       &.newer-link {
         float: right;
       }
