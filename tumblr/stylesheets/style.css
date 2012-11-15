@@ -388,6 +388,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-top: 0; }
 
+img {
+  max-width: 100%; }
+
 a {
   text-decoration: none;
   color: #3b4043;
@@ -551,7 +554,6 @@ section {
         section > ol li.quote blockquote p:last-child {
           margin-bottom: 0; }
       section > ol li.image img {
-        max-width: 100%;
         margin-bottom: 1.4rem; }
       section > ol li.text h2 {
         margin-bottom: 1.4rem; }
