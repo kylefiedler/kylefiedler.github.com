@@ -416,7 +416,12 @@ header {
       background-image: url(../images/image-medium.jpg); } }
   @media screen and (min-width: 58.251em) {
     header {
-      background-image: url(../images/image-high.jpg); } }
+      background-image: url(../images/image-high.jpg);
+      -webkit-background-size: 80%;
+      -moz-background-size: 80%;
+      -ms-background-size: 80%;
+      -o-background-size: 80%;
+      background-size: 80%; } }
   header div {
     zoom: 1;
     max-width: 48em;
@@ -443,9 +448,11 @@ header {
     background-repeat: no-repeat;
     height: 8.75em;
     width: 13.75em;
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto; }
   header ul {
-    list-style: none; }
+    list-style: none;
+    padding-left: 0; }
     header ul:before, header ul:after {
       display: block;
       content: "";
@@ -505,6 +512,10 @@ header {
     margin-left: 17.32295%; }
     header p:last-child {
       margin-right: 0; }
+    header p a {
+      color: rgba(255, 255, 255, 0.8); }
+      header p a:hover, header p a:active {
+        color: white; }
 
 section {
   zoom: 1;
@@ -531,6 +542,10 @@ section {
         display: table; }
       section ol li:after {
         clear: both; }
+      section ol li.image img {
+        max-width: 100%; }
+      section ol li.text h2 {
+        margin-bottom: 1.4rem; }
   section blockquote {
     color: #3b4043;
     font-size: 1.25em;

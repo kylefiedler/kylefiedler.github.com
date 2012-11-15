@@ -43,6 +43,7 @@ header {
 
   @media screen and (min-width:58.251em) {
     background-image: url(../images/image-high.jpg);
+    @include background-size(80%);
   }
 
   div {
@@ -61,10 +62,12 @@ header {
     height: em(140);
     width: em(220);
     text-align: center;
+    margin: 0 auto;
   }
 
   ul {
     list-style: none;
+    padding-left: 0;
 
     &:before, &:after {
       display: block;
@@ -131,6 +134,14 @@ header {
   p {
     @include span-columns(4);
     @include shift(1);
+
+    a {
+      color: rgba($background-color, .8);
+
+      &:hover, &:active {
+        color: rgba($background-color, 1);
+      }
+    }
   }
 }
 
@@ -156,12 +167,24 @@ section {
         @extend .icon-quote-right;
       }
 
-      &.image aside {
-        @extend .icon-picture;
+      &.image {
+        img {
+          max-width: 100%;
+        }
+
+        aside {
+          @extend .icon-picture;
+        }
       }
 
-      &.text aside {
-        @extend .icon-doc-text;
+      &.text {
+        h2 {
+          margin-bottom: lh();
+        }
+
+        aside {
+          @extend .icon-doc-text;
+        }
       }
 
       &.video aside {
