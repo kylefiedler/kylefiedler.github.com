@@ -542,8 +542,17 @@ section {
         display: table; }
       section > ol li:after {
         clear: both; }
+      section > ol li.quote blockquote {
+        color: #3b4043;
+        font-size: 1.25em;
+        font-weight: bold;
+        line-height: 1.75rem;
+        margin: 0; }
+        section > ol li.quote blockquote p:last-child {
+          margin-bottom: 0; }
       section > ol li.image img {
-        max-width: 100%; }
+        max-width: 100%;
+        margin-bottom: 1.4rem; }
       section > ol li.text h2 {
         margin-bottom: 1.4rem; }
       section > ol li.video .video-container {
@@ -551,7 +560,8 @@ section {
         padding-bottom: 56.25%;
         padding-top: 30px;
         height: 0;
-        overflow: hidden; }
+        overflow: hidden;
+        margin-bottom: 1.4rem; }
       section > ol li.video .video-container iframe,
       section > ol li.video .video-container object,
       section > ol li.video .video-container embed {
@@ -560,14 +570,6 @@ section {
         left: 0;
         width: 100%;
         height: 100%; }
-  section blockquote {
-    color: #3b4043;
-    font-size: 1.25em;
-    font-weight: bold;
-    line-height: 1.75rem;
-    margin: 0; }
-    section blockquote p:last-child {
-      margin-bottom: 0; }
   section cite:before {
     content: "—";
     margin-right: 1.4rem;

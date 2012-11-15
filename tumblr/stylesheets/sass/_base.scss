@@ -163,13 +163,27 @@ section {
         @extend .icon-compass;
       }
 
-      &.quote aside {
-        @extend .icon-quote-right;
+      &.quote {
+        blockquote {
+          color: $primary-color;
+          font-size: em(20);
+          font-weight: bold;
+          line-height: lh(1.25);
+          margin: 0;
+
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+        aside {
+          @extend .icon-quote-right;
+        }
       }
 
       &.image {
         img {
           max-width: 100%;
+          margin-bottom: lh();
         }
 
         aside {
@@ -194,6 +208,7 @@ section {
           padding-top: 30px;
           height: 0;
           overflow: hidden;
+          margin-bottom: lh();
         }
 
         .video-container iframe,  
@@ -213,17 +228,6 @@ section {
     }
   }
 
-  blockquote {
-    color: $primary-color;
-    font-size: em(20);
-    font-weight: bold;
-    line-height: lh(1.25);
-    margin: 0;
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
 
   cite {
     &:before {
