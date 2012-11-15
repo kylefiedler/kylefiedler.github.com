@@ -320,8 +320,8 @@ table {
 
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello.eot");
-  src: url("../font/fontello.eot?#iefix") format("embedded-opentype"), url("../font/fontello.woff") format("woff"), url("../font/fontello.ttf") format("truetype"), url("../font/fontello.svg#fontello") format("svg");
+  src: url("http://labs.kylefiedler.com/tumblr/font/fontello.eot");
+  src: url("http://labs.kylefiedler.com/tumblr/font/fontello.eot?#iefix") format("embedded-opentype"), url("http://labs.kylefiedler.com/tumblr/font/fontello.woff") format("woff"), url("http://labs.kylefiedler.com/tumblr/font/fontello.ttf") format("truetype"), url("http://labs.kylefiedler.com/tumblr/font/fontello.svg#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -363,7 +363,7 @@ table {
   content: '🎬'; }
 
 /* '\1f3ac' */
-.icon-music-alt:before {
+.icon-music-alt:before, section > ol li.audio aside:before {
   content: '🎵'; }
 
 /* '\1f3b5' */

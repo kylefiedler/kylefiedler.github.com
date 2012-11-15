@@ -201,6 +201,12 @@ section {
         }
       }
 
+      &.audio {
+        aside {
+          @extend .icon-music-alt;
+        }
+      }
+
       &.video {
         .video-container {
           position: relative;
