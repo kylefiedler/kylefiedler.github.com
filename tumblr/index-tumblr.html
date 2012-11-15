@@ -109,7 +109,7 @@
         {/block:Video}
 
         {block:Audio}
-        <li class="video">
+        <li class="audio">
           <aside>
             <p><a href="{Permalink}">{TimeAgo}</a></p>
           </aside>
@@ -141,13 +141,12 @@
       </ol>
       {/block:Posts}
 
-      {block:Pagination}
-      <div id="pagination">
-        <div id="older-link">{block:NextPage}<a href="{NextPage}">&larr; Older</a>{/block:NextPage}</div>
-        <div id="page-count">{CurrentPage} <span>of</span> {TotalPages}</div>
-        <div id="newer-link">{block:PreviousPage}<a href="{PreviousPage}">Newer &rarr;</a>{/block:PreviousPage}</div>
-      </div>
-      {/block:Pagination}
+      <footer>
+        {block:Pagination}
+          <div class="older-link">{block:NextPage}<a href="{NextPage}">&larr; Older</a>{/block:NextPage}</div>
+          <div class="newer-link">{block:PreviousPage}<a href="{PreviousPage}">Newer &rarr;</a>{/block:PreviousPage}</div>
+        {/block:Pagination}
+      </footer>
     </section>
   </body>
 </html>

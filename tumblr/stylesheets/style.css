@@ -601,3 +601,16 @@ section {
     width: 82.67705%; }
     section article:last-child {
       margin-right: 0; }
+  section footer {
+    zoom: 1;
+    display: block;
+    margin-bottom: 4.2rem; }
+    section footer:before, section footer:after {
+      content: "";
+      display: table; }
+    section footer:after {
+      clear: both; }
+    section footer div.newer-link {
+      float: right; }
+    section footer div.older-link {
+      float: left; }

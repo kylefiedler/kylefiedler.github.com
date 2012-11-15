@@ -265,4 +265,19 @@ section {
   article {
     @include span-columns(5);
   }
+
+  footer {
+    @include row();
+    margin-bottom: lh(3);
+
+    div {
+      &.newer-link {
+        float: right;
+      }
+
+      &.older-link {
+        float: left;
+      }
+    }
+  }
 }
