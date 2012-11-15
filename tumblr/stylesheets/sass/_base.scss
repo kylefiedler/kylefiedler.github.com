@@ -268,7 +268,13 @@ section {
 
   footer {
     @include row();
-    margin-bottom: lh(3);
+    @include shift(1);
+    margin: lh(3) 0;
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
 
     div {
       &.newer-link {

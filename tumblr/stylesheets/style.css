@@ -604,12 +604,16 @@ section {
   section footer {
     zoom: 1;
     display: block;
-    margin-bottom: 4.2rem; }
+    margin-left: 17.32295%;
+    margin: 4.2rem 0;
+    opacity: .7; }
     section footer:before, section footer:after {
       content: "";
       display: table; }
     section footer:after {
       clear: both; }
+    section footer:hover {
+      opacity: 1; }
     section footer div.newer-link {
       float: right; }
     section footer div.older-link {
