@@ -32,6 +32,15 @@ a {
   }
 }
 
+::selection {
+  background: $highlight-color; /* Safari */
+  color: $background-color;
+}
+::-moz-selection {
+  background: $highlight-color; /* Firefox */
+  color: $background-color;
+}
+
 header {
   color: $background-color;
   background-color: #020202;
@@ -47,7 +56,7 @@ header {
 
   @media screen and (min-width:58.251em) {
     background-image: url(http://labs.kylefiedler.com/tumblr/images/image-high.jpg);
-    @include background-size(80%);
+    @include background-size(60%);
   }
 
   div {

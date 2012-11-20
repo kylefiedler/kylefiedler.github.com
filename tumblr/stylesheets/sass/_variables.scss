@@ -17,8 +17,8 @@ $max-width: 48em; // Max-width of the outer container
 
 // Colors
 $dark-blue: #3b4043;
-$light-text-blue: #6e7b83;
-$red: #cb4442l;
+$light-text-blue: lighten(#6e7b83, 5%);
+$red: #cd473e;
 
 $primary-color: $dark-blue;
 $secondary-color: $light-text-blue;
