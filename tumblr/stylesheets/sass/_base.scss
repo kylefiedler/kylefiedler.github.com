@@ -49,6 +49,8 @@ header {
   background-repeat: no-repeat;
   @include background-size(cover);
   padding: lh(2) 0 lh(2);
+  border-bottom: 1px solid #000;
+  @include box-shadow(0 6px 0 lighten($secondary-color, 43%), inset 0 -1px 0 rgba(#fff, .4));
 
   @media screen and (min-width:29.1875em) and (max-width:58.25em) {
     background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg);
@@ -75,20 +77,35 @@ header {
     height: em(140);
     width: em(220);
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto lh();
+  }
+
+  p {
+    @include span-columns(4);
+    @include shift(1);
+
+    a {
+      color: rgba($background-color, .8);
+
+      &:hover, &:active {
+        color: rgba($background-color, 1);
+      }
+    }
   }
 
   ul {
     list-style: none;
     padding-left: 0;
+    margin-top: lh(2);
+    clear: both;
 
-    &:before, &:after {
+    &:before {
       display: block;
       content: "";
       height: 1px;
       width: 100%;
       @include linear-gradient(left, rgba($background-color, 0), rgba($background-color, .8), rgba($background-color, 0));
-      margin: lh(1.5) 0;
+      margin: lh(1) 0;
     }
   }
 
@@ -144,18 +161,6 @@ header {
     }
   }
 
-  p {
-    @include span-columns(4);
-    @include shift(1);
-
-    a {
-      color: rgba($background-color, .8);
-
-      &:hover, &:active {
-        color: rgba($background-color, 1);
-      }
-    }
-  }
 }
 
 section {
@@ -188,6 +193,7 @@ section {
             margin-bottom: 0;
           }
         }
+
         aside {
           @extend .icon-quote-right;
         }
@@ -272,6 +278,8 @@ section {
 
   article {
     @include span-columns(5);
+    border-left: 1px solid lighten($secondary-color, 44%);
+    padding-left: $fg-gutter;
   }
 
   footer {

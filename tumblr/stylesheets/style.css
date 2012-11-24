@@ -375,7 +375,7 @@ body {
   background: white;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Tisa OT", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1em;
-  color: #6e7b83;
+  color: #7b8890;
   line-height: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -400,7 +400,17 @@ a {
   -o-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0; }
   a:hover {
-    color: #6e7b83; }
+    color: #7b8890; }
+
+::selection {
+  background: #cd473e;
+  /* Safari */
+  color: white; }
+
+::-moz-selection {
+  background: #cd473e;
+  /* Firefox */
+  color: white; }
 
 header {
   color: white;
@@ -413,18 +423,21 @@ header {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 2.8rem 0 2.8rem; }
+  padding: 2.8rem 0 2.8rem;
+  border-bottom: 1px solid #000;
+  -webkit-box-shadow: 0 6px 0 #f2f3f4, inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 0 #f2f3f4, inset 0 -1px 0 rgba(255, 255, 255, 0.4); }
   @media screen and (min-width: 29.1875em) and (max-width: 58.25em) {
     header {
       background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg); } }
   @media screen and (min-width: 58.251em) {
     header {
       background-image: url(http://labs.kylefiedler.com/tumblr/images/image-high.jpg);
-      -webkit-background-size: 80%;
-      -moz-background-size: 80%;
-      -ms-background-size: 80%;
-      -o-background-size: 80%;
-      background-size: 80%; } }
+      -webkit-background-size: 60%;
+      -moz-background-size: 60%;
+      -ms-background-size: 60%;
+      -o-background-size: 60%;
+      background-size: 60%; } }
   header div {
     zoom: 1;
     max-width: 48em;
@@ -452,11 +465,25 @@ header {
     height: 8.75em;
     width: 13.75em;
     text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto 1.4rem; }
+  header p {
+    display: block;
+    float: left;
+    margin-right: 3.9377%;
+    width: 65.3541%;
+    margin-left: 17.32295%; }
+    header p:last-child {
+      margin-right: 0; }
+    header p a {
+      color: rgba(255, 255, 255, 0.8); }
+      header p a:hover, header p a:active {
+        color: white; }
   header ul {
     list-style: none;
-    padding-left: 0; }
-    header ul:before, header ul:after {
+    padding-left: 0;
+    margin-top: 2.8rem;
+    clear: both; }
+    header ul:before {
       display: block;
       content: "";
       height: 1px;
@@ -468,7 +495,7 @@ header {
       background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
       background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
       background-image: linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-      margin: 2.1rem 0; }
+      margin: 1.4rem 0; }
   header li {
     display: inline-block;
     vertical-align: baseline;
@@ -507,18 +534,6 @@ header {
       background-image: url("http://labs.kylefiedler.com/tumblr/images/gimme.svg"); }
     header li.quora a {
       background-image: url("http://labs.kylefiedler.com/tumblr/images/quora.svg"); }
-  header p {
-    display: block;
-    float: left;
-    margin-right: 3.9377%;
-    width: 65.3541%;
-    margin-left: 17.32295%; }
-    header p:last-child {
-      margin-right: 0; }
-    header p a {
-      color: rgba(255, 255, 255, 0.8); }
-      header p a:hover, header p a:active {
-        color: white; }
 
 section {
   zoom: 1;
@@ -589,7 +604,7 @@ section {
     section aside:last-child {
       margin-right: 0; }
     section aside a {
-      color: #a4adb3;
+      color: #b2babe;
       font-size: 0.75em; }
       section aside a:hover {
         color: #3b4043; }
@@ -597,7 +612,9 @@ section {
     display: block;
     float: left;
     margin-right: 3.9377%;
-    width: 82.67705%; }
+    width: 82.67705%;
+    border-left: 1px solid #f5f6f6;
+    padding-left: 1.618em; }
     section article:last-child {
       margin-right: 0; }
   section footer {

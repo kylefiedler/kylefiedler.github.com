@@ -21,6 +21,9 @@
     <header>
       <div class="wrapper">
         <h1><a href="/">{Title}</a></h1>
+        {block:Description}
+        <p>{Description}</p>
+        {/block:Description}
         <ul>
           <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
           <li class="twitter"><a href="http://twitter.com/kylefiedler">Twitter</a></li>
@@ -29,14 +32,10 @@
           <li class="quora"><a href="http://quora.com/Kyle-Fiedler">Quora</a></li>
           <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
         </ul>
-        {block:Description}
-          <p>{Description}</p>
-        {/block:Description}
       </div>
     </header>
 
     <section>
-
       <ol>
       {block:Posts}
         <li class="{PostType}">
