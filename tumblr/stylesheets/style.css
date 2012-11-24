@@ -567,8 +567,8 @@ section {
         display: table; }
       section > ol li:after {
         clear: both; }
-      section > ol li.link blockquote {
-        margin-top: 1.4rem; }
+      section > ol li.link h2 {
+        margin-bottom: 0.7rem; }
       section > ol li.quote blockquote {
         border: 0;
         color: #3b4043;
