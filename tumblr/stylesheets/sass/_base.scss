@@ -32,12 +32,19 @@ a {
   }
 }
 
+blockquote {
+  padding-left: lh();
+  border-left: 4px solid lighten($secondary-color, 40%);
+  margin: 0 0 lh();
+}
+
 ::selection {
-  background: $highlight-color; /* Safari */
+  background: $primary-color; /* Safari */
   color: $background-color;
 }
+
 ::-moz-selection {
-  background: $highlight-color; /* Firefox */
+  background: $primary-color; /* Firefox */
   color: $background-color;
 }
 
@@ -85,10 +92,12 @@ header {
     @include shift(1);
 
     a {
-      color: rgba($background-color, .8);
+      font-style: italic;
+      color: rgba($background-color, 1);
+      border-bottom: 1px solid rgba($background-color, .4);
 
       &:hover, &:active {
-        color: rgba($background-color, 1);
+        color: rgba($background-color, .8);
       }
     }
   }
@@ -187,7 +196,6 @@ section {
           font-size: em(20);
           font-weight: bold;
           line-height: lh(1.25);
-          margin: 0;
 
           p:last-child {
             margin-bottom: 0;
@@ -251,7 +259,6 @@ section {
     }
   }
 
-
   cite {
     &:before {
       content: "—";
@@ -264,10 +271,10 @@ section {
     text-align: right;
     @include span-columns(1);
     @extend .icon;
-    color: $primary-color;
+    color: darken($secondary-color, 10%);
 
     a {
-      color: lighten($secondary-color, 20%);
+      color: lighten($secondary-color, 30%);
       font-size: em(12);
 
       &:hover {

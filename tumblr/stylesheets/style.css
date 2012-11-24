@@ -402,13 +402,18 @@ a {
   a:hover {
     color: #7b8890; }
 
+blockquote {
+  padding-left: 1.4rem;
+  border-left: 4px solid #eaeced;
+  margin: 0 0 1.4rem; }
+
 ::selection {
-  background: #cd473e;
+  background: #3b4043;
   /* Safari */
   color: white; }
 
 ::-moz-selection {
-  background: #cd473e;
+  background: #3b4043;
   /* Firefox */
   color: white; }
 
@@ -475,9 +480,11 @@ header {
     header p:last-child {
       margin-right: 0; }
     header p a {
-      color: rgba(255, 255, 255, 0.8); }
+      font-style: italic;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
       header p a:hover, header p a:active {
-        color: white; }
+        color: rgba(255, 255, 255, 0.8); }
   header ul {
     list-style: none;
     padding-left: 0;
@@ -564,8 +571,7 @@ section {
         color: #3b4043;
         font-size: 1.25em;
         font-weight: bold;
-        line-height: 1.75rem;
-        margin: 0; }
+        line-height: 1.75rem; }
         section > ol li.quote blockquote p:last-child {
           margin-bottom: 0; }
       section > ol li.photo img {
@@ -600,11 +606,11 @@ section {
     float: left;
     margin-right: 3.9377%;
     width: 13.38525%;
-    color: #3b4043; }
+    color: #626e75; }
     section aside:last-child {
       margin-right: 0; }
     section aside a {
-      color: #b2babe;
+      color: #ced3d6;
       font-size: 0.75em; }
       section aside a:hover {
         color: #3b4043; }
