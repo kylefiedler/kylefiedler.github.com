@@ -373,16 +373,16 @@ table {
 /* '\1f4c4' */
 body {
   background: white;
+  color: #7b8890;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Tisa OT", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1em;
-  color: #7b8890;
   line-height: 1.4rem; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #3b4043;
   font-size: 1.25em;
-  line-height: 1.75rem;
   font-weight: bold;
+  line-height: 1.75rem;
   margin: 0; }
 
 p {
@@ -392,8 +392,8 @@ img {
   max-width: 100%; }
 
 a {
-  text-decoration: none;
   color: #3b4043;
+  text-decoration: none;
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   -ms-transition: all 0.15s ease-out 0;
@@ -403,9 +403,9 @@ a {
     color: #7b8890; }
 
 blockquote {
-  padding-left: 1.4rem;
   border-left: 4px solid #eaeced;
-  margin: 0 0 1.4rem; }
+  margin: 0;
+  padding-left: 1.4rem; }
 
 ::selection {
   background: #3b4043;
@@ -418,7 +418,6 @@ blockquote {
   color: white; }
 
 header {
-  color: white;
   background-color: #020202;
   background-image: url(http://labs.kylefiedler.com/tumblr/images/image-small.jpg);
   background-position: 40% 60%;
@@ -428,10 +427,11 @@ header {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 2.8rem 0 2.8rem;
   border-bottom: 1px solid #000;
   -webkit-box-shadow: 0 6px 0 #f2f3f4, inset 0 -1px 0 rgba(255, 255, 255, 0.4);
-  box-shadow: 0 6px 0 #f2f3f4, inset 0 -1px 0 rgba(255, 255, 255, 0.4); }
+  box-shadow: 0 6px 0 #f2f3f4, inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 2.8rem 0 2.8rem; }
   @media screen and (min-width: 29.1875em) and (max-width: 58.25em) {
     header {
       background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg); } }
@@ -543,12 +543,12 @@ header {
       background-image: url("http://labs.kylefiedler.com/tumblr/images/quora.svg"); }
 
 section {
+  margin-top: 4.2rem;
   zoom: 1;
   max-width: 48em;
   text-align: left;
   margin-left: auto;
-  margin-right: auto;
-  margin-top: 4.2rem; }
+  margin-right: auto; }
   section:before, section:after {
     content: "";
     display: table; }
@@ -567,15 +567,15 @@ section {
         display: table; }
       section > ol li:after {
         clear: both; }
-      section > ol li.link aside h2 {
-        margin-bottom: 1.4rem; }
+      section > ol li.link blockquote {
+        margin-top: 1.4rem; }
       section > ol li.quote blockquote {
+        border: 0;
         color: #3b4043;
         font-size: 1.25em;
         font-weight: bold;
         line-height: 1.75rem;
-        padding: 0;
-        border: 0; }
+        padding: 0; }
         section > ol li.quote blockquote p:last-child {
           margin-bottom: 0; }
       section > ol li.photo img {

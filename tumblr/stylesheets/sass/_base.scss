@@ -1,16 +1,16 @@
 body {
   background: $background-color;
+  color: $secondary-color;
   font-family: $body-font-family;
   font-size: $body-font-size;
-  color: $secondary-color;
   line-height: $body-line-height;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
   font-size: em(20);
-  line-height: lh(1.25);
   font-weight: bold;
+  line-height: lh(1.25);
   margin: 0;
 }
 
@@ -23,8 +23,8 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: $primary-color;
+  text-decoration: none;
   @include transition();
 
   &:hover {
@@ -33,9 +33,9 @@ a {
 }
 
 blockquote {
-  padding-left: lh();
   border-left: 4px solid lighten($secondary-color, 40%);
-  margin: 0 0 lh();
+  margin: 0;
+  padding-left: lh();
 }
 
 ::selection {
@@ -49,15 +49,15 @@ blockquote {
 }
 
 header {
-  color: $background-color;
   background-color: #020202;
   background-image: url(http://labs.kylefiedler.com/tumblr/images/image-small.jpg);
   background-position: 40% 60%;
   background-repeat: no-repeat;
   @include background-size(cover);
-  padding: lh(2) 0 lh(2);
   border-bottom: 1px solid #000;
   @include box-shadow(0 6px 0 lighten($secondary-color, 43%), inset 0 -1px 0 rgba(#fff, .4));
+  color: $background-color;
+  padding: lh(2) 0 lh(2);
 
   @media screen and (min-width:29.1875em) and (max-width:58.25em) {
     background-image: url(http://labs.kylefiedler.com/tumblr/images/image-medium.jpg);
@@ -173,9 +173,8 @@ header {
 }
 
 section {
-  @include outer-container();
   margin-top: lh(3);
-  // padding: lh();
+  @include outer-container();
 
   > ol {
     list-style: none;
@@ -186,22 +185,25 @@ section {
       margin-bottom: lh(3);
       @include row;
 
-      &.link aside {
-        @extend .icon-compass;
 
-        h2 {
-          margin-bottom: lh();
+      &.link {
+        blockquote {
+          margin-top: lh();
+        }
+
+        aside {
+          @extend .icon-compass;
         }
       }
 
       &.quote {
         blockquote {
+          border: 0;
           color: $primary-color;
           font-size: em(20);
           font-weight: bold;
           line-height: lh(1.25);
           padding: 0;
-          border: 0;
 
           p:last-child {
             margin-bottom: 0;
