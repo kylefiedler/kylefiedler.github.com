@@ -188,6 +188,10 @@ section {
 
       &.link aside {
         @extend .icon-compass;
+
+        h2 {
+          margin-bottom: lh();
+        }
       }
 
       &.quote {
@@ -196,6 +200,8 @@ section {
           font-size: em(20);
           font-weight: bold;
           line-height: lh(1.25);
+          padding: 0;
+          border: 0;
 
           p:last-child {
             margin-bottom: 0;

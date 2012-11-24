@@ -567,11 +567,15 @@ section {
         display: table; }
       section > ol li:after {
         clear: both; }
+      section > ol li.link aside h2 {
+        margin-bottom: 1.4rem; }
       section > ol li.quote blockquote {
         color: #3b4043;
         font-size: 1.25em;
         font-weight: bold;
-        line-height: 1.75rem; }
+        line-height: 1.75rem;
+        padding: 0;
+        border: 0; }
         section > ol li.quote blockquote p:last-child {
           margin-bottom: 0; }
       section > ol li.photo img {
