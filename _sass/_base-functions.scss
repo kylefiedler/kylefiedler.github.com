@@ -1,9 +1,0 @@
-// Line-height
-@function lh($amount: 1) {
-  @return $base-line-height * $amount;
-}
-
-@function rem($pxval, $base: 16) {
-  @return #{$pxval / $base}rem;
-}
-

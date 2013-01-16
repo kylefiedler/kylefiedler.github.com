@@ -7,4 +7,4 @@ This site is running on Jekyll (https://github.com/mojombo/jekyll). Start the se
   
 This site is using SASS for its stylesheets. To watch the scss files to generate the css run:
 
-  $ sass --watch _sass:stylesheets/ -r ./_sass/bourbon/lib/bourbon.rb
+  $ sass --watch _sass:stylesheets/

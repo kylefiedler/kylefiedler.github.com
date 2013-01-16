@@ -2,56 +2,36 @@
 layout: default
 title: Kyle Fiedler
 keyword: home
-meta_keywords:
-meta_description:
 ---
-<section class="top">
-  <section class="blog">
-    <h2><a href="/writing">Blog</a></h2>
-    <ul>
-      {% for post in site.posts limit: 3 %}
-      <li>
-        <a href="{{ post.url }}" class="{{ post.type }}">{{ post.title }}</a>
-        <!-- <span>{{ post.date | date:"%Y-%m-%d" }}</span> -->
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+<section class="writing">
+  <ol>
+    {% for post in paginator.posts %}
+    <li class="{{post.type}}">
+      <!-- here add you post markup -->
+      <aside>
+        <span class="date">{{post.date | date:"%b %Y"}}</span>
+      </aside>
 
-  <section class="tumblr">
-    <h2><a href="http://stuff.kylefiedler.com">Tumblr</a></h2>
-    <span class="loading">Loading...</span>
-    <!-- <script type="text/javascript" src="http://stuff.kylefiedler.com/js"></script> -->
-  </section>
-</section>
+      <article>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-<section class="middle">
-  <section id="dribbble">
-    <h2><a href="http://dribbble.com/kylefiedler">Dribbble</a></h2>
-  </section>
+        {{ post.content }}
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
 
-  <section class="rdio">
-    <h2><a href="http://last.fm/user/kylefiedler">Rdio</a></h2>
-  </section>
+  <!-- Pagination links -->
+  <nav class="pagination">
+    {% if paginator.previous_page == 1 %}
+    <a href="/" class="newer">Newer</a>
 
-  <section class="readernaut">
-    <h2><a href="http://readernaut.com/kylefiedler/">Readernaut</a></h2>
-    <article id="bookshelf">
-    </article>
-  </section>
+    {% elsif paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
 
-</section>
-
-<section class="twitter">
-  <h2><a href="http://twitter.com/kylefiedler">Twitter</a></h2>
-  <ul id="twitter_update_list">
-  </ul>
-</section>
-
-<section class="github">
-  <h2><a href="https://github.com/kylefiedler">Github</a></h2>
-  <ul>
-    <li><a href="https://github.com/thoughtbot/neat">Bourbon Neat</a></li>
-    <li><a href="https://github.com/kylefiedler/dotfiles">Dotfiles</a></li>
-  </ul>
+    {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="older">Older</a>
+    {% endif %}
+  </nav>
 </section>
