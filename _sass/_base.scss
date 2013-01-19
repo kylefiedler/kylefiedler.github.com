@@ -44,14 +44,13 @@ img {
 }
 
 a {
-  color: $link-blue;
+  color: $highlight-color;
   text-decoration: none;
   border-bottom: 1px solid lighten($secondary-color, 40%);
   @include transition();
 
   &:hover {
     color: $primary-color;
-    background-color: lighten($yellow, 15%);
   }
 }
 
@@ -61,91 +60,22 @@ blockquote {
   padding-left: lh();
 }
 
-::selection {
-  background: $primary-color; /* Safari */
-  color: $background-color;
-}
+cite {
+  display: block;
 
-::-moz-selection {
-  background: $primary-color; /* Firefox */
-  color: $background-color;
-}
-
-body > header {
-  background-color: $highlight-color;
-  background-position: 40% 60%;
-  background-repeat: no-repeat;
-  color: $background-color;
-  padding: lh(6) 1em lh(2);
-  -webkit-font-smoothing: antialiased;
-
-  @include media(1600px){
-    padding: 0;
-    background-color: darken($highlight-color, 2%);
-    @include transition;
-  };
-
-  div {
-    @include outer-container;
-
-    @include media(1600px){
-      padding: lh(6) 4em lh(2);
-      @include box-sizing(content-box);
-      background-color: $highlight-color;
-      @include transition;
-    };
-  }
-
-  h1 {
-    @include shift(1);
-    padding-left: flex-gutter();
-
-    a {
-      color: #fff;
-      border-bottom: 0;
-
-      &:hover {
-        color: rgba(#fff, 0.7);
-        background: 0;
-      }
-    }
-  }
-
-  p {
-    @include shift(1);
-    color: rgba(#fff, 0.7);
-    padding-left: flex-gutter();
-    margin-right: flex-grid(1) + flex-gutter();
-
-    a {
-      font-style: italic;
-      color: rgba($background-color, .9);
-      border-bottom: 0;
-
-      &:hover, &:active {
-        color: rgba($background-color, .5);
-        background: none;
-      }
-    }
-  }
-
-  ul {
-    clear: both;
-    @include shift(1);
-    padding-left: flex-gutter();
-    margin-top: lh();
-
-    a {
-      color: darken($highlight-color, 20%);
-
-      &:hover {
-        color: darken($highlight-color, 30%);
-        background: none;
-      }
-    }
+  &:before {
+    content: "—";
+    margin-right: lh();
+    @include inline-block;
   }
 }
 
+::selection, ::-moz-selection {
+  background: $highlight-color; /* Safari */
+  color: $background-color;
+}
+
+// All Social links found on site
 ul.social {
   li {
     @include inline-block;
@@ -184,301 +114,6 @@ ul.social {
 
     &.email a {
       @extend .icon-paper-plane;
-    }
-  }
-}
-
-body > section {
-  margin-top: lh(3);
-  padding: 0 1em;
-  @include box-sizing(content-box);
-  @include outer-container();
-
-  @include media(1600px){
-    margin-top: 0;
-    padding: lh(3) 4em;
-    background-color: #FFF;
-    @include transition;
-  };
-
-  section.writing {
-    > ol {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      > li {
-        margin-bottom: lh(3);
-        @include row;
-        position: relative;
-
-        h1 {
-          a {
-            color: $primary-color;
-            border-bottom: 0;
-
-            &:hover {
-              color: $link-blue;
-            }
-          }
-        }
-
-        header {
-           margin-bottom: lh();
-        }
-
-        @include media(810px) {
-          p {
-            margin-right: flex-grid(1) + flex-gutter();
-          }
-        };
-
-        p.long {
-          margin-right: 0;
-        }
-
-        .video-container {
-          position: relative;
-          padding-bottom: 56.25%;
-          height: 0;
-          overflow: hidden;
-          margin-bottom: lh(.5);
-        }
-
-        .video-container iframe,  
-        .video-container object,  
-        .video-container embed {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-
-        &.link {
-          h2 {
-            margin-bottom: lh(.5);
-          }
-
-          aside {
-            @extend .icon-compass;
-          }
-        }
-
-        &.quote {
-          h1 {
-            display: none;
-          }
-
-          blockquote {
-            border: 0;
-            color: $primary-color;
-            font-family: $header-font-family;
-            font-size: em(24);
-            font-weight: bold;
-            line-height: 1.3em;
-            padding: 0;
-
-            p {
-              margin-right: 0;
-            }
-          }
-
-          aside {
-            @extend .icon-quote-right;
-          }
-        }
-
-        &.photo {
-          img {
-            margin-bottom: lh();
-          }
-
-          aside {
-            @extend .icon-picture;
-          }
-        }
-
-        &.text {
-          h2 {
-            margin-bottom: lh();
-          }
-
-          aside {
-            @extend .icon-doc-text;
-          }
-
-          ul {
-            padding-left: 0;
-
-            li {
-              margin-bottom: .5em;
-              position: relative;
-              list-style: none;
-
-              &:before {
-                content: "•";
-                color: lighten($secondary-color, 10%);
-                font-size: em(14);
-                @include inline-block;
-                @include position(absolute,  0 0 0 -1.2em);
-              }
-            }
-          }
-
-          ol {
-            padding-left: 0;
-            counter-reset:li;
-
-            li {
-              margin-bottom: .5em;
-              position: relative;
-              list-style: none;
-
-              &:before {
-                content:counter(li)"."; /* Use the counter as content */
-                counter-increment:li; /* Increment the counter by 1 */
-                color: $secondary-color;
-                @include inline-block;
-                @include position(absolute,  0 0 0 -1.2em);
-                font-size: em(14);
-              }
-            }
-          }
-        }
-
-        &.video {
-          h1 {
-            display: none;
-          }
-
-          aside {
-            @extend .icon-video;
-          }
-        }
-      }
-    }
-
-    cite {
-      display: block;
-
-      &:before {
-        content: "—";
-        margin-right: lh();
-        @include inline-block;
-      }
-    }
-
-    aside {
-      text-align: right;
-      @include span-columns(1);
-      @extend .icon;
-      color: darken($secondary-color, 10%);
-      margin-top: 4px;
-
-      span {
-        display: block;
-
-        &.date {
-          color: lighten($secondary-color, 30%);
-          font-size: em(12);
-
-          &:hover {
-            color: $primary-color;
-          }
-        }
-      }
-    }
-
-    article {
-      @include span-columns(5);
-      @include omega();
-      border-left: 1px solid lighten($secondary-color, 42%);
-      padding-left: flex-gutter();
-    }
-
-
-    @include media(max-width 600px, 2) {
-      aside {
-        display: block;
-        text-align: center;
-        @include span-columns(2);
-        border-bottom: 1px solid lighten($secondary-color, 40%);
-        padding-bottom: 2em;
-        margin-bottom: 2em;
-
-        span {
-          @include inline-block;
-
-          &.date {
-            margin-left: 1em;
-          }
-        }
-      }
-
-      article {
-        display: block;
-        padding-left: 0;
-        border-left: 0;
-        @include span-columns(2);
-      }
-    };
-    nav.pagination {
-      border-top: 1px solid lighten($secondary-color, 40%);
-      color: $secondary-color;
-      font-size: em(14);
-      margin: 2em 0;
-      padding-top: 2em;
-      padding-left: flex-grid(1) + (flex-gutter() * 2);
-      @include row();
-
-      @include media(max-width 600px){
-        padding-left: 0;
-      };
-
-      a {
-        &.newer {
-          float: right;
-        }
-
-        &.older {
-          float: left;
-        }
-      }
-    }
-  }
-
-  footer.main {
-    border-top: 1px solid lighten($secondary-color, 40%);
-    color: $secondary-color;
-    font-size: em(14);
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding-top: 2em;
-    padding-left: flex-grid(1) + (flex-gutter() * 2);
-
-    @include media(max-width 600px){
-      padding-left: 0;
-    };
-
-    p.copy {
-      margin: 0;
-      float: left;
-    }
-
-    ul.social {
-      margin: 0;
-      float: right;
-
-      li {
-        float: right;
-      }
-    }
-
-    p.license {
-      opacity: .5;
-      clear: both;
-      margin-top: 1em;
     }
   }
 }

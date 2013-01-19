@@ -16,15 +16,15 @@ $max-width: 56em; // Max-width of the outer container
 
 // Colors
 $dark-blue: #455660;
-$link-blue: #5180a0;
 $light-text-blue: lighten(#6e7b83, 5%);
 $red: #cd473e;
 $yellow: #efe6af;
+$purple: #58487e;
 
 $primary-color: $dark-blue;
 $secondary-color: $light-text-blue;
 
-$highlight-color: #5ead5f;
+$highlight-color: $purple;
 $background-color: #fff;
 
 @function lh($amount: 1) {
