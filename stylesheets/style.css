@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon:before, ul.social li a:before, body > section section.writing > ol > li aside:before, body.post section.post-content aside:before,
+.icon:before, ul.social li a:before, nav.pagination a.older:before, body > section section.writing > ol > li aside:before, body.post section.post-content aside:before,
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: 'fontello';
@@ -339,19 +339,45 @@ table {
   text-align: center;
   opacity: 0.7; }
 
-.icon-menu:before {
-  content: '\2630'; }
+.icon-after:after, nav.pagination a.newer:after, body > section section.writing > ol > li h1 a:after,
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-left: 0.2em;
+  text-align: center;
+  opacity: 0.7; }
 
-/* '☰' */
+.icon-tools:before {
+  content: '\2692'; }
+
+/* '⚒' */
+.icon-attention:before {
+  content: '\26a0'; }
+
+/* '⚠' */
 .icon-quote-right:before, body > section section.writing > ol > li.quote aside:before, body.post section.quote.post-content aside:before {
   content: '\275e'; }
 
 /* '❞' */
-.icon-right-open:before {
+.icon-left-open:before {
+  content: '\e75d'; }
+
+/* '' */
+.icon-right-open:after {
   content: '\e75e'; }
 
 /* '' */
-.icon-right-open-mini:before {
+.icon-left-open-mini:before, nav.pagination a.older:before {
+  content: '\e761'; }
+
+/* '' */
+.icon-right-open-mini:after, nav.pagination a.newer:after, body > section section.writing > ol > li h1 a:after {
   content: '\e762'; }
 
 /* '' */
@@ -367,6 +393,10 @@ table {
   content: '\f309'; }
 
 /* '' */
+.icon-tumblr:before, ul.social li.tumblr a:before {
+  content: '\f315'; }
+
+/* '' */
 .icon-dribbble:before, ul.social li.dribbble a:before {
   content: '\f31b'; }
 
@@ -442,6 +472,8 @@ a {
   -o-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0; }
   a:hover {
+    background-color: rgba(255, 254, 234, 0.7);
+    border-color: #fffcb7;
     color: #455660; }
 
 blockquote {
@@ -465,6 +497,22 @@ cite {
   /* Safari */
   color: white; }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 0.8em; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 ul.social li {
   display: inline-block;
   vertical-align: baseline;
@@ -481,6 +529,35 @@ ul.social li {
     text-indent: -9999px; }
     ul.social li a:before {
       text-indent: 9999px; }
+    ul.social li a:hover {
+      background: none; }
+
+nav.pagination {
+  border-top: 1px solid #eaeced;
+  color: #7b8890;
+  margin: 2em 0;
+  padding-top: 2em;
+  padding-left: 21.26065%;
+  *zoom: 1;
+  display: block; }
+  nav.pagination:before, nav.pagination:after {
+    content: " ";
+    display: table; }
+  nav.pagination:after {
+    clear: both; }
+  @media screen and (max-width: 600px) {
+    nav.pagination {
+      padding-left: 0; } }
+  nav.pagination a.newer {
+    float: right; }
+  nav.pagination a.older {
+    float: left;
+    margin-left: -.4em; }
+
+article.four-oh {
+  margin-left: 17.32295%;
+  padding-left: 3.9377%;
+  margin-bottom: 5em; }
 
 body > section section.writing > ol > li, body.post section.post-content {
   *zoom: 1;
@@ -501,13 +578,15 @@ body > section section.writing > ol > li, body.post section.post-content {
     margin-top: 4px; }
     body > section section.writing > ol > li aside:last-child, body.post section.post-content aside:last-child {
       margin-right: 0; }
-    body > section section.writing > ol > li aside span, body.post section.post-content aside span {
-      display: block; }
-      body > section section.writing > ol > li aside span.date, body.post section.post-content aside span.date {
+    body > section section.writing > ol > li aside a, body.post section.post-content aside a, body > section section.writing > ol > li aside span, body.post section.post-content aside span {
+      display: block;
+      border-bottom: none; }
+      body > section section.writing > ol > li aside a.date, body.post section.post-content aside a.date, body > section section.writing > ol > li aside span.date, body.post section.post-content aside span.date {
         color: #ced3d6;
         font-size: 0.75em; }
-        body > section section.writing > ol > li aside span.date:hover, body.post section.post-content aside span.date:hover {
-          color: #455660; }
+        body > section section.writing > ol > li aside a.date:hover, body.post section.post-content aside a.date:hover, body > section section.writing > ol > li aside span.date:hover, body.post section.post-content aside span.date:hover {
+          color: #455660;
+          background-color: none; }
   body > section section.writing > ol > li article, body.post section.post-content article {
     display: block;
     float: left;
@@ -518,6 +597,8 @@ body > section section.writing > ol > li, body.post section.post-content {
     padding-left: 3.9377%; }
     body > section section.writing > ol > li article:last-child, body.post section.post-content article:last-child {
       margin-right: 0; }
+    body > section section.writing > ol > li article header, body.post section.post-content article header {
+      margin-bottom: 1.6em; }
   @media screen and (max-width: 600px) {
     body > section section.writing > ol > li aside, body.post section.post-content aside {
       display: block;
@@ -531,13 +612,13 @@ body > section section.writing > ol > li, body.post section.post-content {
       margin-bottom: 2em; }
       body > section section.writing > ol > li aside:last-child, body.post section.post-content aside:last-child {
         margin-right: 0; }
-      body > section section.writing > ol > li aside span, body.post section.post-content aside span {
+      body > section section.writing > ol > li aside a, body.post section.post-content aside a, body > section section.writing > ol > li aside span, body.post section.post-content aside span {
         display: inline-block;
         vertical-align: baseline;
         zoom: 1;
         *display: inline;
         *vertical-align: auto; }
-        body > section section.writing > ol > li aside span.date, body.post section.post-content aside span.date {
+        body > section section.writing > ol > li aside a.date, body.post section.post-content aside a.date, body > section section.writing > ol > li aside span.date, body.post section.post-content aside span.date {
           margin-left: 1em; }
     body > section section.writing > ol > li article, body.post section.post-content article {
       display: block;
@@ -613,12 +694,12 @@ body > header {
   background-color: #58487e;
   background-position: 40% 60%;
   background-repeat: no-repeat;
-  color: white;
   padding: 9.6em 1em 3.2em;
+  color: white;
   -webkit-font-smoothing: antialiased; }
   @media screen and (min-width: 1600px) {
     body > header {
-      padding: 0;
+      padding: 0 !important;
       background-color: #534478;
       -webkit-transition: all 0.15s ease-out 0;
       -moz-transition: all 0.15s ease-out 0;
@@ -647,15 +728,28 @@ body > header {
         -ms-transition: all 0.15s ease-out 0;
         -o-transition: all 0.15s ease-out 0;
         transition: all 0.15s ease-out 0; } }
-  body > header img {
+  body > header a.image {
     display: block;
     float: left;
     margin-right: 3.9377%;
     width: 13.38525%;
-    border-radius: 140px;
-    border: 5px solid rgba(255, 255, 255, 0.05); }
-    body > header img:last-child {
+    border-bottom: 0;
+    position: relative;
+    left: 1.5em; }
+    body > header a.image:last-child {
       margin-right: 0; }
+    body > header a.image img {
+      border-radius: 140px;
+      border: 5px solid rgba(255, 255, 255, 0.05);
+      -webkit-transition: all 0.15s ease-out 0;
+      -moz-transition: all 0.15s ease-out 0;
+      -ms-transition: all 0.15s ease-out 0;
+      -o-transition: all 0.15s ease-out 0;
+      transition: all 0.15s ease-out 0; }
+    body > header a.image:hover {
+      background: none; }
+      body > header a.image:hover img {
+        border-color: rgba(255, 255, 255, 0.2); }
   body > header nav {
     display: block;
     float: left;
@@ -693,10 +787,52 @@ body > header {
           color: #14101d;
           background: none; }
 
+body.post > header {
+  padding: 1.2em 4em; }
+  @media screen and (min-width: 1600px) {
+    body.post > header div {
+      padding: 1.2em 4em; } }
+  body.post > header div a.image {
+    display: block;
+    float: left;
+    margin-right: 3.9377%;
+    width: 13.38525%;
+    *zoom: 1;
+    display: block;
+    padding: 0; }
+    body.post > header div a.image:last-child {
+      margin-right: 0; }
+    body.post > header div a.image:before, body.post > header div a.image:after {
+      content: " ";
+      display: table; }
+    body.post > header div a.image:after {
+      clear: both; }
+    body.post > header div a.image img {
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      margin-top: -2px;
+      float: right; }
+  body.post > header div h1 {
+    display: block;
+    float: left;
+    margin-right: 4.76275%;
+    width: 58.0949%;
+    margin-bottom: 0; }
+    body.post > header div h1:last-child {
+      margin-right: 0; }
+  body.post > header div ul {
+    float: right;
+    clear: none;
+    margin: 4px 0 0; }
+
+@media screen and (min-width: 1600px) {
+  body.default > header div {
+    padding: 9.6em 4em 3.2em; } }
+
 footer.main {
   border-top: 1px solid #eaeced;
   color: #7b8890;
-  font-size: 0.875em;
   margin-top: 2em;
   margin-bottom: 2em;
   padding-top: 2em;
@@ -715,7 +851,7 @@ footer.main {
   footer.main p.license {
     opacity: .5;
     clear: both;
-    margin-top: 1em; }
+    margin-top: 2em; }
 
 body > section {
   margin-top: 4.8em;
@@ -751,47 +887,15 @@ body > section {
       body > section section.writing > ol > li h1 a {
         color: #455660;
         border-bottom: 0; }
+        body > section section.writing > ol > li h1 a:after {
+          font-size: .75em;
+          color: #b2babe; }
         body > section section.writing > ol > li h1 a:hover {
           color: #58487e; }
-      body > section section.writing > ol > li header {
-        margin-bottom: 1.6em; }
+          body > section section.writing > ol > li h1 a:hover:after {
+            color: #58487e; }
       @media screen and (min-width: 810px) {
         body > section section.writing > ol > li p {
           margin-right: 17.32295%; } }
       body > section section.writing > ol > li p.long {
         margin-right: 0; }
-      body > section section.writing > ol > li .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        margin-bottom: 0.8em; }
-      body > section section.writing > ol > li .video-container iframe,
-      body > section section.writing > ol > li .video-container object,
-      body > section section.writing > ol > li .video-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-  body > section section.writing nav.pagination {
-    border-top: 1px solid #eaeced;
-    color: #7b8890;
-    font-size: 0.875em;
-    margin: 2em 0;
-    padding-top: 2em;
-    padding-left: 21.26065%;
-    *zoom: 1;
-    display: block; }
-    body > section section.writing nav.pagination:before, body > section section.writing nav.pagination:after {
-      content: " ";
-      display: table; }
-    body > section section.writing nav.pagination:after {
-      clear: both; }
-    @media screen and (max-width: 600px) {
-      body > section section.writing nav.pagination {
-        padding-left: 0; } }
-    body > section section.writing nav.pagination a.newer {
-      float: right; }
-    body > section section.writing nav.pagination a.older {
-      float: left; }

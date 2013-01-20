@@ -9,7 +9,7 @@ keyword: home
     <li class="{{post.type}}">
       <!-- here add you post markup -->
       <aside>
-        <span class="date">{{post.date | date:"%b %Y"}}</span>
+        <a href="{{ post.url }}" class="date">{{post.date | date:"%b %Y"}}</a>
       </aside>
 
       <article>

@@ -50,6 +50,8 @@ a {
   @include transition();
 
   &:hover {
+    background-color: rgba($yellow, .7);
+    border-color: darken($yellow, 10%);
     color: $primary-color;
   }
 }
@@ -75,6 +77,24 @@ cite {
   color: $background-color;
 }
 
+// Fluid video
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: lh(.5);
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 // All Social links found on site
 ul.social {
   li {
@@ -93,11 +113,18 @@ ul.social {
       &:before {
         text-indent: 9999px;
       }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    &.tumblr a {
+      @extend .icon-tumblr;
     }
 
     &.dribbble a {
       @extend .icon-dribbble;
-
     }
 
     &.github a {
@@ -116,4 +143,38 @@ ul.social {
       @extend .icon-paper-plane;
     }
   }
+}
+
+nav.pagination {
+  border-top: 1px solid lighten($secondary-color, 40%);
+  color: $secondary-color;
+  margin: 2em 0;
+  padding-top: 2em;
+  padding-left: flex-grid(1) + (flex-gutter() * 2);
+  @include row();
+
+  @include media(max-width 600px){
+    padding-left: 0;
+  };
+
+  a {
+    &.newer {
+      float: right;
+      @extend .icon-after;
+      @extend .icon-right-open-mini;
+    }
+
+    &.older {
+      float: left;
+      margin-left: -.4em;
+      @extend .icon;
+      @extend .icon-left-open-mini;
+    }
+  }
+}
+
+article.four-oh {
+  @include shift(1);
+  padding-left: flex-gutter();
+  margin-bottom: 5em;
 }

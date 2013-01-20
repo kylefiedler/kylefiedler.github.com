@@ -23,13 +23,32 @@
   opacity: 0.7;
 }
 
-.icon-menu:before { content: '\2630'; } /* '☰' */
+.icon-after:after,
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-left: 0.2em;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.icon-tools:before { content: '\2692'; } /* '⚒' */
+.icon-attention:before { content: '\26a0'; } /* '⚠' */
 .icon-quote-right:before { content: '\275e'; } /* '❞' */
-.icon-right-open:before { content: '\e75e'; } /* '' */
-.icon-right-open-mini:before { content: '\e762'; } /* '' */
+.icon-left-open:before { content: '\e75d'; } /* '' */
+.icon-right-open:after { content: '\e75e'; } /* '' */
+.icon-left-open-mini:before { content: '\e761'; } /* '' */
+.icon-right-open-mini:after { content: '\e762'; } /* '' */
 .icon-paper-plane:before { content: '\e79b'; } /* '' */
 .icon-github:before { content: '\f300'; } /* '' */
 .icon-twitter:before { content: '\f309'; } /* '' */
+.icon-tumblr:before { content: '\f315'; } /* '' */
 .icon-dribbble:before { content: '\f31b'; } /* '' */
 .icon-rdio:before { content: '\f324'; } /* '' */
 .icon-picture:before { content: '🌄'; } /* '\1f304' */

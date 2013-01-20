@@ -1,0 +1,143 @@
+body > header {
+  background-color: $highlight-color;
+  background-position: 40% 60%;
+  background-repeat: no-repeat;
+  padding: lh(6) 1em lh(2);
+  color: $background-color;
+  -webkit-font-smoothing: antialiased;
+
+  @include media(1600px){
+    padding: 0 !important;
+    background-color: darken($highlight-color, 2%);
+    @include transition;
+  };
+
+  div {
+    @include outer-container;
+
+    @include media(1600px){
+      padding: lh(6) 4em lh(2);
+      @include box-sizing(content-box);
+      background-color: $highlight-color;
+      @include transition;
+    };
+  }
+
+  a.image {
+    @include span-columns(1);
+    border-bottom: 0;
+    @include position(relative, 0 0 0 1.5em);
+
+    img {
+      border-radius: 140px;
+      border: 5px solid rgba(#fff, .05);
+      @include transition();
+    }
+
+    &:hover {
+      background: none;
+
+      img {
+        border-color: rgba(#fff, .2);
+      }
+    }
+  }
+
+  nav {
+    @include span-columns(5);
+    margin-top: .75em;
+
+    h1 {
+      padding-left: flex-gutter();
+
+      a {
+        color: #fff;
+        border-bottom: 0;
+
+        &:hover {
+          color: rgba(#fff, 0.7);
+          background: 0;
+        }
+      }
+    }
+
+    p {
+      color: rgba(#fff, 0.7);
+      padding-left: flex-gutter();
+      margin-right: flex-grid(1) + flex-gutter();
+
+      a {
+        font-style: italic;
+        color: rgba($background-color, .9);
+        border-bottom: 0;
+
+        &:hover, &:active {
+          color: rgba($background-color, .5);
+          background: none;
+        }
+      }
+    }
+
+    ul {
+      clear: both;
+      padding-left: flex-gutter();
+      margin-top: lh();
+
+      a {
+        color: darken($highlight-color, 20%);
+
+        &:hover {
+          color: darken($highlight-color, 30%);
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+body.post > header {
+  padding: lh(.75) 4em;
+
+  div {
+    @include media(1600px){
+      padding: lh(.75) 4em;
+    };
+
+    a.image {
+      @include span-columns(1);
+      @include row();
+      padding: 0;
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-top: -2px;
+        float: right;
+      }
+
+    }
+
+    h1 {
+      @include span-columns(3 5);
+      margin-bottom: 0;
+    }
+
+    ul {
+      float: right;
+      clear: none;
+      margin: 4px 0 0;
+    }
+
+  }
+}
+
+body.default > header {
+
+  div {
+    @include media(1600px){
+      padding: lh(6) 4em lh(2);
+    };
+  }
+
+}

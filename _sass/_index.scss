@@ -1,0 +1,60 @@
+body > section {
+  margin-top: lh(3);
+  padding: 0 1em;
+  @include box-sizing(content-box);
+  @include outer-container();
+
+  @include media(1600px){
+    margin-top: 0;
+    padding: lh(3) 4em;
+    background-color: #FFF;
+    @include transition;
+  };
+
+  section.writing {
+    > ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        margin-bottom: lh(3);
+        @extend %article-type;
+        @extend %post;
+
+        h1 {
+          a {
+            color: $primary-color;
+            border-bottom: 0;
+            @extend .icon-after;
+            @extend .icon-right-open-mini;
+
+            &:after {
+              font-size: .75em;
+              color: lighten($secondary-color, 20%);
+            }
+
+            &:hover {
+              color: $highlight-color;
+
+              &:after {
+                color: $highlight-color;
+              }
+            }
+          }
+        }
+
+        @include media(810px) {
+          p {
+            margin-right: flex-grid(1) + flex-gutter();
+          }
+        };
+
+        p.long {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
+}

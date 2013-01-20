@@ -1,0 +1,32 @@
+footer.main {
+  border-top: 1px solid lighten($secondary-color, 40%);
+  color: $secondary-color;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-left: flex-grid(1) + (flex-gutter() * 2);
+
+  @include media(max-width 600px){
+    padding-left: 0;
+  };
+
+  p.copy {
+    margin: 0;
+    float: left;
+  }
+
+  ul.social {
+    margin: 0;
+    float: right;
+
+    li {
+      float: right;
+    }
+  }
+
+  p.license {
+    opacity: .5;
+    clear: both;
+    margin-top: 2em;
+  }
+}

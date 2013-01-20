@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Description" name="Description" content="{{ page.meta_description }}" />
+    <meta http-equiv="Keywords" name="Keywords" content="{{ page.meta_keywords }}" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <!--Typekit-->
+    <script type="text/javascript" src="http://use.typekit.com/vzw1iuz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+
+  <body class="{{ page.keyword }} post">
+    <header>
+      <div class="wrapper">
+        <a href="/" class="image">
+          <img src="/images/k3.jpg" alt="Kyle Fiedler" />
+        </a>
+        <nav>
+          <h1><a href="/">Kyle Fiedler</a></h1>
+          <ul class="social">
+            <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+            <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+            <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+            <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
+            <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <section class="post-content {{page.type}}">
+        <aside>
+          <span class="date">{{page.date | date:"%b %Y"}}</span>
+        </aside>
+
+        <article>
+          <h1>{{ page.title }}</h1>
+
+          {{ content }}
+        </article>
+
+      </section>
+
+      <nav class="pagination">
+        {% if page.previous %} 
+        <a rel="prev" href="{{ page.previous.url }}" class="older">{{ page.previous.title }}</a>
+        {% endif %}
+        {% if page.next %} 
+        <a rel="next" href="{{ page.next.url }}" class="newer">{{ page.next.title }}</a>
+        {% endif %}
+      </nav>
+
+      <footer class="main">
+        <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
+
+        <ul class="social">
+          <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+          <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+          <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+          <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
+          <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+        </ul>
+
+        <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+      </footer>
+    </section>
+
+
+  </body>
+</html>
