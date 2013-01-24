@@ -64,8 +64,8 @@ a img {
 
 @font-face {
   font-family: 'LearningCurveProRegular';
-  src: url("http://labs.kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.eot");
-  src: url("http://labs.kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.eot?iefix") format("eot"), url("http://labs.kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.woff") format("woff"), url("http://labs.kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.ttf") format("truetype"), url("http://labs.kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.svg#webfontSY5jsO6d") format("svg");
+  src: url("http://kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.eot");
+  src: url("http://kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.eot?iefix") format("eot"), url("http://kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.woff") format("woff"), url("http://kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.ttf") format("truetype"), url("http://kylefiedler.com/sippycups/fonts/LearningCurve_OT-webfont.svg#webfontSY5jsO6d") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -73,7 +73,7 @@ a img {
 /* line 20, ../src/screen.scss */
 body {
   text-align: center;
-  background: url("http://labs.kylefiedler.com/sippycups/images/bg.jpg") center 0 repeat;
+  background: url("http://kylefiedler.com/sippycups/images/bg.jpg") center 0 repeat;
   font: 14px Georgia, serif;
 }
 
@@ -138,7 +138,7 @@ a:hover {
 }
 /* line 85, ../src/screen.scss */
 #header #search-block .submit {
-  background: url("http://labs.kylefiedler.com/sippycups/images/search.png") 0 0 no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/search.png") 0 0 no-repeat;
   width: 14px;
   top: 3px;
   height: 14px;
@@ -150,7 +150,7 @@ a:hover {
 /* line 97, ../src/screen.scss */
 #paper-wrapper {
   padding: 25px 60px 26px 44px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/bgpaper/top.png") 90% 0 no-repeat, url("http://labs.kylefiedler.com/sippycups/images/bgpaper/bottom.png") 74px 100% no-repeat, url("http://labs.kylefiedler.com/sippycups/images/bgpaper/left.png") 0 30px no-repeat, url("http://labs.kylefiedler.com/sippycups/images/bgpaper/right.png") right 98% no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/bgpaper/top.png") 90% 0 no-repeat, url("http://kylefiedler.com/sippycups/images/bgpaper/bottom.png") 74px 100% no-repeat, url("http://kylefiedler.com/sippycups/images/bgpaper/left.png") 0 30px no-repeat, url("http://kylefiedler.com/sippycups/images/bgpaper/right.png") right 98% no-repeat;
   margin: 80px auto 0;
   width: 900px;
   position: relative;
@@ -159,7 +159,7 @@ a:hover {
 #paper-wrapper #main {
   margin: 0 auto;
   width: 500px;
-  background: white url("http://labs.kylefiedler.com/sippycups/images/notebook-lines.png") 0 0 repeat-y;
+  background: white url("http://kylefiedler.com/sippycups/images/notebook-lines.png") 0 0 repeat-y;
   text-align: left;
   position: relative;
   clear: left;
@@ -172,7 +172,7 @@ a:hover {
 #paper-wrapper #main #photos {
   width: 393px;
   height: 573px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/left-side.png") 0 0 no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/left-side.png") 0 0 no-repeat;
   position: absolute;
   top: 300px;
   left: -200px;
@@ -181,7 +181,7 @@ a:hover {
 #paper-wrapper #main #stethescope {
   width: 598px;
   height: 717px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/steth_notes.png") 0 0 no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/steth_notes.png") 0 0 no-repeat;
   position: absolute;
   top: -110px;
   right: -310px;
@@ -191,7 +191,7 @@ a:hover {
   position: absolute;
   width: 407px;
   height: 430px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/sippy-cup-footer.png") 0 0 no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/sippy-cup-footer.png") 0 0 no-repeat;
   bottom: 0;
   right: -300px;
 }
@@ -200,7 +200,7 @@ a:hover {
   text-indent: -9999px;
   width: 556px;
   height: 292px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/sippy-cups-logo.png") 0 0 no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/sippy-cups-logo.png") 0 0 no-repeat;
   display: block;
   position: relative;
   left: -160px;
@@ -208,7 +208,7 @@ a:hover {
 /* line 158, ../src/screen.scss */
 #paper-wrapper #main .post {
   padding: 40px 0 60px;
-  background: url("http://labs.kylefiedler.com/sippycups/images/divider.png") center bottom no-repeat;
+  background: url("http://kylefiedler.com/sippycups/images/divider.png") center bottom no-repeat;
 }
 /* line 162, ../src/screen.scss */
 #paper-wrapper #main .post h3 {
