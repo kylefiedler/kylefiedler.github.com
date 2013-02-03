@@ -94,6 +94,9 @@
       }
     }
 
+    cite + p {
+      margin-top: $body-line-height;
+    }
     aside {
       @extend .icon-quote-right;
     }

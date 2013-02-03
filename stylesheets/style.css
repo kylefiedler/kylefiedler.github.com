@@ -645,6 +645,8 @@ body > section section.writing > ol > li.quote blockquote, body.post section.quo
   padding: 0; }
   body > section section.writing > ol > li.quote blockquote p, body.post section.quote.post-content blockquote p {
     margin-right: 0; }
+body > section section.writing > ol > li.quote cite + p, body.post section.quote.post-content cite + p {
+  margin-top: 1.6em; }
 body > section section.writing > ol > li.photo img, body.post section.photo.post-content img {
   margin-bottom: 1.6em; }
 body > section section.writing > ol > li.text h2, body.post section.text.post-content h2 {
@@ -706,6 +708,9 @@ body > header {
       -ms-transition: all 0.15s ease-out 0;
       -o-transition: all 0.15s ease-out 0;
       transition: all 0.15s ease-out 0; } }
+  @media screen and (max-width: 600px) {
+    body > header {
+      padding-top: 3.2em; } }
   body > header div {
     *zoom: 1;
     max-width: 56em;
@@ -750,6 +755,17 @@ body > header {
       background: none; }
       body > header a.image:hover img {
         border-color: rgba(255, 255, 255, 0.2); }
+    @media screen and (max-width: 600px) {
+      body > header a.image {
+        float: none;
+        display: block;
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; } }
   body > header nav {
     display: block;
     float: left;
@@ -786,6 +802,23 @@ body > header {
         body > header nav ul a:hover {
           color: #14101d;
           background: none; }
+    @media screen and (max-width: 600px) {
+      body > header nav {
+        width: auto;
+        text-align: center;
+        float: none; }
+        body > header nav p {
+          margin: 0 auto;
+          max-width: 400px; }
+        body > header nav ul {
+          text-align: left;
+          padding: 0;
+          margin: 2em auto 0;
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto; } }
 
 body.post > header {
   padding: 1.2em 4em; }
