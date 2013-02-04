@@ -1,0 +1,71 @@
+@import 'normalize';
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+$bg-color: #55605a;
+html {
+  @include box-shadow(inset 0 0 40px darken($bg-color, 20%));
+  background: $bg-color url('/images/experiments/countdown/bg-pattern.png');
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+body {
+  font-family: "vinyl",sans-serif;
+  padding: 1em;
+  color: #ddd8dc;
+  display: table-cell;
+  vertical-align: middle;
+
+  > section {
+    @include outer-container();
+  }
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    font-size: 4.5em;
+    color: darken($bg-color, 15%);
+    margin-top: 0;
+    text-shadow: 0 1px 0 lighten($bg-color, 10%);
+    -webkit-mask-image: url('/images/experiments/countdown/text-mask.png');
+  }
+
+  ol {
+    list-style: none;
+    padding-left: 0;
+    border: 1px solid darken($bg-color, 10%);
+    @include box-shadow(0 0 0 1px lighten($bg-color, 4%));
+    background: rgba(darken($bg-color, 15%), .1);
+    padding: 1em;
+    @include row();
+
+    li {
+      @include span-columns(3);
+      padding: 1em 1em .5em;
+      border: 1px solid darken($bg-color, 20%);
+      background: rgba(darken($bg-color, 15%), .4);
+      @include box-shadow(inset 0 0 20px darken($bg-color, 15%), 0 1px 0 lighten($bg-color, 5%));
+
+      h2 {
+        text-transform: uppercase;
+        font-family: "presicav",sans-serif;
+        font-weight: normal;
+        font-size: 1.2em;
+        text-shadow: 0 -1px 0 darken($bg-color, 20%);
+        color: #dfc5a6;
+        margin: 0 0 .5em .5em;
+        -webkit-mask-image: url('/images/experiments/countdown/text-mask.png');
+      }
+
+      p {
+        font-size: 200px;
+        line-height: .85em;
+        margin: 0;
+        -webkit-mask-image: url('/images/experiments/countdown/text-mask.png');
+      }
+    }
+  }
+}
