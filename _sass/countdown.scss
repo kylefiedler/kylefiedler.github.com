@@ -31,6 +31,10 @@ body {
     margin-top: 0;
     text-shadow: 0 1px 0 lighten($bg-color, 10%);
     -webkit-mask-image: url('/images/experiments/countdown/text-mask.png');
+
+    @include media(max-width 500px){
+      font-size: 3em;
+    };
   }
 
   ol {
@@ -48,6 +52,19 @@ body {
       border: 1px solid darken($bg-color, 20%);
       background: rgba(darken($bg-color, 15%), .4);
       @include box-shadow(inset 0 0 20px darken($bg-color, 15%), 0 1px 0 lighten($bg-color, 5%));
+
+      @include media(max-width 900px, 6){
+        @include span-columns(3);
+        margin-bottom: 2em;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      };
+
+      @include media(max-width 500px){
+        width: 100%;
+      };
 
       h2 {
         text-transform: uppercase;

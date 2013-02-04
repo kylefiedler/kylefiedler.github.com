@@ -350,6 +350,9 @@ body {
     margin-top: 0;
     text-shadow: 0 1px 0 #6d7b73;
     -webkit-mask-image: url("/images/experiments/countdown/text-mask.png"); }
+    @media screen and (max-width: 500px) {
+      body h1 {
+        font-size: 3em; } }
   body ol {
     list-style: none;
     padding-left: 0;
@@ -377,6 +380,20 @@ body {
       box-shadow: inset 0 0 20px #313734, 0 1px 0 #616e67; }
       body ol li:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 900px) {
+        body ol li {
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 47.58542%;
+          margin-bottom: 2em; }
+          body ol li:last-child {
+            margin-right: 0; }
+          body ol li:nth-child(2n) {
+            margin-right: 0; } }
+      @media screen and (max-width: 500px) {
+        body ol li {
+          width: 100%; } }
       body ol li h2 {
         text-transform: uppercase;
         font-family: "presicav",sans-serif;
