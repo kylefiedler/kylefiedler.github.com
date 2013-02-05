@@ -647,8 +647,14 @@ body > section section.writing > ol > li.quote blockquote, body.post section.quo
     margin-right: 0; }
 body > section section.writing > ol > li.quote cite + p, body.post section.quote.post-content cite + p {
   margin-top: 1.6em; }
+body > section section.writing > ol > li.photo h1, body.post section.photo.post-content h1 {
+  display: none; }
 body > section section.writing > ol > li.photo img, body.post section.photo.post-content img {
   margin-bottom: 1.6em; }
+body > section section.writing > ol > li.photo a.img, body.post section.photo.post-content a.img {
+  border-bottom: 0; }
+  body > section section.writing > ol > li.photo a.img:hover, body.post section.photo.post-content a.img:hover {
+    background: none; }
 body > section section.writing > ol > li.text h2, body.post section.text.post-content h2 {
   margin-bottom: 1.6em; }
 body > section section.writing > ol > li.text ul, body.post section.text.post-content ul {

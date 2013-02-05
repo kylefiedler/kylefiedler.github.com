@@ -103,8 +103,20 @@
   }
 
   &.photo {
+    h1 {
+      display: none;
+    }
+
     img {
       margin-bottom: lh();
+    }
+
+    a.img {
+      border-bottom: 0;
+
+      &:hover {
+        background: none;
+      }
     }
 
     aside {
