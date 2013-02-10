@@ -74,7 +74,7 @@ photosets = {};
         </ul>
 
         <ul class="social">
-          <li><a class="rss" href="{RSS}" title="{lang:RSS feed}">{lang:RSS}</a></li>
+          <li class="rss"><a href="{RSS}" title="{lang:RSS feed}">{lang:RSS}</a></li>
           {block:IfShowSocialIconsWidget}
             {block:IfTwitterUsername}<li class="twitter"><a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter">Twitter</a></li>{/block:IfTwitterUsername}
             {block:IfFacebookUsername}<li class="facebook"><a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile">Facebook</a></li>{/block:IfFacebookUsername}
@@ -96,7 +96,7 @@ photosets = {};
         {block:Text}
           <header>
             {block:Title}<h1>{Title}</h1>{/block:Title}
-            {block:Date}<p><span>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>{/block:Date}
+            {block:Date}<p class="date"><span>Posted </span><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>{/block:Date}
           </header>
 
           <section class="post">
@@ -105,13 +105,13 @@ photosets = {};
         {/block:Text}
 
         {block:Photo}
-          <p><span>Posted </span><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <p class="date"><span>Posted </span><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
           {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
           {block:Caption}<div>{Caption}</div>{/block:Caption}
         {/block:Photo}
 
         {block:Photoset}
-          <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
           <section class="photo-slideshow" data-layout="{PhotosetLayout}">
             {block:Photos}
             <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}" {block:Caption}data-caption="{Caption}"{/block:Caption}>
@@ -122,7 +122,7 @@ photosets = {};
         {/block:Photoset}
 
         {block:Quote}
-          <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
 
           <blockquote class="quote-text">{Quote}</blockquote>
           {block:Source}<div>{Source}</div>{/block:Source}
@@ -131,7 +131,7 @@ photosets = {};
         {block:Link}
           <header>
             <h1><a href="{URL}" {Target}>{Name}</a></h1>
-            <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
           </header>
           {block:Description}{Description}{/block:Description}
         {/block:Link}
@@ -157,7 +157,7 @@ photosets = {};
         {/block:Chat}
 
         {block:Video}
-          <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
           <div class="media loading">
             {Video-500}
           </div>
@@ -166,7 +166,7 @@ photosets = {};
 
         {block:Audio}
           {block:AudioPlayer}
-            <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+            <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
 
             <div class="player-container">
               <div class="album-art">{block:AlbumArt}<img class="album-art" src="{AlbumArtUrl}" alt=""/>{/block:AlbumArt}</div>

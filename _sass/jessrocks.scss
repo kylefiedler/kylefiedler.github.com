@@ -85,7 +85,6 @@ $body-font: "omnes-pro", $helvetica, sans-serif;
 %small-text {
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: right;
   color: #c2c2bf;
   font-size: em(13);
   margin: 0;
@@ -208,11 +207,19 @@ header.main {
               @extend .icon-rss;
             }
 
-            &.pintrest a {
+            &.pinterest a {
               @extend .icon-pinterest;
             }
 
             &.facebook a {
+              @extend .icon-facebook-squared;
+            }
+
+            &.vimeo a {
+              @extend .icon-facebook-squared;
+            }
+
+            &.youtube a {
               @extend .icon-facebook-squared;
             }
           }
@@ -233,6 +240,11 @@ section.main {
     article {
       @extend %bottom-border;
 
+      p.date {
+        @extend %small-text;
+        text-align: right;
+      }
+
       header {
         @include row();
 
@@ -244,9 +256,8 @@ section.main {
           color: darken($pink, 18%);
         }
 
-        p {
+        p.date {
           @include span-columns(2 8);
-          @extend %small-text;
 
           span {
             display: block;
@@ -280,6 +291,25 @@ section.main {
 
             &:last-child:after {
               content: "";
+            }
+
+            section.share {
+              position: relative;
+
+              span.toggle {
+                @extend %small-text;
+              }
+
+              div.share-links {
+                display: none;
+              }
+
+              &:hover {
+                div.share-links {
+                  display: block;
+                  @include position(absolute,  0 0 0 0);
+                }
+              }
             }
           }
         }

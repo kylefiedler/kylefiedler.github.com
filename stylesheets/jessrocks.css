@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pintrest a:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
+.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -353,10 +353,10 @@ table {
 .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before {
   content: '\f309'; }
 
-.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before {
+.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before {
   content: '\f30e'; }
 
-.icon-pinterest:before, header.main div.wrapper nav ul.social li.pintrest a:before {
+.icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before {
   content: '\f312'; }
 
 .icon-instagram:before, section.main aside.sidebar section.instagram h2:before {
@@ -365,10 +365,9 @@ table {
 .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   content: '📖'; }
 
-section.main section.articles article header p, section.main section.articles article footer ul li a, section.main aside.sidebar section > span {
+section.main section.articles article p.date, section.main section.articles article footer ul li a, section.main section.articles article footer ul li section.share span.toggle, section.main aside.sidebar section > span {
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-align: right;
   color: #c2c2bf;
   font-size: 0.8125em;
   margin: 0; }
@@ -522,6 +521,8 @@ section.main {
     padding-right: 2.58449%; }
     section.main section.articles:last-child {
       margin-right: 0; }
+    section.main section.articles article p.date {
+      text-align: right; }
     section.main section.articles article header {
       *zoom: 1;
       display: block; }
@@ -541,14 +542,14 @@ section.main {
         color: #ab3580; }
         section.main section.articles article header h1:last-child {
           margin-right: 0; }
-      section.main section.articles article header p {
+      section.main section.articles article header p.date {
         display: block;
         float: left;
         margin-right: 3.92749%;
         width: 22.05438%; }
-        section.main section.articles article header p:last-child {
+        section.main section.articles article header p.date:last-child {
           margin-right: 0; }
-        section.main section.articles article header p span {
+        section.main section.articles article header p.date span {
           display: block; }
     section.main section.articles article img {
       max-width: 100%; }
@@ -573,6 +574,13 @@ section.main {
           color: #f8e8f2; }
         section.main section.articles article footer ul li:last-child:after {
           content: ""; }
+        section.main section.articles article footer ul li section.share {
+          position: relative; }
+          section.main section.articles article footer ul li section.share div.share-links {
+            display: none; }
+          section.main section.articles article footer ul li section.share:hover div.share-links {
+            display: block;
+            position: absolute; }
   section.main aside.sidebar {
     display: block;
     float: left;
