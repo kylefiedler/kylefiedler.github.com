@@ -555,7 +555,7 @@ section.main {
     section.main section.articles article img {
       max-width: 100%; }
     section.main section.articles article blockquote {
-      border-right: 3px solid #f5e0ed; }
+      border-left: 3px solid #f5e0ed; }
     section.main section.articles article cite:before {
       content: "—";
       display: inline-block;
@@ -575,6 +575,9 @@ section.main {
         zoom: 1;
         *display: inline;
         *vertical-align: auto; }
+        section.main section.articles article footer ul.meta-list li ul {
+          list-style: none;
+          padding: 0; }
         section.main section.articles article footer ul.meta-list li:after {
           content: "|";
           display: inline-block;
@@ -593,7 +596,12 @@ section.main {
         display: none; }
       section.main section.articles article footer section.share:hover div.share-links {
         display: block;
-        position: absolute; }
+        position: absolute;
+        background: #d16bac;
+        padding: 1em; }
+        section.main section.articles article footer section.share:hover div.share-links a {
+          color: #fff;
+          display: block; }
   section.main aside.sidebar {
     display: block;
     float: left;
@@ -623,6 +631,11 @@ section.main {
       margin: 0; }
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
+    section.main aside.sidebar section.twitter > a {
+      margin-bottom: 1em;
+      color: #2f0e23; }
+      section.main aside.sidebar section.twitter > a:hover {
+        color: #d16bac; }
     section.main aside.sidebar section#search input {
       border-radius: 3px;
       border: 1px solid #d16bac;
@@ -632,14 +645,17 @@ section.main {
       box-sizing: border-box;
       width: 100%; }
   section.main ul.chat {
-    list-style: none; }
+    list-style: none;
+    padding-left: 0; }
     section.main ul.chat li {
-      border-bottom: 1px solid #f5e0ed; }
+      border-bottom: 1px solid #f5e0ed;
+      padding: 0.5em 0; }
     section.main ul.chat span.speaker {
       font-weight: bold; }
   section.main footer.main {
     *zoom: 1;
     display: block;
+    clear: both;
     margin-top: 2em;
     padding-top: 2em;
     border-top: 1px solid #f5e0ed; }

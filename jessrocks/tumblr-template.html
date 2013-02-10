@@ -311,7 +311,7 @@ photosets = {};
                 '<a href="http://twitter.com/{TwitterUsername}/status/' +
                 (data[i].id_str ? data[i].id_str : data[i].id) +
                 '"><div class="content">' + data[i].text +
-                '</div></a>';
+                '</div></a>' + data[i].date;
             }
             document.getElementById("twitter").style.display = 'block';
           }

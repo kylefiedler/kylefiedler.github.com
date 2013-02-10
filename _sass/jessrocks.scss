@@ -271,7 +271,7 @@ section.main {
       }
 
       blockquote {
-        border-right: 3px solid lighten($pink, 30%);
+        border-left: 3px solid lighten($pink, 30%);
       }
 
       cite {
@@ -291,6 +291,11 @@ section.main {
 
           li {
             @include inline-block;
+
+            ul {
+              list-style: none;
+              padding: 0;
+            }
 
             a {
               @extend %small-text;
@@ -325,6 +330,13 @@ section.main {
             div.share-links {
               display: block;
               @include position(absolute,  0 0 0 0);
+              background: $pink;
+              padding: 1em;
+
+              a {
+                color: #fff;
+                display: block;
+              }
 
               a.twitter {
                 @extend .icon-twitter;
@@ -384,6 +396,15 @@ section.main {
         h2 {
           @extend .icon-twitter;
         }
+
+        > a {
+          margin-bottom: 1em;
+          color: darken($pink, 50%);
+
+          &:hover {
+            color: $pink;
+          }
+        }
       }
 
       &.reading {
@@ -412,10 +433,13 @@ section.main {
 
   ul.chat {
     list-style: none;
+    padding-left: 0;
 
     li {
       border-bottom: 1px solid lighten($pink, 30%);
+      padding: .5em 0;
     }
+
     span.speaker {
       font-weight: bold;
     }
@@ -423,6 +447,7 @@ section.main {
 
   footer.main {
     @include row();
+    clear: both;
     margin-top: 2em;
     padding-top: 2em;
     border-top: 1px solid lighten($pink, 30%);
