@@ -29,6 +29,21 @@ $gutter: 26px;
   margin-left: 0.3em;
 }
 
+.icon-youtube:before {
+  @extend %icon;
+  content: '\55';
+} /* 'U' */
+
+.icon-vimeo:before {
+  @extend %icon;
+  content: '\f306';
+} /* '' */
+
+.icon-gplus:before {
+  @extend %icon;
+  content: '\f30f';
+} /* '' */
+
 .icon-heart:before {
   @extend %icon;
   content: '\2665';
@@ -216,11 +231,11 @@ header.main {
             }
 
             &.vimeo a {
-              @extend .icon-facebook-squared;
+              @extend .icon-vimeo;
             }
 
             &.youtube a {
-              @extend .icon-facebook-squared;
+              @extend .icon-youtube;
             }
           }
         }
@@ -296,7 +311,7 @@ section.main {
         border-top: 1px solid lighten($pink, 30%);
 
         li {
-          border-bottom: 1px solid lighten($pink, 30%);
+          border-bottom: 1px solid lighten($pink, 38%);
           padding: .5em 0;
         }
 
@@ -373,7 +388,7 @@ section.main {
               }
 
               a.google {
-                @extend .icon-rss;
+                @extend .icon-gplus;
               }
 
               a.pinterest {
@@ -422,7 +437,7 @@ section.main {
         }
       }
 
-      &.twitter {
+      &#twitter {
         h2 {
           @extend .icon-twitter;
         }

@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, section.main section.articles article footer section.share:hover div.share-links a.google:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
+.icon-youtube:before, header.main div.wrapper nav ul.social li.youtube a:before, .icon-vimeo:before, header.main div.wrapper nav ul.social li.vimeo a:before, .icon-gplus:before, section.main section.articles article footer section.share:hover div.share-links a.google:before, .icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -338,6 +338,18 @@ table {
   line-height: 1em;
   margin-left: 0.3em; }
 
+.icon-youtube:before, header.main div.wrapper nav ul.social li.youtube a:before {
+  content: '\55'; }
+
+/* 'U' */
+.icon-vimeo:before, header.main div.wrapper nav ul.social li.vimeo a:before {
+  content: '\f306'; }
+
+/* '' */
+.icon-gplus:before, section.main section.articles article footer section.share:hover div.share-links a.google:before {
+  content: '\f30f'; }
+
+/* '' */
 .icon-heart:before {
   content: '\2665'; }
 
@@ -347,13 +359,13 @@ table {
 .icon-comment:before {
   content: '\e718'; }
 
-.icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, section.main section.articles article footer section.share:hover div.share-links a.google:before {
+.icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before {
   content: '\e73a'; }
 
-.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section.twitter h2:before {
+.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before {
   content: '\f309'; }
 
-.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before {
+.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before {
   content: '\f30e'; }
 
 .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before {
@@ -576,7 +588,7 @@ section.main {
         padding-left: 0;
         border-top: 1px solid #f5e0ed; }
         section.main section.articles article ul.chat li {
-          border-bottom: 1px solid #f5e0ed;
+          border-bottom: 1px solid white;
           padding: 0.5em 0; }
         section.main section.articles article ul.chat span.speaker {
           font-weight: bold; }
@@ -661,10 +673,10 @@ section.main {
       margin: 0; }
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
-    section.main aside.sidebar section.twitter div#tweets a {
+    section.main aside.sidebar section#twitter div#tweets a {
       margin-bottom: 1em;
       color: #2f0e23; }
-      section.main aside.sidebar section.twitter div#tweets a:hover {
+      section.main aside.sidebar section#twitter div#tweets a:hover {
         color: #d16bac; }
     section.main aside.sidebar section#search input {
       border-radius: 3px;
