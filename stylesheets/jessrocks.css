@@ -611,10 +611,29 @@ section.main {
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
   section.main footer.main {
-    clear: both; }
+    *zoom: 1;
+    display: block; }
+    section.main footer.main:before, section.main footer.main:after {
+      content: " ";
+      display: table; }
+    section.main footer.main:after {
+      clear: both; }
+    section.main footer.main p {
+      display: block;
+      float: left;
+      margin-right: 2.58449%;
+      width: 48.70775%; }
+      section.main footer.main p:last-child {
+        margin-right: 0; }
     section.main footer.main ul {
-      float: right;
-      list-style: none; }
+      display: block;
+      float: left;
+      margin-right: 2.58449%;
+      width: 48.70775%;
+      list-style: none;
+      text-align: right; }
+      section.main footer.main ul:last-child {
+        margin-right: 0; }
       section.main footer.main ul li {
         display: inline-block;
         vertical-align: baseline;

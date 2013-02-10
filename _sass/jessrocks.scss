@@ -369,11 +369,16 @@ section.main {
   }
 
   footer.main {
-    clear: both;
+    @include row();
+
+    p {
+      @include span-columns(6);
+    }
 
     ul {
-      float: right;
+      @include span-columns(6);
       list-style: none;
+      text-align: right;
 
       li {
         @include inline-block;
