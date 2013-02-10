@@ -292,24 +292,24 @@ section.main {
             &:last-child:after {
               content: "";
             }
+          }
+        }
 
-            section.share {
-              position: relative;
+        section.share {
+          position: relative;
 
-              span.toggle {
-                @extend %small-text;
-              }
+          span.toggle {
+            @extend %small-text;
+          }
 
-              div.share-links {
-                display: none;
-              }
+          div.share-links {
+            display: none;
+          }
 
-              &:hover {
-                div.share-links {
-                  display: block;
-                  @include position(absolute,  0 0 0 0);
-                }
-              }
+          &:hover {
+            div.share-links {
+              display: block;
+              @include position(absolute,  0 0 0 0);
             }
           }
         }

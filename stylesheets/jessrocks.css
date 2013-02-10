@@ -365,7 +365,7 @@ table {
 .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   content: '📖'; }
 
-section.main section.articles article p.date, section.main section.articles article footer ul li a, section.main section.articles article footer ul li section.share span.toggle, section.main aside.sidebar section > span {
+section.main section.articles article p.date, section.main section.articles article footer ul li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #c2c2bf;
@@ -574,13 +574,13 @@ section.main {
           color: #f8e8f2; }
         section.main section.articles article footer ul li:last-child:after {
           content: ""; }
-        section.main section.articles article footer ul li section.share {
-          position: relative; }
-          section.main section.articles article footer ul li section.share div.share-links {
-            display: none; }
-          section.main section.articles article footer ul li section.share:hover div.share-links {
-            display: block;
-            position: absolute; }
+    section.main section.articles article footer section.share {
+      position: relative; }
+      section.main section.articles article footer section.share div.share-links {
+        display: none; }
+      section.main section.articles article footer section.share:hover div.share-links {
+        display: block;
+        position: absolute; }
   section.main aside.sidebar {
     display: block;
     float: left;
