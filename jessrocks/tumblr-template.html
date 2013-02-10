@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/stylesheets/jessrocks.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="http://kylefiedler.com/stylesheets/jessrocks.css" type="text/css" media="all" />
 
     <title>{Title}{block:TagPage} &bull; Posts Tagged &lsquo;{Tag}&rsquo;{/block:TagPage}{block:PostSummary} &bull; {PostSummary}{/block:PostSummary}</title>
     {block:Description}
@@ -282,7 +282,7 @@ photosets = {};
       </section>
 
       <aside class="sidebar">
-        <section id="blog-info">
+        <section class="bio">
           <h2>{lang:About}</h2>
           <img class="portrait" src="{PortraitURL-128}" alt="Avatar"/>
           <p>{Description}</p>
@@ -318,7 +318,7 @@ photosets = {};
         {/block:IfShowLikes}
       </aside>
 
-      <footer>
+      <footer class="main">
         {block:IfCopyrightText}<p class="copyright">{text:Copyright Text}.</p>{/block:IfCopyrightText}
 
         <ul id="footer-links">

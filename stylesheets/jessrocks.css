@@ -549,6 +549,8 @@ section.main {
           margin-right: 0; }
         section.main section.articles article header p span {
           display: block; }
+    section.main section.articles article img {
+      max-width: 100%; }
     section.main section.articles article footer ul {
       list-style: none;
       padding: 0;
@@ -575,7 +577,8 @@ section.main {
     float: left;
     margin-right: 2.58449%;
     width: 31.61034%;
-    color: rgba(47, 14, 35, 0.6); }
+    color: rgba(47, 14, 35, 0.6);
+    margin-right: 0; }
     section.main aside.sidebar:last-child {
       margin-right: 0; }
     section.main aside.sidebar h2 {
@@ -599,3 +602,5 @@ section.main {
       margin: 0; }
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
+  section.main footer.main {
+    clear: both; }

@@ -253,6 +253,10 @@ section.main {
         }
       }
 
+      img {
+        max-width: 100%;
+      }
+
       footer {
         ul {
           list-style: none;
@@ -285,6 +289,7 @@ section.main {
   aside.sidebar {
     @include span-columns(4);
     color: rgba(darken($pink, 50%), .6);
+    margin-right: 0;
 
     h2 {
       font-size: 1em;
@@ -334,5 +339,9 @@ section.main {
         }
       }
     }
+  }
+
+  footer.main {
+    clear: both;
   }
 }
