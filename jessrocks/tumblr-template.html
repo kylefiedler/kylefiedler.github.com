@@ -140,7 +140,7 @@ photosets = {};
           {block:Title}
             <header>
               <h1>{Title}</h1>
-              <p><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+              <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
             </header>
           {/block:Title}
 
@@ -206,7 +206,6 @@ photosets = {};
           <ul class="meta-list">
             {block:NoteCount}<li class="notes"><a href="{Permalink}#notes">{NoteCount}</a></li>{/block:NoteCount}
             {block:IfDisqusShortname}<li class="comments hidden"><a id="dsq-{PostID}" href="{Permalink}#disqus_thread">Comments</a></li>{/block:IfDisqusShortname}
-
             {block:HasTags}
             <li class="tags">
               <ul class="tag-list">
@@ -311,7 +310,7 @@ photosets = {};
                 '<a href="http://twitter.com/{TwitterUsername}/status/' +
                 (data[i].id_str ? data[i].id_str : data[i].id) +
                 '"><div class="content">' + data[i].text +
-                '</div></a>' + data[i].date;
+                '</div></a>';
             }
             document.getElementById("twitter").style.display = 'block';
           }

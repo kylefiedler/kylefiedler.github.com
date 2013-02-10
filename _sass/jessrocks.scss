@@ -239,6 +239,11 @@ section.main {
 
     article {
       @extend %bottom-border;
+      padding-bottom: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       p.date {
         @extend %small-text;
@@ -422,12 +427,14 @@ section.main {
           @extend .icon-twitter;
         }
 
-        > a {
-          margin-bottom: 1em;
-          color: darken($pink, 50%);
+        div#tweets {
+          a {
+            margin-bottom: 1em;
+            color: darken($pink, 50%);
 
-          &:hover {
-            color: $pink;
+            &:hover {
+              color: $pink;
+            }
           }
         }
       }
@@ -447,7 +454,7 @@ section.main {
       &#search {
         input {
           border-radius: 3px;
-          border: 1px solid $pink;
+          border: 1px solid lighten($pink, 20%);
           padding: .3em .6em;
           @include box-sizing(border-box);
           width: 100%;
