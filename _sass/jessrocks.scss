@@ -446,7 +446,7 @@ section.main {
           a {
             margin-bottom: 1em;
             display: block;
-            color: darken($pink, 50%);
+            color: rgba(darken($pink, 50%), .6);
 
             &:hover {
               color: $pink;
