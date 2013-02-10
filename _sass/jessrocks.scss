@@ -445,6 +445,7 @@ section.main {
         div#tweets {
           a {
             margin-bottom: 1em;
+            display: block;
             color: darken($pink, 50%);
 
             &:hover {

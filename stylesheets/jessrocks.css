@@ -675,6 +675,7 @@ section.main {
         margin-right: 0; }
     section.main aside.sidebar section#twitter div#tweets a {
       margin-bottom: 1em;
+      display: block;
       color: #2f0e23; }
       section.main aside.sidebar section#twitter div#tweets a:hover {
         color: #d16bac; }
