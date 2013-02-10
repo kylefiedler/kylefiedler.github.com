@@ -296,6 +296,28 @@ photosets = {};
           </form>
         </section>
 
+        {block:Twitter}
+        <section class="twitter" style="display:none;">
+          <h2><a href="http://twitter.com/{TwitterUsername}">Latest Tweets</a></h2>
+
+          <div id="tweets"></div>
+        </section>
+
+        <script type="text/javascript">
+          function recent_tweets(data) {
+            for (i=0; i<data.length; i++) {
+              document.getElementById("tweets").innerHTML =
+                document.getElementById("tweets").innerHTML +
+                '<a href="http://twitter.com/{TwitterUsername}/status/' +
+                (data[i].id_str ? data[i].id_str : data[i].id) +
+                '"><div class="content">' + data[i].text +
+                '</div></a>';
+            }
+            document.getElementById("twitter").style.display = 'block';
+          }
+        </script>
+        {/block:Twitter}
+
         {block:IfShowBlogsIFollow}
           {block:Following}
           <section class="followed">
@@ -330,21 +352,22 @@ photosets = {};
       </footer>
     </section>
 
-    <!-- Footer Scripts -->
+    {block:Twitter}
+    <script type="text/javascript" src="/tweets.js"></script>
+    {/block:Twitter}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="http://static.tumblr.com/hugxd2w/s4om61ic8/jquery-1.7.2.min.js"><\/script>')</script>
-      <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
-      {block:IfGoogleAnalyticsWebPropertyID}
-      <script type="text/javascript">
-        var _gaq=[["_setAccount","{text:Google Analytics Web Property ID}"],["_trackPageview"]];
-        (function(d,t){
-         var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
-         g.async=1;
-         g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-         s.parentNode.insertBefore(g,s)
-         }(document,"script"));
-</script>
-{/block:IfGoogleAnalyticsWebPropertyID}
-</body>
-
+    <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+    {block:IfGoogleAnalyticsWebPropertyID}
+    <script type="text/javascript">
+      var _gaq=[["_setAccount","{text:Google Analytics Web Property ID}"],["_trackPageview"]];
+      (function(d,t){
+       var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
+       g.async=1;
+       g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+       s.parentNode.insertBefore(g,s)
+       }(document,"script"));
+    </script>
+    {/block:IfGoogleAnalyticsWebPropertyID}
+  </body>
 </html>

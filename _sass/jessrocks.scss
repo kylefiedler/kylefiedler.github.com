@@ -355,8 +355,8 @@ section.main {
     margin-right: 0;
 
     h2 {
-      font-size: 1em;
-      margin: .5em 0;
+      font-size: 1.2em;
+      margin: 0 0 1em;
       color: darken($pink, 20%);
     }
 
@@ -397,15 +397,15 @@ section.main {
           @extend .icon-instagram;
         }
       }
-    }
 
-    &#search {
-      input {
-        border-radius: 3px;
-        border: 1px solid $pink;
-        padding: .3em .6em;
-        @include box-sizing(border-box);
-        width: 100%;
+      &#search {
+        input {
+          border-radius: 3px;
+          border: 1px solid $pink;
+          padding: .3em .6em;
+          @include box-sizing(border-box);
+          width: 100%;
+        }
       }
     }
   }

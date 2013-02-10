@@ -604,8 +604,8 @@ section.main {
     section.main aside.sidebar:last-child {
       margin-right: 0; }
     section.main aside.sidebar h2 {
-      font-size: 1em;
-      margin: 0.5em 0;
+      font-size: 1.2em;
+      margin: 0 0 1em;
       color: #a3337a; }
     section.main aside.sidebar section.bio img {
       display: block;
@@ -623,7 +623,7 @@ section.main {
       margin: 0; }
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
-    section.main aside.sidebar#search input {
+    section.main aside.sidebar section#search input {
       border-radius: 3px;
       border: 1px solid #d16bac;
       padding: 0.3em 0.6em;
