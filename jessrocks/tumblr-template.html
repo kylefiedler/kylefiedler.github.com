@@ -122,26 +122,26 @@ photosets = {};
         {/block:Photoset}
 
         {block:Quote}
-        <header>
           <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
-          <blockquote class="quote-text">{Quote}</blockquote>
-        </header>
 
-        {block:Source}<div>{Source}</div>{/block:Source}
+          <blockquote class="quote-text">{Quote}</blockquote>
+          {block:Source}<div>{Source}</div>{/block:Source}
         {/block:Quote}
 
         {block:Link}
           <header>
             <h1><a href="{URL}" {Target}>{Name}</a></h1>
-            <p><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+            <p>Posted <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
           </header>
           {block:Description}{Description}{/block:Description}
         {/block:Link}
 
         {block:Chat}
           {block:Title}
-            <h1>{Title}</h1>
-            <p><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+            <header>
+              <h1>{Title}</h1>
+              <p><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+            </header>
           {/block:Title}
 
           <ul class="chat">

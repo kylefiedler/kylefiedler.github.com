@@ -373,16 +373,16 @@ section.main section.articles article header p, section.main section.articles ar
   font-size: 0.8125em;
   margin: 0; }
 
-section.main section.articles article, section.main aside.sidebar section.bio, section.main aside.sidebar section.twitter, section.main aside.sidebar section.reading {
+section.main section.articles article, section.main aside.sidebar section {
   *zoom: 1;
   display: block;
   border-bottom: 1px solid #f8e8f2;
   margin-bottom: 2em;
   padding-bottom: 2em; }
-  section.main section.articles article:before, section.main aside.sidebar section.bio:before, section.main aside.sidebar section.twitter:before, section.main aside.sidebar section.reading:before, section.main section.articles article:after, section.main aside.sidebar section.bio:after, section.main aside.sidebar section.twitter:after, section.main aside.sidebar section.reading:after {
+  section.main section.articles article:before, section.main aside.sidebar section:before, section.main section.articles article:after, section.main aside.sidebar section:after {
     content: " ";
     display: table; }
-  section.main section.articles article:after, section.main aside.sidebar section.bio:after, section.main aside.sidebar section.twitter:after, section.main aside.sidebar section.reading:after {
+  section.main section.articles article:after, section.main aside.sidebar section:after {
     clear: both; }
 
 body {
@@ -591,7 +591,6 @@ section.main {
       float: left;
       margin-right: 6.43564%;
       width: 36.13861%;
-      height: 2.8125em;
       background-color: #333; }
       section.main aside.sidebar section.bio img:last-child {
         margin-right: 0; }
@@ -605,3 +604,12 @@ section.main {
         margin-right: 0; }
   section.main footer.main {
     clear: both; }
+    section.main footer.main ul {
+      float: right;
+      list-style: none; }
+      section.main footer.main ul li {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto; }

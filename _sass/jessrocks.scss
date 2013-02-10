@@ -51,7 +51,7 @@ $gutter: 26px;
 
 .icon-twitter:before {
   @extend %icon;
-  content: '\f309'; 
+  content: '\f309';
 } // ''
 
 .icon-facebook-squared:before {
@@ -299,16 +299,16 @@ section.main {
     }
 
     section {
+      @extend %bottom-border;
+
       > span {
         @extend %small-text;
       }
 
       &.bio {
-        @extend %bottom-border;
 
         img {
           @include span-columns(2 5);
-          height: em(45);
           background-color: #333;
         }
 
@@ -319,16 +319,12 @@ section.main {
       }
 
       &.twitter {
-        @extend %bottom-border;
-
         h2 {
           @extend .icon-twitter;
         }
       }
 
       &.reading {
-        @extend %bottom-border;
-
         h2 {
           @extend .icon-book-open;
         }
@@ -344,5 +340,14 @@ section.main {
 
   footer.main {
     clear: both;
+
+    ul {
+      float: right;
+      list-style: none;
+
+      li {
+        @include inline-block;
+      }
+    }
   }
 }
