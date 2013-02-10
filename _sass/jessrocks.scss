@@ -87,7 +87,7 @@ $body-font: "omnes-pro", $helvetica, sans-serif;
   letter-spacing: 1px;
   color: #c2c2bf;
   font-size: em(13);
-  margin: 0;
+  margin: 0 0 1em;
 }
 
 %bottom-border {
@@ -258,6 +258,7 @@ section.main {
 
         p.date {
           @include span-columns(2 8);
+          margin-bottom: 0;
 
           span {
             display: block;
@@ -269,11 +270,24 @@ section.main {
         max-width: 100%;
       }
 
+      blockquote {
+        border-right: 3px solid lighten($pink, 30%);
+      }
+
+      cite {
+        &:before {
+          content: "—";
+          @include inline-block;
+          margin-right: .5em;
+        }
+      }
+
       footer {
-        ul {
+        ul.meta-list {
           list-style: none;
           padding: 0;
           margin: 0;
+          float: left;
 
           li {
             @include inline-block;
@@ -297,6 +311,7 @@ section.main {
 
         section.share {
           position: relative;
+          float: right;
 
           span.toggle {
             @extend %small-text;
@@ -310,6 +325,23 @@ section.main {
             div.share-links {
               display: block;
               @include position(absolute,  0 0 0 0);
+
+              a.twitter {
+                @extend .icon-twitter;
+              }
+
+              a.google {
+                @extend .icon-rss;
+              }
+
+              a.pinterest {
+                @extend .icon-pinterest;
+              }
+
+              a.facebook {
+                @extend .icon-facebook-squared;
+              }
+
             }
           }
         }
@@ -324,7 +356,7 @@ section.main {
 
     h2 {
       font-size: 1em;
-      margin: 0;
+      margin: .5em 0;
       color: darken($pink, 20%);
     }
 
@@ -366,10 +398,34 @@ section.main {
         }
       }
     }
+
+    &#search {
+      input {
+        border-radius: 3px;
+        border: 1px solid $pink;
+        padding: .3em .6em;
+        @include box-sizing(border-box);
+        width: 100%;
+      }
+    }
+  }
+
+  ul.chat {
+    list-style: none;
+
+    li {
+      border-bottom: 1px solid lighten($pink, 30%);
+    }
+    span.speaker {
+      font-weight: bold;
+    }
   }
 
   footer.main {
     @include row();
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid lighten($pink, 30%);
 
     p {
       @include span-columns(6);
@@ -382,6 +438,7 @@ section.main {
 
       li {
         @include inline-block;
+        margin-right: 1em;
       }
     }
   }

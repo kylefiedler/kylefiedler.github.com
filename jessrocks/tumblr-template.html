@@ -125,7 +125,7 @@ photosets = {};
           <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
 
           <blockquote class="quote-text">{Quote}</blockquote>
-          {block:Source}<div>{Source}</div>{/block:Source}
+          {block:Source}<cite>{Source}</cite>{/block:Source}
         {/block:Quote}
 
         {block:Link}
@@ -221,7 +221,7 @@ photosets = {};
           <section class="share">
             <span class="toggle">Share</span>
 
-            <div class="share-links"><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="share-twitter">Twitter</a><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}&t={Title}{/block:Title}" class="share-facebook">Facebook</a><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}&media=" class="share-pinterest">Pinterest</a><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}" class="share-google">Google+</a></div>
+            <div class="share-links"><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}&t={Title}{/block:Title}" class="facebook">Facebook</a><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}&media=" class="pinterest">Pinterest</a><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}" class="google">Google+</a></div>
           </section>
         </footer>
 

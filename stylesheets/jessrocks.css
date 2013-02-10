@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
+.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, section.main section.articles article footer section.share:hover div.share-links a.google:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -347,16 +347,16 @@ table {
 .icon-comment:before {
   content: '\e718'; }
 
-.icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before {
+.icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, section.main section.articles article footer section.share:hover div.share-links a.google:before {
   content: '\e73a'; }
 
-.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before {
+.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section.twitter h2:before {
   content: '\f309'; }
 
-.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before {
+.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, header.main div.wrapper nav ul.social li.vimeo a:before, header.main div.wrapper nav ul.social li.youtube a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before {
   content: '\f30e'; }
 
-.icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before {
+.icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before {
   content: '\f312'; }
 
 .icon-instagram:before, section.main aside.sidebar section.instagram h2:before {
@@ -365,12 +365,12 @@ table {
 .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   content: '📖'; }
 
-section.main section.articles article p.date, section.main section.articles article footer ul li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
+section.main section.articles article p.date, section.main section.articles article footer ul.meta-list li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #c2c2bf;
   font-size: 0.8125em;
-  margin: 0; }
+  margin: 0 0 1em; }
 
 section.main section.articles article, section.main aside.sidebar section {
   *zoom: 1;
@@ -546,24 +546,36 @@ section.main {
         display: block;
         float: left;
         margin-right: 3.92749%;
-        width: 22.05438%; }
+        width: 22.05438%;
+        margin-bottom: 0; }
         section.main section.articles article header p.date:last-child {
           margin-right: 0; }
         section.main section.articles article header p.date span {
           display: block; }
     section.main section.articles article img {
       max-width: 100%; }
-    section.main section.articles article footer ul {
+    section.main section.articles article blockquote {
+      border-right: 3px solid #f5e0ed; }
+    section.main section.articles article cite:before {
+      content: "—";
+      display: inline-block;
+      vertical-align: baseline;
+      zoom: 1;
+      *display: inline;
+      *vertical-align: auto;
+      margin-right: .5em; }
+    section.main section.articles article footer ul.meta-list {
       list-style: none;
       padding: 0;
-      margin: 0; }
-      section.main section.articles article footer ul li {
+      margin: 0;
+      float: left; }
+      section.main section.articles article footer ul.meta-list li {
         display: inline-block;
         vertical-align: baseline;
         zoom: 1;
         *display: inline;
         *vertical-align: auto; }
-        section.main section.articles article footer ul li:after {
+        section.main section.articles article footer ul.meta-list li:after {
           content: "|";
           display: inline-block;
           vertical-align: baseline;
@@ -572,10 +584,11 @@ section.main {
           *vertical-align: auto;
           padding: 0 0.5em;
           color: #f8e8f2; }
-        section.main section.articles article footer ul li:last-child:after {
+        section.main section.articles article footer ul.meta-list li:last-child:after {
           content: ""; }
     section.main section.articles article footer section.share {
-      position: relative; }
+      position: relative;
+      float: right; }
       section.main section.articles article footer section.share div.share-links {
         display: none; }
       section.main section.articles article footer section.share:hover div.share-links {
@@ -592,7 +605,7 @@ section.main {
       margin-right: 0; }
     section.main aside.sidebar h2 {
       font-size: 1em;
-      margin: 0;
+      margin: 0.5em 0;
       color: #a3337a; }
     section.main aside.sidebar section.bio img {
       display: block;
@@ -610,9 +623,26 @@ section.main {
       margin: 0; }
       section.main aside.sidebar section.bio p:last-child {
         margin-right: 0; }
+    section.main aside.sidebar#search input {
+      border-radius: 3px;
+      border: 1px solid #d16bac;
+      padding: 0.3em 0.6em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 100%; }
+  section.main ul.chat {
+    list-style: none; }
+    section.main ul.chat li {
+      border-bottom: 1px solid #f5e0ed; }
+    section.main ul.chat span.speaker {
+      font-weight: bold; }
   section.main footer.main {
     *zoom: 1;
-    display: block; }
+    display: block;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #f5e0ed; }
     section.main footer.main:before, section.main footer.main:after {
       content: " ";
       display: table; }
@@ -639,4 +669,5 @@ section.main {
         vertical-align: baseline;
         zoom: 1;
         *display: inline;
-        *vertical-align: auto; }
+        *vertical-align: auto;
+        margin-right: 1em; }
