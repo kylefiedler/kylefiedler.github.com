@@ -1,0 +1,338 @@
+@import 'bourbon/bourbon';
+@import "normalize";
+
+$column: 60px;
+$max-width: 63em;
+$gutter: 26px;
+
+@import 'neat/neat';
+
+@font-face {
+  font-family: 'fontello';
+  src: url("/fonts/jr-fontello.eot");
+  src: url("/fonts/jr-fontello.eot?#iefix") format('embedded-opentype'), url("/fonts/jr-fontello.woff") format('woff'), url("/fonts/jr-fontello.ttf") format('truetype'), url("/fonts/jr-fontello.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%icon {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  margin-left: 0.3em;
+}
+
+.icon-heart:before {
+  @extend %icon;
+  content: '\2665';
+} // '♥'
+
+.icon-mail:before {
+  @extend %icon;
+  content: '\2709';
+} // '✉'
+
+.icon-comment:before {
+  content: '\e718';
+  @extend %icon;
+} // ''
+
+.icon-rss:before {
+  @extend %icon;
+  content: '\e73a';
+} // ''
+
+.icon-twitter:before {
+  @extend %icon;
+  content: '\f309'; 
+} // ''
+
+.icon-facebook-squared:before {
+  @extend %icon;
+  content: '\f30e';
+} // ''
+
+.icon-pinterest:before {
+  @extend %icon;
+  content: '\f312';
+} // ''
+
+.icon-instagram:before {
+  @extend %icon;
+  content: '\f32d';
+} // ''
+
+.icon-book-open:before {
+  @extend %icon;
+  content: '📖';
+} // '\1f4d6
+
+// variables
+//---------------
+$pink: #d16bac;
+$background-color: #ca5da2;
+$text-color: #333;
+$header-font: "swingdancer",cursive;
+$body-font: "omnes-pro", $helvetica, sans-serif;
+
+%small-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+  color: #c2c2bf;
+  font-size: em(13);
+  margin: 0;
+}
+
+%bottom-border {
+  @include row();
+  border-bottom: 1px solid lighten($pink, 32%);
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+body {
+  font-size: 1em;
+  font-family: $body-font;
+  padding: 0;
+  color: darken($pink, 50%);
+}
+
+a {
+  text-decoration: none;
+}
+
+header.main {
+  background-color: $pink;
+  border-bottom: 1px solid darken($pink, 20%);
+  @include box-shadow(inset 0 -1px 0 lighten($pink, 10%), 0 2px 0 #eceadf);
+  @include background-image(radial-gradient(50% 1%, circle cover, rgba(#fff, .4), rgba(#fff, 0)), linear-gradient(lighten($pink, 5%), darken($pink, 10%)));
+  padding: em(56) 0 em(28);
+  background-repeat: no-repeat;
+  margin-bottom: 3em;
+  -webkit-font-smoothing: antialiased;
+
+  div.wrapper {
+    @include outer-container();
+
+    h1 {
+      text-align: center;
+      font-family: $header-font;
+      font-size: em(52);
+      margin: 0 0 .25em;
+
+      a {
+        color: #fff;
+      }
+
+      &:before {
+        content: "";
+        @include inline-block;
+        margin-right: .5em;
+        width: 133px;
+        height: 83px;
+        background: url('/jessrocks/icons-left.png') 0 0 no-repeat;
+      }
+
+      &:after {
+        content: "";
+        @include inline-block;
+        margin-left: .3em;
+        width: 151px;
+        height: 60px;
+        background: url('/jessrocks/icons-right.png') 0 0 no-repeat;
+      }
+    }
+
+    nav {
+      @include row;
+      text-align: center;
+
+      a {
+        color: white;
+        font-weight: bold;
+
+        &:hover, &:active {
+          color: darken($pink, 10%);
+        }
+      }
+
+      ul {
+        @include inline-block;
+        padding: 0;
+
+        &.main {
+          li {
+            @include inline-block;
+            margin-right: 2em;
+          }
+
+          &:after {
+            content: " ";
+            width: 5px;
+            height: 5px;
+            @include inline-block;
+            border-radius: 5px;
+            background-color: lighten($pink, 20%);
+          }
+        }
+
+        &.social {
+          margin-left: 2em;
+
+          li {
+            @include inline-block;
+
+            a {
+              border-bottom: 0;
+              display: block;
+              font-size: 1.4em;
+              letter-spacing: 1px;
+              width: 1.2em;
+              overflow: hidden;
+
+              &.twitter {
+                @extend .icon-twitter;
+              }
+
+              &.rss {
+                @extend .icon-rss;
+              }
+
+              &.pintrest {
+                @extend .icon-pinterest;
+              }
+
+              &.facebook {
+                @extend .icon-facebook-squared;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section.main {
+  @include outer-container;
+
+  section.articles {
+    @include span-columns(8);
+    border-right: 1px solid lighten($pink, 32%);
+    padding-right: flex-gutter();
+
+    article {
+      @extend %bottom-border;
+
+      header {
+        @include row();
+
+        h1 {
+          font-family: $header-font;
+          @include span-columns(6 8);
+          margin: 0;
+          font-size: em(44);
+          color: darken($pink, 18%);
+        }
+
+        p {
+          @include span-columns(2 8);
+          @extend %small-text;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      footer {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            @include inline-block;
+
+            a {
+              @extend %small-text;
+            }
+
+            &:after {
+              content: "|";
+              @include inline-block;
+              padding: 0 .5em;
+              color: lighten($pink, 32%);
+            }
+
+            &:last-child:after {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside.sidebar {
+    @include span-columns(4);
+    color: rgba(darken($pink, 50%), .6);
+
+    h2 {
+      font-size: 1em;
+      margin: 0;
+      color: darken($pink, 20%);
+    }
+
+    section {
+      > span {
+        @extend %small-text;
+      }
+
+      &.bio {
+        @extend %bottom-border;
+
+        img {
+          @include span-columns(2 5);
+          height: em(45);
+          background-color: #333;
+        }
+
+        p {
+          @include span-columns(3 5);
+          margin: 0;
+        }
+      }
+
+      &.twitter {
+        @extend %bottom-border;
+
+        h2 {
+          @extend .icon-twitter;
+        }
+      }
+
+      &.reading {
+        @extend %bottom-border;
+
+        h2 {
+          @extend .icon-book-open;
+        }
+      }
+
+      &.instagram {
+        h2 {
+          @extend .icon-instagram;
+        }
+      }
+    }
+  }
+}
