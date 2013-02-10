@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li a.rss:before, .icon-twitter:before, header.main div.wrapper nav ul.social li a.twitter:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li a.pintrest:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
+.icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pintrest a:before, .icon-instagram:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -347,16 +347,16 @@ table {
 .icon-comment:before {
   content: '\e718'; }
 
-.icon-rss:before, header.main div.wrapper nav ul.social li a.rss:before {
+.icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before {
   content: '\e73a'; }
 
-.icon-twitter:before, header.main div.wrapper nav ul.social li a.twitter:before, section.main aside.sidebar section.twitter h2:before {
+.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main aside.sidebar section.twitter h2:before {
   content: '\f309'; }
 
-.icon-facebook-squared:before, header.main div.wrapper nav ul.social li a.facebook:before {
+.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before {
   content: '\f30e'; }
 
-.icon-pinterest:before, header.main div.wrapper nav ul.social li a.pintrest:before {
+.icon-pinterest:before, header.main div.wrapper nav ul.social li.pintrest a:before {
   content: '\f312'; }
 
 .icon-instagram:before, section.main aside.sidebar section.instagram h2:before {
@@ -392,7 +392,8 @@ body {
   color: #2f0e23; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #d16bac; }
 
 header.main {
   background-color: #d16bac;

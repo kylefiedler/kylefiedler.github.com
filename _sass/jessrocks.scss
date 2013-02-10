@@ -107,6 +107,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $pink;
 }
 
 header.main {
@@ -197,22 +198,22 @@ header.main {
               letter-spacing: 1px;
               width: 1.2em;
               overflow: hidden;
+            }
 
-              &.twitter {
-                @extend .icon-twitter;
-              }
+            &.twitter a {
+              @extend .icon-twitter;
+            }
 
-              &.rss {
-                @extend .icon-rss;
-              }
+            &.rss a {
+              @extend .icon-rss;
+            }
 
-              &.pintrest {
-                @extend .icon-pinterest;
-              }
+            &.pintrest a {
+              @extend .icon-pinterest;
+            }
 
-              &.facebook {
-                @extend .icon-facebook-squared;
-              }
+            &.facebook a {
+              @extend .icon-facebook-squared;
             }
           }
         }
