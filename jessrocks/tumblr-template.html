@@ -15,6 +15,10 @@
     <meta name="if:Show Likes" content="0"/>
     <meta name="if:Show Portrait" content="1"/>
     <meta name="if:Show Social Icons Widget" content="1"/>
+
+    <meta name="text:Reading Header" content=""/>
+    <meta name="text:Reading Book" content=""/>
+    <meta name="text:Reading Author" content=""/>
     <meta name="text:Copyright Text" content=""/>
     <meta name="text:Default Search Text" content="Search"/>	
     <meta name="text:Google Analytics Web Property ID" content=""/>
@@ -317,6 +321,14 @@ photosets = {};
         </script>
         {/block:Twitter}
 
+        {block:IfReadingHeader}
+        <section class="reading">
+          <h2>{text:Reading Header}</h2>
+          <h3>{text:Reading Book}</h3>
+          <span>{text:Reading Author}</span>
+        </section>
+        {/block:IfReadingHeader}
+
         {block:IfShowBlogsIFollow}
           {block:Following}
           <section class="followed">
@@ -350,6 +362,9 @@ photosets = {};
         </ul>
       </footer>
     </section>
+    <!-- SnapWidget -->
+
+<iframe src="http://snapwidget.com/in/?u=a3lsZWZpZWRsZXJ8aW58MTAwfDJ8MHx8bm98NXxub25l" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:210px; height: 105px" ></iframe>
 
     {block:Twitter}
     <script type="text/javascript" src="/tweets.js"></script>
