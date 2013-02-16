@@ -6,7 +6,7 @@
     text-align: right;
     @include span-columns(1);
     @extend .icon;
-    color: darken($secondary-color, 10%);
+    color: lighten($secondary-color, 15%);
     margin-top: 4px;
 
     a, span {
@@ -28,8 +28,6 @@
   article {
     @include span-columns(5);
     @include omega();
-    border-left: 1px solid lighten($secondary-color, 42%);
-    padding-left: flex-gutter();
 
     header {
       margin-bottom: lh();
@@ -86,11 +84,12 @@
       font-family: $header-font-family;
       font-size: em(24);
       font-weight: bold;
-      line-height: 1.3em;
+      line-height: 1em;
       padding: 0;
 
       p {
         margin-right: 0;
+        line-height: 1.3em;
       }
     }
 
@@ -109,6 +108,7 @@
 
     img {
       margin-bottom: lh();
+      border: 1px solid $secondary-color;
     }
 
     a.img {

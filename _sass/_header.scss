@@ -1,15 +1,18 @@
 body > header {
-  background-color: $highlight-color;
+  @include linear-gradient( 75deg, $highlight-color,  adjust_hue(saturate(darken($highlight-color, 7), 21), 41));
   background-position: 40% 60%;
   background-repeat: no-repeat;
   padding: lh(6) 1em lh(2);
   color: $background-color;
-  -webkit-font-smoothing: antialiased;
+  border-bottom: 2px solid darken($highlight-color, 40);
+  @include box-shadow(0 1px 4px $secondary-color);
 
   @include media(1600px){
     padding: 0 !important;
-    background-color: darken($highlight-color, 2%);
+    @include linear-gradient( 55deg, darken($highlight-color, 3),  adjust_hue(saturate(darken($highlight-color, 10), 21), 41));
     @include transition;
+    z-index: 9;
+    position: relative;
   };
 
   @include media(max-width 600px){
@@ -18,19 +21,12 @@ body > header {
 
   div {
     @include outer-container;
-
-    @include media(1600px){
-      padding: lh(6) 4em lh(2);
-      @include box-sizing(content-box);
-      background-color: $highlight-color;
-      @include transition;
-    };
   }
 
   a.image {
     @include span-columns(1);
     border-bottom: 0;
-    @include position(relative, 0 0 0 1.5em);
+    // @include position(relative, 0 0 0 1.5em);
 
     img {
       border-radius: 140px;
@@ -62,11 +58,13 @@ body > header {
     margin-top: .75em;
 
     h1 {
-      padding-left: flex-gutter();
+      letter-spacing: -1px;
+      margin-bottom: .4em;
 
       a {
         color: #fff;
         border-bottom: 0;
+        font-size: em(36, 26);
 
         &:hover {
           color: rgba(#fff, 0.7);
@@ -77,8 +75,9 @@ body > header {
 
     p {
       color: rgba(#fff, 0.7);
-      padding-left: flex-gutter();
       margin-right: flex-grid(1) + flex-gutter();
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.4em;
 
       a {
         font-style: italic;
@@ -94,7 +93,7 @@ body > header {
 
     ul {
       clear: both;
-      padding-left: flex-gutter();
+      padding-left: 0;
       margin-top: lh();
 
       a {

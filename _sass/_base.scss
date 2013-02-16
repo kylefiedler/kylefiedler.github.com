@@ -15,6 +15,7 @@ body {
 
   @include media(1600px){
     background-color: lighten($secondary-color, 46%);
+    font-size: 1.2em;
     @include transition;
   }
 }
@@ -22,7 +23,7 @@ body {
 h1 {
   color: $primary-color;
   font-family: $header-font-family;
-  font-size: em(24);
+  font-size: em(26);
   font-weight: bold;
   line-height: 1.3em;
   margin: 0 0 lh(.5);
@@ -37,6 +38,8 @@ h2 {
 
 p {
   margin-top: 0;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 img {
@@ -50,9 +53,7 @@ a {
   @include transition();
 
   &:hover {
-    background-color: rgba($yellow, .7);
-    border-color: darken($yellow, 10%);
-    color: $primary-color;
+    color: saturate(lighten(#58487e, 15), 28);
   }
 }
 
@@ -150,7 +151,7 @@ nav.pagination {
   color: $secondary-color;
   margin: 2em 0;
   padding-top: 2em;
-  padding-left: flex-grid(1) + (flex-gutter() * 2);
+  padding-left: flex-grid(1) + flex-gutter();
   @include row();
 
   @include media(max-width 600px){

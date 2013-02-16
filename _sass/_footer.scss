@@ -4,7 +4,7 @@ footer.main {
   margin-top: 2em;
   margin-bottom: 2em;
   padding-top: 2em;
-  padding-left: flex-grid(1) + (flex-gutter() * 2);
+  padding-left: flex-grid(1) + flex-gutter();
 
   @include media(max-width 600px){
     padding-left: 0;
