@@ -15,6 +15,7 @@
     <meta name="if:Show Likes" content="0"/>
     <meta name="if:Show Portrait" content="1"/>
     <meta name="if:Show Social Icons Widget" content="1"/>
+    <meta name="if:Show Reading" content="1"/>
 
     <meta name="text:Reading Header" content=""/>
     <meta name="text:Reading Book" content=""/>
@@ -29,6 +30,7 @@
     <meta name="text:Twitter Username" content=""/>
     <meta name="text:Vimeo Username" content=""/>
     <meta name="text:Youtube Username" content=""/>
+    <meta name="text:Instagram Username" content=""/>
 
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}" />
@@ -85,6 +87,7 @@ photosets = {};
             {block:IfVimeoUsername}<li class="vimeo"><a href="http://www.vimeo.com/{text:Vimeo Username}" title="{text:Vimeo Username} on Vimeo">Vimeo</a></li>{/block:IfVimeoUsername}
             {block:IfYoutubeUsername}<li class="youtube"><a href="http://www.youtube.com/{text:Youtube Username}" title="{text:Youtube Username} on Youtube">Youtube</a></li>{/block:IfYoutubeUsername}
             {block:IfPinterestUsername}<li class="pinterest"><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">Pinterest</a></li>{/block:IfPinterestUsername}
+            {block:IfInstagramUsername}<li class="instagram"><a href="http://instagram.com/{text:Instagram Username}" title="{text:Pinterest Username} on Pinterest">Instagram</a></li>{/block:IfInstagramUsername}
           {/block:IfShowSocialIconsWidget}
         </ul>
       </nav>
@@ -321,13 +324,13 @@ photosets = {};
         </script>
         {/block:Twitter}
 
-        {block:IfReadingHeader}
+        {block:IfReading}
         <section class="reading">
           <h2>{text:Reading Header}</h2>
           <h3>{text:Reading Book}</h3>
           <span>{text:Reading Author}</span>
         </section>
-        {/block:IfReadingHeader}
+        {/block:IfReading}
 
         {block:IfShowBlogsIFollow}
           {block:Following}

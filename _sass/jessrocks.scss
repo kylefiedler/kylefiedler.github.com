@@ -226,6 +226,10 @@ header.main {
               @extend .icon-pinterest;
             }
 
+            &.instagram a {
+              @extend .icon-instagram;
+            }
+
             &.facebook a {
               @extend .icon-facebook-squared;
             }
