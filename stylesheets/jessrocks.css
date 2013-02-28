@@ -647,7 +647,8 @@ section.main {
                 *vertical-align: auto;
                 margin-right: 1em; }
         section.main section.articles article footer ul.tag-list {
-          list-style: none; }
+          list-style: none;
+          padding-left: 0; }
           section.main section.articles article footer ul.tag-list li {
             display: inline-block;
             vertical-align: baseline;
