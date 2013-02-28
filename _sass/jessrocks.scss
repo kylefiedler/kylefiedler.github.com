@@ -175,7 +175,7 @@ header.main {
         font-weight: bold;
 
         &:hover, &:active {
-          color: darken($pink, 10%);
+          color: darken($pink, 30);
         }
       }
 
@@ -288,6 +288,10 @@ section.main {
           span {
             display: block;
           }
+
+          a {
+            color: #c2c2bf;
+          }
         }
       }
 
@@ -332,19 +336,9 @@ section.main {
           list-style: none;
           padding: 0;
           margin: 0;
-          float: left;
 
-          li {
+          > li {
             @include inline-block;
-
-            ul {
-              list-style: none;
-              padding: 0;
-            }
-
-            a {
-              @extend %small-text;
-            }
 
             &:after {
               content: "|";
@@ -356,30 +350,27 @@ section.main {
             &:last-child:after {
               content: "";
             }
-          }
-        }
 
-        section.share {
-          position: relative;
-          float: right;
+            a {
+              @extend %small-text;
+            }
 
-          span.toggle {
-            @extend %small-text;
-          }
+            &.share-links {
+              h2 {
+                @include inline-block;
+                font-size: 1em;
+                margin: 0;
+              }
 
-          div.share-links {
-            display: none;
-          }
+              ul {
+                list-style: none;
+                padding: 0;
 
-          &:hover {
-            div.share-links {
-              display: block;
-              @include position(absolute,  0 0 0 0);
-              background: $pink;
-              padding: 1em;
-              border-radius: 3px;
-              -webkit-font-smoothing: antialiased;
-              @include box-shadow(0 0 3px #eceadf);
+                li {
+                  @include inline-block;
+                  margin-right: 1em;
+                }
+              }
 
               a {
                 color: #fff;
@@ -405,6 +396,38 @@ section.main {
 
             }
           }
+        }
+
+        ul.tags {
+          list-style: none;
+
+          li {
+            @include inline-block;
+
+            &:after {
+              content: "|";
+              @include inline-block;
+              padding: 0 .5em;
+              color: lighten($pink, 32%);
+            }
+
+            &:last-child:after {
+              content: "";
+            }
+
+            a {
+              @extend %small-text;
+            }
+          }
+        }
+
+        section.share {
+          float: left;
+
+          span.toggle {
+            @extend %small-text;
+          }
+
         }
       }
     }

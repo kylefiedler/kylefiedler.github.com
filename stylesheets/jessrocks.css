@@ -325,7 +325,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.icon-youtube:before, header.main div.wrapper nav ul.social li.youtube a:before, .icon-vimeo:before, header.main div.wrapper nav ul.social li.vimeo a:before, .icon-gplus:before, section.main section.articles article footer section.share:hover div.share-links a.google:before, .icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before, .icon-instagram:before, header.main div.wrapper nav ul.social li.instagram a:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
+.icon-youtube:before, header.main div.wrapper nav ul.social li.youtube a:before, .icon-vimeo:before, header.main div.wrapper nav ul.social li.vimeo a:before, .icon-gplus:before, section.main section.articles article footer ul.meta-list > li.share-links a.google:before, .icon-heart:before, .icon-mail:before, .icon-comment:before, .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before, .icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer ul.meta-list > li.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before, .icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer ul.meta-list > li.share-links a.facebook:before, .icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer ul.meta-list > li.share-links a.pinterest:before, .icon-instagram:before, header.main div.wrapper nav ul.social li.instagram a:before, section.main aside.sidebar section.instagram h2:before, .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -346,7 +346,7 @@ table {
   content: '\f306'; }
 
 /* '' */
-.icon-gplus:before, section.main section.articles article footer section.share:hover div.share-links a.google:before {
+.icon-gplus:before, section.main section.articles article footer ul.meta-list > li.share-links a.google:before {
   content: '\f30f'; }
 
 /* '' */
@@ -362,13 +362,13 @@ table {
 .icon-rss:before, header.main div.wrapper nav ul.social li.rss a:before {
   content: '\e73a'; }
 
-.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer section.share:hover div.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before {
+.icon-twitter:before, header.main div.wrapper nav ul.social li.twitter a:before, section.main section.articles article footer ul.meta-list > li.share-links a.twitter:before, section.main aside.sidebar section#twitter h2:before {
   content: '\f309'; }
 
-.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer section.share:hover div.share-links a.facebook:before {
+.icon-facebook-squared:before, header.main div.wrapper nav ul.social li.facebook a:before, section.main section.articles article footer ul.meta-list > li.share-links a.facebook:before {
   content: '\f30e'; }
 
-.icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer section.share:hover div.share-links a.pinterest:before {
+.icon-pinterest:before, header.main div.wrapper nav ul.social li.pinterest a:before, section.main section.articles article footer ul.meta-list > li.share-links a.pinterest:before {
   content: '\f312'; }
 
 .icon-instagram:before, header.main div.wrapper nav ul.social li.instagram a:before, section.main aside.sidebar section.instagram h2:before {
@@ -377,7 +377,7 @@ table {
 .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   content: '📖'; }
 
-section.main section.articles article p.date, section.main section.articles article footer ul.meta-list li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
+section.main section.articles article p.date, section.main section.articles article footer ul.meta-list > li a, section.main section.articles article footer ul.tags li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #c2c2bf;
@@ -471,7 +471,7 @@ header.main {
         color: white;
         font-weight: bold; }
         header.main div.wrapper nav a:hover, header.main div.wrapper nav a:active {
-          color: #c54496; }
+          color: #7c275d; }
       header.main div.wrapper nav ul {
         display: inline-block;
         vertical-align: baseline;
@@ -568,6 +568,8 @@ section.main {
             margin-right: 0; }
           section.main section.articles article header p.date span {
             display: block; }
+          section.main section.articles article header p.date a {
+            color: #c2c2bf; }
       section.main section.articles article img {
         max-width: 100%; }
       section.main section.articles article blockquote {
@@ -603,18 +605,14 @@ section.main {
         section.main section.articles article footer ul.meta-list {
           list-style: none;
           padding: 0;
-          margin: 0;
-          float: left; }
-          section.main section.articles article footer ul.meta-list li {
+          margin: 0; }
+          section.main section.articles article footer ul.meta-list > li {
             display: inline-block;
             vertical-align: baseline;
             zoom: 1;
             *display: inline;
             *vertical-align: auto; }
-            section.main section.articles article footer ul.meta-list li ul {
-              list-style: none;
-              padding: 0; }
-            section.main section.articles article footer ul.meta-list li:after {
+            section.main section.articles article footer ul.meta-list > li:after {
               content: "|";
               display: inline-block;
               vertical-align: baseline;
@@ -623,25 +621,51 @@ section.main {
               *vertical-align: auto;
               padding: 0 0.5em;
               color: #f8e8f2; }
-            section.main section.articles article footer ul.meta-list li:last-child:after {
+            section.main section.articles article footer ul.meta-list > li:last-child:after {
               content: ""; }
-        section.main section.articles article footer section.share {
-          position: relative;
-          float: right; }
-          section.main section.articles article footer section.share div.share-links {
-            display: none; }
-          section.main section.articles article footer section.share:hover div.share-links {
-            display: block;
-            position: absolute;
-            background: #d16bac;
-            padding: 1em;
-            border-radius: 3px;
-            -webkit-font-smoothing: antialiased;
-            box-shadow: 0 0 3px #eceadf; }
-            section.main section.articles article footer section.share:hover div.share-links a {
+            section.main section.articles article footer ul.meta-list > li.share-links h2 {
+              display: inline-block;
+              vertical-align: baseline;
+              zoom: 1;
+              *display: inline;
+              *vertical-align: auto;
+              font-size: 1em;
+              margin: 0; }
+            section.main section.articles article footer ul.meta-list > li.share-links ul {
+              list-style: none;
+              padding: 0; }
+              section.main section.articles article footer ul.meta-list > li.share-links ul li {
+                display: inline-block;
+                vertical-align: baseline;
+                zoom: 1;
+                *display: inline;
+                *vertical-align: auto;
+                margin-right: 1em; }
+            section.main section.articles article footer ul.meta-list > li.share-links a {
               color: #fff;
               display: block;
               margin-bottom: .5em; }
+        section.main section.articles article footer ul.tags {
+          list-style: none; }
+          section.main section.articles article footer ul.tags li {
+            display: inline-block;
+            vertical-align: baseline;
+            zoom: 1;
+            *display: inline;
+            *vertical-align: auto; }
+            section.main section.articles article footer ul.tags li:after {
+              content: "|";
+              display: inline-block;
+              vertical-align: baseline;
+              zoom: 1;
+              *display: inline;
+              *vertical-align: auto;
+              padding: 0 0.5em;
+              color: #f8e8f2; }
+            section.main section.articles article footer ul.tags li:last-child:after {
+              content: ""; }
+        section.main section.articles article footer section.share {
+          float: left; }
   section.main aside.sidebar {
     display: block;
     float: left;

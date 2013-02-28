@@ -211,8 +211,21 @@ photosets = {};
 
         <footer class="meta">
           <ul class="meta-list">
-            {block:NoteCount}<li class="notes"><a href="{Permalink}#notes">{NoteCount}</a></li>{/block:NoteCount}
+            {block:NoteCount}<li class="notes"><a href="{Permalink}#notes">{NoteCount} Notes</a></li>{/block:NoteCount}
             {block:IfDisqusShortname}<li class="comments hidden"><a id="dsq-{PostID}" href="{Permalink}#disqus_thread">Comments</a></li>{/block:IfDisqusShortname}
+
+            <li class="share-links">
+              <h2>Share this post:</h2>
+              <ul>
+                <li><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a></li>
+                <li><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}t={Title}{/block:Title}" class="facebook">Facebook</a></li>
+                <li><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}media=" class="pinterest">Pinterest</a></li>
+                <li><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=enurl={Permalink}" class="google">Google+</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="tags">
             {block:HasTags}
             <li class="tags">
               <ul class="tag-list">
@@ -224,11 +237,6 @@ photosets = {};
             {/block:HasTags}
           </ul>
 
-          <section class="share">
-            <span class="toggle">Share</span>
-
-            <div class="share-links"><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}&t={Title}{/block:Title}" class="facebook">Facebook</a><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}&media=" class="pinterest">Pinterest</a><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=en&url={Permalink}" class="google">Google+</a></div>
-          </section>
         </footer>
 
         {block:PermalinkPage}
@@ -324,13 +332,11 @@ photosets = {};
         </script>
         {/block:Twitter}
 
-        {block:IfReading}
         <section class="reading">
           <h2>{text:Reading Header}</h2>
           <h3>{text:Reading Book}</h3>
           <span>{text:Reading Author}</span>
         </section>
-        {/block:IfReading}
 
         {block:IfShowBlogsIFollow}
           {block:Following}
