@@ -409,7 +409,6 @@ a {
 header.main {
   background-color: #d16bac;
   border-bottom: 1px solid #a3337a;
-  -webkit-box-shadow: inset 0 -1px 0 #dd92c2, 0 2px 0 #eceadf;
   box-shadow: inset 0 -1px 0 #dd92c2, 0 2px 0 #eceadf;
   background-image: -webkit-radial-gradient(50% 1%, circle cover, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), -webkit-linear-gradient(#d77eb7, #c54496);
   background-image: -moz-radial-gradient(50% 1%, circle cover, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)), -moz-linear-gradient(#d77eb7, #c54496);
@@ -638,7 +637,6 @@ section.main {
             padding: 1em;
             border-radius: 3px;
             -webkit-font-smoothing: antialiased;
-            -webkit-box-shadow: 0 0 3px #eceadf;
             box-shadow: 0 0 3px #eceadf; }
             section.main section.articles article footer section.share:hover div.share-links a {
               color: #fff;

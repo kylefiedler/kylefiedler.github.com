@@ -1,6 +1,5 @@
 body.post {
   section.post-content {
     @extend %post;
-    @extend %article-type;
   }
 }

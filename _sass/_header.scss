@@ -1,119 +1,48 @@
-body > header {
-  @include linear-gradient( 75deg, $highlight-color,  adjust_hue(saturate(darken($highlight-color, 7), 21), 41));
-  background-position: 40% 60%;
-  background-repeat: no-repeat;
-  padding: lh(6) 1em lh(2);
-  color: $background-color;
-  border-bottom: 2px solid darken($highlight-color, 40);
-  @include box-shadow(0 1px 4px $secondary-color);
-
-  @include media(1600px){
-    padding: 0 !important;
-    @include linear-gradient( 55deg, darken($highlight-color, 3),  adjust_hue(saturate(darken($highlight-color, 10), 21), 41));
-    @include transition;
-    z-index: 9;
-    position: relative;
-  };
-
-  @include media(max-width 600px){
-    padding-top: lh(2);
-  };
-
-  div {
-    @include outer-container;
-  }
-
-  a.image {
-    @include span-columns(1);
-    border-bottom: 0;
-    // @include position(relative, 0 0 0 1.5em);
-
-    img {
-      border-radius: 140px;
-      border: 5px solid rgba(#fff, .05);
-      @include transition();
-    }
-
-    &:hover {
-      background: none;
-
-      img {
-        border-color: rgba(#fff, .2);
-      }
-    }
-
-    @include media(max-width 600px){
-      float: none;
-      display: block;
-      width: auto;
-      text-align: center;
-      margin-right: 0;
-      left: 0;
-      @include box-sizing(border-box);
-    };
-  }
+header.main {
+  padding: 0 0 lh(3);
 
   nav {
-    @include span-columns(5);
-    margin-top: .75em;
+    margin-left: flex-grid(1) + flex-gutter();
 
     h1 {
-      letter-spacing: -1px;
-      margin-bottom: .4em;
+      font-size: $body-font-size * 1.25;
+      @include inline-block;
+      margin: 0;
 
       a {
-        color: #fff;
         border-bottom: 0;
-        font-size: em(36, 26);
+        color: $primary-color;
 
         &:hover {
-          color: rgba(#fff, 0.7);
-          background: 0;
-        }
-      }
-    }
-
-    p {
-      color: rgba(#fff, 0.7);
-      margin-right: flex-grid(1) + flex-gutter();
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.4em;
-
-      a {
-        font-style: italic;
-        color: rgba($background-color, .9);
-        border-bottom: 0;
-
-        &:hover, &:active {
-          color: rgba($background-color, .5);
-          background: none;
+          color: $highlight-color;
         }
       }
     }
 
     ul {
-      clear: both;
-      padding-left: 0;
-      margin-top: lh();
+      @include inline-block;
+      margin: 0;
 
-      a {
-        color: darken($highlight-color, 20%);
+      li {
+        @include inline-block;
+        margin-right: lh();
+        font-size: em(14, 16);
 
-        &:hover {
-          color: darken($highlight-color, 30%);
-          background: none;
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+          -webkit-font-smoothing: antialiased;
         }
       }
     }
 
     @include media(max-width 600px){
-      width: auto;
       text-align: center;
       float: none;
+      margin-left: 0;
 
-      p {
-        margin: 0 auto;
-        max-width: 400px;
+      h1 {
+        display: block;
       }
 
       ul {
@@ -124,51 +53,4 @@ body > header {
       }
     };
   }
-}
-
-body.post > header {
-  padding: lh(.75) 4em;
-
-  div {
-    @include media(1600px){
-      padding: lh(.75) 4em;
-    };
-
-    a.image {
-      @include span-columns(1);
-      @include row();
-      padding: 0;
-
-      img {
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        margin-top: -2px;
-        float: right;
-      }
-
-    }
-
-    h1 {
-      @include span-columns(3 5);
-      margin-bottom: 0;
-    }
-
-    ul {
-      float: right;
-      clear: none;
-      margin: 4px 0 0;
-    }
-
-  }
-}
-
-body.default > header {
-
-  div {
-    @include media(1600px){
-      padding: lh(6) 4em lh(2);
-    };
-  }
-
 }

@@ -47,13 +47,13 @@ img {
 }
 
 a {
-  color: $highlight-color;
+  color: darken($highlight-color, 10);
   text-decoration: none;
-  border-bottom: 1px solid lighten($secondary-color, 40%);
+  border-bottom: 2px solid lighten($secondary-color, 40%);
   @include transition();
 
   &:hover {
-    color: saturate(lighten(#58487e, 15), 28);
+    color: lighten($highlight-color, 5);
   }
 }
 
@@ -76,102 +76,6 @@ cite {
 ::selection, ::-moz-selection {
   background: $highlight-color; /* Safari */
   color: $background-color;
-}
-
-// Fluid video
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin-bottom: lh(.5);
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-// All Social links found on site
-ul.social {
-  li {
-    @include inline-block;
-    margin-right: .5em;
-
-    a {
-      display: block;
-      letter-spacing: 1px;
-      font-size: 1.3em;
-      width: 1.2em;
-      @extend .icon;
-      border-bottom: 0;
-      text-indent: -9999px;
-
-      &:before {
-        text-indent: 9999px;
-      }
-
-      &:hover {
-        background: none;
-      }
-    }
-
-    &.tumblr a {
-      @extend .icon-tumblr;
-    }
-
-    &.dribbble a {
-      @extend .icon-dribbble;
-    }
-
-    &.github a {
-      @extend .icon-github;
-    }
-
-    &.twitter a {
-      @extend .icon-twitter;
-    }
-
-    &.rdio a {
-      @extend .icon-rdio;
-    }
-
-    &.email a {
-      @extend .icon-paper-plane;
-    }
-  }
-}
-
-nav.pagination {
-  border-top: 1px solid lighten($secondary-color, 40%);
-  color: $secondary-color;
-  margin: 2em 0;
-  padding-top: 2em;
-  padding-left: flex-grid(1) + flex-gutter();
-  @include row();
-
-  @include media(max-width 600px){
-    padding-left: 0;
-  };
-
-  a {
-    &.newer {
-      float: right;
-      @extend .icon-after;
-      @extend .icon-right-open-mini;
-    }
-
-    &.older {
-      float: left;
-      margin-left: -.4em;
-      @extend .icon;
-      @extend .icon-left-open-mini;
-    }
-  }
 }
 
 article.four-oh {

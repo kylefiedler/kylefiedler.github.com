@@ -1,4 +1,4 @@
-permalink: /writing/:title
+permalink: /blog/:title
 auto: true
 lsi: true
 paginate: 5 //the number of post per page

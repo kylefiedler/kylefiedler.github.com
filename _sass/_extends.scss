@@ -1,0 +1,67 @@
+// Fluid video
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: lh(.5);
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul.social {
+  li {
+    @include inline-block;
+    margin-right: .5em;
+
+    a {
+      display: block;
+      letter-spacing: 1px;
+      font-size: 1.3em;
+      width: 1.2em;
+      @extend .icon;
+      border-bottom: 0;
+      text-indent: -9999px;
+
+      &:before {
+        text-indent: 9999px;
+      }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    &.tumblr a {
+      @extend .icon-tumblr;
+    }
+
+    &.dribbble a {
+      @extend .icon-dribbble;
+    }
+
+    &.github a {
+      @extend .icon-github;
+    }
+
+    &.twitter a {
+      @extend .icon-twitter;
+    }
+
+    &.rdio a {
+      @extend .icon-rdio;
+    }
+
+    &.email a {
+      @extend .icon-paper-plane;
+    }
+  }
+}

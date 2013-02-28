@@ -1,0 +1,36 @@
+---
+layout: default
+title: Kyle Fiedler – Blog
+keyword: writing
+---
+
+<ol>
+  {% for post in paginator.posts %}
+  <li class="{{post.type}}">
+    <!-- here add you post markup -->
+    <aside>
+      <a href="{{ post.url }}" class="date">{{post.date | date:"%b %Y"}}</a>
+    </aside>
+
+    <article>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+      {{ post.content }}
+    </article>
+  </li>
+  {% endfor %}
+</ol>
+
+<!-- Pagination links -->
+<nav class="pagination">
+  {% if paginator.previous_page == 1 %}
+  <a href="/" class="newer">Newer</a>
+
+  {% elsif paginator.previous_page %}
+  <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a href="/page{{paginator.next_page}}" class="older">Older</a>
+  {% endif %}
+</nav>

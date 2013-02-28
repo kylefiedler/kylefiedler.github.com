@@ -14,43 +14,34 @@
   </head>
 
   <body class="default {{ page.keyword }}">
-    <header>
-      <div class="wrapper">
-        <a href="/" class="image">
-          <img src="/images/k3.jpg" alt="Kyle Fiedler" />
-        </a>
-
+    <section class="main">
+      <header class="main">
         <nav>
           <h1><a href="/">Kyle Fiedler</a></h1>
-          <p>A husband, father, designer at <a href="http://thoughtbot.com">thoughtbot</a>, one half of <a href="http://atedrake.com">Atedrake</a>, baseball enthusiast, and lover of beer.</p>
-          <ul class="social">
-            <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
-            <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
-            <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
-            <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
-            <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+          <ul>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/experiments">Experiments</a></li>
           </ul>
         </nav>
-      </div>
-    </header>
+      </header>
 
-    <section>
       {{ content }}
 
-    <footer class="main">
-      <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
+      <footer class="main">
+        <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
 
-      <ul class="social">
-        <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
-        <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
-        <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
-        <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
-        <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
-      </ul>
+        <ul class="social">
+          <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+          <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+          <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+          <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
+          <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+        </ul>
 
-      <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
-    </footer>
-  </section>
+        <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+      </footer>
+    </section>
 
 
   </body>

@@ -318,7 +318,6 @@ table {
   box-sizing: border-box; }
 
 html {
-  -webkit-box-shadow: inset 0 0 40px #252a27;
   box-shadow: inset 0 0 40px #252a27;
   background: #55605a url("/images/experiments/countdown/bg-pattern.png");
   height: 100%;
@@ -357,7 +356,6 @@ body {
     list-style: none;
     padding-left: 0;
     border: 1px solid #3d4541;
-    -webkit-box-shadow: 0 0 0 1px #5f6b64;
     box-shadow: 0 0 0 1px #5f6b64;
     background: rgba(49, 55, 52, 0.1);
     padding: 1em;
@@ -376,7 +374,6 @@ body {
       padding: 1em 1em 0.5em;
       border: 1px solid #252a27;
       background: rgba(49, 55, 52, 0.4);
-      -webkit-box-shadow: inset 0 0 20px #313734, 0 1px 0 #616e67;
       box-shadow: inset 0 0 20px #313734, 0 1px 0 #616e67; }
       body ol li:last-child {
         margin-right: 0; }

@@ -4,9 +4,15 @@
 @import 'neat/neat';
 @import 'fontello';
 
-@import 'base';
+@import 'animations';
 @import 'mixins';
+@import "extends";
+@import 'base';
+@import 'pagination';
+@import 'index';
 @import 'header';
 @import 'footer';
-@import 'index';
+@import 'default';
 @import 'post';
+@import 'portfolio';
+@import 'experiments';

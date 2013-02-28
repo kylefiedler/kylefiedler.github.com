@@ -34,15 +34,15 @@
     }
   }
 
-
   @include media(max-width 600px, 2) {
     aside {
       display: block;
       text-align: center;
-      @include span-columns(2);
+      @include span-columns(1);
+      @include shift(.5);
       border-bottom: 1px solid lighten($secondary-color, 40%);
-      padding-bottom: 2em;
-      margin-bottom: 2em;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
 
       a, span {
         @include inline-block;
@@ -60,9 +60,7 @@
       @include span-columns(2);
     }
   };
-}
 
-%article-type {
   &.link {
     h2 {
       margin-bottom: lh(.5);
@@ -108,7 +106,7 @@
 
     img {
       margin-bottom: lh();
-      border: 1px solid $secondary-color;
+      border: 1px solid $primary-color;
     }
 
     a.img {

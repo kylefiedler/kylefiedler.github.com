@@ -1,0 +1,37 @@
+section.main > ol.experiments {
+
+  li {
+    @include row();
+    margin-bottom: 2em;
+
+    div {
+      @include span-columns(5);
+    }
+
+    h1 {
+      margin-bottom: 0;
+      color: $highlight-color;
+      @extend .icon-after;
+      @extend .icon-right-open-mini;
+
+      &:after {
+        font-size: .75em;
+        color: lighten($secondary-color, 20%);
+      }
+    }
+
+    p {
+      color: $secondary-color;
+      margin-bottom: 0;
+
+      &.date {
+        @include span-columns(1);
+        font-style: italic;
+        font-size: em(13);
+        color: lighten($secondary-color, 20);
+        margin-top: em(14);
+        text-align: right;
+      }
+    }
+  }
+}

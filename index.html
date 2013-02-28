@@ -1,37 +1,22 @@
 ---
-layout: default
+layout: index
 title: Kyle Fiedler
 keyword: home
 ---
-<section class="writing">
-  <ol>
-    {% for post in paginator.posts %}
-    <li class="{{post.type}}">
-      <!-- here add you post markup -->
-      <aside>
-        <a href="{{ post.url }}" class="date">{{post.date | date:"%b %Y"}}</a>
-      </aside>
+<nav>
+  <ul>
+    <li><a href="/portfolio">Portfolio</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/experiments">Experiments</a></li>
+  </ul>
+</nav>
 
-      <article>
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<p>A husband &amp; father, web and iOS application designer at <a href="http://thoughtbot.com">thoughtbot</a>, one half of <a href="http://atedrake.com">Atedrake</a>, baseball enthusiast, and drinker of craft beer.</p>
 
-        {{ post.content }}
-      </article>
-    </li>
-    {% endfor %}
-  </ol>
-
-  <!-- Pagination links -->
-  <nav class="pagination">
-    {% if paginator.previous_page == 1 %}
-    <a href="/" class="newer">Newer</a>
-
-    {% elsif paginator.previous_page %}
-    <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
-
-    {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="older">Older</a>
-    {% endif %}
-  </nav>
-</section>
+<ul class="social">
+  <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+  <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+  <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+  <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
+  <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+</ul>

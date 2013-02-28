@@ -1,28 +1,25 @@
 // Typography
-$body-font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", "Tisa OT", $georgia;
+$body-font-family: "ff-tisa-sans-web-pro-1","ff-tisa-sans-web-pro-2", $lucida-grande;
 $body-font-size: 1em;
 $body-line-height: 1.6em;
-$header-font-family: $body-font-family;
+$header-font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", $body-font-family;
 
 // Grid - Neat overrides
-
 $column: 5.5em; // Column width
 $gutter: golden-ratio(1em, 1); // Gutter between each two columns
 $grid-columns: 6; // Total number of columns in the grid
 $max-width: 56em; // Max-width of the outer container
-// $visual-grid: true; // Display the base grid
-// $visual-grid-color: #EEE;
-// $visual-grid-index: back; // Show grid behind content (back) or overlay it over the content (front)
 
 // Colors
 $dark-blue: #353d44;
 $light-text-blue: lighten(#6e7b83, 5%);
 $yellow: #fffeea;
 $purple: #58487e;
+$green: #6db8a0;
 
 $primary-color: $dark-blue;
 $secondary-color: $light-text-blue;
-$highlight-color: $purple;
+$highlight-color: $green;
 $background-color: #fff;
 
 @function lh($amount: 1) {
