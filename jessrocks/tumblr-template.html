@@ -225,24 +225,20 @@ photosets = {};
             </li>
           </ul>
 
-          <ul class="tags">
-            {block:HasTags}
-            <li class="tags">
-              <ul class="tag-list">
-                {block:Tags}
-                <li><a href="{TagURL}">#{Tag}</a></li>
-                {/block:Tags}
-              </ul>
-            </li>
-            {/block:HasTags}
-          </ul>
+          {block:HasTags}
+            <ul class="tag-list">
+              {block:Tags}
+              <li><a href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          {/block:HasTags}
 
         </footer>
 
         {block:PermalinkPage}
           {block:NoteCount}
           <div id="notes">
-            <h2>{NoteCount} Notes<span class="sep">/</span></h2>
+            <h2>{NoteCount} Notes</span></h2>
             {PostNotes}
           </div>
         {/block:NoteCount}
@@ -371,9 +367,6 @@ photosets = {};
         </ul>
       </footer>
     </section>
-    <!-- SnapWidget -->
-
-<iframe src="http://snapwidget.com/in/?u=a3lsZWZpZWRsZXJ8aW58MTAwfDJ8MHx8bm98NXxub25l" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:210px; height: 105px" ></iframe>
 
     {block:Twitter}
     <script type="text/javascript" src="/tweets.js"></script>

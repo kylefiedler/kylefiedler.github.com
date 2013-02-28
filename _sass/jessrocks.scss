@@ -372,12 +372,6 @@ section.main {
                 }
               }
 
-              a {
-                color: #fff;
-                display: block;
-                margin-bottom: .5em;
-              }
-
               a.twitter {
                 @extend .icon-twitter;
               }
@@ -393,7 +387,6 @@ section.main {
               a.facebook {
                 @extend .icon-facebook-squared;
               }
-
             }
           }
         }
@@ -421,15 +414,17 @@ section.main {
           }
         }
 
-        section.share {
-          float: left;
-
-          span.toggle {
-            @extend %small-text;
-          }
-
-        }
       }
+    }
+  }
+
+  ol.notes {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      border-bottom: 1px solid;
+      padding: 0 1em;
     }
   }
 

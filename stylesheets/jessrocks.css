@@ -377,7 +377,7 @@ table {
 .icon-book-open:before, section.main aside.sidebar section.reading h2:before {
   content: '📖'; }
 
-section.main section.articles article p.date, section.main section.articles article footer ul.meta-list > li a, section.main section.articles article footer ul.tags li a, section.main section.articles article footer section.share span.toggle, section.main aside.sidebar section > span {
+section.main section.articles article p.date, section.main section.articles article footer ul.meta-list > li a, section.main section.articles article footer ul.tags li a, section.main aside.sidebar section > span {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #c2c2bf;
@@ -641,10 +641,6 @@ section.main {
                 *display: inline;
                 *vertical-align: auto;
                 margin-right: 1em; }
-            section.main section.articles article footer ul.meta-list > li.share-links a {
-              color: #fff;
-              display: block;
-              margin-bottom: .5em; }
         section.main section.articles article footer ul.tags {
           list-style: none; }
           section.main section.articles article footer ul.tags li {
@@ -664,8 +660,12 @@ section.main {
               color: #f8e8f2; }
             section.main section.articles article footer ul.tags li:last-child:after {
               content: ""; }
-        section.main section.articles article footer section.share {
-          float: left; }
+  section.main ol.notes {
+    list-style: none;
+    padding-left: 0; }
+    section.main ol.notes li {
+      border-bottom: 1px solid;
+      padding: 0 1em; }
   section.main aside.sidebar {
     display: block;
     float: left;
