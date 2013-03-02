@@ -1091,8 +1091,42 @@ section.main {
       section.main > ol > li p.long {
         margin-right: 0; }
 
-section.portfolio {
-  margin-left: 17.32295%; }
+section.portfolio ul {
+  list-style: none;
+  padding-left: 0; }
+  section.portfolio ul li.fanboat {
+    *zoom: 1;
+    display: block; }
+    section.portfolio ul li.fanboat:before, section.portfolio ul li.fanboat:after {
+      content: " ";
+      display: table; }
+    section.portfolio ul li.fanboat:after {
+      clear: both; }
+    section.portfolio ul li.fanboat ul li {
+      display: block;
+      float: left;
+      margin-right: 3.9377%;
+      width: 48.03115%; }
+      section.portfolio ul li.fanboat ul li:last-child {
+        margin-right: 0; }
+      section.portfolio ul li.fanboat ul li:nth-child(2n) {
+        margin-right: 0; }
+  section.portfolio ul h1 {
+    margin-left: 17.32295%;
+    margin-bottom: 1.5em; }
+  section.portfolio ul img {
+    border: 1px solid #b2babe;
+    border-radius: 3px; }
+  section.portfolio ul li {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #eaeced; }
+    section.portfolio ul li:last-child {
+      border-bottom: 0; }
+    section.portfolio ul li li {
+      margin-bottom: 2em;
+      padding-bottom: 0;
+      border-bottom: 0; }
 
 section.main > ol.experiments li {
   *zoom: 1;

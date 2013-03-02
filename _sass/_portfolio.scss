@@ -1,3 +1,48 @@
 section.portfolio {
-  @include shift(1);
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    %two {
+      @include row();
+
+      ul li {
+        @include span-columns(3);
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    h1 {
+      @include shift(1);
+      margin-bottom: 1.5em;
+    }
+
+    img {
+      border: 1px solid lighten($secondary-color, 20);
+      border-radius: 3px;
+    }
+
+    li {
+      margin-bottom: 2em;
+      padding-bottom: 2em;
+      border-bottom: 1px solid lighten($secondary-color, 40);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &.fanboat {
+        @extend %two;
+      }
+
+      li {
+        margin-bottom: 2em;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
 }
