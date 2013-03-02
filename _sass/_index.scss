@@ -97,4 +97,23 @@ body.index {
       display: none;
     }
   }
+
+  @include media(max-width 420px) {
+    font-size: .85em;
+    padding: 1.5em;
+
+    section header {
+      padding: 0;
+
+      img {
+        width: 100px;
+        border: 0;
+      }
+    }
+
+    section nav ul li {
+      margin-bottom: 1em;
+    }
+  };
 }
+

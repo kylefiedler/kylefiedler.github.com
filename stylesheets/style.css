@@ -479,11 +479,11 @@ body.index section {
     opacity: 0;
     -webkit-transform: translateY(-300px); }
 
-  60% {
+  30% {
     opacity: 1;
     -webkit-transform: translateY(20px); }
 
-  80% {
+  60% {
     -webkit-transform: translateY(-8px); }
 
   100% {
@@ -494,11 +494,11 @@ body.index section {
     opacity: 0;
     -moz-transform: translateY(-300px); }
 
-  60% {
+  30% {
     opacity: 1;
     -moz-transform: translateY(20px); }
 
-  80% {
+  60% {
     -moz-transform: translateY(-8px); }
 
   100% {
@@ -509,11 +509,11 @@ body.index section {
     opacity: 0;
     -ms-transform: translateY(-300px); }
 
-  60% {
+  30% {
     opacity: 1;
     -ms-transform: translateY(20px); }
 
-  80% {
+  60% {
     -ms-transform: translateY(-8px); }
 
   100% {
@@ -524,11 +524,11 @@ body.index section {
     opacity: 0;
     -o-transform: translateY(-300px); }
 
-  60% {
+  30% {
     opacity: 1;
     -o-transform: translateY(20px); }
 
-  80% {
+  60% {
     -o-transform: translateY(-8px); }
 
   100% {
@@ -539,11 +539,11 @@ body.index section {
     opacity: 0;
     transform: translateY(-300px); }
 
-  60% {
+  30% {
     opacity: 1;
     transform: translateY(20px); }
 
-  80% {
+  60% {
     transform: translateY(-8px); }
 
   100% {
@@ -564,7 +564,10 @@ body.index section header img {
   animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
-  animation-iteration-count: 1; }
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
 @-webkit-keyframes spin {
   0% {
@@ -957,6 +960,17 @@ body.index {
           border-bottom: 3px solid rgba(255, 255, 255, 0.4); }
     body.index section footer.main {
       display: none; }
+  @media screen and (max-width: 420px) {
+    body.index {
+      font-size: .85em;
+      padding: 1.5em; }
+      body.index section header {
+        padding: 0; }
+        body.index section header img {
+          width: 100px;
+          border: 0; }
+      body.index section nav ul li {
+        margin-bottom: 1em; } }
 
 header.main {
   padding: 0 0 4.8em; }
