@@ -36,8 +36,7 @@ header.main {
       }
     }
 
-    @include media(max-width 600px){
-      text-align: center;
+    @include media(max-width $small){
       float: none;
       margin-left: 0;
 

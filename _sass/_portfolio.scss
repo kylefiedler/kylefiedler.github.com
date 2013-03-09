@@ -15,9 +15,30 @@ section.portfolio {
       }
     }
 
-    h1 {
-      @include shift(1);
+    header {
       margin-bottom: 1.5em;
+
+      @include media($small) {
+        @include shift(1);
+      };
+
+      h1 {
+        @include media($small) {
+          @include inline-block;
+        };
+      }
+
+      h2 {
+        color: lighten($secondary-color, 30);
+
+        @include media($small) {
+          float: right;
+        };
+      }
+
+      p {
+        color: $secondary-color;
+      }
     }
 
     img {

@@ -25,12 +25,15 @@ section.main > ol.experiments {
       margin-bottom: 0;
 
       &.date {
-        @include span-columns(1);
         font-style: italic;
         font-size: em(13);
         color: lighten($secondary-color, 20);
         margin-top: em(14);
-        text-align: right;
+
+        @include media(500px) {
+          @include span-columns(1);
+          text-align: right;
+        };
       }
     }
   }

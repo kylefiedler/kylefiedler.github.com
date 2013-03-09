@@ -4,23 +4,29 @@ footer.main {
   margin-top: 2em;
   margin-bottom: 2em;
   padding-top: 2em;
-  padding-left: flex-grid(1) + flex-gutter();
 
-  @include media(max-width 600px){
-    padding-left: 0;
+  @include media($small){
+    padding-left: flex-grid(1) + flex-gutter();
   };
 
   p.copy {
     margin: 0;
-    float: left;
+
+    @include media($small) {
+      float: left;
+    };
   }
 
   ul.social {
     margin: 0;
-    float: right;
+    padding-left: 0;
+
+    @include media($small) {
+      float: right;
+    };
 
     li {
-      float: right;
+      @include inline-block;
     }
   }
 
