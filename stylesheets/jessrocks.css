@@ -640,29 +640,31 @@ section.main {
                 color: #f8e8f2; }
               section.main section.articles article footer ul.meta-list > li.tag:last-child:after {
                 content: ""; }
-        section.main section.articles article footer section.share-links h2 {
-          display: inline-block;
-          vertical-align: baseline;
-          zoom: 1;
-          *display: inline;
-          *vertical-align: auto;
-          margin: 0; }
-        section.main section.articles article footer section.share-links ul {
-          display: inline-block;
-          vertical-align: baseline;
-          zoom: 1;
-          *display: inline;
-          *vertical-align: auto;
-          list-style: none;
-          margin: 0;
-          padding: 0; }
-          section.main section.articles article footer section.share-links ul li {
+        section.main section.articles article footer section.share-links {
+          margin-bottom: 1em; }
+          section.main section.articles article footer section.share-links h2 {
             display: inline-block;
             vertical-align: baseline;
             zoom: 1;
             *display: inline;
             *vertical-align: auto;
-            margin-right: 1em; }
+            margin: 0; }
+          section.main section.articles article footer section.share-links ul {
+            display: inline-block;
+            vertical-align: baseline;
+            zoom: 1;
+            *display: inline;
+            *vertical-align: auto;
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+            section.main section.articles article footer section.share-links ul li {
+              display: inline-block;
+              vertical-align: baseline;
+              zoom: 1;
+              *display: inline;
+              *vertical-align: auto;
+              margin-right: 1em; }
   section.main ol.notes {
     list-style: none;
     padding-left: 0; }

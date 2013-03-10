@@ -378,6 +378,8 @@ section.main {
         }
 
         section.share-links {
+          margin-bottom: 1em;
+
           h2 {
             @include inline-block;
             margin: 0;
