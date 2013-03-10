@@ -258,7 +258,8 @@ section.main {
 
     article {
       @extend %bottom-border;
-      padding-bottom: 0;
+      padding-bottom: 3em;
+      margin-bottom: 3em;
 
       &:last-child {
         border-bottom: none;
@@ -378,8 +379,6 @@ section.main {
         }
 
         section.share-links {
-          margin-bottom: 1em;
-
           h2 {
             @include inline-block;
             margin: 0;

@@ -533,7 +533,8 @@ section.main {
     section.main section.articles:last-child {
       margin-right: 0; }
     section.main section.articles article {
-      padding-bottom: 0; }
+      padding-bottom: 3em;
+      margin-bottom: 3em; }
       section.main section.articles article:last-child {
         border-bottom: none; }
       section.main section.articles article p.date {
@@ -640,31 +641,29 @@ section.main {
                 color: #f8e8f2; }
               section.main section.articles article footer ul.meta-list > li.tag:last-child:after {
                 content: ""; }
-        section.main section.articles article footer section.share-links {
-          margin-bottom: 1em; }
-          section.main section.articles article footer section.share-links h2 {
+        section.main section.articles article footer section.share-links h2 {
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto;
+          margin: 0; }
+        section.main section.articles article footer section.share-links ul {
+          display: inline-block;
+          vertical-align: baseline;
+          zoom: 1;
+          *display: inline;
+          *vertical-align: auto;
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          section.main section.articles article footer section.share-links ul li {
             display: inline-block;
             vertical-align: baseline;
             zoom: 1;
             *display: inline;
             *vertical-align: auto;
-            margin: 0; }
-          section.main section.articles article footer section.share-links ul {
-            display: inline-block;
-            vertical-align: baseline;
-            zoom: 1;
-            *display: inline;
-            *vertical-align: auto;
-            list-style: none;
-            margin: 0;
-            padding: 0; }
-            section.main section.articles article footer section.share-links ul li {
-              display: inline-block;
-              vertical-align: baseline;
-              zoom: 1;
-              *display: inline;
-              *vertical-align: auto;
-              margin-right: 1em; }
+            margin-right: 1em; }
   section.main ol.notes {
     list-style: none;
     padding-left: 0; }
