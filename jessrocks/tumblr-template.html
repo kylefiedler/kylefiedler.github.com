@@ -213,26 +213,23 @@ photosets = {};
           <ul class="meta-list">
             {block:NoteCount}<li class="notes"><a href="{Permalink}#notes">{NoteCount} Notes</a></li>{/block:NoteCount}
             {block:IfDisqusShortname}<li class="comments hidden"><a id="dsq-{PostID}" href="{Permalink}#disqus_thread">Comments</a></li>{/block:IfDisqusShortname}
-
-            <li class="share-links">
-              <h2>Share this post:</h2>
-              <ul>
-                <li><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a></li>
-                <li><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}t={Title}{/block:Title}" class="facebook">Facebook</a></li>
-                <li><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}media=" class="pinterest">Pinterest</a></li>
-                <!-- <li><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=enurl={Permalink}" class="google">Google+</a></li> -->
-              </ul>
-            </li>
+            {block:HasTags}
+              {block:Tags}
+                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            {/block:HasTags}
           </ul>
 
-          {block:HasTags}
-            <ul class="tag-list">
-              {block:Tags}
-              <li><a href="{TagURL}">#{Tag}</a></li>
-              {/block:Tags}
-            </ul>
-          {/block:HasTags}
 
+          <section class="share-links">
+            <h2>Share this post:</h2>
+            <ul>
+              <li><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a></li>
+              <li><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}t={Title}{/block:Title}" class="facebook">Facebook</a></li>
+              <li><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}media=" class="pinterest">Pinterest</a></li>
+              <!-- <li><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=enurl={Permalink}" class="google">Google+</a></li> -->
+            </ul>
+          </section>
         </footer>
 
         {block:PermalinkPage}
