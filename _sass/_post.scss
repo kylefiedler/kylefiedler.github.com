@@ -4,8 +4,11 @@
   @include row;
 
   aside {
-    @include span-columns(2);
     margin-top: em(90, 18);
+
+    @include media(em(850)) {
+      @include span-columns(2);
+    };
 
     span {
       display: block;
@@ -18,8 +21,10 @@
   }
 
   article {
-    @include span-columns(10);
-    margin-right: 0;
+    @include media(em(850)) {
+      @include span-columns(10);
+      margin-right: 0;
+    };
 
     h1 {
       color: $base-accent;
@@ -32,9 +37,12 @@
     p {
       font-size: em(20, 18);
       line-height: 1.5;
-      max-width: flex-grid(8);
       color: lighten($base-color, 10);
       -webkit-font-smoothing: antialiased;
+
+      @include media(em(850)) {
+        max-width: flex-grid(8);
+      };
     }
   }
 }

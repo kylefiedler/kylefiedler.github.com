@@ -15,7 +15,10 @@ section.articles {
     h1 {
       font-size: em(42, 18);
       margin: 0;
-      @include span-columns(6);
+
+      @include media(em(850)) {
+        @include span-columns(6);
+      };
     }
 
     time {
@@ -23,8 +26,11 @@ section.articles {
       font-size: em(20, 18);
       font-weight: 200;
       margin-top: em(16, 18);
-      @include span-columns(2);
       -webkit-font-smoothing: antialiased;
+
+      @include media(em(850)){
+        @include span-columns(2);
+      }
     }
 
     .word-count, .reading-time {
@@ -32,17 +38,23 @@ section.articles {
       font-size: em(26, 18);
       font-weight: 200;
       margin-top: em(12, 18);
-      @include span-columns(2);
       -webkit-font-smoothing: antialiased;
+
+      @include media(em(850)) {
+        @include span-columns(2);
+      };
     }
   }
 }
 
 .pagination {
-  @include shift(2);
   -webkit-font-smoothing: antialiased;
   opacity: .5;
   @include transition(color 1s);
+
+  @include media(em(850)) {
+    @include shift(2);
+  };
 
   &:hover {
     opacity: 1;

@@ -606,18 +606,20 @@ header.main {
     -o-transition: color, 1s;
     transition: color, 1s; }
   header.main h1 {
-    margin-left: 17.02128%;
-    display: block;
-    float: left;
-    margin-right: 2.12766%;
-    width: 14.89362%;
     font-size: 1.33333em;
     letter-spacing: 0;
     margin-top: 0;
     margin-bottom: 0;
     -webkit-font-smoothing: antialiased; }
-    header.main h1:last-child {
-      margin-right: 0; }
+    @media screen and (min-width: 53.125em) {
+      header.main h1 {
+        margin-left: 17.02128%;
+        display: block;
+        float: left;
+        margin-right: 2.12766%;
+        width: 14.89362%; }
+        header.main h1:last-child {
+          margin-right: 0; } }
     header.main h1 a {
       color: #8d8d8d; }
   header.main ul {
@@ -626,17 +628,19 @@ header.main {
     margin: 0.1875em 0 0;
     font-size: 0.875em;
     opacity: .3;
-    display: block;
-    float: left;
-    margin-right: 2.12766%;
-    width: 48.93617%;
     -webkit-transition: color, 1s;
     -moz-transition: color, 1s;
     -ms-transition: color, 1s;
     -o-transition: color, 1s;
     transition: color, 1s; }
-    header.main ul:last-child {
-      margin-right: 0; }
+    @media screen and (min-width: 53.125em) {
+      header.main ul {
+        display: block;
+        float: left;
+        margin-right: 2.12766%;
+        width: 48.93617%; }
+        header.main ul:last-child {
+          margin-right: 0; } }
     header.main ul li {
       display: inline-block;
       vertical-align: baseline;
@@ -650,12 +654,14 @@ header.main {
 
 footer.main {
   opacity: .5;
-  margin-left: 17.02128%;
   -webkit-transition: color, 1s;
   -moz-transition: color, 1s;
   -ms-transition: color, 1s;
   -o-transition: color, 1s;
   transition: color, 1s; }
+  @media screen and (min-width: 53.125em) {
+    footer.main {
+      margin-left: 17.02128%; } }
   footer.main:hover {
     opacity: 1; }
   footer.main p {
@@ -687,40 +693,45 @@ section.articles {
         clear: both; }
     section.articles ol h1 {
       font-size: 2.33333em;
-      margin: 0;
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 48.93617%; }
-      section.articles ol h1:last-child {
-        margin-right: 0; }
+      margin: 0; }
+      @media screen and (min-width: 53.125em) {
+        section.articles ol h1 {
+          display: block;
+          float: left;
+          margin-right: 2.12766%;
+          width: 48.93617%; }
+          section.articles ol h1:last-child {
+            margin-right: 0; } }
     section.articles ol time {
       color: #bcbcbc;
       font-size: 1.11111em;
       font-weight: 200;
       margin-top: 0.88889em;
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 14.89362%;
       -webkit-font-smoothing: antialiased; }
-      section.articles ol time:last-child {
-        margin-right: 0; }
+      @media screen and (min-width: 53.125em) {
+        section.articles ol time {
+          display: block;
+          float: left;
+          margin-right: 2.12766%;
+          width: 14.89362%; }
+          section.articles ol time:last-child {
+            margin-right: 0; } }
     section.articles ol .word-count, section.articles ol .reading-time {
       color: #898989;
       font-size: 1.44444em;
       font-weight: 200;
       margin-top: 0.66667em;
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 14.89362%;
       -webkit-font-smoothing: antialiased; }
-      section.articles ol .word-count:last-child, section.articles ol .reading-time:last-child {
-        margin-right: 0; }
+      @media screen and (min-width: 53.125em) {
+        section.articles ol .word-count, section.articles ol .reading-time {
+          display: block;
+          float: left;
+          margin-right: 2.12766%;
+          width: 14.89362%; }
+          section.articles ol .word-count:last-child, section.articles ol .reading-time:last-child {
+            margin-right: 0; } }
 
 .pagination {
-  margin-left: 17.02128%;
   -webkit-font-smoothing: antialiased;
   opacity: .5;
   -webkit-transition: color 1s;
@@ -728,6 +739,9 @@ section.articles {
   -ms-transition: color 1s;
   -o-transition: color 1s;
   transition: color 1s; }
+  @media screen and (min-width: 53.125em) {
+    .pagination {
+      margin-left: 17.02128%; } }
   .pagination:hover {
     opacity: 1;
     -webkit-transition: color 1s;
@@ -755,13 +769,15 @@ section.articles {
   .post:after {
     clear: both; }
   .post aside {
-    display: block;
-    float: left;
-    margin-right: 2.12766%;
-    width: 14.89362%;
     margin-top: 5em; }
-    .post aside:last-child {
-      margin-right: 0; }
+    @media screen and (min-width: 53.125em) {
+      .post aside {
+        display: block;
+        float: left;
+        margin-right: 2.12766%;
+        width: 14.89362%; }
+        .post aside:last-child {
+          margin-right: 0; } }
     .post aside span {
       display: block;
       color: #bcbcbc;
@@ -769,21 +785,24 @@ section.articles {
       line-height: 1.5;
       font-weight: 200;
       -webkit-font-smoothing: antialiased; }
-  .post article {
-    display: block;
-    float: left;
-    margin-right: 2.12766%;
-    width: 82.97872%;
-    margin-right: 0; }
-    .post article:last-child {
+  @media screen and (min-width: 53.125em) {
+    .post article {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 82.97872%;
       margin-right: 0; }
-    .post article h1 {
-      color: #f1595c; }
-    .post article .fluid-width-video-wrapper {
-      margin-bottom: 1em; }
-    .post article p {
-      font-size: 1.11111em;
-      line-height: 1.5;
-      max-width: 65.95745%;
-      color: #57646d;
-      -webkit-font-smoothing: antialiased; }
+      .post article:last-child {
+        margin-right: 0; } }
+  .post article h1 {
+    color: #f1595c; }
+  .post article .fluid-width-video-wrapper {
+    margin-bottom: 1em; }
+  .post article p {
+    font-size: 1.11111em;
+    line-height: 1.5;
+    color: #57646d;
+    -webkit-font-smoothing: antialiased; }
+    @media screen and (min-width: 53.125em) {
+      .post article p {
+        max-width: 65.95745%; } }

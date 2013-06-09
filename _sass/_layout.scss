@@ -8,13 +8,16 @@ header.main {
   }
 
   h1 {
-    @include shift(2);
-    @include span-columns(2);
     font-size: em(24, 18);
     letter-spacing: 0;
     margin-top: 0;
     margin-bottom: 0;
     -webkit-font-smoothing: antialiased;
+
+    @include media(em(850)) {
+      @include shift(2);
+      @include span-columns(2);
+    };
 
     a {
       color: #8d8d8d;
@@ -27,8 +30,11 @@ header.main {
     margin: em(3) 0 0;
     font-size: em(14);
     opacity: .3;
-    @include span-columns(6);
     @include transition(color, 1s);
+
+    @include media(em(850)) {
+      @include span-columns(6);
+    };
 
     li {
       @include inline-block;
@@ -44,8 +50,11 @@ header.main {
 
 footer.main {
   opacity: .5;
-  @include shift(2);
   @include transition(color, 1s);
+
+  @include media(em(850)) {
+    @include shift(2);
+  };
 
   &:hover {
     opacity: 1;
