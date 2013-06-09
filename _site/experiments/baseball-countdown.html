@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Description" name="Description" content="A count down to the 2013 MLB regular season" />
+    <meta http-equiv="Keywords" name="Keywords" content="baseball" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count down to baseball</title>
+    <link rel="stylesheet" href="/stylesheets/countdown.css" />
+
+    <!--Typekit-->
+    <script type="text/javascript" src="//use.typekit.net/bpf7lxl.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script type="text/javascript" charset="utf-8">
+  /*
+     Code from javascript countdown timer example at: 
+     http://nithinbekal.com/2009/12/06/javascript-how-to-create-a-simple-countdown-timer/
+   */
+function updateWCTime() {
+  now      = Date.now();
+  kickoff  = Date.parse("March 31, 2013 20:30 EST");
+  diff = kickoff - now;
+
+  days  = Math.floor( diff / (1000*60*60*24) );
+  hours = Math.floor( diff / (1000*60*60) );
+  mins  = Math.floor( diff / (1000*60) );
+  secs  = Math.floor( diff / 1000 );
+
+  dd = days;
+  hh = hours - days  * 24;
+  mm = mins  - hours * 60;
+  ss = secs  - mins  * 60;
+
+  document.getElementById("worldcup_countdown_time")
+    .innerHTML =
+    '<ol>' +
+    '<li>' + '<h2>Days</h2>' + '<p>' + dd + '</p>' + '</li>' +
+    '<li>' + '<h2>Hours</h2>' + '<p>' + hh + '</p>' + '</li>' +
+    '<li>' + '<h2>Minutes</h2>' + '<p>' + mm + '</p>' + '</li>' +
+    '<li>' + '<h2>Seconds</h2>' + '<p>' + ss + '</p>' + '</li>' +
+    '</ol>'
+}
+setInterval('updateWCTime()', 1000 );
+</script>
+</head>
+<body>
+  <section>
+    <h1>Countdown to the MLB regular&nbsp;season.</h1>
+    <div id="worldcup_countdown_time">
+    </div>
+  </section>
+
+
+  </body>
+</html>

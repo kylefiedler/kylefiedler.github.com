@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://kylefiedler.com/stylesheets/jessrocks.css" type="text/css" media="all" />
+
+    <title>{Title}{block:TagPage} &bull; Posts Tagged &lsquo;{Tag}&rsquo;{/block:TagPage}{block:PostSummary} &bull; {PostSummary}{/block:PostSummary}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}"/>
+    {/block:Description}
+
+    <meta name="if:Show Blogs I Follow" content="0"/>
+    <meta name="if:Show Likes" content="0"/>
+    <meta name="if:Show Portrait" content="1"/>
+    <meta name="if:Show Social Icons Widget" content="1"/>
+    <meta name="if:Show Reading" content="1"/>
+
+    <meta name="text:Reading Header" content=""/>
+    <meta name="text:Reading Book" content=""/>
+    <meta name="text:Reading Author" content=""/>
+    <meta name="text:Copyright Text" content=""/>
+    <meta name="text:Default Search Text" content="Search"/>	
+    <meta name="text:Google Analytics Web Property ID" content=""/>
+    <meta name="text:Liked Posts Heading" content="I Dig These Posts"/>	
+    <meta name="text:Disqus Shortname" content=""/>
+    <meta name="text:Facebook Username" content=""/>
+    <meta name="text:Pinterest Username" content=""/>
+    <meta name="text:Twitter Username" content=""/>
+    <meta name="text:Vimeo Username" content=""/>
+    <meta name="text:Youtube Username" content=""/>
+    <meta name="text:Instagram Username" content=""/>
+
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="apple-touch-icon" href="{PortraitURL-128}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <link rel="stylesheet" href="http://static.tumblr.com/xgwqnql/MF5lbpkr4/jquery.fancybox-1.3.1.css" media="screen"/>
+
+    <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/guz5jyb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    {block:IndexPage}<script src="http://assets.tumblr.com/javascript/tumblelog.js?16"></script>{/block:IndexPage}
+    <script type="text/javascript">
+      tumblrUsername = '{PlaintextName}';
+      searchValue = "{text:Default Search Text}";
+{block:IfDisqusShortname}
+disqusEnabled = true;
+disqusShortname = "{text:Disqus Shortname}";
+{/block:IfDisqusShortname}
+twitterUsername = "{block:Twitter}{TwitterUsername}{/block:Twitter}";
+{block:IfShowBlogsIFollow}
+{block:Following}
+showFollowing = true;
+{/block:Following}
+{/block:IfShowBlogsIFollow}
+{block:IfShowLikes}{block:Likes}showLikes = true;{/block:Likes}{/block:IfShowLikes}
+{block:PermalinkPage}isPermalink = true;{/block:PermalinkPage}
+photosets = {};
+</script>
+
+</head>
+
+<body>
+  <header class="main">
+    <div class="wrapper">
+      <h1><a href="/">{Title}</a></h1>
+      <nav>
+        <ul class="main">
+          {block:HasPages}
+            {block:Pages}
+              <li><a href="{URL}">{Label}</a></li>
+            {/block:Pages}
+          {/block:HasPages}
+
+          <li><a class="archives" href="/archive" title="Archive">{lang:Archive}</a></li>
+          {block:AskEnabled}<li><a class="ask" href="/ask" title="{AskLabel}">{AskLabel}</a></li>{/block:AskEnabled}
+          {block:SubmissionsEnabled}<li><a class="submit" href="/submit" title="{SubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+        </ul>
+
+        <ul class="social">
+          <li class="rss"><a href="{RSS}" title="{lang:RSS feed}">{lang:RSS}</a></li>
+          {block:IfShowSocialIconsWidget}
+            {block:IfTwitterUsername}<li class="twitter"><a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter">Twitter</a></li>{/block:IfTwitterUsername}
+            {block:IfFacebookUsername}<li class="facebook"><a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile">Facebook</a></li>{/block:IfFacebookUsername}
+            {block:IfVimeoUsername}<li class="vimeo"><a href="http://www.vimeo.com/{text:Vimeo Username}" title="{text:Vimeo Username} on Vimeo">Vimeo</a></li>{/block:IfVimeoUsername}
+            {block:IfYoutubeUsername}<li class="youtube"><a href="http://www.youtube.com/{text:Youtube Username}" title="{text:Youtube Username} on Youtube">Youtube</a></li>{/block:IfYoutubeUsername}
+            {block:IfPinterestUsername}<li class="pinterest"><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">Pinterest</a></li>{/block:IfPinterestUsername}
+            {block:IfInstagramUsername}<li class="instagram"><a href="http://instagram.com/{text:Instagram Username}" title="{text:Pinterest Username} on Pinterest">Instagram</a></li>{/block:IfInstagramUsername}
+          {/block:IfShowSocialIconsWidget}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="main">
+    <section class="articles">
+
+      {block:Posts}
+      <article class="post {block:Text}type-text {/block:Text}{block:Photo}type-photo {/block:Photo}{block:Photoset}type-photoset {/block:Photoset}{block:Quote}type-quote {/block:Quote}{block:Link}type-link {/block:Link}{block:Chat}type-chat {/block:Chat}{block:Video}type-video {/block:Video}{block:Audio}type-audio {/block:Audio}{block:Answer}type-answer {/block:Answer}">
+
+        {block:Text}
+          <header>
+            {block:Title}<h1>{Title}</h1>{/block:Title}
+            {block:Date}<p class="date"><span>Posted </span><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>{/block:Date}
+          </header>
+
+          <section class="post">
+            {Body}
+          </section>
+        {/block:Text}
+
+        {block:Photo}
+          <p class="date"><span>Posted </span><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+          {block:Caption}<div>{Caption}</div>{/block:Caption}
+        {/block:Photo}
+
+        {block:Photoset}
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <section class="photo-slideshow" data-layout="{PhotosetLayout}">
+            {block:Photos}
+            <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}" {block:Caption}data-caption="{Caption}"{/block:Caption}>
+            {/block:Photos}
+          </section>
+
+          {block:Caption}<div>{Caption}</div>{/block:Caption}
+        {/block:Photoset}
+
+        {block:Quote}
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+
+          <blockquote class="quote-text">{Quote}</blockquote>
+          {block:Source}<cite>{Source}</cite>{/block:Source}
+        {/block:Quote}
+
+        {block:Link}
+          <header>
+            <h1><a href="{URL}" {Target}>{Name}</a></h1>
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          </header>
+          {block:Description}{Description}{/block:Description}
+        {/block:Link}
+
+        {block:Chat}
+          {block:Title}
+            <header>
+              <h1>{Title}</h1>
+              <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+            </header>
+          {/block:Title}
+
+          <ul class="chat">
+            {block:Lines}
+            <li class="{Alt} user_{UserNumber}">
+              {block:Label}
+              <span class="speaker">{Label}</span>
+              {/block:Label}
+              <span class="says">{Line}</span>
+            </li>
+            {/block:Lines}
+          </ul>
+        {/block:Chat}
+
+        {block:Video}
+          <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          <div class="media loading">
+            {Video-500}
+          </div>
+          {block:Caption}<div>{Caption}</div>{/block:Caption}
+        {/block:Video}
+
+        {block:Audio}
+          {block:AudioPlayer}
+            <p class="date"><span>Posted</span> <a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+
+            <div class="player-container">
+              <div class="album-art">{block:AlbumArt}<img class="album-art" src="{AlbumArtUrl}" alt=""/>{/block:AlbumArt}</div>
+              <div class="corners"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+              <div class="player-btn">{AudioPlayerWhite}</div>
+              {block:IndexPage}<div class="js-string hidden">{JSAudioPlayerWhite}</div>{/block:IndexPage}
+            </div>
+
+            <ul class="audio-meta">
+              <li class="plays"><span class="count">{FormattedPlayCount}</span> {lang:Plays}</li>
+              <li class="track-info">{block:TrackName}<span class="title">{TrackName}</span>{/block:TrackName}{block:Artist}<span class="artist">{Artist}</span>{/block:Artist}</li>
+            </ul>
+
+            {block:ExternalAudio}
+            <a class="download" href="{ExternalAudioURL}" title="Download External Audio">Download External Audio</a>
+            {/block:ExternalAudio}
+          {/block:AudioPlayer}
+
+          {block:AudioEmbed}<div>{AudioEmbed-500}</div>{/block:AudioEmbed}
+          {block:Caption}<div>{Caption}</div>{/block:Caption}
+        {/block:Audio}
+
+        {block:Answer}
+          <header>
+            <h1><span>Q:</span>{Question}</h1>
+            <h2>{Asker}</h2>
+            <p><a href="{Permalink}" title="{ShortDayOfWeek}. {Month} {DayOfMonth}, {Year} @ {12Hour}:{Minutes} {AmPm}">{TimeAgo}</a></p>
+          </header>
+          <div class="answer">{Answer}</div>
+        {/block:Answer}
+
+        {block:ContentSource}
+          <p>{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></p>
+        {/block:ContentSource}
+
+        <footer class="meta">
+          <ul class="meta-list">
+            {block:NoteCount}<li class="notes"><a href="{Permalink}#notes">{NoteCount} Notes</a></li>{/block:NoteCount}
+            {block:IfDisqusShortname}<li class="comments hidden"><a id="dsq-{PostID}" href="{Permalink}#disqus_thread">Comments</a></li>{/block:IfDisqusShortname}
+            {block:HasTags}
+              {block:Tags}
+                <li class="tag"><a href="{TagURL}">#{Tag}</a></li>
+              {/block:Tags}
+            {/block:HasTags}
+          </ul>
+
+
+          <section class="share-links">
+            <h2>Share this post:</h2>
+            <ul>
+              <li><a target="_new" href="https://twitter.com/intent/tweet?url={ShortURL}" class="twitter">Twitter</a></li>
+              <li><a target="_new" href="https://www.facebook.com/sharer.php?u={Permalink}{block:Title}t={Title}{/block:Title}" class="facebook">Facebook</a></li>
+              <li><a target="_new" href="http://pinterest.com/pin/create/button/?url={Permalink}media=" class="pinterest">Pinterest</a></li>
+              <!-- <li><a target="_new" href="https://plusone.google.com/_/+1/confirm?hl=enurl={Permalink}" class="google">Google+</a></li> -->
+            </ul>
+          </section>
+        </footer>
+
+        {block:PermalinkPage}
+          {block:NoteCount}
+          <div id="notes">
+            <h2>{NoteCount} Notes</span></h2>
+            {PostNotes}
+          </div>
+        {/block:NoteCount}
+
+          {block:Date}
+            {block:IfDisqusShortname}
+              <div id="disqus">
+                <h2>{lang:Recent comments}</h2>
+                <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                  var disqus_identifier = {PostID};
+                    (function() {
+                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                     dsq.src = 'http://' + disqusShortname + '.disqus.com/embed.js';
+                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                     })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:DisqusShortname}">comments powered by Disqus.</a></noscript>
+                {lang:Blog comments powered by Disqus 2}
+              </div>
+            {/block:IfDisqusShortname}
+          {/block:Date}
+        {/block:PermalinkPage}
+
+        </article>
+        {/block:Posts}
+
+        {block:NoSearchResults}
+        <section>
+          <h1 class="post-title">{lang:Sorry no posts found}</h1>
+          <p>{lang:No search results for SearchQuery 2}</p>
+        </section>
+        {/block:NoSearchResults}
+
+        {block:Pagination}
+        <div id="pagination">
+          {block:PreviousPage}<a class="prev" href="{PreviousPage}">{/block:PreviousPage}{lang:Newer}{block:PreviousPage}</a>{/block:PreviousPage}
+          {block:NextPage}<a class="next" href="{NextPage}">{/block:NextPage}{lang:Older}{block:NextPage}</a>{/block:NextPage}
+        </div>
+        {/block:Pagination}
+
+        {block:PermalinkPagination}
+        <div id="pagination">
+          <div class="nextprev">
+            {block:NextPost}<a class="prev" href="{NextPost}">{/block:NextPost}{lang:Previous}{block:NextPost}</a>{/block:NextPost}
+            {block:PreviousPost}<a class="next" href="{PreviousPost}">{/block:PreviousPost}{lang:Next}{block:PreviousPost}</a>{/block:PreviousPost}
+          </div>
+        </div>
+        {/block:PermalinkPagination}
+      </section>
+
+      <aside class="sidebar">
+        <section class="bio">
+          <h2>{lang:About}</h2>
+          <img class="portrait" src="{PortraitURL-128}" alt="Avatar"/>
+          <p>{Description}</p>
+        </section><!--/#blog-info -->
+
+        <section id="search">
+          <form id="search-form" method="get" action="/search">
+            <span class="left"></span>
+            <input type="text" name="q" value="{block:IfDefaultSearchText}{text:Default Search Text}{/block:IfDefaultSearchText}" />
+            <span class="right"></span>
+          </form>
+        </section>
+
+        {block:Twitter}
+        <section id="twitter" style="display:none;">
+          <h2><a href="http://twitter.com/{TwitterUsername}">Latest Tweets</a></h2>
+
+          <div id="tweets"></div>
+        </section>
+
+        <script type="text/javascript">
+          function recent_tweets(data) {
+            for (i=0; i<data.length; i++) {
+              document.getElementById("tweets").innerHTML =
+                document.getElementById("tweets").innerHTML +
+                '<a href="http://twitter.com/{TwitterUsername}/status/' +
+                (data[i].id_str ? data[i].id_str : data[i].id) +
+                '"><div class="content">' + data[i].text +
+                '</div></a>';
+            }
+            document.getElementById("twitter").style.display = 'block';
+          }
+        </script>
+        {/block:Twitter}
+
+        <section class="reading">
+          <h2>{text:Reading Header}</h2>
+          <h3>{text:Reading Book}</h3>
+          <span>{text:Reading Author}</span>
+        </section>
+
+        {block:IfShowBlogsIFollow}
+          {block:Following}
+          <section class="followed">
+            <h2>{lang:Following}</h2>
+            <ul>
+              {block:Followed}<li><a href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-24}"></a><span>{FollowedName}</span></li>{/block:Followed}
+            </ul>
+          </section>
+          {/block:Following}
+        {/block:IfShowBlogsIFollow}
+
+        {block:IfShowLikes}
+          {block:Likes}
+          <section class="likes">
+            <h2>{text:Liked Posts Heading}</h2>
+            {Likes limit="4" summarize="150" width="170"}
+            <a class="more-likes" href="/liked/by/{Name}">{lang:See more}</a>
+          </section>
+          {/block:Likes}
+        {/block:IfShowLikes}
+      </aside>
+
+      <footer class="main">
+        {block:IfCopyrightText}<p class="copyright">{text:Copyright Text}.</p>{/block:IfCopyrightText}
+
+        <ul id="footer-links">
+          <li><a href="/rss">{lang:RSS}</a></li>
+          <li><a href="/archive">{lang:Archive}</a></li>
+          {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+          {block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+        </ul>
+      </footer>
+    </section>
+
+    {block:Twitter}
+    <script type="text/javascript" src="/tweets.js"></script>
+    {/block:Twitter}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://static.tumblr.com/hugxd2w/s4om61ic8/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+    {block:IfGoogleAnalyticsWebPropertyID}
+    <script type="text/javascript">
+      var _gaq=[["_setAccount","{text:Google Analytics Web Property ID}"],["_trackPageview"]];
+      (function(d,t){
+       var g=d.createElement(t), s=d.getElementsByTagName(t)[0];
+       g.async=1;
+       g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+       s.parentNode.insertBefore(g,s)
+       }(document,"script"));
+    </script>
+    {/block:IfGoogleAnalyticsWebPropertyID}
+  </body>
+</html>
