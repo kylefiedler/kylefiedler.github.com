@@ -7,40 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-
-    <!--Typekit-->
-    <script type="text/javascript" src="http://use.typekit.com/vzw1iuz.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/vzw1iuz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
 
-  <body class="index {{ page.keyword }}">
-    <section>
-      <header>
-        <img src="/images/k3.jpg" alt="Kyle Fiedler" />
-
-        <nav>
-          <h1>Kyle Fiedler</h1>
-        </nav>
-      </header>
-
-      {{ content }}
-
-      <footer class="main">
-        <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
-
+  <body>
+    <header class="main">
+      <nav>
+        <h1><a href="/">Kyle Fiedler</a></h1>
         <ul class="social">
-          <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
-          <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
-          <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
-          <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
-          <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+          <li><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+          <li><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+          <li><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+          <li><a href="https://github.com/kylefiedler">Github</a></li>
+          <li><a href="mailto:kyle@kylefiedler.com">Email</a></li>
         </ul>
+      </nav>
+    </header>
 
-        <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
-      </footer>
-    </section>
+    {{ content }}
 
-
+    <footer class="main">
+      <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
+      <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+    </footer>
   </body>
 </html>
-

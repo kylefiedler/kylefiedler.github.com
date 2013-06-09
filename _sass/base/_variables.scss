@@ -1,0 +1,29 @@
+// All global variables -- Any variable used in more than one file
+
+// Font Stack
+$sans-serif: $helvetica;
+$serif: $georgia;
+$base-font-family: "aktiv-grotesk-std-1","aktiv-grotesk-std-2", $sans-serif;
+$header-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: em(18);
+$base-line-height: em(24);
+
+// Colors
+$blue: #56c4d5;
+$red: #f1595c;
+$purple: #bda5d7;
+$dark-gray: #404a51;
+$light-gray: #bcbcbc;
+
+//  Font Colors
+$base-color: $dark-gray;
+$base-accent: $red;
+
+//  Text Link Colors
+$base-link-color: $base-accent;
+$base-hover-color: shade($base-accent, 15);
+
+// Border color
+$base-border-color: $light-gray;

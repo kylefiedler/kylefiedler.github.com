@@ -191,7 +191,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -371,7 +371,7 @@ body {
       float: left;
       margin-right: 2.35765%;
       width: 23.23176%;
-      padding: 1em 1em 0.5em;
+      padding: 1em 1em .5em;
       border: 1px solid #252a27;
       background: rgba(49, 55, 52, 0.4);
       box-shadow: inset 0 0 20px #313734, 0 1px 0 #616e67; }
@@ -402,7 +402,7 @@ body {
         font-size: 1.2em;
         text-shadow: 0 -1px 0 #252a27;
         color: #dfc5a6;
-        margin: 0 0 0.5em 0.5em;
+        margin: 0 0 .5em .5em;
         -webkit-mask-image: url("/images/experiments/countdown/text-mask.png"); }
       body ol li p {
         font-size: 200px;

@@ -1,7 +1,6 @@
 permalink: /blog/:title
-auto: true
 lsi: true
-paginate: 5 //the number of post per page
+paginate: 6 //the number of post per page
 name: Kyle Fiedler
 description: Inside the mind of a boring person
 url: http://kylefiedler.com

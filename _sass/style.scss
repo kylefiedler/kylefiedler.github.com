@@ -1,18 +1,9 @@
-@import 'normalize';
-@import 'bourbon/bourbon';
-@import 'variables';
-@import 'neat/neat';
-@import 'fontello';
+@import "normalize";
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
 
-@import 'animations';
-@import 'mixins';
-@import "extends";
-@import 'base';
-@import 'pagination';
-@import 'index';
-@import 'header';
-@import 'footer';
-@import 'default';
-@import 'post';
-@import 'portfolio';
-@import 'experiments';
+@import "layout";
+@import "index";
+@import "post";

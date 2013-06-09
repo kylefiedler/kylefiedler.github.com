@@ -1,23 +1,33 @@
 ---
 layout: index
 title: Kyle Fiedler
-keyword: home
 ---
-<nav>
-  <ul>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/experiments">Experiments</a></li>
-  </ul>
-</nav>
+<section class="articles">
+  <ol>
+    {% for post in paginator.posts %}
+      <li>
+        <a href="{{ post.url }}">
+          <time>{{post.date | date: "%m.%d.%y"}}</time>
+          <h1>{{ post.title }}</h1>
+          <span class="word-count">{{ post.content | count_words }} wrds</span>
+          <span class="reading-time">{{ post.content | count_seconds }} min</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
 
-<p>A husband &amp; father, web and iOS application designer at <a href="http://thoughtbot.com">thoughtbot</a>, one half of <a href="http://atedrake.com">Atedrake</a>, baseball enthusiast, and drinker of craft beer.</p>
+  <nav class="pagination">
+    {% if paginator.next_page %}
+      <a href="/page{{paginator.next_page}}" class="older">&larr; Older</a>
+    {% endif %}
 
-<ul class="social">
-  <li class="dribbble"><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
-  <li class="twitter"><a href="https://twitter.com/kylefiedler">Twitter</a></li>
-  <li class="tumblr"><a href="http://allsortsofshit.kylefiedler.com/">Tumblr</a></li>
-  <li class="rdio"><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
-  <li class="github"><a href="https://github.com/kylefiedler">Github</a></li>
-  <li class="email"><a href="mailto:kyle@kylefiedler.com">Email</a></li>
-</ul>
+    {% if paginator.previous_page == 1 %}
+    <a href="/" class="newer">Newer &rarr;</a>
+
+    {% elsif paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}" class="newer">Newer &rarr;</a>
+    {% endif %}
+
+  </nav>
+</section>
+
