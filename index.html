@@ -1,33 +1,29 @@
----
-layout: index
-title: Kyle Fiedler
----
-<section class="articles">
-  <ol>
-    {% for post in paginator.posts %}
-      <li>
-        <a href="{{ post.url }}">
-          <time>{{post.date | date: "%m.%d.%y"}}</time>
-          <h1>{{ post.title }}</h1>
-          <span class="word-count">{{ post.content | count_words }} wrds</span>
-          <span class="reading-time">{{ post.content | count_seconds }} min</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Description" name="Description" content="Kyle enjoys a well made peanut butter and jelly sandwich cut in 2 triangles." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Fiedler</title>
+    <script type="text/javascript" src="//use.typekit.net/vzw1iuz.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>   <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-  <nav class="pagination">
-    {% if paginator.next_page %}
-      <a href="/page{{paginator.next_page}}" class="older">&larr; Older</a>
-    {% endif %}
+  <body>
+    <h1>Kyle Fiedler</h1>
+    <p class="about">Kyle enjoys a well made peanut butter and jelly sandwich cut in 2 triangles.  He&rsquo;s sarcastic, lacks confidence at times and is often passive aggressive. He makes a mean french toast and loves hugs. He really enjoys making useful things. Of course he loves a good beer too.</p>
+    <ul class="social">
+      <li><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
+      <li><a href="https://twitter.com/kylefiedler">Twitter</a></li>
+      <li><a href="http://www.rdio.com/people/kfiedler/">Rdio</a></li>
+      <li><a href="https://github.com/kylefiedler">Github</a></li>
+      <li><a href="http://blog.kylefiedler.com">Tumblr</a></li>
+    </ul>
 
-    {% if paginator.previous_page == 1 %}
-    <a href="/" class="newer">Newer &rarr;</a>
-
-    {% elsif paginator.previous_page %}
-    <a href="/page{{paginator.previous_page}}" class="newer">Newer &rarr;</a>
-    {% endif %}
-
-  </nav>
-</section>
+    <footer class="main">
+      <p class="copy">&copy;Kyle Fiedler {{ site.time | date: "%Y" }}</p>
+      <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
+    </footer>
+  </body>
+</html>
 
