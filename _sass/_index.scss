@@ -28,7 +28,7 @@ header.about {
     font-size: 1em;
     font-style: italic;
     color: $light-gray;
-    font-weight: 200;
+    font-weight: normal;
     line-height: 1.5em;
   }
 
@@ -43,7 +43,7 @@ header.about {
 
   h3 {
     font-size: em(14, 16);
-    font-weight: 200;
+    font-weight: normal;
     margin-top: 3em;
   }
 

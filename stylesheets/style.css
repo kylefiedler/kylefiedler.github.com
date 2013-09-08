@@ -435,7 +435,7 @@ header.about {
     font-size: 1em;
     font-style: italic;
     color: #dddddd;
-    font-weight: 200;
+    font-weight: normal;
     line-height: 1.5em; }
   header.about hr {
     width: 25%;
@@ -444,7 +444,7 @@ header.about {
     color: #fff; }
   header.about h3 {
     font-size: 0.875em;
-    font-weight: 200;
+    font-weight: normal;
     margin-top: 3em; }
   header.about a {
     display: inline-block;
