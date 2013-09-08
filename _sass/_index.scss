@@ -1,69 +1,73 @@
-section.articles {
-  margin: 2em 0;
-  padding: 0 0 2em;
+body.index {
+  min-height: 100vh;
+  background: url('/images/bg-kyle-1.jpg') bottom left no-repeat;
+  background-size: cover;
+}
 
-  ol {
-    margin: 0 0 1em 0;
-    list-style: none;
-    padding: 2em 0 0;
+header.about {
+  padding: 3em;
 
-    li {
-      @include row;
-      margin-bottom: 2em;
-    }
+  @include media(600px) {
+    padding: 3em 5vw 0 20vw;
+  };
 
-    h1 {
-      font-size: em(42, 18);
-      margin: 0;
+  @include media(800px) {
+    padding: 10vh 10vw 0 60vw;
+  };
 
-      @include media(em(850)) {
-        @include span-columns(6);
-      };
-    }
+  @include media(930px) {
+    padding: 25vh 10vw 0 60vw;
+  };
 
-    time {
-      color: $light-gray;
-      font-size: em(20, 18);
-      font-weight: 200;
-      margin-top: em(16, 18);
-      -webkit-font-smoothing: antialiased;
+  h1 {
+    color: #fff;
+    font-size: em(24);
+  }
 
-      @include media(em(850)){
-        @include span-columns(2);
-      }
-    }
+  h2 {
+    font-size: 1em;
+    font-style: italic;
+    color: $light-gray;
+    font-weight: 200;
+    line-height: 1.5em;
+  }
 
-    .word-count, .reading-time {
-      color: darken($light-gray, 20);
-      font-size: em(26, 18);
-      font-weight: 200;
-      margin-top: em(12, 18);
-      -webkit-font-smoothing: antialiased;
+  hr {
+    width: 25%;
+    border-color: darken($base-border-color, 20);
+  }
 
-      @include media(em(850)) {
-        @include span-columns(2);
-      };
+  p {
+    color: #fff;
+  }
+
+  h3 {
+    font-size: em(14, 16);
+    font-weight: 200;
+    margin-top: 3em;
+  }
+
+  a {
+    @include inline-block;
+    color: rgba(#fff, .8);
+    padding: em(8) em(12);
+    border-radius: 3px;
+    font-style: italic;
+    border: 1px solid rgba(#fff, .4);
+    @include transition;
+
+    // @include media(940px) {
+    //   border: 1px solid darken($light-gray, 15);
+    // };
+
+    &:hover {
+      @include transition;
+      border-color: $base-font-color;
+      color: $base-font-color;
     }
   }
 }
 
-.pagination {
-  -webkit-font-smoothing: antialiased;
-  opacity: .5;
-  @include transition(color 1s);
-
-  @include media(em(850)) {
-    @include shift(2);
-  };
-
-  &:hover {
-    opacity: 1;
-    @include transition(color 1s);
-  }
-
-  a {
-    color: lighten($dark-gray, 40);
-    @include inline-block;
-    margin-right: 1em;
-  }
+footer {
+  display: none;
 }
