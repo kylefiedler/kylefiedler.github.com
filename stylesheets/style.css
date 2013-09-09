@@ -489,10 +489,14 @@ body.blog {
         vertical-align: baseline;
         zoom: 1;
         *display: inline;
-        *vertical-align: auto; }
+        *vertical-align: auto;
+        margin-left: .5em; }
+  body.blog hr {
+    margin: 1.5em 25%; }
   body.blog article {
     *zoom: 1;
-    display: block; }
+    display: block;
+    margin-bottom: 2em; }
     body.blog article:before, body.blog article:after {
       content: " ";
       display: table; }
@@ -502,7 +506,7 @@ body.blog {
       display: block;
       float: left;
       margin-right: 4.34783%;
-      width: 13.04348%;
+      width: 30.43478%;
       opacity: .6; }
       body.blog article aside:last-child {
         margin-right: 0; }
