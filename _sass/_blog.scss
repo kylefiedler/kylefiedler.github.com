@@ -35,7 +35,7 @@ body.blog {
     }
 
     div {
-      @include span-columns(6);
+      @include span-columns(4);
     }
   }
 }
