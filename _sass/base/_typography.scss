@@ -30,17 +30,19 @@ p {
 
 a {
   &:link, &:visited {
-    color: $base-link-color;
+    color: $base-font-color;
     text-decoration: none;
     @include transition(color 0.1s linear);
+    border-bottom: 1px solid lighten($base-font-color, 20);
   }
 
   &:hover {
-    color: $hover-link-color;
+    color: darken($base-font-color, 20);
+    border-bottom: 1px solid darken($base-font-color, 10);
   }
 
   &:active, &:focus {
-    color: $hover-link-color;
+    color: darken($base-font-color, 20);
     outline: none;
   }
 }

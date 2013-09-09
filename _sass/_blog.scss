@@ -1,11 +1,39 @@
 body.blog {
-  max-width: 860px;
   padding: 2em;
-  margin: 0 auto;
+  @include outer-container;
 
   header {
     h1 {
-      font-size: 1em;
+      font-size: em(20);
+      float: left;
+
+      a {
+        border-bottom: 0;
+      }
+    }
+
+    ul {
+      font-size: em(20);
+      float: right;
+
+      li {
+        @include inline-block;
+      }
+    }
+  }
+
+  article {
+    aside {
+      @include span-columns(1);
+      opacity: .6;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    div {
+      @include span-columns(5);
     }
   }
 }
