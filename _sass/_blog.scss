@@ -3,6 +3,9 @@ body.blog {
   @include outer-container;
 
   header {
+    @include row;
+    margin-bottom: 2em;
+
     h1 {
       font-size: em(20);
       float: left;
@@ -13,7 +16,6 @@ body.blog {
     }
 
     ul {
-      font-size: em(20);
       float: right;
 
       li {
@@ -33,7 +35,7 @@ body.blog {
     }
 
     div {
-      @include span-columns(5);
+      @include span-columns(6);
     }
   }
 }
