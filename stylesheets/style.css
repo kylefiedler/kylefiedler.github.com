@@ -349,7 +349,7 @@ a:link, a:visited {
   -ms-transition: color 0.1s linear;
   -o-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  border-bottom: 1px solid #666666; }
+  border-bottom: 1px solid #dddddd; }
 a:hover {
   color: black;
   border-bottom: 1px solid #1a1a1a; }
@@ -490,20 +490,28 @@ body.blog {
         zoom: 1;
         *display: inline;
         *vertical-align: auto; }
-  body.blog article aside {
-    display: block;
-    float: left;
-    margin-right: 4.34783%;
-    width: 13.04348%;
-    opacity: .6; }
-    body.blog article aside:last-child {
-      margin-right: 0; }
-    body.blog article aside:hover {
-      opacity: .8; }
-  body.blog article div {
-    display: block;
-    float: left;
-    margin-right: 4.34783%;
-    width: 65.21739%; }
-    body.blog article div:last-child {
-      margin-right: 0; }
+  body.blog article {
+    *zoom: 1;
+    display: block; }
+    body.blog article:before, body.blog article:after {
+      content: " ";
+      display: table; }
+    body.blog article:after {
+      clear: both; }
+    body.blog article aside {
+      display: block;
+      float: left;
+      margin-right: 4.34783%;
+      width: 13.04348%;
+      opacity: .6; }
+      body.blog article aside:last-child {
+        margin-right: 0; }
+      body.blog article aside:hover {
+        opacity: .8; }
+    body.blog article > div {
+      display: block;
+      float: left;
+      margin-right: 4.34783%;
+      width: 65.21739%; }
+      body.blog article > div:last-child {
+        margin-right: 0; }

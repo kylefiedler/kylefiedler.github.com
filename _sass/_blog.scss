@@ -25,6 +25,8 @@ body.blog {
   }
 
   article {
+    @include row;
+
     aside {
       @include span-columns(1);
       opacity: .6;
@@ -34,7 +36,7 @@ body.blog {
       }
     }
 
-    div {
+    > div {
       @include span-columns(4);
     }
   }
