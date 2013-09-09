@@ -53,14 +53,6 @@
 
       {block:Posts}
       <article class="post {TagsAsClasses}">
-        <aside>
-          {block:Date}
-          {block:NewDayDate}<p class="date">{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
-          {block:SameDayDate}<p class="date">{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}
-          {/block:Date}
-          {block:IndexPage}<p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>{/block:IndexPage}
-        </aside>
-
         {block:Text}
         <div class="text">
           {block:Title}<h2>{Title}</h2>{/block:Title}
@@ -84,7 +76,9 @@
 
         {block:Video}
         <div class="video">
-          {Video-500}
+          <div class="video-container">
+            {Video-500}
+          </div>
           {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
         </div>
         {/block:Video}
@@ -141,6 +135,14 @@
           {Answer}
         </div>
         {/block:Answer}
+
+        <aside>
+          {block:Date}
+          {block:NewDayDate}<p class="date"><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:NewDayDate}
+          {block:SameDayDate}<p class="date"><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:SameDayDate}
+          {/block:Date}
+        </aside>
+
       </article>
       {/block:Posts}
 
