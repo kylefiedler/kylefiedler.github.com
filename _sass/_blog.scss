@@ -9,6 +9,7 @@ body.blog {
     h1 {
       font-size: em(20);
       text-align: center;
+      margin-bottom: 1em;
 
       a {
         border-bottom: 0;
@@ -24,6 +25,7 @@ body.blog {
         @include inline-block;
         margin-left: .5em;
         font-style: italic;
+        font-size: em(14);
       }
     }
   }
@@ -39,13 +41,16 @@ body.blog {
     aside {
       opacity: .4;
       font-style: italic;
-      font-size: em(14, 16);
-      text-align: right;
+      font-size: em(14);
 
       &:hover {
         opacity: .8;
       }
     }
+  }
+
+  img {
+    margin-bottom: 1em;
   }
 
   .video-container {
@@ -54,6 +59,7 @@ body.blog {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
+    margin-bottom: 1em;
 
     iframe,
     object,

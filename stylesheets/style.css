@@ -479,7 +479,8 @@ body.blog {
       clear: both; }
     body.blog header h1 {
       font-size: 1.25em;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 1em; }
       body.blog header h1 a {
         border-bottom: 0; }
     body.blog header ul {
@@ -493,7 +494,8 @@ body.blog {
         *display: inline;
         *vertical-align: auto;
         margin-left: .5em;
-        font-style: italic; }
+        font-style: italic;
+        font-size: 0.875em; }
   body.blog hr {
     margin: 1.5em 30% 3em; }
   body.blog article {
@@ -508,16 +510,18 @@ body.blog {
     body.blog article aside {
       opacity: .4;
       font-style: italic;
-      font-size: 0.875em;
-      text-align: right; }
+      font-size: 0.875em; }
       body.blog article aside:hover {
         opacity: .8; }
+  body.blog img {
+    margin-bottom: 1em; }
   body.blog .video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 1em; }
     body.blog .video-container iframe,
     body.blog .video-container object,
     body.blog .video-container embed {
