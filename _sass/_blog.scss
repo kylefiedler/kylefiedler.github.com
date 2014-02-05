@@ -1,6 +1,6 @@
 body.blog {
-  padding: 2em;
   @include outer-container;
+  padding: 2em;
 
   header {
     @include row;
@@ -71,5 +71,4 @@ body.blog {
       height: 100%;
     }
   }
-
 }

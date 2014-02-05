@@ -458,11 +458,11 @@ footer {
   display: none; }
 
 body.blog {
-  padding: 2em;
   *zoom: 1;
   max-width: 600px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 2em; }
   body.blog:before, body.blog:after {
     content: " ";
     display: table; }
