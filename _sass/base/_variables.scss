@@ -1,6 +1,9 @@
 // Font Stack
-$serif: "adelle", "abril-text", $georgia;
+$serif:"Tisa Pro", "adelle", "abril-text", $georgia;
+$sans-serif: "Tisa Sans Pro", $helvetica;
+
 $base-font-family: $serif;
+$header-font-family: $sans-serif;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////

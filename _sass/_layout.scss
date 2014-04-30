@@ -1,0 +1,56 @@
+.inner-container {
+  @include outer-container;
+}
+
+header.main-navigation {
+  background: #fff;
+  font-family: $header-font-family;
+
+  .inner-container {
+    max-width: 400px;
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  h1 {
+    font-size: 1em;
+  }
+
+  hr {
+    width: 25%;
+    margin: 2em auto;
+  }
+}
+
+.main-content {
+  background: #fff;
+  padding-bottom: 4em;
+}
+
+.about {
+  background-color: #60b78d;
+  padding: 3em;
+
+  img {
+    @include size( 13em );
+    border-radius: 50%;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: -4em;
+    margin-right: 2em;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  ul {
+    li {
+      @include inline-block;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}

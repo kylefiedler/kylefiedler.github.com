@@ -1,68 +1,65 @@
-body.index {
-  min-height: 100vh;
-  background: url('/images/bg-kyle-1.jpg') bottom left no-repeat;
-  background-size: cover;
-}
+.main-content {
+  header {
+    max-width: 450px;
+    padding-bottom: 4em;
+    text-align: center;
+    margin: 0 auto;
 
-header.about {
-  padding: 3em;
-
-  @include media(600px) {
-    padding: 3em 5vw 0 20vw;
-  };
-
-  @include media(800px) {
-    padding: 10vh 10vw 0 60vw;
-  };
-
-  @include media(930px) {
-    padding: 25vh 10vw 0 60vw;
-  };
-
-  h1 {
-    color: #fff;
+    p {
+      color: lighten($base-font-color, 40);
+      font-style: italic;
+    }
   }
 
-  h2 {
-    font-size: 1em;
-    font-style: italic;
-    color: $light-gray;
-    font-weight: normal;
-    line-height: 1.5em;
+  ol.blog {
+    li {
+      margin-bottom: 3em;
+
+      &:hover {
+        .suggest-edits {
+          @include transition ( all 1.0s ease-in-out );
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      h1 {
+        font-family: $header-font-family;
+        font-size: em(16);
+        font-style: italic;
+        font-weight: normal;
+        margin-bottom: 2em;
+        text-align: center;
+
+        a {
+          color: lighten($base-font-color, 40);
+        }
+      }
+
+      p {
+        font-size: em(18);
+        margin-bottom: 0;
+
+        & + p {
+          text-indent: 2em;
+        }
+      }
+
+      .suggest-edits {
+        visibility: hidden;
+        opacity: 0;
+        @include transition ( all 1.0s ease-in-out );
+      }
+    }
   }
 
-  hr {
-    width: 25%;
-    border-color: darken($base-border-color, 20);
-  }
+  nav.pagination {
+    text-align: center;
 
-  p {
-    color: #fff;
-  }
-
-  h3 {
-    font-size: em(14, 16);
-    font-weight: normal;
-    margin-top: 3em;
-  }
-
-  a {
-    @include inline-block;
-    color: rgba(#fff, .8);
-    padding: em(8) em(12);
-    border-radius: 3px;
-    font-style: italic;
-    border: 1px solid rgba(#fff, .4);
-    @include transition;
-
-    // @include media(940px) {
-    //   border: 1px solid darken($light-gray, 15);
-    // };
-
-    &:hover {
-      @include transition;
-      border-color: $base-font-color;
-      color: $base-font-color;
+    li {
+      @include inline-block;
+      margin-right: .75em;
+      opacity: .4;
     }
   }
 }

@@ -1,4 +1,4 @@
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -320,7 +320,8 @@ table {
 body {
   -webkit-font-smoothing: antialiased;
   color: #333333;
-  font-family: "adelle", "abril-text", Georgia, Cambria, "Times New Roman", Times, serif;
+  background-color: #60b78d;
+  font-family: "Tisa Pro", "adelle", "abril-text", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1em;
   line-height: 1.5em; }
 
@@ -396,63 +397,106 @@ dl {
   dl dd {
     margin: 0; }
 
-body.index {
-  min-height: 100vh;
-  background: url("/images/bg-kyle-1.jpg") bottom left no-repeat;
-  background-size: cover; }
+.inner-container {
+  *zoom: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+  .inner-container:before, .inner-container:after {
+    content: " ";
+    display: table; }
+  .inner-container:after {
+    clear: both; }
 
-header.about {
+header.main-navigation {
+  background: #fff;
+  font-family: "Tisa Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  header.main-navigation .inner-container {
+    max-width: 400px;
+    text-align: center;
+    padding: 3em 0 2em; }
+  header.main-navigation h1 {
+    font-size: 1em; }
+  header.main-navigation hr {
+    width: 25%;
+    margin: 2em auto; }
+
+.main-content {
+  background: #fff;
+  padding-bottom: 4em; }
+
+.about {
+  background-color: #60b78d;
   padding: 3em; }
-  @media screen and (min-width: 600px) {
-    header.about {
-      padding: 3em 5vw 0 20vw; } }
-  @media screen and (min-width: 800px) {
-    header.about {
-      padding: 10vh 10vw 0 60vw; } }
-  @media screen and (min-width: 930px) {
-    header.about {
-      padding: 25vh 10vw 0 60vw; } }
-  header.about h1 {
+  .about img {
+    width: 13em;
+    height: 13em;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: -4em;
+    margin-right: 2em; }
+  .about p {
     color: #fff; }
-  header.about h2 {
+  .about ul li {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto; }
+  .about a {
+    color: #fff; }
+
+.main-content header {
+  max-width: 450px;
+  padding-bottom: 4em;
+  text-align: center;
+  margin: 0 auto; }
+  .main-content header p {
+    color: #999999;
+    font-style: italic; }
+.main-content ol.blog li {
+  margin-bottom: 3em; }
+  .main-content ol.blog li:hover .suggest-edits {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+    visibility: visible; }
+  .main-content ol.blog li h1 {
+    font-family: "Tisa Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
     font-style: italic;
-    color: #dddddd;
     font-weight: normal;
-    line-height: 1.5em; }
-  header.about hr {
-    width: 25%;
-    border-color: #aaaaaa; }
-  header.about p {
-    color: #fff; }
-  header.about h3 {
-    font-size: 0.875em;
-    font-weight: normal;
-    margin-top: 3em; }
-  header.about a {
+    margin-bottom: 2em;
+    text-align: center; }
+    .main-content ol.blog li h1 a {
+      color: #999999; }
+  .main-content ol.blog li p {
+    font-size: 1.125em;
+    margin-bottom: 0; }
+    .main-content ol.blog li p + p {
+      text-indent: 2em; }
+  .main-content ol.blog li .suggest-edits {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+.main-content nav.pagination {
+  text-align: center; }
+  .main-content nav.pagination li {
     display: inline-block;
     vertical-align: baseline;
     zoom: 1;
     *display: inline;
     *vertical-align: auto;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.5em 0.75em;
-    border-radius: 3px;
-    font-style: italic;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    -webkit-transition: all 0.15s ease-out 0;
-    -moz-transition: all 0.15s ease-out 0;
-    -ms-transition: all 0.15s ease-out 0;
-    -o-transition: all 0.15s ease-out 0;
-    transition: all 0.15s ease-out 0; }
-    header.about a:hover {
-      -webkit-transition: all 0.15s ease-out 0;
-      -moz-transition: all 0.15s ease-out 0;
-      -ms-transition: all 0.15s ease-out 0;
-      -o-transition: all 0.15s ease-out 0;
-      transition: all 0.15s ease-out 0;
-      border-color: #333333;
-      color: #333333; }
+    margin-right: .75em;
+    opacity: .4; }
 
 footer {
   display: none; }
