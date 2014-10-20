@@ -1,74 +1,14 @@
-body.blog {
-  @include outer-container;
-  padding: 2em;
+section.blog {
+  padding: 0 ($base-line-height * 2) ($base-line-height * 2);
+  max-width: em(700);
 
-  header {
-    @include row;
-    margin-bottom: 2em;
+  h1 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: $base-line-height;
 
-    h1 {
-      font-size: em(20);
-      text-align: center;
-      margin-bottom: 1em;
-
-      a {
-        border-bottom: 0;
-      }
-    }
-
-    ul {
-      opacity: .4;
-      text-align: center;
-      padding-left: 0;
-
-      li {
-        @include inline-block;
-        margin-left: .5em;
-        font-style: italic;
-        font-size: em(14);
-      }
-    }
-  }
-
-  hr {
-    margin: 1.5em 30% 3em;
-  }
-
-  article {
-    @include row;
-    margin-bottom: 2em;
-
-    aside {
-      opacity: .4;
-      font-style: italic;
-      font-size: em(14);
-
-      &:hover {
-        opacity: .8;
-      }
-    }
-  }
-
-  img {
-    margin-bottom: 1em;
-  }
-
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1em;
-
-    iframe,
-    object,
-    embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    a {
+      color: #aaa;
     }
   }
 }

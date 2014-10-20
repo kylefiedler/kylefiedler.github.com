@@ -1,0 +1,37 @@
+header.main {
+  padding: $base-line-height * 2;
+
+  h1 {
+    font-size: em(18);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: $base-line-height;
+  }
+
+  nav {
+    display: inline-block;
+    margin-right: $base-line-height;
+
+    ul {
+      display: inline-block;
+      margin-right: $base-line-height;
+
+      &.social {
+        font-weight: 200;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: $base-line-height * .75;
+
+        a {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+footer.main {
+  display: none;
+}

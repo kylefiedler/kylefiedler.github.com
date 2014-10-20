@@ -1,0 +1,10 @@
+section.portfolio {
+  li {
+    @include media(em(800)) {
+      width: 50%;
+      float: left;
+      background-color: #F3F3F3;
+      height: em(300);
+    };
+  }
+}
