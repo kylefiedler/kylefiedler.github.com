@@ -9,140 +9,131 @@
 
     <link rel="apple-touch-icon" href="{PortraitURL-128}">
     <link rel="shortcut icon" href="http://kylefiedler.com/favicon.ico">
-    <link rel="stylesheet" href="http://kylefiedler.com/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <script type="text/javascript" src="//use.typekit.net/vog4txp.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
 
   <body class="blog">
-    <header>
-      <h1><a href="/">{Title}</a></h1>
-      {block:Description}<div class="description">{Description}</div>{/block:Description}
+    <header class="main">
+      <h1><a "http://kylefiedler.com">Kyle Fiedler</a></h1>
+      <nav>
+        <ul>
+          <li> <a href="http://kylefiedler.com">About</a></li>
+          <li><a href="http://blog.kylefiedler.com">Blog</a></li>
+          <li><a href="http://kylefiedler.com/playground">Playground</a></li>
 
-      <ul id="nav">
-        <li><a href="http://dribbble.com/kylefiedler">Dribbble</a></li>
-        <li><a href="http://twitter.com/kylefiedler">Twitter</a></li>
-        <li><a href="http://rdio.com/kylefiedler">Rdio</a></li>
-        <li><a href="http://github.com/kylefiedler">Github</a></li>
-        <li><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+          <li>
+            <a href="#" class="dropdown-action">Select Work</a>
 
-        <!-- {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages} -->
-        <!-- <li><a href="/archive">{lang:Archive}</a></li> -->
-        <!-- {block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled} -->
-      </ul>
-
-      <!-- <form id="search" action="/search" method="get"> -->
-      <!--   <input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}"> -->
-      <!--   <input type="submit" value="{lang:Search}"> -->
-      <!-- </form> -->
+            <ul class="dropdown">
+              <li><a href="#">Character Growth Card</a></li>
+              <li><a href="#">Development Portal</a></li>
+              <li><a href="#">Philly Startup Leaders</a></li>
+              <li><a href="#">MITx / edX</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <hr />
-
-    <section class="content">
-      {block:SearchPage}
-      <div class="result">
-        <p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
-        {block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
-      </div>
-      {/block:SearchPage}
-
-      {block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
-
+    <main class="blog">
       {block:Posts}
+
       <article class="post {TagsAsClasses}">
-        {block:Text}
-        <div class="text">
-          {block:Title}<h2>{Title}</h2>{/block:Title}
-          {Body}
-        </div>
-        {/block:Text}
-
-        {block:Quote}
-        <div class="quote">
-          <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
-          {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
-        </div>
-        {/block:Quote}
-
-        {block:Link}
-        <div class="link">
-          <h2><a href="{URL}" {Target}>{Name}</a></h2>
-          {block:Description}<div class="caption">{Description}</div>{/block:Description}
-        </div>
-        {/block:Link}
-
-        {block:Video}
-        <div class="video">
-          <div class="video-container">
-            {Video-500}
-          </div>
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-        </div>
-        {/block:Video}
-
-        {block:Audio}
-        <div class="audio">
-          {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
-          {AudioPlayerBlack}
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-        </div>
-        {/block:Audio}
-        {block:Photo}
-        <div class="photo">
-          {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-        </div>
-        {/block:Photo}
-
-        {block:Photoset}
-        <div class="photoset">
-          {block:Photos}
-          <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-          {/block:Photos}
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-        </div>
-        {/block:Photoset}
-
-        {block:Panorama}
-        <div class="panorama">
-          {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-        </div>
-        {/block:Panorama}
-
-        {block:Chat}
-        <div class="chat">
-          {block:Title}<h2>{Title}</h2>{/block:Title}
-          <ul class="conversation">
-            {block:Lines}
-            <li class="line {Alt}">
-              {block:Label}<span class="person">{Label}</span>{/block:Label}
-              <span class="person-said">{Line}</span>
-            </li>
-            {/block:Lines}
-          </ul>
-        </div>
-        {/block:Chat}
-        {block:Answer}
-        <div class="answer">
-          <img src="{AskerPortraitURL-40}">
-          {Asker}
-          {Question}
-          {Answer}
-        </div>
-        {/block:Answer}
-
-        <aside>
+        <aside class="date">
           {block:Date}
-          {block:NewDayDate}<p class="date"><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:NewDayDate}
-          {block:SameDayDate}<p class="date"><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:SameDayDate}
+          {block:NewDayDate}<p><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:NewDayDate}
+          {block:SameDayDate}<p><a href="{Permalink}" class="permalink">{ShortMonth} {DayOfMonth}, {Year}</a></p>{/block:SameDayDate}
           {/block:Date}
         </aside>
 
+        {block:Text}
+          <div class="text">
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            {Body}
+          </div>
+        {/block:Text}
+
+        {block:Quote}
+          <div class="quote">
+            <blockquote><h2>{Quote}</h2></blockquote>
+            {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+          </div>
+        {/block:Quote}
+
+        {block:Link}
+          <div class="link">
+            <h2><a href="{URL}" {Target}>{Name}</a></h2>
+            {block:Description}<div class="caption">{Description}</div>{/block:Description}
+          </div>
+        {/block:Link}
+
+        {block:Video}
+          <div class="video">
+            <div class="video-wrapper">
+              {Video-500}
+            </div>
+
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+        {/block:Video}
+
+        {block:Audio}
+          <div class="audio">
+            {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+            {AudioPlayerBlack}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+        {/block:Audio}
+
+        {block:Photo}
+          <div class="photo">
+            {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+        {/block:Photo}
+
+        {block:Photoset}
+          <div class="photoset">
+            {block:Photos}
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            {/block:Photos}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+        {/block:Photoset}
+
+        {block:Panorama}
+          <div class="panorama">
+            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+          </div>
+        {/block:Panorama}
+
+        {block:Chat}
+          <div class="chat">
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            <ul class="conversation">
+              {block:Lines}
+              <li class="line {Alt}">
+                {block:Label}<span class="person">{Label}</span>{/block:Label}
+                <span class="person-said">{Line}</span>
+              </li>
+              {/block:Lines}
+            </ul>
+          </div>
+        {/block:Chat}
+
+        {block:Answer}
+          <div class="answer">
+            <img src="{AskerPortraitURL-40}">
+            {Asker}
+            {Question}
+            {Answer}
+          </div>
+        {/block:Answer}
       </article>
       {/block:Posts}
 
@@ -165,6 +156,6 @@
         {block:NextPage}<a class="next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
       </div>
       {/block:Pagination}
-    </section><!--close content-->
+    </main><!--close content-->
   </body>
 </html>

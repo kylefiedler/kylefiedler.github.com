@@ -1,81 +1,83 @@
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizelegibility; // Fix the character spacing for headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
   margin: 0;
-  line-height: 1.25em;
+  letter-spacing: -1px;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
-  font-size: $base-font-size * 1.5;
+  font-size: $h1-font-size;
 }
 
 h2 {
-  font-size: $base-font-size * 1.25;
+  font-size: $h2-font-size;
 }
 
 h3 {
-  font-size: $base-font-size;
+  font-size: $h3-font-size;
 }
 
 p {
-  margin: 0 0 ($base-line-height * .5);
+  color: $base-text-color;
+  font-size: rem(18);
+  margin: 0 0 ($base-spacing / 2);
 }
 
 a {
-  &:link, &:visited {
-    color: $base-font-color;
-    text-decoration: none;
-    @include transition(color 0.1s linear);
-    border-bottom: 1px solid $base-border-color;
-  }
+  @include transition(color 0.1s linear);
+  color: $base-link-color;
+  text-decoration: none;
 
   &:hover {
-    color: darken($base-font-color, 20);
-    border-bottom: 1px solid darken($base-font-color, 10);
+    color: $hover-link-color;
   }
 
   &:active, &:focus {
-    color: darken($base-font-color, 20);
+    color: $hover-link-color;
     outline: none;
   }
 }
 
 hr {
-  border-bottom: 1px solid $base-border-color;
+  border-bottom: $base-border;
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-line-height 0;
+  margin: $base-spacing 0;
 }
 
-img {
+img,
+picture {
   margin: 0;
   max-width: 100%;
-}
-
-hgroup {
-  margin-bottom: $base-line-height / 2;
+  line-height: 1;
+  vertical-align: bottom;
+  display: inline-block;
 }
 
 blockquote {
   border-left: 2px solid $base-border-color;
   color: lighten($base-font-color, 15);
-  margin: $base-line-height 0;
-  padding-left: $base-line-height / 2;
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
 }
 
 cite {
   color: lighten($base-font-color, 25);
   font-style: italic;
-
-  &:before {
-    content: '\2014 \00A0';
-  }
 }

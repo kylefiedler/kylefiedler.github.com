@@ -1,29 +1,28 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Description" name="Description" content="Kyle enjoys a well made peanut butter and jelly sandwich cut in 2 triangles." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyle Fiedler</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script type="text/javascript" src="//use.typekit.net/vog4txp.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  </head>
+---
+layout: default
+---
 
-  <body class="index">
-    <header class="about">
-      <h1>Kyle Fiedler</h1>
-      <h2>Product designer and managing director at thoughtbot.</h2>
-      <hr />
-      <p>Recently relocated to Philadelphia from Boston, but still a New Yorker at heart. Most of the time I am soft spoken, even though I try not to be. I love drinking craft beer, watching baseball, eating mexican food &ndash; especially guacamole &ndash; and spending time with my family. What I enjoy most, though, is creating things that work well and look good.</p>
-      <h3><a href="http://blog.kylefiedler.com">Blog</a></h3>
-    </header>
+<section class="about">
+  <h1>A profound statement about me would go right here. But I can&rsquo;t think of anything.</h1>
+  <p>I am digital product designer and Managing Director at <a href="http://thoughtbot.com">thoughtbot</a>. Most of the time I am soft spoken, even though I try not to be. I love drinking craft beer, watching baseball, eating Mexican food and spending time with my family. What I enjoy most, though, is creating things that work well and look good.</p>
 
-    <footer class="main">
-      <p class="copy">&copy;Kyle Fiedler 2013</p>
-      <p class="license">Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a></p>
-    </footer>
-  </body>
-</html>
+  <nav class="social">
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Dribbble</a></li>
+    <li><a href="#">GitHub</a></li>
+  </nav>
+</section>
 
+<div id="instafeed"></div>
+
+<script type="text/javascript" src="/javascript/instafeed.js"></script>
+<script type="text/javascript">
+  var userFeed = new Instafeed({
+    get: "user",
+    userId: 7346,
+    accessToken: "7346.467ede5.fba9bff2de194210ada5cd25045bd665",
+    limit: 4,
+    resolution: "standard_resolution"
+  });
+  userFeed.run();
+</script>

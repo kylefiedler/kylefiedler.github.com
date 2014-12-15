@@ -1,75 +1,27 @@
-body.blog {
-  padding: 2em;
+main.blog {
   @include outer-container;
+}
 
-  header {
-    @include row;
-    margin-bottom: 2em;
+.post {
+  position: relative;
 
-    h1 {
-      font-size: em(20);
-      text-align: center;
-      margin-bottom: 1em;
-
-      a {
-        border-bottom: 0;
-      }
-    }
-
-    ul {
-      opacity: .4;
-      text-align: center;
-      padding-left: 0;
-
-      li {
-        @include inline-block;
-        margin-left: .5em;
-        font-style: italic;
-        font-size: em(14);
-      }
-    }
-  }
-
-  hr {
-    margin: 1.5em 30% 3em;
-  }
-
-  article {
-    @include row;
-    margin-bottom: 2em;
-
-    aside {
-      opacity: .4;
-      font-style: italic;
-      font-size: em(14);
-
-      &:hover {
-        opacity: .8;
-      }
-    }
+  p {
+    color: $base-text-color;
+    font-size: em(18);
   }
 
   img {
-    margin-bottom: 1em;
+    display: block;
+    margin-bottom: 0.5em;
   }
+}
 
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 1em;
+.date {
+  @include position(absolute, 2em null null (-(flex-grid(2))));
+  font-size: em(14);
+  text-align: right;
+}
 
-    iframe,
-    object,
-    embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
+.pagination {
+  margin: 3em 0;
 }

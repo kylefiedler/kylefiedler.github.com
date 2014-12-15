@@ -1,0 +1,59 @@
+header.main {
+  @include position(absolute, 3em 0 null 0);
+  text-align: center;
+
+  h1 {
+    font-size: rem(24);
+    margin-right: rem(42);
+    display: inline-block;
+
+    a {
+      color: black;
+
+      &:hover {
+        color: $base-accent-color;
+      }
+    }
+  }
+
+  ul,
+  nav {
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: rem(42);
+    font-size: rem(16);
+
+    a {
+      color: $medium-gray;
+
+      &:hover {
+        color: $base-accent-color;
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-list {
+    @include position(absolute, 3em null null -100%);
+    background-color: rgba(black, 0.9);
+    width: rem(250);
+    padding: rem(16) 0;
+
+    li {
+      margin-right: 0;
+      display: block;
+    }
+
+    a {
+      color: white;
+      display: block;
+      padding: rem(8) rem(6);
+    }
+  }
+}

@@ -1,6 +1,11 @@
 name: Kyle Fiedler
 description: Inside the mind of a boring person
 url: http://kylefiedler.com
+
 exclude:
 - README
 - Rakefile
+
+sass:
+  sass_dir: _sass
+  style: :compressed
