@@ -1,0 +1,17 @@
+---
+layout: default
+class: writing secondary
+---
+
+%h3 Writing: Personal essays on life and design
+
+%ol.writing-index
+{% for post in site.posts %}
+  %li
+    %a{ href: "{{ post.url }}" }
+      %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+
+      %header
+        %h2 {{ post.title }}
+        %p {{ post.excerpt }}
+{% endfor %}

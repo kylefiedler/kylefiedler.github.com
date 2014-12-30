@@ -1,0 +1,59 @@
+---
+layout: default
+class: index
+---
+
+%section.introduction
+  %h1 I plan, design and build products for the web and mobile at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
+  %p I place a lot of my attention to building the right product. Research, design thinking and jobs to be done all help me understand a need for a product. Iteration is at the heart of my process. I've facilitated many design sprints and place an importance on improving the process. A sting process will result in a strong product. I believe that you should continually be validating features. 
+
+%ul.select-work-preview
+  %li.character-lab
+    %a{ href: "/work/character-lab" }
+      %img{ src: "", alt: "" }/
+  %li.psl
+    %a{ href: "/work/psl" }
+      %img{ src: "", alt: "" }/
+  %li.developer-portal
+    %a{ href: "/work/developer-portal" }
+      %img{ src: "", alt: "" }/
+
+.recent-wrapper
+  %section.recent-writing
+    %h3
+      %a{ href: "/writing" } Most recent writing
+
+    %ol
+    {% for post in site.posts %}
+      %li
+        %a{ href: "{{ post.url }}" }
+          %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+
+          %header
+            %h2 {{ post.title }}
+            %p {{ post.excerpt }}
+    {% endfor %}
+
+  %section.recent-playground
+    %h3
+      %a{ href: "/playground" } Recent playground experiments
+
+    %ul
+      %li
+        %a{ href: "#" }
+          %h2 Baseball Stadiums
+          %p On of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I’ve been too and which I still need to go.
+
+      %li
+        %a{ href: "#" }
+          %h2 Purpose
+          %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
+
+%section.about
+  %img{ src: "http://photos-a.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10784792_776487902416280_1650918728_n.jpg", alt: "Kyle's Family" }/
+
+  %header
+    %h3 About Me
+    %h2 When I'm not at my computer I'm probably with my wife and two kids.
+    %p We love hanging out, going for walks with our two puppies and watching movies together. When I'm hungry I most likely have a slice of pizza, burger, or burrito in my hand. When I'm thirsty I'll have tea, water or a craft beer. If you want proof follow my Instagram.
+    %p Follow me on Twitter, check out what I'm working on on Dribble, find out what I'm liking around the Internet on Tumblr and check out all his open source work on GitHub. I love getting email, grabbing drinks and getting lunch. I co-run Refresh Philly, Build Guild Philly and Baseball Hackday. 

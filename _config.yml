@@ -1,11 +1,18 @@
-name: Kyle Fiedler
-description: Inside the mind of a boring person
-url: http://kylefiedler.com
+gems: [bourbon, neat]
 
-exclude:
-- README
-- Rakefile
+# Structure configuration
+source: source
+destination: build
 
-sass:
-  sass_dir: _sass
-  style: :compressed
+assets:
+  cachebust: soft
+
+# Site settings
+title: Proteus
+description: Prototyping starter kit for Jekyll
+
+# Name of project on Github
+baseurl:
+
+# Build settings
+markdown: kramdown

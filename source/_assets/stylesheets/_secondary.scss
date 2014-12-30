@@ -1,0 +1,13 @@
+.secondary {
+  h3 {
+    margin-bottom: 3em;
+  }
+
+  li {
+    margin-bottom: 3em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.writing {
+  max-width: em(800);
+
+  h3 {
+    @include shift(2);
+  }
+}
+
+.writing-index {
+  li {
+    time {
+      @include span-columns(2);
+    }
+
+    header {
+      @include span-columns(10);
+    }
+  }
+}

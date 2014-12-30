@@ -1,0 +1,12 @@
+{% include header.html %}
+
+<main class="post-show">
+  <time datetime="" pubdate="">{{ page.date | date: "%-m/%-d/%y" }}</time>
+
+  <article>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </article>
+</main>
+
+{% include footer.html %}
