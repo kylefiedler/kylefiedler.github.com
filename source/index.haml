@@ -4,19 +4,19 @@ class: index
 ---
 
 %section.introduction
-  %h1 I plan, design and build products for the web and mobile at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
-  %p I place a lot of my attention to building the right product. Research, design thinking and jobs to be done all help me understand a need for a product. Iteration is at the heart of my process. I've facilitated many design sprints and place an importance on improving the process. A sting process will result in a strong product. I believe that you should continually be validating features. 
+  %h1 I plan, design and build products for the web and iOS at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
+  %p All of my effort goes into building the right product. Design research, design thinking and jobs-to-be-done are all tools to help me understand a need for a product. Iteration is at the heart of my design process. I've facilitated many design sprints and place an importance on improving the process. A sting process will result in a strong product. I believe that you should continually be validating features. 
 
 %ul.select-work-preview
   %li.character-lab
-    %a{ href: "/work/character-lab" }
-      %img{ src: "", alt: "" }/
+    %a{ href: "/work/character-growth-card" }
+      %img.browser{ src: "/images/character-lab/homepage.jpg", alt: "" }/
   %li.psl
     %a{ href: "/work/psl" }
-      %img{ src: "", alt: "" }/
+      %img.browser{ src: "/images/psl/homepage.jpg", alt: "" }/
   %li.developer-portal
     %a{ href: "/work/developer-portal" }
-      %img{ src: "", alt: "" }/
+      %img.browser{ src: "/images/developer-portal/hero.jpg", alt: "" }/
 
 .recent-wrapper
   %section.recent-writing
@@ -24,7 +24,7 @@ class: index
       %a{ href: "/writing" } Most recent writing
 
     %ol
-    {% for post in site.posts %}
+    {% for post in site.posts limit:3 %}
       %li
         %a{ href: "{{ post.url }}" }
           %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
@@ -40,14 +40,14 @@ class: index
 
     %ul
       %li
-        %a{ href: "#" }
+        %a{ href: "/playground/baseball-stadiums" }
           %h2 Baseball Stadiums
           %p On of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I’ve been too and which I still need to go.
 
-      %li
-        %a{ href: "#" }
-          %h2 Purpose
-          %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
+      -# %li
+      -#   %a{ href: "/playground/purpose" }
+      -#     %h2 Purpose
+      -#     %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
 
 %section.about
   %img{ src: "http://photos-a.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10784792_776487902416280_1650918728_n.jpg", alt: "Kyle's Family" }/

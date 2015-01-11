@@ -1,0 +1,26 @@
+.work-index {
+  max-width: em(1100);
+
+  li {
+    margin-bottom: 1em;
+
+    a {
+      @include row(table);
+    }
+  }
+
+  img {
+    @include span-columns(5);
+    width: 100%;
+  }
+
+  header {
+    @include span-columns(7);
+    padding: flex-gutter() * 2;
+    vertical-align: middle;
+  }
+}
+
+.more {
+  color: $base-accent-color;
+}

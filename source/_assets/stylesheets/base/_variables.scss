@@ -1,6 +1,6 @@
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
+$sans-serif: "nimbus-sans-1","nimbus-sans-2","aktiv-grotesk-std-1","aktiv-grotesk-std-2", $helvetica;
+$serif: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", $georgia;
 $base-font-family: $serif;
 $header-font-family: $sans-serif;
 
@@ -8,7 +8,7 @@ $header-font-family: $sans-serif;
 $base-font-size: 1em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.7;
 $header-line-height: 1.25;
 
 // Other Sizes
@@ -31,11 +31,11 @@ $base-background-color: white;
 // Font Colors
 $base-font-color: $dark-gray;
 $text-color: lighten($base-font-color, 35);
-$base-accent-color: $blue;
+$base-accent-color: #589ece;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: $base-accent-color;
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 

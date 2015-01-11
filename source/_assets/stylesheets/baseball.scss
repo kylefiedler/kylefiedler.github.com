@@ -1,0 +1,113 @@
+@import "bourbon";
+@import "neat";
+// @import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
+// @import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic);
+
+$baseball-red: #c55353;
+$baseball-tan: #eae7dc;
+$baseball-blue: #4e7184;
+
+body {
+  background-color: $baseball-tan;
+  font-family: 'Old Standard TT', serif;
+}
+
+header.main {
+  .name a {
+    color: $baseball-blue;
+  }
+
+  li a {
+    color: shade($baseball-tan, 25);
+  }
+}
+
+h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Old Standard TT', serif;
+}
+
+h3,
+h4,
+h5 {
+  font-family: 'Old Standard TT', serif;
+}
+
+main {
+  max-width: em(1600);
+
+  header {
+    @include row(table);
+    border: 2px solid shade($baseball-tan, 5);
+
+    .main-container {
+      display: table-cell;
+      vertical-align: top;
+      padding: 2em;
+
+      h1 {
+        margin-bottom: 0;
+        color: $baseball-red;
+        font-size: em(42);
+      }
+      h3 {
+        span {
+          font-size: rem(11);
+        }
+      }
+
+      p {
+        max-width: em(600);
+        color: shade($baseball-tan, 40);
+      }
+    }
+
+    h2 {
+      display: table-cell;
+      width: em(140);
+      font-family: 'Old Standard TT', serif;
+      border-left: 2px solid shade($baseball-tan, 5);
+      padding: 2em;
+      vertical-align: middle;
+
+      strong {
+        font-size: rem(60);
+        color: $baseball-blue;
+        margin-right: -0.5rem;
+      }
+
+      span {
+        color: shade($baseball-tan, 20);
+      }
+    }
+  }
+}
+
+.map {
+  svg {
+    width: 75%;
+  }
+}
+.stadium-list {
+  @include row;
+  border: 2px solid shade($baseball-tan, 5);
+  padding: 2em;
+
+  li {
+    @include span-columns(2.4);
+    margin-bottom: 2rem;
+    @include omega(5n);
+  }
+
+  h4 {
+    font-size: rem(20);
+    color: $baseball-blue;
+  }
+
+  h5 {
+    font-style: italic;
+    color: shade($baseball-tan, 40);
+  }
+}

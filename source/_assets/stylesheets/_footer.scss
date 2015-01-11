@@ -1,0 +1,18 @@
+footer.main {
+  padding: 3em 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin-right: 0.75rem;
+    font-size: rem(14);
+  }
+
+  svg {
+    @include size(1.25rem);
+  }
+
+  span {
+    display: none;
+  }
+}

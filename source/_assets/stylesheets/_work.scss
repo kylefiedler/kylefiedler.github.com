@@ -1,0 +1,74 @@
+.work {
+  max-width: em(1600);
+
+  p + h3 {
+    margin-top: 3rem;
+  }
+
+  img {
+    display: block;
+  }
+
+  .top {
+    float: right;
+    margin-left: -33%;
+    margin-top: 6em;
+    width: 66%;
+  }
+
+  .bottom {
+    float: left;
+    width: 66%;
+  }
+
+  .frameless {
+    &.top {
+      margin-top: 10em;
+    }
+  }
+
+  .container {
+    @include row(table);
+    margin-bottom: 6em;
+  }
+
+  .copy {
+    @include span-columns(5);
+    vertical-align: middle;
+    padding: flex-gutter() * 2;
+  }
+
+  .image {
+    @include span-columns(7);
+    position: relative;
+  }
+}
+
+.browser {
+  border-radius: 6px;
+  border: 1px solid $base-border-color;
+  border-top: 1.75em solid $base-border-color;
+}
+
+.tablet {
+  border-bottom: 1.5em solid $base-border-color;
+  border-left: 1.5em solid $base-border-color;
+  border-radius: 12px;
+  border-right: 3em solid $base-border-color;
+  border-top: 1.5em solid $base-border-color;
+  float: left;
+  margin-right: -33%;
+  width: 75%;
+}
+
+.phone {
+  border-bottom: 3em solid $base-border-color;
+  border-left: 1em solid $base-border-color;
+  border-radius: 12px;
+  border-right: 1em solid $base-border-color;
+  border-top: 1em solid $base-border-color;
+  float: right;
+  margin-right: 10%;
+  margin-top: 18%;
+  width: 25%;
+}

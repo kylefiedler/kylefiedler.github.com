@@ -8,11 +8,8 @@ assets:
   cachebust: soft
 
 # Site settings
-title: Proteus
+title: Kyle Fiedler
 description: Prototyping starter kit for Jekyll
-
-# Name of project on Github
-baseurl:
 
 # Build settings
 markdown: kramdown

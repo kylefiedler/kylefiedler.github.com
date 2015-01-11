@@ -1,0 +1,13 @@
+.post-show {
+  @include row;
+  max-width: em(980);
+
+  time {
+    @include span-columns(2);
+    line-height: rem(46);
+  }
+
+  .post-body {
+    @include span-columns(8.5);
+  }
+}

@@ -1,0 +1,97 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  background-color: #eae7dc;
+  font-family: 'Old Standard TT', serif; }
+
+header.main .name a {
+  color: #4e7184; }
+header.main li a {
+  color: #afada5; }
+
+h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Old Standard TT', serif; }
+
+h3,
+h4,
+h5 {
+  font-family: 'Old Standard TT', serif; }
+
+main {
+  max-width: 100em; }
+  main header {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border: 2px solid #dedbd1; }
+    main header .main-container {
+      display: table-cell;
+      vertical-align: top;
+      padding: 2em; }
+      main header .main-container h1 {
+        margin-bottom: 0;
+        color: #c55353;
+        font-size: 2.625em; }
+      main header .main-container h3 span {
+        font-size: 0.6875rem; }
+      main header .main-container p {
+        max-width: 37.5em;
+        color: #8c8a84; }
+    main header h2 {
+      display: table-cell;
+      width: 8.75em;
+      font-family: 'Old Standard TT', serif;
+      border-left: 2px solid #dedbd1;
+      padding: 2em;
+      vertical-align: middle; }
+      main header h2 strong {
+        font-size: 3.75rem;
+        color: #4e7184;
+        margin-right: -0.5rem; }
+      main header h2 span {
+        color: #bbb8b0; }
+
+.map svg {
+  width: 75%; }
+
+.stadium-list {
+  display: block;
+  border: 2px solid #dedbd1;
+  padding: 2em; }
+  .stadium-list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .stadium-list li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 18.11388%;
+    margin-bottom: 2rem; }
+    .stadium-list li:last-child {
+      margin-right: 0; }
+    .stadium-list li:nth-child(5n) {
+      margin-right: 0; }
+    .stadium-list li:nth-child(5n+1) {
+      clear: left; }
+  .stadium-list h4 {
+    font-size: 1.25rem;
+    color: #4e7184; }
+  .stadium-list h5 {
+    font-style: italic;
+    color: #8c8a84; }

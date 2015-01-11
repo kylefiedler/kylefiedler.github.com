@@ -1,8 +1,17 @@
+main.index {
+  max-width: em(1600);
+}
+
 .introduction {
   @include shift(1);
 
+  h1 {
+    margin-bottom: 2rem;
+  }
+
   p {
     max-width: flex-grid(6);
+    padding-right: 2em;
   }
 }
 
@@ -10,27 +19,21 @@
   @include align-items(flex-end);
   @include display(flex);
   @include flex-direction(row);
-  margin-top: -7em;
+  margin-top: -5em;
 
+  .psl,
   .character-lab {
-    background-color: #E5E85B;
-    height: rem(225);
-    margin-right: flex-gutter();
-    width: flex-grid(3.5);
-  }
-
-  .psl {
-    background-color: #74B378;
-    height: rem(225);
     margin-right: flex-gutter();
     width: flex-grid(3.5);
   }
 
   .developer-portal {
-    background-color: #74B378;
-    height: rem(400);
     margin-right: flex-gutter();
     width: flex-grid(5);
+  }
+
+  img {
+    display: block;
   }
 }
 
@@ -65,7 +68,7 @@
 }
 
 .recent-playground {
-  @include span-columns(5);
+  @include span-columns(4);
 
   li {
     margin-bottom: 1em;
@@ -91,6 +94,6 @@
   }
 
   header {
-    @include span-columns(7);
+    @include span-columns(6);
   }
 }

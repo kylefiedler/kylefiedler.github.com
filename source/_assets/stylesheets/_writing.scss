@@ -1,9 +1,5 @@
 .writing {
-  max-width: em(800);
-
-  h3 {
-    @include shift(2);
-  }
+  max-width: em(980);
 }
 
 .writing-index {
@@ -13,7 +9,7 @@
     }
 
     header {
-      @include span-columns(10);
+      @include span-columns(8.5);
     }
   }
 }

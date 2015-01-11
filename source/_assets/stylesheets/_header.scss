@@ -1,5 +1,5 @@
 header.main {
-  padding: 3em 0;
+  padding: 6em 0 4em;
   text-align: center;
 
   h1 {
@@ -12,7 +12,7 @@ header.main {
     margin-right: 0.75em;
 
     &:last-child {
-      margin-right: none;
+      margin-right: 0;
     }
   }
 
@@ -29,39 +29,10 @@ header.main {
   }
 
   a {
-    font-size: em(14);
     color: $text-color;
 
     &:hover {
       color: $base-accent-color;
     }
-  }
-}
-
-main {
-  @include outer-container;
-  padding: 3em;
-
-  &.index {
-    max-width: em(1200);
-  }
-}
-
-footer.main {
-  padding: 3em 0;
-  text-align: center;
-
-  li {
-    display: inline-block;
-    margin-right: 0.75rem;
-    font-size: rem(14);
-  }
-
-  svg {
-    @include size(1.25rem);
-  }
-
-  span {
-    display: none;
   }
 }
