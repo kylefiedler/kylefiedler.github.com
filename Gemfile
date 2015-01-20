@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'bourbon'
-gem 'github-pages'
 gem 'coffee-script'
 gem 'jekyll'
 gem 'jekyll-assets'
