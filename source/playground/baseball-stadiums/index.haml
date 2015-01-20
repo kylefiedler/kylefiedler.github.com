@@ -8,133 +8,269 @@ stylesheet: baseball.css
     %h3
       Playground <span>no.</span>1
     %h1 Baseball Stadiums
-    %p On of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I’ve been too and which I still need to go.
+    %p One of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I&rsquo;ve been too and which I still need to go.
 
   %h2
     %strong 12
     %span /33
 
 %section.map
-  {% include baseball-stadiums/states.svg %}
+  {% include baseball-stadiums/usa.svg %}
 
-%section.stadium-list
-  %ul
-    %li
+  %ul.stadiums
+    %li.laa
       %h4 Angel Stadium of Anaheim
       %h5 Los Angeles Angels of Anaheim
 
-    %li.visited
+    %li.sf.visited
       %h4 AT&amp;T Park
       %h5 San Francisco Giants
 
-    %li.visited
+    %li.stl.visited
       %h4 Busch Stadium
       %h5 St. Louis Cardinals
 
-    %li.visited
+    %li.az
       %h4 Chase Field
       %h5 Arizona Diamondbacks
 
-    %li
+    %li.nym
       %h4 Citi Field
       %h5 New York Mets
 
-    %li.visited
+    %li.phl.visited
       %h4 Citizens Bank Park
       %h5 Philadelphia Phillies
 
-    %li
+    %li.dt
       %h4 Comerica Park
       %h5 Detroit Tigers
 
-    %li
+    %li.co
       %h4 Coors Field
       %h5 Colorado Rockies
 
-    %li
+    %li.lad
       %h4 Dodger Stadium
       %h5 Los Angeles Dodgers
 
-    %li.visited
+    %li.bos.visited
       %h4 Fenway Park
       %h5 Boston Red Sox
 
-    %li
+    %li.tx
       %h4 Globe Life Park in Arlington
       %h5 Texas Rangers
 
-    %li
+    %li.cin
       %h4 Great American Ball Park
       %h5 Cincinnati Reds
 
-    %li
+    %li.kan
       %h4 Kauffman Stadium
       %h5 Kansas City Royals
 
-    %li
+    %li.mia
       %h4 Marlins Park
       %h5 Miami Marlins
 
-    %li
+    %li.mil
       %h4 Miller Park
       %h5 Milwaukee Brewers
 
-    %li
+    %li.hou
       %h4 Minute Maid Park
       %h5 Houston Astros
 
-    %li
+    %li.was
       %h4 Nationals Park
       %h5 Washington Nationals
 
-    %li
+    %li.oak
       %h4 O.co Coliseum
       %h5 Oakland Athletics
 
-    %li
-      %h4 Oriole Park at Camden Yards
+    %li.bal.visited.time
+      %h4 Camden Yards
       %h5 Baltimore Orioles
 
-    %li.visited
+    %li.sd.visited
       %h4 Petco Park
       %h5 San Diego Padres
 
-    %li
+    %li.pit
       %h4 PNC Park
       %h5 Pittsburgh Pirates
 
-    %li
+    %li.cle
       %h4 Progressive Field
       %h5 Cleveland Indians
 
-    %li
+    %li.tor
       %h4 Rogers Centre
       %h5 Toronto Blue Jays
 
-    %li.visited
+    %li.sea.visited
       %h4 Safeco Field
       %h5 Seattle Mariners
 
-    %li
+    %li.min
       %h4 Target Field
       %h5 Minnesota Twins
 
-    %li
+    %li.tb
       %h4 Tropicana Field
       %h5 Tampa Bay Rays
 
-    %li
+    %li.atl
       %h4 Turner Field
       %h5 Atlanta Braves
 
-    %li.visited
+    %li.cws.visited
       %h4 U.S. Cellular Field
       %h5 Chicago White Sox
 
-    %li
+    %li.chc
       %h4 Wrigley Field
       %h5 Chicago Cubs
 
-    %li.visited.home
+    %li.nyy.visited.home
       %h4 Yankee Stadium
       %h5 New York Yankees
+
+%section.stadium-list
+  .current
+    %h3 Current Stadiums 
+    %ul
+      %li
+        %h4 Angel Stadium of Anaheim
+        %h5 Los Angeles Angels of Anaheim
+
+      %li.visited
+        %h4 AT&amp;T Park
+        %h5 San Francisco Giants
+
+      %li.visited
+        %h4 Busch Stadium
+        %h5 St. Louis Cardinals
+
+      %li.visited
+        %h4 Chase Field
+        %h5 Arizona Diamondbacks
+
+      %li
+        %h4 Citi Field
+        %h5 New York Mets
+
+      %li.visited
+        %h4 Citizens Bank Park
+        %h5 Philadelphia Phillies
+
+      %li
+        %h4 Comerica Park
+        %h5 Detroit Tigers
+
+      %li
+        %h4 Coors Field
+        %h5 Colorado Rockies
+
+      %li
+        %h4 Dodger Stadium
+        %h5 Los Angeles Dodgers
+
+      %li.visited
+        %h4 Fenway Park
+        %h5 Boston Red Sox
+
+      %li
+        %h4 Globe Life Park in Arlington
+        %h5 Texas Rangers
+
+      %li
+        %h4 Great American Ball Park
+        %h5 Cincinnati Reds
+
+      %li
+        %h4 Kauffman Stadium
+        %h5 Kansas City Royals
+
+      %li
+        %h4 Marlins Park
+        %h5 Miami Marlins
+
+      %li
+        %h4 Miller Park
+        %h5 Milwaukee Brewers
+
+      %li
+        %h4 Minute Maid Park
+        %h5 Houston Astros
+
+      %li
+        %h4 Nationals Park
+        %h5 Washington Nationals
+
+      %li
+        %h4 O.co Coliseum
+        %h5 Oakland Athletics
+
+      %li.visited.time
+        %h4 Camden Yards
+        %h5 Baltimore Orioles
+
+      %li.visited
+        %h4 Petco Park
+        %h5 San Diego Padres
+
+      %li
+        %h4 PNC Park
+        %h5 Pittsburgh Pirates
+
+      %li
+        %h4 Progressive Field
+        %h5 Cleveland Indians
+
+      %li
+        %h4 Rogers Centre
+        %h5 Toronto Blue Jays
+
+      %li.visited
+        %h4 Safeco Field
+        %h5 Seattle Mariners
+
+      %li
+        %h4 Target Field
+        %h5 Minnesota Twins
+
+      %li
+        %h4 Tropicana Field
+        %h5 Tampa Bay Rays
+
+      %li
+        %h4 Turner Field
+        %h5 Atlanta Braves
+
+      %li.visited
+        %h4 U.S. Cellular Field
+        %h5 Chicago White Sox
+
+      %li
+        %h4 Wrigley Field
+        %h5 Chicago Cubs
+
+      %li.visited.home
+        %h4 Yankee Stadium
+        %h5 New York Yankees
+
+  .retired
+    %h3 Retired Stadiums
+    %ul
+      %li.visited.home
+        %h4 Old Yankee Stadium
+        %h5 New York Yankees
+      %li.visited
+        %h4 Shea Stadium
+        %h5 New York Mets
+      %li.visited
+        %h4 Old Cleveland Stadium
+        %h5 Cleveland Indians

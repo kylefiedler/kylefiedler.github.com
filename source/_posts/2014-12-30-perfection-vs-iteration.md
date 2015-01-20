@@ -1,10 +1,14 @@
 ---
-title: The difference between a perfectionist and iterating
+title: The difference between perfection and iterating
 layout: post
 ---
+A college ceramics professor once conducted an experiment amongst her students. She split the class in half and assigned each group a separate task to complete over the duration of the semester.
 
-A college ceramics professor once did a test with their students. They split the class in half and told one half that their grade depended on how many pots they could make during the semester. They told the other half of the class that their grade depended on the quality of one pot. It needed to be the nicest pot they could make. All the students that had to make the most pots churned out pots as fast as they could. Trying desperately to make them faster than the next. The other half focus on just one pot. They tirelessly worked to make that one pot perfect.
+The first half of the class was to be graded based on the number of pots they could create throughout the semester. The more pots they made, the higher their final grades would be. The students from this group immediately began churning out pots as quickly as they could make them.
 
-At the end of the year the professor had the students who made as many pots as possible to hand in the last pot they had made that year. The professor then grouped those pots with the ones of the second group that had to make one perfect pot. Then outside he had outside artists and professors come in and comment on the quality of the ceramics. They all overwhelmingly chose the pots from the students that were forced to make as many pots as possible. The craftsmanship behind those pots were far superior to those of the other group.
+In contrast, the second half of the class was told that their grades depended on the quality of a single pot; it needed to be their best possible work. Each of these students tirelessly worked to create the perfect pot to submit for grading.
 
-I can't find the source to this story. If you know it please reach out to @kylefiedler.
+At the end of the semester, the professor asked the students from the first half of the class to present the last pot they created, while the second half turned in their single pot. Outside artists were then commissioned to critique the quality of the students’ work and overwhelmingly declared that the craftsmanship of the pots from the first half of the class was far superior to those of the second half.
+
+I admit that I’m unsure of this story’s origin. If you know it, however, please reach out to <a href="http://twitter.com/kylefiedler">@kylefiedler</a>.
+

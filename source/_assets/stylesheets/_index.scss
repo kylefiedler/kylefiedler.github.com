@@ -27,9 +27,68 @@ main.index {
     width: flex-grid(3.5);
   }
 
+  .character-lab {
+    .hover {
+      background-color: rgba(#554d91, 0.8);
+    }
+  }
+  .psl {
+    .hover {
+      background-color: rgba(#70b274, 0.8);
+    }
+  }
+
   .developer-portal {
     margin-right: flex-gutter();
     width: flex-grid(5);
+
+    .hover {
+      background-color: rgba(#00abdf, 0.8);
+    }
+  }
+
+  a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    .hover {
+      @include transition;
+      @include align-items(center);
+      @include display(flex);
+      @include position(absolute, 0 0 0 0);
+      @include transform(translateY(100px));
+      background-color: rgba($base-font-color, 0.7);
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+
+      header {
+        text-align: center;
+        width: 100%;
+        color: #fff;
+
+        h4 {
+          font-size: em(20);
+        }
+
+        p {
+          font-size: em(14);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-top: 0.25em;
+          color: rgba(#fff, 0.7);
+        }
+      }
+    }
+
+    &:hover {
+      .hover {
+        @include transform(translateY(0px));
+        @include transition;
+        opacity: 1;
+      }
+    }
   }
 
   img {
@@ -90,10 +149,10 @@ main.index {
 
   img {
     @include span-columns(5);
-    padding-right: flex-gutter(6);
   }
 
   header {
     @include span-columns(6);
+    padding-top: 2em;
   }
 }

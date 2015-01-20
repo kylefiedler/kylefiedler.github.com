@@ -11,6 +11,13 @@ footer.main {
   svg {
     @include size(1.25rem);
   }
+  a {
+    &:hover {
+      g {
+        fill: $base-accent-color;
+      }
+    }
+  }
 
   span {
     display: none;

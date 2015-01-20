@@ -4,19 +4,31 @@ class: index
 ---
 
 %section.introduction
-  %h1 I plan, design and build products for the web and iOS at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
-  %p All of my effort goes into building the right product. Design research, design thinking and jobs-to-be-done are all tools to help me understand a need for a product. Iteration is at the heart of my design process. I've facilitated many design sprints and place an importance on improving the process. A sting process will result in a strong product. I believe that you should continually be validating features. 
+  %h1 I plan, design, test, and build digital products at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
+  %p When building products, my effort is channeled into creating the correct product using tools such as research, design thinking, design sprints, and jobs-to-be done to help me best understand a product&rsquo;s need. I always place empathy at the forefront of my process. I ship early and iterate to learn how people use what I&rsquo;ve built.
 
 %ul.select-work-preview
   %li.character-lab
     %a{ href: "/work/character-growth-card" }
       %img.browser{ src: "/images/character-lab/homepage.jpg", alt: "" }/
+      .hover
+        %header
+          %h4 Character Growth Card
+          %p View Project
   %li.psl
     %a{ href: "/work/psl" }
       %img.browser{ src: "/images/psl/homepage.jpg", alt: "" }/
+      .hover
+        %header
+          %h4 Philly Startup Leaders
+          %p View Project
   %li.developer-portal
     %a{ href: "/work/developer-portal" }
       %img.browser{ src: "/images/developer-portal/hero.jpg", alt: "" }/
+      .hover
+        %header
+          %h4 Developer Portal
+          %p View Project
 
 .recent-wrapper
   %section.recent-writing
@@ -31,7 +43,7 @@ class: index
 
           %header
             %h2 {{ post.title }}
-            %p {{ post.excerpt }}
+            {{ post.excerpt }}
     {% endfor %}
 
   %section.recent-playground
@@ -54,6 +66,6 @@ class: index
 
   %header
     %h3 About Me
-    %h2 When I'm not at my computer I'm probably with my wife and two kids.
-    %p We love hanging out, going for walks with our two puppies and watching movies together. When I'm hungry I most likely have a slice of pizza, burger, or burrito in my hand. When I'm thirsty I'll have tea, water or a craft beer. If you want proof follow my Instagram.
-    %p Follow me on Twitter, check out what I'm working on on Dribble, find out what I'm liking around the Internet on Tumblr and check out all his open source work on GitHub. I love getting email, grabbing drinks and getting lunch. I co-run Refresh Philly, Build Guild Philly and Baseball Hackday. 
+    %h2 When I&rsquo;m not at my computer, I&rsquo;m probably with my wife and two kids.
+    %p We love hanging out, going for walks with our two puppies, and watching movies together. To hear more about my adventures through life, follow me on <a href="http://twitter.com/kylefiedler">Twitter</a>, view my latest project on <a href="http://dribbble.com/kylefiedler">Dribbble</a>, find out what I&rsquo;m posting on <a href="http://ephemera.kylefiedler.com">Tumblr</a>, and check out my open source work on <a href="http://github.com/kylefiedler">GitHub</a>. I co-run <a href="http://refreshphilly.com">Refresh Philly</a>, <a href="http://philly.buildguild.org">Build Guild Philly</a>, and <a href="http://www.baseballhackday.com">Baseball Hack Day</a>. I&rsquo;ll always enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.
+

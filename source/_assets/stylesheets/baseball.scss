@@ -86,19 +86,230 @@ main {
 }
 
 .map {
+  padding: 3em;
+  position: relative;
+  border-left: 2px solid shade($baseball-tan, 5);
+  border-right: 2px solid shade($baseball-tan, 5);
+
   svg {
-    width: 75%;
+    display: block;
+    margin: 0 auto;
+    width: 1244px;
+  }
+
+  .stadiums {
+    li {
+      position: absolute;
+
+      &.visited:before {
+        background-color: $baseball-red;
+      }
+
+      &:before {
+        @include position(absolute, 3px 0 0 -1em);
+        @include size(0.75em);
+        border-radius: 50%;
+        border: 2px solid $baseball-red;
+        content: "";
+        display: block;
+        z-index: 0;
+      }
+
+      &.laa {
+        top: 496px;
+        left: 160px;
+      }
+
+      &.sf {
+        top: 353px;
+        left: 95px;
+      }
+
+      &.stl {
+        top: 418px;
+        left: 772px;
+      }
+
+      &.az {
+        top: 555px;
+        left: 342px;
+      }
+
+      &.nym {
+        top: 300px;
+        left: 1155px;
+      }
+
+      &.phl {
+        top: 333px;
+        left: 1122px;
+      }
+
+      &.dt {
+        top: 290px;
+        left: 952px;
+      }
+
+      &.co {
+        top: 310px;
+        left: 525px;
+      }
+
+      &.lad {
+        top: 482px;
+        left: 155px;
+      }
+
+      &.bos {
+        top: 240px;
+        left: 1201px;
+      }
+
+      &.tx {
+        top: 630px;
+        left: 642px;
+      }
+
+      &.cin {
+        top: 360px;
+        left: 953px;
+      }
+
+      &.kan {
+        top: 410px;
+        left: 695px;
+      }
+
+      &.mia {
+        top: 752px;
+        left: 1090px;
+      }
+
+      &.mil {
+        top: 277px;
+        left: 849px;
+      }
+
+      &.hou {
+        top: 724px;
+        left: 640px;
+      }
+
+      &.was {
+        top: 380px;
+        left: 1101px;
+      }
+
+      &.oak {
+        top: 342px;
+        left: 92px;
+      }
+
+      &.bal {
+        top: 359px;
+        left: 1102px;
+      }
+
+      &.sd {
+        top: 510px;
+        left: 180px;
+      }
+
+      &.pit {
+        top: 348px;
+        left: 1031px;
+      }
+
+      &.cle {
+        top: 331px;
+        left: 978px;
+      }
+
+      &.tor {
+        top: 240px;
+        left: 1020px;
+      }
+
+      &.sea {
+        top: 81px;
+        left: 182px;
+      }
+
+      &.min {
+        top: 200px;
+        left: 815px;
+      }
+
+      &.tb {
+        top: 700px;
+        left: 1018px;
+      }
+
+      &.atl {
+        top: 560px;
+        left: 965px;
+      }
+
+      &.cws {
+        top: 325px;
+        left: 865px;
+      }
+
+      &.chc {
+        top: 320px;
+        left: 860px;
+      }
+
+      &.nyy {
+        top: 298px;
+        left: 1148px;
+      }
+
+      &:hover  {
+        h4,
+        h5 {
+          display: block;
+        }
+      }
+
+      h4,
+      h5 {
+        display: none;
+      }
+    }
   }
 }
+
 .stadium-list {
   @include row;
   border: 2px solid shade($baseball-tan, 5);
-  padding: 2em;
+
+  ul {
+    @include row;
+  }
 
   li {
-    @include span-columns(2.4);
     margin-bottom: 2rem;
-    @include omega(5n);
+    position: relative;
+
+    &.visited:before {
+      background-color: shade($baseball-tan, 15);
+    }
+
+    &:before {
+      @include position(absolute, 6px 0 0 -1.5em);
+      @include size(0.75em);
+      border-radius: 50%;
+      border: 2px solid shade($baseball-tan, 15);
+      content: "";
+      display: block;
+      z-index: 0;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
   h4 {
@@ -111,3 +322,26 @@ main {
     color: shade($baseball-tan, 40);
   }
 }
+
+.visited {
+  h4 {
+    text-decoration: line-through;
+  }
+}
+
+.current {
+  @include span-columns(9.6, table);
+  padding: 2em;
+
+  li {
+    @include omega(4n);
+    @include span-columns(2.4 9.6);
+  }
+}
+
+.retired {
+  @include span-columns(2.4, table);
+  border-left: 2px solid shade($baseball-tan, 5);
+  padding: 2em;
+}
+
