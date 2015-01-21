@@ -1,12 +1,13 @@
 main.index {
   max-width: em(1600);
+  padding-top: 4em;
 }
 
 .introduction {
   @include shift(1);
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   p {
@@ -159,10 +160,6 @@ main.index {
   @include shift(1);
   @include row;
   margin-top: 4em;
-
-  h2 {
-    margin-bottom: 2rem;
-  }
 
   img {
     @include span-columns(5);

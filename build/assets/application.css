@@ -596,10 +596,10 @@ input[type="submit"] {
     -o-transform: translateY(0px);
     transform: translateY(0px); } }
 header.main {
-  padding: 6em 0 4em;
+  padding: 4em 0;
   text-align: center; }
   header.main h1 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     margin-bottom: 0; }
   header.main li {
     display: inline-block;
@@ -616,12 +616,19 @@ header.main {
     color: #8c8c8c; }
     header.main a:hover {
       color: #39bb89; }
+  header.main hr {
+    border-top: 3px solid #f1f1f1;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    max-width: 9.375em;
+    margin: 2em auto; }
 
 main {
   max-width: 43.75em;
   margin-left: auto;
   margin-right: auto;
-  padding: 3em; }
+  padding: 0 3em 3em; }
   main::after {
     clear: both;
     content: "";
@@ -646,12 +653,13 @@ footer.main {
   text-align: center; }
 
 main.index {
-  max-width: 100em; }
+  max-width: 100em;
+  padding-top: 4em; }
 
 .introduction {
   margin-left: 8.5298%; }
   .introduction h1 {
-    margin-bottom: 2rem; }
+    margin-bottom: 1.5rem; }
   .introduction p {
     max-width: 48.82117%;
     padding-right: 2em; }
@@ -862,8 +870,6 @@ main.index {
     clear: both;
     content: "";
     display: table; }
-  .about h2 {
-    margin-bottom: 2rem; }
   .about img {
     float: left;
     display: block;
