@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kyle Fiedler</title>
+    <description>Prototyping starter kit for Jekyll</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 20 Jan 2015 20:34:50 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Jan 2015 20:34:50 -0500</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>The difference between perfection and iterating</title>
+        <description>&lt;p&gt;A college ceramics professor once conducted an experiment amongst her students. She split the class in half and assigned each group a separate task to complete over the duration of the semester.&lt;/p&gt;
+
+&lt;p&gt;The first half of the class was to be graded based on the number of pots they could create throughout the semester. The more pots they made, the higher their final grades would be. The students from this group immediately began churning out pots as quickly as they could make them.&lt;/p&gt;
+
+&lt;p&gt;In contrast, the second half of the class was told that their grades depended on the quality of a single pot; it needed to be their best possible work. Each of these students tirelessly worked to create the perfect pot to submit for grading.&lt;/p&gt;
+
+&lt;p&gt;At the end of the semester, the professor asked the students from the first half of the class to present the last pot they created, while the second half turned in their single pot. Outside artists were then commissioned to critique the quality of the students’ work and overwhelmingly declared that the craftsmanship of the pots from the first half of the class was far superior to those of the second half.&lt;/p&gt;
+
+&lt;p&gt;I admit that I’m unsure of this story’s origin. If you know it, however, please reach out to &lt;a href=&quot;http://twitter.com/kylefiedler&quot;&gt;@kylefiedler&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 30 Dec 2014 00:00:00 -0500</pubDate>
+        <link>/2014/12/30/perfection-vs-iteration.html</link>
+        <guid isPermaLink="true">/2014/12/30/perfection-vs-iteration.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Increasing and decreasing my barrier for entry</title>
+        <description>&lt;p&gt;For the longest time I’ve known that if I just put on my running cloths I’ll go for a run. I’ve always been amazed that the single action removes all friction to me wanting to go for a run or work out.&lt;/p&gt;
+
+&lt;p&gt;I’m always searching for ways to decrease the barrier to entry for other parts of my life. Things I want to be doing but don’t because I’m lazy or tired or some other weak excuse. I’ve been doing it for my design and development workflow, for keeping a daily journal and entering in tasks to omnifocus.&lt;/p&gt;
+
+&lt;p&gt;For the longest time I never thought to increase the barrier of entry for habits that I don’t want myself to be doing. I’ve been doing this a lot lately and it’s worked out great. The two biggest things in my life the I’ve wanted to stop looking Twitter and email on my phone. I check it too often and neglect everything around me when I do. I think that because they are in such bite size information I can just read them for a min and get back to what I was doing before.&lt;/p&gt;
+
+&lt;p&gt;I’ve removed Tweetbot from my phone so I don’t constantly have something to check. If I want to see what’s on Twitter I, load it up in safari and log in. When I’m done I log out. I did the same thing with email. I deleted Mailbox which I really liked for email and turned email off on my accounts. If I want to see my email I got to setting to turn on and then to the default mail app which is buried in a folder.&lt;/p&gt;
+
+&lt;p&gt;By increasing the barrier for entry I’ve slowly decreased the amount that I am checking my phone.&lt;/p&gt;
+
+&lt;p&gt;I’ve now been trying to bring this thinking into the applications that I’m building. I’m trying to increase the barrier of entry for tasks that I don’t want users to take while still trying to decrease the barriers for things that I want them to do. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Oct 2014 00:00:00 -0400</pubDate>
+        <link>/2014/10/22/barrier-for-entry.html</link>
+        <guid isPermaLink="true">/2014/10/22/barrier-for-entry.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
