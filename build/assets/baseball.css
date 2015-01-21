@@ -17,10 +17,22 @@ body {
   background-color: #eae7dc;
   font-family: 'Old Standard TT', serif; }
 
+::selection {
+  background: #4e7184;
+  color: #fff; }
+
+::-moz-selection {
+  background: #4e7184;
+  color: #fff; }
+
 header.main .name a {
   color: #4e7184; }
+  header.main .name a:hover {
+    color: #c55353; }
 header.main li a {
   color: #afada5; }
+  header.main li a:hover {
+    color: #c55353; }
 
 h1 {
   letter-spacing: 1px;

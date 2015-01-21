@@ -13,13 +13,26 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 
+@include selection {
+  background: $baseball-blue;
+  color: #fff;
+}
+
 header.main {
   .name a {
     color: $baseball-blue;
+
+    &:hover {
+      color: $baseball-red;
+    }
   }
 
   li a {
     color: shade($baseball-tan, 25);
+
+    &:hover {
+      color: $baseball-red;
+    }
   }
 }
 
@@ -52,6 +65,7 @@ main {
         color: $baseball-red;
         font-size: em(42);
       }
+
       h3 {
         span {
           font-size: rem(11);
