@@ -28,17 +28,34 @@ main.index {
   }
 
   .character-lab {
+    @include animation-duration(1s);
+    @include animation-name(floatup);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(backwards);
+    @include animation-delay(0.25s);
+
     .hover {
       background-color: rgba(#554d91, 0.8);
     }
   }
+
   .psl {
+    @include animation-duration(1s);
+    @include animation-name(floatup);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(backwards);
+    @include animation-delay(0.05s);
+
     .hover {
       background-color: rgba(#70b274, 0.8);
     }
   }
 
   .developer-portal {
+    @include animation-duration(1s);
+    @include animation-name(floatup);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(backwards);
     margin-right: flex-gutter();
     width: flex-grid(5);
 
