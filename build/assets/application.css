@@ -354,8 +354,8 @@ input[type="submit"] {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: white;
-  color: #333;
+  background-color: #fff;
+  color: #2F3344;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
   line-height: 1.7; }
@@ -390,7 +390,7 @@ h2 {
   letter-spacing: -1px; }
 
 h3 {
-  color: #a6a6a6;
+  color: #a5a8b3;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 0.875em;
   font-weight: normal;
@@ -398,10 +398,10 @@ h3 {
   margin-bottom: 1rem;
   text-transform: uppercase; }
   h3 a {
-    color: #a6a6a6; }
+    color: #a5a8b3; }
 
 p {
-  color: #8c8c8c;
+  color: #8a8d9c;
   margin: 0 0 0.85em;
   font-size: 1.0625em; }
 
@@ -409,7 +409,7 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #333;
+  color: #2F3344;
   text-decoration: none; }
   a:hover {
     color: #39bb89; }
@@ -418,7 +418,7 @@ a {
     outline: none; }
 
 time {
-  color: #cccccc;
+  color: #cfd0d6;
   font-size: 0.875em;
   font-style: italic;
   line-height: 2.125rem;
@@ -431,12 +431,12 @@ picture {
 
 blockquote {
   border-left: 2px solid #DDD;
-  color: #595959;
+  color: #4e5571;
   margin: 1.7em 0;
   padding-left: 0.85em; }
 
 cite {
-  color: #737373;
+  color: #636c8f;
   font-style: italic; }
   cite:before {
     content: "\2014 \00A0"; }
@@ -609,11 +609,11 @@ header.main {
   header.main .name {
     margin-right: 2rem; }
     header.main .name a {
-      color: #4d4d4d; }
+      color: #444a62; }
       header.main .name a:hover {
         color: #39bb89; }
   header.main a {
-    color: #8c8c8c; }
+    color: #8a8d9c; }
     header.main a:hover {
       color: #39bb89; }
   header.main hr {
@@ -653,15 +653,14 @@ footer.main {
   text-align: center; }
 
 main.index {
-  max-width: 100em;
-  padding-top: 4em; }
+  max-width: 100em; }
 
 .introduction {
-  margin-left: 8.5298%; }
+  margin-left: 8.5993%; }
   .introduction h1 {
     margin-bottom: 1.5rem; }
   .introduction p {
-    max-width: 48.82117%;
+    max-width: 48.40418%;
     padding-right: 2em; }
 
 .select-work-preview {
@@ -691,8 +690,8 @@ main.index {
   margin-top: -5em; }
   .select-work-preview .psl,
   .select-work-preview .character-lab {
-    margin-right: 2.35765%;
-    width: 27.49666%; }
+    margin-right: 3.19164%;
+    width: 26.90592%; }
   .select-work-preview .character-lab {
     -webkit-animation-duration: 1s;
     -moz-animation-duration: 1s;
@@ -742,8 +741,8 @@ main.index {
     -webkit-animation-fill-mode: backwards;
     -moz-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
-    margin-right: 2.35765%;
-    width: 40.29137%; }
+    margin-right: 3.19164%;
+    width: 39.80488%; }
     .select-work-preview .developer-portal .hover {
       background-color: rgba(0, 171, 223, 0.8); }
   .select-work-preview a {
@@ -780,7 +779,7 @@ main.index {
       -ms-transform: translateY(100px);
       -o-transform: translateY(100px);
       transform: translateY(100px);
-      background-color: rgba(51, 51, 51, 0.7);
+      background-color: rgba(47, 51, 68, 0.7);
       border-radius: 6px;
       opacity: 0;
       pointer-events: none; }
@@ -820,12 +819,12 @@ main.index {
 .recent-writing {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
+  margin-right: 3.19164%;
+  width: 57.00348%; }
   .recent-writing:last-child {
     margin-right: 0; }
   .recent-writing h3 {
-    margin-left: 14.87299%; }
+    margin-left: 15.08558%; }
   .recent-writing li {
     display: block;
     margin-bottom: 1em; }
@@ -838,23 +837,23 @@ main.index {
   .recent-writing time {
     float: left;
     display: block;
-    margin-right: 4.11092%;
-    width: 10.76207%; }
+    margin-right: 5.59903%;
+    width: 9.48655%; }
     .recent-writing time:last-child {
       margin-right: 0; }
   .recent-writing header {
     float: left;
     display: block;
-    margin-right: 4.11092%;
-    width: 85.12701%; }
+    margin-right: 5.59903%;
+    width: 84.91442%; }
     .recent-writing header:last-child {
       margin-right: 0; }
 
 .recent-playground {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
+  margin-right: 3.19164%;
+  width: 31.20557%; }
   .recent-playground:last-child {
     margin-right: 0; }
   .recent-playground li {
@@ -863,7 +862,7 @@ main.index {
       margin-bottom: 0; }
 
 .about {
-  margin-left: 8.5298%;
+  margin-left: 8.5993%;
   display: block;
   margin-top: 4em; }
   .about::after {
@@ -873,15 +872,15 @@ main.index {
   .about img {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%; }
+    margin-right: 3.19164%;
+    width: 39.80488%; }
     .about img:last-child {
       margin-right: 0; }
   .about header {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+    margin-right: 3.19164%;
+    width: 48.40418%;
     padding-top: 2em; }
     .about header:last-child {
       margin-right: 0; }
@@ -904,15 +903,15 @@ main.index {
 .writing-index li time {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
+  margin-right: 3.19164%;
+  width: 14.00697%; }
   .writing-index li time:last-child {
     margin-right: 0; }
 .writing-index li header {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 70.14568%; }
+  margin-right: 3.19164%;
+  width: 69.90244%; }
   .writing-index li header:last-child {
     margin-right: 0; }
 
@@ -941,7 +940,7 @@ main.index {
     display: table-cell;
     width: 41.66667%;
     vertical-align: middle;
-    padding: 4.7153%; }
+    padding: 6.38328%; }
   .work .image {
     display: table-cell;
     width: 58.33333%;
@@ -988,7 +987,7 @@ main.index {
   .work-index header {
     display: table-cell;
     width: 58.33333%;
-    padding: 4.7153%;
+    padding: 6.38328%;
     vertical-align: middle; }
 
 .more {
@@ -1004,15 +1003,15 @@ main.index {
   .post-show time {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
+    margin-right: 3.19164%;
+    width: 14.00697%;
     line-height: 2.875rem; }
     .post-show time:last-child {
       margin-right: 0; }
   .post-show .post-body {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 70.14568%; }
+    margin-right: 3.19164%;
+    width: 69.90244%; }
     .post-show .post-body:last-child {
       margin-right: 0; }

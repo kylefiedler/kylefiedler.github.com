@@ -29,8 +29,8 @@ $light-green: #E6EFC2;
 $base-background-color: white;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$text-color: lighten($base-font-color, 35);
+$base-font-color: #2F3344;
+$text-color: adjust-color($base-font-color, $lightness: 35%, $saturation: -10%);
 $base-accent-color: #39bb89;
 
 // Link Colors
