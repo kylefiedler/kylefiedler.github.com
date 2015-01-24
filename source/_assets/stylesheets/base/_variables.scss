@@ -31,7 +31,8 @@ $base-background-color: white;
 // Font Colors
 $base-font-color: #2F3344;
 $text-color: adjust-color($base-font-color, $lightness: 35%, $saturation: -10%);
-$base-accent-color: #39bb89;
+// $base-accent-color: #39bb89;
+$base-accent-color: #21c7b0;
 
 // Link Colors
 $base-link-color: $base-accent-color;
@@ -46,7 +47,7 @@ $notice-color: lighten($base-accent-color, 40);
 $success-color: $light-green;
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: lighten($light-gray, 8);
 $base-border: 1px solid $base-border-color;
 
 // Forms

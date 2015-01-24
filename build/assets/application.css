@@ -334,7 +334,7 @@ html {
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #39bb89;
+  background-color: #21c7b0;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -345,7 +345,7 @@ input[type="submit"] {
   text-decoration: none; }
   button:hover,
   input[type="submit"]:hover {
-    background-color: #39bb89;
+    background-color: #21c7b0;
     color: white; }
   button:disabled,
   input[type="submit"]:disabled {
@@ -358,14 +358,25 @@ body {
   color: #2F3344;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
-  line-height: 1.7; }
+  line-height: 1.7;
+  padding: 10px; }
+  body:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    box-shadow: inset 0 0 0 10px #48b1de;
+    content: "";
+    display: block;
+    pointer-events: none; }
 
 ::selection {
-  background-color: #39bb89;
+  background-color: #21c7b0;
   color: #fff; }
 
 ::-moz-selection {
-  background-color: #39bb89;
+  background-color: #21c7b0;
   color: #fff; }
 
 h1,
@@ -412,9 +423,9 @@ a {
   color: #2F3344;
   text-decoration: none; }
   a:hover {
-    color: #39bb89; }
+    color: #21c7b0; }
   a:active, a:focus {
-    color: #39bb89;
+    color: #21c7b0;
     outline: none; }
 
 time {
@@ -430,7 +441,7 @@ picture {
   max-width: 100%; }
 
 blockquote {
-  border-left: 2px solid #DDD;
+  border-left: 2px solid #f1f1f1;
   color: #4e5571;
   margin: 1.7em 0;
   padding-left: 0.85em; }
@@ -442,8 +453,8 @@ cite {
     content: "\2014 \00A0"; }
 
 fieldset {
-  background: #f7f7f7;
-  border: 1px solid #DDD;
+  background: white;
+  border: 1px solid #f1f1f1;
   margin: 0 0 0.85em 0;
   padding: 1.7em; }
 
@@ -473,7 +484,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #DDD;
+  border: 1px solid #f1f1f1;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
@@ -483,12 +494,12 @@ select[multiple=multiple] {
   textarea:hover,
   input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
   select[multiple=multiple]:hover {
-    border-color: #c4c4c4; }
+    border-color: #d8d8d8; }
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #39bb89;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(51, 167, 123, 0.7);
+    border-color: #21c7b0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(29, 177, 157, 0.7);
     outline: none; }
 
 textarea {
@@ -522,13 +533,13 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #b7b7b7;
+  border-bottom: 1px solid #cbcbcb;
   font-weight: bold;
   padding: 0.85em 0;
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #f1f1f1;
   padding: 0.85em 0; }
 
 tr,
@@ -611,11 +622,11 @@ header.main {
     header.main .name a {
       color: #444a62; }
       header.main .name a:hover {
-        color: #39bb89; }
+        color: #21c7b0; }
   header.main a {
     color: #8a8d9c; }
     header.main a:hover {
-      color: #39bb89; }
+      color: #21c7b0; }
   header.main hr {
     border-top: 3px solid #f1f1f1;
     border-bottom: 0;
@@ -645,7 +656,7 @@ footer.main {
     height: 1.25rem;
     width: 1.25rem; }
   footer.main a:hover g {
-    fill: #39bb89; }
+    fill: #21c7b0; }
   footer.main span {
     display: none; }
 
@@ -654,6 +665,13 @@ footer.main {
 
 main.index {
   max-width: 100em; }
+  main.index h3:after {
+    height: 3px;
+    width: 3.75em;
+    display: block;
+    content: "";
+    background-color: #f1f1f1;
+    margin: 1em 0 2em; }
 
 .introduction {
   margin-left: 8.5993%; }
@@ -873,14 +891,15 @@ main.index {
     float: left;
     display: block;
     margin-right: 3.19164%;
-    width: 39.80488%; }
+    width: 26.90592%;
+    border-radius: 3px; }
     .about img:last-child {
       margin-right: 0; }
   .about header {
     float: left;
     display: block;
     margin-right: 3.19164%;
-    width: 48.40418%;
+    width: 44.10453%;
     padding-top: 2em; }
     .about header:last-child {
       margin-right: 0; }
@@ -948,25 +967,25 @@ main.index {
 
 .browser {
   border-radius: 6px;
-  border: 1px solid #DDD;
-  border-top: 1.75em solid #DDD; }
+  border: 1px solid #f1f1f1;
+  border-top: 1.75em solid #f1f1f1; }
 
 .tablet {
-  border-bottom: 1.5em solid #DDD;
-  border-left: 1.5em solid #DDD;
+  border-bottom: 1.5em solid #f1f1f1;
+  border-left: 1.5em solid #f1f1f1;
   border-radius: 12px;
-  border-right: 3em solid #DDD;
-  border-top: 1.5em solid #DDD;
+  border-right: 3em solid #f1f1f1;
+  border-top: 1.5em solid #f1f1f1;
   float: left;
   margin-right: -33%;
   width: 75%; }
 
 .phone {
-  border-bottom: 3em solid #DDD;
-  border-left: 1em solid #DDD;
+  border-bottom: 3em solid #f1f1f1;
+  border-left: 1em solid #f1f1f1;
   border-radius: 12px;
-  border-right: 1em solid #DDD;
-  border-top: 1em solid #DDD;
+  border-right: 1em solid #f1f1f1;
+  border-top: 1em solid #f1f1f1;
   float: right;
   margin-right: 10%;
   margin-top: 18%;
@@ -991,7 +1010,7 @@ main.index {
     vertical-align: middle; }
 
 .more {
-  color: #39bb89; }
+  color: #21c7b0; }
 
 .post-show {
   display: block;

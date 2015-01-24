@@ -1,5 +1,15 @@
 main.index {
   max-width: em(1600);
+
+  h3 {
+    &:after {
+      @include size(em(60) 3px);
+      display: block;
+      content: "";
+      background-color: $base-border-color;
+      margin: 1em 0 2em;
+    }
+  }
 }
 
 .introduction {
@@ -161,11 +171,12 @@ main.index {
   margin-top: 4em;
 
   img {
-    @include span-columns(5);
+    @include span-columns(3.5);
+    border-radius: $base-border-radius;
   }
 
   header {
-    @include span-columns(6);
+    @include span-columns(5.5);
     padding-top: 2em;
   }
 }

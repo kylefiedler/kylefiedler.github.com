@@ -37,7 +37,7 @@ header.main {
   }
 
   hr {
-    border-top: 3px solid lighten($base-border-color, 8);
+    border-top: 3px solid $base-border-color;
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
