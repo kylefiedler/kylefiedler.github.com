@@ -5,11 +5,16 @@
 
   li {
     @include row;
+    margin: 3em 0;
   }
 
   time {
     @include span-columns(2);
     line-height: rem(46);
+
+    a {
+      color: lighten($text-color, 25);
+    }
   }
 
   .post-body {
