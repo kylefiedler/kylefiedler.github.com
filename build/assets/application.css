@@ -432,7 +432,8 @@ picture {
 
 blockquote {
   border-left: 3px solid #f1f1f1;
-  padding-left: 0.85em; }
+  padding-left: 0.85em;
+  margin: 0 0 1em; }
 
 cite {
   color: #636c8f;
