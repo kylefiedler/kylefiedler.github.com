@@ -1,6 +1,11 @@
-.post-show {
-  @include row;
+.post-show,
+.ephemera {
+  @include row(block);
   max-width: em(980);
+
+  li {
+    @include row;
+  }
 
   time {
     @include span-columns(2);

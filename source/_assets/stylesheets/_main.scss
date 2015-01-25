@@ -1,4 +1,31 @@
 main {
   @include outer-container;
   padding: 0 3em 3em;
+
+  &:after {
+    @include position(fixed, 0 null null 0);
+    @include size(100vw 10px);
+    content: "";
+    display: block;
+    pointer-events: none;
+    background-color: #995db4;
+  }
+
+  &.developer-portal {
+    &:after {
+      background-color: $developer-portal-color;
+    }
+  }
+
+  &.psl {
+    &:after {
+      background-color: $psl-color;
+    }
+  }
+
+  &.character-lab {
+    &:after {
+      background-color: $character-lab-color;
+    }
+  }
 }

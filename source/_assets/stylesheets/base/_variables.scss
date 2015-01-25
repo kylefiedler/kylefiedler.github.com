@@ -25,14 +25,17 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+$developer-portal-color: #00abdf;
+$psl-color: #70b274;
+$character-lab-color: #554d91;
+
 // Background Color
 $base-background-color: white;
 
 // Font Colors
 $base-font-color: #2F3344;
 $text-color: adjust-color($base-font-color, $lightness: 35%, $saturation: -10%);
-// $base-accent-color: #39bb89;
-$base-accent-color: #21c7b0;
+$base-accent-color: #61c1a4;
 
 // Link Colors
 $base-link-color: $base-accent-color;

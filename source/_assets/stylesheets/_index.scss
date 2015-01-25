@@ -45,7 +45,7 @@ main.index {
     @include animation-delay(0.25s);
 
     .hover {
-      background-color: rgba(#554d91, 0.8);
+      background-color: rgba($character-lab-color, 0.8);
     }
   }
 
@@ -57,7 +57,7 @@ main.index {
     @include animation-delay(0.05s);
 
     .hover {
-      background-color: rgba(#70b274, 0.8);
+      background-color: rgba($psl-color, 0.8);
     }
   }
 
@@ -70,7 +70,7 @@ main.index {
     width: flex-grid(5);
 
     .hover {
-      background-color: rgba(#00abdf, 0.8);
+      background-color: rgba($developer-portal-color, 0.8);
     }
   }
 
