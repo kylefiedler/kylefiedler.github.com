@@ -431,8 +431,7 @@ picture {
   max-width: 100%; }
 
 blockquote {
-  border-left: 10px solid #f1f1f1;
-  margin: 1.7em 0;
+  border-left: 3px solid #f1f1f1;
   padding-left: 0.85em; }
 
 cite {
@@ -1030,7 +1029,7 @@ main.index {
   .post-show li,
   .ephemera li {
     display: block;
-    margin: 3em 0; }
+    margin: 5em 0; }
     .post-show li::after,
     .ephemera li::after {
       clear: both;
@@ -1041,8 +1040,7 @@ main.index {
     float: left;
     display: block;
     margin-right: 3.19164%;
-    width: 14.00697%;
-    line-height: 2.875rem; }
+    width: 14.00697%; }
     .post-show time:last-child,
     .ephemera time:last-child {
       margin-right: 0; }
@@ -1058,3 +1056,6 @@ main.index {
     .post-show .post-body:last-child,
     .ephemera .post-body:last-child {
       margin-right: 0; }
+
+.post-show {
+  line-height: 2.875rem; }

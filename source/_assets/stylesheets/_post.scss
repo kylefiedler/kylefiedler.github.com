@@ -5,12 +5,11 @@
 
   li {
     @include row;
-    margin: 3em 0;
+    margin: 5em 0;
   }
 
   time {
     @include span-columns(2);
-    line-height: rem(46);
 
     a {
       color: lighten($text-color, 25);
@@ -20,4 +19,8 @@
   .post-body {
     @include span-columns(8.5);
   }
+}
+
+.post-show {
+  line-height: rem(46);
 }
