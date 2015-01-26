@@ -5,11 +5,15 @@
 .writing-index {
   li {
     time {
-      @include span-columns(2);
+      @include media(em(650)) {
+        @include span-columns(2);
+      }
     }
 
     header {
-      @include span-columns(8.5);
+      @include media(em(650)) {
+        @include span-columns(8.5);
+      }
     }
   }
 }

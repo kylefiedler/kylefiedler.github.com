@@ -33,14 +33,21 @@
   }
 
   .copy {
-    @include span-columns(5);
     vertical-align: middle;
     padding: flex-gutter() * 2;
+
+    @include media(em(1200)) {
+      @include span-columns(5);
+    }
   }
 
   .image {
-    @include span-columns(7);
+    @include clearfix;
     position: relative;
+
+    @include media(em(1200)) {
+      @include span-columns(7);
+    }
   }
 }
 

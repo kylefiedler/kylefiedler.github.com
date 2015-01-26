@@ -6,19 +6,46 @@
 
     a {
       @include row(table);
+
+      &:hover {
+        .hover {
+          @include transform(translateY(0px));
+          @include transition;
+          opacity: 1;
+        }
+      }
     }
   }
 
-  img {
-    @include span-columns(5);
-    width: 100%;
+  .view-project {
+    @include media(em(950)) {
+      @include span-columns(5);
+    }
   }
 
   header {
-    @include span-columns(7);
     padding: flex-gutter() * 2;
     vertical-align: middle;
+
+    @include media(em(950)) {
+      @include span-columns(7);
+    }
   }
+
+  .psl {
+    .view-project {
+      @include media(em(950)) {
+        float: right;
+      }
+    }
+
+    header {
+      @include media(em(950)) {
+        float: right;
+      }
+    }
+  }
+
 }
 
 .more {

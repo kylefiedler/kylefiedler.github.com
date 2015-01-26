@@ -11,6 +11,11 @@ header.main {
     display: inline-block;
     margin-right: 0.75em;
 
+    @include media(max-width em(550)) {
+      display: block;
+      margin-right: 0;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -18,6 +23,11 @@ header.main {
 
   .name {
     margin-right: 2rem;
+
+    @include media(max-width em(550)) {
+      display: block;
+      margin-right: 0;
+    }
 
     a {
       color: lighten($base-font-color, 10);

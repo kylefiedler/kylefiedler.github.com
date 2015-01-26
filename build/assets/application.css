@@ -604,10 +604,18 @@ header.main {
   header.main li {
     display: inline-block;
     margin-right: 0.75em; }
+    @media screen and (max-width: 34.375em) {
+      header.main li {
+        display: block;
+        margin-right: 0; } }
     header.main li:last-child {
       margin-right: 0; }
   header.main .name {
     margin-right: 2rem; }
+    @media screen and (max-width: 34.375em) {
+      header.main .name {
+        display: block;
+        margin-right: 0; } }
     header.main .name a {
       color: #444a62; }
       header.main .name a:hover {
@@ -634,7 +642,7 @@ main {
     content: "";
     display: table; }
   main:after {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     height: 10px;
@@ -669,6 +677,75 @@ footer.main {
 .page-title {
   text-align: center; }
 
+.view-project {
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .view-project img {
+    display: block; }
+  .view-project .hover {
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transform: translateY(100px);
+    background-color: rgba(47, 51, 68, 0.7);
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none; }
+    .character-lab .view-project .hover {
+      background-color: rgba(85, 77, 145, 0.8); }
+    .psl .view-project .hover {
+      background-color: rgba(112, 178, 116, 0.8); }
+    .developer-portal .view-project .hover {
+      background-color: rgba(0, 171, 223, 0.8); }
+    .view-project .hover header {
+      text-align: center;
+      width: 100%;
+      color: #fff; }
+      .view-project .hover header h4 {
+        font-size: 1.25em; }
+      .view-project .hover header p {
+        font-size: 0.875em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.25em;
+        color: rgba(255, 255, 255, 0.7); }
+  .view-project:hover .hover {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    opacity: 1; }
+
 main.index {
   max-width: 100em; }
   main.index h3:after {
@@ -679,13 +756,16 @@ main.index {
     background-color: #f1f1f1;
     margin: 1em 0 2em; }
 
-.introduction {
-  margin-left: 8.5993%; }
-  .introduction h1 {
-    margin-bottom: 1.5rem; }
-  .introduction p {
-    max-width: 48.40418%;
-    padding-right: 2em; }
+@media screen and (min-width: 40.625em) {
+  .introduction {
+    margin-left: 8.5993%; } }
+.introduction h1 {
+  margin-bottom: 1.5rem; }
+.introduction p {
+  padding-right: 2em; }
+  @media screen and (min-width: 57.8125em) {
+    .introduction p {
+      max-width: 48.40418%; } }
 
 .select-work-preview {
   -webkit-box-align: end;
@@ -711,126 +791,58 @@ main.index {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
-  margin-top: -5em; }
+  margin-top: 2em; }
+  @media screen and (min-width: 57.8125em) {
+    .select-work-preview {
+      margin-top: -5em; } }
   .select-work-preview .psl,
   .select-work-preview .character-lab {
-    margin-right: 3.19164%;
-    width: 26.90592%; }
+    margin-right: 3.19164%; }
+    @media screen and (min-width: 57.8125em) {
+      .select-work-preview .psl,
+      .select-work-preview .character-lab {
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: backwards;
+        -moz-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+        -webkit-animation-name: floatup;
+        -moz-animation-name: floatup;
+        animation-name: floatup;
+        -webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        animation-timing-function: ease;
+        width: 26.90592%; } }
   .select-work-preview .character-lab {
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: floatup;
-    -moz-animation-name: floatup;
-    animation-name: floatup;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
     -webkit-animation-delay: 0.25s;
     -moz-animation-delay: 0.25s;
     animation-delay: 0.25s; }
-    .select-work-preview .character-lab .hover {
-      background-color: rgba(85, 77, 145, 0.8); }
+    @media screen and (max-width: 57.8125em) {
+      .select-work-preview .character-lab {
+        display: none; } }
   .select-work-preview .psl {
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: floatup;
-    -moz-animation-name: floatup;
-    animation-name: floatup;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
     -webkit-animation-delay: 0.05s;
     -moz-animation-delay: 0.05s;
     animation-delay: 0.05s; }
-    .select-work-preview .psl .hover {
-      background-color: rgba(112, 178, 116, 0.8); }
-  .select-work-preview .developer-portal {
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: floatup;
-    -moz-animation-name: floatup;
-    animation-name: floatup;
-    -webkit-animation-timing-function: ease;
-    -moz-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: backwards;
-    -moz-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
-    margin-right: 3.19164%;
-    width: 39.80488%; }
-    .select-work-preview .developer-portal .hover {
-      background-color: rgba(0, 171, 223, 0.8); }
-  .select-work-preview a {
-    display: block;
-    position: relative;
-    overflow: hidden; }
-    .select-work-preview a .hover {
-      -webkit-transition: all 0.15s ease-out 0s;
-      -moz-transition: all 0.15s ease-out 0s;
-      transition: all 0.15s ease-out 0s;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      box-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -o-align-items: center;
-      align-items: center;
-      -ms-flex-align: center;
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      -webkit-transform: translateY(100px);
-      -moz-transform: translateY(100px);
-      -ms-transform: translateY(100px);
-      -o-transform: translateY(100px);
-      transform: translateY(100px);
-      background-color: rgba(47, 51, 68, 0.7);
-      border-radius: 6px;
-      opacity: 0;
-      pointer-events: none; }
-      .select-work-preview a .hover header {
-        text-align: center;
-        width: 100%;
-        color: #fff; }
-        .select-work-preview a .hover header h4 {
-          font-size: 1.25em; }
-        .select-work-preview a .hover header p {
-          font-size: 0.875em;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          margin-top: 0.25em;
-          color: rgba(255, 255, 255, 0.7); }
-    .select-work-preview a:hover .hover {
-      -webkit-transform: translateY(0px);
-      -moz-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-      -o-transform: translateY(0px);
-      transform: translateY(0px);
-      -webkit-transition: all 0.15s ease-out 0s;
-      -moz-transition: all 0.15s ease-out 0s;
-      transition: all 0.15s ease-out 0s;
-      opacity: 1; }
-  .select-work-preview img {
-    display: block; }
+    @media screen and (max-width: 40.625em) {
+      .select-work-preview .psl {
+        display: none; } }
+  @media screen and (min-width: 57.8125em) {
+    .select-work-preview .developer-portal {
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: backwards;
+      -moz-animation-fill-mode: backwards;
+      animation-fill-mode: backwards;
+      -webkit-animation-name: floatup;
+      -moz-animation-name: floatup;
+      animation-name: floatup;
+      -webkit-animation-timing-function: ease;
+      -moz-animation-timing-function: ease;
+      animation-timing-function: ease;
+      width: 39.80488%; } }
 
 .recent-wrapper {
   display: block;
@@ -840,75 +852,112 @@ main.index {
     content: "";
     display: table; }
 
-.recent-writing {
-  float: left;
-  display: block;
-  margin-right: 3.19164%;
-  width: 57.00348%; }
-  .recent-writing:last-child {
-    margin-right: 0; }
-  .recent-writing h3 {
-    margin-left: 15.08558%; }
-  .recent-writing li {
+@media screen and (min-width: 59.375em) {
+  .recent-writing {
+    float: left;
     display: block;
-    margin-bottom: 1em; }
-    .recent-writing li::after {
-      clear: both;
-      content: "";
-      display: table; }
-    .recent-writing li:last-child {
-      margin-bottom: 0; }
+    margin-right: 3.19164%;
+    width: 57.00348%; }
+    .recent-writing:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 34.375em) {
+  .recent-writing h3 {
+    margin-left: 15.08558%; } }
+.recent-writing li {
+  display: block;
+  margin-bottom: 1em; }
+  .recent-writing li::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .recent-writing li:last-child {
+    margin-bottom: 0; }
+@media screen and (min-width: 34.375em) {
   .recent-writing time {
     float: left;
     display: block;
     margin-right: 5.59903%;
     width: 9.48655%; }
     .recent-writing time:last-child {
-      margin-right: 0; }
+      margin-right: 0; } }
+@media screen and (min-width: 34.375em) {
   .recent-writing header {
     float: left;
     display: block;
     margin-right: 5.59903%;
     width: 84.91442%; }
     .recent-writing header:last-child {
-      margin-right: 0; }
+      margin-right: 0; } }
 
 .recent-playground {
-  float: left;
-  display: block;
-  margin-right: 3.19164%;
-  width: 31.20557%; }
-  .recent-playground:last-child {
-    margin-right: 0; }
+  margin-top: 2em; }
+  @media screen and (min-width: 34.375em) and (max-width: 57.8125em) {
+    .recent-playground {
+      margin-left: 15.08558%; } }
+  @media screen and (min-width: 57.8125em) {
+    .recent-playground {
+      float: left;
+      display: block;
+      margin-right: 3.19164%;
+      width: 31.20557%;
+      margin-top: 0; }
+      .recent-playground:last-child {
+        margin-right: 0; } }
   .recent-playground li {
     margin-bottom: 1em; }
     .recent-playground li:last-child {
       margin-bottom: 0; }
 
 .about {
-  margin-left: 8.5993%;
   display: block;
   margin-top: 4em; }
   .about::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (min-width: 81.25em) {
+    .about {
+      margin-left: 8.5993%; } }
   .about img {
-    float: left;
-    display: block;
-    margin-right: 3.19164%;
-    width: 26.90592%;
     border-radius: 3px; }
-    .about img:last-child {
-      margin-right: 0; }
-  .about header {
-    float: left;
-    display: block;
-    margin-right: 3.19164%;
-    width: 44.10453%;
-    padding-top: 2em; }
-    .about header:last-child {
-      margin-right: 0; }
+    @media screen and (min-width: 46.875em) and (max-width: 81.25em) {
+      .about img {
+        float: left;
+        display: block;
+        margin-right: 3.19164%;
+        width: 39.80488%; }
+        .about img:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 57.8125em) {
+      .about img {
+        float: left;
+        display: block;
+        margin-right: 3.19164%;
+        width: 26.90592%; }
+        .about img:last-child {
+          margin-right: 0; } }
+  @media screen and (max-width: 46.875em) {
+    .about header {
+      margin-top: 2em; } }
+  @media screen and (min-width: 46.875em) and (max-width: 81.25em) {
+    .about header {
+      float: left;
+      display: block;
+      margin-right: 3.19164%;
+      width: 57.00348%; }
+      .about header:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 81.25em) {
+    .about header {
+      float: left;
+      display: block;
+      margin-right: 3.19164%;
+      width: 44.10453%; }
+      .about header:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 90.625em) {
+    .about header {
+      padding-top: 2em; } }
 
 .secondary h3 {
   margin-bottom: 4em; }
@@ -925,20 +974,22 @@ main.index {
 .writing {
   max-width: 61.25em; }
 
-.writing-index li time {
-  float: left;
-  display: block;
-  margin-right: 3.19164%;
-  width: 14.00697%; }
-  .writing-index li time:last-child {
-    margin-right: 0; }
-.writing-index li header {
-  float: left;
-  display: block;
-  margin-right: 3.19164%;
-  width: 69.90244%; }
-  .writing-index li header:last-child {
-    margin-right: 0; }
+@media screen and (min-width: 40.625em) {
+  .writing-index li time {
+    float: left;
+    display: block;
+    margin-right: 3.19164%;
+    width: 14.00697%; }
+    .writing-index li time:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 40.625em) {
+  .writing-index li header {
+    float: left;
+    display: block;
+    margin-right: 3.19164%;
+    width: 69.90244%; }
+    .writing-index li header:last-child {
+      margin-right: 0; } }
 
 .work {
   max-width: 100em; }
@@ -962,14 +1013,22 @@ main.index {
     table-layout: fixed;
     margin-bottom: 6em; }
   .work .copy {
-    display: table-cell;
-    width: 41.66667%;
     vertical-align: middle;
     padding: 6.38328%; }
+    @media screen and (min-width: 75em) {
+      .work .copy {
+        display: table-cell;
+        width: 41.66667%; } }
   .work .image {
-    display: table-cell;
-    width: 58.33333%;
     position: relative; }
+    .work .image::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 75em) {
+      .work .image {
+        display: table-cell;
+        width: 58.33333%; } }
 
 .browser {
   border-radius: 6px;
@@ -1005,15 +1064,33 @@ main.index {
       display: table;
       width: 100%;
       table-layout: fixed; }
-  .work-index img {
-    display: table-cell;
-    width: 41.66667%;
-    width: 100%; }
+      .work-index li a:hover .hover {
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-transition: all 0.15s ease-out 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s;
+        opacity: 1; }
+  @media screen and (min-width: 59.375em) {
+    .work-index .view-project {
+      display: table-cell;
+      width: 41.66667%; } }
   .work-index header {
-    display: table-cell;
-    width: 58.33333%;
     padding: 6.38328%;
     vertical-align: middle; }
+    @media screen and (min-width: 59.375em) {
+      .work-index header {
+        display: table-cell;
+        width: 58.33333%; } }
+  @media screen and (min-width: 59.375em) {
+    .work-index .psl .view-project {
+      float: right; } }
+  @media screen and (min-width: 59.375em) {
+    .work-index .psl header {
+      float: right; } }
 
 .more {
   color: #3D8EC5; }

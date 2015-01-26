@@ -3,7 +3,7 @@ main {
   padding: 0 3em 3em;
 
   &:after {
-    @include position(fixed, 0 null null 0);
+    @include position(absolute, 0 null null 0);
     @include size(100vw 10px);
     content: "";
     display: block;

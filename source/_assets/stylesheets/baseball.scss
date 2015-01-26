@@ -34,6 +34,10 @@ header.main {
       color: $baseball-red;
     }
   }
+
+  hr {
+    border-color: shade($baseball-tan, 5);
+  }
 }
 
 h1 {
@@ -50,6 +54,10 @@ h5 {
 
 main {
   max-width: em(1600);
+
+  &:after {
+    display: none;
+  }
 
   header {
     @include row(table);
@@ -100,15 +108,18 @@ main {
 }
 
 .map {
-  padding: 3em;
-  position: relative;
   border-left: 2px solid shade($baseball-tan, 5);
   border-right: 2px solid shade($baseball-tan, 5);
 
+  .map-inner {
+    margin: 0 auto;
+    padding: 3em;
+    position: relative;
+    width: 1340px;
+  }
+
   svg {
     display: block;
-    margin: 0 auto;
-    width: 1244px;
   }
 
   .stadiums {
