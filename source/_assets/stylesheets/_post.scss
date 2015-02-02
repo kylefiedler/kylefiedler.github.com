@@ -22,5 +22,11 @@
 }
 
 .post-show {
-  line-height: rem(46);
+  time {
+    line-height: rem(38);
+  }
+
+  p {
+    font-size: rem(17);
+  }
 }

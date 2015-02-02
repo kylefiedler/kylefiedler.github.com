@@ -1,5 +1,5 @@
 main.index {
-  max-width: em(1600);
+  max-width: em(1400);
 
   h3 {
     &:after {
@@ -143,7 +143,7 @@ main.index {
   @include row;
   margin-top: 4em;
 
-  @include media(em(1300)) {
+  @include media(em(1000)) {
     @include shift(1);
   }
 
@@ -155,7 +155,7 @@ main.index {
     }
 
     @include media(em(925)) {
-      @include span-columns(3.5);
+      @include span-columns(4);
     }
   }
 
@@ -168,7 +168,7 @@ main.index {
       @include span-columns(7);
     }
 
-    @include media(em(1300)) {
+    @include media(em(1000)) {
       @include span-columns(5.5);
     }
 

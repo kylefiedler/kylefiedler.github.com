@@ -313,10 +313,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -358,8 +354,7 @@ body {
   color: #2F3344;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-size: 1em;
-  line-height: 1.7;
-  padding-top: 10px; }
+  line-height: 1.7; }
 
 ::selection {
   background-color: #3D8EC5;
@@ -381,19 +376,19 @@ h6 {
   text-rendering: optimizeLegibility; }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.625rem;
   letter-spacing: -1px;
   margin-bottom: 1rem; }
 
 h2 {
-  margin-bottom: 0.25rem;
-  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.375rem;
   letter-spacing: -1px; }
 
 h3 {
   color: #a5a8b3;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   font-weight: normal;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -404,7 +399,7 @@ h3 {
 p {
   color: #8a8d9c;
   margin: 0 0 0.85em;
-  font-size: 1.0625em; }
+  font-size: 0.9375em; }
 
 a {
   -webkit-transition: color 0.1s linear;
@@ -599,7 +594,7 @@ header.main {
   padding: 4em 0;
   text-align: center; }
   header.main h1 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     margin-bottom: 0; }
   header.main li {
     display: inline-block;
@@ -617,11 +612,12 @@ header.main {
         display: block;
         margin-right: 0; } }
     header.main .name a {
-      color: #444a62; }
+      color: #4e5571; }
       header.main .name a:hover {
         color: #3D8EC5; }
   header.main a {
-    color: #8a8d9c; }
+    color: #b3b5bf;
+    font-size: 0.9375em; }
     header.main a:hover {
       color: #3D8EC5; }
   header.main hr {
@@ -636,27 +632,11 @@ main {
   max-width: 43.75em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 3em 3em; }
+  padding: 0 3em 2em; }
   main::after {
     clear: both;
     content: "";
     display: table; }
-  main:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    width: 100vw;
-    content: "";
-    display: block;
-    pointer-events: none;
-    background-color: #61c1a4; }
-  main.developer-portal:after {
-    background-color: #00abdf; }
-  main.psl:after {
-    background-color: #70b274; }
-  main.character-lab:after {
-    background-color: #554d91; }
 
 footer.main {
   clear: both;
@@ -747,7 +727,7 @@ footer.main {
     opacity: 1; }
 
 main.index {
-  max-width: 100em; }
+  max-width: 87.5em; }
   main.index h3:after {
     height: 3px;
     width: 3.75em;
@@ -915,7 +895,7 @@ main.index {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (min-width: 81.25em) {
+  @media screen and (min-width: 62.5em) {
     .about {
       margin-left: 8.5993%; } }
   .about img {
@@ -933,7 +913,7 @@ main.index {
         float: left;
         display: block;
         margin-right: 3.19164%;
-        width: 26.90592%; }
+        width: 31.20557%; }
         .about img:last-child {
           margin-right: 0; } }
   @media screen and (max-width: 46.875em) {
@@ -947,7 +927,7 @@ main.index {
       width: 57.00348%; }
       .about header:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 81.25em) {
+  @media screen and (min-width: 62.5em) {
     .about header {
       float: left;
       display: block;
@@ -1135,5 +1115,7 @@ main.index {
     .ephemera .post-body:last-child {
       margin-right: 0; }
 
-.post-show {
-  line-height: 2.875rem; }
+.post-show time {
+  line-height: 2.375rem; }
+.post-show p {
+  font-size: 1.0625rem; }

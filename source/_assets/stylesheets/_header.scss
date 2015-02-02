@@ -3,7 +3,7 @@ header.main {
   text-align: center;
 
   h1 {
-    font-size: rem(22);
+    font-size: rem(20);
     margin-bottom: 0;
   }
 
@@ -30,7 +30,7 @@ header.main {
     }
 
     a {
-      color: lighten($base-font-color, 10);
+      color: lighten($base-font-color, 15);
 
       &:hover {
         color: $base-accent-color;
@@ -39,7 +39,8 @@ header.main {
   }
 
   a {
-    color: $text-color;
+    color: lighten($text-color, 15);
+    font-size: em(15);
 
     &:hover {
       color: $base-accent-color;

@@ -5,7 +5,6 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  padding-top: 10px;
 }
 
 @include selection {
@@ -26,21 +25,21 @@ h6 {
 }
 
 h1 {
-  font-size: rem(36);
+  font-size: rem(26);
   letter-spacing: -1px;
   margin-bottom: 1rem;
 }
 
 h2 {
-  margin-bottom: 0.25rem;
-  font-size: rem(24);
+  margin-bottom: 0.5rem;
+  font-size: rem(22);
   letter-spacing: -1px;
 }
 
 h3 {
   color: lighten($text-color, 10);
   font-family: $base-font-family;
-  font-size: em(14);
+  font-size: em(13);
   font-weight: normal;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -54,7 +53,7 @@ h3 {
 p {
   color: $text-color;
   margin: 0 0 ($base-spacing / 2);
-  font-size: em(17);
+  font-size: em(15);
 }
 
 a {
