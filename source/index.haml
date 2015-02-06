@@ -37,6 +37,15 @@ class: index
 
     %ol
     {% for post in site.posts limit:3 %}
+    {% if post.external_url %}
+      %li.external
+        %a{ href: "{{ post.url }}" }
+          %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+
+          %header
+            %h2 {{ post.title }}
+            {{ post.excerpt }}
+    {% else %}
       %li
         %a{ href: "{{ post.url }}" }
           %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
@@ -44,6 +53,7 @@ class: index
           %header
             %h2 {{ post.title }}
             {{ post.excerpt }}
+    {% endif %}
     {% endfor %}
 
   %section.recent-playground

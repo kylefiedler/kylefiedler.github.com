@@ -30,3 +30,18 @@
     font-size: rem(17);
   }
 }
+
+.external {
+  h2 {
+    &::after {
+      color: lighten($text-color, 30%);
+      content: "External Post";
+      display: inline-block;
+      font-family: $base-font-family;
+      font-size: rem(15);
+      font-weight: normal;
+      letter-spacing: 0;
+      margin-left: 0.75rem;
+    }
+  }
+}

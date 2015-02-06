@@ -5,9 +5,31 @@
     <description>Prototyping starter kit for Jekyll</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 01 Feb 2015 21:16:09 -0500</pubDate>
-    <lastBuildDate>Sun, 01 Feb 2015 21:16:09 -0500</lastBuildDate>
+    <pubDate>Thu, 05 Feb 2015 22:31:28 -0500</pubDate>
+    <lastBuildDate>Thu, 05 Feb 2015 22:31:28 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>DIY Design Sprints</title>
+        <description>&lt;p&gt;Before each design sprint that I lead, I formulate an initial plan in order to feel confident about the schedule going into the sprint. admit that this process is a bit haphazard. To frame my plan, I reflect back on prior sprints to analyze what went well and what needed improvement.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 Feb 2015 00:00:00 -0500</pubDate>
+        <link>/2015/02/05/diy-design-sprints.html</link>
+        <guid isPermaLink="true">/2015/02/05/diy-design-sprints.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Converting to Jobs Stories</title>
+        <description>&lt;p&gt;We have used user stories as part of our design and development process for many years. You could find several mentions of them throughout our playbook. We used user stories to give designers and developers context to the problems that the user is having and give space for them to solve that problem while building the product.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 16 Jan 2015 00:00:00 -0500</pubDate>
+        <link>/2015/01/16/converting-to-jobs-stories.html</link>
+        <guid isPermaLink="true">/2015/01/16/converting-to-jobs-stories.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>The difference between perfection and iterating</title>

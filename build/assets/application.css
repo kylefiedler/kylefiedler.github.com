@@ -417,7 +417,7 @@ time {
   color: #cfd0d6;
   font-size: 0.875em;
   font-style: italic;
-  line-height: 2.125rem;
+  line-height: 1.75rem;
   text-align: right; }
 
 img,
@@ -1119,3 +1119,13 @@ main.index {
   line-height: 2.375rem; }
 .post-show p {
   font-size: 1.0625rem; }
+
+.external h2::after {
+  color: #dddee2;
+  content: "External Post";
+  display: inline-block;
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  letter-spacing: 0;
+  margin-left: 0.75rem; }
