@@ -15,6 +15,7 @@ main.index {
 .introduction {
   @include media(em(650)) {
     @include shift(1);
+    margin-top: 5vh;
   }
 
   h1 {
@@ -37,7 +38,7 @@ main.index {
   margin-top: 2em;
 
   @include media(em(925)) {
-    margin-top: -5em;
+    margin-top: -2em;
   }
 
   .psl,
@@ -45,10 +46,10 @@ main.index {
     margin-right: flex-gutter();
 
     @include media(em(925)) {
-      @include animation-duration(1s);
-      @include animation-fill-mode(backwards);
-      @include animation-name(floatup);
-      @include animation-timing-function(ease);
+      // @include animation-duration(1s);
+      // @include animation-fill-mode(backwards);
+      // @include animation-name(floatup);
+      // @include animation-timing-function(ease);
       width: flex-grid(3.5);
     }
   }
@@ -71,10 +72,10 @@ main.index {
 
   .developer-portal {
     @include media(em(925)) {
-      @include animation-duration(1s);
-      @include animation-fill-mode(backwards);
-      @include animation-name(floatup);
-      @include animation-timing-function(ease);
+      // @include animation-duration(1s);
+      // @include animation-fill-mode(backwards);
+      // @include animation-name(floatup);
+      // @include animation-timing-function(ease);
       width: flex-grid(5);
     }
   }
@@ -83,6 +84,10 @@ main.index {
 .recent-wrapper {
   @include row;
   margin: 6em 0;
+
+  @include media(em(650)) {
+    margin: 8em 0;
+  }
 }
 
 .recent-writing {
@@ -141,7 +146,6 @@ main.index {
 
 .about {
   @include row;
-  margin-top: 4em;
 
   @include media(em(1000)) {
     @include shift(1);
