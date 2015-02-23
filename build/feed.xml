@@ -5,9 +5,26 @@
     <description>Prototyping starter kit for Jekyll</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 05 Feb 2015 22:31:28 -0500</pubDate>
-    <lastBuildDate>Thu, 05 Feb 2015 22:31:28 -0500</lastBuildDate>
+    <pubDate>Mon, 23 Feb 2015 08:17:25 -0500</pubDate>
+    <lastBuildDate>Mon, 23 Feb 2015 08:17:25 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Launch when you aren’t ready</title>
+        <description>&lt;p&gt;I launched my site knowing it was far from perfect. It wasn’t responsive. It didn’t display any particularly appealing animations. It was lacking polish in several places. Regardless of this knowledge, I still chose to launch.  &lt;/p&gt;
+
+&lt;p&gt;As a father of two and full-time designer, my time is limited, as is my energy level. Releasing a site, even when I know it isn’t perfect, encourages me to continuously work to fix the glitches. I strive for perfection and expect no less from my personal site. I therefore force myself to continue to work towards improving it and including any missing details I might have originally omitted.&lt;/p&gt;
+
+&lt;p&gt;I hope to establish a regular rhythm of continuously improving my site. While there is much effort put into that initial launch, the goal is to keep writing articles and updating my designs. This habit will not form solely from the initial decision to make my site live – in order to continue, I must establish a pattern that I will seek to repeat.&lt;/p&gt;
+
+&lt;p&gt;The web is constantly changing and evolving. It should be a place for us to watch each other grow as both professionals and human beings. I miss creating projects for myself during my free time, and I hope this site will serve as my platform to once again do so.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Feb 2015 00:00:00 -0500</pubDate>
+        <link>/2015/02/22/launching-incomplete.html</link>
+        <guid isPermaLink="true">/2015/02/22/launching-incomplete.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>DIY Design Sprints</title>

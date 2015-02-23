@@ -13,11 +13,11 @@ body {
   background-color: #eae7dc;
   font-family: 'Old Standard TT', serif; }
 
-::selection {
+::-moz-selection {
   background: #4e7184;
   color: #fff; }
 
-::-moz-selection {
+::selection {
   background: #4e7184;
   color: #fff; }
 
