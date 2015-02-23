@@ -9,7 +9,9 @@
   }
 
   time {
-    @include span-columns(2);
+    @include media(em(650)) {
+      @include span-columns(2);
+    }
 
     a {
       color: lighten($text-color, 25);
@@ -17,7 +19,9 @@
   }
 
   .post-body {
-    @include span-columns(8.5);
+    @include media(em(650)) {
+      @include span-columns(8.5);
+    }
   }
 }
 
