@@ -12,10 +12,8 @@
     @include align-items(center);
     @include display(flex);
     @include position(absolute, 0 0 0 0);
-    @include transform(translateY(100px));
     background-color: rgba($base-font-color, 0.7);
     border-radius: 6px;
-    opacity: 0;
     pointer-events: none;
 
     .character-lab & {
@@ -46,14 +44,6 @@
         margin-top: 0.25em;
         color: rgba(#fff, 0.7);
       }
-    }
-  }
-
-  &:hover {
-    .hover {
-      @include transform(translateY(0px));
-      @include transition;
-      opacity: 1;
     }
   }
 }

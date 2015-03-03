@@ -1,3 +1,8 @@
+header.index {
+  hr {
+    border-top-color: #e9e9e9;
+  }
+}
 main.index {
   max-width: em(1400);
 
@@ -15,7 +20,7 @@ main.index {
 .introduction {
   @include media(em(650)) {
     @include shift(1);
-    margin-top: 5vh;
+    padding-top: 5vh;
   }
 
   h1 {
@@ -31,6 +36,13 @@ main.index {
   }
 }
 
+.sketch {
+  @include position(absolute, 0px 0px null 0px);
+  background-color: #f3f3f4;
+  height: 75vh;
+  z-index: -1;
+}
+
 .select-work-preview {
   @include align-items(flex-end);
   @include display(flex);
@@ -41,12 +53,16 @@ main.index {
     margin-top: -2em;
   }
 
+  img {
+    border-radius: 3px;
+  }
+
   .psl,
   .character-lab {
-    margin-right: flex-gutter();
+    margin-right: flex-gutter() / 2;
 
     @include media(em(925)) {
-      width: flex-grid(3.5);
+      width: flex-grid(3.5) + (flex-gutter() / 2);
     }
   }
 
@@ -74,7 +90,7 @@ main.index {
   margin: 6em 0;
 
   @include media(em(650)) {
-    margin: 8em 0;
+    margin: 10em 0 8em;
   }
 }
 
