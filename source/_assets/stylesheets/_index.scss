@@ -46,25 +46,17 @@ main.index {
     margin-right: flex-gutter();
 
     @include media(em(925)) {
-      // @include animation-duration(1s);
-      // @include animation-fill-mode(backwards);
-      // @include animation-name(floatup);
-      // @include animation-timing-function(ease);
       width: flex-grid(3.5);
     }
   }
 
   .character-lab {
-    @include animation-delay(0.25s);
-
     @include media(max-width em(925)) {
       display: none;
     }
   }
 
   .psl {
-    @include animation-delay(0.05s);
-
     @include media(max-width em(650)) {
       display: none;
     }
@@ -72,10 +64,6 @@ main.index {
 
   .developer-portal {
     @include media(em(925)) {
-      // @include animation-duration(1s);
-      // @include animation-fill-mode(backwards);
-      // @include animation-name(floatup);
-      // @include animation-timing-function(ease);
       width: flex-grid(5);
     }
   }
