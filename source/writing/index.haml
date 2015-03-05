@@ -1,27 +1,28 @@
 ---
 layout: default
-class: writing secondary
+class: secondary
 ---
 
-%h3.page-title Writing: Personal essays on life and design
+.writing.container
+  %h3.page-title Writing: Personal essays on life and design
 
-%ol.writing-index
-{% for post in site.posts %}
-{% if post.external_url %}
-  %li.external
-    %a{ href: "{{ post.url }}" }
-      %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+  %ol.writing-index
+  {% for post in site.posts %}
+  {% if post.external_url %}
+    %li.external
+      %a{ href: "{{ post.url }}" }
+        %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
 
-      %header
-        %h2 {{ post.title }}
-        {{ post.excerpt }}
-{% else %}
-  %li
-    %a{ href: "{{ post.url }}" }
-      %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+        %header
+          %h2 {{ post.title }}
+          {{ post.excerpt }}
+  {% else %}
+    %li
+      %a{ href: "{{ post.url }}" }
+        %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
 
-      %header
-        %h2 {{ post.title }}
-        {{ post.excerpt }}
-{% endif %}
-{% endfor %}
+        %header
+          %h2 {{ post.title }}
+          {{ post.excerpt }}
+  {% endif %}
+  {% endfor %}

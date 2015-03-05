@@ -1,24 +1,36 @@
 ---
 layout: default
 class: work developer-portal
+header-class: developer-portal
 ---
 
-%header.container
-  %section.copy
-    %h1 Developer Portal
-    %p I was part of a thoughtbot team that helped build an internal application for a major pharmaceutical company. The company had been hiring many more developers and found that there was a vast amount of knowledge between them, most of which was contained in silos. Many weren’t tapping into others’ expertise or knowledge, or they were only using personal networks to tap into the knowledge of their fellow developers. This company wanted to build a community around their developers in order to make sharing knowledge an easy and less isolated process. From a business standpoint, the company realized the impact this might have in saving their developers’ time, as well as increasing the level of knowledge across languages and roles.
-
-  %section.image
-    %img.browser.top{ src: "/images/developer-portal/new.jpg", alt: "" }/
-    %img.browser.bottom{ src: "/images/developer-portal/hero.jpg", alt: "" }/
+%header.hero
+  .container
+    %img{ src: "/images/developer-portal/hero.png", alt: "" }/
 
 .container
-  %section.image
-    %img.tablet{ src: "/images/developer-portal/tablet.jpg", alt: "" }/
-    %img.phone{ src: "/images/developer-portal/phone.jpg", alt: "" }/
+  %section
+    %header.project-header
+      %h1.project-title Developer Portal
+      %h3.project-subtitle 
+        Sept&ndash;Dec 2014 
+        %span.divider /
+        10 Weeks
 
+    %p.copy I was part of a thoughtbot team that helped build an internal application for a major pharmaceutical company. The company had been hiring many more developers and found that there was a vast amount of knowledge between them, most of which was contained in silos. Many weren’t tapping into others’ expertise or knowledge, or they were only using personal networks to tap into the knowledge of their fellow developers. This company wanted to build a community around their developers in order to make sharing knowledge an easy and less isolated process. From a business standpoint, the company realized the impact this might have in saving their developers’ time, as well as increasing the level of knowledge across languages and roles.
+
+%section.full
+  %img{ src: "/images/developer-portal/design-sprint.jpg", alt: "" }/
+  %cite Design Sprint Exercises
+
+.container
   %section.copy
     %p We started off the project with two design sprints. During the first sprint, we formed a challenge statement and realized during testing that some of our assumptions were invalidated. We decided that it would be important to conduct another design sprint to analyze the findings we had from the first sprint and form new solutions with the additional knowledge we had. We were more successful during testing in the second sprint and decided it would be a good starting point to begin development. You can read about the design sprints for the project on the thoughtbot blog here and here.
+
+%section.full-image
+  .container
+    %img.frameless{ src: "/images/developer-portal/prototype.gif", alt: "" }/
+    %cite Design Sprint Prototype
 
 .container
   %section.copy
@@ -27,16 +39,13 @@ class: work developer-portal
     %p We ended up creating a more social experience that brought some of the ideas behind GitHub, Tumblr, and Stack Overflow together for a more tailored experience to the needs of the company’s developers.
 
   %section.image
-    %img.frameless.top{ src: "/images/developer-portal/sprint-bw-2.jpg", alt: "" }/
-    %img.frameless.bottom{ src: "/images/developer-portal/sprint-bw-1.jpg", alt: "" }/
-
-.container
-  %section.image
-    %img.browser{ src: "/images/developer-portal/prototype.gif", alt: "" }/
+    %img{ src: "/images/developer-portal/mobile.png", alt: "" }/
+    %cite Site was built with Neat to be fully responsive
 
   %section.copy
-    %h3 Technical specs
     %p This application was an Ember app with a Rails backend. All the styles were written with Sass using Bourbon, Neat and Bitters. We also used several Refills for components on the site. All HTML templates were done in Handlebars, Embers tempting language. Mockups were done in Sketch app.
 
-    %h3 Timeline:
-    %p 10 weeks
+%section.full-image.image
+  .container
+    %img{ src: "/images/developer-portal/browser-shots.png", alt: "" }/
+    %cite Screenshots from the app in Beta

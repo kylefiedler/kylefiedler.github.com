@@ -3,6 +3,12 @@ footer.main {
   padding: 6em 0;
   text-align: center;
 
+  ul {
+    display: inline-block;
+    border-top: 3px solid $base-border-color;
+    padding: 3em 2em;
+  }
+
   li {
     display: inline-block;
     margin-right: 0.75rem;

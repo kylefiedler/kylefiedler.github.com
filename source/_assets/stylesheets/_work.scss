@@ -1,81 +1,74 @@
 .work {
-  max-width: em(1600);
-
-  p + h3 {
-    margin-top: 3rem;
+  .container {
+    max-width: em(1200);
   }
+
+  .hero {
+    overflow: hidden;
+
+    img {
+      display: block;
+      margin: 0 auto -300px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.image {
+  margin-bottom: 2em;
 
   img {
     display: block;
+    margin: 0 auto 0.5em;
   }
+}
+.divider {
+  color: lighten($base-font-color, 60%);
+}
 
-  .top {
-    float: right;
-    margin-left: -33%;
-    margin-top: 6em;
-    width: 66%;
-  }
+.full-image {
+  padding: 2em 0;
+  background-color: $base-border-color;
+  text-align: center;
+}
 
-  .bottom {
-    float: left;
-    width: 66%;
-  }
+.project-header {
+  padding: 4em 0 0;
+  text-align: center;
+}
 
-  .frameless {
-    &.top {
-      margin-top: 10em;
-    }
-  }
+.copy {
+  @include column-count(2);
+  @include column-gap(flex-gutter());
+  margin: 4em auto;
+  max-width: em(900, 18);
+  font-size: em(18);
 
-  .container {
-    @include row(table);
-    margin-bottom: 6em;
-  }
+}
 
-  .copy {
-    vertical-align: middle;
-    padding: flex-gutter() * 2;
+.single {
+  max-width: em(440, 18);
+  font-size: em(18);
+  margin: 4em auto;
+}
 
-    @include media(em(1200)) {
-      @include span-columns(5);
-    }
-  }
-
-  .image {
-    @include clearfix;
-    position: relative;
-
-    @include media(em(1200)) {
-      @include span-columns(7);
-    }
+.full {
+  img {
+    width: 100%;
   }
 }
 
-.browser {
-  border-radius: 6px;
-  border: 1px solid $light-gray;
-  border-top: 1.75em solid $light-gray;
+.frameless {
+  border-radius: $base-border-radius;
 }
 
-.tablet {
-  border-bottom: 1.5em solid $light-gray;
-  border-left: 1.5em solid $light-gray;
-  border-radius: 12px;
-  border-right: 3em solid $light-gray;
-  border-top: 1.5em solid $light-gray;
-  float: left;
-  margin-right: -33%;
-  width: 75%;
-}
+header.developer-portal, 
+.developer-portal .hero {
+  background-color: $developer-portal-color;
+  color: #fff;
 
-.phone {
-  border-bottom: 3em solid $light-gray;
-  border-left: 1em solid $light-gray;
-  border-radius: 12px;
-  border-right: 1em solid $light-gray;
-  border-top: 1em solid $light-gray;
-  float: right;
-  margin-right: 10%;
-  margin-top: 18%;
-  width: 25%;
+  .name a,
+  a {
+    color: #fff;
+  }
 }
