@@ -54,6 +54,7 @@ h5 {
 
 main {
   max-width: em(1600);
+  padding: 0 2em;
 
   &:after {
     display: none;
@@ -370,3 +371,6 @@ main {
   padding: 2em;
 }
 
+footer.main .social {
+  border-color: shade($baseball-tan, 5);
+}

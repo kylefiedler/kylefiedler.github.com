@@ -662,6 +662,7 @@ footer.main {
     left: 0;
     background-color: rgba(47, 51, 68, 0.7);
     border-radius: 6px;
+    opacity: 0;
     pointer-events: none; }
     .character-lab .view-project .hover {
       background-color: rgba(85, 77, 145, 0.8); }
@@ -682,15 +683,25 @@ footer.main {
         margin-top: 0.25em;
         color: rgba(255, 255, 255, 0.7); }
 
-main.index {
+.view-project:hover .hover {
+  opacity: 1; }
+
+.main.index {
+  background-color: #f3f3f4; }
+
+main.index .container {
   max-width: 87.5em; }
-  main.index h3:after {
-    height: 3px;
-    width: 3.75em;
-    display: block;
-    content: "";
-    background-color: #f1f1f1;
-    margin: 1em 0 2em; }
+main.index h3:after {
+  height: 3px;
+  width: 3.75em;
+  display: block;
+  content: "";
+  background-color: #f1f1f1;
+  margin: 1em 0 2em; }
+
+.background-wrapper {
+  background-color: #f3f3f4;
+  overflow: hidden; }
 
 @media screen and (min-width: 40.625em) {
   .introduction {
@@ -703,15 +714,6 @@ main.index {
   @media screen and (min-width: 57.8125em) {
     .introduction p {
       max-width: 48.40418%; } }
-
-.sketch {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  background-color: #f3f3f4;
-  height: 62vh;
-  z-index: -1; }
 
 .select-work-preview {
   -webkit-box-align: end;
@@ -737,7 +739,8 @@ main.index {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
-  margin-top: 2em; }
+  margin-top: 2em;
+  margin-bottom: -2.5em; }
   @media screen and (min-width: 57.8125em) {
     .select-work-preview {
       margin-top: -2em; } }
@@ -769,7 +772,7 @@ main.index {
     display: table; }
   @media screen and (min-width: 40.625em) {
     .recent-wrapper {
-      margin: 10em 0 8em; } }
+      margin: 8em 0; } }
 
 @media screen and (min-width: 59.375em) {
   .recent-writing {
@@ -957,6 +960,26 @@ main.index {
 
 .frameless {
   border-radius: 3px; }
+
+header.psl,
+.psl .hero {
+  background-color: #70b274;
+  color: #fff; }
+  header.psl .name a,
+  header.psl a,
+  .psl .hero .name a,
+  .psl .hero a {
+    color: #fff; }
+
+header.character-lab,
+.character-lab .hero {
+  background-color: #554d91;
+  color: #fff; }
+  header.character-lab .name a,
+  header.character-lab a,
+  .character-lab .hero .name a,
+  .character-lab .hero a {
+    color: #fff; }
 
 header.developer-portal,
 .developer-portal .hero {

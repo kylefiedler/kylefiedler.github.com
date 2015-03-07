@@ -43,7 +43,8 @@ h5 {
   font-family: 'Old Standard TT', serif; }
 
 main {
-  max-width: 100em; }
+  max-width: 100em;
+  padding: 0 2em; }
   main:after {
     display: none; }
   main header {
@@ -267,3 +268,6 @@ main {
   width: 20%;
   border-left: 2px solid #dedbd1;
   padding: 2em; }
+
+footer.main .social {
+  border-color: #dedbd1; }

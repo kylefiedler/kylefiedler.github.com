@@ -4,80 +4,83 @@ class: index
 header-class: index
 ---
 
-%section.introduction
-  %h1 I plan, design, test, and build digital products at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
-  %p I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and jobs-to-be-done to help me best understand what a product&rsquo;s is trying to solve. I place empathy at the forefront of my process. I ship early and iterate.
+.background-wrapper
+  .container
+    %section.introduction
+      %h1 I plan, design, test, and build digital products at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
+      %p I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and jobs-to-be-done to help me best understand what a product&rsquo;s is trying to solve. I place empathy at the forefront of my process. I ship early and iterate.
 
-%ul.select-work-preview
-  %li.character-lab
-    %a.view-project{ href: "/work/character-growth-card" }
-      %img{ src: "/images/character-lab/homepage.jpg", alt: "" }/
-      .hover
-        %header
-          %h4 Character Growth Card
-          %p View Project
-  %li.psl
-    %a.view-project{ href: "/work/psl" }
-      %img{ src: "/images/psl/homepage.jpg", alt: "" }/
-      .hover
-        %header
-          %h4 Philly Startup Leaders
-          %p View Project
-  %li.developer-portal
-    %a.view-project{ href: "/work/developer-portal" }
-      %img{ src: "/images/developer-portal/hero.jpg", alt: "" }/
-      .hover
-        %header
-          %h4 Developer Portal
-          %p View Project
-.sketch
+    %ul.select-work-preview
+      %li.character-lab
+        %a.view-project{ href: "/work/character-growth-card" }
+          %img{ src: "/images/character-lab/homepage.jpg", alt: "" }/
+          .hover
+            %header
+              %h4 Character Growth Card
+              %p View Project
+      %li.psl
+        %a.view-project{ href: "/work/psl" }
+          %img{ src: "/images/psl/homepage.jpg", alt: "" }/
+          .hover
+            %header
+              %h4 Philly Startup Leaders
+              %p View Project
+      %li.developer-portal
+        %a.view-project{ href: "/work/developer-portal" }
+          %img{ src: "/images/developer-portal/hero.png", alt: "" }/
+          .hover
+            %header
+              %h4 Developer Portal
+              %p View Project
 
-.recent-wrapper
-  %section.recent-writing
-    %h3
-      %a{ href: "/writing" } Most recent writing
+.container
+  .recent-wrapper
+    %section.recent-writing
+      %h3
+        %a{ href: "/writing" } Most recent writing
 
-    %ol
-    {% for post in site.posts limit:3 %}
-    {% if post.external_url %}
-      %li.external
-        %a{ href: "{{ post.url }}" }
-          %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+      %ol
+      {% for post in site.posts limit:3 %}
+      {% if post.external_url %}
+        %li.external
+          %a{ href: "{{ post.url }}" }
+            %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
 
-          %header
-            %h2 {{ post.title }}
-            {{ post.excerpt }}
-    {% else %}
-      %li
-        %a{ href: "{{ post.url }}" }
-          %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+            %header
+              %h2 {{ post.title }}
+              {{ post.excerpt }}
+      {% else %}
+        %li
+          %a{ href: "{{ post.url }}" }
+            %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
 
-          %header
-            %h2 {{ post.title }}
-            {{ post.excerpt }}
-    {% endif %}
-    {% endfor %}
+            %header
+              %h2 {{ post.title }}
+              {{ post.excerpt }}
+      {% endif %}
+      {% endfor %}
 
-  %section.recent-playground
-    %h3
-      %a{ href: "/playground" } Recent playground experiments
+    %section.recent-playground
+      %h3
+        %a{ href: "/playground" } Recent playground experiments
 
-    %ul
-      %li
-        %a{ href: "/playground/baseball-stadiums" }
-          %h2 Baseball Stadiums
-          %p One of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I&rsquo;ve been too and which I still need to visit.
+      %ul
+        %li
+          %a{ href: "/playground/baseball-stadiums" }
+            %h2 Baseball Stadiums
+            %p One of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I&rsquo;ve been too and which I still need to visit.
 
-      -# %li
-      -#   %a{ href: "/playground/purpose" }
-      -#     %h2 Purpose
-      -#     %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
+        -# %li
+        -#   %a{ href: "/playground/purpose" }
+        -#     %h2 Purpose
+        -#     %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
 
-%section.about
-  %img{ src: "http://photos-a.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10784792_776487902416280_1650918728_n.jpg", alt: "Kyle's Family" }/
 
-  %header
-    %h3 About Me
-    %h2 When I&rsquo;m not at my computer, I&rsquo;m probably with my wife and two kids.
-    %p We love hanging out, going for walks with our two puppies, and watching movies together. To hear more about my adventures through life, follow me on <a href="http://twitter.com/kylefiedler">Twitter</a>, view my latest project on <a href="http://dribbble.com/kylefiedler">Dribbble</a>, find out what I&rsquo;m posting on <a href="http://ephemera.kylefiedler.com">Tumblr</a>, and check out my open source work on <a href="http://github.com/kylefiedler">GitHub</a>. I co-run <a href="http://refreshphilly.com">Refresh Philly</a>, <a href="http://philly.buildguild.org">Build Guild Philly</a>, and <a href="http://www.baseballhackday.com">Baseball Hack Day</a>. I&rsquo;ll always enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.
+  %section.about
+    %img{ src: "http://photos-a.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10784792_776487902416280_1650918728_n.jpg", alt: "Kyle's Family" }/
+
+    %header
+      %h3 About Me
+      %h2 When I&rsquo;m not at my computer, I&rsquo;m probably with my wife and two kids.
+      %p We love hanging out, going for walks with our two puppies, and watching movies together. To hear more about my adventures through life, follow me on <a href="http://twitter.com/kylefiedler">Twitter</a>, view my latest project on <a href="http://dribbble.com/kylefiedler">Dribbble</a>, find out what I&rsquo;m posting on <a href="http://ephemera.kylefiedler.com">Tumblr</a>, and check out my open source work on <a href="http://github.com/kylefiedler">GitHub</a>. I co-run <a href="http://refreshphilly.com">Refresh Philly</a>, <a href="http://philly.buildguild.org">Build Guild Philly</a>, and <a href="http://www.baseballhackday.com">Baseball Hack Day</a>. I&rsquo;ll always enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.
 

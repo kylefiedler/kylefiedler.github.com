@@ -62,7 +62,29 @@
   border-radius: $base-border-radius;
 }
 
-header.developer-portal, 
+header.psl,
+.psl .hero {
+  background-color: $psl-color;
+  color: #fff;
+
+  .name a,
+  a {
+    color: #fff;
+  }
+}
+
+header.character-lab,
+.character-lab .hero {
+  background-color: $character-lab-color;
+  color: #fff;
+
+  .name a,
+  a {
+    color: #fff;
+  }
+}
+
+header.developer-portal,
 .developer-portal .hero {
   background-color: $developer-portal-color;
   color: #fff;
