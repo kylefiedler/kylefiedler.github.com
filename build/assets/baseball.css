@@ -43,8 +43,9 @@ h5 {
   font-family: 'Old Standard TT', serif; }
 
 main {
-  max-width: 100em;
   padding: 0 2em; }
+  main .container {
+    max-width: 100em; }
   main:after {
     display: none; }
   main header {

@@ -53,8 +53,11 @@ h5 {
 }
 
 main {
-  max-width: em(1600);
   padding: 0 2em;
+
+  .container {
+    max-width: em(1600);
+  }
 
   &:after {
     display: none;
