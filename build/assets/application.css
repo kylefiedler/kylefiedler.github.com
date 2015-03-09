@@ -570,19 +570,30 @@ header.main {
       header.main li {
         display: block;
         margin-right: 0;
-        margin-bottom: 0.75em; } }
+        padding: 0.75em 0; } }
     header.main li:last-child {
       margin-right: 0; }
   header.main .name {
     margin-right: 2rem; }
     @media screen and (max-width: 34.375em) {
       header.main .name {
-        display: block;
+        display: inline-block;
         margin-right: 0; } }
     header.main .name a {
       color: #4e5571; }
       header.main .name a:hover {
         color: #3D8EC5; }
+  header.main .menu {
+    display: none; }
+    @media screen and (max-width: 34.375em) {
+      header.main .menu {
+        display: inline-block;
+        margin-left: 2em; } }
+  @media screen and (max-width: 34.375em) {
+    header.main .mobile-navigation {
+      display: none; }
+      header.main .mobile-navigation:first-child {
+        margin-top: 2em; } }
   header.main a {
     color: #b3b5bf;
     font-size: 0.9375em; }

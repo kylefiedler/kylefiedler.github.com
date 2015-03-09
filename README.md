@@ -50,7 +50,7 @@ jekyll serve -w
 
 Deploy to Github Pages
 ```
-jekyll build && git subtree push --prefix build origin gh-pages
+jekyll build && git subtree push --prefix build origin master
 ```
 
 Or install the [Proteus gem](https://github.com/thoughtbot/proteus) and enjoy some shortcuts. 
