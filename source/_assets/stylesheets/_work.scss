@@ -16,6 +16,7 @@
 
 .image {
   margin-bottom: 2em;
+  text-align: center;
 
   img {
     display: block;
@@ -55,6 +56,8 @@
 }
 
 .full {
+  text-align: center;
+
   img {
     width: 100%;
   }
@@ -72,6 +75,10 @@ header.psl,
   .name a,
   a {
     color: #fff;
+
+    &:hover {
+      color: darken($psl-color, 30%);
+    }
   }
 }
 
@@ -83,6 +90,10 @@ header.character-lab,
   .name a,
   a {
     color: #fff;
+
+    &:hover {
+      color: darken($character-lab-color, 30%);
+    }
   }
 }
 
@@ -94,5 +105,54 @@ header.developer-portal,
   .name a,
   a {
     color: #fff;
+
+    &:hover {
+      color: darken($developer-portal-color, 30%);
+    }
+  }
+}
+
+.other-work {
+  margin-top: 4em;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 2em;
+  }
+
+  a {
+    background-position: center 7em;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    border-radius: $base-border-radius;
+    color: #fff;
+    display: block;
+    padding: 2em 4em 15em;
+    text-align: center;
+    margin-bottom: 2em;
+
+    @include media(em(800)) {
+      @include span-columns(6);
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  .psl {
+    background-image: url('/images/psl/hero.png');
+    background-color: $psl-color;
+  }
+
+  .character-lab {
+    background-image: url('/images/character-lab/hero.png');
+    background-color: $character-lab-color;
+  }
+
+  .developer-portal {
+    background-image: url('/images/developer-portal/hero.png');
+    background-color: $developer-portal-color;
   }
 }

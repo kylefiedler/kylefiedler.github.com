@@ -1,6 +1,7 @@
 (function() {
   $(".menu").click(function() {
-    return $(".mobile-navigation").slideToggle("fast");
+    $(".main-navigation").slideToggle("fast");
+    return false;
   });
 
 }).call(this);

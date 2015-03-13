@@ -1,4 +1,5 @@
 #= require_tree .
 
 $(".menu").click ->
-  $(".mobile-navigation").slideToggle("fast")
+  $(".main-navigation").slideToggle("fast")
+  return false

@@ -560,9 +560,19 @@ input[type="submit"] {
 header.main {
   padding: 4em 0;
   text-align: center; }
-  header.main h1 {
+  header.main .name {
+    display: inline-block;
     font-size: 1.25rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-right: 2rem; }
+    @media screen and (max-width: 34.375em) {
+      header.main .name {
+        display: inline-block;
+        margin-right: 0; } }
+    header.main .name a {
+      color: #4e5571; }
+      header.main .name a:hover {
+        color: #3D8EC5; }
   header.main li {
     display: inline-block;
     margin-right: 0.75em; }
@@ -573,26 +583,17 @@ header.main {
         padding: 0.75em 0; } }
     header.main li:last-child {
       margin-right: 0; }
-  header.main .name {
-    margin-right: 2rem; }
-    @media screen and (max-width: 34.375em) {
-      header.main .name {
-        display: inline-block;
-        margin-right: 0; } }
-    header.main .name a {
-      color: #4e5571; }
-      header.main .name a:hover {
-        color: #3D8EC5; }
   header.main .menu {
     display: none; }
     @media screen and (max-width: 34.375em) {
       header.main .menu {
         display: inline-block;
         margin-left: 2em; } }
-  @media screen and (max-width: 34.375em) {
-    header.main .mobile-navigation {
-      display: none; }
-      header.main .mobile-navigation:first-child {
+  header.main .main-navigation {
+    display: inline-block; }
+    @media screen and (max-width: 34.375em) {
+      header.main .main-navigation {
+        display: none;
         margin-top: 2em; } }
   header.main a {
     color: #b3b5bf;
@@ -627,13 +628,15 @@ footer.main {
     padding: 3em 2em; }
   footer.main li {
     display: inline-block;
-    margin-right: 0.75rem;
+    margin-right: 1.25rem;
     font-size: 0.875rem; }
   footer.main svg {
     height: 1.25rem;
     width: 1.25rem; }
   footer.main a:hover g {
     fill: #3D8EC5; }
+  footer.main a g {
+    fill: #DDD; }
   footer.main span {
     display: none; }
 
@@ -907,7 +910,8 @@ main.index h3:after {
     vertical-align: bottom; }
 
 .image {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  text-align: center; }
   .image img {
     display: block;
     margin: 0 auto 0.5em; }
@@ -942,8 +946,10 @@ main.index h3:after {
   font-size: 1.125em;
   margin: 4em auto; }
 
-.full img {
-  width: 100%; }
+.full {
+  text-align: center; }
+  .full img {
+    width: 100%; }
 
 .frameless {
   border-radius: 3px; }
@@ -957,6 +963,11 @@ header.psl,
   .psl .hero .name a,
   .psl .hero a {
     color: #fff; }
+    header.psl .name a:hover,
+    header.psl a:hover,
+    .psl .hero .name a:hover,
+    .psl .hero a:hover {
+      color: #305932; }
 
 header.character-lab,
 .character-lab .hero {
@@ -967,6 +978,11 @@ header.character-lab,
   .character-lab .hero .name a,
   .character-lab .hero a {
     color: #fff; }
+    header.character-lab .name a:hover,
+    header.character-lab a:hover,
+    .character-lab .hero .name a:hover,
+    .character-lab .hero a:hover {
+      color: #1a182d; }
 
 header.developer-portal,
 .developer-portal .hero {
@@ -977,6 +993,47 @@ header.developer-portal,
   .developer-portal .hero .name a,
   .developer-portal .hero a {
     color: #fff; }
+    header.developer-portal .name a:hover,
+    header.developer-portal a:hover,
+    .developer-portal .hero .name a:hover,
+    .developer-portal .hero a:hover {
+      color: #003646; }
+
+.other-work {
+  margin-top: 4em;
+  text-align: center; }
+  .other-work h1 {
+    margin-bottom: 2em; }
+  .other-work a {
+    background-position: center 7em;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    padding: 2em 4em 15em;
+    text-align: center;
+    margin-bottom: 2em; }
+    @media screen and (min-width: 50em) {
+      .other-work a {
+        float: left;
+        display: block;
+        margin-right: 3.19164%;
+        width: 48.40418%;
+        margin-bottom: 0; }
+        .other-work a:last-child {
+          margin-right: 0; } }
+  .other-work h3 {
+    color: #fff; }
+  .other-work .psl {
+    background-image: url("/images/psl/hero.png");
+    background-color: #70b274; }
+  .other-work .character-lab {
+    background-image: url("/images/character-lab/hero.png");
+    background-color: #554d91; }
+  .other-work .developer-portal {
+    background-image: url("/images/developer-portal/hero.png");
+    background-color: #00abdf; }
 
 .work-index .container {
   max-width: 87.5em; }
@@ -999,28 +1056,31 @@ header.developer-portal,
   .work-index header p {
     color: #fff; }
 .work-index .character-lab {
-  background-image: url("/images/character-lab/design-sprint.jpg");
-  background-position: center center;
+  background-image: url("/images/character-lab/hero.png");
+  background-position: 115% 2em;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 60%;
+  background-color: #554d91; }
   .work-index .character-lab header {
     background-color: rgba(85, 77, 145, 0.9); }
   .work-index .character-lab .more {
     color: #554d91; }
 .work-index .developer-portal {
   background-image: url("/images/developer-portal/hero.png");
-  background-position: center center;
+  background-position: 115% 2em;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 60%;
+  background-color: #00abdf; }
   .work-index .developer-portal header {
     background-color: rgba(0, 171, 223, 0.9); }
   .work-index .developer-portal .more {
     color: #00abdf; }
 .work-index .psl {
   background-image: url("/images/psl/hero.png");
-  background-position: center center;
+  background-position: -15% 2em;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: 60%;
+  background-color: #70b274; }
   .work-index .psl header {
     background-color: rgba(112, 178, 116, 0.9); }
     @media screen and (min-width: 59.375em) {
@@ -1028,6 +1088,18 @@ header.developer-portal,
         float: right; } }
   .work-index .psl .more {
     color: #70b274; }
+
+.work-index .developer-portal,
+.work-index .character-lab,
+.work-index .psl {
+  border-radius: 3px;
+  overflow: hidden; }
+  @media screen and (max-width: 59.375em) {
+    .work-index .developer-portal,
+    .work-index .character-lab,
+    .work-index .psl {
+      background-position: center center;
+      background-size: cover; } }
 
 .more {
   color: #3D8EC5;

@@ -11,18 +11,23 @@ footer.main {
 
   li {
     display: inline-block;
-    margin-right: 0.75rem;
+    margin-right: 1.25rem;
     font-size: rem(14);
   }
 
   svg {
     @include size(1.25rem);
   }
+
   a {
     &:hover {
       g {
         fill: $base-accent-color;
       }
+    }
+
+    g {
+      fill: $light-gray;
     }
   }
 

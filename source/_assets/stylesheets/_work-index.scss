@@ -26,10 +26,11 @@
   }
 
   .character-lab {
-    background-image: url("/images/character-lab/design-sprint.jpg");
-    background-position: center center;
+    background-image: url("/images/character-lab/hero.png");
+    background-position: 115% 2em;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 60%;
+    background-color: $character-lab-color;
 
     header {
       background-color: rgba($character-lab-color, 0.9);
@@ -42,13 +43,15 @@
 
   .developer-portal {
     background-image: url("/images/developer-portal/hero.png");
-    background-position: center center;
+    background-position: 115% 2em;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 60%;
+    background-color: $developer-portal-color;
 
     header {
       background-color: rgba($developer-portal-color, 0.9);
     }
+
     .more {
       color: $developer-portal-color;
     }
@@ -56,9 +59,10 @@
 
   .psl {
     background-image: url("/images/psl/hero.png");
-    background-position: center center;
+    background-position: -15% 2em;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 60%;
+    background-color: $psl-color;
 
     header {
       background-color: rgba($psl-color, 0.9);
@@ -70,6 +74,20 @@
 
     .more {
       color: $psl-color;
+    }
+  }
+}
+
+.work-index {
+  .developer-portal,
+  .character-lab,
+  .psl {
+    border-radius: $base-border-radius;
+    overflow: hidden;
+
+    @include media(max-width em(950)) {
+      background-position: center center;
+      background-size: cover;
     }
   }
 }

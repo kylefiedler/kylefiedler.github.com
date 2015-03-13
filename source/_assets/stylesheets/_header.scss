@@ -2,9 +2,24 @@ header.main {
   padding: 4em 0;
   text-align: center;
 
-  h1 {
+  .name {
+    display: inline-block;
     font-size: rem(20);
     margin-bottom: 0;
+    margin-right: 2rem;
+
+    @include media(max-width em(550)) {
+      display: inline-block;
+      margin-right: 0;
+    }
+
+    a {
+      color: lighten($base-font-color, 15);
+
+      &:hover {
+        color: $base-accent-color;
+      }
+    }
   }
 
   li {
@@ -22,23 +37,6 @@ header.main {
     }
   }
 
-  .name {
-    margin-right: 2rem;
-
-    @include media(max-width em(550)) {
-      display: inline-block;
-      margin-right: 0;
-    }
-
-    a {
-      color: lighten($base-font-color, 15);
-
-      &:hover {
-        color: $base-accent-color;
-      }
-    }
-  }
-
   .menu {
     display: none;
 
@@ -48,13 +46,12 @@ header.main {
     }
   }
 
-  .mobile-navigation {
+  .main-navigation {
+    display: inline-block;
+
     @include media(max-width em(550)) {
       display: none;
-
-      &:first-child {
-        margin-top: 2em;
-      }
+      margin-top: 2em;
     }
   }
 
