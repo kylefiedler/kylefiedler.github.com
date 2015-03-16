@@ -121,7 +121,7 @@ header.developer-portal,
   }
 
   a {
-    background-position: center 7em;
+    background-position: center 115%;
     background-repeat: no-repeat;
     background-size: 90%;
     border-radius: $base-border-radius;
@@ -131,6 +131,9 @@ header.developer-portal,
     text-align: center;
     margin-bottom: 2em;
 
+    @include media(em(430)) {
+      background-position: center 7em;
+    }
     @include media(em(800)) {
       @include span-columns(6);
       margin-bottom: 0;

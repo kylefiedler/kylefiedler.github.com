@@ -1005,7 +1005,7 @@ header.developer-portal,
   .other-work h1 {
     margin-bottom: 2em; }
   .other-work a {
-    background-position: center 7em;
+    background-position: center 115%;
     background-repeat: no-repeat;
     background-size: 90%;
     border-radius: 3px;
@@ -1014,6 +1014,9 @@ header.developer-portal,
     padding: 2em 4em 15em;
     text-align: center;
     margin-bottom: 2em; }
+    @media screen and (min-width: 26.875em) {
+      .other-work a {
+        background-position: center 7em; } }
     @media screen and (min-width: 50em) {
       .other-work a {
         float: left;
@@ -1089,15 +1092,19 @@ header.developer-portal,
   .work-index .psl .more {
     color: #70b274; }
 
-.work-index .developer-portal,
-.work-index .character-lab,
-.work-index .psl {
+@media screen and (max-width: 28.125em) {
+  .work-lleftleftist {
+    margin-left: -1.7em;
+    margin-right: -1.7em; } }
+.work-lleftleftist .developer-portal,
+.work-lleftleftist .character-lab,
+.work-lleftleftist .psl {
   border-radius: 3px;
   overflow: hidden; }
   @media screen and (max-width: 59.375em) {
-    .work-index .developer-portal,
-    .work-index .character-lab,
-    .work-index .psl {
+    .work-lleftleftist .developer-portal,
+    .work-lleftleftist .character-lab,
+    .work-lleftleftist .psl {
       background-position: center center;
       background-size: cover; } }
 

@@ -78,7 +78,12 @@
   }
 }
 
-.work-index {
+.work-lleftleftist {
+  @include media(max-width em(450)) {
+    margin-left: -($base-spacing);
+    margin-right: -($base-spacing);
+  }
+
   .developer-portal,
   .character-lab,
   .psl {
