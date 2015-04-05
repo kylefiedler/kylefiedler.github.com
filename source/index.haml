@@ -1,66 +1,107 @@
 ---
 layout: default
-class: index
-header-class: index
 ---
 
-.background-wrapper
-  .container
-    %section.introduction
-      %h1 I plan, design, test, and build digital products at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
-      %p I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and jobs-to-be-done to help me best understand what a product is trying to solve. I place empathy at the forefront of my process. I ship early and iterate.
+%section.introduction
+  %h1 I plan, design, test, and build digital products at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.
 
-  .hero-image
-    %img{ src: "/images/homepage.png", alt: "" }/
+  %p I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and jobs-to-be-done to help me best understand what a product is trying to solve. I ship early and iterate. I enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.
 
-.container
-  .recent-wrapper
-    %section.recent-writing
-      %h3
-        %a{ href: "/writing" } Most recent writing
+%section.recent-writing
+  %h3.main-title Writing
 
-      %ol
-      {% for post in site.posts limit:3 %}
-      {% if post.external_url %}
-        %li.external
-          %a{ href: "{{ post.url }}" }
-            %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+  %ol.posts
+  {% for post in site.posts limit:6 %}
+  {% if post.external_url %}
+    %li.external
+      %h2
+        %a{ href: "{{ post.url }}" } {{ post.title }}
+      {{ post.excerpt }}
+  {% else %}
+    %li
+      %h2
+        %a{ href: "{{ post.url }}" } {{ post.title }}
+      {{ post.excerpt }}
+  {% endif %}
+  {% endfor %}
+  %a{ href: "/writing" } Archive
 
-            %header
-              %h2 {{ post.title }}
-              {{ post.excerpt }}
-      {% else %}
-        %li
-          %a{ href: "{{ post.url }}" }
-            %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
+%section.work
+  %h3.main-title Select Work
 
-            %header
-              %h2 {{ post.title }}
-              {{ post.excerpt }}
-      {% endif %}
-      {% endfor %}
+  %ul.work-list
+    %li.developer-portal
+      %h2
+        %a{ href: "/work/developer-portal" } Developer Portal
+      %p An internal application for a major pharmaceutical company. They had been hiring more and more developers and found that there was a vast amount of knowledge between all of them but many weren’t tapping into others expertise or knowledge or only using personal networks to tap into their fellow developers knowledge.
 
-    %section.recent-playground
-      %h3
-        %a{ href: "/playground" } Recent playground experiments
+    %li.psl
+      %h2
+        %a{ href: "/work/psl" } Philly Startup Leaders
+      %p A redesign and rebrand for PSL, one of the largest communities of entrepreneurs, designers and developers in the Pjilly area. The goal for the site was to show the thriving startup community in Philly, to give people an idea of what is going on and what to pay attention to in the area.
 
-      %ul
-        %li
-          %a{ href: "/playground/baseball-stadiums" }
-            %h2 Baseball Stadiums
-            %p One of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I&rsquo;ve been too and which I still need to visit.
+    %li.character-lab
+      %h2
+        %a{ href: "/work/character-growth-card" } Character Growth Card
+      %p An application to help teachers grade students on their character skills rather than just their academic skills. This non-profit had been conducting this research and encouraging teachers to teach these skills.
 
-        -# %li
-        -#   %a{ href: "/playground/purpose" }
-        -#     %h2 Purpose
-        -#     %p The why behind what it is I do. A list of ideals I hold myself to and hope to live up to.
+%section.side-projects
+  %h3.main-title Side Projects
 
+  %ul
+    %li
+      %h2
+        %a{ href: "/playground/baseball-stadiums" } Baseball Stadiums
+      %p One of my bucket list goals is to visit every baseball stadium. This is my way of keeping track of which ones I&rsquo;ve been too and which I still need to visit.
 
-  %section.about
-    %img{ src: "http://photos-a.ak.instagram.com/hphotos-ak-xpa1/t51.2885-15/10784792_776487902416280_1650918728_n.jpg", alt: "Kyle's Family" }/
+    %li
+      %h2
+        %a{ href: "http://crswll.github.io/card-creator/" }
+          Baseball Card Generator
+      %p During <a href="http://baseballhackday.com">Baseball Hack Day 2015</a> I worked with <a href="https://twitter.com/crswll">Bill Criswell</a> to create a random baseball card genrator. It used baseball card photos baseball nicknames and was styled after baseball cards found in the 60&rsquo;s and 70&rsquo;s. We won Best Design for the day.
 
-    %header
-      %h3 About Me
-      %h2 When I&rsquo;m not at my computer, I&rsquo;m probably with my wife and two kids.
-      %p We love hanging out, going for walks with our two puppies, and watching movies together. To hear more about my adventures through life, follow me on <a href="http://twitter.com/kylefiedler">Twitter</a>, view my latest project on <a href="http://dribbble.com/kylefiedler">Dribbble</a>, find out what I&rsquo;m posting on <a href="http://ephemera.kylefiedler.com">Tumblr</a>, and check out my open source work on <a href="http://github.com/kylefiedler">GitHub</a>. I co-run <a href="http://refreshphilly.com">Refresh Philly</a>, <a href="http://philly.buildguild.org">Build Guild Philly</a>, and <a href="http://www.baseballhackday.com">Baseball Hack Day</a>. I&rsquo;ll always enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.
+    %li
+      %h2
+        %a{ href: "http://philly.buildguild.org" } Build Guild Philly
+      %p A monthly meetup that I co-host with <a href="https://twitter.com/bhaslip">Brandon Haslip</a>. If you ever want to grab a drink with me come to Build Guild.
 
+    %li
+      %h2
+        %a{ href: "http://refreshphilly.org/" } Refresh Philly
+      %p A monthly meetup that I co-host with <a>Troy</a>. We have some of the best and brightest web professionals in and around Philly to give talks so that we might learn from one another.
+    %li
+      %h2
+        %a{ href: "http://www.baseballhackday.com/" }
+          Baseball Hack Day Philly
+      %p A free yearly event for designers and developers to work on a baseball project. In the hopes to win one of several prizes. The days goal is to bring people together around a love for baseball.
+    %li
+      %h2
+        %a{ href: "http://codedbykids.com/" } Coded By Kids
+      %p Coded by Kids is an amazing program that teaches kids of all age ranges in Philly. I&rsquo;m happy to be a Board Member.
+
+    %li
+      %h2 Remembeer
+      %p Project I&rsquo;m doing during some of my spar time to teach myself programming and Rails.
+
+%section.elsewhere
+  %h3.main-title Elsewhere
+
+  %ul
+    %li
+      %h2
+        %a{href: "http://twitter.com/kylefiedler"} Twitter
+    %li
+      %h2
+        %a{href: "http://dribbble.com/kylefiedler"} Dribbble
+    %li
+      %h2
+        %a{href: "http://ephemera.kylefiedler.com"} Tumblr
+    %li
+      %h2
+        %a{href: "http://github.com/kylefiedler"} GitHub
+
+%section.contact
+  %h3.main-title Say Hi!
+
+  %h2
+    %a{ href: "mailto:kyle@kylefiedler.com" } kyle@kylefiedler.com

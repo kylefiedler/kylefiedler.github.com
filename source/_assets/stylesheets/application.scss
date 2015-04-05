@@ -1,18 +1,8 @@
 @import "vendor/normalize";
 @import "bourbon";
-@import "base/grid-settings";
-@import "neat";
 
 @import "base/base";
-@import "header";
-@import "container";
-@import "footer";
-@import "page-title";
-@import "work-hover";
 
-@import "index";
-@import "secondary";
-@import "writing";
-@import "work";
-@import "work-index";
-@import "post";
+@import "components/main-title";
+@import "components/case-study";
+@import "components/external";

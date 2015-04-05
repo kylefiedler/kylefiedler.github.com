@@ -15,6 +15,18 @@ ol {
     margin-bottom: $base-spacing / 2;
     padding-left: $base-spacing;
   }
+
+  li {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &:before {
+      @include position(absolute, 0px null null -2em);
+      color: lighten($text-color, 25%);
+      content: "\2014 \00A0";
+      display: block;
+    }
+  }
 }
 
 dl {

@@ -1,0 +1,14 @@
+.main-title {
+  color: lighten($text-color, 10);
+  font-family: $base-font-family;
+  font-size: em(13);
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  text-transform: uppercase;
+
+  a {
+    color: lighten($text-color, 10);
+  }
+}

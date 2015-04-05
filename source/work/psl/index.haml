@@ -1,46 +1,40 @@
 ---
 layout: default
-class: work psl
-header-class: psl
 ---
-%header.hero
-  .container
-    %img.browser.bottom{ src: "/images/psl/hero.png", alt: "" }/
 
-.container
-  %section
-    %header.project-header
-      %h1
-        %a{ href: "http://phillystartupleaders.org/" } Philly Startup Leaders
+%header.case-study--header
+  %h1
+    %a{ href: "http://phillystartupleaders.org/" } Philly Startup Leaders
 
-      %h3.project-subtitle
-        Nov&ndash;Dec 2014
-        %span.divider /
-        4 Weeks
-        %span.divider /
-        %a{ href: "http://phillystartupleaders.org" } http://phillystartupleaders.org
+  %h3.case-study--subtitle
+    Nov&ndash;Dec 2014
+    %span.divider /
+    4 Weeks
+    %span.divider /
+    %a{ href: "http://phillystartupleaders.org" } http://phillystartupleaders.org
 
-    .copy
-      %p I was asked to redesign and rebrand the PSL marketing website. The goal for the site was to exemplify the thriving startup community in Philly, and to give people an idea of current happenings and worthy activities in the area.
+%section.case-study--body
+  %p I was asked to redesign and rebrand the PSL marketing website. The goal for the site was to exemplify the thriving startup community in Philly, and to give people an idea of current happenings and worthy activities in the area.
 
-      %p I wanted to showcase the people behind the Philly startup scene. I saw a great photo from a recent PSL event and felt it was a perfect fit for my vision. I used it as a backdrop in order to set the tone that the organization is welcoming and creative.
+  %p I wanted to showcase the people behind the Philly startup scene. I saw a great photo from a recent PSL event and felt it was a perfect fit for my vision. I used it as a backdrop in order to set the tone that the organization is welcoming and creative.
 
-.container
-  %section.image
+  %p The site was built on Jekyll, and the styles were compiled using Sass with Bourbon, Neat, and Bitters. They are using GitHub pages as the host in order to easily edit any future content. Early mockups were done using Sketch app.
+
+  .image
+    %img{ src: "/images/psl/hero.png", alt: "" }/
+  .image
+    %img{ src: "/images/psl/body.png", alt: "" }/
+  .image
     %img{ src: "/images/psl/mobile.png", alt: "" }/
 
-  %section.copy
-    %p The site was built on Jekyll, and the styles were compiled using Sass with Bourbon, Neat, and Bitters. They are using GitHub pages as the host in order to easily edit any future content. Early mockups were done using Sketch app.
+%section.case-study--navigation
+  %h3.main-title
+    Other case studies
+  %ul
+    %li
+      %a.psl{ href: "/work/developer-portal" }
+        %h2 Developer Portal
+    %li
+      %a.character-lab{ href: "/work/character-growth-card" }
+        %h2 Character Growth Card
 
-%section.full-image.image
-  .container
-    %img.browser.top{ src: "/images/psl/screens.png", alt: "" }/
-
-%section.container.other-work
-  %h1 Take a look at another case study
-  %a.developer-portal{ href: "/work/developer-portal" }
-    %h2 Developer Portal
-    %h3 View work
-  %a.character-lab{ href: "/work/character-growth-card" }
-    %h2 Character Growth Card
-    %h3 View work

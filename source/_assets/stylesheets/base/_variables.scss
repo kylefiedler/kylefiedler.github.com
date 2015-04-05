@@ -1,11 +1,10 @@
 // Typography
-$sans-serif: "europa-1","europa-2", $helvetica;
-$serif: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", $georgia;
+$serif: "chaparral-pro-1","chaparral-pro-2", "ff-tisa-web-pro-1","ff-tisa-web-pro-2", $georgia;
 $base-font-family: $serif;
-$header-font-family: $sans-serif;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: rem(20);
+$small-font-size: rem(16);
 
 // Line height
 $base-line-height: 1.7;
@@ -51,7 +50,7 @@ $notice-color: lighten($base-accent-color, 40);
 $success-color: $light-green;
 
 // Border color
-$base-border-color: lighten($light-gray, 8);
+$base-border-color: lighten($light-gray, 3);
 $base-border: 1px solid $base-border-color;
 
 // Forms

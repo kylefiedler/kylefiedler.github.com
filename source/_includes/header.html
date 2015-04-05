@@ -11,7 +11,6 @@
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="stylesheet" href="{{ site.baseurl }}{% asset_path application.css %}">
-    {% if page.stylesheet %}<link rel="stylesheet" href="{{ site.baseurl }}{% asset_path baseball.css %}">{% endif %}
 
     <script src="//use.typekit.net/vzw1iuz.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -30,21 +29,6 @@
   </head>
 
   <body>
-    <header class="main {% if page.header-class %}{{ page.header-class }}{% endif %}">
-      <h1 class="name"><a href="/">Kyle Fiedler</a></h1>
-      <a href="#" class="menu">Menu</a>
-      <ul class="main-navigation">
-        <li>
-          <a href="http://ephemera.kylefiedler.com">Ephemera</a>
-        </li>
-        <li>
-          <a href="/writing">Writing</a>
-        </li>
-        <li>
-          <a href="/playground">Playground</a>
-        </li>
-        <li>
-          <a href="/work">Case Studies</a>
-        </li>
-      </ul>
+    <header>
+      <h1 class="main-title"><a href="/">I'm Kyle Fiedler</a></h1>
     </header>
