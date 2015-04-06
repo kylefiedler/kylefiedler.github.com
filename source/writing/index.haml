@@ -4,25 +4,19 @@ class: secondary
 ---
 
 .writing.container
-  %h3.page-title Writing: Personal essays on life and design
+  %h3.main-title Writing Arichive
 
   %ol.writing-index
   {% for post in site.posts %}
   {% if post.external_url %}
     %li.external
-      %a{ href: "{{ post.url }}" }
-        %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
-
-        %header
-          %h2 {{ post.title }}
-          {{ post.excerpt }}
+      %h2
+        %a{ href: "{{ post.url }}" } {{ post.title }}
+      {{ post.excerpt }}
   {% else %}
     %li
-      %a{ href: "{{ post.url }}" }
-        %time{ datetime: "", pubdate: "" } {{ post.date | date: "%-m/%-d/%y" }}
-
-        %header
-          %h2 {{ post.title }}
-          {{ post.excerpt }}
+      %h2
+        %a{ href: "{{ post.url }}" } {{ post.title }}
+      {{ post.excerpt }}
   {% endif %}
   {% endfor %}
