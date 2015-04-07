@@ -465,3 +465,10 @@ dl {
   display: inline;
   font-size: 1rem;
   margin-left: 0.5rem; }
+
+.soon h2:after {
+  color: #b3b5bf;
+  content: "Coming Soon";
+  display: inline;
+  font-size: 1rem;
+  margin-left: 0.5rem; }
