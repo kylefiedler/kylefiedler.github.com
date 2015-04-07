@@ -1,0 +1,9 @@
+.soon {
+  h2:after {
+    color: lighten($text-color, 15%);
+    content: "Coming Soon";
+    display: inline;
+    font-size: $small-font-size;
+    margin-left: 0.5rem;
+  }
+}
