@@ -11,11 +11,6 @@ body {
   padding-right: 2em;
 }
 
-@include selection {
-  background-color: $base-accent-color;
-  color: #fff;
-};
-
 h1,
 h2,
 h3,

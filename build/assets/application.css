@@ -321,21 +321,13 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #f9f9f9;
   color: #989ba7;
-  font-family: "chaparral-pro-1", "chaparral-pro-2", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-family: "chaparral-pro-1", "chaparral-pro-2", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1.25rem;
   line-height: 1.7;
   padding-left: 18%;
   padding-top: 6rem;
   padding-bottom: 6rem;
   padding-right: 2em; }
-
-::-moz-selection {
-  background-color: #3D8EC5;
-  color: #fff; }
-
-::selection {
-  background-color: #3D8EC5;
-  color: #fff; }
 
 h1,
 h2,
@@ -428,7 +420,7 @@ dl {
 
 .main-title {
   color: #a5a8b3;
-  font-family: "chaparral-pro-1", "chaparral-pro-2", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-family: "chaparral-pro-1", "chaparral-pro-2", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 0.8125em;
   font-weight: normal;
   letter-spacing: 2px;
