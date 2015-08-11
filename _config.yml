@@ -1,15 +1,9 @@
-gems: [bourbon, neat]
-
-# Structure configuration
-source: source
-destination: build
-
-assets:
-  cachebust: soft
-
-# Site settings
 title: Kyle Fiedler
 description: Kyle enjoys a well-made peanut butter and jelly sandwich, cut in two triangles
 
-# Build settings
-markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+exclude:
+  - README

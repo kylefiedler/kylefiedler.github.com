@@ -1,0 +1,25 @@
+---
+layout: default
+class: secondary
+---
+
+<div class="writing container">
+  <h3 class="main-title">Writing Arichive</h3>
+
+  <ol class="writing-index">
+  {% for post in site.posts %}
+  {% if post.external_url %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% else %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endif %}
+  {% endfor %}
+  </ol>
+</div>
