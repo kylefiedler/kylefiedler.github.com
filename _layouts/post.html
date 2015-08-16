@@ -1,29 +1,12 @@
 {% include header.html %}
 
 <main>
-  <time datetime="" pubdate="">{{ page.date | date: "%-m/%-d/%y" }}</time>
 
   <article class="post--body">
     <h1>{{ page.title }}</h1>
     {{ content }}
+    <time datetime="" pubdate="">{{ page.date | date: "%-m/%-d/%y" }}</time>
   </article>
-
-  <div class="post--all-posts">
-    <h3 class="main-title">All Posts</h3>
-    <ol>
-      {% for post in site.posts %}
-        {% if post.external_url %}
-          <li class="external">
-        {% else %}
-          <li>
-        {% endif %}
-          <h2>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h2>
-          {{ post.excerpt }}
-        {% endfor %}
-      </ol>
-  </div>
 </main>
 
 {% include footer.html %}

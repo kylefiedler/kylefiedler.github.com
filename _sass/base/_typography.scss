@@ -28,6 +28,15 @@ h6 {
   }
 }
 
+h4 {
+margin-bottom: 0;
+}
+
+h5 {
+  color: $text-color;
+  margin-bottom: 0;
+}
+
 p {
   color: $text-color;
   margin: 0 0 ($base-spacing / 2);
