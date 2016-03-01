@@ -5,10 +5,12 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  padding-left: 18%;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-right: 2em;
+  padding: 6rem 2rem 6rem 3rem;
+
+  @media screen and (min-width: 820px) {
+    padding-left: 18%;
+    padding-right: 2em;
+  }
 }
 
 h1,
