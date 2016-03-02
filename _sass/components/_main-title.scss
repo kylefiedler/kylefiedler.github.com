@@ -1,14 +1,15 @@
 .main-title {
-  color: lighten($text-color, 10);
+  color: lighten($text-color, 20);
   font-family: $base-font-family;
-  font-size: em(13);
   font-weight: normal;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-  text-transform: uppercase;
+  margin-bottom: 3rem;
+  margin-top: 6rem;
 
   a {
     color: lighten($text-color, 10);
+
+    &:hover {
+      color: $base-font-color;
+    }
   }
 }

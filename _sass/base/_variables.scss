@@ -1,10 +1,11 @@
 // Typography
 $serif: "chaparral-pro-1","chaparral-pro-2", "ff-tisa-web-pro-1","ff-tisa-web-pro-2", $georgia;
-$base-font-family: $serif;
+$system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$base-font-family: $system;
 
 // Font Sizes
-$base-font-size: rem(20);
-$small-font-size: rem(16);
+$base-font-size: 1.125rem;
+$small-font-size: 1rem;
 
 // Line height
 $base-line-height: 1.7;

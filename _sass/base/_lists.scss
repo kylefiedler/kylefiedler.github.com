@@ -23,7 +23,7 @@ ol {
     &:before {
       @include position(absolute, 0px null null -2em);
       color: lighten($text-color, 25%);
-      content: "\2014 \00A0";
+      content: "\2014";
       display: block;
     }
   }
