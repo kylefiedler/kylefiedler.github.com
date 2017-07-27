@@ -1,15 +1,17 @@
 .main-title {
-  color: lighten($text-color, 20);
+  color: $purple;
   font-family: $base-font-family;
-  font-weight: normal;
   margin-bottom: 3rem;
   margin-top: 6rem;
 
   a {
-    color: lighten($text-color, 10);
-
-    &:hover {
-      color: $base-font-color;
-    }
+    color: $purple;
+    border: none;
   }
+}
+
+.wave {
+  margin-left: -2rem;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
