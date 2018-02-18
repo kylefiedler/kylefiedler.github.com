@@ -15,17 +15,17 @@ layout: default
         {% if post.external_url %}
         <li>
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          {{ post.excerpt }}
+          <p>{{ post.date | date: '%B %d, %Y' }}</p>
         </li>
         {% else %}
         <li>
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          {{ post.excerpt }}
+          <p>{{ post.date | date: '%B %d, %Y' }}</p>
         </li>
         {% endif %}
       {% endfor %}
     </ol>
-  <a href="/writing">Archive</a>
+  <a href="/writing">Full Archive</a>
 </section>
 
 <section>
@@ -33,33 +33,29 @@ layout: default
   <ul>
     <li>
       <h2>
-        <a href="http://us.ivoox.com/en/32-kyle-fiedler-audios-mp3_rf_11970663_1.html">HiRes Podcast</a>
+        <a href="http://tentative.fm/">Tentative</a>
       </h2>
-       <p>I was invited to talk on the HiRes podacast, a podcast that focuses on designers in the Philly area. I talk about my move to Texas and some of the work that I've done at thoughtbot.</p>
     </li>
     <li>
       <h2>
-        <a href="http://tentative.fm/">Tentative</a>
+        <a href="http://us.ivoox.com/en/32-kyle-fiedler-audios-mp3_rf_11970663_1.html">HiRes Podcast: Episode 32</a>
       </h2>
-      <p>A podcast that I regularly co-host with <a href="https://twitter.com/kaishin">Reda Lemeden</a>. We talk about product design, graphic design and front end development.</p>
     </li>
     <li>
-      <h2>Between Screens</h2>
-      <p>
-        <a href="http://www.betweenscreens.fm/episodes/134">Design Directors @ thoughtbot | Leadership | Chief Design Officer responsibilities | Fulfilled & happy | Flat hierarchy | Coordinating Design Directors | Titles | Feedback</a>
-      </p>
-      <p>
-        <a href="http://www.betweenscreens.fm/episodes/127">“Good” Designer | Saying “NO!” | Design questions | Apprentices | Onboarding</a>
-      </p>
+      <h2><a href="http://www.betweenscreens.fm/episodes/127">Between Screens: Episode 127</a></h2>
     </li>
     <li>
-      <h2>Giant Robots</h2>
-      <p>
-        <a href="http://giantrobots.fm/132">132: Story Tellers</a>
-      </p>
-      <p>
-        <a href="http://giantrobots.fm/17">17: I"m feeling full and Sassy</a>
-      </p>
+      <h2><a href="http://www.betweenscreens.fm/episodes/134">Between Screens: Episode 134</a></h2>
+    </li>
+    <li>
+      <h2>
+        <a href="http://giantrobots.fm/17">Giant Robots 17: I'm feeling full and Sassy</a>
+      </h2>
+    </li>
+    <li>
+      <h2>
+        <a href="http://giantrobots.fm/132">Giant Robots 132: Story Tellers</a>
+      </h2>
     </li>
     <li>
       <h2>
@@ -81,28 +77,6 @@ layout: default
       </h2>
     </li>
     <li><h2>Sass Conf &mdash; Large Sass Panel</h2></li>
-  </ul>
-</section>
-
-<section class="lists">
-  <h3 class="main-title">Lists</h3>
-
-  <ul>
-    <li>
-      <h2>
-        <a href="/lists/baseball-stadiums">Baseball Stadiums</a>
-      </h2>
-    </li>
-    <li>
-      <h2>
-        <a href="/lists/reading">Recommended Reading</a>
-      </h2>
-    </li>
-    <li>
-      <h2>
-        <a href="/lists/podcasts">Recommended Podcasts</a>
-      </h2>
-    </li>
   </ul>
 </section>
 

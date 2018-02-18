@@ -1,10 +1,8 @@
 // Typography
 $serif: $georgia;
-$system: "questa-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-$sans: $helvetica;
-$base-font-family: $system;
+$system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$base-font-family: "questa-sans", $system;
 
 // Font Sizes
 $base-font-size: 1.45rem;

@@ -4,8 +4,8 @@
 
   <article class="post--body">
     <h1>{{ page.title }}</h1>
+    <time datetime="" pubdate="">{{ page.date | date: '%B %d, %Y' }}</time>
     {{ content }}
-    <time datetime="" pubdate="">{{ page.date | date: "%-m/%-d/%y" }}</time>
   </article>
 </main>
 

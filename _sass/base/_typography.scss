@@ -23,8 +23,8 @@ h4,
 h5,
 h6 {
   font-size: $small-font-size;
+  font-weight: 400;
   color: $base-font-color;
-  font-weight: normal;
   margin: 0 0 0.5rem;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 
@@ -37,8 +37,14 @@ h6 {
   }
 }
 
+h1 {
+  font-weight: 500;
+}
+
+h2,
 h4 {
   margin-bottom: 0;
+  line-height: 1.2;
 }
 
 h5 {
@@ -75,13 +81,16 @@ a {
       z-index: -1;
     }
   }
+
+  &:visited {
+    text-decoration: line-through;
+  }
 }
 
 time {
   color: lighten($text-color, 25);
-  font-size: $small-font-size;
-  font-style: italic;
   margin-bottom: 2rem;
+  display: block;
 }
 
 img,
