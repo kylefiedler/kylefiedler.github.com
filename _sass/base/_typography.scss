@@ -1,7 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   background-color: #fcfcfc;
-  color: lighten($text-color, 5%);
+  color: $text-color;
   font-family: $base-font-family;
   font-size: $small-font-size;
   line-height: $base-line-height;
@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
   font-size: $small-font-size;
-  font-weight: 400;
+  font-weight: 500;
   color: $base-font-color;
   margin: 0 0 0.5rem;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
@@ -38,13 +38,12 @@ h6 {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h2,
 h4 {
   margin-bottom: 0;
-  line-height: 1.2;
 }
 
 h5 {
@@ -58,8 +57,7 @@ p {
 }
 
 a {
-  color: $base-link-color;
-  text-decoration: none;
+  color: inherit;
   position: relative;
   display: inline-block;
   z-index: 1;
@@ -67,19 +65,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: $hover-link-color;
-
-    &:after {
-      display: block;
-      content: "";
-      position: absolute;
-      background-color: $light-yellow;
-      top: 0.5em;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-    }
+    color: $base-link-color;
   }
 
   &:visited {
