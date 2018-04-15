@@ -1,19 +1,27 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: #fff;
-  color: $text-color;
-  font-family: $base-font-family;
-  font-size: $small-font-size;
-  line-height: $base-line-height;
-  padding: 4rem 2rem 6rem;
+  background-color: $dark-blue;
+  color: $color-body;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
 
-  @media (min-width: 400px) {
-    font-size: $base-font-size;
+  @media (min-width: 500px) {
+    font-size: $font-size * 1.25;
   }
+}
 
-  @media (min-width: 1200px) {
-    font-size: $base-font-size * 1.25;
-  }
+main {
+  max-width: $max-width;
+  padding: 0 0 0 5%;
 }
 
 h1,
@@ -22,60 +30,47 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: $small-font-size;
-  font-weight: 500;
-  color: $base-font-color;
+  color: $color-heading;
+  font-weight: 400;
   margin: 0 0 0.5rem;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
-
-  @media (min-width: 400px) {
-    font-size: $base-font-size;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: $base-font-size * 1.25;
-  }
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
-  font-weight: 600;
+  font-size: $font-size * 1.75;
+  line-height: $line-height-header;
+  margin-bottom: $spacing-base;
+
+  @media (min-width: 500px) {
+    font-size: $font-size * 2.75;
+  }
 }
 
 h2,
+h3,
 h4 {
-  margin-bottom: 0;
-}
-
-h5 {
-  color: $text-color;
+  font-size: inherit;
   margin-bottom: 0;
 }
 
 p {
-  color: $text-color;
-  margin: 0 0 ($base-spacing / 2);
+  margin: 0 0 ($spacing-small);
 }
 
 a {
-  color: inherit;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
+  color: $color-link;
+  text-decoration: none;
 
   &:active,
   &:focus,
   &:hover {
-    color: $base-link-color;
-  }
-
-  &:visited {
-    text-decoration: line-through;
+    color: $color-link-hover;
   }
 }
 
 time {
-  color: lighten($text-color, 25);
-  margin-bottom: 2rem;
+  color: $color-time;
+  font-style: italic;
   display: block;
 }
 
@@ -86,23 +81,16 @@ picture {
 }
 
 blockquote {
-  border-left: 3px solid $base-border-color;
-  padding-left: $base-spacing / 2;
+  border-left: 3px solid $border-color;
+  padding-left: $spacing-small;
   margin: 0 0 1em;
 }
 
 cite {
-  color: lighten($text-color, 15%);
-  font-size: $small-font-size;
+  color: $color-time;
   font-style: italic;
 
   &:before {
     content: "\2014 \00A0";
   }
-}
-
-.main-header,
-main {
-  max-width: em(420);
-  margin: 0 auto;
 }

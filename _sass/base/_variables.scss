@@ -1,69 +1,28 @@
 // Typography
-$serif: $georgia;
-$system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$base-font-family: "ff-tisa-web-pro", $georgia;
+$font-family: "ff-tisa-web-pro", Georgia, Times, Times New Roman, serif;
 
-// Font Sizes
-$base-font-size: 1.45rem;
-$small-font-size: 1.15rem;
+// Spacing & Sizes
+$font-size: 1rem;
+$line-height: 1.5;
+$line-height-header: 1.25;
 
-// Line height
-$base-line-height: 1.6;
-$header-line-height: 1.25;
+$spacing-base: $line-height * 1rem;
+$spacing-small: $spacing-base / 2;
+$spacing-large: $spacing-base * 2;
 
-// Other Sizes
-$base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$base-z-index: 0;
+$max-width: 77rem;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #343c46;
-$medium-gray: #777;
-$light-gray: #ccc;
-$light-red: #fbe3e4;
-$light-yellow: #fff6bf;
-$light-green: #e6efc2;
-$purple: #5c58ff;
-$green: #55cb95;
+$blue: #44accb;
+$dark-blue: #404a63;
+$purple: #a39ef6;
 
-$developer-portal-color: #00abdf;
-$psl-color: #70b274;
-$character-lab-color: #554d91;
+$color-body: rgba(#fff, 0.8);
+$color-heading: #fff;
+$color-time: #8b889a;
+$color-link: $purple;
+$color-link-hover: $blue;
 
-// Background Color
-$base-background-color: white;
-
-// Font Colors
-$base-font-color: $dark-gray;
-$text-color: lighten($dark-gray, 10%);
-// $base-accent-color: #61c1a4;
-$base-accent-color: #3d8ec5;
-
-// Link Colors
-$base-link-color: $purple;
-$hover-link-color: darken($purple, 5%);
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-
-// Flash Colors
-$alert-color: $light-yellow;
-$error-color: $light-red;
-$notice-color: lighten($base-accent-color, 40);
-$success-color: $light-green;
-
-// Border color
-$base-border-color: lighten($light-gray, 3);
-$base-border: 1px solid $base-border-color;
-
-// Forms
-$form-border-color: $base-border-color;
-$form-border-color-hover: darken($base-border-color, 10);
-$form-border-color-focus: $base-accent-color;
-$form-border-radius: $base-border-radius;
-$form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
-$form-box-shadow-focus: $form-box-shadow,
-  0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
-$form-font-size: $base-font-size;
-$form-font-family: $base-font-family;
+// Border
+$border-color: darken($dark-blue, 5%);
+$border: 1px solid $border-color;

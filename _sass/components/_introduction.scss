@@ -1,0 +1,10 @@
+.introduction {
+  margin: 0 $spacing-large;
+  padding-bottom: $spacing-large;
+}
+
+.introduction__container {
+  @media screen and (min-width: 850px) {
+    width: 66%;
+  }
+}

@@ -1,0 +1,11 @@
+.index {
+  background-image: url("/images/header-hero.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  padding-top: 18rem;
+
+  @media screen and (min-width: 850px) {
+    background-size: contain;
+  }
+}

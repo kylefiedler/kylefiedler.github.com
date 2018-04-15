@@ -4,11 +4,12 @@
 @import "vendor/normalize";
 @import "bourbon/bourbon";
 
-@import "base/base";
+@import "base/variables";
+@import "base/typography";
+@import "base/lists";
 
-@import "components/main-title";
+@import "components/layout";
+@import "components/introduction";
+@import "components/index";
+@import "components/title";
 @import "components/post";
-@import "components/case-study";
-@import "components/external";
-@import "components/soon";
-@import "components/visited";

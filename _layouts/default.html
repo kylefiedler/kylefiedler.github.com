@@ -1,6 +1,6 @@
 {% include header.html %}
 
-<main class="{% if page.class %}{{ page.class }}{% endif %}">
+<main{% if page.class %} class="{{ page.class }}"{% endif %}>
   {{ content }}
 </main>
 

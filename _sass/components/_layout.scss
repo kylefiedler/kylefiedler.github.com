@@ -1,0 +1,34 @@
+.layout--three {
+  display: flex;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+}
+
+.layout--three__single {
+  padding-top: $spacing-base;
+  padding: $spacing-large;
+  border-right: $border;
+  border-top: $border;
+  flex-grow: 1;
+
+  @media screen and (min-width: 700px) {
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 33%;
+  }
+
+  &:last-of-type {
+    border-right: 0;
+  }
+}
+
+.layout--three__double {
+  @media screen and (min-width: 700px) {
+    width: 66%;
+  }
+}

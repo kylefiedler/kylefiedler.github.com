@@ -418,7 +418,7 @@ dl {
   dl dd {
     margin: 0; }
 
-.main-title {
+.title--section {
   color: #a5a8b3;
   font-family: "chaparral-pro-1", "chaparral-pro-2", "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 0.8125em;
@@ -427,7 +427,7 @@ dl {
   margin-bottom: 2rem;
   margin-top: 4rem;
   text-transform: uppercase; }
-  .main-title a {
+  .title--section a {
     color: #a5a8b3; }
 
 .post--all-posts {

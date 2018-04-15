@@ -2,6 +2,7 @@
 layout: post
 title: "Higher Level Problems"
 date: "2018-03-18 09:53:55 -0500"
+image: higher-level-problems
 ---
 
 Last month, I was getting annoyed with some of the things with my current email app. These little annoyances build up in my head, making me think that I'm not as productive as I could be. I started looking through what my other options are, assuming that I'll get a huge productivity improvement from a new app. I look at what others are using, including blogs like [The Sweet Setup](https://thesweetsetup.com) and [Interface Lovers](http://interfacelovers.com). I’ll list out pros and cons of each app because none fit my specific use case perfectly. I'll get even more annoyed that there isn't an app that is great for my workflow.
@@ -13,4 +14,3 @@ I've realized that this process I was following was useless. I was tackling smal
 I’ve been training myself to push aside small level thinking to not block more important thought work. Applying techniques that I’ve developed while meditating has helped me clear these choices from my head. Having a workaround so that I don’t get caught up in meaningless details will hopefully let me think about
 
 As for my new email app? I’m using the standard Apple Mail on my phone and computer. Not because they’re the best email app but because they’re the simplest to setup and maintain.
-
