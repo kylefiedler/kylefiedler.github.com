@@ -6,7 +6,16 @@ ol {
 }
 
 li {
-  margin-bottom: $base-spacing;  
+  margin-bottom: $base-spacing;
+
+  a {
+    color: $font-color-header;
+
+    &:focus,
+    &:hover {
+      color: $action-color;
+    }
+  }
 }
 
 dl {
