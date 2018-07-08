@@ -15,13 +15,8 @@
     display: block;
     margin: $small-spacing auto;
   }
-
+  
   a {
-    color: $font-color-header;
-
-    &:focus,
-    &:hover {
-      color: $action-color;
-    }
+    text-decoration: none;
   }
 }

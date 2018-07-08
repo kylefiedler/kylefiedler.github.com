@@ -42,4 +42,8 @@ footer {
   &:first-child {
     padding-right: 2rem;
   }
+
+  &:last-child {
+    padding-left: 2rem;
+  }
 }

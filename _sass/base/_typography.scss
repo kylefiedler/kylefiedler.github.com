@@ -56,13 +56,14 @@ time {
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
+  color: $font-color-header;
   text-decoration-skip: ink;
+  text-decoration-color: rgba($font-color-header, 0.3);
+  -webkit-text-decoration-color: rgba($font-color-header, 0.3);
   transition: color $base-duration $base-timing;
 
   &:hover {
-    color: shade($action-color, 25%);
+    color: $action-color;
   }
 
   &:focus {
