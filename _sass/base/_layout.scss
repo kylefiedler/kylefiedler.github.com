@@ -17,3 +17,29 @@ body {
 body {
   margin: 0;
 }
+
+footer,
+main {
+  position: relative;
+  max-width: 660px;
+  padding: ($large-spacing * 2) $small-spacing;
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+    background-color: #f7f9fa;
+}
+
+footer {
+  display: flex;
+}
+
+.column {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  &:first-child {
+    padding-right: 2rem;
+  }
+}

@@ -1,26 +1,30 @@
 // Typography
 $base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$heading-font-family: "ff-tisa-web-pro", $base-font-family;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: 1.5em;
+$base-spacing: 1rem;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
 $base-z-index: 0;
 
 // Colors
+$dark-blue: #26344A;
+$purple: #A045DF;
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$font-color-base: rgba($dark-blue, 0.8);
+$font-color-header: $dark-blue;
+$action-color: $purple;
 
 // Border
 $base-border-color: $light-gray;

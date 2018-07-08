@@ -1,28 +1,63 @@
 html {
-  color: $base-font-color;
+  color: $font-color-base;
   font-family: $base-font-family;
   font-size: 100%;
   line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
+h1 {
+  color: $font-color-header;
+  font-family: $heading-font-family;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: $heading-line-height;
+  margin: 0 0 $large-spacing;
+}
+
+h2 {
+  color: $font-color-header;
+  font-size: 21px;
+  font-family: $heading-font-family;
+  font-weight: normal;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: rgba($font-color-header, 0.4);
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 p {
+  font-size: 21px;
   margin: 0 0 $small-spacing;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+time {
+  font-size: 17px;
+  color: rgba($font-color-header, 0.4);
 }
 
 a {
   color: $action-color;
+  text-decoration: none;
   text-decoration-skip: ink;
   transition: color $base-duration $base-timing;
 
@@ -42,4 +77,14 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
+}
+
+footer {
+  h3 {
+    margin-bottom: $base-spacing * 1.5;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
 }

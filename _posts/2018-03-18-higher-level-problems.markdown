@@ -2,7 +2,6 @@
 layout: post
 title: "Higher Level Problems"
 date: "2018-03-18 09:53:55 -0500"
-image: higher-level-problems
 ---
 
 Last month, I was getting annoyed with some of the things with my current email app. These little annoyances build up in my head, making me think that I'm not as productive as I could be. I started looking through what my other options are, assuming that I'll get a huge productivity improvement from a new app. I look at what others are using, including blogs like [The Sweet Setup](https://thesweetsetup.com) and [Interface Lovers](http://interfacelovers.com). I’ll list out pros and cons of each app because none fit my specific use case perfectly. I'll get even more annoyed that there isn't an app that is great for my workflow.
