@@ -45,8 +45,12 @@ p {
   font-size: 21px;
   margin: 0 0 $small-spacing;
 
-  &:last-child {
+  &:last-of-type {
     margin: 0;
+  }
+
+  article &:not(:first-of-type) {
+    text-indent: 2rem;
   }
 }
 
@@ -88,4 +92,9 @@ footer {
   h2 {
     margin-bottom: 0;
   }
+}
+
+.hero-title-lead {
+  color: rgba($font-color-header, 0.6);
+  margin-bottom: 0;
 }

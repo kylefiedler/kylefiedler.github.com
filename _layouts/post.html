@@ -1,18 +1,18 @@
 {% include header.html %}
 
-<main>
-  <article>
-    {% if page.image %}
-    <img src="/images/posts/{{ page.image }}.png" />
-    {% endif %}
+<article>
+  {% if page.image %}
+  <img src="/images/posts/{{ page.image }}.png" />
+  {% endif %}
 
+  <main>
     <header>
       <time pubdate="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
       <h1>{{ page.title }}</h1>
     </header>
 
     {{ content }}
-  </article>
-</main>
+  </main>
+</article>
 
 {% include footer.html %}

@@ -22,8 +22,13 @@ footer,
 main {
   position: relative;
   max-width: 660px;
-  padding: ($large-spacing * 2) $small-spacing;
+  padding: ($large-spacing * 3) 0;
   margin: 0 auto;
+}
+
+main {
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
 }
 
 .footer-wrapper {
@@ -38,12 +43,6 @@ footer {
   flex-basis: 50%;
   flex-grow: 1;
   flex-shrink: 0;
-
-  &:first-child {
-    padding-right: 2rem;
-  }
-
-  &:last-child {
-    padding-left: 2rem;
-  }
+  padding-right: $base-spacing;
+  padding-left: $base-spacing;
 }
