@@ -31,18 +31,20 @@ main {
   padding-right: $base-spacing;
 }
 
-.footer-wrapper {
-    background-color: #f7f9fa;
-}
-
 footer {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper {
+  background-color: #f7f9fa;
 }
 
 .column {
   flex-basis: 50%;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 0;
   padding-right: $base-spacing;
   padding-left: $base-spacing;
+  margin-bottom: $large-spacing * 2;
 }
