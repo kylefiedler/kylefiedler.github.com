@@ -21,19 +21,16 @@ body {
 footer,
 main {
   position: relative;
-  max-width: 660px;
-  padding: ($large-spacing * 3) 0;
+  max-width: 770px;
   margin: 0 auto;
-}
-
-main {
-  padding-left: $base-spacing;
-  padding-right: $base-spacing;
+  padding: $x-large-spacing;
 }
 
 footer {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 515px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-wrapper {
@@ -41,10 +38,19 @@ footer {
 }
 
 .column {
-  flex-basis: 50%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding-right: $base-spacing;
-  padding-left: $base-spacing;
   margin-bottom: $large-spacing * 2;
+
+  @media screen and (min-width: 515px) {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    &:nth-child(even) {
+      padding-left: $base-spacing;
+    }
+
+    &:nth-child(odd) {
+      padding-right: $base-spacing;
+    }
+  }
 }
