@@ -1,4 +1,6 @@
 .reading-list {
+  margin-bottom: $x-large-spacing;
+
   h2 {
     margin-bottom: 0;
   }
@@ -7,4 +9,8 @@
     font-size: 17px;
     color: rgba($font-color-header, 0.4);
   }
+}
+
+.list__title {
+  margin-bottom: $large-spacing;
 }
