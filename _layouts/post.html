@@ -1,18 +1,71 @@
 {% include header.html %}
 
-<article>
-  {% if page.image %}
-    <img src="/images/posts/{{ page.image }}.png" />
-  {% endif %}
+<div class="site-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar__container">
+      <h2 class="sidebar__subtitle">About Me</h2>
+      <h2 class="sidebar__title">Hi, I&rsquo;m Kyle! I plan, design, test, and build digital products. I encourage, support, and mentor other designers as Chief Design Officer at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.</h2>
+      <p>I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and jobs-to-be-done to help me best understand what a product is trying to solve. I ship early and iterate. I enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.</p>
 
-  <main>
-    <header>
-      <time pubdate="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
-      <h1>{{ page.title }}</h1>
-    </header>
+      <ul class="sidebar__links">
+        <li>
+          <img src="{{ site.baseurl }}/images/icons/touch.svg" alt="">
+          <a href="mailto:kyle@kylefiedler.com">Get in touch</a>
+        </li>
+        <li>
+          <img src="{{ site.baseurl }}/images/icons/tentative.svg" alt="">
+          <a href="http://tentative.fm/">Listen to Tentative</a>
+        </li>
+        <li>
+          <img src="{{ site.baseurl }}/images/icons/archive.svg" alt="">
+          <a href="{{ site.baseurl }}/writing">Full Writing Archive</a>
+        </li>
+      </ul>
+    </div>
 
-    {{ content }}
-  </main>
-</article>
+    <div class="sidebar__article-navigation">
+      <ul>
+        {% if page.next.url %}
+        <li>
+          <a href="{{page.next.url}}">Next Article</a>
+        </li>
+        {% endif %}
+        {% if page.previous.url %}
+          <li>
+            <a href="{{page.previous.url}}">Previous Article</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </aside>
+
+  <section  class="{% if page.class %}{ page.class }}{% endif %} main-content">
+    {% if page.image %}
+      <img src="{{ root_url }}/images/posts/{{ page.image }}.png" class="post__image"/>
+    {% else %}
+      <img src="{{ root_url }}/images/posts/default.png" class="post__image"/>
+    {% endif %}
+
+    <div class="post">
+      <header class="post__header">
+        <h1 class="post__title">
+          {{ page.title }}
+        </h1>
+
+        <time pubdate="{{ page.date }}" class="page__date">{{ page.date | date: '%B %d, %Y' }}</time>
+      </header>
+
+      <div class="post__content">{{ content }}</div>
+
+      <ul class="post__tags">
+        {% for tag in page.tags %}
+          <li>
+            <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
 
 {% include footer.html %}

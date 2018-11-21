@@ -1,81 +1,47 @@
 html {
-  color: $font-color-base;
+  color: $base-font-color;
   font-family: $base-font-family;
   font-size: 100%;
   line-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
 h2,
+h3,
 h4,
 h5,
 h6 {
+  font-family: $heading-font-family;
   font-size: modular-scale(1);
+  color: $heading-font-color;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
-}
-
-h1 {
-  color: $font-color-header;
-  font-family: $heading-font-family;
-  font-size: 36px;
-  font-weight: normal;
-  letter-spacing: -1px;
-  line-height: $heading-line-height;
-  margin: 0 0 $large-spacing;
 }
 
 h2 {
-  color: $font-color-header;
-  font-size: 21px;
-  font-family: $heading-font-family;
-  font-weight: normal;
+  font-size: modular-scale(2);
+  margin-top: modular-scale(2);
 }
 
 h3 {
-  text-transform: uppercase;
-  color: rgba($font-color-header, 0.4);
-  letter-spacing: 1px;
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-header {
-  margin-bottom: $large-spacing;
-
-  h1 {
-    margin-bottom: $small-spacing;
-  }
+  font-size: modular-scale(1);
+  margin-top: modular-scale(1);
 }
 
 p {
-  font-size: 21px;
   margin: 0 0 $small-spacing;
-
-  &:last-of-type {
-    margin: 0;
-  }
-
-  article &:not(:first-of-type) {
-    text-indent: 2rem;
-  }
-}
-
-time {
-  font-size: 17px;
-  color: rgba($font-color-header, 0.4);
 }
 
 a {
-  color: $font-color-header;
+  color: inherit;
   text-decoration-skip: ink;
-  text-decoration-color: rgba($font-color-header, 0.3);
-  -webkit-text-decoration-color: rgba($font-color-header, 0.3);
   transition: color $base-duration $base-timing;
+  text-decoration-color: rgba($base-font-color, 0.7);
 
   &:hover {
     color: $action-color;
+    text-decoration-color: rgba($action-color, 0.7);
   }
 
   &:focus {
@@ -90,14 +56,4 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
-}
-
-footer {
-  h3 {
-    margin-bottom: $base-spacing * 1.5;
-  }
-
-  h2 {
-    margin-bottom: 0;
-  }
 }

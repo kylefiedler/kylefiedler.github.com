@@ -1,31 +1,30 @@
 // Typography
-$base-font-family: "ff-tisa-sans-web-pro", $font-stack-system;
-$heading-font-family: "ff-tisa-web-pro", $base-font-family;
+$base-font-family: $font-stack-system;
+$heading-font-family: "ff-meta-serif-web-pro", $font-stack-georgia;
 
 // Line height
-$base-line-height: 1.8;
-$heading-line-height: 1.4;
+$base-line-height: 1.7;
+$heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: 1rem;
+$base-spacing: 1.5em;
 $small-spacing: $base-spacing / 2;
-$large-spacing: $base-spacing * 2;
-$x-large-spacing: $base-spacing * 3;
 $base-z-index: 0;
 
 // Colors
-$dark-blue: #26344A;
-$purple: #A045DF;
 $blue: #1565c0;
-$dark-gray: #333;
+$green: #06D48D;
+$dark-gray: #26344A;
+$dark-blue: #26344A;
+$medium-blue: #4e6874;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
-$font-color-base: rgba($dark-blue, 0.7);
-$font-color-header: $dark-blue;
-$action-color: $purple;
+$base-font-color: $medium-blue;
+$heading-font-color: $dark-blue;
+$action-color: $green;
 
 // Border
 $base-border-color: $light-gray;

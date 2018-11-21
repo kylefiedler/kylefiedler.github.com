@@ -3,22 +3,24 @@ layout: default
 class: secondary
 ---
 
-<div class="writing container">
-  <h3 class="title--section">Writing Archive</h3>
+<img src="{{ root_url }}/images/posts/default.png" class="post__image"/>
 
-  <ol class="writing-index">
+<div class="post">
+  <h1 class="post__title">Writing Archive</h1>
+
+  <ol class="post__content">
   {% for post in site.posts %}
-  {% if post.external_url %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% else %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endif %}
+    {% if post.external_url %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.excerpt }}
+      </li>
+    {% else %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.excerpt }}
+      </li>
+    {% endif %}
   {% endfor %}
   </ol>
 </div>
