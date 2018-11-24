@@ -3,21 +3,28 @@ layout: default
 class: secondary
 ---
 
-<img src="{{ root_url }}/images/posts/default.png" class="post__image"/>
+<img src="{{ root_url }}/images/posts/writing.png" class="post__image"/>
 
 <div class="post">
-  <h1 class="post__title">Writing Archive</h1>
+  <h3 class="post__latest">Time Traveling</h3>
 
-  <ol class="post__content">
+  <header class="post__header">
+    <h1 class="post__title">Writing Archive</h1>
+    <p class="post__date">Some aren't too bad and some are horrible. Good luck!</p>
+  </header>
+
+  <ol class="writing-index">
   {% for post in site.posts %}
     {% if post.external_url %}
       <li>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <time pubdate="{{ post.date }}" class="post__date">{{ post.date | date: '%B %d, %Y' }}</time>
         {{ post.excerpt }}
       </li>
     {% else %}
       <li>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <time pubdate="{{ post.date }}" class="post__date">{{ post.date | date: '%B %d, %Y' }}</time>
         {{ post.excerpt }}
       </li>
     {% endif %}

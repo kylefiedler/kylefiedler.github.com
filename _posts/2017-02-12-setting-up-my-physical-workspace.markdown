@@ -2,6 +2,8 @@
 layout: post
 title: "Setting up my physical workspace"
 date: "2017-02-12 21:15:37 -0600"
+image: workspace
+tags: desk productivity
 ---
 
 I believe that my physical workspace, just as the digital tools that I have, can have a big increase or decrease my productivity. Whether it be a standing desk or headphones that remove the noise, I want to be in an environment that I can focus on my work. I don’t work well when there are lots of things to divert my attention, like working in a coffee shop. When I’m home I close the door to my workspace so that my family knows that I’m not to be interrupted; I’ll also leave the door open when I don’t mind the interruption.

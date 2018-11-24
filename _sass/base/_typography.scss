@@ -57,3 +57,7 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+
+::selection {
+  background-color: #F7EED7;
+}

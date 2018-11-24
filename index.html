@@ -4,8 +4,8 @@ layout: default
 {% assign post = site.posts.first %}
 {% assign content = post.content %}
 
-{% if page.image %}
-  <img src="{{ root_url }}/images/posts/{{ page.image }}.png" class="post__image"/>
+{% if post.image %}
+  <img src="{{ root_url }}/images/posts/{{ post.image }}.png" class="post__image"/>
 {% else %}
   <img src="{{ root_url }}/images/posts/default.png" class="post__image"/>
 {% endif %}
