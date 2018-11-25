@@ -190,13 +190,13 @@ body {
     font-style: italic;
     font-family: $heading-font-family;
     color: $heading-font-color;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.8;
     margin-bottom: 30px;
 
     @media screen and (min-width: 550px) {
       font-size: 21px;
-    line-height: 1.8;
+      line-height: 1.8;
     }
 
     @media screen and (min-width: 1200px) {
@@ -205,7 +205,7 @@ body {
   }
 
   p:not(:first-of-type) {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.7;
 
     @media screen and (min-width: 550px) {
@@ -234,7 +234,7 @@ body {
   }
 
   p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.7;
     margin-top: modular-scale(2);
 
