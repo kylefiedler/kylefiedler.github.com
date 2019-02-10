@@ -1,33 +1,25 @@
 ---
 layout: default
 ---
-{% assign post = site.posts.first %}
-{% assign content = post.content %}
+<header class="main-header">
+  <div class="title-icon wave">
+    {% include wave.svg %}
+  </div>
 
-{% if post.image %}
-  <img src="{{ root_url }}/images/posts/{{ post.image }}.png" class="post__image"/>
-{% else %}
-  <img src="{{ root_url }}/images/posts/default.png" class="post__image"/>
-{% endif %}
+  <h1>Hi, I&rsquo;m Kyle! I plan, design, test, and build digital products. I encourage, support, and mentor other designers as Chief Design Officer at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.</h1>
 
-<div class="post">
-  <h3 class="post__latest">Latest Post</h3>
+  <p>I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and Jobs-to-be-done to help me best understand what a product is trying to solve. I ship early and iterate. I enjoy a well-made peanut butter and jelly sandwich, cut in two triangles. <a href="mailto:kyle@kylefiedler.com">Drop a line.</a></p>
+</header>
 
-  <header class="post__header">
-    <h1 class="post__title">
-      {{ post.title }}
-    </h1>
-
-    <time pubdate="{{ post.date }}" class="post__date">{{ post.date | date: '%B %d, %Y' }}</time>
-  </header>
-
-  <div class="post__content">{{ content }}</div>
-
-  <ul class="post__tags">
-    {% for tag in post.tags %}
-    <li>
-      #{{ tag }}
+<ol class="posts">
+  <li class="post">
+    <h2><a href="/values">Personal Values</a></h2>
+    <p class="description">What makes me, me.</p>
+  </li>
+  {% for post in site.posts %}
+    <li class="post">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <time pubdate="{{ post.date }}">{{ post.date | date: '%B %d, %Y' }}</time>
     </li>
-    {% endfor %}
-  </ul>
-</div>
+  {% endfor %}
+</ol>

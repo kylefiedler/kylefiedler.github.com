@@ -1,9 +1,22 @@
 html {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: 100%;
+  font-size: $base-font-size - 4;
   line-height: $base-line-height;
+  font-smooth: always;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.15px;
+
+  @media screen and (min-width: 600px) {
+    font-size: $base-font-size;
+  }
+}
+
+::selection,
+::-moz-selection {
+  color: $white;
+  background-color: $blue;
 }
 
 h1,
@@ -12,21 +25,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  font-size: modular-scale(1);
   color: $heading-font-color;
-  line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
-}
+  font-family: $heading-font-family;
+  font-size: $base-font-size - 4;
+  line-height: $base-line-height;
+  margin: 0;
 
-h2 {
-  font-size: modular-scale(2);
-  margin-top: modular-scale(2);
-}
-
-h3 {
-  font-size: modular-scale(1);
-  margin-top: modular-scale(1);
+  @media screen and (min-width: 600px) {
+    font-size: $base-font-size;
+  }
 }
 
 p {
@@ -36,17 +43,34 @@ p {
 a {
   color: inherit;
   text-decoration-skip: ink;
+  text-decoration: none;
   transition: color $base-duration $base-timing;
-  text-decoration-color: rgba($base-font-color, 0.7);
+  border-bottom: 2px solid $action-color;
+  background-image: linear-gradient(120deg, $action-color 0%, $action-color 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.0em;
+  background-position: 0 100%;
+  transition: background-size 0.125s ease-in;
 
   &:hover {
-    color: $action-color;
-    text-decoration-color: rgba($action-color, 0.7);
+    color: $white;
+    background-size: 100% 100%;
   }
 
   &:focus {
     outline: $focus-outline;
-    outline-offset: $focus-outline-offset;
+  }
+
+  &.title-icon {
+    border-bottom: 0;
+    background: none;
+
+    &:hover {
+      path {
+        fill: $white;
+        transition: color $base-duration $base-timing;
+      }
+    }
   }
 }
 
@@ -58,6 +82,63 @@ hr {
   margin: $base-spacing 0;
 }
 
-::selection {
-  background-color: #F7EED7;
+main {
+  max-width: 532px;
+  padding: 1rem 1rem 1rem 3rem;
+  margin: 0 auto 7rem;
+
+  @media screen and (min-width: 600px) {
+    padding: 1rem;
+  }
+}
+
+.description,
+time {
+  color: $light-gray;
+}
+
+.main-header {
+  margin: 7rem 0;
+  position: relative;
+}
+
+.main-header--post {
+  margin: 7rem 0 3.5rem;
+  position: relative;
+}
+
+.post {
+  margin-bottom: 1em;
+}
+
+.title-icon {
+  position: absolute;
+  top: 8px;
+  left: -34px;
+
+  @media screen and (min-width: 600px) {
+    left: -44px;
+  }
+}
+
+.wave {
+  display: inline-block;
+  font-kerning: none;
+  top: 0;
+  transform: translate3d(0px, 0px, 0.1px);
+  animation: wave-animation 4s ease-in-out infinite;
+  transform-origin: 60% 70%;
+  user-select: none;
+}
+
+@keyframes wave-animation {
+  0%,10% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  5% {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
 }

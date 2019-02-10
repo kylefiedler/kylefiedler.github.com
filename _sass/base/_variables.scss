@@ -1,6 +1,8 @@
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: "ff-meta-serif-web-pro", $font-stack-georgia;
+$base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+$heading-font-family: $base-font-family;
+
+$base-font-size: 20px;
 
 // Line height
 $base-line-height: 1.7;
@@ -13,31 +15,31 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
-$green: #06D48D;
-$dark-gray: #26344A;
-$dark-blue: #26344A;
-$medium-blue: #4e6874;
-$medium-gray: #999;
-$light-gray: #ddd;
+$blue: #0071FF;
+$dark-gray: #212224;
+$medium-gray: #313B47;
+$light-gray: #7A8598;
+$x-light-gray: #979FAE;
+$white: #fff;
+$purple: #7B43BB;
 
 // Font Colors
-$base-font-color: $medium-blue;
-$heading-font-color: $dark-blue;
-$action-color: $green;
+$base-font-color: $x-light-gray;
+$heading-font-color: $white;
+$action-color: $purple;
 
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$viewport-background-color: #fff;
+$viewport-background-color: $dark-gray;
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);
-$focus-outline-width: 3px;
-$focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 2px;
+$focus-outline-width: 1px;
+$focus-outline: $focus-outline-width dotted $focus-outline-color;
+$focus-outline-offset: 4px;
 
 // Animations
 $base-duration: 150ms;
