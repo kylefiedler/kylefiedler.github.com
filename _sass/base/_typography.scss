@@ -68,7 +68,7 @@ a {
     &:hover {
       path {
         fill: $white;
-        transition: color $base-duration $base-timing;
+        transition: fill $base-duration $base-timing;
       }
     }
   }
@@ -109,11 +109,12 @@ time {
 
 .post {
   margin-bottom: 1em;
+  position: relative;
 }
 
 .title-icon {
   position: absolute;
-  top: 8px;
+  top: 4px;
   left: -34px;
 
   @media screen and (min-width: 600px) {
