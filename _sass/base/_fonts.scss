@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/basiercircle-regular-webfont.eot');
+    src: url('/fonts/basiercircle-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/basiercircle-regular-webfont.woff2') format('woff2'),
+         url('/fonts/basiercircle-regular-webfont.woff') format('woff'),
+         url('/fonts/basiercircle-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/basiercircle-bold-webfont.eot');
+    src: url('/fonts/basiercircle-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/basiercircle-bold-webfont.woff2') format('woff2'),
+         url('/fonts/basiercircle-bold-webfont.woff') format('woff'),
+         url('/fonts/basiercircle-bold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/basiercircle-semibold-webfont.eot');
+    src: url('/fonts/basiercircle-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/basiercircle-semibold-webfont.woff2') format('woff2'),
+         url('/fonts/basiercircle-semibold-webfont.woff') format('woff'),
+         url('/fonts/basiercircle-semibold-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}

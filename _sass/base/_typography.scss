@@ -11,6 +11,10 @@ html {
   @media screen and (min-width: 600px) {
     font-size: $base-font-size;
   }
+
+  @media screen and (min-width: 900px) {
+    font-size: $base-font-size + 4;
+  }
 }
 
 ::selection,
@@ -26,14 +30,11 @@ h4,
 h5,
 h6 {
   color: $heading-font-color;
-  font-family: $heading-font-family;
-  font-size: $base-font-size - 4;
-  line-height: $base-line-height;
-  margin: 0;
-
-  @media screen and (min-width: 600px) {
-    font-size: $base-font-size;
-  }
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+  margin: 0 0 ($base-font-size / 4);
 }
 
 p {
@@ -83,7 +84,7 @@ hr {
 }
 
 main {
-  max-width: 532px;
+  max-width: 29.555555556em;
   padding: 1rem 1rem 1rem 3rem;
   margin: 0 auto 7rem;
 
