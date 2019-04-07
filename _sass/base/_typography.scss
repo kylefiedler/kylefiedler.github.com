@@ -92,7 +92,7 @@ time {
   }
   .title-icon {
     left: -30px;
-    
+
     @media screen and (min-width: 600px) {
       left: -50px;
       top: 6px;
@@ -120,6 +120,13 @@ time {
 
   .heading-primary {
     margin-bottom: 0.3em;
+  }
+}
+.post__tags {
+  li {
+    display: inline-block;
+    margin-right: 1em;
+    margin-top: $spacing-small;
   }
 }
 

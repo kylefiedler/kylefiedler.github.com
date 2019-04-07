@@ -2,6 +2,7 @@
 layout: post
 title: "The Importance of Exercise"
 date: "2017-02-05 20:54:31 -0600"
+tags: health
 ---
 
 I used to obsessively track my steps with my Fitbit. Remaining the weekly champ was all important and going for runs and walks with the dog were the best ways to get myself up there.

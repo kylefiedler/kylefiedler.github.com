@@ -5,6 +5,8 @@ date: "2019-02-10 15:04:51 -0600"
 tags:
   - "new"
   - "learn"
+  - "interviews"
+  - "post"
 ---
 
 Typically one of the first questions that I ask people during an interview for our designer position at thoughtbot is how do they learn. It reveals to me what they know about themselves and how they will approach growing as a Designer at thoughtbot.
