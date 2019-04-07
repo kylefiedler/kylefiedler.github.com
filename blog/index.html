@@ -1,0 +1,65 @@
+---
+layout: default
+pagination:
+  enabled: true
+---
+<ul class="posts">
+
+  {% for post in site.posts limit:1 %}
+    <li class="post">
+      <p class="date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
+
+      <header class="index__header">
+        <div class="title-icon wave">
+          {% include new.svg %}
+        </div>
+        <h2 class="heading-primary">{{ post.title }}</h2>
+      </header>
+      <div class="content">
+        {{ post.content }}
+      </div>
+
+      <ul class="post__tags">
+        {% for tag in page.tags %}
+        <li>
+          <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+
+  {% for post in paginator.posts %}
+    <li class="post">
+      <p class="date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
+      <h2 class="heading-primary">{{ post.title }}</h2>
+      <div class="content">
+        {{ post.content }}
+      </div>
+
+      <ul class="post__tags">
+        {% for tag in page.tags %}
+        <li>
+          <a href="/tags/{{ tag }}/">#{{ tag }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+
+</ul>
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Newer
+    </a>
+  {% else %}
+    <span class="previous">Newer</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+  {% else %}
+    <span class="next ">Older</span>
+  {% endif %}
+</div>

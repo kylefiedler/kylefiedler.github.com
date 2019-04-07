@@ -1,25 +1,58 @@
 ---
 layout: default
+class: index
 ---
-<header class="main-header">
+<header class="index__header">
   <div class="title-icon wave">
     {% include wave.svg %}
   </div>
 
-  <h1>Hi, I&rsquo;m Kyle! I plan, design, test, and build digital products. I encourage, support, and mentor other designers as Chief Design Officer at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.</h1>
-
-  <p>I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and Jobs-to-be-done to help me best understand what a product is trying to solve. I ship early and iterate. I enjoy a well-made peanut butter and jelly sandwich, cut in two triangles. <a href="mailto:kyle@kylefiedler.com">Drop a line.</a></p>
+  <h1 class="heading-primary">Hi, I&rsquo;m Kyle! I plan, design, test, and build digital products. I encourage, support, and mentor other designers as Chief Design Officer at&nbsp;<a href="http://thoughtbot.com">thoughtbot</a>.</h1>
 </header>
 
-<ol class="posts">
-  <li class="post">
-    <h2><a href="/values">Personal Values</a></h2>
-    <p class="description">What makes me, me.</p>
-  </li>
-  {% for post in site.posts %}
-    <li class="post">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <time pubdate="{{ post.date }}">{{ post.date | date: '%B %d, %Y' }}</time>
-    </li>
-  {% endfor %}
-</ol>
+<div class="split-layout">
+  <div class="split-layout__column">
+    <p>I enjoy working through complex problems and coming up with simple solutions. I use tools such as research, design thinking, design sprints, and Jobs-to-be-done to help me best understand what a product is trying to solve. I ship early and iterate. I enjoy a well-made peanut butter and jelly sandwich, cut in two triangles.</p>
+
+    <div class="values">
+      <a href="/values">
+        <div class="values__icon">{% include values.svg %}</div>
+        <h2 class="values__title">Personal Values</h2>
+        <p class="values__description">What makes me, me.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="split-layout__column">
+    <div class="index__image">
+      <img src="/images/kyle.jpg" alt="Kyle speaking in front of a whiteboard" class="">
+    </div>
+
+    <ul class="split-layout social">
+      <li class="split-layout__column">
+        {% include dribbble.svg %}
+        <a href="">
+          Dribbble
+        </a>
+      </li>
+      <li class="split-layout__column">
+        {% include linkedin.svg %}
+        <a href="">
+          LinkedIn
+        </a>
+      </li>
+      <li class="split-layout__column">
+        {% include github.svg %}
+        <a href="">
+          GitHub
+        </a>
+      </li>
+      <li class="split-layout__column">
+        {% include email.svg %}
+        <a href="">
+          Email
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

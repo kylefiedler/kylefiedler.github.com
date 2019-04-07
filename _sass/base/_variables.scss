@@ -2,26 +2,35 @@
 $base-font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
 $heading-font-family: $base-font-family;
 
+$small-font-size: 0.708333333em;
+$medium-font-size: 0.85em;
 $base-font-size: 20px;
+$heading-primary-font-size: 2.3333333em;
 
 // Line height
-$base-line-height: 1.7;
+$base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
-$base-spacing: 1.5em;
-$small-spacing: $base-spacing / 2;
+$spacing-base: 2em;
+$spacing-small: $spacing-base / 2;
+$spacing-large: $spacing-base * 2;
+$spacing-super: 6.666666667em;
+
+$base-border-radius: 6px;
 $base-z-index: 0;
 
 // Colors
 $blue: #0071FF;
 $dark-gray: #212224;
+$darkest-gray: #1A1B1D;
 $medium-gray: #313B47;
 $light-gray: #7A8598;
 $x-light-gray: #979FAE;
 $white: #fff;
 $purple: #7B43BB;
+$light-blue: #E4E9EF;
+$red: #FA1A55;
 
 // Font Colors
 $base-font-color: $x-light-gray;

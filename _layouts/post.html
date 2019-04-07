@@ -1,16 +1,23 @@
 {% include header.html %}
 
 <main>
-  <header class="main-header--post">
-    <a href="/" class="title-icon">
-      {% include back.svg %}
-    </a>
+  <nav class="navigation-main">
+    <h2>Kyle Fiedler</h2>
+    <ul>
+      <li>
+        <a href="/">About</a>
+      </li>
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+    </ul>
+  </nav>
 
-    <h1>
+  <header class="main-header--post">
+    <time pubdate="{{ page.date }}" class="page__date">{{ page.date | date: '%B %d, %Y' }}</time>
+    <h1 class="heading-primary">
       {{ page.title }}
     </h1>
-
-    <time pubdate="{{ page.date }}" class="page__date">{{ page.date | date: '%B %d, %Y' }}</time>
   </header>
 
   <div class="post__content">{{ content }}</div>
