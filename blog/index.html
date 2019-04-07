@@ -1,10 +1,7 @@
 ---
 layout: default
-pagination:
-  enabled: true
 ---
 <ul class="posts">
-
   {% for post in site.posts limit:1 %}
     <li class="post">
       <p class="date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
@@ -46,20 +43,13 @@ pagination:
       </ul>
     </li>
   {% endfor %}
-
 </ul>
-<!-- Pagination links -->
+
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Newer
-    </a>
-  {% else %}
-    <span class="previous">Newer</span>
+    <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
   {% endif %}
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next">Older</a>
-  {% else %}
-    <span class="next ">Older</span>
   {% endif %}
 </div>
