@@ -1,7 +1,8 @@
 title: Kyle Fiedler
 description: Kyle enjoys a well-made peanut butter and jelly sandwich, cut in two triangles
 
-plugins: [jekyll-paginate-v2]
+plugins:
+  - jekyll-paginate-v2
 pagination:
   enabled: true
   permalink: '/:num/'
