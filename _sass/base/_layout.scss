@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 *,
@@ -12,6 +11,7 @@ html {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
