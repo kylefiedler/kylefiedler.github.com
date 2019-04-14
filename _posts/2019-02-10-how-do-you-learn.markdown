@@ -3,7 +3,6 @@ layout: post
 title: "How Do You Learn?"
 date: "2019-02-10 15:04:51 -0600"
 tags:
-  - "new"
   - "learn"
   - "interviews"
   - "post"
