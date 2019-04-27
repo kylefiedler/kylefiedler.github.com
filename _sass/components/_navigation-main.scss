@@ -30,9 +30,19 @@
   li {
     display: inline-block;
     margin-right: 1.75em;
+  }
 
-    a {
-      color: $light-gray;
+  a {
+    background-image: none;
+    border-width: 0;
+
+    .blog-index &.blog,
+    .index &.about {
+      border-width: 2px;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 }

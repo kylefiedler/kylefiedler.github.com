@@ -1,12 +1,11 @@
 .index {
   main {
     max-width: 1200px;
-    padding: 1em 3.5em;
   }
 
   .heading-primary {
     margin-bottom: 1.5em;
-    
+
     @media screen and (min-width: 1200px) {
       margin-right: 1em;
     }

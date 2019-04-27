@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The better you understand how many different, perfectly valid ways there are to think about one and the same matter, the more likely you ask yourself: “is what I’m doing making other people free or is it putting them in cages?”"
+title: "When it comes to discussing the “ethics” or the morality of our industry, we need to understand our basic moral beliefs."
 date: "2019-04-27 16:43:43 -0500"
 tags:
   - "quote"
@@ -9,4 +9,4 @@ tags:
   - "new"
 ---
 
-[“Ethics” and Ethics](https://ia.net/topics/ethics-and-ethics) by Oliver Reichenstein should probably be required reading for designers in the modern age. There is so much for us to think about in it.
+[“Ethics” and Ethics](https://ia.net/topics/ethics-and-ethics) by Oliver Reichenstein should probably be required reading for designers helping build applications. 

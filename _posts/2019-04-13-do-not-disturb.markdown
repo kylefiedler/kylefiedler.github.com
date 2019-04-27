@@ -6,6 +6,5 @@ tags:
   - "quote"
   - "link"
   - "suggested_reading"
-  - "new"
 ---
 [Do Not Disturb: How I Ditched My Phone and Unbroke My Brain](https://www.nytimes.com/2019/02/23/business/cell-phone-addiction.html) by Kevin Roose
