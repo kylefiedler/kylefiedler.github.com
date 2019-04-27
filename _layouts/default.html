@@ -1,19 +1,21 @@
 {% include header.html %}
 
-<main>
-  <nav class="navigation-main">
-    <h2>Kyle Fiedler</h2>
-    <ul>
-      <li>
-        <a href="/">About</a>
-      </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-    </ul>
-  </nav>
+<div class="overflow">
+  <main>
+    <nav class="navigation-main">
+      <h2>Kyle Fiedler</h2>
+      <ul>
+        <li>
+          <a href="/">About</a>
+        </li>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
 
-  {{ content }}
-</main>
+    {{ content }}
+  </main>
+</div>
 
 {% include footer.html %}
