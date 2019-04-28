@@ -7,9 +7,9 @@ class: blog-index
   {% for post in paginator.posts %}
   {% if post.tags contains "new" %}
     <li class="post">
-      <p class="date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
+      <p class="post__date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
 
-      <header class="index__header">
+      <header class="title-icon__container">
         <div class="title-icon wave">
           {% include new.svg %}
         </div>
@@ -27,7 +27,7 @@ class: blog-index
     </li>
   {% else %}
       <li class="post">
-        <p class="date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
+        <p class="post__date"><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></p>
         <h2 class="heading-primary">{{ post.title }}</h2>
         <div class="content">
           {{ post.content }}

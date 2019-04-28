@@ -1,0 +1,24 @@
+.post {
+  margin-bottom: $spacing-super;
+  position: relative;
+
+  .heading-primary {
+    margin-bottom: 0.3em;
+  }
+}
+
+.post__date {
+  margin-bottom: $spacing-base;
+  color: $light-gray;
+  display: block;
+}
+
+.post__tags {
+  color: $light-gray;
+
+  li {
+    display: inline-block;
+    margin-right: 1em;
+    margin-top: $spacing-small;
+  }
+}

@@ -1,0 +1,16 @@
+.social {
+  li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: $small-font-size;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}

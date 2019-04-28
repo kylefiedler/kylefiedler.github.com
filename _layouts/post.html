@@ -14,7 +14,7 @@
   </nav>
 
   <header class="main-header--post">
-    <time pubdate="{{ page.date }}" class="page__date">{{ page.date | date: '%B %d, %Y' }}</time>
+    <time pubdate="{{ page.date }}" class="post__date">{{ page.date | date: '%B %d, %Y' }}</time>
     <h1 class="heading-primary">
       {{ page.title }}
     </h1>
@@ -24,9 +24,7 @@
 
   <ul class="post__tags">
     {% for tag in page.tags %}
-    <li>
-      <a href="/tags/{{ tag }}/">#{{ tag }}</a>
-    </li>
+      <li>#{{ tag }}</li>
     {% endfor %}
   </ul>
 </main>
