@@ -1,0 +1,15 @@
+.pagination {
+  text-align: center;
+
+  a {
+    border-width: 0;
+    background-image: none;
+    margin: 0 2em;
+
+    svg,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

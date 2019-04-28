@@ -44,10 +44,16 @@ class: blog-index
 </ul>
 
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
-  {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+    <a href="{{ paginator.next_page_path }}" class="next">
+      {% include older.svg %}
+      <span>Older</span>
+    </a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      <span>Newer</span>
+      {% include newer.svg %}
+    </a>
   {% endif %}
 </div>

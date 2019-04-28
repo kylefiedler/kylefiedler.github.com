@@ -122,17 +122,14 @@ time {
     margin-bottom: 0.3em;
   }
 }
+
 .post__tags {
+  color: $light-gray;
+
   li {
     display: inline-block;
     margin-right: 1em;
     margin-top: $spacing-small;
-  }
-}
-
-.content {
-  p {
-    color: $light-blue;
   }
 }
 
