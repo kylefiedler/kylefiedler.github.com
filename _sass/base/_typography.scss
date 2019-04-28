@@ -2,7 +2,7 @@ body {
   color: $base-font-color;
   background-color: $viewport-background-color;
   font-family: $base-font-family;
-  font-size: $base-font-size - 4;
+  font-size: $base-font-size - 2;
   line-height: $base-line-height;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
@@ -74,8 +74,12 @@ hr {
 main {
   max-width: 38em;
   position: relative;
-  padding: 1em 3.5em;
+  padding: 1em 1.5em 1em 2.5em;
   margin: 0 auto 7em;
+
+  @media screen and (min-width: 600px) {
+  padding: 1em 3.5em;
+  }
 }
 
 .description,
