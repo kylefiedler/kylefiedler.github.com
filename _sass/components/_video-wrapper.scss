@@ -1,8 +1,8 @@
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
+  margin-bottom: $spacing-base;
 }
 
 .video-wrapper iframe {
