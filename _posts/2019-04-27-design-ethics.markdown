@@ -6,7 +6,6 @@ tags:
   - "quote"
   - "link"
   - "suggested_reading"
-  - "new"
 ---
 
-[“Ethics” and Ethics](https://ia.net/topics/ethics-and-ethics) by Oliver Reichenstein should probably be required reading for designers helping build applications. 
+[“Ethics” and Ethics](https://ia.net/topics/ethics-and-ethics) by Oliver Reichenstein should probably be required reading for designers helping build applications.

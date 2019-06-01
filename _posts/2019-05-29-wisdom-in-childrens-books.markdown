@@ -2,6 +2,9 @@
 layout: post
 title: "Wisdom in children's books"
 date: "2019-05-29 09:22:44 -0500"
+tags:
+  - "post"
+  - "new"
 ---
 
 We're big fans of reading to our kids, and with three kids, I've read a lot of children's books. As with anything, I've found there is a vast difference between the great ones and the ones that, well, fall short. Right now, my absolute two favorite authors are Oliver Jeffers and Kobi Yamada with illustrations from Mae Besom. By no means are we die-hards with these authors but they each have a couple of books that we've read repeatedly. We read them not just for the story, not only for the illustrations but for the meaning that each has.
