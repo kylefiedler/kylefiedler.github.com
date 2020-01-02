@@ -1,0 +1,45 @@
+.heading-1 {
+  font-size: $heading-1-font-size * 0.8;
+  line-height: 1.2;
+  margin-bottom: 0.25em;
+  letter-spacing: -0.025em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: $heading-1-font-size * 0.9;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: $heading-1-font-size;
+  }
+}
+
+.heading-2 {
+  font-size: $heading-2-font-size * 0.7;
+  line-height: 1.2;
+  margin-bottom: $spacing-small;
+  letter-spacing: -0.025em;
+
+  @media screen and (min-width: 600px) {
+    font-size: $heading-2-font-size * 0.8;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $heading-2-font-size * 0.9;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: $heading-2-font-size;
+  }
+}
+
+.heading-3 {
+  font-family: $base-font-family;
+  font-size: $heading-3-font-size;
+  line-height: 1.2;
+  margin-bottom: $spacing-small;
+  letter-spacing: -0.025em;
+}
+
+.heading-paragraph {
+  margin-bottom: $spacing-large;
+}

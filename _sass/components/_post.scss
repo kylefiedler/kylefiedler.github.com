@@ -1,24 +1,37 @@
 .post {
-  margin-bottom: $spacing-super;
   position: relative;
+  border-bottom: $base-border;
+  padding: $spacing-large 0;
 
-  .heading-primary {
-    margin-bottom: 0.3em;
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  .heading-1 {
+    margin-bottom: $spacing-small;
+  }
+
+  p {
+    max-width: 800px;
   }
 }
 
-.post__date {
-  margin-bottom: $spacing-base;
+.post__tags,
+.post__info {
   color: $light-gray;
   display: block;
+    font-size: 1em;
+
+    @media screen and (min-width: 760px) {
+      font-size: $medium-font-size;
+    }
+
+  a {
+    border-bottom: 0;
+  }
 }
 
-.post__tags {
-  color: $light-gray;
-
-  li {
-    display: inline-block;
-    margin-right: 1em;
-    margin-top: $spacing-small;
-  }
+.post__tags li {
+  display: inline-block;
+  margin-right: 1em;
 }

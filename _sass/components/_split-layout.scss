@@ -1,16 +1,7 @@
 .split-layout {
   @media screen and (min-width: 650px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.split-layout__column {
-  flex-basis: calc(50% - 30px);
-
-  @media screen and (min-width: 650px) {
-    &:nth-of-type(odd) {
-      margin-right: 60px;
-    }
+    display: grid;
+    grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+    grid-column-gap: 60px;
   }
 }

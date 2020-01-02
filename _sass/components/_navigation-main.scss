@@ -1,13 +1,22 @@
 .navigation-main {
-  text-align: center;
   margin-top: 1.5em;
   margin-bottom: $spacing-super;
 
   h2 {
     display: inline-block;
-    margin-right: $spacing-base;
-    color: $x-light-gray;
+    font-weight: 600;
+    font-family: $base-font-family;
+    margin-right: 3rem;
     font-size: 1em;
+
+    @media screen and (min-width: 600px) {
+      margin-left: -1.5em;
+    }
+
+    span {
+      margin-right: 0.25em;
+      display: inline-block;
+    }
 
     @media screen and (min-width: 760px) {
       font-size: $medium-font-size;
@@ -36,13 +45,14 @@
     background-image: none;
     border-width: 0;
 
-    .blog-index &.blog,
-    .index &.about {
-      border-width: 2px;
+    &:active,
+    &:hover {
+      color: $purple;
     }
 
-    &:hover {
-      color: $white;
+    .blog-index &.blog,
+    .index &.about {
+      color: $action-color;
     }
   }
 }

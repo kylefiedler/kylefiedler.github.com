@@ -1,21 +1,23 @@
 // Typography
-$base-font-family: "Basier Circle", system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-$heading-font-family: $base-font-family;
+$base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+$heading-font-family: "Georgia", serif;
 
 $small-font-size: 0.708333333em;
 $medium-font-size: 0.85em;
 $base-font-size: 20px;
-$heading-primary-font-size: 2.3333333em;
+$heading-1-font-size: 3.125em;
+$heading-2-font-size: 2.25em;
+$heading-3-font-size: 1em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.7;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $spacing-base: 2em;
 $spacing-small: $spacing-base / 2;
 $spacing-large: $spacing-base * 2;
-$spacing-super: 6.666666667em;
+$spacing-super: 5em;
 
 $base-border-radius: 6px;
 $base-z-index: 0;
@@ -32,16 +34,16 @@ $purple: #7B43BB;
 $red: #FA1A55;
 
 // Font Colors
-$base-font-color: $x-light-gray;
-$heading-font-color: $white;
-$action-color: $purple;
+$base-font-color: $medium-gray;
+$heading-font-color: $darkest-gray;
+$action-color: $blue;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: #DEDEDE;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$viewport-background-color: $dark-gray;
+$viewport-background-color: $white;
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);

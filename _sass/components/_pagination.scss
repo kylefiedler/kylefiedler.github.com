@@ -1,15 +1,10 @@
 .pagination {
-  text-align: center;
+  padding-top: $spacing-base;
+  display: flex;
+  justify-content: space-between;
+    font-size: 1em;
 
-  a {
-    border-width: 0;
-    background-image: none;
-    margin: 0 2em;
-
-    svg,
-    span {
-      display: inline-block;
-      vertical-align: middle;
+    @media screen and (min-width: 760px) {
+      font-size: $medium-font-size;
     }
-  }
 }

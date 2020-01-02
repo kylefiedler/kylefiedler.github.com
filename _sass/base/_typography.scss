@@ -4,9 +4,6 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size - 2;
   line-height: $base-line-height;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.15px;
 
   @media screen and (min-width: 760px) {
@@ -31,7 +28,7 @@ h4,
 h5,
 h6 {
   color: $heading-font-color;
-  font-family: inherit;
+  font-family: $heading-font-family;
   font-size: inherit;
   font-weight: 500;
   line-height: inherit;
@@ -71,18 +68,33 @@ hr {
   margin: $spacing-base 0;
 }
 
+.container,
 main {
-  max-width: 38em;
+  max-width: 1200px;
   position: relative;
-  padding: 1em 1.5em 1em 2.5em;
-  margin: 0 auto 7em;
+  padding: 1em 1.5em;
+  margin: 0 auto;
 
   @media screen and (min-width: 600px) {
-  padding: 1em 3.5em;
+    padding: 1em 3.5em;
   }
 }
 
 .description,
 time {
   color: $light-gray;
+}
+
+footer {
+  background-color: $dark-gray;
+  margin-top: $spacing-base;
+  color: $x-light-gray;
+  padding: $spacing-large 0;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  p {
+    margin-bottom: 0;
+  }
 }
