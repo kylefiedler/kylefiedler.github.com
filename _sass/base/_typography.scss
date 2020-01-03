@@ -6,6 +6,14 @@ body {
   line-height: $base-line-height;
   letter-spacing: -0.15px;
 
+  @media screen and (prefers-color-scheme: dark) {
+    color: $x-light-gray;
+    background-color: $dark-gray;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   @media screen and (min-width: 760px) {
     font-size: $base-font-size;
   }
@@ -33,6 +41,10 @@ h6 {
   font-weight: 500;
   line-height: inherit;
   margin: 0 0 ($base-font-size / 4);
+
+  @media screen and (prefers-color-scheme: dark) {
+    color: $white;
+  }
 }
 
 p {
@@ -93,6 +105,10 @@ footer {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: $darkest-gray;
+  }
 
   p {
     margin-bottom: 0;

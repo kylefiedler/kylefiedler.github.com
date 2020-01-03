@@ -47,12 +47,12 @@
 
     &:active,
     &:hover {
-      color: $purple;
+      color: $blue;
     }
 
     .blog-index &.blog,
     .index &.about {
-      color: $action-color;
+      text-decoration: line-through;
     }
   }
 }

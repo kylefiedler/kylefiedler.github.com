@@ -2,6 +2,10 @@
   position: relative;
   border-bottom: $base-border;
   padding: $spacing-large 0;
+  
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: $medium-gray;
+  }
 
   &:first-of-type {
     padding-top: 0;
@@ -20,11 +24,11 @@
 .post__info {
   color: $light-gray;
   display: block;
-    font-size: 1em;
+  font-size: 1em;
 
-    @media screen and (min-width: 760px) {
-      font-size: $medium-font-size;
-    }
+  @media screen and (min-width: 760px) {
+    font-size: $medium-font-size;
+  }
 
   a {
     border-bottom: 0;

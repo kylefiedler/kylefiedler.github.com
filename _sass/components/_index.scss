@@ -36,10 +36,18 @@
     height: 3px;
     width: 70px;
     background-color: $base-border-color;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background-color: $medium-gray;
+    }
   }
 }
 
 .values__list li {
   border-top: 1px solid $base-border-color;
   padding: $spacing-base 0;
+
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: $medium-gray;
+  }
 }
