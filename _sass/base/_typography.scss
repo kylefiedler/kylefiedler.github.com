@@ -98,15 +98,12 @@ time {
 }
 
 footer {
-  background-color: $dark-gray;
+  background-color: lighten($x-light-gray, 8%);
   margin-top: $spacing-base;
-  color: $x-light-gray;
   padding: $spacing-large 0;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   @media screen and (prefers-color-scheme: dark) {
+    color: $x-light-gray;
     background-color: $darkest-gray;
   }
 
