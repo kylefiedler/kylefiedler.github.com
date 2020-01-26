@@ -52,7 +52,7 @@
 
     .blog-index &.blog,
     .index &.about {
-      text-decoration: line-through;
+      font-weight: bold;
     }
   }
 }
