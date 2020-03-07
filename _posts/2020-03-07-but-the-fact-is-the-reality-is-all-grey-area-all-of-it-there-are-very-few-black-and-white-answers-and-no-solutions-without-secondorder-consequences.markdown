@@ -10,4 +10,4 @@ tags:
 
 From The [Value of Grey Thinking](https://fs.blog/2016/06/value-grey-thinking/) on the Farnam Street blog.
 
-I've been digging into Grey Thinking lately. It resonates with me as a consultant constantly balancing consequences of choices my clients and I make.
+Grey Thinking resonates with me as a consultant; constantly balancing consequences of choices my clients and I make.
