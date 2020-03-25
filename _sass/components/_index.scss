@@ -13,6 +13,7 @@
   position: relative;
 
   @media screen and (min-width: 650px) {
+    margin-top: $spacing-small;
     margin-right: -11.666666667em;
     margin-bottom: -14rem;
   }
@@ -28,23 +29,10 @@
 }
 
 .values {
-  &::before {
-    display: block;
-    content: "";
-    margin-bottom: $spacing-base;
-    margin-top: $spacing-base;
-    height: 3px;
-    width: 70px;
-    background-color: $base-border-color;
-
-    @media screen and (prefers-color-scheme: dark) {
-      background-color: $medium-gray;
-    }
-  }
 }
 
 .values__list li {
-  border-top: 1px solid $base-border-color;
+  border-top: 2px solid $base-border-color;
   padding: $spacing-base 0;
 
   @media screen and (prefers-color-scheme: dark) {
