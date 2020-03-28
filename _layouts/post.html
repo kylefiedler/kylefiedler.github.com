@@ -2,31 +2,39 @@
 
 <main>
   <nav class="navigation-main">
-    <h2>Kyle Fiedler</h2>
+    <h2><span>👋</span> Hi, I&rsquo;m Kyle!</h2>
     <ul>
       <li>
-        <a href="/">About</a>
+        <a href="/" class="about">About</a>
       </li>
       <li>
-        <a href="/blog">Blog</a>
+        <a href="/blog" class="blog">Blog</a>
+      </li>
+      <li>
+        <a href="/work" class="work">Work</a>
       </li>
     </ul>
   </nav>
 
-  <header class="main-header--post">
-    <time pubdate="{{ page.date }}" class="post__date">{{ page.date | date: '%B %d, %Y' }}</time>
-    <h1 class="heading-1">
-      {{ page.title }}
-    </h1>
-  </header>
+  <section class="sidebar-layout">
+    <aside class="sidebar post__info">
+      <time pubdate="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      <ul class="post__tags">
+        {% for tag in page.tags %}
+        <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </aside>
+    <div class="post__content">
+      <h1 class="heading-2">
+        {{ page.title }}
+      </h1>
 
-  <div class="post__content">{{ content }}</div>
+      {{ content }}
 
-  <ul class="post__tags">
-    {% for tag in page.tags %}
-      <li>#{{ tag }}</li>
-    {% endfor %}
-  </ul>
+      <p><a href="/blog" class="back">⏮ Back to Blog</a></p>
+    </div>
+  </section>
 </main>
 
 {% include footer.html %}
