@@ -1,11 +1,17 @@
 .sidebar-layout {
-  display: grid;
-  grid-template-columns: 2fr 5fr;
+  @media screen and (min-width: 590px) {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+  }
 }
 
 .sidebar {
   color: $light-gray;
   font-size: $medium-font-size;
+
+  @media screen and (max-width: 590px) {
+    margin-bottom: $spacing-base;
+  }
 
   h4 {
     font-family: $base-font-family;
