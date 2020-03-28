@@ -4,6 +4,7 @@ title: "Context Switching and Tension Headaches "
 date: "2019-06-22 14:10:13 -0500"
 tags:
   - "post"
+  - "productivity"
 ---
 
 The last couple of weeks have been jam-packed for me. I had several back to back meetings throughout the week and didn't have a full day with less than three meetings. Having no breaks throughout the day makes it impossible for me to do any work outside those meetings, and it makes it impossible to do any focused work. As an introvert, this kind of work burns me out fast, and the only way to recover is to have time burning off stress running or alone deep in a book or drawing.

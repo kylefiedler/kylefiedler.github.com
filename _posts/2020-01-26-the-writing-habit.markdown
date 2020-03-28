@@ -4,6 +4,8 @@ title: "The Writing Habit"
 date: "2020-01-26 08:41:44 -0600"
 tags:
   - "post"
+  - "habit"
+  - "personal"
 ---
 
 I had a pretty good string of blog posts that lasted until halfway through the year last year. Reflecting on the year, I was thinking about what made me stop writing. My initial assumption was that I was doing a lot more writing internally for thoughtbot, and that fulfilled my writing requirement. Reading through Atomic Habits, I believe it's because I let the habit of writing slip. I missed one post and then another and then another. It's challenging to pick habits back up when that happens.

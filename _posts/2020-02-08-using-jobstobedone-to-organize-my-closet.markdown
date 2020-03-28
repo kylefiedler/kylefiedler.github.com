@@ -4,6 +4,7 @@ title: "Using Jobs-to-be-Done to organize my closet"
 date: "2020-02-02 20:29:08 -0600"
 tags:
   - "post"
+  - "jobs-to-be-done"
 ---
 
 This weekend I wanted to clean out my closet to better organize and get rid of pieces that I no longer wear or need. This started out as it usually does with me filtering out clothes folding and putting others back. This time I found myself staring at my shelf of tees. They're the first things that I look at when looking into my closet, and I thought they would be the most obvious place to pair down.

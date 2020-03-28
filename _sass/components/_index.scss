@@ -29,13 +29,9 @@
 }
 
 .values {
-}
+  margin-top: $spacing-base;
 
-.values__list li {
-  border-top: 2px solid $base-border-color;
-  padding: $spacing-base 0;
-
-  @media screen and (prefers-color-scheme: dark) {
-    border-color: $medium-gray;
+  @media screen and (min-width: 650px) {
+    margin-top: $spacing-small;
   }
 }

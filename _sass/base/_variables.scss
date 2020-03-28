@@ -1,6 +1,6 @@
 // Typography
 $base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-$heading-font-family: poynter-oldstyle-text, "ff-tisa-web-pro", "Georgia", serif;
+$heading-font-family: poynter-oldstyle-text, "Georgia", serif;
 
 $small-font-size: 0.708333333em;
 $medium-font-size: 0.85em;
@@ -40,7 +40,7 @@ $action-color: $blue;
 
 // Border
 $base-border-color: #DEDEDE;
-$base-border: 1px solid $base-border-color;
+$base-border: 2px solid $base-border-color;
 
 // Background Colors
 $viewport-background-color: $white;

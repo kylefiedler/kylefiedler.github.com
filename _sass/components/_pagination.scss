@@ -1,8 +1,10 @@
 .pagination {
-  padding-top: $spacing-base;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1em;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin: $spacing-small;
+  }
 
   @media screen and (min-width: 760px) {
     font-size: $medium-font-size;

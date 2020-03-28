@@ -5,3 +5,24 @@
     grid-column-gap: 60px;
   }
 }
+
+.split-layout--early-break {
+  @media screen and (min-width: 900px) {
+    display: grid;
+    grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+    grid-column-gap: 60px;
+  }
+}
+
+.split-layout--border-bottom {
+  border-bottom: 2px solid $base-border-color;
+  padding: $spacing-base 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: $medium-gray;
+  }
+}

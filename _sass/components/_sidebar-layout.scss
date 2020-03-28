@@ -1,0 +1,16 @@
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+
+.sidebar {
+  color: $light-gray;
+  font-size: $medium-font-size;
+
+  h4 {
+    font-family: $base-font-family;
+    color: $light-gray;
+    font-weight: 400;
+    margin-bottom: $spacing-small;
+  }
+}

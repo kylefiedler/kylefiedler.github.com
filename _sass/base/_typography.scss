@@ -27,6 +27,7 @@ body {
 ::-moz-selection {
   color: $white;
   background-color: $blue;
+  border-radius: 1px;
 }
 
 h1,
@@ -61,6 +62,7 @@ a {
   background-size: 100% 0.0em;
   background-position: 0 100%;
   transition: all 0.125s ease-in;
+  border-radius: 1px;
 
   &:hover {
     color: $white;
@@ -98,16 +100,15 @@ time {
 }
 
 footer {
-  background-color: lighten($x-light-gray, 8%);
-  margin-top: $spacing-base;
   padding: $spacing-large 0;
+  color: $light-gray;
 
   @media screen and (prefers-color-scheme: dark) {
-    color: $x-light-gray;
-    background-color: $darkest-gray;
+    color: $light-gray;
   }
 
   p {
     margin-bottom: 0;
+    font-size: $medium-font-size;
   }
 }
