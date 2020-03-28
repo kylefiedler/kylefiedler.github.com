@@ -102,6 +102,7 @@ time {
 footer {
   padding: $spacing-large 0;
   color: $light-gray;
+  text-align: center;
 
   @media screen and (prefers-color-scheme: dark) {
     color: $light-gray;
