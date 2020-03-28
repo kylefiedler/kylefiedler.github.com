@@ -20,6 +20,9 @@ class: blog-index
         <h2 class="heading-2">{{ post.title }}</h2>
         <div class="content">
           {{ post.content }}
+          {% if post.external_url %}
+          <p><a href="{{post.external_url}}">Go to post ➡️</a></p>
+          {% endif %}
         </div>
       </section>
     </li>
