@@ -4,8 +4,15 @@
       content: "–";
       display: inline-block;
       margin-right: $spacing-small;
-      margin-left: -1.5em;
       color: $x-light-gray;
+
+      @media screen and (min-width: 700px) {
+        margin-left: -1.5em;
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        color: $medium-gray;
+      }
     }
   }
 }

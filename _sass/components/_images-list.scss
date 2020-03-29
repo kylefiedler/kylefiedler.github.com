@@ -1,0 +1,33 @@
+.images-list {
+  column-gap: $spacing-small;
+  padding: $spacing-base $spacing-small;
+  background-color: $xx-light-gray;
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: $darkest-gray;
+  }
+
+  @media screen and (min-width: 700px) {
+    columns: 2;
+  }
+
+  @media screen and (min-width: 1100px) {
+    columns: 3;
+  }
+
+  @media screen and (min-width: 1500px) {
+    columns: 4;
+  }
+
+  li {
+    text-align: center;
+    margin-bottom: $spacing-base;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  img {
+    border-radius: 6px;
+  }
+}

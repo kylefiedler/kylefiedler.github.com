@@ -1,5 +1,5 @@
 .sidebar-layout {
-  @media screen and (min-width: 590px) {
+  @media screen and (min-width: 700px) {
     display: grid;
     grid-template-columns: 2fr 5fr;
   }
@@ -9,7 +9,7 @@
   color: $light-gray;
   font-size: $medium-font-size;
 
-  @media screen and (max-width: 590px) {
+  @media screen and (max-width: 700px) {
     margin-bottom: $spacing-base;
   }
 

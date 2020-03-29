@@ -103,13 +103,32 @@ footer {
   padding: $spacing-large 0;
   color: $light-gray;
   text-align: center;
+  font-size: $medium-font-size;
+
+  .work-footer & {
+    background-color: $xx-light-gray;
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: $darkest-gray;
+  }
+  }
 
   @media screen and (prefers-color-scheme: dark) {
     color: $light-gray;
   }
 
-  p {
-    margin-bottom: 0;
-    font-size: $medium-font-size;
+  ul {
+    margin-bottom: $spacing-small;
   }
+
+  li {
+    display: inline-block;
+    margin-right: $spacing-small;
+  }
+}
+
+figcaption {
+  font-size: $small-font-size;
+  color: $light-gray;
+  text-align: center;
 }
