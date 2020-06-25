@@ -1,61 +1,104 @@
 ---
-layout: default
+layout: index
 class: index
 ---
 
-<h1 class="heading-1">I iteratively plan, design, test, and build digital products.</h1>
+<header class="hero container">
+  <h1 class="span-four start-three">👋 Hi, I&rsquo;m Kyle!</h1>
 
-<section class="split-layout">
-  <p>I rely on tools like design research and Jobs-to-be-Done to work through complex problems and design appropriate solutions. At 🤖 <a href="https://thoughtbot.com">thoughtbot</a>, I'm creating an environment for designers to be fulfilled in their work. I encourage, support, and coach designers.</p>
+  <section class="span-ten">
+    <h2 class="heading-1">I iteratively plan, design, test, and build digital products.</h2>
+    <p>I rely on tools like design research and Jobs-to-be-Done to work through complex problems and design appropriate solutions. At 🤖 <a href="https://thoughtbot.com">thoughtbot</a>, I'm creating an environment for designers to be fulfilled in their work. I’m probably eating a 🌮 taco.</p>
+  </section>
+</header>
 
-  <div class="index__image">
-    <img src="/images/kyle.jpg" alt="Kyle speaking in front of a whiteboard" class="">
+<section class="container">
+  <img src="/images/kyle-chair.jpg" alt="Kyle speaking in front of a whiteboard" class="span-ten">
+</section>
+
+<section class="container">
+  <div class="span-ten start-three">
+    <h2 class="heading--eyebrow">Work</h2>
+    <ul>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Real Simple Energy</h3>
+        <p class="span-six">Rapidly validate business idea and build minimum viable product. <a href="/work/rse">Details&nbsp;→</a></p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h2 class="span-four">Designer Skill Self-Evaluation</h2>
+        <p class="span-six">A tool to help Designers identify which skills they’d like to level-up. <a href="/work/self-evaluation">Details →</a></p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h2 class="span-four">KOYA</h2>
+        <p class="span-six">A product to spread kindness to friends and family when they arrive at their favorite location. <a href="/work/koya">Details →</a></p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="span-four">
+    <h2 class="heading--eyebrow">Clients Include</h2>
+    <ul>
+      <li>Merck</li>
+      <li>MIT/EdX</li>
+      <li>Fangraphs</li>
+      <li>CodeTriage</li>
+      <li>ScreenSteps</li>
+      <li>Peerfit</li>
+      <li>FetchMD</li>
+    </ul>
   </div>
 </section>
 
-<section class="values">
-  <h2 class="heading-2">
-    Personal Values
-  </h2>
-  <p class="split-layout split-layout--border-bottom">These values define who I would like to be 😀, as well as what is intrinsically important. I revisit these values at the end of each calendar year to recommit to myself and make new discoveries about who I am.</p>
+<section class="container">
+  <div class="span-ten start-five">
+    <nav class="sub-ten">
+      <h2 class="heading--eyebrow span-two start-three">Recent Posts</h2>
+      <a href="/blog" class="heading--eyebrow span-two">All Posts</a>
+    </nav>
 
-  <ul>
-    <li class="split-layout split-layout--border-bottom">
-      <h3 class="heading-3">Be sustainable</h3>
-      <p>Maintain energy and patience to build and strengthen relationships. Life is a marathon not a sprint, but make the best use of time that you’ve been gifted. Don't waste or create waste.</p>
-    </li>
-    <li class="split-layout split-layout--border-bottom">
-      <h3 class="heading-3">Spread kindness &amp; support others</h3>
-      <p>Give as much as you can to those who have less. Help lift others to give them a chance to rise. 📢 Amplify voices that might have otherwise gone unheard.</p>
-    </li>
-    <li class="split-layout split-layout--border-bottom">
-      <h3 class="heading-3">Always iterate</h3>
-      <p>Nothing is ever flawless, and nothing is ever done. There is always room to grow and improve in every aspect of life. Do not rely on anyone else to set your direction or hold you accountable.</p>
-    </li>
-    <li class="split-layout split-layout--border-bottom">
-      <h3 class="heading-3">Contribute to something bigger</h3>
-      <p>What you decide to work on and who you work on it will define who you are and will define the community around you. 🏕 Leave everything better than you found it.</p>
-    </li>
-    <li class="split-layout split-layout--border-bottom">
-      <h3 class="heading-3">Simple is imperfect</h3>
-      <p>Add purposefully and remove when possible. Avoid justification of the new and see the value in what you already have. Embrace inconsistencies, mistakes, and flaws.</p>
-    </li>
-    <li class="split-layout--border-bottom">
-      <h2 class="heading-2">
-        Found Elsewhere
-      </h2>
-      <div class="split-layout">
-        <h3 class="heading-3">Mileage May Vary</h3>
-        <ul class="split-layout--early-break dashed-list">
-          <li><a href="https://tentative.fm">Tentative Podcast</a></li>
-          <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads</a></li>
-          <li><a href="https://twitter.com/kylefiedler/">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn</a></li>
-          <li><a href="https://github.com/kylefiedler/">GitHub</a></li>
-          <li><a href="https://dribbble.com/kylefiedler/">Dribbble</a></li>
-          <li><a href="mailto:kyle@kylefiedler.com">Email</a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
+    <ol>
+      {% for post in site.posts limit: 4 %}
+        <li class="sub-ten u-margin-bottom-base">
+          <p class="heading--eyebrow span-two">{{ post.date | date: '%m/%d/%Y' }}</p>
+
+          <div class="span-eight">
+            <h3 class="heading-1">{{ post.title }}</h3>
+            {% if post.external_url %}
+            <a href="{{post.external_url}}">Read →</a>
+            {% else %}
+            <a href="{{post.url}}">Read →</a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="values container">
+  <div class="span-ten start-three">
+    <h2 class="heading--eyebrow">Personal Values</h2>
+    <ul>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Be sustainable</h3>
+        <p class="span-six">Maintain energy and patience to build and strengthen relationships. Life is a marathon not a sprint, but make the best use of time that you’ve been gifted. Don't waste or create waste.</p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Spread kindness &amp; support others</h3>
+        <p class="span-six">Give as much as you can to those who have less. Help lift others to give them a chance to rise. 📢 Amplify voices that might have otherwise gone unheard.</p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Always iterate</h3>
+        <p class="span-six">Nothing is ever flawless, and nothing is ever done. There is always room to grow and improve in every aspect of life. Do not rely on anyone else to set your direction or hold you accountable.</p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Contribute to something bigger</h3>
+        <p class="span-six">What you decide to work on and who you work on it will define who you are and will define the community around you. 🏕 Leave everything better than you found it.</p>
+      </li>
+      <li class="sub-ten u-margin-bottom-base">
+        <h3 class="span-four">Simple is imperfect</h3>
+        <p class="span-six">Add purposefully and remove when possible. Avoid justification of the new and see the value in what you already have. Embrace inconsistencies, mistakes, and flaws.</p>
+      </li>
+    </ul>
+  </div>
 </section>

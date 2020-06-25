@@ -1,33 +1,12 @@
-body {
-  color: $base-font-color;
-  background-color: $viewport-background-color;
-  font-family: $base-font-family;
-  font-size: $base-font-size - 2;
-  line-height: $base-line-height;
-  letter-spacing: -0.15px;
-
-  @media screen and (prefers-color-scheme: dark) {
-    color: $x-light-gray;
-    background-color: $dark-gray;
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  @media screen and (min-width: 760px) {
-    font-size: $base-font-size;
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: $base-font-size + 4;
-  }
+html {
+  color: $font-color--base;
+  font-family: var(--font-family);
+  font-size: 100%;
+  line-height: var(--line-height);
 }
 
-::selection,
-::-moz-selection {
-  color: $white;
-  background-color: $blue;
-  border-radius: 1px;
+body {
+  font-size: 1.625rem;
 }
 
 h1,
@@ -36,99 +15,49 @@ h3,
 h4,
 h5,
 h6 {
-  color: $heading-font-color;
-  font-family: $heading-font-family;
-  font-size: inherit;
-  font-weight: 500;
-  line-height: inherit;
-  margin: 0 0 ($base-font-size / 4);
+  font-size: 2.25rem;
+  line-height: var(--line-height--heading);
+  margin: 0 0 var(--spacing--small);
+  letter-spacing: -1px;
+}
 
-  @media screen and (prefers-color-scheme: dark) {
-    color: $white;
-  }
+.heading--eyebrow {
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: normal;
+  color: #646A75;
+  margin-bottom: 4rem;
+  display: block;
+}
+
+.footer {
+  padding-bottom: 0 !important;
 }
 
 p {
-  margin: 0 0 $spacing-small;
+  margin: 0 0 var(--spacing--small);
+  max-width: 55rem;
 }
 
 a {
-  color: inherit;
-  text-decoration-skip: ink;
-  text-decoration: none;
-  border-bottom: 2px solid $action-color;
-  background-image: linear-gradient(120deg, $action-color 0%, $action-color 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.0em;
-  background-position: 0 100%;
-  transition: all 0.125s ease-in;
-  border-radius: 1px;
+  color: $action-color;
+  text-decoration-skip-ink: auto;
+  transition: color var(--duration) var(--timing);
 
   &:hover {
-    color: $white;
-    background-size: 100% 100%;
+    color: $action-color--alt;
   }
 
   &:focus {
-    outline: $focus-outline;
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
   }
 }
 
 hr {
-  border-bottom: $base-border;
+  border-bottom: var(--border);
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: $spacing-base 0;
-}
-
-.container,
-main {
-  max-width: 1300px;
-  position: relative;
-  padding: 1em 1.5em;
-  margin: 0 auto;
-
-  @media screen and (min-width: 600px) {
-    padding: 1em 3.5em;
-  }
-}
-
-.description,
-time {
-  color: $light-gray;
-}
-
-footer {
-  padding: $spacing-large 0;
-  color: $light-gray;
-  text-align: center;
-  font-size: $medium-font-size;
-
-  .work-footer & {
-    background-color: $xx-light-gray;
-
-  @media screen and (prefers-color-scheme: dark) {
-    background-color: $darkest-gray;
-  }
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    color: $light-gray;
-  }
-
-  ul {
-    margin-bottom: $spacing-small;
-  }
-
-  li {
-    display: inline-block;
-    margin-right: $spacing-small;
-  }
-}
-
-figcaption {
-  font-size: $small-font-size;
-  color: $light-gray;
-  text-align: center;
+  margin: var(--spacing) 0;
 }

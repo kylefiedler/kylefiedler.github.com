@@ -1,39 +1,41 @@
 {% include header.html %}
 
 <main>
-  <nav class="navigation-main">
-    <h2><span>👋</span> Hi, I&rsquo;m Kyle!</h2>
-    <ul>
-      <li>
-        <a href="/" class="about">About</a>
-      </li>
-      <li>
-        <a href="/blog" class="blog">Blog</a>
-      </li>
-      <li>
-        <a href="/work" class="work">Work</a>
-      </li>
-    </ul>
-  </nav>
+  <header class="hero container">
+    <nav class="span-four start-three">
+      <a href="/">Back Home</a>
+    </nav>
 
-  <section class="sidebar-layout">
-    <aside class="sidebar post__info">
-      <time pubdate="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
-      <ul class="post__tags">
-        {% for tag in page.tags %}
-        <li>#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    </aside>
-    <div class="post__content">
-      <h1 class="heading-2">
+    <div class="span-ten">
+      <time pubdate="{{ page.date }}" class="heading--eyebrow">{{ page.date | date: '%B %d, %Y' }}</time>
+      <h1>
         {{ page.title }}
       </h1>
-
-      {{ content }}
-
-      <p><a href="/blog" class="back">⏮ Back to Blog</a></p>
     </div>
+  </header>
+
+  <div class="container">
+    <section class="span-ten start-seven">
+      {{ content }}
+    </section>
+  </div>
+
+  <!-- <ul class="post__tags">
+  {% for tag in page.tags %}
+  <li>#{{ tag }}</li>
+  {% endfor %}
+</ul> -->
+
+   {% if page.next %}
+      {% assign next = page.next %}
+    <section class="container">
+      <div class="start-seven span-ten">
+        <h6 class="heading--eyebrow">Next Project</h6>
+        <h5>
+          <a class="equalize" href="{{site.baseurl}}{{next.url}}" >{{next.title}}</a>
+        </h5>
+      </div>
+    {% endif %}
   </section>
 </main>
 
