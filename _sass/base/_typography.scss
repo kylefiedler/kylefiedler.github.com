@@ -6,7 +6,11 @@ html {
 }
 
 body {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
+
+  @media (min-width: 800px) {
+    font-size: 1.625rem;
+  }
 }
 
 h1,
@@ -15,10 +19,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
+  font-weight: 600;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  letter-spacing: -1px;
+
+  @media (min-width: 800px) {
+    font-size: 2.25rem;
+  }
 }
 
 .heading--eyebrow {
