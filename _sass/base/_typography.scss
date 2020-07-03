@@ -1,5 +1,5 @@
 html {
-  color: #383a7f;
+  color: #42547c;
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
@@ -19,6 +19,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: #393e62;
   font-size: 1.75rem;
   font-weight: 500;
   line-height: var(--line-height--heading);
@@ -30,12 +31,29 @@ h6 {
 }
 
 .heading--eyebrow {
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.25rem;
   letter-spacing: normal;
-  color: #b55f3f;
+  color: #d0342a;
   margin-bottom: 4rem;
   display: block;
+
+  h2 {
+    color: inherit;
+    font-size: inherit;
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 2rem;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: darken(#d0342a, 10%);
+    }
+  }
 }
 
 .footer {

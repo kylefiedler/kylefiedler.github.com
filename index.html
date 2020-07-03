@@ -3,10 +3,6 @@ layout: index
 class: index
 ---
 
-<div class="wip">
-  🚧 🚧 🚧 This site is a work in progress; be forgiving 🚧 🚧 🚧
-</div>
-
 <header class="hero container">
   <h1 class="span-four start-three u-margin-bottom-4">👋 Hi, I&rsquo;m Kyle!</h1>
 
@@ -34,7 +30,7 @@ class: index
       </li>
       <li class="sub-ten u-margin-bottom-base">
         <h2 class="span-four">KOYA</h2>
-        <p class="span-six">A product to spread kindness to friends and family when they arrive at their favorite location. <a href="/work/koya">Details →</a></p>
+        <p class="span-six">A product to spread kindness to friends and family when they arrive at their favorite location. <a href="/work/koya">Details&nbsp;→</a></p>
       </li>
     </ul>
   </div>
@@ -55,15 +51,15 @@ class: index
 
 <section class="container">
   <div class="span-ten start-five">
-    <nav class="sub-ten sub-ten--nav">
-      <h2 class="heading--eyebrow span-two start-three">Recent Posts</h2>
-      <a href="/blog" class="heading--eyebrow span-two">All Posts</a>
+    <nav class="heading--eyebrow shift-two">
+      <h2>Recent Posts</h2>
+      <a href="/blog">All Posts</a>
     </nav>
 
     <ol>
       {% for post in site.posts limit: 4 %}
         <li class="sub-ten u-margin-bottom-base">
-          <p class="heading--eyebrow span-two">{{ post.date | date: '%m/%d/%Y' }}</p>
+          <p class="details span-two">{{ post.date | date: '%m/%d/%Y' }}</p>
 
           <div class="span-eight">
             <h3 class="heading-1">{{ post.title }}</h3>

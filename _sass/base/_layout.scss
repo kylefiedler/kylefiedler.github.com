@@ -1,6 +1,10 @@
 html {
-  background-color: #faf5eb;
+  background-color: #f7f7f6;
   box-sizing: border-box;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #25212c;
+  }
 }
 
 *,
