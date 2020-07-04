@@ -1,13 +1,17 @@
 // Colors
-$blue: #5d8bc0;
-$blue-light: #3b83d5;
-$gray: #333;
+$blue: #3150e8;
+$blue-light: lighten(#3b83d5, 10%);
+$gray: #555;
 $white: #fff;
+$purple: #532ab7;
+$tan: #eff0e5;
+$pink: #e21b65;
+$dark-blue: #29395d;
 
 // Font Colors
 $font-color--base: $gray;
-$action-color: #7c2ab1;
-$action-color--alt: #9e6fe1;
+$action-color: #444;
+$action-color--alt: #333;
 $action-color--contrast: $white;
 
 // Background Colors

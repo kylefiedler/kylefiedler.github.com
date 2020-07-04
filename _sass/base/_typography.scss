@@ -1,5 +1,5 @@
 html {
-  color: #42547c;
+  color: $font-color--base;
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #190081;
+  color: #2f2f2f;
   font-size: 1.75rem;
   letter-spacing: -0.0625rem;
   font-weight: 500;
@@ -45,6 +45,7 @@ h6 {
   font-family: "Basier Circle Mono";
   font-weight: normal;
   font-size: 1.25rem;
+  color: #757575;
 }
 
 .heading--eyebrow {
@@ -52,9 +53,9 @@ h6 {
   font-weight: normal;
   font-size: 1.25rem;
   letter-spacing: normal;
-  color: #bf2381;
+  color: #3f3f3f;
   margin-bottom: 3rem;
-  display: block;
+  display: inline-block;
 
   h2 {
     color: inherit;
@@ -67,11 +68,6 @@ h6 {
 
   a {
     color: inherit;
-
-    &:hover,
-    &:focus {
-      color: darken(#d0342a, 10%);
-    }
   }
 }
 
@@ -86,16 +82,21 @@ p {
 
 a {
   color: $action-color;
-  text-decoration-skip-ink: auto;
-  transition: color var(--duration) var(--timing);
+  text-decoration: none;
+  border-bottom: 2px solid $action-color;
+  background-image: linear-gradient(120deg, $action-color 0%, $action-color 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.0em;
+  background-position: 0 100%;
+  transition: all 0.125s ease-in;
 
   &:hover {
-    color: $action-color--alt;
+    color: $white;
+    background-size: 100% 100%;
   }
 
   &:focus {
     outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-offset);
   }
 }
 
