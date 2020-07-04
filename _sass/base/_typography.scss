@@ -12,11 +12,12 @@ html {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.3vw, 1.625rem);
+}
 
-  @media (min-width: 800px) {
-    font-size: 1.625rem;
-  }
+::selection {
+  color: #fff;
+  background-color: #2f2f2f;
 }
 
 h1,
@@ -26,32 +27,31 @@ h4,
 h5,
 h6 {
   color: #2f2f2f;
+  font-family: "Grenette", var(--font-family);
   font-size: 1.75rem;
   letter-spacing: -0.0625rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
+  font-size: clamp(1.75rem, 2.75vw, 2.75rem);
 
   // @media (prefers-color-scheme: dark) {
   //   color: #fff;
   // }
-
-  @media (min-width: 800px) {
-    font-size: 2.25rem;
-  }
 }
 
 .detail {
   font-family: "Basier Circle Mono";
   font-weight: normal;
   font-size: 1.25rem;
+  font-size: clamp(1rem, 1vw, 1.25rem);
   color: #757575;
 }
 
 .heading--eyebrow {
   font-family: "Basier Circle Mono";
   font-weight: normal;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1vw, 1.25rem);
   letter-spacing: normal;
   color: #3f3f3f;
   margin-bottom: 3rem;
