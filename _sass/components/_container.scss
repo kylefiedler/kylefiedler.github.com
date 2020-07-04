@@ -37,7 +37,7 @@
   }
 
   li {
-    @extend .heading--eyebrow;
+    @extend .detail;
     text-align: center;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
