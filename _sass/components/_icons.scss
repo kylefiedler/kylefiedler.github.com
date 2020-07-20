@@ -1,0 +1,15 @@
+.wave {
+  &::after {
+    background-image: url(/images/sketches/wave.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    width: 140px;
+    height: 120px;
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 8%;
+    opacity: 0.65;
+  }
+}

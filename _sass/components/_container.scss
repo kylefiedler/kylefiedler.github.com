@@ -2,6 +2,7 @@
   max-width: 1800px;
   margin: 0 auto;
   padding: 4rem 1.875rem;
+  position: relative;
 
   @media (min-width: 650px) {
     grid-template-columns: repeat(8, 1fr);
