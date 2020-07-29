@@ -3,11 +3,11 @@
 <main>
   <header class="hero container u-padding-bottom-0">
     <nav class="span-four start-three">
-      <a href="/" class="heading--eyebrow">&larr; Back Home</a>
+      <a href="/" class="eyebrow">&larr; Back Home</a>
     </nav>
 
     <div class="span-ten">
-      <time pubdate="{{ page.date }}" class="heading--eyebrow">{{ page.date | date: '%B %d, %Y' }}</time>
+      <time pubdate="{{ page.date }}" class="eyebrow">{{ page.date | date: '%B %d, %Y' }}</time>
       <h1>
         {{ page.title }}
       </h1>
@@ -30,7 +30,7 @@
       {% assign next = page.next %}
     <section class="container">
       <div class="start-seven span-ten">
-        <h6 class="heading--eyebrow">Next Post</h6>
+        <h6 class="eyebrow">Next Post</h6>
         <h5>
           <a class="equalize" href="{{site.baseurl}}{{next.url}}" >{{next.title}}</a>
         </h5>

@@ -1,0 +1,22 @@
+.list-horz__container {
+  @media (max-width: $breakpoint--large) {
+    grid-column-end: span 8;
+  }
+}
+
+.list-horz {
+  @media (max-width: $breakpoint--large) {
+    column-gap: var(--spacing--gap);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.875rem;
+  }
+
+  @media (min-width: $breakpoint--small) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

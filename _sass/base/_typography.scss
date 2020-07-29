@@ -17,7 +17,7 @@ body {
 
 ::selection {
   color: #fff;
-  background-color: #2f2f2f;
+  background-color: $gray--x-dark;
 }
 
 h1,
@@ -26,53 +26,17 @@ h3,
 h4,
 h5,
 h6 {
-  color: #2f2f2f;
+  color: $gray--x-dark;
   font-family: "Grenette", var(--font-family);
-  font-size: 1.75rem;
-  letter-spacing: -0.0625rem;
+  font-size: clamp(1.75rem, 2.75vw, 2.5rem);
   font-weight: 600;
+  letter-spacing: -0.0625rem;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  font-size: clamp(1.75rem, 2.75vw, 2.75rem);
 
   // @media (prefers-color-scheme: dark) {
   //   color: #fff;
   // }
-}
-
-.detail {
-  font-family: "Basier Circle Mono";
-  font-weight: normal;
-  font-size: 1.25rem;
-  font-size: clamp(1rem, 1vw, 1.25rem);
-  color: #757575;
-}
-
-.heading--eyebrow {
-  font-family: "Basier Circle Mono";
-  font-weight: normal;
-  font-size: clamp(1rem, 1vw, 1.25rem);
-  letter-spacing: normal;
-  color: #3f3f3f;
-  margin-bottom: 3rem;
-  display: inline-block;
-
-  h2 {
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    display: inline-block;
-    font-weight: normal;
-    margin-right: 2rem;
-  }
-
-  a {
-    color: inherit;
-  }
-}
-
-.footer {
-  padding-bottom: 0 !important;
 }
 
 p {

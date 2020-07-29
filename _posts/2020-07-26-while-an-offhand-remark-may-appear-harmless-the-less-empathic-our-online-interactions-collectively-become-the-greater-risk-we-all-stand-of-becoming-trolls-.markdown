@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "While an offhand remark may appear harmless, the less empathic our online interactions collectively become, the greater risk we all stand of becoming trolls. "
+title: "While an offhand remark may appear harmless, the less empathic our online interactions collectively become, the greater risk we all stand of becoming trolls."
 date: "2020-07-26 16:03:40 -0500"
 tags:
   - "quote"

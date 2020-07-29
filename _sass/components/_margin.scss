@@ -1,0 +1,19 @@
+.u-padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+
+.u-margin-bottom-base {
+  margin-bottom: var(--spacing--large);
+
+  @media (min-width: $breakpoint--small) {
+    margin-bottom: var(--spacing--x-large);
+  }
+}
+
+.u-margin-bottom-large {
+  margin-bottom: var(--spacing--x-large);
+
+  @media (min-width: $breakpoint--small) {
+    margin-bottom: var(--spacing--xx-large);
+  }
+}

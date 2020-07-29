@@ -1,0 +1,83 @@
+.start-three {
+  @media (min-width: $breakpoint--x-large) {
+    grid-column-start: 3;
+  }
+}
+
+.start-five {
+  @media (min-width: $breakpoint--x-large) {
+    grid-column-start: 5;
+  }
+}
+
+.start-seven {
+  @media (min-width: $breakpoint--x-large) {
+    grid-column-start: 7;
+  }
+}
+
+.span-two {
+  grid-column-end: span 2;
+}
+
+.span-four {
+  grid-column-end: span 4;
+}
+
+.span-six {
+  grid-column-end: span 4;
+
+  @media (min-width: $breakpoint--medium) {
+    grid-column-end: span 6;
+  }
+}
+
+.span-eight {
+  grid-column-end: span 6;
+
+  @media (min-width: $breakpoint--medium) {
+    grid-column-end: span 8;
+  }
+}
+
+.span-ten {
+  grid-column-end: span 10;
+}
+
+.span-ten--no-sub {
+  grid-column-end: span 4;
+
+  @media (min-width: $breakpoint--large) {
+    grid-column-end: span 6;
+  }
+
+  @media (min-width: $breakpoint--x-large) {
+    grid-column-end: span 10;
+  }
+}
+
+.sub-ten {
+  @media (min-width: $breakpoint--small) {
+    display: grid;
+    column-gap: var(--spacing--gap);
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @media (min-width: $breakpoint--medium) {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+.shift-two {
+  @media (min-width: $breakpoint--small) {
+    margin-left: 25%;
+  }
+
+  @media (min-width: $breakpoint--medium) {
+    margin-left: calc(20% + 5px);
+  }
+}
+
+.column-span {
+  column-span: all;
+}

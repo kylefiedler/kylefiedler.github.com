@@ -370,7 +370,7 @@ time {
   color: #cfd0d6;
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 2rem; }
+  margin-bottom: var(--spacing--medium); }
 
 img,
 picture {
@@ -425,7 +425,7 @@ dl {
   font-weight: normal;
   letter-spacing: 2px;
   margin-bottom: 2rem;
-  margin-top: 4rem;
+  margin-top: var(--spacing--x-large);
   text-transform: uppercase; }
   .title--section a {
     color: #a5a8b3; }

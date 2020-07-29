@@ -1,0 +1,14 @@
+.footer {
+  padding-bottom: 0 !important;
+
+  @media (min-width: $breakpoint--large) {
+    grid-template-columns: repeat(16, 1fr);
+  }
+
+  .span-four {
+    @media (max-width: $breakpoint--large) {
+      margin-bottom: var(--spacing--x-large);
+      grid-column-end: span 8;
+    }
+  }
+}
