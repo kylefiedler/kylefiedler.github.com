@@ -24,6 +24,14 @@
   grid-column-end: span 4;
 }
 
+.span-four--small {
+  grid-column-end: span 2;
+
+  @media (min-width: $breakpoint--large) {
+    grid-column-end: span 4;
+  }
+}
+
 .span-six {
   grid-column-end: span 4;
 
@@ -45,9 +53,9 @@
 }
 
 .span-ten--no-sub {
-  grid-column-end: span 4;
+  grid-column-end: span 8;
 
-  @media (min-width: $breakpoint--large) {
+  @media (min-width: $breakpoint--small) {
     grid-column-end: span 6;
   }
 

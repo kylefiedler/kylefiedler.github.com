@@ -27,6 +27,6 @@
   }
 
   img {
-    border: 1px solid #ececec;
+    @extend .portfolio-image;
   }
 }
