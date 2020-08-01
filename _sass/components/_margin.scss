@@ -1,3 +1,13 @@
+.u-margin-baseline-align {
+  @media (min-width: $breakpoint--small) {
+    margin-top: 0.4rem;
+  }
+
+  @media (min-width: $breakpoint--x-large) {
+    margin-top: 0.65em;
+  }
+}
+
 .u-padding-bottom-0 {
   padding-bottom: 0 !important;
 }
