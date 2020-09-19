@@ -1,7 +1,7 @@
 .container {
   max-width: 1800px;
   margin: 0 auto;
-  padding: var(--spacing--x-large) var(--spacing--gap);
+  padding: var(--spacing--x-large);
 
   @media (min-width: $breakpoint--x-small) {
     grid-template-columns: repeat(8, 1fr);

@@ -28,9 +28,8 @@ h5,
 h6 {
   color: $gray--x-dark;
   font-family: "Grenette", var(--font-family);
-  font-size: clamp(1.75rem, 2.5vw, 2.65rem);
+  font-size: clamp(1.75rem, 2.125vw, 2.65rem);
   font-weight: 600;
-  letter-spacing: -0.0625rem;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
 

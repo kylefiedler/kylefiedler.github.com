@@ -2,7 +2,7 @@
   column-gap: var(--spacing--gap);
   max-width: 1800px;
   margin: 0 auto;
-  padding: var(--spacing--x-large) var(--spacing--gap);
+  padding: var(--spacing--x-large);
 
   @media screen and (min-width: $breakpoint--small) {
     columns: 2;
