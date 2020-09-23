@@ -13,10 +13,10 @@
 }
 
 .u-margin-bottom-base {
-  margin-bottom: var(--spacing--large);
+  margin-bottom: var(--spacing--medium);
 
   @media (min-width: $breakpoint--small) {
-    margin-bottom: var(--spacing--x-large);
+    margin-bottom: var(--spacing--large);
   }
 }
 

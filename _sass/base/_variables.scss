@@ -1,9 +1,11 @@
 // Colors
 $gray: #555;
 $gray--light: #ececec;
+$gray--medium: #757575;
 $gray--dark: #3f3f3f;
 $gray--x-dark: #2f2f2f;
 $white: #fff;
+$background-color: #eeeae8;
 
 // Font Colors
 $font-color--base: $gray;
@@ -34,7 +36,7 @@ $breakpoint--x-large: 87.5rem;
   --border-radius: 0.1875rem;
   --spacing: 1.5rem;
   --spacing--small: 0.75rem;
-  --spacing--gap: 1.875rem;
+  --spacing--gap: 2vw;
   --spacing--medium: 2rem;
   --spacing--large: 3rem;
   --spacing--x-large: 4rem;

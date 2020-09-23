@@ -1,11 +1,21 @@
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: var(--spacing--x-large);
+.grid {
+  @media (min-width: $breakpoint--small) {
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: var(--spacing--gap);
+    display: grid;
+  }
 
+  @media (min-width: $breakpoint--medium) {
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: var(--spacing--gap);
+    display: grid;
+  }
+}
+
+.container {
   @media (min-width: $breakpoint--x-small) {
     grid-template-columns: repeat(8, 1fr);
-    column-gap: var(--spacing--gap);
+    column-gap: var(--spacing--x-large);
     display: grid;
   }
 

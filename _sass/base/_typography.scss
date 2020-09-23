@@ -3,6 +3,7 @@ html {
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
+  background-color: $viewport-background-color;
 
   // @media (prefers-color-scheme: dark) {
   //   color: #f4e8cc;
@@ -12,7 +13,11 @@ html {
 }
 
 body {
-  font-size: clamp(1.25rem, 1.3vw, 1.625rem);
+  font-size: clamp(1.125rem, 1.3vw, 1.75rem);
+}
+
+main {
+  padding: 8vw;
 }
 
 ::selection {
@@ -28,19 +33,24 @@ h5,
 h6 {
   color: $gray--x-dark;
   font-family: "Grenette", var(--font-family);
-  font-size: clamp(1.75rem, 2.125vw, 2.65rem);
+  font-size: clamp(1.65rem, 2.125vw, 2.35rem);
   font-weight: 600;
   line-height: var(--line-height--heading);
-  margin: 0 0 var(--spacing--small);
+  margin: 0;
 
   // @media (prefers-color-scheme: dark) {
   //   color: #fff;
   // }
 }
 
+.border-top {
+  border-top: 2px solid $gray--light;
+  padding-top: var(--spacing--small);
+}
+
 p {
   margin: 0 0 var(--spacing--small);
-  max-width: 55rem;
+  max-width: 66ch;
 }
 
 a {

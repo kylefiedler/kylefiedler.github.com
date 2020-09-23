@@ -3,97 +3,66 @@ layout: index
 class: index
 ---
 
-<header class="hero container">
-  <h1 class="span-four--small start-three u-margin-bottom-large">Hi, I&rsquo;m Kyle</h1>
+<header class="hero">
+  <h1>Hi, I&rsquo;m Kyle</h1>
 
-  <section class="span-ten--no-sub u-margin-baseline-align">
+  <section class="u-margin-baseline-align">
     <p>I'm a design generalist, person-of-all-trades type. I use research and Jobs-to-be-Done to understand complex problems; then design, and implement practical solutions. At <a href="https://thoughtbot.com">thoughtbot</a>, I'm working to create an environment for designers to be fulfilled in their work. I’m probably eating a taco.</p>
   </section>
 </header>
 
-<section class="container">
-  <div class="span-ten start-three">
+<section class="grid">
+  <div class="span-five border-top">
     <h2 class="eyebrow">Work</h2>
     <ul>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Real Simple Energy</h3>
-        <p class="span-six u-margin-baseline-align">Rapidly validate business idea and build minimum viable product. <a href="/work/rse">Details&nbsp;→</a></p>
+      <li class="u-margin-bottom-base">
+        <h3>Real Simple Energy</h3>
+        <p>Rapidly validate business idea and build minimum viable product. <a href="/work/rse">Save up</a></p>
+        <p class="detail">Product / Visual / Front End</p>
       </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Designer Skill Self-Evaluation</h3>
-        <p class="span-six u-margin-baseline-align">A tool to help Designers identify which skills they’d like to level-up. <a href="/work/self-evaluation">Details&nbsp;→</a></p>
+      <li class="u-margin-bottom-base">
+        <h3>KOYA</h3>
+        <p>A product to spread kindness to friends and family when they arrive at their favorite location. <a href="/work/koya">Send some kindness</a></p>
+        <p class="detail">Product / Visual</p>
       </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">KOYA</h3>
-        <p class="span-six u-margin-baseline-align">A product to spread kindness to friends and family when they arrive at their favorite location. <a href="/work/koya">Details&nbsp;→</a></p>
+      <li class="u-margin-bottom-base">
+        <h3>Designer Skill Self-Evaluation</h3>
+        <p>A tool to help Designers identify which skills they’d like to level-up. <a href="/work/self-evaluation">Skill up</a></p>
+        <p class="detail">Leadership / Visual</p>
       </li>
     </ul>
   </div>
 
-  <div class="span-four list-horz__container">
-    <h2 class="eyebrow">Past Clients</h2>
-    <ul class="list-horz u-margin-baseline-align">
-      <li>Merck</li>
-      <li>MIT/EdX</li>
-      <li>Fangraphs</li>
-      <li>CodeTriage</li>
-      <li>ScreenSteps</li>
-      <li>Peerfit</li>
-      <li>FetchMD</li>
-    </ul>
-  </div>
-</section>
-
-<section class="container">
-  <div class="span-ten start-five">
-    <nav class="eyebrow shift-two">
-      <h2>Recent Posts</h2>
-      <a href="/blog">View All</a>
-    </nav>
+  <div class="span-two border-top">
+    <h2 class="eyebrow">Recent Posts</h2>
 
     <ol>
-      {% for post in site.posts limit: 4 %}
-        <li class="sub-ten u-margin-bottom-base">
-          <p class="detail span-two u-margin-baseline-align">{{ post.date | date: '%m/%d/%Y' }}</p>
-
-          <div class="span-eight">
-            <h3 class="heading-1">{{ post.title }}</h3>
-            {% if post.external_url %}
-            <a href="{{post.external_url}}">Read →</a>
-            {% else %}
-            <a href="{{post.url}}">Read →</a>
-            {% endif %}
-          </div>
+      {% for post in site.posts limit: 3 %}
+        <li class="u-margin-bottom-base">
+          {% if post.external_url %}
+          <p><a href="{{post.external_url}}">{{ post.title }}</a></p>
+          {% else %}
+          <p><a href="{{post.url}}">{{ post.title }}</a></p>
+          {% endif %}
+          <span class="detail">{{ post.date | date: '%m/%d/%Y' }}</span>
         </li>
       {% endfor %}
     </ol>
-  </div>
-</section>
 
-<section class="values container">
-  <div class="span-ten start-three">
-    <h2 class="eyebrow">Personal Values</h2>
+    <a href="/blog">View All</a>
+  </div>
+
+  <div class="span-two border-top">
+    <h2 class="eyebrow">
+      Found Elsewhere
+    </h2>
     <ul>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Be sustainable</h3>
-        <p class="span-six u-margin-baseline-align">Maintain energy and patience to build and strengthen relationships. Life is a marathon not a sprint, but make the best use of time that you’ve been gifted. Don't waste or create waste.</p>
-      </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Spread kindness &amp; support others</h3>
-        <p class="span-six u-margin-baseline-align">Give as much as you can to those who have less. Help lift others to give them a chance to rise. Amplify voices that might have otherwise gone unheard.</p>
-      </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Always iterate</h3>
-        <p class="span-six u-margin-baseline-align">Nothing is ever flawless, and nothing is ever done. There is always room to grow and improve in every aspect of life. Do not rely on anyone else to set your direction or hold you accountable.</p>
-      </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Contribute to something bigger</h3>
-        <p class="span-six u-margin-baseline-align">What you decide to work on and who you work on it will define who you are and will define the community around you. Leave everything better than you found it.</p>
-      </li>
-      <li class="sub-ten u-margin-bottom-base">
-        <h3 class="span-four">Simple is imperfect</h3>
-        <p class="span-six u-margin-baseline-align">Add purposefully and remove when possible. Avoid justification of the new and see the value in what you already have. Embrace inconsistencies, mistakes, and flaws.</p>
-      </li>
+      <li><a href="https://tentative.fm">Tentative</a></li>
+      <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads</a></li>
+      <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn</a></li>
+      <li><a href="https://github.com/kylefiedler/">GitHub</a></li>
+      <li><a href="https://dribbble.com/kylefiedler/">Dribbble</a></li>
+      <li><a href="mailto:kyle@kylefiedler.com">Email</a></li>
     </ul>
   </div>
 </section>
