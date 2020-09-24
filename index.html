@@ -40,7 +40,7 @@ class: index
       {% for post in site.posts limit: 3 %}
         <li class="u-margin-bottom-base">
           {% if post.external_url %}
-          <p><a href="{{post.external_url}}">{{ post.title }}</a></p>
+          <p><a href="{{post.external_url}}">{{ post.title }} ↗</a></p>
           {% else %}
           <p><a href="{{post.url}}">{{ post.title }}</a></p>
           {% endif %}
@@ -57,12 +57,12 @@ class: index
       Found Elsewhere
     </h2>
     <ul>
-      <li><a href="https://tentative.fm">Tentative</a></li>
-      <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads</a></li>
-      <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn</a></li>
-      <li><a href="https://github.com/kylefiedler/">GitHub</a></li>
-      <li><a href="https://dribbble.com/kylefiedler/">Dribbble</a></li>
-      <li><a href="mailto:kyle@kylefiedler.com">Email</a></li>
+      <li><a href="https://tentative.fm">Tentative ↗</a></li>
+      <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads ↗</a></li>
+      <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn ↗</a></li>
+      <li><a href="https://github.com/kylefiedler/">GitHub ↗</a></li>
+      <li><a href="https://dribbble.com/kylefiedler/">Dribbble ↗</a></li>
+      <li><a href="mailto:kyle@kylefiedler.com">Email ↗</a></li>
     </ul>
   </div>
 </section>
