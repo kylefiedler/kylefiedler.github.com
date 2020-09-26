@@ -36,7 +36,7 @@ h6 {
   font-size: clamp(1.75rem, 2.125vw, 2.35rem);
   font-weight: 600;
   line-height: var(--line-height--heading);
-  margin: 0;
+  margin: 0 0 var(--spacing--small);
 
   // @media (prefers-color-scheme: dark) {
   //   color: #fff;
