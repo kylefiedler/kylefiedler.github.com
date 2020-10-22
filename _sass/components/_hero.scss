@@ -1,3 +1,8 @@
 .hero {
-  padding: 20vh 0 6rem;
+  padding: 14vh 0 6rem;
+}
+
+.hero__icon {
+  display: block;
+  margin-bottom: var(--spacing--medium);
 }
