@@ -3,49 +3,99 @@ layout: default
 class: blog-index
 ---
 
-<header class="hero container">
-  <nav class="span-four start-three">
-    <a href="/" class="eyebrow">&larr; Back Home</a>
-  </nav>
-
-  <div class="span-ten span-ten--no-sub">
-    <h1>All Posts</h1>
-  </div>
+<header class="hero">
+  <h1 class="title--primary">Writing, thinking, and suggested readings</h1>
 </header>
 
-<ul>
-  {% for post in paginator.posts %}
-    <li class="container">
-      <p class="span-four start-three detail"><a href="{{ post.url }}">{{ post.date | date: '%m/%d/%Y' }}</a></p>
+<div class="grid">
+  <section class="span-five border-top">
+    <h2 class="eyebrow">Posts</h2>
+    <ul>
+      {% for post in paginator.posts %}
+      <li class="u-margin-bottom-large">
+        <section>
+          <h2>{{ post.title }}</h2>
+          <div>
+            {{ post.content }}
+            {% if post.external_url %}
+            <p class="u-margin-bottom-base"><a href="{{post.external_url}}">Go to post&nbsp;↗</a></p>
+            {% endif %}
+          </div>
 
-      <section class="span-ten">
-        <h2>{{ post.title }}</h2>
-        <div>
-          {{ post.content }}
-          {% if post.external_url %}
-          <p><a href="{{post.external_url}}">Go to post →</a></p>
-          {% endif %}
-        </div>
+          <p class="detail post-time">{{ post.date | date: '%m/%d/%Y' }}</p>
 
-        <ul class="detail">
-          {% for tag in post.tags %}
-          <li>#{{ tag }}</li>
-          {% endfor %}
-        </ul>
-      </section>
-    </li>
-  {% endfor %}
-</ul>
+          <!-- <ul class="detail">
+            {% for tag in post.tags %}
+            <li>#{{ tag }}</li>
+            {% endfor %}
+          </ul> -->
+        </section>
+      </li>
+      {% endfor %}
+    </ul>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">
-      &larr; Older
-    </a>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">
-      Newer &rarr;
-    </a>
-  {% endif %}
+    <div class="eyebrow pagination">
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">
+          &larr; Older
+        </a>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">
+          Newer &rarr;
+        </a>
+      {% endif %}
+    </div>
+  </section>
+
+  <div class="span-two border-top">
+    <h2 class="eyebrow">Select Writing</h2>
+    <ul>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/blurred-lines">Blurred Lines&nbsp;↗</a></p>
+        <span class="detail">08/27/2015</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/converting-to-jobs-stories">Converting To Jobs Stories&nbsp;↗</a></p>
+        <span class="detail">01/16/2015</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/test-driven-product-design">Test Driven Product Design&nbsp;↗</a></p>
+        <span class="detail">09/08/2015</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/designing-designer-skill-growth">Designing Designer Skill Growth&nbsp;↗</a></p>
+        <span class="detail">09/06/2019</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/designing-designer-skill-growth">Redesigning How We Hire Designers at thoughtbot&nbsp;↗</a></p>
+        <span class="detail">06/28/2019</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://thoughtbot.com/blog/playbook-updates-new-rapid-product-validation-section-and-designing-section-updates">Playbook updates: New Rapid Product Validation Section and Designing Section Updates&nbsp;↗</a></p>
+        <span class="detail">04/07/2020</span>
+      </li>
+    </ul>
+  </div>
+  <div class="span-two border-top">
+    <h2 class="eyebrow">Select Talks &amp; Podcasts</h2>
+    <ul>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://info.thoughtbot.com/jobs-to-be-done-resources">Practical applications of Jobs-to-be-Done for designing successful digital products&nbsp;↗</a></p>
+        <span class="detail">09/11/2019</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://www.youtube.com/watch?v=VYqsJJ2PTyY&t=16s">Blurred Lines @ Mirror Conf 2016&nbsp;↗</a></p>
+        <span class="detail">10/04/2016</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://www.buzzsprout.com/244152/2250446-juicyjuice-dreamworks-with-kyle-fiedler">But Why? JuicyJuice & DreamWorks with Kyle Fiedler&nbsp;↗</a></p>
+        <span class="detail">12/10/2019</span>
+      </li>
+      <li class="u-margin-bottom-base">
+        <p><a href="https://us.ivoox.com/en/32-kyle-fiedler-audios-mp3_rf_11970663_1.html">HiRes 32 - Kyle Fiedler&nbsp;↗</a></p>
+        <span class="detail">06/21/2016</span>
+      </li>
+    </ul>
+  </div
 </div>

@@ -1,13 +1,13 @@
 .eyebrow {
-  font-family: var(--font-family--mono);
+  font-family: var(--font-family);
   font-weight: normal;
   font-size: clamp(1rem, 1vw, 1.25rem);
   letter-spacing: normal;
-  color: $gray--medium;
+  color: #ca4e25;
   margin-bottom: var(--spacing--x-large);
-  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
+  max-width: 60ch;
 
   h2 {
     color: inherit;

@@ -1,20 +1,21 @@
 // Colors
-$gray: #555;
-$gray--light: #ececec;
-$gray--medium: #757575;
-$gray--dark: #3f3f3f;
-$gray--x-dark: #2f2f2f;
+$gray: #4c3a6e;
+$gray--light: #f0ebe9;
+$gray--medium: #4c77a2;
+$gray--x-dark: darken($gray, 7%);
 $white: #fff;
 $background-color: #eeeae8;
+$purple: #7141ec;
+$blue: #415eec;
 
 // Font Colors
 $font-color--base: $gray;
-$action-color: #444;
+$action-color: $gray;
 $action-color--alt: #333;
 $action-color--contrast: $white;
 
 // Background Colors
-$viewport-background-color: $white;
+$viewport-background-color: #fffefb;
 
 // Breakpoint
 $breakpoint--x-small: 40rem;
@@ -26,8 +27,7 @@ $breakpoint--xx-large: 100rem;
 
 :root {
   // Typography
-  --font-family: "Basier Circle", system-ui, sans-serif;
-  --font-family--mono: "Basier Circle Mono", "Basier Circle", system-ui, sans-serif;
+  --font-family: "Space Mono", "Basier Square Mono", system-ui, sans-serif;
 
   // Line heights
   --line-height: 1.6;

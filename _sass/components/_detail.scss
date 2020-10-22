@@ -1,7 +1,11 @@
 .detail {
-  font-family: var(--font-family--mono);
   font-weight: normal;
   font-size: 1.25rem;
   font-size: clamp(1rem, 1vw, 1.25rem);
-  color: #757575;
+  color: $gray--medium;
+  max-width: 80ch;
+
+  li {
+    display: inline-block;
+  }
 }
