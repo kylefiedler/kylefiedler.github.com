@@ -1,9 +1,10 @@
 .images-list {
   column-gap: var(--spacing--medium);
   background-color: $gray--light;
-  padding: var(--spacing--large);
+  padding: var(--spacing--small);
 
   @media screen and (min-width: $breakpoint--small) {
+    padding: var(--spacing--large);
     columns: 2;
   }
 
