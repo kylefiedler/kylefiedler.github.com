@@ -14,10 +14,26 @@ html {
 
 body {
   font-size: clamp(1.125rem, 1.3vw, 1.35rem);
+
+  &.blog-index,
+  &.about,
+  &.index {
+    background-image: url(/images/scribble.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @media screen and (min-width: 2000px) {
+      background-size: 100% auto;
+    }
+  }
 }
 
 main {
-  padding: 22rem 5vw 8vw;
+  padding: 12rem 5vw 8vw;
+
+  @media screen and (min-width: $breakpoint--medium) {
+    padding: 8vw 10vw;
+  }
 
   @media screen and (min-width: 2000px) {
     padding: 8vw 10vw;
@@ -70,7 +86,11 @@ h6 {
   text-align: right;
   position: fixed;
   right: 5vw;
-  top: var(--spacing--large);
+  top: var(--spacing);
+
+  @media screen and (min-width: $breakpoint--medium) {
+    top: var(--spacing--large);
+  }
 
   @media screen and (min-width: 2000px) {
     right: 10vw;
@@ -81,7 +101,9 @@ h6 {
   }
 
   a {
-    border: none;
+    border-color: transparent;
+    background-color: $viewport-background-color;
+    padding: 4px 6px;
   }
 }
 

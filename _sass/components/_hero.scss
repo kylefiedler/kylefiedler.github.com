@@ -1,3 +1,7 @@
 .hero {
-  padding: 14vh 0 6rem;
+  padding: 0 0 var(--spacing--large);
+
+  @media screen and (min-width: $breakpoint--medium) {
+    padding: 14vh 0 6rem;
+  }
 }
