@@ -1,0 +1,8 @@
+.border-top {
+  border-top: 2px solid $gray--light;
+  padding-top: var(--spacing);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $gray--dark;
+  }
+}

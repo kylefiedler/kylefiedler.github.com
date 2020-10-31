@@ -3,6 +3,10 @@
   background-color: $gray--light;
   padding: var(--spacing--small);
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $gray--dark;
+  }
+
   @media screen and (min-width: $breakpoint--small) {
     padding: var(--spacing--large);
     columns: 2;

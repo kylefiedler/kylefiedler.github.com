@@ -1,0 +1,32 @@
+.my-main-nav {
+  text-align: right;
+  position: fixed;
+  right: 5vw;
+  top: var(--spacing);
+
+  @media screen and (min-width: $breakpoint--medium) {
+    top: var(--spacing--large);
+  }
+
+  @media screen and (min-width: 2000px) {
+    right: 10vw;
+  }
+
+  li {
+    margin-bottom: var(--spacing--small);
+  }
+
+  a {
+    border: none;
+    background-color: $white;
+    padding: 4px 6px;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $gray;
+
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}

@@ -1,9 +1,13 @@
 .detail {
   font-weight: normal;
-  font-size: 1.25rem;
-  font-size: clamp(1rem, 1vw, 1.25rem);
-  color: $gray--medium;
+  color: lighten($gray, 20%);
+  font-style: italic;
   max-width: 80ch;
+
+  @media (prefers-color-scheme: dark) {
+  color: darken($white, 20%);
+}
+
 
   li {
     display: inline-block;

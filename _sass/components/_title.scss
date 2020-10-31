@@ -1,0 +1,10 @@
+.title--primary {
+  font-size: clamp(2rem, 4.25vw, 4.5rem);
+  max-width: 30ch;
+  line-height: 1.125;
+  margin-bottom: var(--spacing--medium);
+
+  @media screen and (min-width: $breakpoint--large) {
+    letter-spacing: -1px;
+  }
+}

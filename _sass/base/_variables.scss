@@ -1,58 +1,32 @@
 // Colors
-$gray: #4c3a6e;
-$gray--light: #f0ebe9;
-$gray--medium: #4c77a2;
-$gray--x-dark: darken($gray, 7%);
-$white: #fff;
-$background-color: #eeeae8;
-$purple: #7141ec;
-$blue: #415eec;
-
-// Font Colors
-$font-color--base: $gray;
-$action-color: $gray;
-$action-color--alt: #333;
-$action-color--contrast: $white;
-
-// Background Colors
-$viewport-background-color: #fffefb;
+$gray: #4c3b6e;
+$white: #fae6db; // Pink
+// $white: #e3f1f4; // Blue
+$gray--light: darken($white, 5%);
+$gray--dark: lighten($gray, 5%);
+$highlight: #06554f;
+$highlight--light: #ef8d52;
 
 // Breakpoint
-$breakpoint--x-small: 40rem;
 $breakpoint--small: 47rem;
 $breakpoint--medium: 68.75rem;
 $breakpoint--large: 75rem;
 $breakpoint--x-large: 87.5rem;
-$breakpoint--xx-large: 100rem;
 
 :root {
   // Typography
-  --font-family: "Space Mono", "Basier Square Mono", system-ui, sans-serif;
+  --font-family: "Space Mono", system-ui, sans-serif;
 
   // Line heights
   --line-height: 1.6;
   --line-height--heading: 1.3;
 
   // Other Sizes
-  --border-radius: 0.1875rem;
   --spacing: 1.5rem;
   --spacing--small: 0.75rem;
-  --spacing--gap: 2vw;
+  --spacing--gap: 3vw;
   --spacing--medium: 2rem;
   --spacing--large: 3rem;
   --spacing--x-large: 4rem;
   --spacing--xx-large: 6rem;
-
-  // Borders
-  --border-width: 0.0625rem;
-  --border: var(--border-width) solid currentColor;
-
-  // Focus
-  --focus-outline-width: 0.1875rem;
-  --focus-outline-offset: 0.125rem;
-  --focus-outline: var(--focus-outline-width) solid #{$action-color};
-
-  // Animations
-  --duration: 150ms;
-  --timing: ease;
 }

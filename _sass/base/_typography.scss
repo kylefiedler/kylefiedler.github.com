@@ -1,15 +1,16 @@
 html {
-  color: $font-color--base;
+  color: $gray;
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
-  background-color: $viewport-background-color;
+  background-color: $white;
 
-  // @media (prefers-color-scheme: dark) {
-  //   color: #f4e8cc;
-  //   -webkit-font-smoothing: antialiased;
-  //   -moz-osx-font-smoothing: antialiased;
-  // }
+  @media (prefers-color-scheme: dark) {
+    color: $white;
+    background-color: $gray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+  }
 }
 
 body {
@@ -18,12 +19,16 @@ body {
   &.blog-index,
   &.about,
   &.index {
-    background-image: url(/images/scribble.png);
+    background-image: url(/images/scribble-teal-deep.png);
     background-repeat: no-repeat;
     background-position: center top;
 
     @media screen and (min-width: 2000px) {
       background-size: 100% auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-image: url(/images/scribble-teal.png);
     }
   }
 }
@@ -32,17 +37,22 @@ main {
   padding: 12rem 5vw 8vw;
 
   @media screen and (min-width: $breakpoint--medium) {
-    padding: 8vw 10vw;
+    padding: 9vw 8vw;
   }
 
   @media screen and (min-width: 2000px) {
-    padding: 8vw 10vw;
+    padding: 9vw 10vw;
   }
 }
 
 ::selection {
-  color: #fff;
-  background-color: $gray--x-dark;
+  color: $white;
+  background-color: $gray;
+
+  @media (prefers-color-scheme: dark) {
+    color: $gray;
+    background-color: $white;
+  }
 }
 
 h1,
@@ -52,59 +62,11 @@ h4,
 h5,
 h6 {
   font-family: "Grenette", var(--font-family);
-  font-size: clamp(1.75rem, 2.125vw, 2.5rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
   font-weight: 600;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
   max-width: 40ch;
-
-  // @media (prefers-color-scheme: dark) {
-  //   color: #fff;
-  // }
-}
-
-.title--primary {
-  font-size: clamp(2rem, 4vw, 4.5rem);
-  max-width: 30ch;
-  line-height: 1.125;
-  letter-spacing: -1px;
-  margin-bottom: var(--spacing--medium);
-}
-
-.border-top {
-  border-top: 2px solid $gray--light;
-  padding-top: var(--spacing);
-}
-
-.pagination {
-  padding: var(--spacing--medium) 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.my-main-nav {
-  text-align: right;
-  position: fixed;
-  right: 5vw;
-  top: var(--spacing);
-
-  @media screen and (min-width: $breakpoint--medium) {
-    top: var(--spacing--large);
-  }
-
-  @media screen and (min-width: 2000px) {
-    right: 10vw;
-  }
-
-  li {
-    margin-bottom: var(--spacing--small);
-  }
-
-  a {
-    border-color: transparent;
-    background-color: $viewport-background-color;
-    padding: 4px 6px;
-  }
 }
 
 p {
@@ -115,18 +77,27 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1.5px solid $action-color;
-  background-image: linear-gradient(120deg, $action-color 0%, $action-color 100%);
+  border-bottom: 1.5px solid $gray;
+  background-image: linear-gradient(120deg, $gray 0%, $gray 100%);
   background-repeat: no-repeat;
-  background-size: 100% 0.0em;
+  background-size: 100% 0em;
   background-position: 0 100%;
   transition: background-size 0.125s ease-in, color 0.125s ease-in;
 
+  @media (prefers-color-scheme: dark) {
+    border-color: $white;
+    background-image: linear-gradient(120deg, $white 0%, $white 100%);
+  }
+
   &:hover {
+    cursor: pointer;
     color: $white;
     background-size: 100% 100%;
-    border: none;
     border-radius: 2px;
+
+    @media (prefers-color-scheme: dark) {
+      color: $gray;
+    }
   }
 
   &:focus {
