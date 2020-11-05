@@ -19,7 +19,7 @@ body {
   &.blog-index,
   &.about,
   &.index {
-    background-image: url(/images/scribble-teal-deep.png);
+    background-image: url(/images/scribble-gray-mid.png);
     background-repeat: no-repeat;
     background-position: center top;
 
@@ -28,7 +28,7 @@ body {
     }
 
     @media (prefers-color-scheme: dark) {
-      background-image: url(/images/scribble-teal.png);
+      background-image: url(/images/scribble-dark-gray.png);
     }
   }
 }
