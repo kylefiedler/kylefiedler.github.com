@@ -18,14 +18,22 @@
 
   a {
     border: none;
-    background-color: $white;
+    color: $white;
+    background-color: $gray;
     padding: 4px 6px;
 
+    &:hover {
+      color: $gray;
+      background-image: linear-gradient(120deg, $white 0%, $white 100%);
+    }
+
     @media (prefers-color-scheme: dark) {
-      background-color: $gray;
+      color: $gray;
+      background-color: $white;
 
       &:hover {
-        color: $gray;
+        color: $white;
+        background-image: linear-gradient(120deg, $gray 0%, $gray 100%);
       }
     }
   }

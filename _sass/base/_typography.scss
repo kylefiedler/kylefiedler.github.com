@@ -15,22 +15,26 @@ html {
 
 body {
   font-size: clamp(1.125rem, 1.3vw, 1.35rem);
-
-  &.blog-index,
-  &.about,
-  &.index {
-    background-image: url(/images/scribble-gray.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-
-    @media screen and (min-width: 2000px) {
-      background-size: 100% auto;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      background-image: url(/images/scribble-dark-gray.png);
-    }
-  }
+  // background-repeat: no-repeat;
+  // background-position: left top;
+  // background-size: 100% auto;
+  //
+  // &.blog-index,
+  // &.about {
+  //   background-image: url(/images/s-3.png);
+  //
+  //   @media (prefers-color-scheme: dark) {
+  //     background-image: url(/images/scribble-teal-deep.png);
+  //   }
+  // }
+  //
+  // &.index {
+  //   background-image: url(/images/s-3-v2.png);
+  //
+  //   @media (prefers-color-scheme: dark) {
+  //     background-image: url(/images/scribble-teal-deep.png);
+  //   }
+  // }
 }
 
 main {
