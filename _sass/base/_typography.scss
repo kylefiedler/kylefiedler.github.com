@@ -15,9 +15,9 @@ html {
 
 body {
   font-size: clamp(1.125rem, 1.3vw, 1.35rem);
-  // background-repeat: no-repeat;
-  // background-position: left top;
-  // background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% auto;
   //
   // &.blog-index,
   // &.about {
@@ -29,7 +29,7 @@ body {
   // }
   //
   // &.index {
-  //   background-image: url(/images/s-3-v2.png);
+  //   background-image: url(/images/scribble.png);
   //
   //   @media (prefers-color-scheme: dark) {
   //     background-image: url(/images/scribble-teal-deep.png);
@@ -38,7 +38,7 @@ body {
 }
 
 main {
-  padding: 12rem 5vw 8vw;
+  padding: 8rem 5vw 8vw;
 
   @media screen and (min-width: $breakpoint--medium) {
     padding: 9vw 8vw;

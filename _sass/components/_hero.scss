@@ -2,6 +2,10 @@
   padding: 0 0 var(--spacing--large);
 
   @media screen and (min-width: $breakpoint--medium) {
-    padding: 6vh 0;
+    padding: 0 0 6vh;
   }
+}
+
+.hero__image {
+  width: clamp(3rem, 10vw, 100%);
 }
