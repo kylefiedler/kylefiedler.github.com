@@ -6,4 +6,9 @@
   @media screen and (min-width: $breakpoint--large) {
     letter-spacing: -1px;
   }
+  
+  img {
+    max-width: 1em;
+    max-height: 1em;
+  }
 }
