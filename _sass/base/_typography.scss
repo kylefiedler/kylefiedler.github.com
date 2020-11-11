@@ -38,10 +38,10 @@ body {
 }
 
 main {
-  padding: 8rem 5vw 8vw;
+  padding: 8rem 5vw 6vw;
 
   @media screen and (min-width: $breakpoint--medium) {
-    padding: 9vw 8vw;
+    padding: 12vw 8vw 6vw;
   }
 
   @media screen and (min-width: 2000px) {
