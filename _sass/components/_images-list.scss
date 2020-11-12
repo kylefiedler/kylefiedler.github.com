@@ -1,14 +1,14 @@
 .images-list {
+  border: 1px solid rgba($gray, 0.6);
   column-gap: var(--spacing--medium);
-  background-color: $gray--light;
-  padding: var(--spacing--small);
+  padding: var(--spacing--small) var(--spacing--small) 0;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $gray--dark;
+    border-color: rgba($white, 0.6);
   }
 
   @media screen and (min-width: $breakpoint--small) {
-    padding: var(--spacing--large);
+    padding: var(--spacing--large) var(--spacing--large) var(--spacing--small);
     columns: 2;
   }
 
