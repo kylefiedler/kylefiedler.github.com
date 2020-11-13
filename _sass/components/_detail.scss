@@ -1,11 +1,11 @@
 .detail {
   font-weight: normal;
-  color: lighten($gray, 20%);
+  color: rgba($gray, 0.7);
   font-style: italic;
   max-width: 80ch;
 
   @media (prefers-color-scheme: dark) {
-  color: darken($white, 20%);
+  color: rgba($white, 0.7);
 }
 
 

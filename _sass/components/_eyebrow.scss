@@ -3,16 +3,10 @@
   font-weight: normal;
   font-size: clamp(1rem, 1vw, 1.25rem);
   letter-spacing: normal;
-  // color: $highlight;
   margin-bottom: var(--spacing--x-large);
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   max-width: 60ch;
-
-  // @media (prefers-color-scheme: dark) {
-  //   color: $highlight--light;
-  // }
-
 
   h2 {
     color: inherit;
