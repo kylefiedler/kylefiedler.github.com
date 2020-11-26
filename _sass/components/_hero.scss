@@ -5,3 +5,9 @@
     padding: 0 0 6vh;
   }
 }
+
+.hero__shapes {
+  margin-bottom: var(--spacing--x-large);
+  width: clamp(165px, 15vw, 250px);
+  height: clamp(165px, 15vw, 285px);
+}
