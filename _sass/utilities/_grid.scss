@@ -1,29 +1,63 @@
 .grid {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  column-gap: var(--spacing--gap);
+  display: grid;
+
   @media (min-width: $breakpoint--small) {
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: var(--spacing--gap);
-    display: grid;
+    grid-template-columns: repeat(10, 1fr);
   }
 
-  @media (min-width: $breakpoint--medium) {
-    grid-template-columns: repeat(9, 1fr);
-    column-gap: var(--spacing--gap);
-    display: grid;
+  @media (min-width: $breakpoint--large) {
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
 .span-two {
-  grid-column-end: span 2;
+  grid-column-end: span 6;
+
+  @media (min-width: $breakpoint--small) {
+    grid-column-end: span 4;
+  }
+
+  @media (min-width: $breakpoint--large) {
+    grid-column-end: span 2;
+  }
 }
 
 .span-three {
-  grid-column-end: span 3;
+  grid-column-end: span 6;
+
+  @media (min-width: $breakpoint--small) {
+    grid-column-end: span 4;
+  }
+
+  @media (min-width: $breakpoint--large) {
+    grid-column-end: span 3;
+  }
 }
 
 .span-four {
-  grid-column-end: span 4;
+  grid-column-end: span 6;
+
+  @media (min-width: $breakpoint--small) {
+    grid-column-end: span 4;
+  }
 }
 
-.span-five {
-  grid-column-end: span 5;
+.span-six {
+  grid-column-end: span 6;
+  grid-row-end: span 3;
+}
+
+.span-six--half {
+  grid-column-end: span 6;
+
+  @media (min-width: $breakpoint--small) {
+    grid-column-end: span 5;
+  }
+
+  @media (min-width: $breakpoint--large) {
+    grid-column-end: span 6;
+  }
 }

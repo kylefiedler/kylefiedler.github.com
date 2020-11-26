@@ -4,11 +4,11 @@ class: blog-index
 ---
 
 <header class="hero">
-  <h1 class="title--primary">Occasionally, I&rsquo;ll wrangle my thoughts into something meaningful. It&rsquo;s more likely that I&rsquo;ll link to people who&rsquo;ve done a better job than I could.</h1>
+  <h1 class="title--primary">Occasionally, I&rsquo;ll wrangle my thoughts into something meaningful but it&rsquo;s more likely that I&rsquo;ll link to people who&rsquo;ve done a better job.</h1>
 </header>
 
 <div class="grid">
-  <section class="span-five border-top">
+  <section class="span-six border-top">
     <h2 class="eyebrow">Posts</h2>
     <ul>
       {% for post in paginator.posts %}
@@ -48,8 +48,8 @@ class: blog-index
     </div>
   </section>
 
-  <div class="span-two border-top">
-    <h2 class="eyebrow">Select Writing</h2>
+  <div class="span-three border-top">
+    <h2 class="eyebrow">Popular Writing</h2>
     <ul>
       <li class="u-margin-bottom-base">
         <p><a href="https://thoughtbot.com/blog/blurred-lines">Blurred Lines&nbsp;↗</a></p>
@@ -77,8 +77,9 @@ class: blog-index
       </li>
     </ul>
   </div>
-  <div class="span-two border-top">
-    <h2 class="eyebrow">Select Talks &amp; Podcasts</h2>
+
+  <div class="span-three border-top">
+    <h2 class="eyebrow">Talks &amp; Podcasts</h2>
     <ul>
       <li class="u-margin-bottom-base">
         <p><a href="https://info.thoughtbot.com/jobs-to-be-done-resources">Practical applications of Jobs-to-be-Done for designing successful digital products&nbsp;↗</a></p>
@@ -97,5 +98,5 @@ class: blog-index
         <span class="detail">06/21/2016</span>
       </li>
     </ul>
-  </div
+  </div>
 </div>

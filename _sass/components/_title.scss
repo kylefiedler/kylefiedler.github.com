@@ -1,12 +1,7 @@
 .title--primary {
-  font-size: clamp(2rem, 4.25vw, 4.5rem);
-  max-width: 30ch;
+  font-size: clamp(1.5rem, 4.25vw, 2rem);
   margin-bottom: var(--spacing--medium);
 
-  @media screen and (min-width: $breakpoint--large) {
-    letter-spacing: -1px;
-  }
-  
   img {
     max-width: 1em;
     max-height: 1em;

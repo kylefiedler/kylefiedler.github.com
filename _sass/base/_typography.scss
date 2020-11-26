@@ -14,27 +14,10 @@ html {
 }
 
 body {
-  font-size: clamp(1.125rem, 1.3vw, 1.35rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
-  //
-  // &.blog-index,
-  // &.about {
-  //   background-image: url(/images/s-3.png);
-  //
-  //   @media (prefers-color-scheme: dark) {
-  //     background-image: url(/images/scribble-teal-deep.png);
-  //   }
-  // }
-  //
-  // &.index {
-  //   background-image: url(/images/scribble.png);
-  //
-  //   @media (prefers-color-scheme: dark) {
-  //     background-image: url(/images/scribble-teal-deep.png);
-  //   }
-  // }
 }
 
 main {
@@ -65,12 +48,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Grenette", var(--font-family);
-  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
-  font-weight: 600;
+  font-family: "Space Grotesk", var(--font-family);
+  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+  font-weight: 500;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  max-width: 40ch;
+  max-width: 55ch;
 }
 
 p {

@@ -1,0 +1,9 @@
+.dashed-list {
+  li {
+    &::before {
+      content: "—";
+      display: inline-block;
+      margin-right: var(--spacing--small);
+    }
+  }
+}
