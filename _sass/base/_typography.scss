@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -90,4 +90,8 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: var(--spacing) 0;
+}
+
+time {
+  display: block;
 }
