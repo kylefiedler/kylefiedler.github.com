@@ -1,6 +1,8 @@
 // Colors
-$gray: #5a4f70;
-$white: #fffcf5;
+$gray: #292929;
+$white: #fffffe;
+$highlight: #FFEAB7;
+$highlight-dark: #551f93;
 
 // Breakpoint
 $breakpoint--small: 50rem;
@@ -9,7 +11,9 @@ $breakpoint--large: 75rem;
 
 :root {
   // Typography
-  --font-family: "iA Writer Duospace", system-ui, sans-serif;
+  --font-family: "iA Writer Quattro V", system-ui, sans-serif;
+  --font-family--title: "Grenette", "Georgia", serif;
+  --font-family--sub-title: "Basier Circle", "iA Writer Duospace", system-ui, sans-serif;
 
   // Line heights
   --line-height: 1.6;

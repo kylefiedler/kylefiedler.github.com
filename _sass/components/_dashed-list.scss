@@ -1,9 +1,18 @@
 .dashed-list {
   li {
+    position: relative;
+
     &::before {
       content: "—";
       display: inline-block;
       margin-right: var(--spacing--small);
+      position: absolute;
+      left: -2rem;
+      color: rgba($gray, 0.4);
+
+      @media (prefers-color-scheme: dark) {
+        color: rgba($white, 0.4);
+      }
     }
   }
 }

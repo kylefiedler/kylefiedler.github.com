@@ -9,14 +9,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/application.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/site.css">
   </head>
 
   <body {% if page.class %}class="{{ page.class }}"{% endif %}>
-    <nav class="my-main-nav eyebrow">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Posts</a></li>
-      </ul>
-    </nav>

@@ -1,13 +1,11 @@
 .detail {
   font-weight: normal;
-  color: rgba($gray, 0.7);
-  font-style: italic;
+  color: rgba($gray, 0.55);
   max-width: 80ch;
 
   @media (prefers-color-scheme: dark) {
-  color: rgba($white, 0.7);
-}
-
+    color: rgba($white, 0.55);
+  }
 
   li {
     display: inline-block;

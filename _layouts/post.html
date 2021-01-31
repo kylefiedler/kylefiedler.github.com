@@ -1,36 +1,41 @@
 {% include header.html %}
 
-<main>
-  <header>
-    <div>
-      <time pubdate="{{ page.date }}" class="eyebrow">{{ page.date | date: '%B %d, %Y' }}</time>
-      <h1>
-        {{ page.title }}
-      </h1>
-    </div>
-  </header>
+<main class="grid">
+  <nav>
+    <a href="/" class="squiggle-link"><img alt="" src="/images/squiggles/homepage-squiggle-dark.png"/></a>
+  </nav>
 
-  <section class="u-margin-bottom-large">
-    {{ content }}
+  <div class="u-margin-top-large">
+    <h1 class="title--primary">
+      {{ page.title }}
+    </h1>
 
-    <ul class="detail">
-      {% for tag in page.tags %}
-      <li>#{{ tag }}</li>
-      {% endfor %}
-    </ul>
-  </section>
+    <section class="u-margin-bottom-large">
+      {{ content }}
 
-   {% if page.next %}
-      {% assign next = page.next %}
-    <section class="border-top">
-      <div>
-        <h6 class="eyebrow">Next Post</h6>
-        <p>
-          <a class="equalize" href="{{site.baseurl}}{{next.url}}" >{{next.title}}</a>
-        </p>
-      </div>
-    {% endif %}
-  </section>
+      <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%B %d, %Y' }}</time>
+<!--
+      <ul class="detail">
+        {% for tag in page.tags %}
+        <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul> -->
+    </section>
+
+    <a href="/blog">View All Posts</a>
+
+     <!-- {% if page.next %}
+        {% assign next = page.next %}
+      <section>
+        <div>
+          <h6 class="title--secondary">Other Posts</h6>
+          <p class="title--tertiary">
+            <a class="equalize" href="{{site.baseurl}}{{next.url}}" >{{next.title}}</a>
+          </p>
+        </div>
+      {% endif %}
+    </section> -->
+  </div>
 </main>
 
 {% include footer.html %}

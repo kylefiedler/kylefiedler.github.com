@@ -1,11 +1,11 @@
 title: Kyle Fiedler
-description: Kyle enjoys a well-made peanut butter and jelly sandwich, cut in two triangles
+description: I’m probably eating a taco
 
 plugins:
   - jekyll-paginate
   - jekyll-feed
   - jemoji
-  - jekyll-sitemap 
+  - jekyll-sitemap
 paginate: 5
 paginate_path: "/blog/:num/"
 

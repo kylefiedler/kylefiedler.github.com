@@ -2,6 +2,10 @@
   padding-bottom: 0 !important;
 }
 
+.u-margin-top-medium {
+  margin-top: var(--spacing--medium);
+}
+
 .u-margin-bottom-medium {
   margin-bottom: var(--spacing--medium);
 }
@@ -13,6 +17,7 @@
     margin-bottom: var(--spacing--large);
   }
 }
+
 .u-margin-top-large {
   margin-top: var(--spacing--x-large);
 

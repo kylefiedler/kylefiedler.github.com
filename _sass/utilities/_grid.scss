@@ -1,63 +1,17 @@
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
 .grid {
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto;
-  column-gap: var(--spacing--gap);
-  display: grid;
-
-  @media (min-width: $breakpoint--small) {
-    grid-template-columns: repeat(10, 1fr);
-  }
-
-  @media (min-width: $breakpoint--large) {
-    grid-template-columns: repeat(12, 1fr);
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: var(--spacing--gap);
+    display: grid;
   }
 }
 
-.span-two {
-  grid-column-end: span 6;
-
-  @media (min-width: $breakpoint--small) {
-    grid-column-end: span 4;
-  }
-
-  @media (min-width: $breakpoint--large) {
-    grid-column-end: span 2;
-  }
-}
-
-.span-three {
-  grid-column-end: span 6;
-
-  @media (min-width: $breakpoint--small) {
-    grid-column-end: span 4;
-  }
-
-  @media (min-width: $breakpoint--large) {
-    grid-column-end: span 3;
-  }
-}
-
-.span-four {
-  grid-column-end: span 6;
-
-  @media (min-width: $breakpoint--small) {
-    grid-column-end: span 4;
-  }
-}
-
-.span-six {
-  grid-column-end: span 6;
-  grid-row-end: span 3;
-}
-
-.span-six--half {
-  grid-column-end: span 6;
-
-  @media (min-width: $breakpoint--small) {
-    grid-column-end: span 5;
-  }
-
-  @media (min-width: $breakpoint--large) {
-    grid-column-end: span 6;
-  }
+.grid__end {
+  grid-column-start: 2;
 }

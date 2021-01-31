@@ -1,12 +1,12 @@
 html {
-  color: $gray;
+  color: lighten($gray, 25%);
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
   background-color: $white;
 
   @media (prefers-color-scheme: dark) {
-    color: $white;
+    color: rgba($white, 0.9);
     background-color: $gray;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
@@ -14,23 +14,25 @@ html {
 }
 
 body {
-  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
 }
 
 main {
-  padding: 3rem 6vw 8rem;
+  padding: 8rem 6vw 8rem;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 
 ::selection {
   color: $white;
-  background-color: $gray;
+  background-color: $highlight-dark;
 
   @media (prefers-color-scheme: dark) {
     color: $gray;
-    background-color: $white;
+    background-color: $highlight;
   }
 }
 
@@ -40,12 +42,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Space Grotesk", var(--font-family);
-  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
-  font-weight: 500;
+  color: $gray;
+  font-size: clamp(1.25rem, 2.25vw, 1.625rem);
+  font-weight: 600;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
   max-width: 55ch;
+
+  @media (prefers-color-scheme: dark) {
+    color: $white;
+  }
 }
 
 p {
@@ -53,30 +59,36 @@ p {
   max-width: 66ch;
 }
 
+// a {
+//   color: inherit;
+//   text-decoration: none;
+//   background-image: linear-gradient(120deg, $highlight 0%, $highlight 100%);
+//   background-repeat: no-repeat;
+//   background-size: 100% 0.4em;
+//   background-position: 0 100%;
+//   transition: background-size 0.25s ease-in;
+//
+//   @media (prefers-color-scheme: dark) {
+//     background-image: linear-gradient(120deg, $highlight-dark 0%, $highlight-dark 100%);
+//   }
+//
+//   &:hover {
+//     cursor: pointer;
+//     background-size: 100% 100%;
+//     border-radius: 2px;
+//   }
+//
+//   &:focus {
+//     outline: var(--focus-outline);
+//   }
+// }
+
 a {
   color: inherit;
-  text-decoration: none;
-  border-bottom: 1.5px solid $gray;
-  background-image: linear-gradient(120deg, $gray 0%, $gray 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0em;
-  background-position: 0 100%;
-  transition: background-size 0.125s ease-in, color 0.125s ease-in;
-
-  @media (prefers-color-scheme: dark) {
-    border-color: $white;
-    background-image: linear-gradient(120deg, $white 0%, $white 100%);
-  }
+  text-decoration: underline;
 
   &:hover {
-    cursor: pointer;
-    color: $white;
-    background-size: 100% 100%;
-    border-radius: 2px;
-
-    @media (prefers-color-scheme: dark) {
-      color: $gray;
-    }
+    text-decoration: none;
   }
 
   &:focus {
@@ -94,4 +106,12 @@ hr {
 
 time {
   display: block;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.visited {
+  text-decoration: line-through;
 }

@@ -1,94 +1,78 @@
 ---
 layout: index
-class: index
 ---
+<section class="u-margin-bottom-large">
+  <span class="squiggle-link home"></span>
+</section>
 
-<header class="hero">
-  {% include home.svg %}
-  <h1 class="title--primary">Hi, I&rsquo;m Kyle, a product design generalist, person-of-all-trades type. I use research and Jobs-to-be-Done to understand complex problems; then design, and implement practical solutions.</h1>
-</header>
+<div class="grid">
+  <section>
+    <header>
+      <h1 class="title--primary">Hi! I&rsquo;m Kyle, a product design generalist, person-of-all-trades type. I use research and Jobs-to-be-Done to understand complex problems; then design, and implement practical solutions.</h1>
+    </header>
+    <p class="u-margin-bottom-base">I&rsquo;ve been designing web or mobile products in some form or another for over fifteen years. For about seven of those years, I&rsquo;ve been managing and leading the teams I'm on. At home, I&rsquo;m partner to an accomplished photographer and father to three kids and two dogs (we have a wild house).</p>
 
-<section class="grid">
-  <div class="span-six border-top">
-    <h2 class="eyebrow">Work</h2>
-    <ul>
-      <li class="u-margin-bottom-base shape-item">
-        <div class="shape-item__shape">
-          {% include r1.svg %}
-        </div>
-
-        <div class="shape-item__content">
-          <h3><a href="/work/rse">Real Simple Energy</a></h3>
-          <p>Rapidly validate business idea and build minimum viable product.</p>
-          <p class="detail">Product / Design Sprint / Research / Front-end</p>
-        </div>
-      </li>
-      <li class="u-margin-bottom-base shape-item">
-        <div class="shape-item__shape">
-          {% include o1.svg %}
-        </div>
-
-        <div class="shape-item__content">
-          <h3><a href="/work/thoughtbot-website">thoughtbot Website</a></h3>
-          <p>Design a system for content and integrate a CMS for thoughtbot's website.</p>
-          <p class="detail">Marketing / Design System /  Research / Content / Front-end</p>
-        </div>
-      </li>
-      <li class="u-margin-bottom-base shape-item">
-        <div class="shape-item__shape">
-          {% include t1.svg %}
-        </div>
-
-        <div class="shape-item__content">
-          <h3><a href="/work/krw">Keep Ruby Weird</a></h3>
-          <p>Branding and front-end work for a local Ruby conference.</p>
-          <p class="detail">Brand &amp; Marketing / Content / Front-end</p>
-        </div>
-      </li>
-      <li class="u-margin-bottom-base shape-item">
-        <div class="shape-item__shape">
-          {% include r2.svg %}
-        </div>
-
-        <div class="shape-item__content">
-          <h3><a href="/work/ottoneu">Ottoneu</a></h3>
-          <p>Re-brand and product iteration to spur growth and retention.</p>
-          <p class="detail">Brand &amp; Marketing / Product / Research / Content / Front-end</p>
-        </div>
-      </li>
+    <ul class="dashed-list u-margin-bottom-base">
+      <li><p>I&rsquo;m motivated and fulfilled working projects that align with <a href="/values">my values.</a></p></li>
+      <li><p>I spend a lot of time reading both fiction and non-fiction.</p></li>
+      <li><p>Our family calls Austin home, but I grew up just north of New York City and have made my way through Boston and Philadelphia.</p></li>
+      <li><p>Running is an escape for me and a way to de-stress; during quarantine, I’ve picked up trail running. There is something about getting away from everything and running uphill on rocks that just does it.</p></li>
+      <li><p>I’m a big baseball fan, especially the Yankees. I love listening to baseball games on the radio outside on a summer night. Before COVID, I loved going to <a href="/lists/baseball-stadiums">visit each of the baseball stadiums</a>.</p></li>
+      <li><p>I’m probably eating a taco.</p></li>
     </ul>
-  </div>
 
-  <div class="span-four border-top u-margin-bottom-large">
-    <h2 class="eyebrow">Recent Posts</h2>
+    <ul>
+      <li><a href="https://tentative.fm">Tentative</a> ↗</li>
+      <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads</a> ↗</li>
+      <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn</a> ↗</li>
+      <li><a href="https://github.com/kylefiedler/">GitHub</a> ↗</li>
+      <li><a href="https://dribbble.com/kylefiedler/">Dribbble</a> ↗</li>
+      <li><a href="mailto:kyle@kylefiedler.com">Email</a> ↗</li>
+    </ul>
+  </section>
 
-    <ol>
-      {% for post in site.posts limit: 3 %}
-        <li class="u-margin-bottom-base">
+  <div class="u-margin-top-large">
+    <section class="u-margin-top-large">
+      <h2 class="title--secondary">Past Projects</h2>
+      <ul>
+        <li class="u-margin-bottom-medium">
+          <h3 class="title--tertiary"><a href="/work/rse">Real Simple Energy</a></h3>
+          <p>Rapidly validate business idea and build minimum viable product.</p>
+        </li>
+
+        <li class="u-margin-bottom-medium">
+          <h3 class="title--tertiary"><a href="/work/thoughtbot-website">thoughtbot Website</a></h3>
+          <p>Design a system for content and integrate a CMS for thoughtbot's website.</p>
+        </li>
+
+        <li class="u-margin-bottom-medium">
+          <h3 class="title--tertiary"><a href="/work/krw">Keep Ruby Weird</a></h3>
+          <p>Branding and front-end work for a local Ruby conference.</p>
+        </li>
+
+        <li class="u-margin-bottom-medium">
+          <h3 class="title--tertiary"><a href="/work/ottoneu">Ottoneu</a></h3>
+          <p>Re-brand and product iteration to spur growth and retention.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="u-margin-top-large">
+      <h2 class="title--secondary">Recent Posts</h2>
+      <ol>
+        {% for post in site.posts limit: 4 %}
+        <li class="u-margin-bottom-medium">
           {% if post.external_url %}
-          <p><a href="{{post.external_url}}">{{ post.title }} ↗</a></p>
+          <h3 class="title--tertiary"><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
           {% else %}
-          <p><a href="{{post.url}}">{{ post.title }}</a></p>
+          <h3 class="title--tertiary"><a href="{{post.url}}">{{ post.title }}</a></h3>
           {% endif %}
           <span class="detail">{{ post.date | date: '%m/%d/%Y' }}</span>
         </li>
-      {% endfor %}
-    </ol>
+        {% endfor %}
+      </ol>
 
-    <a href="/blog">View All</a>
+      <a href="/blog">View All</a>
+    </section>
   </div>
-
-  <div class="span-two border-top">
-    <h2 class="eyebrow">
-      Found Elsewhere
-    </h2>
-    <ul class="dashed-list">
-      <li><a href="https://tentative.fm">Tentative ↗</a></li>
-      <li><a href="https://www.goodreads.com/user/show/16097193-kyle-fiedler">Goodreads ↗</a></li>
-      <li><a href="https://www.linkedin.com/in/kyle-fiedler-8a75014/">LinkedIn ↗</a></li>
-      <li><a href="https://github.com/kylefiedler/">GitHub ↗</a></li>
-      <li><a href="https://dribbble.com/kylefiedler/">Dribbble ↗</a></li>
-      <li><a href="mailto:kyle@kylefiedler.com">Email ↗</a></li>
-    </ul>
-  </div>
-</section>
+</div>
