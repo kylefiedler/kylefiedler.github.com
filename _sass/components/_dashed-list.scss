@@ -1,5 +1,5 @@
 .dashed-list {
-  h3 {
+  h2, h3 {
     margin-bottom: 0;
   }
 
@@ -11,7 +11,7 @@
       display: inline-block;
       margin-right: var(--spacing--small);
       position: absolute;
-      left: -2rem;
+      left: -2.2rem;
       color: rgba($gray, 0.4);
 
       @media (prefers-color-scheme: dark) {

@@ -2,8 +2,11 @@
   font-family: var(--font-family--title);
   font-size: clamp(1.5rem, 3.5vw, 2.875rem);
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -1px;
+  line-height: var(--line-height--heading);
+
+  @media screen and (min-width: $breakpoint--medium) {
+    letter-spacing: -1px;
+  }
 }
 
 .title--secondary {

@@ -1,3 +1,8 @@
+.squiggs-container {
+  width: clamp(100px, 10vw, 150px);
+  height: auto;
+}
+
 .squiggs {
   stroke: $gray;
 

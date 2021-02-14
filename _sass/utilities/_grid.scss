@@ -20,7 +20,7 @@
 }
 
 .split {
-  @media (min-width: 1100px) {
+  @media (min-width: $breakpoint--small) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: var(--spacing--gap);

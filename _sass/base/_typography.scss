@@ -26,9 +26,14 @@ body {
 }
 
 main {
-  padding: 8rem 6vw var(--spacing--large);
+  padding: 8rem 8vw var(--spacing--large);
   max-width: 1400px;
   margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint--small) {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 }
 
 footer {
@@ -54,7 +59,6 @@ h6 {
   color: $gray;
   font-size: inherit;
   font-weight: 400;
-  line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
   max-width: 55ch;
 
