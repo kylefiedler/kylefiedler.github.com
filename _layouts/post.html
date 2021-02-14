@@ -1,34 +1,25 @@
 {% include header.html %}
 
 <main>
-  <nav>
-    <a href="/" class="squiggle-link">Back Home</a>
-  </nav>
+  <a href="/">
+    {% include squiggs.svg %}
+  </a>
 
-  <h1 class="title--primary u-margin-bottom-large">
+  <h1 class="title--primary u-margin-bottom-medium u-margin-top-large">
     {{ page.title }}
   </h1>
 
-  <section class="grid">
-    <div>
-      <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%B %d, %Y' }}</time>
-
-      <ul class="detail">
-        {% for tag in page.tags %}
-        <li>#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div>
+  <section>
+    <div class="u-margin-bottom-medium">
       {{ content }}
-
     </div>
+
+    <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%B %d, %Y' }}</time>
   </section>
 
-  <section class="u-margin-top-large grid border-top">
-    <h6 class="title--secondary">Keep Reading</h6>
-    <ul>
+  <section class="u-margin-top-large">
+    <h6 class="title--tertiary u-margin-bottom-medium">Keep Reading</h6>
+    <ul class="dashed-list">
       {% for post in site.related_posts limit: 4 %}
       <li class="u-margin-bottom-medium">
   {% if post.external_url %}
@@ -36,7 +27,7 @@
   {% else %}
   <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
   {% endif %}
-  <span class="detail">{{ post.date | date: '%m/%d/%Y' }}</span>
+  <span class="detail">{{ post.date | date: '%B %d, %Y' }}</span>
 </li>
 
       {% endfor %}

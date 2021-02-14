@@ -5,7 +5,7 @@ class: blog-index
 
 <section>
   <h2 class="title--primary u-margin-bottom-large">All Posts</h2>
-  <ul class="border-top">
+  <ul>
     {% for post in site.posts %}
     <li class="u-margin-bottom-medium grid">
       <span class="detail">{{ post.date | date: '%m/%d/%Y' }}</span>

@@ -7,18 +7,18 @@ html {
 
   @media (prefers-color-scheme: dark) {
     color: $white;
-    background-color: $gray;
+    background-color: darken($gray, 8%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
   }
 }
 
 body {
-  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
-  color: rgba($gray, 0.75);
+  color: rgba($gray, 0.85);
 
   @media (prefers-color-scheme: dark) {
     color: rgba($white, 0.75);
@@ -42,7 +42,6 @@ footer {
 
   @media (prefers-color-scheme: dark) {
     color: $gray;
-    background-color: $highlight;
   }
 }
 
@@ -94,11 +93,20 @@ p {
 // }
 
 a {
-  color: inherit;
-  text-decoration: underline;
+  color: $blue;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: $dark-link;
+  }
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    color: darken($blue, 10%);
+
+  @media (prefers-color-scheme: dark) {
+    color: lighten($dark-link, 10%);
+  }
   }
 
   &:focus {
