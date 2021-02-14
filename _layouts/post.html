@@ -1,41 +1,47 @@
 {% include header.html %}
 
-<main class="grid">
+<main>
   <nav>
-    <a href="/" class="squiggle-link"><img alt="" src="/images/squiggles/homepage-squiggle-dark.png"/></a>
+    <a href="/" class="squiggle-link">Back Home</a>
   </nav>
 
-  <div class="u-margin-top-large">
-    <h1 class="title--primary">
-      {{ page.title }}
-    </h1>
+  <h1 class="title--primary u-margin-bottom-large">
+    {{ page.title }}
+  </h1>
 
-    <section class="u-margin-bottom-large">
-      {{ content }}
-
+  <section class="grid">
+    <div>
       <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%B %d, %Y' }}</time>
-<!--
+
       <ul class="detail">
         {% for tag in page.tags %}
         <li>#{{ tag }}</li>
         {% endfor %}
-      </ul> -->
-    </section>
+      </ul>
+    </div>
 
-    <a href="/blog">View All Posts</a>
+    <div>
+      {{ content }}
 
-     <!-- {% if page.next %}
-        {% assign next = page.next %}
-      <section>
-        <div>
-          <h6 class="title--secondary">Other Posts</h6>
-          <p class="title--tertiary">
-            <a class="equalize" href="{{site.baseurl}}{{next.url}}" >{{next.title}}</a>
-          </p>
-        </div>
-      {% endif %}
-    </section> -->
-  </div>
+    </div>
+  </section>
+
+  <section class="u-margin-top-large grid border-top">
+    <h6 class="title--secondary">Keep Reading</h6>
+    <ul>
+      {% for post in site.related_posts limit: 4 %}
+      <li class="u-margin-bottom-medium">
+  {% if post.external_url %}
+  <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
+  {% else %}
+  <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+  {% endif %}
+  <span class="detail">{{ post.date | date: '%m/%d/%Y' }}</span>
+</li>
+
+      {% endfor %}
+    </ul>
+  </section>
 </main>
 
 {% include footer.html %}

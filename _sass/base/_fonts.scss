@@ -1,7 +1,7 @@
  @font-face {
-   font-family: 'Space Grotesk';
-   src: url('/fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-     url('/fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+   font-family: 'Grenette';
+   src: url('/fonts/grenette-bold.woff2') format('woff2'),
+     url('/fonts/grenette-bold.woff') format('woff');
    font-weight: 500;
    font-style: normal;
  }
@@ -11,6 +11,14 @@
    src: url('/fonts/iAWriterDuospace-Regular.woff2') format('woff2'),
      url('/fonts/iAWriterDuospace-Regular.woff') format('woff');
    font-weight: 400;
+   font-style: normal;
+ }
+
+ @font-face {
+   font-family: 'iA Writer Duospace';
+   src: url('/fonts/iAWriterDuospace-Bold.woff2') format('woff2'),
+     url('/fonts/iAWriterDuospace-Bold.woff') format('woff');
+   font-weight: 600;
    font-style: normal;
  }
 

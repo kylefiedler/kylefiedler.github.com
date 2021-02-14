@@ -5,11 +5,18 @@
 
 .grid {
   @media (min-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     column-gap: var(--spacing--gap);
     display: grid;
   }
+}
+
+.split {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: var(--spacing--gap);
+  display: grid;
 }
 
 .grid__end {

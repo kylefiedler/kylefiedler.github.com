@@ -1,29 +1,26 @@
 .title--primary {
   font-family: var(--font-family--title);
-  font-size: clamp(1.5rem, 2.25vw, 2.25rem);
-  margin-bottom: var(--spacing--medium);
+  font-size: clamp(1.75rem, 3.5vw, 2.875rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
 }
 
 .title--secondary {
-  font-family: var(--font-family--title);
-  font-size: clamp(1.5rem, 2vw, 2rem);
   margin-bottom: var(--spacing--medium);
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.3vw, 1.125rem);
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: rgba($gray, 0.5);
 
-  &::before {
-    display: block;
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    margin-bottom: var(--spacing--medium);
-    background-color: lighten($gray, 78%);
+  @media (prefers-color-scheme: dark) {
+    color: rgba($white, 0.5);
   }
 }
 
 .title--tertiary {
-  font-family: var(--font-family--sub-title);
-  font-weight: 500;
-  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  font-weight: 600;
+  font-size: inherit;
   max-width: 80ch;
-  color: lighten($gray, 10%);
-  // font-size: inherit;
 }

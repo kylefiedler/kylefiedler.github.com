@@ -1,14 +1,15 @@
 .squiggle-link {
-  background-image: url(/images/squiggles/squig-3.png);
+  background-image: url(/images/squiggles/test-2.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 250px;
-  height: 250px;
+  width: 155px;
+  height: 155px;
   display: block;
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
+  margin-bottom: var(--spacing--x-large);
 }
 
 a.squiggle-link:hover {

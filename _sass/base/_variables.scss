@@ -1,8 +1,10 @@
 // Colors
-$gray: #292929;
-$white: #fffffe;
-$highlight: #FFEAB7;
-$highlight-dark: #551f93;
+// $gray: #3d462b;
+// $white: #fffcf6;
+$gray: #000;
+$white: #fff;
+$highlight: #ffff31;
+$highlight-dark: #ffd953;
 
 // Breakpoint
 $breakpoint--small: 50rem;
@@ -11,8 +13,9 @@ $breakpoint--large: 75rem;
 
 :root {
   // Typography
-  --font-family: "iA Writer Quattro V", system-ui, sans-serif;
+  --font-family: "iA Writer Duospace", "iA Writer Duo V", system-ui, sans-serif;
   --font-family--title: "Grenette", "Georgia", serif;
+  // --font-family--title: "Basier Square", "iA Writer Duospace", system-ui, sans-serif;
   --font-family--sub-title: "Basier Circle", "iA Writer Duospace", system-ui, sans-serif;
 
   // Line heights

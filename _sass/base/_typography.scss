@@ -1,12 +1,12 @@
 html {
-  color: lighten($gray, 25%);
+  color: $gray;
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
   background-color: $white;
 
   @media (prefers-color-scheme: dark) {
-    color: rgba($white, 0.9);
+    color: $white;
     background-color: $gray;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
@@ -18,16 +18,26 @@ body {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
+  color: rgba($gray, 0.75);
+
+  @media (prefers-color-scheme: dark) {
+    color: rgba($white, 0.75);
+  }
 }
 
 main {
-  padding: 8rem 6vw 8rem;
-  max-width: 1800px;
+  padding: 8rem 6vw var(--spacing--large);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: var(--spacing--large) 6vw 8rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 ::selection {
-  color: $white;
   background-color: $highlight-dark;
 
   @media (prefers-color-scheme: dark) {
@@ -43,8 +53,8 @@ h4,
 h5,
 h6 {
   color: $gray;
-  font-size: clamp(1.25rem, 2.25vw, 1.625rem);
-  font-weight: 600;
+  font-size: inherit;
+  font-weight: 400;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
   max-width: 55ch;
