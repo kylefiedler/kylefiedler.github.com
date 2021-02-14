@@ -1,3 +1,11 @@
+.squiggs {
+  stroke: $gray;
+
+  @media (prefers-color-scheme: dark) {
+    stroke: $white;
+  }
+}
+
 .squiggle-link {
   background-image: url(/images/squiggles/test-2.png);
   background-size: contain;
