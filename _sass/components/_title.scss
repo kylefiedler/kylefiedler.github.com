@@ -3,10 +3,7 @@
   font-size: clamp(1.5rem, 3.5vw, 2.875rem);
   font-weight: 700;
   line-height: var(--line-height--heading);
-
-  @media screen and (min-width: $breakpoint--medium) {
-    letter-spacing: -1px;
-  }
+  letter-spacing: -1px;
 }
 
 .title--secondary {
