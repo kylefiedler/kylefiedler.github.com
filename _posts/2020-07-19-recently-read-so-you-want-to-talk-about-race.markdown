@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Recently Read: So You Want to Talk About Race"
+title: "So You Want to Talk About Race"
 date: "2020-07-19 19:50:43 -0500"
 tags:
   - "suggested_reading"
+  - "recently_read"
   - "book"
 ---
 
