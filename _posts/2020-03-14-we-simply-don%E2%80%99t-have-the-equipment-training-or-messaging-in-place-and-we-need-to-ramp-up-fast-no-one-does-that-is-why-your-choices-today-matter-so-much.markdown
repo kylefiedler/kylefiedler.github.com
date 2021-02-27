@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "We simply don’t have the equipment, training, or messaging in place and we need to ramp up fast. No one does. That is why your choices today matter so much."
+title: "&ldquo;We simply don’t have the equipment, training, or messaging in place and we need to ramp up fast. No one does. That is why your choices today matter so much.&rdquo;"
 date: "2020-03-14 19:46:11 -0500"
 tags:
   - "quote"

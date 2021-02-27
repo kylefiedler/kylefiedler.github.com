@@ -1,0 +1,9 @@
+---
+layout: post
+title: "&ldquo;There are just so many pain points creating an unsatisfactory user journey. The child goes limp when you try to lift it. It goes stiff when you try to change the clothes. It poops after it gets into the bathtub, but before it reaches the toilet.&rdquo;"
+date: "2021-02-27 15:05:29 -0600"
+tags:
+  - "quote"
+  - "link"
+---
+From [The UX on This Small Child is Terrible](https://www.mcsweeneys.net/articles/the-ux-on-this-small-child-is-terrible)

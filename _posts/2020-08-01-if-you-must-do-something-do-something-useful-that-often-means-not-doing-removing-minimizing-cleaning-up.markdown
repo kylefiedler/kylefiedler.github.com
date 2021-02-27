@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "If you must do something, do something useful. That often means not doing, removing, minimizing, cleaning up."
+title: "&ldquo;If you must do something, do something useful. That often means not doing, removing, minimizing, cleaning up.&rdquo;"
 date: "2020-08-01 14:44:21 -0500"
 tags:
   - "quote"

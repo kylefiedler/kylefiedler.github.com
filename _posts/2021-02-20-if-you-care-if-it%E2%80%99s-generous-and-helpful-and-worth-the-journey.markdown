@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "If you care. If it’s generous and helpful and worth the journey."
+title: "&ldquo;If you care. If it’s generous and helpful and worth the journey.&rdquo;"
 date: "2021-02-20 12:45:31 -0600"
 tags:
   - "quote"
