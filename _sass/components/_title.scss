@@ -1,9 +1,8 @@
 .title--primary {
   font-family: var(--font-family--title);
-  font-size: clamp(1.5rem, 3.5vw, 2.875rem);
-  font-weight: 700;
+  font-size: clamp(2.475rem, 4.5vw, 3.75rem);
+  font-weight: 500;
   line-height: var(--line-height--heading);
-  letter-spacing: -1px;
 }
 
 .title--secondary {

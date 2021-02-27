@@ -14,9 +14,9 @@
 
 .split--sub {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   column-gap: var(--spacing--gap);
   display: grid;
+  grid-auto-rows: max-content;
 }
 
 .split {
