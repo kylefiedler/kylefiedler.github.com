@@ -5,15 +5,15 @@ class: blog-index
 
 <section>
   <h2 class="title--primary u-margin-bottom-large">All Posts</h2>
-  <ul class="dashed-list">
+  <ul>
     {% for post in site.posts %}
-    <li class="u-margin-bottom-medium">
+    <li class="u-margin-bottom-medium grid">
+      <span class="detail">{{ post.date | date: '%B %d, %Y' }}</span>
       {% if post.external_url %}
       <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
       {% else %}
       <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
       {% endif %}
-      <span class="detail">{{ post.date | date: '%B %d, %Y' }}</span>
     </li>
     {% endfor %}
   </ul>
