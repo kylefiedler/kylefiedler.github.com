@@ -1,7 +1,20 @@
-// @font-face {
-//   font-family: 'DM Mono';
-//   src: url('/fonts/grenette-bold.woff2') format('woff2'),
-//     url('/fonts/grenette-bold.woff') format('woff');
-//   font-weight: 600;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'DM Mono';
+  src: url('/fonts/DMMono-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  src: url('/fonts/DMMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  src: url('/fonts/DMMono-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
