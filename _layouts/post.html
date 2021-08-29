@@ -11,7 +11,7 @@
 
   <div class="grid">
     <div>•</div>
-    <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%B %d, %Y' }}</time>
+    <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%m.%d.%Y' }}</time>
     <section>
       <h1 class="title--primary u-margin-bottom-medium">
         {{ page.title }}
@@ -23,14 +23,14 @@
       <section class="u-margin-top-large">
         <h6 class="u-margin-bottom-medium">Keep Reading</h6>
         <ul class="dashed-list">
-          {% for post in site.related_posts limit: 4 %}
+          {% for post in site.related_posts limit: 3 %}
           <li class="u-margin-bottom-medium">
             {% if post.external_url %}
             <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
             {% else %}
             <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
             {% endif %}
-            <span class="detail">{{ post.date | date: '%B %d, %Y' }}</span>
+            <span class="detail">{{ post.date | date: '%m.%d.%Y' }}</span>
           </li>
           {% endfor %}
         </ul>
