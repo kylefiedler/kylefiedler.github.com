@@ -1,6 +1,4 @@
 // Colors
-// $gray: #3d462b;
-// $white: #fffcf6;
 $gray: #383b3f;
 $white: #fff;
 $blue: #0066ff;
@@ -14,8 +12,7 @@ $breakpoint--large: 75rem;
 
 :root {
   // Typography
-  --font-family: "iA Writer Duospace", system-ui, sans-serif;
-  --font-family--title: "Grenette", "Georgia", serif;
+  --font-family: "DM Mono", monospace;
 
   // Line heights
   --line-height: 1.6;

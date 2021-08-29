@@ -4,36 +4,20 @@ html {
   font-size: 100%;
   line-height: var(--line-height);
   background-color: $white;
-
-  @media (prefers-color-scheme: dark) {
-    color: $white;
-    background-color: darken($gray, 8%);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: antialiased;
-  }
 }
 
 body {
-  font-size: clamp(1.25rem, 2vw, 1.375rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
   color: rgba($gray, 0.85);
-
-  @media (prefers-color-scheme: dark) {
-    color: rgba($white, 0.75);
-  }
 }
 
 main {
-  padding: 8rem 8vw var(--spacing--large);
-  max-width: 1400px;
+  padding: 0 3vw var(--spacing--large);
+  max-width: 1800px;
   margin: 0 auto;
-
-  @media screen and (min-width: $breakpoint--small) {
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
 }
 
 footer {
@@ -44,10 +28,6 @@ footer {
 
 ::selection {
   background-color: $highlight-dark;
-
-  @media (prefers-color-scheme: dark) {
-    color: $gray;
-  }
 }
 
 h1,
@@ -58,59 +38,21 @@ h5,
 h6 {
   color: $gray;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 var(--spacing--small);
-  max-width: 55ch;
-
-  @media (prefers-color-scheme: dark) {
-    color: $white;
-  }
 }
 
 p {
   margin: 0 0 var(--spacing--small);
-  max-width: 66ch;
 }
 
-// a {
-//   color: inherit;
-//   text-decoration: none;
-//   background-image: linear-gradient(120deg, $highlight 0%, $highlight 100%);
-//   background-repeat: no-repeat;
-//   background-size: 100% 0.4em;
-//   background-position: 0 100%;
-//   transition: background-size 0.25s ease-in;
-//
-//   @media (prefers-color-scheme: dark) {
-//     background-image: linear-gradient(120deg, $highlight-dark 0%, $highlight-dark 100%);
-//   }
-//
-//   &:hover {
-//     cursor: pointer;
-//     background-size: 100% 100%;
-//     border-radius: 2px;
-//   }
-//
-//   &:focus {
-//     outline: var(--focus-outline);
-//   }
-// }
-
 a {
-  color: $blue;
-  text-decoration: none;
-
-  @media (prefers-color-scheme: dark) {
-    color: $dark-link;
-  }
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: $gray;
 
   &:hover {
-    text-decoration: underline;
-    color: darken($blue, 10%);
-
-  @media (prefers-color-scheme: dark) {
-    color: lighten($dark-link, 10%);
-  }
+    text-decoration: none;
   }
 
   &:focus {
@@ -136,4 +78,17 @@ blockquote {
 
 .visited {
   text-decoration: line-through;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing--xx-large) 0 12vh;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-left: var(--spacing);
+    }
+  }
 }

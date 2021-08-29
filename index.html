@@ -7,6 +7,7 @@ class: blog-index
   <ul>
     {% for post in site.posts %}
     <li class="u-margin-bottom-medium grid">
+      <div>•</div>
       <span class="detail">{{ post.date | date: '%B %d, %Y' }}</span>
       {% if post.external_url %}
       <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
