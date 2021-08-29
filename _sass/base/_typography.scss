@@ -51,7 +51,7 @@ p {
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: $gray;
+  text-decoration-color: rgba($gray, 0.4);
 
   &:hover {
     text-decoration: none;
