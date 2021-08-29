@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.618vw, 1.5rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  padding: 0 3vw var(--spacing--large);
+  padding: 0 8vw var(--spacing--large);
   max-width: 1800px;
   margin: 0 auto;
 }
@@ -40,10 +40,12 @@ h6 {
   font-size: inherit;
   font-weight: 500;
   margin: 0 0 var(--spacing--small);
+  max-width: 70ch;
 }
 
 p {
   margin: 0 0 var(--spacing--small);
+  max-width: 70ch;
 }
 
 a {
@@ -76,14 +78,16 @@ blockquote {
   margin: 0;
 }
 
-.visited {
+.about .nav--about,
+.blog-index .nav--posts,
+.selected {
   text-decoration: line-through;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin: var(--spacing--xx-large) 0 12vh;
+  margin: var(--spacing--xx-large) 0 15vh;
 
   ul {
     li {
