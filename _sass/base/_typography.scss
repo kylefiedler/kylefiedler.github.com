@@ -7,7 +7,7 @@ html {
 }
 
 body {
-font-size: clamp(1.25rem, 1.618vw, 1.5rem);
+  font-size: clamp(1.25rem, 1.618vw, 1.5rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -52,9 +52,11 @@ a {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba($gray, 0.4);
+  text-decoration-style: wavy;
+  transition: text-decoration-color .5s;
 
   &:hover {
-    text-decoration: none;
+    text-decoration-color: rgba($gray, 0.1);
   }
 
   &:focus {
