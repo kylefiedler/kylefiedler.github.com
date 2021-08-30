@@ -52,8 +52,7 @@ a {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba($gray, 0.4);
-  text-decoration-style: wavy;
-  transition: text-decoration-color .5s;
+  transition: text-decoration-color 0.5s;
 
   &:hover {
     text-decoration-color: rgba($gray, 0.1);
