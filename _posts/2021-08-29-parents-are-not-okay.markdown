@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&rdquo;We are expected to send our kids off into God knows what, to work our jobs and live our lives like nothing’s wrong, and to hold it all together for months and maybe now for years without ever seeing a way out. This is not okay. Nothing is okay.&ldquo;"
+title: "&ldquo;We are expected to send our kids off into God knows what, to work our jobs and live our lives like nothing’s wrong, and to hold it all together for months and maybe now for years without ever seeing a way out. This is not okay. Nothing is okay.&rdquo;"
 date: "2021-08-29 08:24:48 -0500"
 ---
 
