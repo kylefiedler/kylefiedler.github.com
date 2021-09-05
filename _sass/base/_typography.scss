@@ -90,7 +90,18 @@ nav {
     align-items: center;
   }
 
+  svg {
+    display: block;
+    order: 2;
+
+    @media screen and (max-width: 825px) {
+      margin: 0 auto var(--spacing--medium);
+    }
+  }
+
   ul {
+    order: 3;
+
     li {
       display: inline-block;
       margin-left: var(--spacing);
