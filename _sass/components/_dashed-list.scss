@@ -7,12 +7,19 @@
     position: relative;
 
     &::before {
-      content: "—";
+      content: "";
       display: inline-block;
       margin-right: var(--spacing--small);
       position: absolute;
-      left: -2.2rem;
+      left: -1.5em;
+      top: 0.65em;
+      width: 0.75em;
+      height: 0.25em;
       color: rgba($gray, 0.4);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("/images/grafixs/dash.svg");
 
       @media (prefers-color-scheme: dark) {
         color: rgba($white, 0.4);

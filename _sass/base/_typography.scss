@@ -79,21 +79,59 @@ blockquote {
   margin: 0;
 }
 
-.about .nav--about,
-.blog-index .nav--posts,
-.selected {
-  text-decoration: line-through;
-}
-
 nav {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   margin: var(--spacing--xx-large) 0 15vh;
+
+  @media screen and (min-width: 825px) {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   ul {
     li {
       display: inline-block;
       margin-left: var(--spacing);
+
+      a {
+        display: block;
+        padding: 1rem;
+      }
     }
   }
+}
+
+.visited {
+  text-decoration: line-through;
+}
+
+.hi {
+  display: inline-block;
+  padding: var(--spacing--small) 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url("/images/grafixs/underline-1.svg");
+}
+
+.about .hi {
+  background-image: url("/images/grafixs/underline-2.svg");
+}
+
+.about .nav__about,
+.blog-index .nav__posts {
+  text-decoration: line-through;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.about .nav__about {
+  background-image: url("/images/grafixs/about-selected.svg");
+}
+
+.blog-index .nav__posts {
+  background-image: url("/images/grafixs/posts-selected.svg");
 }

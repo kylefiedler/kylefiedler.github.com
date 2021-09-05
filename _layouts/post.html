@@ -1,16 +1,11 @@
 {% include header.html %}
 
 <main>
-  <nav>
-    <h2 class="hi">Hi, I&rsquo;m Kyle</h2>
-    <ul>
-      <li><a href="/" class="selected">Posts</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-  </nav>
+
+  {% include nav.html %}
 
   <div class="grid">
-    <div>•</div>
+    <div>{% include dot.svg %}</div>
     <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%m.%d.%Y' }}</time>
     <section>
       <h1 class="title--primary u-margin-bottom-medium">
