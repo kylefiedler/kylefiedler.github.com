@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-size: clamp(1.25rem, 1.618vw, 1.5rem);
+  font-size: clamp(1rem, 1.618vw, 1.25rem);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
@@ -16,7 +16,7 @@ body {
 
 main {
   padding: 0 8vw 8vh;
-  max-width: 2000px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
