@@ -1,5 +1,4 @@
 .images-list {
-  border: 2px solid rgba($gray, 0.2);
   column-gap: var(--spacing--medium);
   padding: var(--spacing--small) var(--spacing--small) 0;
 
@@ -34,4 +33,5 @@
   figcaption {
     display: none;
   }
+
 }

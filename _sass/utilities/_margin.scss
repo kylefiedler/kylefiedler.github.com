@@ -1,13 +1,30 @@
+.u-margin-top-medium {
+  margin-top: var(--spacing--medium);
+}
+
+.u-margin-top-base {
+  margin-top: var(--spacing--medium);
+
+  @media (min-width: $breakpoint--small) {
+    margin-top: var(--spacing--large);
+  }
+}
+
+
+.u-margin-top-large {
+  margin-top: var(--spacing--x-large);
+
+  @media (min-width: $breakpoint--small) {
+    margin-top: var(--spacing--xx-large);
+  }
+}
+
 .u-padding-bottom-0 {
   padding-bottom: 0 !important;
 }
 
 .u-margin-bottom-0 {
   margin-bottom: 0 !important;
-}
-
-.u-margin-top-medium {
-  margin-top: var(--spacing--medium);
 }
 
 .u-margin-bottom-medium {
@@ -19,14 +36,6 @@
 
   @media (min-width: $breakpoint--small) {
     margin-bottom: var(--spacing--large);
-  }
-}
-
-.u-margin-top-large {
-  margin-top: var(--spacing--x-large);
-
-  @media (min-width: $breakpoint--small) {
-    margin-top: var(--spacing--xx-large);
   }
 }
 

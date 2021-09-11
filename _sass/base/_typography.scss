@@ -146,3 +146,7 @@ nav {
 .blog-index .nav__posts {
   background-image: url("/images/grafixs/posts-selected.svg");
 }
+
+img {
+  border-radius: var(--spacing);
+}
