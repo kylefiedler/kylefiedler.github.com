@@ -1,8 +1,7 @@
 html {
-  font-family: var(--font-family);
   font-size: 100%;
-  line-height: var(--line-height);
-  background-color: $white;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -11,15 +10,55 @@ body {
   background-position: left top;
   background-size: 100% auto;
   color: rgba($gray, 0.85);
+  background-color: $white;
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+
+  &.about {
+    background-color: #CFCFDA;
+  }
+
+  &.colophon {
+    background-color: #EED5C7;
+  }
+
+  &.baseball {
+    background-color: #8FA77F;
+  }
+
+  &.thoughtbot {
+    background-color: #F0F0F8;
+  }
+
+  &.iopi {
+    background-color: #EBE0D2;
+  }
+  &.rse {
+    background-color: #FEF3D2;
+  }
+
+  &.krw {
+    background-color: #A7FFED;
+  }
+
+  &.ottoneu {
+    background-color: #AAD7AD;
+  }
 }
 
 main {
-  padding: 0 var(--spacing--small) 8vh;
-  max-width: 1600px;
+  padding: 0 var(--spacing) 8vh;
+  max-width: 1500px;
   margin: 0 auto;
+
   @media screen and (min-width: 500px) {
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
+    padding-left: var(--spacing--x-large);
+    padding-right: var(--spacing--x-large);
+  }
+
+  @media screen and (min-width: 700px) {
+    padding-left: var(--spacing--xx-large);
+    padding-right: var(--spacing--xx-large);
   }
 }
 
@@ -35,7 +74,7 @@ h5,
 h6 {
   color: $gray;
   font-size: inherit;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 var(--spacing--small);
   max-width: 70ch;
 }
@@ -48,11 +87,13 @@ p {
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: rgba($gray, 0.4);
-  transition: text-decoration-color 0.5s;
+  text-decoration-color: rgba($gray, 0.6);
+  transition: background-color 0.5s, color 0.5s;
+  background-color: rgba($gray, 0.0);
 
   &:hover {
-    text-decoration-color: rgba($gray, 0.1);
+    color: $white;
+    background-color: rgba($gray, 1);
   }
 
   &:focus {
@@ -77,22 +118,20 @@ blockquote {
 }
 
 nav {
-  text-align: center;
   margin: var(--spacing--xx-large) 0 15vh;
-
-  @media screen and (min-width: 825px) {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   svg {
     display: block;
     order: 2;
 
-    @media screen and (max-width: 825px) {
-      margin: 0 auto var(--spacing--medium);
+    @media screen and (max-width: 500px) {
+      position: relative;
+      top: -3.5rem;
+      left: 1rem;
     }
   }
 
@@ -101,11 +140,10 @@ nav {
 
     li {
       display: inline-block;
-      margin-left: var(--spacing);
+      padding: 1rem;
 
-      a {
-        display: block;
-        padding: 1rem;
+      @media screen and (min-width: 800px) {
+        margin-left: var(--spacing);
       }
     }
   }
@@ -122,6 +160,10 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-image: url("/images/grafixs/underline-1.svg");
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .about .hi {
@@ -145,12 +187,14 @@ nav {
 }
 
 img {
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .detail {
   color: rgba($gray, 0.65);
+  font-style: italic;
 }
+
 .highlight {
-  background-color: #7DB9F8;
+  font-style: italic;
 }

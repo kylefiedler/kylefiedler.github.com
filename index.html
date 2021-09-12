@@ -10,9 +10,9 @@ class: blog-index
       <div>{% include dot.svg %}</div>
       <span class="detail">{{ post.date | date: '%m.%d.%Y' }}</span>
       {% if post.external_url %}
-      <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
+      <h4><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
       {% else %}
-      <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+      <h4><a href="{{post.url}}">{{ post.title }}</a></h3>
       {% endif %}
     </li>
     {% endfor %}
