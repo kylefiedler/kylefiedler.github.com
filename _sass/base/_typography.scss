@@ -1,5 +1,4 @@
 html {
-  color: $gray;
   font-family: var(--font-family);
   font-size: 100%;
   line-height: var(--line-height);
@@ -15,15 +14,13 @@ body {
 }
 
 main {
-  padding: 0 8vw 8vh;
-  max-width: 1800px;
+  padding: 0 var(--spacing--small) 8vh;
+  max-width: 1600px;
   margin: 0 auto;
-}
-
-footer {
-  padding: var(--spacing--large) 6vw 8rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  @media screen and (min-width: 500px) {
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+  }
 }
 
 ::selection {
@@ -148,5 +145,12 @@ nav {
 }
 
 img {
-  border-radius: var(--spacing);
+  border-radius: 0.5rem;
+}
+
+.detail {
+  color: rgba($gray, 0.65);
+}
+.highlight {
+  background-color: #7DB9F8;
 }

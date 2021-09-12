@@ -3,9 +3,9 @@ layout: default
 class: about
 ---
 <div class="grid__about">
-  <div class="">
+  <div>
     <section>
-      <h1>I&lsquo;m a product designer and strategist trying to make some good on the internet.</h1>
+      <h1>I&lsquo;m a product designer and strategist <span class="highlight">trying to make some good on the internet.</span></h1>
       <p>I use research and Jobs-to-be-Done to understand complex problems; then design, and implement practical solutions. I&rsquo;ve been designing web or mobile products in some form or another for over fifteen years. For about seven of those years, I&rsquo;ve been managing and leading the teams I'm on. At home, I&rsquo;m partner to an accomplished photographer and father to three kids and two dogs (we have a wild house).</p>
     </section>
 
@@ -37,7 +37,11 @@ class: about
     </div>
   </div>
 
-  <section>
+  <section class="u-margin-top-large">
+    <div class="u-margin-bottom-base">
+      {% include star.svg %}
+    </div>
+
     <h2 class="u-margin-bottom-medium">Past Projects</h2>
     <ul class="u-margin-bottom-large">
       <li>
