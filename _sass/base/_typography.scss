@@ -15,7 +15,7 @@ body {
   font-family: var(--font-family);
 
   &.about {
-    background-color: #CFCFDA;
+    background-color: #D1C7EC;
   }
 
   &.colophon {
@@ -118,20 +118,26 @@ blockquote {
 }
 
 nav {
-  margin: var(--spacing--xx-large) 0 15vh;
+  margin: var(--spacing--x-large) 0 10vh;
   text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  @media screen and (min-width: 400px) {
+    margin-top: var(--spacing--xx-large);
+    margin-bottom: 15vh;
+  }
 
   svg {
     display: block;
     order: 2;
 
     @media screen and (max-width: 500px) {
-      position: relative;
-      top: -3.5rem;
-      left: 1rem;
+      position: absolute;
+      top: -1.5rem;
+      left: calc(50% - 35px);
     }
   }
 
@@ -160,7 +166,7 @@ nav {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-image: url("/images/grafixs/underline-1.svg");
-  
+
   a {
     text-decoration: none;
   }
