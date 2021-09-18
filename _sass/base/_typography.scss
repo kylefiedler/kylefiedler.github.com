@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  font-weight: 300;
   font-size: clamp(1rem, 1.618vw, 1.25rem);
   background-repeat: no-repeat;
   background-position: left top;
@@ -14,36 +15,36 @@ body {
   line-height: var(--line-height);
   font-family: var(--font-family);
 
-  &.about {
-    background-color: #D1C7EC;
-  }
+  // &.about {
+  //   background-color: #D1C7EC;
+  // }
 
-  &.colophon {
-    background-color: #EED5C7;
-  }
+  // &.colophon {
+  //   background-color: #EED5C7;
+  // }
 
-  &.baseball {
-    background-color: #8FA77F;
-  }
+  // &.baseball {
+  //   background-color: #8FA77F;
+  // }
 
-  &.thoughtbot {
-    background-color: #F0F0F8;
-  }
+  // &.thoughtbot {
+  //   background-color: #F0F0F8;
+  // }
 
-  &.iopi {
-    background-color: #EBE0D2;
-  }
-  &.rse {
-    background-color: #FEF3D2;
-  }
+  // &.iopi {
+  //   background-color: #EBE0D2;
+  // }
+  // &.rse {
+  //   background-color: #FEF3D2;
+  // }
 
-  &.krw {
-    background-color: #A7FFED;
-  }
+  // &.krw {
+  //   background-color: #A7FFED;
+  // }
 
-  &.ottoneu {
-    background-color: #AAD7AD;
-  }
+  // &.ottoneu {
+  //   background-color: #AAD7AD;
+  // }
 }
 
 main {
@@ -63,7 +64,7 @@ main {
 }
 
 ::selection {
-  background-color: $highlight-dark;
+  background-color: $blue;
 }
 
 h1,
@@ -74,9 +75,9 @@ h5,
 h6 {
   color: $gray;
   font-size: inherit;
-  font-weight: 400;
   margin: 0 0 var(--spacing--small);
   max-width: 70ch;
+  font-weight: 500;
 }
 
 p {
@@ -87,13 +88,13 @@ p {
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: rgba($gray, 0.6);
+  text-decoration-color: rgba($purple, 0.6);
   transition: background-color 0.5s, color 0.5s;
-  background-color: rgba($gray, 0.0);
+  background-color: rgba($purple, 0.0);
 
   &:hover {
     color: $white;
-    background-color: rgba($gray, 1);
+    background-color: rgba($purple, 1);
   }
 
   &:focus {
@@ -198,9 +199,8 @@ img {
 
 .detail {
   color: rgba($gray, 0.65);
-  font-style: italic;
 }
 
 .highlight {
-  font-style: italic;
+  background-color: $highlight-dark;
 }
