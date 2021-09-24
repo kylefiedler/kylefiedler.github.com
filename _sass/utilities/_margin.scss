@@ -1,3 +1,7 @@
+.u-margin-top-small {
+  margin-top: var(--spacing--small);
+}
+
 .u-margin-top-medium {
   margin-top: var(--spacing--medium);
 }
@@ -9,7 +13,6 @@
     margin-top: var(--spacing--large);
   }
 }
-
 
 .u-margin-top-large {
   margin-top: var(--spacing--x-large);

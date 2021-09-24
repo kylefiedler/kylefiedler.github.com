@@ -89,11 +89,10 @@ a {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba($gray, 0.6);
-  transition: background-color 0.5s, color 0.5s, text-decoration-color 0.5s;
+  transition: background-color 0.5s, text-decoration-color 0.5s;
   background-color: rgba($purple, 0.0);
 
   &:hover {
-    color: $white;
     text-decoration-color: rgba($purple, 0.6);
     background-color: rgba($purple, 1);
   }
@@ -101,6 +100,15 @@ a {
   &:focus {
     outline: var(--focus-outline);
   }
+
+  &::visited {
+    text-decoration: line-through;
+  }
+}
+
+dt {
+  font-weight: 300;
+  font-style: italic;
 }
 
 hr {
@@ -204,4 +212,8 @@ img {
 
 .highlight {
   background-color: $highlight-dark;
+}
+
+.u-right-align {
+  text-align: right;
 }
