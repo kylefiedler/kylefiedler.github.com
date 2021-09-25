@@ -33,5 +33,22 @@
   figcaption {
     display: none;
   }
+}
 
+.images-list__full-width {
+  column-span: all;
+}
+
+.images-list--mobile {
+  @media screen and (min-width: $breakpoint--small) {
+    columns: 2;
+  }
+
+  @media screen and (min-width: $breakpoint--medium) {
+    columns: 3;
+  }
+
+  @media screen and (min-width: $breakpoint--large) {
+    columns: 4;
+  }
 }
