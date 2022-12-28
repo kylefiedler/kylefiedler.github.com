@@ -3,34 +3,40 @@ layout: default
 class: work
 ---
 
-<section class="u-margin-bottom-base grid__about">
-  <div>
-    <h1>Conducting an <span class="highlight">interface inventory and establishing a core component library</span> for Point Health's Design System</h1>
-    <p class="u-margin-bottom-large">When I joined Point Health, one of the first projects I was assigned was to pick up where the previous designer had left off updating a design library. Before I started, I wanted to understand what had already been designed, what had been built, and where the potential gaps were between Figma and the app. I started by taking screenshots of each screen on the app and mapping out all the existing flows in Figma. Since I was still new to the product, it was an excellent opportunity to learn about the product while gaining a fuller understanding of where conflicts might lie.</p>
-    <h2>Taking inventory of common components</h2>
-    <p>Once I captured all of the screens in the core flows, I started to figure out the standard components and patterns. I  grouped screens and collected the common patterns that needed a single design throughout each flow. At first, this seemed like it would be an easier task, but as I dug into each design, I started noticing minor inconsistencies throughout each component.</p>
-    <ul class="dashed-list">
-      <li>A 4px border when it should have been 1px.</li>
-      <li>One heading that was title case and another that was all caps and another that was sentence case</li>
-      <li>Small inconsistencies in spacing. Incrementing incoherently from 4px, 5px, 6px, 8px, 21px, 22px, to 24px</li>
-      <li>Inconsistent ordering of information for similar pieces of content in the interface</li>
-    </ul>
-  </div>
+<h1>Conducting an interface inventory and <em>establishing a core component library</em> for Point Health's Design System</h1>
 
-  <div class="u-margin-top-large u-right-align">
-    {% include scribble.svg %}
-    <dl>
-      <dt class="u-margin-top-medium">Timeline:</dt>
-      <dd>4 Weeks</dd>
-      <dt class="u-margin-top-medium">Year:</dt>
-      <dd>2021</dd>
-      <dt class="u-margin-top-medium">Role:</dt>
-      <dd>Product Design</dd>
-    </dl>
-  </div>
+<ul class="project-specs">
+  <li>
+    <h3>Timeline:</h3>
+    <p>4 Weeks</p>
+  </li>
+  <li>
+    <h3>Year:</h3>
+    <p>2021</p>
+  </li>
+  <li>
+    <h3>Role:</h3>
+    <p>Product Design</p>
+  </li>
+</ul>
+
+<section>
+  <p>When I joined Point Health, one of the first projects I was assigned was to pick up where the previous designer had left off updating a design library. Before I started, I wanted to understand what had already been designed, what had been built, and where the potential gaps were between Figma and the app. I started by taking screenshots of each screen on the app and mapping out all the existing flows in Figma. Since I was still new to the product, it was an excellent opportunity to learn about the product while gaining a fuller understanding of where conflicts might lye.</p>
 </section>
 
-<ul class="images-list u-margin-bottom-large">
+<section>
+  <h2>Taking inventory of common components</h2>
+  <p>Once I captured all of the screens in the core flows, I started to figure out the standard components and patterns. I  grouped screens and collected the common patterns that needed a single design throughout each flow. At first, this seemed like it would be an easier task, but as I dug into each design, I started noticing minor inconsistencies throughout each component.</p>
+
+  <ul class="circle">
+    <li>A 4px border when it should have been 1px.</li>
+    <li>One heading that was title case and another that was all caps and another that was sentence case</li>
+    <li>Small inconsistencies in spacing. Incrementing incoherently from 4px, 5px, 6px, 8px, 21px, 22px, to 24px</li>
+    <li>Inconsistent ordering of information for similar pieces of content in the interface</li>
+  </ul>
+</section>
+
+<ul class="images grid one-one">
   <li>
     <figure>
       <img src="/images/ph-design-system/full.png" alt="A screenshot of the mobile components Figma file">
@@ -43,13 +49,13 @@ class: work
   </li>
 </ul>
 
-<section class="u-margin-bottom-large">
+<section>
   <h2>Review the current state of the Figma Design System and file organization and implement</h2>
   <p>I started recreating pages to get a more intimate knowledge of them and see the gaps in the existing component libraries. Once I had outlined all of the current interface elements, I researched how other companies have organized their file system with multiple designers working on various features all at once. I wanted to take the time to set things up for Point Health to make it easy enough for non-designers to build interfaces. I understood Point Health's needs and how some of the best companies have built out their Figma design system. My next goal was to move all of the components into the design system Library. Then, have the application mockups reuse those components on a Main page inside the current sprints file.</p>
   <p>I converged all of the similar components into one component, doing my best not to wholesale rework components to reduce the effort for the front-end team. As I moved these components into an external component library, I replaced the old designs with the new main component. I methodically made my way through all of the main screens to get the Main page to be built of select components from the component library.</p>
 </section>
 
-<ul class="images-list u-margin-bottom-large">
+<ul class="images grid three">
   <li>
     <figure>
       <img src="/images/ph-design-system/header-with-address.png" alt="A screenshot of the header and address component">
@@ -65,11 +71,11 @@ class: work
       <img src="/images/ph-design-system/searchbar.png" alt="A screenshot of the search bar component">
     </figure>
   </li>
-  <li>
+  <!-- <li>
     <figure>
       <img src="/images/ph-design-system/stepper.png" alt="A screenshot of a stepper component">
     </figure>
-  </li>
+  </li> -->
   <li>
     <figure>
       <img src="/images/ph-design-system/title-bar.png" alt="A screenshot of the title bar component">
@@ -77,19 +83,19 @@ class: work
   </li>
   <li>
     <figure>
-      <img src="/images/ph-design-system/button-options.png" alt="A screenshot of a button component with options">
+      <img src="/images/ph-design-system/app-header.png" alt="A screenshot of the app header">
     </figure>
   </li>
   <li>
     <figure>
-      <img src="/images/ph-design-system/app-header.png" alt="A screenshot of the app header">
+      <img src="/images/ph-design-system/button-options.png" alt="A screenshot of a button component with options">
     </figure>
   </li>
 </ul>
 
-<section class="u-margin-bottom-large">
-    <h2>Continued iteration and growth</h2>
-    <p>With a small design team, it has been relatively easy to keep this library up to date. Once designs are accepted by the product team and slated for development, we make sure that we update the designs on the Main page in Figma and the Mobile Components file in our Design System. Since the first iteration of this work was completed, we've changed several components and added several more. The simplicity of the components has allowed Project Managers to contribute quick prototypes and ideate along with the Designers.</p>
+<section>
+  <h2>Continued iteration and growth</h2>
+  <p>With a small design team, it has been relatively easy to keep this library up to date. Once designs are accepted by the product team and slated for development, we make sure that we update the designs on the Main page in Figma and the Mobile Components file in our Design System. Since the first iteration of this work was completed, we've changed several components and added several more. The simplicity of the components has allowed Project Managers to contribute quick prototypes and ideate along with the Designers.</p>
 </section>
 
 {% include work.html %}

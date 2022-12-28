@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&rdquo;As simplistic as it might seem, taking time to align our business and user outcomes is a key step to ensure we correctly define the problem we’re solving with design.&ldquo;"
+title: "&ldquo;As simplistic as it might seem, taking time to align our business and user outcomes is a key step to ensure we correctly define the problem we’re solving with design.&rdquo;"
 date: 2021-09-18 18:33
 ---
 

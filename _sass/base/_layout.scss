@@ -1,4 +1,5 @@
 html {
+  background-color: $viewport-background-color;
   box-sizing: border-box;
 }
 
@@ -7,3 +8,28 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 50rem;
+  padding: 4rem 10vw;
+}
+
+summary {
+  margin-bottom: var(--spacing--small);
+}
+
+footer {
+  margin-top: var(--spacing--large);
+  margin-bottom: var(--spacing--large);
+
+  li {
+    display: inline-block;
+    margin-bottom: var(--spacing--small);
+    margin-right: var(--spacing--small);
+  }
+} 

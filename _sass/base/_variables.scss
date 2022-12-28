@@ -1,32 +1,59 @@
 // Colors
-// $gray: #142E51;
-// $white: #AAD7AD;
-$gray: #222525;
-$white: #f3f3f3;
-$highlight-dark: #F5D171;
-$green: #52D19B;
-$blue: #9CC2FE;
-$purple: #c1a7ff;
+$blue: #0056DD;
+$purple: #3300E7;
+$gray: #333;
+$black: #000;
+$white: #fff;
+$yellow: #FFE9AD;
+$off-white: #EAE9E5;
 
-// Breakpoint
-$breakpoint--small: 50rem;
-$breakpoint--medium: 68rem;
-$breakpoint--large: 75rem;
+// Font Colors
+$font-color--base: $black;
+$action-color: $blue;
+$action-color--alt: $purple;
+$action-color--contrast: $white;
+
+// Background Colors
+$viewport-background-color: $white;
+$screen--small: 26.25rem;
 
 :root {
   // Typography
-  --font-family: "DM Mono", monospace;
+  --font-family: "Office Times Round", Georgia, Times, "Times New Roman", serif;
+  --font-family--heading: var(--font-family);
+  --font-family--mono: "DM Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --font-weight--thin: 100;
+  --font-weight--extra-light: 200;
+  --font-weight--light: 300;
+  --font-weight--normal: 400;
+  --font-weight--medium: 500;
+  --font-weight--semi-bold: 600;
+  --font-weight--bold: 700;
+  --font-weight--extra-bold: 800;
+  --font-weight--black: 900;
 
   // Line heights
-  --line-height: 1.6;
-  --line-height--heading: 1.125;
+  --line-height: 1.5;
+  --line-height--heading: var(--line-height);
 
   // Other Sizes
+  --border-radius: 0.1875rem;
   --spacing: 1.5rem;
   --spacing--small: 0.75rem;
-  --spacing--gap: 3vw;
-  --spacing--medium: 2rem;
   --spacing--large: 3rem;
-  --spacing--x-large: 4rem;
-  --spacing--xx-large: 6rem;
+  --spacing--xlarge: 4.5rem;
+
+  // Borders
+  --border-width: 0.0625rem;
+  --border: var(--border-width) solid currentColor;
+
+  // Focus
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 0.125rem;
+  --focus-outline: var(--focus-outline-width) solid #{lighten($action-color--alt, 20%)};
+
+  // Animations
+  --duration: 150ms;
+  --timing: ease;
 }

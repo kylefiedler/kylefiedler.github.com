@@ -1,0 +1,23 @@
+.disc {
+  list-style-type: disc;
+
+  ul {
+    margin-left: var(--spacing--small);
+    list-style-type: circle;
+  }
+}
+
+.circle {
+  list-style-type: circle;
+  margin: var(--spacing--small) 0;
+
+  ul {
+    margin-left: var(--spacing--small);
+    list-style-type: circle;
+  }
+}
+
+.numbered {
+  list-style-type: decimal;
+  margin: var(--spacing--small) 0;
+}

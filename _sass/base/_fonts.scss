@@ -1,6 +1,13 @@
+// @font-face {
+//   font-family: 'DM Mono';
+//   src: url('/fonts/DMMono-Medium.woff') format('woff');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
 @font-face {
-  font-family: 'DM Mono';
-  src: url('/fonts/DMMono-Medium.woff') format('woff');
+  font-family: 'Office Times Round';
+  src: url('/fonts/OfficeTimesRound-Regular.woff') format('woff'), url('/fonts/OfficeTimesRound-Regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }

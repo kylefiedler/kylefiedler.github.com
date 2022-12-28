@@ -1,0 +1,20 @@
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  @media (min-width: $screen--small) {
+    display: flex;
+  }
+}
+
+.grid {
+  @media (min-width: $screen--small) {
+    gap: var(--spacing);
+    display: grid;
+  }
+}

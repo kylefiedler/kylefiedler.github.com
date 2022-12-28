@@ -3,79 +3,76 @@ layout: default
 class: work
 ---
 
-<section class="u-margin-bottom-large grid__about">
-  <div>
-    <h1>Overcoming problems with NPI data and <span class="highlight">presenting the users with the most accurate information</span> with Point Health</h1>
-    <p>The Point Health team was using the National Provider Identifier (NPI) database for providing results for searches for providers and facilities but we were finding lots of errors in the data. We were seeing:</p>
-    <ul class="dashed-list u-margin-bottom-base">
-      <li>Providers listed that are no longer practicing</li>
-      <li>Facility addresses that were down the street </li>
-      <li>Facilities listing services that they didn't preform</li>
-      <li>Inconsistent naming</li>
-    </ul>
-    <p class="u-margin-bottom-large">Our team wanted a non-technical way for our Project Managers, Advocates, and potentially providers themselves to update information on an NPI number. We wanted our database to be as accurate as possible so that we weren't misleading users to practitioners or facilities that had false information.</p>
-    <h2>Quick research</h2>
-    <p>One early assumption that the team had was that we would be able to collect user data issues. When people arrived at a provider or facility in the app with inaccurate data, they suggested a change. </p>
-    <p>To test this out I interviewed several people who had made corrections on other major applications. These people had identified errors in places like Google Maps, Yelp, Wikipedia. We walked through how they made submitted a suggestion and what they were feeling along the way during the interview. </p>
-    <p>We learned that the driving force behind their contributions was altruism, they wanted to make the system better for the next person. Many of the people contributing to corrections didn't know if the suggestions they submitted got accepted. The good feelings all came from the moment they decided to help the community. We decided that for the first version, we would cater issues to just our team. With the interviews in mind, we thought that building enough of a community feeling around the medical data would take a large amount of effort.</p>
-  </div>
+<h1>Overcoming problems with NPI data and <em>presenting the users with the most accurate information</em> with Point Health</h1>
 
-  <div class="u-margin-top-large u-right-align">
-    {% include scribble.svg %}
-    <dl>
-      <dt class="u-margin-top-medium">Timeline:</dt>
-      <dd>4 Weeks</dd>
-      <dt class="u-margin-top-medium">Year:</dt>
-      <dd>2021</dd>
-      <dt class="u-margin-top-medium">Role:</dt>
-      <dd>Product Design</dd>
-    </dl>
-  </div>
+<ul class="project-specs">
+  <li>
+    <h3>Timeline:</h3>
+    <p>4 Weeks</p>
+  </li>
+  <li>
+    <h3>Year:</h3>
+    <p>2021</p>
+  </li>
+  <li>
+    <h3>Role:</h3>
+    <p>Product Design</p>
+  </li>
+</ul>
+
+<section>
+  <p>The Point Health team was using the National Provider Identifier (NPI) database for providing results for searches for providers and facilities but we were finding lots of errors in the data. We were seeing:</p>
+  <ul class="circle">
+    <li>Providers listed that are no longer practicing</li>
+    <li>Facility addresses that were down the street </li>
+    <li>Facilities listing services that they didn't preform</li>
+    <li>Inconsistent naming</li>
+  </ul>
+  <p>Our team wanted a non-technical way for our Project Managers, Advocates, and potentially providers themselves to update information on an NPI number. We wanted our database to be as accurate as possible so that we weren't misleading users to practitioners or facilities that had false information.</p>
 </section>
 
-<section class="u-margin-bottom-large">
+<section>
+  <h2>Quick research</h2>
+  <p>One early assumption that the team had was that we would be able to collect user data issues. When people arrived at a provider or facility in the app with inaccurate data, they suggested a change. </p>
+  <p>To test this out I interviewed several people who had made corrections on other major applications. These people had identified errors in places like Google Maps, Yelp, Wikipedia. We walked through how they made submitted a suggestion and what they were feeling along the way during the interview. </p>
+  <p>We learned that the driving force behind their contributions was altruism, they wanted to make the system better for the next person. Many of the people contributing to corrections didn't know if the suggestions they submitted got accepted. The good feelings all came from the moment they decided to help the community. We decided that for the first version, we would cater issues to just our team. With the interviews in mind, we thought that building enough of a community feeling around the medical data would take a large amount of effort.</p>
+</section>
+
+<section>
   <h2>Project kickoff and remote whiteboarding</h2>
   <p>Once the problem was sufficiently shaped, our team collectively defined the problem and collaboratively designed storyboard user flow. I facilitated a couple of quick design thinking exercises to get the team aligned on the issues we would solve with the first version of the application and what we envisioned the flow. </p>
 </section>
 
-<ul class="images-list u-margin-bottom-large">
-  <li class="images-list__full-width">
-    <figure>
-      <img src="/images/ph-npi/whiteboard.png" alt="A screenshot of a online whiteboard">
-    </figure>
-  </li>
-</ul>
+<figure class="images">
+  <img src="/images/ph-npi/whiteboard.png" alt="A screenshot of a online whiteboard">
+</figure>
 
-<section class="u-margin-bottom-large">
-    <h2>Rough prototype to build an understanding of the problems</h2>
-    <p>I quickly put the storyboard in Figma prototype so that the team could click through the flow that we had made in the kickoff. The prototype allowed us to communicate the intent to the larger group and primary stakeholders.</p>
+<section>
+  <h2>Rough prototype to build an understanding of the problems</h2>
+  <p>I quickly put the storyboard in Figma prototype so that the team could click through the flow that we had made in the kickoff. The prototype allowed us to communicate the intent to the larger group and primary stakeholders.</p>
 </section>
 
-<ul class="images-list u-margin-bottom-large">
-  <li class="images-list__full-width">
-    <figure>
-      <img src="/images/ph-npi/prototype.png" alt="A screenshot of a flow of screens in a prototype">
-    </figure>
-  </li>
-</ul>
+<figure class="images">
+  <img src="/images/ph-npi/prototype.png" alt="A screenshot of a flow of screens in a prototype">
+</figure>
 
-<section class="u-margin-bottom-large">
+<section>
   <h2>Refine prototype around two core features</h2>
   <p>With a green light to move forward, I refined the design and honed in on some core use cases. I was in constant communication with our developers, building my understanding of the NPI data model and with our project managers in ways that they would like to manipulate that data. The prototype was a launching point to talk about different issues that we've already found in the data. After those conversations, I started to put issues into two core use cases: </p>
-  <ol>
+  <ol class="numbered">
     <li>One-off changes to one NPI number</li>
     <li>Wide sweeping changes to multiple connected NPI numbers</li>
   </ol>
   <p>Many of the prototype's features leading up to this insight solved for the one-off changes and didn't consider the more powerful features that could happen with the wide-sweeping changes. </p>
 </section>
 
-<ul class="images-list u-margin-bottom-large">
-  <li>
+<ul class="images">
+  <li class="mb--base">
     <figure>
       <img src="/images/ph-npi/drafts.png" alt="A screenshot of a flow of screens in a prototype">
     </figure>
   </li>
-  <li>
+  <li class="mb--base">
     <figure>
       <img src="/images/ph-npi/new-rule.png" alt="A screenshot of a flow of screens in a prototype">
     </figure>
