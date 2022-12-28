@@ -4,35 +4,29 @@
 
   {% include nav.html %}
 
-  <div class="grid">
-    <div>{% include dot.svg %}</div>
+  <section class="time-n-title mb--xlarge">
     <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%m.%d.%Y' }}</time>
-    <section>
-      <h1 class="title--primary u-margin-bottom-medium">
-        {{ page.title }}
-      </h1>
-      <div class="u-margin-bottom-xx-large">
-        {{ content }}
-      </div>
+    <div>
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </section>
 
-      <section class="u-margin-top-large">
-        <h6 class="u-margin-bottom-medium">Keep Reading</h6>
-        <ul class="dashed-list">
-          {% for post in site.related_posts limit: 3 %}
-          <li class="u-margin-bottom-medium">
-            {% if post.external_url %}
-            <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
-            {% else %}
-            <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
-            {% endif %}
-            <span class="detail">{{ post.date | date: '%m.%d.%Y' }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-      </section>
-    </section>
-  </div>
-
+  <section>
+    <h4>Keep Reading</h4>
+    <ul>
+      {% for post in site.related_posts limit: 3 %}
+      <li class="time-n-title">
+        <time class="detail">{{ post.date | date: '%m.%d.%Y' }}</time>
+        {% if post.external_url %}
+        <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
+        {% else %}
+        <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 </main>
 
 {% include footer.html %}
