@@ -47,10 +47,14 @@ figcaption,
   color: lighten($font-color--base, 30%);
 }
 
+
 .gif {
-  border-bottom: 2px dotted lighten($font-color--base, 50%);
   position: relative;
-  cursor: help;
+
+  @media (hover: hover) {
+    border-bottom: 2px dotted lighten($font-color--base, 50%);
+    cursor: help;
+  }
 
   img {
     position: absolute;
