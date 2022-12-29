@@ -23,9 +23,12 @@ figcaption,
 
 .images {
   margin-bottom: var(--spacing);
-  margin-left: -3rem;
-  margin-right: -3rem;
   text-align: center;
+
+  @media (min-width: $screen--small) {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 .visited,
@@ -45,26 +48,26 @@ figcaption,
 }
 
 .gif {
-  text-decoration: wavy underline;
+  border-bottom: 2px dotted lighten($font-color--base, 50%);
   position: relative;
   cursor: help;
 
   img {
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 1.5rem;
     right: calc(50% - 5rem);
     visibility: hidden;
     opacity: 0%;
     min-width: 10rem;
     max-height: 10rem;
-    transition: opacity 1.5s;
+    transition: opacity 1s;
     box-shadow: 0 0 1rem rgba($font-color--base, 0.2);
   }
 
   &:hover img {
     visibility: visible;
     opacity: 100%;
-    transition: opacity 1.5s;
+    transition: opacity 1s;
   }
 }
 
