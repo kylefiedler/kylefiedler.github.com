@@ -6,6 +6,8 @@ html {
 
   @media (prefers-color-scheme: dark) {
     color: darken($font-color--dark, 5%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
