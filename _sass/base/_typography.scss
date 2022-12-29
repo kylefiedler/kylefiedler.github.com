@@ -3,10 +3,18 @@ html {
   font-family: var(--font-family);
   font-size: clamp(125%, 2.25vw, 1.75rem);
   line-height: var(--line-height);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 5%);
+  }
 }
 
 ::selection {
-  background-color: $yellow;
+  background-color: $highlight;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $highlight--dark;
+  }
 }
 
 h1,
@@ -21,6 +29,10 @@ h6 {
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
   font-weight: var(--font-weight--normal);
+
+  @media (prefers-color-scheme: dark) {
+    color: $font-color--dark;
+  }
 }
 
 h1, 
@@ -38,9 +50,17 @@ a {
   text-decoration-skip-ink: auto;
   transition: color var(--duration) var(--timing);
 
+  @media (prefers-color-scheme: dark) {
+    color: $action-color--dark;
+  }
+
   &:hover {
     color: $action-color--alt;
     text-decoration: none;
+
+    @media (prefers-color-scheme: dark) {
+      color: $action-color--alt-dark;
+    }
   }
 }
 
@@ -76,6 +96,10 @@ img {
 
 path {
   stroke: $font-color--base;
+
+  @media (prefers-color-scheme: dark) {
+    stroke: $font-color--dark;
+  }
 }
 
 a:hover path {
@@ -83,12 +107,20 @@ a:hover path {
 }
 
 em {
-  background-color: $yellow;
+  background-color: $highlight;
   font-style: normal;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $highlight--dark;
+  }
 }
 
 blockquote {
   margin-left: 0;
   padding-left: var(--spacing);
   border-left: 0.25rem darken($viewport-background-color, 5%) solid;
+
+  @media (prefers-color-scheme: dark) {
+    border-left: 0.25rem lighten($viewport-background-color--dark, 5%) solid;
+  }
 }

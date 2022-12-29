@@ -19,6 +19,10 @@ figcaption,
   font-weight: 300;
   color: lighten($font-color--base, 40%);
   font-size: smaller;
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 40%);
+  }
 }
 
 .images {
@@ -45,6 +49,11 @@ figcaption,
   display: inline-block;
   background-color: darken($viewport-background-color, 5%);
   color: lighten($font-color--base, 30%);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 30%);
+    background-color: lighten($viewport-background-color--dark, 5%);
+  }
 }
 
 
@@ -54,6 +63,10 @@ figcaption,
   @media (hover: hover) {
     border-bottom: 2px dotted lighten($font-color--base, 50%);
     cursor: help;
+
+    @media (prefers-color-scheme: dark) {
+      border-bottom-color: darken($font-color--dark, 50%);
+    }
   }
 
   img {
@@ -85,6 +98,10 @@ figcaption,
     font-weight: 300;
     color: lighten($font-color--base, 40%);
     font-size: smaller;
+
+    @media (prefers-color-scheme: dark) {
+      color: darken($font-color--dark, 40%);
+    }
   }
 }
 

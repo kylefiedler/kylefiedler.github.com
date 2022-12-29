@@ -1,6 +1,10 @@
 html {
   background-color: $viewport-background-color;
   box-sizing: border-box;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $viewport-background-color--dark;
+  }
 }
 
 *,
