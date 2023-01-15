@@ -15,6 +15,7 @@ html {
   background-color: $highlight;
 
   @media (prefers-color-scheme: dark) {
+    color: $gray;
     background-color: $highlight--dark;
   }
 }
@@ -63,6 +64,14 @@ a {
     @media (prefers-color-scheme: dark) {
       color: $action-color--alt-dark;
     }
+
+    path {
+      stroke: $action-color--alt;
+
+      @media (prefers-color-scheme: dark) {
+        stroke: $action-color--alt-dark
+      }
+    }
   }
 }
 
@@ -104,16 +113,14 @@ path {
   }
 }
 
-a:hover path {
-  stroke: $action-color--alt;
-}
-
 em {
   background-color: $highlight;
   font-style: normal;
+  padding: 2px;
 
   @media (prefers-color-scheme: dark) {
     background-color: $highlight--dark;
+    color: $gray;
   }
 }
 
