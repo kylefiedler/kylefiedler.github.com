@@ -60,13 +60,11 @@ figcaption,
 .gif {
   position: relative;
 
-  @media (hover: hover) {
     border-bottom: 2px dotted lighten($font-color--base, 50%);
     cursor: help;
 
     @media (prefers-color-scheme: dark) {
       border-bottom-color: darken($font-color--dark, 50%);
-    }
   }
 
   img {
@@ -77,16 +75,15 @@ figcaption,
     opacity: 0%;
     min-width: 10rem;
     max-height: 10rem;
-    transition: opacity 1s;
     box-shadow: 0 0 1rem rgba($font-color--base, 0.2);
     display: none;
   }
 
+  &:active img,
   &:hover img {
     display: block;
     visibility: visible;
     opacity: 100%;
-    transition: opacity 1s;
   }
 }
 
