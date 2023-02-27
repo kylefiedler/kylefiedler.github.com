@@ -31,6 +31,11 @@ figcaption,
   text-align: center;
 
   @media (min-width: $screen--small) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  @media (min-width: $screen--small) {
     margin-left: -3rem;
     margin-right: -3rem;
   }
@@ -60,12 +65,13 @@ figcaption,
 
 .gif {
   position: relative;
+  text-decoration: none;
+  border-bottom: 2px dotted lighten($font-color--base, 50%);
+  cursor: help;
+  color: inherit;
 
-    border-bottom: 2px dotted lighten($font-color--base, 50%);
-    cursor: help;
-
-    @media (prefers-color-scheme: dark) {
-      border-bottom-color: darken($font-color--dark, 50%);
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: darken($font-color--dark, 50%);
   }
 
   img {

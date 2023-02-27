@@ -1,14 +1,15 @@
 // Colors
 $blue: #0056DD;
 $blue--light: #459EFF;
+$blue--x-light: #DEEDFF;
 $purple: #3300E7;
 $purple--light: #A990FF;
 $purple--alt: #6A448A;
 $gray: #202325;
 $black: #000;
 $white: #fff;
-$yellow: #FFE9AD;
-$yellow--dark: #FFDF5E;
+$yellow: #F9FFD8;
+$yellow--dark: #000;
 $green: #2F8E6F;
 $off-white: #EAE9E5;
 
@@ -26,7 +27,8 @@ $highlight--dark: $yellow--dark;
 // Background Colors
 $viewport-background-color: $white;
 $viewport-background-color--dark: $gray;
-$screen--small: 26.25rem;
+$screen--small: 26rem;
+$screen--mid: 34rem;
 
 :root {
   // Typography

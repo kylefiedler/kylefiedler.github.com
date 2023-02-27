@@ -12,11 +12,11 @@ html {
 }
 
 ::selection {
-  background-color: $highlight;
+  background-color: $blue--x-light;
 
   @media (prefers-color-scheme: dark) {
-    color: $gray;
-    background-color: $highlight--dark;
+    background-color: $purple;
+    color: $white;
   }
 }
 
@@ -120,7 +120,6 @@ em {
 
   @media (prefers-color-scheme: dark) {
     background-color: $highlight--dark;
-    color: $gray;
   }
 }
 
@@ -132,4 +131,10 @@ blockquote {
   @media (prefers-color-scheme: dark) {
     border-left: 0.25rem lighten($viewport-background-color--dark, 5%) solid;
   }
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
 }
