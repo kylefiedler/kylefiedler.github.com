@@ -1,6 +1,10 @@
 html {
   background-color: $viewport-background-color;
   box-sizing: border-box;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $viewport-background-color--dark;
+  }
 }
 
 *,
@@ -17,6 +21,7 @@ body {
 body {
   max-width: 50rem;
   padding: 4rem 10vw;
+  overflow-x: hidden;
 }
 
 summary {
@@ -24,8 +29,8 @@ summary {
 }
 
 footer {
-  margin-top: var(--spacing--large);
-  margin-bottom: var(--spacing--large);
+  padding-top: var(--spacing--large);
+  padding-bottom: var(--spacing--large);
 
   li {
     display: inline-block;

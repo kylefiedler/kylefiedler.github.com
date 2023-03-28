@@ -1,21 +1,34 @@
 // Colors
 $blue: #0056DD;
+$blue--light: #459EFF;
+$blue--x-light: #DEEDFF;
 $purple: #3300E7;
-$gray: #333;
+$purple--light: #A990FF;
+$purple--alt: #6A448A;
+$gray: #202325;
 $black: #000;
 $white: #fff;
-$yellow: #FFE9AD;
+$yellow: #F9FFD8;
+$yellow--dark: #000;
+$green: #2F8E6F;
 $off-white: #EAE9E5;
 
 // Font Colors
 $font-color--base: $black;
+$font-color--dark: $white;
 $action-color: $blue;
+$action-color--dark: $blue--light;
 $action-color--alt: $purple;
+$action-color--alt-dark: $purple--light;
 $action-color--contrast: $white;
+$highlight: $yellow;
+$highlight--dark: $yellow--dark;
 
 // Background Colors
 $viewport-background-color: $white;
-$screen--small: 26.25rem;
+$viewport-background-color--dark: $gray;
+$screen--small: 26rem;
+$screen--mid: 34rem;
 
 :root {
   // Typography

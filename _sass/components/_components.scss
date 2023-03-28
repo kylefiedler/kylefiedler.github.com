@@ -1,4 +1,5 @@
 @import "video-wrapper";
+@import "icon";
 
 .time-n-title {
   @media (min-width: $screen--small) {
@@ -19,13 +20,25 @@ figcaption,
   font-weight: 300;
   color: lighten($font-color--base, 40%);
   font-size: smaller;
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 40%);
+  }
 }
 
 .images {
   margin-bottom: var(--spacing);
-  margin-left: -3rem;
-  margin-right: -3rem;
   text-align: center;
+
+  @media (min-width: $screen--small) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  @media (min-width: $screen--small) {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 .visited,
@@ -42,29 +55,42 @@ figcaption,
   display: inline-block;
   background-color: darken($viewport-background-color, 5%);
   color: lighten($font-color--base, 30%);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 30%);
+    background-color: lighten($viewport-background-color--dark, 5%);
+  }
 }
 
+
 .gif {
-  text-decoration: wavy underline;
   position: relative;
+  text-decoration: none;
+  border-bottom: 2px dotted lighten($font-color--base, 50%);
   cursor: help;
+  color: inherit;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: darken($font-color--dark, 50%);
+  }
 
   img {
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 1.5rem;
     right: calc(50% - 5rem);
     visibility: hidden;
     opacity: 0%;
     min-width: 10rem;
     max-height: 10rem;
-    transition: opacity 1.5s;
     box-shadow: 0 0 1rem rgba($font-color--base, 0.2);
+    display: none;
   }
 
+  &:active img,
   &:hover img {
+    display: block;
     visibility: visible;
     opacity: 100%;
-    transition: opacity 1.5s;
   }
 }
 
@@ -78,6 +104,10 @@ figcaption,
     font-weight: 300;
     color: lighten($font-color--base, 40%);
     font-size: smaller;
+
+    @media (prefers-color-scheme: dark) {
+      color: darken($font-color--dark, 40%);
+    }
   }
 }
 
