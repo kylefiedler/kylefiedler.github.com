@@ -12,11 +12,10 @@ html {
 }
 
 ::selection {
-  background-color: $blue--x-light;
+  background-color: $blue--light;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $purple;
-    color: $white;
+    background-color: $blue;
   }
 }
 
@@ -28,10 +27,11 @@ h5,
 h6 {
   color: $font-color--base;
   font-family: var(--font-family--heading);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  font-weight: var(--font-weight--normal);
+  font-weight: 600;
+  letter-spacing: -1px;
 
   @media (prefers-color-scheme: dark) {
     color: $font-color--dark;
@@ -45,40 +45,47 @@ h2 {
 
 p {
   margin: 0 0 0.25rem;
+
+  + p {
+    text-indent: 2rem;
+  }
 }
 
 summary,
 a {
-  color: $action-color;
+  color: inherit;
   text-decoration-skip-ink: auto;
   transition: color var(--duration) var(--timing);
 
-  @media (prefers-color-scheme: dark) {
-    color: $action-color--dark;
+  &:focus {
+    outline-style: solid;
+    outline-width: var(--focus-outline-width);
+    outline-color: $action-color;
+    outline-offset: var(--focus-outline-offset);
+
+    @media (prefers-color-scheme: dark) {
+      outline-color: $action-color--dark;
+    }
   }
 
   &:hover {
-    color: $action-color--alt;
+    color: $action-color;
     text-decoration: none;
 
     @media (prefers-color-scheme: dark) {
-      color: $action-color--alt-dark;
+      color: $action-color--dark;
     }
 
     path {
-      stroke: $action-color--alt;
+      stroke: $action-color;
 
       @media (prefers-color-scheme: dark) {
-        stroke: $action-color--alt-dark
+        stroke: $action-color--dark;
       }
     }
   }
 }
 
-a:focus {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-outline-offset);
-}
 
 summary {
   cursor: pointer;
@@ -99,10 +106,6 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: var(--spacing) 0;
-}
-
-img {
-  border-radius: 0.125rem;
 }
 
 path {

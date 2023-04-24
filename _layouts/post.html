@@ -19,9 +19,9 @@
       <li class="time-n-title">
         <time class="detail">{{ post.date | date: '%m.%d.%Y' }}</time>
         {% if post.external_url %}
-        <h3><a href="{{post.external_url}}">{{ post.title }}</a> ↗</h3>
+        <p><a href="{{post.external_url}}">{{ post.title }}</a> ↗</p>
         {% else %}
-        <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+        <p><a href="{{post.url}}">{{ post.title }}</a></p>
         {% endif %}
       </li>
       {% endfor %}

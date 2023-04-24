@@ -18,11 +18,11 @@ figcaption,
 .detail {
   font-family: var(--font-family--mono);
   font-weight: 300;
-  color: lighten($font-color--base, 40%);
+  color: lighten($font-color--base, 15%);
   font-size: smaller;
 
   @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 40%);
+    color: darken($font-color--dark, 15%);
   }
 }
 
@@ -36,8 +36,8 @@ figcaption,
   }
 
   @media (min-width: $screen--small) {
-    margin-left: -3rem;
-    margin-right: -3rem;
+    margin-left: -10vw;
+    margin-right: -10vw;
   }
 }
 
@@ -53,15 +53,14 @@ figcaption,
   margin-left: 0.25rem;
   padding: 0 0.25rem;
   display: inline-block;
-  background-color: darken($viewport-background-color, 5%);
-  color: lighten($font-color--base, 30%);
+  background-color: darken($viewport-background-color, 3%);
+  color: lighten($font-color--base, 10%);
 
   @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 30%);
-    background-color: lighten($viewport-background-color--dark, 5%);
+    color: darken($font-color--dark, 10%);
+    background-color: lighten($viewport-background-color--dark, 3%);
   }
 }
-
 
 .gif {
   position: relative;
@@ -102,11 +101,11 @@ figcaption,
     margin-bottom: 0;
     font-family: var(--font-family--mono);
     font-weight: 300;
-    color: lighten($font-color--base, 40%);
+    color: lighten($font-color--base, 20%);
     font-size: smaller;
 
     @media (prefers-color-scheme: dark) {
-      color: darken($font-color--dark, 40%);
+      color: darken($font-color--dark, 20%);
     }
   }
 }

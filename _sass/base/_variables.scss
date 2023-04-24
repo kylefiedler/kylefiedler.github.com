@@ -1,39 +1,31 @@
 // Colors
-$blue: #0056DD;
-$blue--light: #459EFF;
-$blue--x-light: #DEEDFF;
-$purple: #3300E7;
-$purple--light: #A990FF;
-$purple--alt: #6A448A;
-$gray: #202325;
-$black: #000;
-$white: #fff;
-$yellow: #F9FFD8;
-$yellow--dark: #000;
-$green: #2F8E6F;
-$off-white: #EAE9E5;
+$blue: #1C335E;
+$blue--light: #DEEDFF;
+$black: #28473E;
+$white: #F9F8F4;
+$yellow: #FFF4BB;
+$orange: #BA643A;
 
 // Font Colors
 $font-color--base: $black;
 $font-color--dark: $white;
-$action-color: $blue;
-$action-color--dark: $blue--light;
-$action-color--alt: $purple;
-$action-color--alt-dark: $purple--light;
+$action-color: $orange;
+$action-color--dark: $yellow;
 $action-color--contrast: $white;
 $highlight: $yellow;
-$highlight--dark: $yellow--dark;
+$highlight--dark: $orange;
 
 // Background Colors
 $viewport-background-color: $white;
-$viewport-background-color--dark: $gray;
+$viewport-background-color--dark: $black;
 $screen--small: 26rem;
 $screen--mid: 34rem;
+$screen--lg: 64rem;
 
 :root {
   // Typography
   --font-family: "Office Times Round", Georgia, Times, "Times New Roman", serif;
-  --font-family--heading: var(--font-family);
+  --font-family--heading: "Basier Square", Helvetica, var(--font-family);
   --font-family--mono: "DM Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --font-weight--thin: 100;
@@ -64,7 +56,6 @@ $screen--mid: 34rem;
   // Focus
   --focus-outline-width: 2px;
   --focus-outline-offset: 0.125rem;
-  --focus-outline: var(--focus-outline-width) solid #{lighten($action-color--alt, 20%)};
 
   // Animations
   --duration: 150ms;

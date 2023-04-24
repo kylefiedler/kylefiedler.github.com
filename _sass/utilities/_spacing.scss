@@ -26,8 +26,18 @@
   margin-top: var(--spacing--large);
 }
 
+.mt--xl {
+  @media (min-width: $screen--small) {
+    margin-top: var(--spacing--xlarge);
+  }
+}
+
 .mt--xxl {
   @media (min-width: $screen--small) {
     margin-top: 8rem;
   }
+}
+
+.pr--base {
+  padding-right: var(--spacing);
 }
