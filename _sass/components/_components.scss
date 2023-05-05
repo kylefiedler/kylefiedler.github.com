@@ -17,9 +17,9 @@
 figcaption,
 .detail {
   font-family: var(--font-family--mono);
-  font-weight: 300;
   color: lighten($font-color--base, 15%);
   font-size: smaller;
+  display: block;
 
   @media (prefers-color-scheme: dark) {
     color: darken($font-color--dark, 15%);

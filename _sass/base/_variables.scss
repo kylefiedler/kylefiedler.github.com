@@ -1,19 +1,14 @@
 // Colors
-$blue: #1C335E;
-$blue--light: #DEEDFF;
-$black: #28473E;
-$white: #F9F8F4;
-$yellow: #FFF4BB;
-$orange: #BA643A;
+$black: #131210;
+$white: #EDEAE6;
 
 // Font Colors
+$highlight--base: #F5D473;
+$highlight--dark: #5c22c1;
 $font-color--base: $black;
 $font-color--dark: $white;
-$action-color: $orange;
-$action-color--dark: $yellow;
-$action-color--contrast: $white;
-$highlight: $yellow;
-$highlight--dark: $orange;
+$action-color: #0051D9;
+$action-color--dark: #2275FF;
 
 // Background Colors
 $viewport-background-color: $white;
@@ -25,7 +20,7 @@ $screen--lg: 64rem;
 :root {
   // Typography
   --font-family: "Office Times Round", Georgia, Times, "Times New Roman", serif;
-  --font-family--heading: "Basier Square", Helvetica, Arial, sans-serif;
+  --font-family--heading: "Basier Circle", Helvetica, Arial, sans-serif;
   --font-family--mono: "DM Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --font-weight--thin: 100;
@@ -54,8 +49,8 @@ $screen--lg: 64rem;
   --border: var(--border-width) solid currentColor;
 
   // Focus
-  --focus-outline-width: 2px;
-  --focus-outline-offset: 0.125rem;
+  --focus-outline-width: ;
+  --focus-outline-offset: ;
 
   // Animations
   --duration: 150ms;

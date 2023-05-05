@@ -19,10 +19,14 @@ body {
 }
 
 body {
-  max-width: 40rem;
-  padding: 4rem 10vw;
+  max-width: 44rem;
+  padding: 2rem;
   overflow-x: hidden;
   margin: 0 auto;
+
+  @media (min-width: $screen--lg) {
+    padding: 4rem;
+  } 
 }
 
 summary {
