@@ -50,7 +50,6 @@ p {
   }
 }
 
-summary,
 a {
   color: inherit;
   text-decoration-skip-ink: auto;
@@ -84,6 +83,7 @@ a {
       }
     }
   }
+
   &:visited::before {
    content: '☑'; 
   }
@@ -91,7 +91,7 @@ a {
 
 summary {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline-block;
   position: relative;
   outline-style: solid;
@@ -99,16 +99,20 @@ summary {
   outline-color: lighten($font-color--base, 10%);
   outline-offset: 0.25rem;
   border-radius: 1rem;
+  transition: color var(--duration) var(--timing);
+  color: inherit;
 
   @media (prefers-color-scheme: dark) {
     outline-color: lighten($font-color--dark, 10%);
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
+    color: $action-color;
     outline-color: $action-color;
 
     @media (prefers-color-scheme: dark) {
-      outline-color: $action-color--dark;
+      color: $action-color--dark;
     }
   }
 
@@ -154,7 +158,8 @@ em {
   font-family: var(--font-family--heading);
   font-weight: 400;
   font-style: normal;
-  font-size: 0.97rem;
+  font-size: 0.965rem;
+  line-height: 1.2;
   background: linear-gradient(0deg, $highlight--base 0%, $highlight--base $highight-height,  rgba($viewport-background-color, 0) $highight-height);
 
   @media (prefers-color-scheme: dark) {

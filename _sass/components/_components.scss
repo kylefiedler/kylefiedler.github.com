@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: var(--spacing);
-    margin-bottom: var(--spacing--small);
+    margin-bottom: 0.5rem;
 
     h3 {
       margin-bottom: 0;
