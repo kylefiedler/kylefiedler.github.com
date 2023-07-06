@@ -39,6 +39,14 @@ figcaption,
     margin-left: -10vw;
     margin-right: -10vw;
   }
+
+  img {
+    border: 1px solid $font-color--base;
+
+  @media (prefers-color-scheme: dark) {
+    border-color: $font-color--dark;
+  }
+}
 }
 
 .visited,
