@@ -45,6 +45,7 @@ h2 {
 p {
   margin: 0 0 0.25rem;
 
+  &.indent,
   + p {
     text-indent: 2rem;
   }
@@ -56,10 +57,7 @@ a {
   transition: color var(--duration) var(--timing);
 
   &:focus {
-    outline-style: solid;
-    outline-width: 1px;
-    outline-color: lighten($font-color--base, 10%);
-    outline-offset: 0.25rem;
+    outline-color: $action-color;
     border-radius: 1rem;
 
     @media (prefers-color-scheme: dark) {
@@ -69,6 +67,11 @@ a {
 
   &:hover {
     color: $action-color;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: lighten($font-color--base, 10%);
+    outline-offset: 0.25rem;
+    border-radius: 1rem;
     text-decoration: none;
 
     @media (prefers-color-scheme: dark) {
@@ -191,4 +194,8 @@ button {
   background: none;
   border: none;
   padding: 0;
+}
+
+.smaller {
+  font-size: smaller;
 }

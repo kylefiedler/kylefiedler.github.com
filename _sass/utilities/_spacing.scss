@@ -10,6 +10,12 @@
   margin-bottom: var(--spacing);
 }
 
+.mb--base-mobile {
+  @media (max-width: $screen--small) {
+    margin-bottom: var(--spacing);
+  }
+}
+
 .mb--large {
   margin-bottom: var(--spacing--large);
 }

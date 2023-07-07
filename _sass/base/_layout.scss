@@ -40,6 +40,41 @@ footer {
   li {
     display: inline-block;
     margin-bottom: var(--spacing--small);
-    margin-right: var(--spacing--small);
+    margin-left: var(--spacing--small);
   }
 } 
+
+.nav {
+  font-family: var(--font-family--heading);
+
+  @media (min-width: $screen--mid) {
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  ul {
+    display: flex;
+
+    @media (max-width: $screen--mid) {
+      margin-top: var(--spacing);
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    margin-right: var(--spacing);
+    font-size: smaller;
+
+    @media (min-width: $screen--mid) {
+      margin-right: 0;
+      margin-left: var(--spacing--large);
+    }
+  }
+}

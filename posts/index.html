@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="mb--xlarge">
+  <h2>Posts</h2>
+  <p class="border-bottom">A collection of things I find interesting across the internet. Occasionally, I actually <span class="gif">create my own content<img src="/images/gifs/typing.gif" alt="An animated gif of someone typing wildly at a computer in an office"></span>. <em>Ok, rarely.</em></p>
+  <ul>
+    {% for post in site.posts %}
+      <li class="time-n-title mb--base-mobile">
+        <time class="detail">{{ post.date | date: '%m.%Y' }}</time>
+        {% if post.external_url %}
+        <p><a href="{{post.external_url}}">{{ post.title }}</a> ↗</p>
+        {% else %}
+        <p><a href="{{post.url}}">{{ post.title }}</a></p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+</section>
