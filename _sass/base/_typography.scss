@@ -58,10 +58,9 @@ a {
 
   &:focus {
     outline-color: $action-color;
-    border-radius: 1rem;
 
     @media (prefers-color-scheme: dark) {
-      outline-color: lighten($font-color--dark, 10%);
+      outline-color: $action-color--dark;
     }
   }
 
@@ -76,6 +75,7 @@ a {
 
     @media (prefers-color-scheme: dark) {
       color: $action-color--dark;
+      outline-color: lighten($font-color--dark, 10%);
     }
 
     path {

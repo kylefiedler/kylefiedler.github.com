@@ -40,7 +40,14 @@ footer {
   li {
     display: inline-block;
     margin-bottom: var(--spacing--small);
-    margin-left: var(--spacing--small);
+
+    @media (max-width: $screen--mid) {
+      margin-right: var(--spacing--small);
+    }
+
+    @media (min-width: $screen--mid) {
+      margin-left: var(--spacing--small);
+    }
   }
 } 
 
