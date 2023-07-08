@@ -89,12 +89,12 @@ figcaption,
 .gif {
   position: relative;
   text-decoration: none;
-  border-bottom: 2px dotted lighten($font-color--base, 50%);
+  border-bottom: 2px dotted lighten($font-color--base, 15%);
   cursor: help;
   color: inherit;
 
   @media (prefers-color-scheme: dark) {
-    border-bottom-color: darken($font-color--dark, 50%);
+    border-bottom-color: darken($font-color--dark, 15%);
   }
 
   img {
