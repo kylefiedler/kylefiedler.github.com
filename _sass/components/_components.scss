@@ -185,6 +185,8 @@ figcaption,
     flex-direction: column;
     justify-content: center;
     transition: opacity 0.5s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     .detail {
       color: inherit;
