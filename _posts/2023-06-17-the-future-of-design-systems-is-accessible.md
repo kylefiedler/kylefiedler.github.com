@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building in accessibility from day one means beginning with a design system that’s accessible by default. By making sure that every design component and code element is aligned to accessibility standards at the outset, companies can prevent access issues further down the road."
+title: "&ldquo;Building in accessibility from day one means beginning with a design system that’s accessible by default. By making sure that every design component and code element is aligned to accessibility standards at the outset, companies can prevent access issues further down the road.&rdquo;"
 date: 2023-06-17 21:07
 ---
 

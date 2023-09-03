@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "&rdquo;Curiosity is the key to all four steps in doing great work: it will choose the field for you, get you to the frontier, cause you to notice the gaps in it, and drive you to explore them. The whole process is a kind of dance with curiosity.&ldquo;"
+title: "&ldquo;Curiosity is the key to all four steps in doing great work: it will choose the field for you, get you to the frontier, cause you to notice the gaps in it, and drive you to explore them. The whole process is a kind of dance with curiosity.&rdquo;"
 date: 2023-09-02 19:32
 ---
 
