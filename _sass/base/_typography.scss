@@ -12,10 +12,10 @@ html {
 }
 
 ::selection {
-  background-color: $highlight--base;
+  background-color: #9db6ff;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $highlight--dark;
+    background-color: #2856ff;
   }
 }
 
@@ -68,14 +68,14 @@ a {
     color: $action-color;
     outline-style: solid;
     outline-width: 1px;
-    outline-color: lighten($font-color--base, 10%);
+    outline-color: $action-color;
     outline-offset: 0.25rem;
     border-radius: 1rem;
     text-decoration: none;
 
     @media (prefers-color-scheme: dark) {
       color: $action-color--dark;
-      outline-color: lighten($font-color--dark, 10%);
+      outline-color: $action-color--dark;
     }
 
     path {
@@ -163,10 +163,12 @@ em {
   font-style: normal;
   font-size: 0.965rem;
   line-height: 1.2;
-  background: linear-gradient(0deg, $highlight--base 0%, $highlight--base $highight-height,  rgba($viewport-background-color, 0) $highight-height);
+  color: $highlight--base;
+  background: linear-gradient(0deg, darken($viewport-background-color, 6%) 0%, darken($viewport-background-color, 6%) $highight-height,  rgba($viewport-background-color, 0) $highight-height);
 
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(0deg, $highlight--dark 0%, $highlight--dark $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
+  color: $highlight--dark;
+    background: linear-gradient(0deg, lighten($viewport-background-color--dark, 6%) 0%, lighten($viewport-background-color--dark, 6%) $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
   }
 
   &::before {
