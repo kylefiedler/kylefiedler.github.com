@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The problem is when we think we’re talking about the same thing, but we’re not."
+title: "&ldquo;The problem is when we think we’re talking about the same thing, but we’re not.&rdquo;"
 date: 2023-11-21 09:50
 ---
 
