@@ -25,6 +25,7 @@ figcaption,
     color: darken($font-color--dark, 15%);
   }
 }
+
 .detail--list {
   font-family: var(--font-family--mono);
   color: lighten($font-color--base, 15%);
@@ -109,7 +110,7 @@ figcaption,
     display: none;
 
     @media (prefers-color-scheme: dark) {
-      box-shadow: 0 0 1rem rgba($font-color--dark, 0.2);
+      box-shadow: 0 0 1rem darken($viewport-background-color--dark, 6%);
     }
   }
 
@@ -184,7 +185,7 @@ figcaption,
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba($font-color--base, 0.7);
+    background-color: rgba($action-color, 0.7);
     color: $viewport-background-color;
     display: flex;
     flex-direction: column;
@@ -192,6 +193,11 @@ figcaption,
     transition: opacity 0.5s ease-in-out;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @media (prefers-color-scheme: dark) {
+    color: $viewport-background-color--dark;
+    background-color: rgba($action-color--dark, 0.7);
+    }
 
     .detail {
       color: inherit;
