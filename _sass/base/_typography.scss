@@ -161,25 +161,25 @@ em {
   font-family: var(--font-family--heading);
   font-weight: 400;
   font-style: normal;
-  font-size: 0.965rem;
-  line-height: 1.2;
-  color: $highlight--base;
-  background: linear-gradient(0deg, darken($viewport-background-color, 6%) 0%, darken($viewport-background-color, 6%) $highight-height,  rgba($viewport-background-color, 0) $highight-height);
+  // font-size: 0.965rem;
+  // line-height: 1.2;
+  // color: $highlight--base;
+  // background: linear-gradient(0deg, darken($viewport-background-color, 6%) 0%, darken($viewport-background-color, 6%) $highight-height,  rgba($viewport-background-color, 0) $highight-height);
 
   @media (prefers-color-scheme: dark) {
-  color: $highlight--dark;
-    background: linear-gradient(0deg, lighten($viewport-background-color--dark, 6%) 0%, lighten($viewport-background-color--dark, 6%) $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
+  // color: $highlight--dark;
+    // background: linear-gradient(0deg, lighten($viewport-background-color--dark, 6%) 0%, lighten($viewport-background-color--dark, 6%) $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
   }
 
-  &::before {
-    content: '∗';
-    padding-right: 0.25rem;
-  }
+  // &::before {
+  //   content: '∗';
+  //   padding-right: 0.25rem;
+  // }
 
-  &::after {
-    content: '∗';
-    padding-left: 0.25rem;
-  }
+  // &::after {
+  //   content: '∗';
+  //   padding-left: 0.25rem;
+  // }
 }
 
 blockquote {
