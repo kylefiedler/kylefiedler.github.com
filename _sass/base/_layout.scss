@@ -1,12 +1,3 @@
-html {
-  background-color: $viewport-background-color;
-  box-sizing: border-box;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $viewport-background-color--dark;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -15,17 +6,22 @@ html {
 
 html,
 body {
-  height: 100%;
+  background-color: $viewport-background-color;
+  box-sizing: border-box;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $viewport-background-color--dark;
+  }
 }
 
 body {
-  max-width: 44rem;
+  max-width: 38rem;
   padding: 2rem;
   overflow-x: hidden;
   margin: 0 auto;
 
   @media (min-width: $screen--lg) {
-    padding: 4rem;
+    padding: 2rem 3rem;
   } 
 }
 
@@ -35,7 +31,6 @@ summary {
 
 footer {
   padding-top: var(--spacing--large);
-  padding-bottom: var(--spacing--large);
 
   li {
     display: inline-block;
@@ -81,3 +76,11 @@ footer {
     }
   }
 }
+
+// body.posts .posts,
+// body.work .projects,
+// body.index .about {
+//   outline-color: darken($viewport-background-color, 25%);
+// }
+
+

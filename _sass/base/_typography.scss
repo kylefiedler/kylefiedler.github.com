@@ -8,14 +8,15 @@ html {
     color: darken($font-color--dark, 5%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
   }
 }
 
 ::selection {
-  background-color: #fffa72;
+  background-color: $highlight--base;
 
   @media (prefers-color-scheme: dark) {
-    background-color: #2430a4;
+    background-color: $highlight--dark;
   }
 }
 
@@ -30,7 +31,8 @@ h6 {
   font-size: 1rem;
   line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.0125em;
 
   @media (prefers-color-scheme: dark) {
     color: $font-color--dark;
@@ -54,7 +56,12 @@ p {
 a {
   color: inherit;
   text-decoration-skip-ink: auto;
-  transition: color var(--duration) var(--timing);
+  transition: color, outline-color var(--duration) var(--timing);
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: transparent;
+  outline-offset: 0.25rem;
+  border-radius: 1rem;
 
   &:focus {
     outline-color: $action-color;
@@ -66,11 +73,7 @@ a {
 
   &:hover {
     color: $action-color;
-    outline-style: solid;
-    outline-width: 1px;
     outline-color: $action-color;
-    outline-offset: 0.25rem;
-    border-radius: 1rem;
     text-decoration: none;
 
     @media (prefers-color-scheme: dark) {
@@ -156,30 +159,24 @@ path {
 }
 
 em {
-  $highight-height: 32%;
-
-  font-family: var(--font-family--heading);
-  font-weight: 400;
+  $highight-height: 48%;
+  font-family: var(--font-family--mono);
   font-style: normal;
-  // font-size: 0.965rem;
-  // line-height: 1.2;
-  // color: $highlight--base;
-  // background: linear-gradient(0deg, darken($viewport-background-color, 6%) 0%, darken($viewport-background-color, 6%) $highight-height,  rgba($viewport-background-color, 0) $highight-height);
+  letter-spacing: -0.025em;
+  font-weight: normal;
+  background: linear-gradient(0deg, $highlight--base 0%, $highlight--base $highight-height,  rgba($viewport-background-color, 0) $highight-height);
 
-  @media (prefers-color-scheme: dark) {
-  // color: $highlight--dark;
-    // background: linear-gradient(0deg, lighten($viewport-background-color--dark, 6%) 0%, lighten($viewport-background-color--dark, 6%) $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
+    @media (prefers-color-scheme: dark) {
+        background: linear-gradient(0deg, $highlight--dark 0%, $highlight--dark $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
+      }
   }
 
-  // &::before {
-  //   content: '∗';
-  //   padding-right: 0.25rem;
-  // }
+.entity {
+  color: lighten($font-color--base, 50%);
 
-  // &::after {
-  //   content: '∗';
-  //   padding-left: 0.25rem;
-  // }
+  @media (prefers-color-scheme: dark) {
+    color: lighten($font-color--dark, 50%);
+  }
 }
 
 blockquote {

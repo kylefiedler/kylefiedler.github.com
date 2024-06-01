@@ -1,14 +1,14 @@
 // Colors
-$black: #142900;
-$white: #F8F8F5;
+$black: #212121;
+$white: #fff;
 
 // Font Colors
-$highlight--base: #0b0b0b;
-$highlight--dark: #ffffff;
+$highlight--base: #FFF6E2;
+$highlight--dark: #332a4d;
 $font-color--base: $black;
 $font-color--dark: $white;
 $action-color: #7332ff;
-$action-color--dark: #cbc5ff;
+$action-color--dark: #76a1ff;
 
 // Background Colors
 $viewport-background-color: $white;
@@ -19,9 +19,9 @@ $screen--lg: 64rem;
 
 :root {
   // Typography
-  --font-family: "Office Times Round", Georgia, Times, "Times New Roman", serif;
+  --font-family: "Basier Circle", Helvetica, Arial, sans-serif;
   --font-family--heading: "Basier Circle", Helvetica, Arial, sans-serif;
-  --font-family--mono: "DM Mono", ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-family--mono: "Basier Circle Mono", ui-monospace, monospace;
 
   --font-weight--thin: 100;
   --font-weight--extra-light: 200;

@@ -19,26 +19,11 @@ figcaption,
   font-family: var(--font-family--mono);
   color: lighten($font-color--base, 15%);
   font-size: smaller;
+  font-weight: normal;
   display: block;
 
   @media (prefers-color-scheme: dark) {
     color: darken($font-color--dark, 15%);
-  }
-}
-
-.detail--list {
-  font-family: var(--font-family--mono);
-  color: lighten($font-color--base, 15%);
-  font-size: smaller;
-  margin-top: var(--spacing);
-
-  @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 15%);
-  }
-
-  @media (min-width: $screen--mid) {
-    margin-top: var(--spacing--large);
-    margin-left: var(--spacing);
   }
 }
 
@@ -69,22 +54,6 @@ figcaption,
 .visited,
 .strikethrough {
   text-decoration: line-through;
-}
-
-.coming-soon {
-  font-family: var(--font-family--mono);
-  font-weight: 300;
-  font-size: smaller;
-  margin-left: 0.25rem;
-  padding: 0 0.25rem;
-  display: inline-block;
-  background-color: darken($viewport-background-color, 3%);
-  color: lighten($font-color--base, 10%);
-
-  @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 10%);
-    background-color: lighten($viewport-background-color--dark, 3%);
-  }
 }
 
 .gif {
@@ -146,7 +115,7 @@ figcaption,
 }
 
 .border-top {
-  border-top: 1px solid darken($viewport-background-color, 6%);
+  border-top: 1px solid darken($viewport-background-color, 15%);
   padding-top: var(--spacing--large);
   margin-top: var(--spacing--large);
 
@@ -156,7 +125,7 @@ figcaption,
 }
 
 .border-bottom {
-  border-bottom: 1px solid darken($viewport-background-color, 6%);
+  border-bottom: 1px solid darken($viewport-background-color, 15%);
   padding-bottom: var(--spacing--large);
   margin-bottom: var(--spacing--large);
 
