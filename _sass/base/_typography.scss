@@ -27,21 +27,13 @@ h4,
 h5,
 h6 {
   color: $font-color--base;
-  font-family: var(--font-family--heading);
   font-size: 1rem;
-  line-height: var(--line-height--heading);
   margin: 0 0 var(--spacing--small);
-  font-weight: 500;
-  letter-spacing: -0.0125em;
+  font-weight: normal;
 
   @media (prefers-color-scheme: dark) {
     color: $font-color--dark;
   }
-}
-
-h1, 
-h2 {
-  margin: 0 0 var(--spacing);
 }
 
 p {
@@ -89,49 +81,6 @@ a {
       }
     }
   }
-
-  &:visited::before {
-   content: '☑'; 
-  }
-}
-
-summary {
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: lighten($font-color--base, 10%);
-  outline-offset: 0.25rem;
-  border-radius: 1rem;
-  transition: color var(--duration) var(--timing);
-  color: inherit;
-
-  @media (prefers-color-scheme: dark) {
-    outline-color: lighten($font-color--dark, 10%);
-  }
-
-  &:focus,
-  &:hover {
-    color: $action-color;
-    outline-color: $action-color;
-
-    @media (prefers-color-scheme: dark) {
-      color: $action-color--dark;
-    }
-  }
-
-  &::-webkit-details-marker,
-  &::marker {
-    display: none;
-  }
-
-  &::before {
-    position: absolute;
-    left: -1.5rem;
-    content: "→";
-  }
 }
 
 dt {
@@ -166,16 +115,8 @@ em {
   font-weight: normal;
   background: linear-gradient(0deg, $highlight--base 0%, $highlight--base $highight-height,  rgba($viewport-background-color, 0) $highight-height);
 
-    @media (prefers-color-scheme: dark) {
-        background: linear-gradient(0deg, $highlight--dark 0%, $highlight--dark $highight-height,  rgba($viewport-background-color--dark, 0) $highight-height);
-      }
-  }
-
-.entity {
-  color: lighten($font-color--base, 50%);
-
   @media (prefers-color-scheme: dark) {
-    color: lighten($font-color--dark, 50%);
+    background: linear-gradient(0deg, $highlight--dark 0%, $highlight--dark $highight-height, rgba($viewport-background-color--dark, 0) $highight-height);
   }
 }
 

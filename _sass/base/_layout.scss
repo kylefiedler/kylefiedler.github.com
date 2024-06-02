@@ -21,12 +21,8 @@ body {
   margin: 0 auto;
 
   @media (min-width: $screen--lg) {
-    padding: 2rem 3rem;
+    padding: 8rem 3rem 2rem;
   } 
-}
-
-summary {
-  margin-bottom: var(--spacing--small);
 }
 
 footer {
@@ -47,40 +43,17 @@ footer {
 } 
 
 .nav {
-  font-family: var(--font-family--heading);
+  margin-bottom: var(--spacing--large);
 
-  @media (min-width: $screen--mid) {
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: $screen--lg) {
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+    margin-bottom: 0;
+    z-index: 99;
   } 
-
-  ul {
-    display: flex;
-
-    @media (max-width: $screen--mid) {
-      margin-top: var(--spacing);
-    }
-  }
 
   a {
     text-decoration: none;
   }
-
-  li {
-    margin-right: var(--spacing);
-    font-size: smaller;
-
-    @media (min-width: $screen--mid) {
-      margin-right: 0;
-      margin-left: var(--spacing--large);
-    }
-  }
 }
-
-// body.posts .posts,
-// body.work .projects,
-// body.index .about {
-//   outline-color: darken($viewport-background-color, 25%);
-// }
-
-

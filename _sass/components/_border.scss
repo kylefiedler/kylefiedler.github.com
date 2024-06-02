@@ -1,0 +1,19 @@
+.border-top {
+  border-top: 1px solid darken($viewport-background-color, 15%);
+  padding-top: var(--spacing--large);
+  margin-top: var(--spacing--large);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: lighten($viewport-background-color--dark, 6%);
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid darken($viewport-background-color, 15%);
+  padding-bottom: var(--spacing--large);
+  margin-bottom: var(--spacing--large);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: lighten($viewport-background-color--dark, 6%);
+  }
+}

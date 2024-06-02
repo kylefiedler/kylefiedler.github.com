@@ -3,6 +3,7 @@ layout: default
 class: work
 ---
 
+<section class="border-bottom">
 <h1>Enabling Web3 Developers <em>to scale their network requests seamlessly</em></h1>
 
 <ul class="project-specs">
@@ -15,9 +16,10 @@ class: work
     <p>2021-2023</p>
   </li>
 </ul>
+  <p>Infura was looking to add new networks, Near and Aurora, to the other Ethereum networks under the Ethereum API. The challenge was that Near was going to be added to Ethereum API but it was a separate Layer 1 network, not connected to the Ethereum ecosystem. Since this was the first Layer 1 network that was under the same API Key. To build up my initial understanding, I ran through our ideal user journey for developers to add new networks to their API Keys. While navigating through the workflow, I mapped out the steps in a Figjam document and quickly ran into several points of friction through the user experience. Investigating the issues a little more, I dug into our analytics to check out what the drop-off rate was on the steps to sending requests to a Key, specifically identifying how many Keys were created with no requests. It was evident that we were not hitting the desired path to getting our users to send requests.</p>
+</section>
 
 <section>
-  <p>Infura was looking to add new networks, Near and Aurora, to the other Ethereum networks under the Ethereum API. The challenge was that Near was going to be added to Ethereum API but it was a separate Layer 1 network, not connected to the Ethereum ecosystem. Since this was the first Layer 1 network that was under the same API Key. To build up my initial understanding, I ran through our ideal user journey for developers to add new networks to their API Keys. While navigating through the workflow, I mapped out the steps in a Figjam document and quickly ran into several points of friction through the user experience. Investigating the issues a little more, I dug into our analytics to check out what the drop-off rate was on the steps to sending requests to a Key, specifically identifying how many Keys were created with no requests. It was evident that we were not hitting the desired path to getting our users to send requests.</p>
 
   <p>I ran an initial workshop, a Design Jam, with some product and design folks to identify the priority of each of these issues. After the workshop, the team agreed that we should move forward with two streams: </p>
   <ol class="numbered">
@@ -232,3 +234,5 @@ class: work
     </li>
   </ul>
 </section>
+
+{% include work.html %}
