@@ -1,14 +1,15 @@
 html {
-  color: lighten($font-color--base, 4%);
+  color: $font-color--base;
   font-family: var(--font-family);
   font-size: clamp(125%, 2.25vw, 1.75rem);
   line-height: var(--line-height);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 
   @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 5%);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smooth: always;
+    color: $font-color--dark;
   }
 }
 
@@ -110,6 +111,7 @@ path {
 em {
   $highight-height: 48%;
   font-family: var(--font-family--mono);
+  font-size: 0.95rem;
   font-style: normal;
   letter-spacing: -0.025em;
   font-weight: normal;

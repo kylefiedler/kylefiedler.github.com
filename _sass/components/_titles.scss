@@ -4,13 +4,18 @@ h1,
   line-height: var(--line-height--heading);
   font-weight: 500;
   letter-spacing: -0.0125em;
-  margin: 0 0 var(--spacing);
+  color: darken($font-color--base, 15%);
+  font-size: 1.0125rem;
+
+  @media (prefers-color-scheme: dark) {
+    color: lighten($font-color--dark, 15%);
+  }
 }
 
 .title--secondary {
   font-family: var(--font-family--mono);
-  color: lighten($font-color--base, 15%);
-  font-size: smaller;
+  color: lighten($font-color--base, 25%);
+  font-size: 0.85rem;
   font-weight: normal;
 
   @media (prefers-color-scheme: dark) {

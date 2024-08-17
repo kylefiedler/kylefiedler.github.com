@@ -13,6 +13,10 @@
     h3 {
       margin-bottom: 0;
     }
+
+    time {
+      margin-top: 0.25rem;
+    }
   }
 }
 
@@ -28,7 +32,7 @@ figcaption,
 .detail {
   font-family: var(--font-family--mono);
   color: lighten($font-color--base, 35%);
-  font-size: smaller;
+  font-size: 0.65rem;
   font-weight: normal;
 
   @media (prefers-color-scheme: dark) {
@@ -51,11 +55,9 @@ figcaption,
 
   img {
     border: 1px solid darken($viewport-background-color, 8%);
-    box-shadow: 0 0 0.25rem darken($viewport-background-color, 4%);
 
     @media (prefers-color-scheme: dark) {
       border-color: lighten($viewport-background-color--dark, 3%);
-    box-shadow: 0 0 0.25rem darken($viewport-background-color--dark, 4%);
     }
   }
 }
