@@ -43,7 +43,7 @@ footer {
 } 
 
 .nav {
-  margin-bottom: var(--spacing--large);
+  margin-bottom: 6rem;
 
   @media (min-width: $screen--lg) {
     position: fixed;
@@ -54,10 +54,10 @@ footer {
   } 
 
   path {
-    stroke: $blue;
+    stroke: lighten($font-color--base, 35%);
 
     @media (prefers-color-scheme: dark) {
-      stroke: $blue--dark;
+      stroke: darken($font-color--dark, 35%);
     }
   }
 
