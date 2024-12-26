@@ -3,15 +3,19 @@ layout: default
 class: posts
 ---
 
-<section class="mb--xlarge">
+<header class="header--primary">
   <h1>Posts</h1>
-  <p class="border-bottom">A collection of things I find interesting across the internet. Occasionally, I actually <span class="gif">create my own content<img src="/images/gifs/typing.gif" alt="An animated gif of someone typing wildly at a computer in an office"></span>. <em>Ok, rarely.</em></p>
-  <ul>
+  <p>A collection of things I find interesting across the internet. Occasionally, I actually <span class="gif">create my own content<img src="/images/gifs/typing.gif" alt="An animated gif of someone typing wildly at a computer in an office"></span>. Ok, rarely.</p>
+</header>
+
+<section class="grid seven">
+  <ul class="span-5">
     {% for post in site.posts %}
       <li class="time-n-title mb--base-mobile">
         <time class="detail">{{ post.date | date: '%m.%Y' }}</time>
+        <hr />
         {% if post.external_url %}
-        <p><a href="{{post.external_url}}">{{ post.title }}</a> ↗</p>
+        <p><a href="{{post.external_url}}">{{ post.title }}<span class="icons">{% include icons/share.svg %} </span><span class="visually-hidden">external</span></a></p>
         {% else %}
         <p><a href="{{post.url}}">{{ post.title }}</a></p>
         {% endif %}

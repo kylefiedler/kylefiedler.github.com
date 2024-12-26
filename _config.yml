@@ -1,10 +1,8 @@
 title: Kyle Fiedler
-description: I’m probably eating a taco
+description: Probably eating a taco
 
 plugins:
-  - jekyll-paginate
   - jekyll-feed
-  - jemoji
   - jekyll-sitemap
 
 sass:
@@ -13,3 +11,4 @@ sass:
 
 exclude:
   - README
+  - node_modules

@@ -1,3 +1,12 @@
+.header--primary {
+  @extend .border-bottom--large;
+  padding-bottom: var(--spacing--large);
+
+  h1, p {
+    max-width: 58.2rem;
+  }
+}
+
 h1,
 .title--primary {
   font-family: var(--font-family--heading);
@@ -16,9 +25,16 @@ h1,
   font-family: var(--font-family--mono);
   color: lighten($font-color--base, 25%);
   font-size: 0.85rem;
+  text-transform: uppercase;
   font-weight: normal;
+  margin-bottom: var(--spacing);
 
   @media (prefers-color-scheme: dark) {
     color: darken($font-color--dark, 15%);
   }
+}
+
+.data {
+  margin-top: -2rem;
+  font-size: 4rem;
 }

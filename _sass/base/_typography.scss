@@ -1,7 +1,7 @@
 html {
   color: $font-color--base;
   font-family: var(--font-family);
-  font-size: clamp(125%, 2.25vw, 1.75rem);
+  font-size: 1.25rem;
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,6 +35,10 @@ h6 {
   @media (prefers-color-scheme: dark) {
     color: $font-color--dark;
   }
+}
+
+strong {
+  font-weight: 500;
 }
 
 p {
@@ -108,20 +112,6 @@ path {
   }
 }
 
-em {
-  $highight-height: 48%;
-  font-family: var(--font-family--mono);
-  font-size: 0.95rem;
-  font-style: normal;
-  letter-spacing: -0.025em;
-  font-weight: normal;
-  background: linear-gradient(0deg, $highlight--base 0%, $highlight--base $highight-height,  rgba($viewport-background-color, 0) $highight-height);
-
-  @media (prefers-color-scheme: dark) {
-    background: linear-gradient(0deg, $highlight--dark 0%, $highlight--dark $highight-height, rgba($viewport-background-color--dark, 0) $highight-height);
-  }
-}
-
 blockquote {
   margin-left: 0;
   padding-left: var(--spacing);
@@ -140,4 +130,20 @@ button {
 
 .smaller {
   font-size: smaller;
+}
+
+figcaption,
+.detail {
+  font-family: var(--font-family--mono);
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: lighten($font-color--base, 35%);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 35%);
+  }
+
+  h4 {
+    font-size: 0.875rem;
+  }
 }

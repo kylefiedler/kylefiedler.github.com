@@ -1,5 +1,6 @@
 .disc {
   list-style-type: disc;
+  margin-left: var(--spacing--small);
 
   ul {
     margin-left: var(--spacing--small);
@@ -9,6 +10,7 @@
 
 .circle {
   list-style-type: circle;
+  margin-left: var(--spacing--small);
 
   ul {
     margin-left: var(--spacing--small);

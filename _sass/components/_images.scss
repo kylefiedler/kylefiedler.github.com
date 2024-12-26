@@ -1,0 +1,12 @@
+.images {
+  margin-bottom: var(--spacing);
+  gap: var(--spacing);
+
+  img {
+    border: 1px solid darken($viewport-background-color, 8%);
+
+    @media (prefers-color-scheme: dark) {
+      border-color: lighten($viewport-background-color--dark, 3%);
+    }
+  }
+}

@@ -1,3 +1,27 @@
+.grid {
+  @media (min-width: $screen--mid) {
+    display: grid;
+  }
+}
+
+.cell {
+  padding: var(--spacing) 0 var(--spacing);
+
+  @media (min-width: $screen--mid) {
+    padding: var(--spacing--large) var(--spacing) var(--spacing);
+  }
+
+  &--first,
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &--last,
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
 .two-one {
   grid-template-columns: 2fr 1fr;
 }
@@ -18,8 +42,46 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.seven {
+  @media (min-width: $screen--small) {
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+
+  @media (min-width: $screen--mid) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  }
+}
+
 .span-2 {
+  @extend .cell;
   grid-column: span 2;
+}
+
+.span-3 {
+  @extend .cell;
+  @media (min-width: $screen--mid){
+    grid-column: span 3;
+  }
+}
+
+.span-4 {
+  @extend .cell;
+  @media (min-width: $screen--small) {
+    grid-column: span 2;
+  }
+  @media (min-width: $screen--mid){
+    grid-column: span 4;
+  }
+}
+
+.span-5 {
+  @extend .cell;
+  @media (min-width: $screen--small) {
+    grid-column: span 2;
+  }
+  @media (min-width: $screen--mid){
+    grid-column: span 5;
+  }
 }
 
 .row-span-2 {

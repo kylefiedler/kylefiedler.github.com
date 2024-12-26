@@ -1,0 +1,35 @@
+.icons {
+  display: inline-block;
+  position: relative;
+  top: 0.25rem;
+  color: lighten($font-color--base, 50%);
+
+  @media (prefers-color-scheme: dark) {
+    color: lighten($font-color--dark, 50%);
+  }
+
+  path {
+    stroke: lighten($font-color--base, 50%);
+
+    @media (prefers-color-scheme: dark) {
+      stroke: lighten($font-color--dark, 50%);
+    }
+  }
+}
+
+.icons-link {
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $action-color;
+    outline: none;
+
+    path {
+      stroke: $action-color;
+
+      @media (prefers-color-scheme: dark) {
+        stroke: $action-color--dark;
+      }
+    }
+  }
+}

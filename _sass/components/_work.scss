@@ -1,0 +1,39 @@
+.work {
+  section {
+    margin-bottom: var(--spacing--large);
+  }
+
+  p, li {
+    max-width: 58.2rem;
+  }
+}
+
+.work-images {
+  a {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    display: block;
+  }
+
+  img {
+    display: block;
+  }
+
+}
+
+.project-specs {
+  margin-bottom: var(--spacing);
+
+  p, h3 {
+    display: inline-block;
+    margin-bottom: 0;
+    font-family: var(--font-family--mono);
+    font-weight: 300;
+    color: lighten($font-color--base, 20%);
+    font-size: smaller;
+
+    @media (prefers-color-scheme: dark) {
+      color: darken($font-color--dark, 20%);
+    }
+  }
+}

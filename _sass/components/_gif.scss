@@ -1,0 +1,34 @@
+.gif {
+  position: relative;
+  text-decoration: none;
+  border-bottom: 2px dotted lighten($font-color--base, 15%);
+  cursor: help;
+  color: inherit;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: darken($font-color--dark, 15%);
+  }
+
+  img {
+    position: absolute;
+    bottom: 1.5rem;
+    right: calc(50% - 5rem);
+    visibility: hidden;
+    opacity: 0%;
+    min-width: 10rem;
+    max-height: 10rem;
+    box-shadow: 0 0 1rem rgba($font-color--base, 0.2);
+    display: none;
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 0 1rem darken($viewport-background-color--dark, 6%);
+    }
+  }
+
+  &:active img,
+  &:hover img {
+    display: block;
+    visibility: visible;
+    opacity: 100%;
+  }
+}

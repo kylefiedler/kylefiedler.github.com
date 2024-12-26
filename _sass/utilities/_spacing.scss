@@ -43,6 +43,9 @@
     margin-top: 8rem;
   }
 }
+.pt--large {
+  padding-top: var(--spacing--large);
+}
 
 .pr--base {
   padding-right: var(--spacing);

@@ -16,20 +16,21 @@
   justify-content: space-between;
 }
 
-.grid {
-  @media (min-width: $screen--mid) {
-    gap: var(--spacing);
-    display: grid;
-  }
-}
-
 .masonry {
   @media (min-width: $screen--mid) {
-  column-count: 2;
-  gap: var(--spacing);
-}
+    column-count: 2;
+    gap: var(--spacing);
+  }
 }
 
 .break-inside-avoid {
   break-inside: avoid-column;
+}
+
+.quote {
+  display: flex;
+
+  .icons {
+    margin-right: var(--spacing);
+  }
 }

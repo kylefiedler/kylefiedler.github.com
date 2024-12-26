@@ -1,0 +1,33 @@
+.time-n-title {
+  margin-bottom: 1rem;
+
+  @media (min-width: $screen--mid) {
+    display: grid;
+    grid-template-columns: auto 1fr 6fr;
+    gap: var(--spacing);
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  hr {
+    position: relative;
+    top: 0.75rem;
+    margin: 0;
+    border-color: darken($viewport-background-color, 15%);
+
+    @media (max-width: $screen--mid) {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      border-color: lighten($viewport-background-color--dark, 15%);
+    }
+  }
+
+  time {
+    margin-top: 0.15rem;
+  }
+}

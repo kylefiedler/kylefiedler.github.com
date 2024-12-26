@@ -15,12 +15,12 @@ body {
 }
 
 body {
-  max-width: 38rem;
+  max-width: 87.5rem;
   padding: 2rem;
   overflow-x: hidden;
   margin: 0 auto;
 
-  @media (min-width: $screen--lg) {
+  @media (min-width: $screen--mid) {
     padding: 8rem 3rem 2rem;
   } 
 }
@@ -45,20 +45,8 @@ footer {
 .nav {
   margin-bottom: 6rem;
 
-  @media (min-width: $screen--lg) {
-    position: fixed;
-    left: 2rem;
-    top: 2rem;
-    margin-bottom: 0;
-    z-index: 99;
-  } 
-
-  path {
-    stroke: lighten($font-color--base, 35%);
-
-    @media (prefers-color-scheme: dark) {
-      stroke: darken($font-color--dark, 35%);
-    }
+  svg {
+    max-width: 3rem;
   }
 
   a {
