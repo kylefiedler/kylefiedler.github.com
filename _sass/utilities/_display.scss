@@ -16,16 +16,21 @@
   justify-content: space-between;
 }
 
+.break-inside-avoid {
+  break-inside: avoid-column;
+}
+
 .masonry {
   @media (min-width: $screen--mid) {
     column-count: 2;
     gap: var(--spacing);
   }
+
+  li {
+    @extend .break-inside-avoid;
+  }
 }
 
-.break-inside-avoid {
-  break-inside: avoid-column;
-}
 
 .quote {
   display: flex;
