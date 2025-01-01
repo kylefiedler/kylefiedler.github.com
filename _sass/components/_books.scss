@@ -1,0 +1,29 @@
+.books {
+  > li {
+    @extend .border-top;
+    @extend .span-3;
+    margin-top: var(--spacing--large);
+
+    &:nth-child(1), &:nth-child(2) {
+      margin-top: 0;
+      border-top: 0;
+    }
+
+    &:nth-of-type(odd) {
+      @extend .border-right;
+      padding-left: 0;
+    } 
+  }
+
+  li li {
+   margin-bottom: var(--spacing);
+  }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  p {
+    @extend .detail;
+  }
+}

@@ -19,17 +19,4 @@
 
 .icons-link {
   text-decoration: none;
-
-  &:hover, &:focus {
-    color: $action-color;
-    outline: none;
-
-    path {
-      stroke: $action-color;
-
-      @media (prefers-color-scheme: dark) {
-        stroke: $action-color--dark;
-      }
-    }
-  }
 }

@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
 
-  @media (min-width: $screen--mid) {
+  @media (min-width: $screen--lg) {
     padding: 8rem 3rem 2rem;
   } 
 }

@@ -33,6 +33,8 @@
 }
 
 .mt--xl {
+  margin-top: var(--spacing--base);
+
   @media (min-width: $screen--small) {
     margin-top: var(--spacing--xlarge);
   }
