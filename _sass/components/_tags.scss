@@ -1,0 +1,12 @@
+.tags {
+  li {
+    border: 1px solid $border-color--light;
+    padding: 0.125rem var(--spacing--xsmall);
+    display: inline-block;
+    margin-bottom: var(--spacing--xsmall);
+    
+    @media (prefers-color-scheme: dark) {
+      border-color: $border-color--dark;
+    }
+  }
+}

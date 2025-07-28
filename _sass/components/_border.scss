@@ -1,67 +1,67 @@
 .border-top--large {
-  border-top: 2px solid darken($viewport-background-color, 15%);
+  border-top: 2px solid $border-color--light;
 
   @media (prefers-color-scheme: dark) {
-    border-color: lighten($viewport-background-color--dark, 15%);
+    border-color: $border-color--dark;
   }
 }
 
 .border-bottom--large {
-  border-bottom: 2px solid darken($viewport-background-color, 15%);
+  border-bottom: 2px solid $border-color--light;
 
   @media (prefers-color-scheme: dark) {
-    border-color: lighten($viewport-background-color--dark, 15%);
+    border-color: $border-color--dark;
   }
 }
 
 .border-top {
-  border-top: 1px solid darken($viewport-background-color, 15%);
+  border-top: 1px solid $border-color--light;
 
   @media (prefers-color-scheme: dark) {
-    border-color: lighten($viewport-background-color--dark, 15%);
+    border-color: $border-color--dark;
   }
 }
 
 .border-right {
   @media (max-width: $screen--mid) {
-    border-bottom: 1px solid darken($viewport-background-color, 15%);
+    border-bottom: 1px solid $border-color--light;
 
     @media (prefers-color-scheme: dark) {
-      border-color: lighten($viewport-background-color--dark, 15%);
+      border-color: $border-color--dark;
     }
   }
 
   @media (min-width: $screen--mid) {
-    border-right: 1px solid darken($viewport-background-color, 15%);
+    border-right: 1px solid $border-color--light;
 
     @media (prefers-color-scheme: dark) {
-      border-color: lighten($viewport-background-color--dark, 15%);
+      border-color: $border-color--dark;
     }
   }
 }
 
 .border-left {
   @media (max-width: $screen--mid) {
-    border-top: 1px solid darken($viewport-background-color, 15%);
+    border-top: 1px solid $border-color--light;
 
     @media (prefers-color-scheme: dark) {
-      border-color: lighten($viewport-background-color--dark, 15%);
+      border-color: $border-color--dark;
     }
   }
 
   @media (min-width: $screen--mid) {
-    border-left: 1px solid darken($viewport-background-color, 15%);
+    border-left: 1px solid $border-color--light;
 
     @media (prefers-color-scheme: dark) {
-      border-color: lighten($viewport-background-color--dark, 15%);
+      border-color: $border-color--dark;
     }
   }
 }
 
 .border-bottom {
-  border-bottom: 1px solid darken($viewport-background-color, 15%);
+  border-bottom: 1px solid $border-color--light;
 
   @media (prefers-color-scheme: dark) {
-    border-color: lighten($viewport-background-color--dark, 15%);
+    border-color: $border-color--dark;
   }
 }

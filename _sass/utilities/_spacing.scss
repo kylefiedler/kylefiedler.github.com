@@ -45,8 +45,15 @@
     margin-top: 8rem;
   }
 }
+
 .pt--large {
   padding-top: var(--spacing--large);
+}
+.pb--base {
+  padding-bottom: var(--spacing);
+}
+.pb--large {
+  padding-bottom: var(--spacing--large);
 }
 
 .pr--base {

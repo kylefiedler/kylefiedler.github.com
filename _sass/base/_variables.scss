@@ -1,20 +1,25 @@
 // Colors
 $black: #111;
-$black--alt: #242a2b;
+$black--alt: #191a1f;
 $white: #F4F3EC;
 $white--alt: #F6f6f6;
 
 // Font Colors
 $highlight--base: #fff6c0;
-$highlight--dark: #000;
+$highlight--dark: #2f8100b8;
 $font-color--base: $black;
 $font-color--dark: $white--alt;
 $action-color: #7332ff;
-$action-color--dark: #D0BAE3;
+$action-color--dark: #cb8fff;
 
 // Background Colors
 $viewport-background-color: $white;
 $viewport-background-color--dark: $black--alt;
+// Border colors
+$border-color--light: #e4e1d5;
+$border-color--dark: #2f303a;
+
+// Screen size
 $screen--small: 26rem;
 $screen--mid: 60rem;
 $screen--lg: 64rem;
@@ -42,6 +47,7 @@ $screen--lg: 64rem;
   // Other Sizes
   --border-radius: 0.1875rem;
   --spacing: 1.5rem;
+  --spacing--xsmall: 0.25rem;
   --spacing--small: 0.75rem;
   --spacing--large: 3rem;
   --spacing--xlarge: 4.5rem;
@@ -49,10 +55,6 @@ $screen--lg: 64rem;
   // Borders
   --border-width: 0.0625rem;
   --border: var(--border-width) solid currentColor;
-
-  // Focus
-  --focus-outline-width: ;
-  --focus-outline-offset: ;
 
   // Animations
   --duration: 150ms;
