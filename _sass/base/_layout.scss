@@ -44,6 +44,8 @@ footer {
 
 .nav {
   margin-bottom: 6rem;
+  justify-content: space-between;
+  display: flex;
 
   svg {
     max-width: 3rem;
@@ -51,5 +53,27 @@ footer {
 
   a {
     text-decoration: none;
+  }
+
+  ul {
+    @media (min-width: 36rem) {
+      display: flex;
+    }
+  }
+
+  li {
+    text-transform: uppercase;
+    font-family: var(--font-family--mono);
+    color: lighten($font-color--base, 25%);
+    font-size: 0.85rem;
+
+    @media (max-width: 36rem) {
+      text-align: right;
+      margin-bottom: 0.25rem;
+    }
+
+    @media (min-width: 36rem) {
+      margin-left: var(--spacing);
+    }
   }
 }
