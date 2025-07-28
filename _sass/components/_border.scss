@@ -1,5 +1,5 @@
 .border-top--large {
-  border-top: 3px solid darken($viewport-background-color, 15%);
+  border-top: 2px solid darken($viewport-background-color, 15%);
 
   @media (prefers-color-scheme: dark) {
     border-color: lighten($viewport-background-color--dark, 15%);
@@ -7,7 +7,7 @@
 }
 
 .border-bottom--large {
-  border-bottom: 3px solid darken($viewport-background-color, 15%);
+  border-bottom: 2px solid darken($viewport-background-color, 15%);
 
   @media (prefers-color-scheme: dark) {
     border-color: lighten($viewport-background-color--dark, 15%);

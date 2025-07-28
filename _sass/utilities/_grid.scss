@@ -83,6 +83,15 @@
     grid-column: span 5;
   }
 }
+.span-7 {
+  @extend .cell;
+  @media (min-width: $screen--small) {
+    grid-column: span 3;
+  }
+  @media (min-width: $screen--mid){
+    grid-column: span 7;
+  }
+}
 
 .row-span-2 {
   grid-row: span 2;

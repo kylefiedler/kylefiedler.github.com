@@ -65,7 +65,11 @@ footer {
     text-transform: uppercase;
     font-family: var(--font-family--mono);
     color: lighten($font-color--base, 25%);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+
+    @media (prefers-color-scheme: dark) {
+      color: darken($font-color--dark, 15%);
+    }
 
     @media (max-width: 36rem) {
       text-align: right;

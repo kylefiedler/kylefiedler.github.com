@@ -14,7 +14,7 @@ h1,
   font-weight: 500;
   letter-spacing: -0.0125em;
   color: darken($font-color--base, 15%);
-  font-size: 1.0125rem;
+  font-size: 1.125rem;
 
   @media (prefers-color-scheme: dark) {
     color: lighten($font-color--dark, 15%);
@@ -22,9 +22,9 @@ h1,
 }
 
 .title--secondary {
-  font-family: var(--font-family--mono);
   color: lighten($font-color--base, 25%);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-family: var(--font-family--mono);
   text-transform: uppercase;
   font-weight: normal;
   margin-bottom: var(--spacing);
@@ -36,5 +36,20 @@ h1,
 
 .data {
   margin-top: -2rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-family: var(--font-family--mono);
+  // font-weight: 500;
+  letter-spacing: -6px;
+  color: lighten($font-color--base, 5%);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 5%);
+  }
+
 }
+
+  .data--quote {
+    @extend .data;
+    line-height: 1.2em;
+    font-size: 2.5rem;
+  }

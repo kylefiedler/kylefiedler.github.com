@@ -1,5 +1,5 @@
 html {
-  color: $font-color--base;
+  color: lighten($font-color--base, 20%);
   font-family: var(--font-family);
   font-size: 1.25rem;
   line-height: var(--line-height);
@@ -9,7 +9,7 @@ html {
   font-smooth: always;
 
   @media (prefers-color-scheme: dark) {
-    color: $font-color--dark;
+    color: darken($font-color--dark, 15%);
   }
 }
 
@@ -43,11 +43,6 @@ strong {
 
 p {
   margin: 0 0 0.25rem;
-
-  &.indent,
-  + p {
-    text-indent: 2rem;
-  }
 }
 
 a {
@@ -135,7 +130,6 @@ button {
 
 figcaption,
 .detail {
-  font-family: var(--font-family--mono);
   font-size: 0.875rem;
   font-weight: normal;
   color: lighten($font-color--base, 35%);
