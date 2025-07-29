@@ -28,6 +28,10 @@ body {
 footer {
   padding-top: var(--spacing--large);
 
+  a {
+    text-decoration: none;
+  }
+
   li {
     display: inline-block;
     margin-bottom: var(--spacing--small);
@@ -37,7 +41,7 @@ footer {
     }
 
     @media (min-width: $screen--mid) {
-      margin-left: var(--spacing--small);
+      margin-left: var(--spacing);
     }
   }
 } 

@@ -2,6 +2,10 @@
   margin-bottom: 0;
 }
 
+.mb--xsmall {
+  margin-bottom: var(--spacing--xsmall);
+}
+
 .mb--small {
   margin-bottom: var(--spacing--small);
 }
