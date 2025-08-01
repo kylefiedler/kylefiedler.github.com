@@ -3,219 +3,197 @@ layout: default
 class: work
 ---
 
-<section class="header--primary">
-<h1>Infura Endpoints: Enabling Web3 Developers to scale their network requests seamlessly</h1>
+<div class="header--primary mb--none">
+  <h1 class="">Enabling Web3 Developers to scale their network requests seamlessly</h1>
 
-<ul class="project-specs">
-  <li>
-    <h3>Timeline:</h3>
-    <p>Over 2 Years (on and off)</p>
-  </li>
-  <li>
-    <h3>Year:</h3>
-    <p>2021-2023</p>
-  </li>
-</ul>
-  <p>Infura was looking to add new networks, Near and Aurora, to the other Ethereum networks under the Ethereum API. The challenge was that Near was going to be added to Ethereum API but it was a separate Layer 1 network, not connected to the Ethereum ecosystem. Since this was the first Layer 1 network that was under the same API Key. To build up my initial understanding, I ran through our ideal user journey for developers to add new networks to their API Keys. While navigating through the workflow, I mapped out the steps in a Figjam document and quickly ran into several points of friction through the user experience. Investigating the issues a little more, I dug into our analytics to check out what the drop-off rate was on the steps to sending requests to a Key, specifically identifying how many Keys were created with no requests. It was evident that we were not hitting the desired path to getting our users to send requests.</p>
+  <div class="grid seven">
+    <div class="span-2">
+      <h3 class="title--secondary mb--none">Infura</h3>
+    </div>
+    <div class="span-2">
+      <h4 class="detail"><time>2021&ndash;23</time></h4>
+    </div>
+    <div class="span-3">
+      <ul class="tags detail">
+        <li>Product Strategy</li>
+        <li>User Research</li>
+        <li>Quantitative Analysis</li>
+        <li>Workshop Facilitation</li>
+        <li>Visual Design</li>
+        <li>Cross-functional Collaboration</li>
+        <li>HTML/CSS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="grid seven">
+  <div class="span-3 border-right">
+    <h3 class="data--quote">Getting Started</h3>
+  </div>
+  <div class="span-4 mt--base">
+    <p>Infura was preparing to expand its Ethereum API to support additional networks—Near and Aurora. This posed a
+      unique challenge: Near is a standalone Layer 1 blockchain, not part of the Ethereum ecosystem. It was the first
+      non-Ethereum Layer 1 network to be accessed via the same API Key, and we anticipated confusion from developers
+      around this model.</p>
+  </div>
 </section>
 
-<section>
-
-  <p>I ran an initial workshop, a Design Jam, with some product and design folks to identify the priority of each of these issues. After the workshop, the team agreed that we should move forward with two streams: </p>
-  <ol class="numbered">
-    <li>A short-term fix to getting the new networks into the app for users to start sending requests</li>
-    <li>A longer-term strategy for us to solve some of the misunderstandings around API Keys and build their understanding of how to set up a Decentralized Application</li>
-  </ol>
+<section class="grid seven">
+  <div class="span-4 border-top border-right">
+    <img src="/images/infura-endpoints/initial-userflow.png" alt="">
+  </div>
+  <div class="span-3 border-top">
+    <h3 class="data--quote">Mapping the Developer Journey</h3>
+    <p>To get grounded in the experience, I stepped through our ideal developer journey for adding new networks to an API Key. I documented each step in FigJam and quickly encountered several points of friction.</p>
+    <p>Curious about the scale of the problem, I turned to our analytics. I traced drop-offs in the funnel—from API Key creation to actual network requests—and discovered a common pattern: many developers created a Key but never sent a request. This confirmed we weren’t effectively guiding users to the "aha" moment.</p>
+  </div>
 </section>
 
-<section>
-  <ul class="images grid two-one">
-    <li>
-      <figure>
-        <img alt="Screenshot of Figjam workshop" src="/images/infura-endpoints/initial-workshop.png">
-      </figure>
-    </li>
-    <li>
-      <figure class="mt--base">
-        <img alt="Screenshot of Figjam workshop" src="/images/infura-endpoints/initial-workshop-detail.png">
-      </figure>
-    </li>
-  </ul>
+<section class="grid seven">
+  <div class="span-3 border-top border-right">
+    <h3 class="data--quote mt--base">Running a Design Jam</h3>
+    <p>I organized a Design Jam with product and design collaborators to prioritize problems and surface opportunities. The workshop uncovered two critical tracks to pursue:</p>
+    <ul class="circle mt--base">
+      <li>Short-term – A quick fix to help developers start sending requests to Near and Aurora immediately.</li>
+      <li>Long-term – A redesign to clarify the role of API Keys across multiple networks and build user understanding of decentralized app (dApp) setup.</li>
+    </ul>
+  </div>
+  <div class="span-4 border-top">
+    <img alt="screenshot of figjam workshop" src="/images/infura-endpoints/initial-workshop.png">
+  </div>
 </section>
 
-
-<section>
-  <p>From the workshop, the team saw the need to understand how people were currently choosing networks and setting up their Decentralized Applications. With adding the new networks it was important to learn how developers were thinking about why they choose to send requests to the networks they were using.</p>
-  <p>I used our analytics database to understand which current users were utilizing multiple networks and how they set up their API Keys. I ran through hundreds of accounts to track which users we might want to interview.</p>
-  <p>After sending out interview requests to about a hundred users, I conducted five interviews. These interviews allowed us to understand how developers were organizing their products and utilizing multiple networks. Each interview walked through how the user's applications were set up, how they were thinking and using each of the networks we provided, and how they felt restricted by the API Key. </p> 
-</section>
-
-<section>
-  <ul class="images grid three">
-    <li>
-      <figure class="mt--base">
+    <section class="grid seven">
+      <div class="span-4 border-top border-right">
         <img alt="Screenshot of Zoom call interview" src="/images/infura-endpoints/interview-1.png">
-      </figure>
-    </li>
-    <li>
-      <figure class="mt--base">
-        <img alt="Screenshot of Zoom call interview" src="/images/infura-endpoints/interview-2.png">
-      </figure>
-    </li>
-    <li>
-      <figure class="mt--base">
-        <img alt="Screenshot of Zoom call interview" src="/images/infura-endpoints/interview-3.png">
-      </figure>
-    </li>
-  </ul>
+        <!-- <img alt="Screenshot of Zoom call interview" src="/images/infura-endpoints/interview-2.png">
+        <img alt="Screenshot of Zoom call interview" src="/images/infura-endpoints/interview-3.png"> -->
+      </div>
+      <div class="span-3 border-top">
+      <h3 class="data--quote">Understanding Developer Mental Models</h3>
+      <p>Post-workshop, we recognized a knowledge gap: we didn’t fully understand how developers were currently choosing networks or organizing multi-network dApps.</p>
+      
+      <p>To close this gap, I:</p>
+      <ul class="circle mt--base">
+        <li>Queried our analytics to identify active users utilizing multiple networks.</li>
+        <li>Reviewed hundreds of accounts to shortlist candidates for interviews.</li>
+        <li>Reached out to ~100 users and conducted 5 in-depth interviews.</li>
+        <li>These sessions uncovered how teams were structuring their projects, when and why they used different networks, and how the concept of a single API Key felt unintuitive or limiting.</li>
+      </ul>
+    </div>
+    </section>
+
+<section class="grid seven border-top">
+  <div class="span-3 border-right">
+    <h3 class="data--quote">Defining the Challenge</h3>
+   </div> 
+  <div class="span-4 mt--base">
+    <p>Working closely with our PM, we distilled the research and workshop insights into three key "How might we" statements:</p>
+    <ul class="circle">
+      <li>How might we design a system that scales seamlessly as more networks are added?</li>
+      <li>How might we help users quickly choose the right blockchain/network for their needs?</li>
+      <li>How might we clarify that a single API Key spans all supported networks?</li>
+    </ul>
+  </div>
 </section>
 
-<section>
-  <p>I worked closely with our product manager to digest the information that we gained from the data analysis and the interviews. We prioritized three challenge statements from the workshop for the redesign of the endpoints: </p>
-  <ul class="circle">
-    <li>How might we: Design a system that scales seamlessly as we add more chains/networks to our API product?</li>
-    <li>How might we: Make it easy for users to identify the right blockchain and network for their project and be able to quickly send requests?</li>
-    <li>How might we: Make it easy for users to understand that their one Key spans across all our networks?</li>
-  </ul>
-</section>
-
-<section>
-  <ul class="images grid two-one">
-    <li>
-      <figure class="mt--base">
-        <img alt="Screenshot of Figjam workshop" src="/images/infura-endpoints/group-workshop-v1.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Screenshot of Figjam workshop" src="/images/infura-endpoints/group-workshop-v1-detail.png">
-      </figure>
-    </li>
-  </ul>
-</section>
-
-<section>
-  <p>Together, we collaborated on a new flow for the user to add networks and build up newer users understanding of how Infura API Keys worked. First of all, was changing the name from Ethereum API to Web3 API. The other changes that we were proposing long term would have a big impact on how our team and users thought about our API Key. We agreed that the next step should be a low Fidelity prototype to show the rest of the team as this work with impact nearly all of the other product teams.￼</p>
-  
-  <p>I created the low-fidelity prototype so that we could communicate the intent and people attending the workshop would have a clearer idea of what we were intending to do.</p>
-</section>
-
-<section>
-  <ul class="images">
-    <li>
-      <figure class="mt--base">
+<section class="grid seven">
+      <div class="span-4 border-top border-right">
         <img alt="Screenshot in Figma of rough wireframes" src="/images/infura-endpoints/rough-wireframes.png">
-      </figure>
-    </li>
-  </ul>
+      </div>
+      <div class="span-3 border-top">
+        <h3 class="data--quote">Prototyping the Vision</h3>
+        <p>With alignment around our direction, we made several foundational shifts:</p>
+        <ul class="circle">
+          <li>Renamed the "Ethereum API" to Web3 API to reflect its broader scope.</li>
+          <li>Began exploring UI concepts to educate users about API Key behavior and reduce friction in activating new networks.</li>
+          <li>To communicate these ideas, I built a low-fidelity prototype in Figma that sketched a new user flow for adding and managing networks.</li>
+        </ul>
+      </div>
 </section>
 
-<section>
-  <p>Once we felt like the prototype accurately represented our thinking, we gathered over 40 people from all over Infura, from product and design to development to sales and engineering, and marketing. I ran this workshop to both educate everyone on what we had learned during the interviews and collect feedback on the prototype and our proposed path forward. We felt like this was the most efficient way to get everybody on the team on board with these changes or push back early enough where changes were still inexpensive. </p>
-  
-  <p>After the workshop, the product manager said that this was the most successful workshop they have ever seen run.</p>
+<section class="grid seven">
+    <div class="span-3 border-top border-right">
+      <h3 class="data--quote">Driving Alignment Across the Organization</h3>
+      <p>To build momentum, I facilitated a cross-functional workshop with 40+ stakeholders—product, design, engineering, sales, and marketing. We used the prototype to walk through key findings from our research and preview our proposed changes.</p>
+      <p>The workshop generated strong alignment and fast-tracked decisions. Our PM later said it was the most effective workshop they’d ever participated in.</p>
+    </div>
 
-  <p>The low-fidelity prototype took a long-range approach, to hedge our bets we wanted to narrow it down to an iteration the team could release in a few weeks. How could we take some steps small steps toward that future vision? Using that direction I got to work on high-fidelity prototypes to work through an iteration towards the long-term goal and continue to get feedback from the product and development team.</p>
-  
-  <p>Through this process, I struggled with displaying endpoints to the users. There was no existing component in the design system and I needed a way to show different states of different endpoints.</p>
+    <div class="span-4 border-top"><img alt="Screenshot of Figjam workshop" src="/images/infura-endpoints/group-workshop-v1.png"></div>
+</section>
+    
+<section class="grid seven">
+  <div class="span-4 border-right border-top">
+    <img alt="Mockups of Infura endpoints page" src="/images/infura-endpoints/endpoints-v1.png">
+    <img alt="Screenshot of Figma of a detail of the endpoints workflow" src="/images/infura-endpoints/security-v1.png">
+  </div>
+  <div class="span-3 border-top">
+    <h3 class="data--quote">Preparing for Implementation</h3>
+    <p>While the low-fidelity prototype represented our long-term vision, we needed to scope down to a shippable version. I began work on a high-fidelity prototype that could move us closer to that vision, while still being feasible within a few weeks.</p>
+    <p>One UX challenge: how to display endpoints clearly. Our design system didn’t have existing components to represent endpoint states (e.g., active, inactive). I explored new component patterns to address this gap.</p>
+    <p>Once the design was approved, I built a code prototype to ensure a smooth handoff to our frontend developer. This not only clarified interaction intent but also sped up implementation—ultimately helping us deliver the new endpoints faster.</p>
+  </div>
 </section>
 
-<section>
-  <ul class="images grid one-one">
-    <li class="span-2">
-      <figure>
-        <img alt="Mockups of Infura endpoints page" src="/images/infura-endpoints/endpoints-v1.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Mockups of Infura API Key security page" src="/images/infura-endpoints/security-v1.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Mockups of Infura API Key settings page" src="/images/infura-endpoints/settings-v1.png">
-      </figure>
-    </li>
-  </ul>
+<section class="grid seven">
+  <div class="span-3 border-top border-right">
+    <h3 class="data--quote">Iteration 2: Improving Clarity and Security of the Unified Web3 API Key</h3>
+    
+    <p>With the initial designs in place, I ran an unmoderated usability test to evaluate one of our key challenges:</p>
+    
+    <p class="detail mt--base mb--base">How might we help users understand that a single API Key spans all supported networks?</p>
+
+    <p>Using Maze, our team’s unmoderated testing platform, I tested the updated flow with 26 users over several months. While the results showed some improvement in user understanding, it was still clear that many users didn’t fully grasp that one Key could access multiple networks.</p>
+  </div>
+  <div class="span-4 border-top"><img alt="Screenshot of Google docs usability test plan" src="/images/infura-endpoints/usability-test-plan.png"></div>
 </section>
 
-<section class="border-bottom">
-  <p>After several iterations of the design, the team signed off on the new design work. I took that design and started to build a prototype in code so that I could hand it off more effectively to the front-end developer who is working on a project. This code prototype ended up speeding up the work on the front end and we were able to deliver the feature faster because of the prototype that I built.</p>
+<section class="grid seven">
+  <div class="span-4 border-top border-right">
+    <img alt="Screenshot of Figma of the second version of the Endpoints workflow" src="/images/infura-endpoints/endpoints-v2.png" class="mb--small">
+    <img alt="Mockup of the all endpoints screen" src="/images/infura-endpoints/endpoints-v2-detail.png">
+  </div>
+  <div class="span-3 border-top">
+    <h3 class="data--quote">A New Direction</h3>
+    <p>Together with the PM, we took insights from the usability study and post-launch incidents to plan the next iteration. Around the same time, our backend team merged all endpoints—previously separated (e.g., IPFS and Filecoin)—into a single unified Web3 API. This allowed us to present an even more streamlined experience under one Key.</p>
+    <p>We set three goals for the new iteration:</p>
+    
+    <ul class="circle">
+      <li>Help users clearly understand what the Web3 API Key enables and how to organize their usage</li>
+      <li>Improve the default security of all API Keys</li>
+      <li>Reinforce that all networks now live under the same Web3 API Key</li>
+      <li>Designing the New Flow</li>
+      <li>After aligning with the PM, we decided that users would need to activate networks individually under their Key. This gave them better control and reinforced what their Key could access. With a clear vision in mind, I jumped straight into high-fidelity mockups.</li>
+    </ul>
+    
+    <p>I quickly wrapped up the designs and presented them to both product and engineering teams. Their feedback helped simplify a few interactions and strengthen how we communicated endpoint scope and usage.</p>
+  </div>
 </section>
 
-<section>
-  <p>With new designs in place, I ran an unmoderated usability test to see if the changes solved our challenge statement of: How might we: Make it easy for users to understand that their one Key spans across all our networks?</p>
-  
-  <p>This usability test ran across XX users over several months. Using Maze the, tool our research team has for unmoderated tests, I was able to see that while we had an increase in understanding it still wasn't clear to all users that their Key could be used across multiple networks.</p>
-</section>
+<section class="grid seven">
+  <div class="span-3 border-top border-right">
+    <h3 class="data--quote">Final Handoff & Lessons Learned</h3>
+    <p>Because of the engineering team’s roadmap, there was a delay between when design was completed and when frontend development began. This created some challenges during handoff—but having high-fidelity mocks and documentation ready helped bridge the gap.</p>
 
-<section>
-  <ul class="images grid one-one">
-    <li>
-      <figure class="mt--base">
-        <img alt="Screenshot of Google docs usability test plan" src="/images/infura-endpoints/usability-test-plan.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Screenshot of the restults presentation" src="/images/infura-endpoints/usability-results.png">
-      </figure>
-    </li>
-  </ul>
-</section>
+    <h3 class="data--quote mt--large">Results & Impact</h3>
+    <p>The two iterations of endpoint improvements led to measurable gains in both usability and security:</p>
 
-<section>
-  <p>While I was conducting the usability tests, the PM was tackling another issue we saw after the launch, the security of the API Key. Our default to keeping the key open was leading to some users getting a leaked Key and bad actors using that key to send requests to networks the owner wasn't using.</p>
-  
-  <p>Taking what we learned with the usability test and the other information compiled by the PM of the project we set out for another iteration. In parallel, our backend technology team was able to combine all our current endpoints into one API, so networks like IPFS and Filecoin that previously could only be reached with a specific API Key can now be included with the Web3 API Key. With this new iteration, our main goals were to:</p>
-  
   <ul class="circle">
-    <li>Get all users to understand what they can do with Infura's Web3 API and best practices for API organization</li>
-    <li>Build up the security of each user's API Key by default</li>
-    <li>Communicate that all networks were under the same API Key</li>
+    <li>📈 13.6% increase in users successfully sending their first request after creating an API Key</li>
+    <li>🧠 25.7% improvement in user understanding of multi-network access (based on Maze testing)</li>
+    <li>🔒 12.3% reduction in reported cases of compromised API Keys due to open defaults</li>
+    <li>🤝 Cross-team alignment: Two large-scale workshops brought together over 40 people across design, product, engineering, and marketing</li>
   </ul>
-  
-  <p>Collaborating with the PM we decided that it would be best to have users activate each network to send requests. After working on the last iteration, I had a good idea of how I wanted the user experience to flow so I hopped right into high-fidelity mockups.</p>
+    <p>Beyond the metrics, the project shifted how Infura talks about its API—from a single-chain “Ethereum API” to a unified Web3 API—setting the stage for future scalability across chains and user growth.</p>
+  </div>
+  <div class="span-4 border-top">
+    <img alt="Mockup of the all endpoints screen" src="/images/infura-endpoints/active-endpoints-v2.png" class="mb--small">
+    <img alt="Mockup of the all endpoints screen" src="/images/infura-endpoints/all-endpoints-v2.png">
+  </div>
 </section>
 
 <section>
-  <ul class="images grid one-one">
-    <li class="span-2">
-      <figure class="mt--base">
-        <img alt="Screenshot of Figma of the second version of the Endpoints workflow" src="/images/infura-endpoints/endpoints-v2.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Screenshot of Figma of a detail of the endpoints workflow" src="/images/infura-endpoints/endpoints-v2-detail.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Screenshot of Figma of a detail of the endpoints workflow" src="/images/infura-endpoints/endpoints-v2-detail-2.png">
-      </figure>
-    </li>
-  </ul>
-</section>
-
-<section>
-  <p>I wrapped up the mockups quickly and provided both the product and tech teams with an overview and an opportunity to give feedback. Most of the feedback I received helped streamline the experience and build user understanding of the endpoints. Because of the development teams' schedule, there was a gap in time from when designs were done and front-end work started on this iteration which made the transition challenging.</p>
-</section>
-
-<section>
-  <ul class="images grid one-one">
-    <li>
-      <figure class="mt--base">
-        <img alt="Mockup of the all endpoints screen" src="/images/infura-endpoints/all-endpoints-v2.png">
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img alt="Mockup of the active endpoints screen" src="/images/infura-endpoints/active-endpoints-v2.png">
-      </figure>
-    </li>
-  </ul>
 </section>
 
 {% include work.html %}
