@@ -13,11 +13,10 @@ h1,
   font-weight: 500;
   color: darken($font-color--base, 15%);
   line-height: 1.2em;
-  font-size: 1.35rem;
-  letter-spacing: -1px;
+  font-size: 1.25rem;
 
   @media (min-width: $screen--mid) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -40,9 +39,9 @@ h1,
 
 .data {
   margin-top: -1.5rem;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-family: var(--font-family--mono);
-  letter-spacing: -6px;
+  letter-spacing: -2px;
   color: lighten($font-color--base, 5%);
 
   @media (prefers-color-scheme: dark) {
@@ -50,18 +49,18 @@ h1,
   }
 }
 
-    .data--quote {
-      line-height: 1.2em;
-      font-size: 1.5rem;
-      font-family: var(--font-family--mono);
-      color: lighten($font-color--base, 5%);
-  
-      @media (prefers-color-scheme: dark) {
-        color: darken($font-color--dark, 5%);
-      }
-  
-      @media (min-width: $screen--mid) {
-        letter-spacing: -3px;
-        font-size: 1.75rem;
-      }
-    }
+.data--quote {
+  line-height: 1.2em;
+  font-size: 1.5rem;
+  font-family: var(--font-family--mono);
+  color: lighten($font-color--base, 5%);
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 5%);
+  }
+
+  @media (min-width: $screen--mid) {
+    letter-spacing: -3px;
+    font-size: 1.75rem;
+  }
+}

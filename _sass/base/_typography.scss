@@ -54,6 +54,13 @@ a {
   outline-color: transparent;
   outline-offset: 0.25rem;
   border-radius: 1rem;
+  text-decoration-color: darken($border-color--light, 10%);
+	-webkit-text-decoration-color: darken($border-color--light, 10%);
+
+    @media (prefers-color-scheme: dark) {
+      text-decoration-color: lighten($border-color--dark, 10%);
+      -webkit-text-decoration-color: lighten($border-color--dark, 10%);
+    }
 
   &:focus {
     outline-color: $action-color;
