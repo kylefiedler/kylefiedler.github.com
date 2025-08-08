@@ -36,7 +36,7 @@
   margin-top: var(--spacing--large);
 }
 
-.mt--xl {
+.mt--xlarge {
   margin-top: var(--spacing);
 
   @media (min-width: $screen--small) {
@@ -50,12 +50,26 @@
   }
 }
 
+.p--none {
+  padding: 0 !important;
+}
+
+.pt--none {
+  padding-top: 0 !important;
+}
+
 .pt--large {
   padding-top: var(--spacing--large);
 }
+
 .pb--base {
   padding-bottom: var(--spacing);
 }
+
+.pr--base {
+  padding-right: var(--spacing);
+}
+
 .pb--large {
   padding-bottom: var(--spacing--large);
 }

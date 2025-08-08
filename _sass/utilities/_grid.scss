@@ -87,6 +87,7 @@
     grid-column: span 5;
   }
 }
+
 .span-7 {
   @extend .cell;
   @media (min-width: $screen--small) {

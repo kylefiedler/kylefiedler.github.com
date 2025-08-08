@@ -46,6 +46,9 @@ p {
 }
 
 a {
+  $text-decoration-color--light: lighten($font-color--base, 60%);
+  $text-decoration-color--dark: darken($font-color--dark, 60%); 
+
   color: inherit;
   text-decoration-skip-ink: auto;
   transition: color, outline-color var(--duration) var(--timing);
@@ -54,12 +57,12 @@ a {
   outline-color: transparent;
   outline-offset: 0.25rem;
   border-radius: 1rem;
-  text-decoration-color: darken($border-color--light, 10%);
-	-webkit-text-decoration-color: darken($border-color--light, 10%);
+  text-decoration-color: $text-decoration-color--light;
+	-webkit-text-decoration-color: $text-decoration-color--light;
 
     @media (prefers-color-scheme: dark) {
-      text-decoration-color: lighten($border-color--dark, 10%);
-      -webkit-text-decoration-color: lighten($border-color--dark, 10%);
+      text-decoration-color: $text-decoration-color--dark;
+      -webkit-text-decoration-color: $text-decoration-color--dark;
     }
 
   &:focus {
@@ -148,5 +151,17 @@ figcaption,
 
   h4 {
     font-size: 0.8rem;
+  }
+}
+
+.detail--mono {
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-family: var(--font-family--mono);
+  color: lighten($font-color--base, 45%);
+  letter-spacing: -1px;
+
+  @media (prefers-color-scheme: dark) {
+    color: darken($font-color--dark, 45%);
   }
 }

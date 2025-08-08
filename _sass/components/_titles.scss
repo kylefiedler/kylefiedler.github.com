@@ -27,11 +27,12 @@ h1,
     font-family: var(--font-family--mono);
     font-style: normal;
     letter-spacing: -2px;
-    background-color: $highlight--base;
+    background-color: rgba($highlight--base, 0.8);
+    border-radius: 0.25rem;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $highlight--dark;
-  }
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba($highlight--dark, 0.8);
+    }
   }
 }
 

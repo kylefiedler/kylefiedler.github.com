@@ -14,16 +14,67 @@
 }
 
 .work-images {
-  a {
-    border-radius: 0.25rem;
-    overflow: hidden;
-    display: block;
+  @media (min-width: $screen--mid) {
+    margin: 0 -2rem;
+  }
+
+  @media (min-width: 110rem) {
+    margin: 0 -6rem;
+  }
+
+  .title--secondary {
+    @media (min-width: $screen--mid) {
+      margin-left: 2rem;
+    }
+
+    @media (min-width: 110rem) {
+      margin-left: 6rem;
+    }
+  }
+}
+
+.work-image--left {
+  @media (min-width: $screen--mid) {
+    margin-left: -2rem;
+  }
+
+  @media (min-width: 110rem) {
+    margin-left: -6rem;
+  }
+}
+
+.work-image--right {
+  @media (min-width: $screen--mid) {
+    margin-right: -2rem;
+  }
+
+  @media (min-width: 110rem) {
+    margin-right: -6rem;
+  }
+}
+
+.work-image {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.25rem;
+
+  &:hover h4 {
+    color: $action-color;
   }
 
   img {
-    display: block;
+    display: inline-block;
   }
+}
 
+.work-title-content {
+    @media (min-width: $screen--mid) {
+      margin-left: 2rem;
+    }
+
+    @media (min-width: 110rem) {
+      margin-left: 6rem;
+    }
 }
 
 .project-specs {
