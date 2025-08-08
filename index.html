@@ -4,31 +4,35 @@ class: index
 ---
 
 <section class="header--primary">
-  <h1>Hi! I&rsquo;m Kyle. I lead design work from concept to launch, partnering closely with product and engineering to build high-quality solutions that meet real user needs and drive business impact.</h2>
+  <h1>Hi! I&rsquo;m Kyle. I lead design work from concept to launch, partnering closely with product and engineering to <em>ship quality expereinces</em> that meet real user needs and drive business impact.</h2>
   <!-- <p>I&rsquo;ve led cross-functional design teams and shipped intuitive, scalable products at companies like MetaMask, Infura, Point Health, and thoughtbot over the last 18 years. I&rsquo;m fairly basic, thoroughly introverted, overly sarcastic, and delightfully awkward. I use my constant curiosity to better myself as well as the people around me.</p> -->
 </section>
 
 <section class="grid seven mb--base">
   <div class="span-3 row-span-2 border-right ">
+    <h3 class="title--secondary">At work</h3>
     <p>I use research and Jobs-to-be-Done to understand complex problems, then design and implement practical, intuitive solutions. I lead end-to-end efforts to ship features that meet user and business goals; from research and prototyping to scalable design systems and production-ready code. I create space for designers to do their best work and help drive product strategy and cross-functional alignment.</p>
   </div>
   <div class="span-2 border-right">
-    <h3 class="title--secondary">Years Desiging</h3>
+    <h3 class="title--secondary">
+      <span class="inline-icon">{% include icons/calendar-1.svg %}</span> 
+      Years Desiging
+    </h3>
     <p class="data">18</p>
   </div>
   <div class="span-2 cell--last">
-    <h3 class="title--secondary">Products designed</h3>
+    <h3 class="title--secondary"><span class="inline-icon">{% include icons/layout-dashboard.svg %}</span> Products designed</h3>
     <p class="data">53+</p>
   </div>
   <div class="span-4 border-top"> 
-    <h3 class="title--secondary">Recent posts <a href="/posts" class="icons-link"><span class="icons">{% include icons/all.svg %}</span><span class="visually-hidden">all</span></a></h3>
+    <h3 class="title--secondary">Recent posts <a href="/posts" class="icons-link"><span class="inline-icon">{% include icons/circle-arrow-right.svg %}<span><span class="visually-hidden">all</span></a></h3>
     <ul>
       {% for post in site.posts limit: 4 %}
         <li class="time-n-title">
           <time class="detail">{{ post.date | date: '%m.%d.%Y' }}</time>
           <hr>
           {% if post.external_url %}
-          <h4 class="mb--none"><a href="{{post.external_url}}">{{ post.title }}</a><span class="icons">{% include icons/share.svg %}</span><span class="visually-hidden">external</span></a></h4>
+          <h4 class="mb--none"><a href="{{post.external_url}}">{{ post.title }}</a><span class="inline-icon">{% include icons/share.svg %}</span><span class="visually-hidden">external</span></a></h4>
           {% else %}
           <h4 class="mb--none"><a href="{{post.url}}">{{ post.title }}</a></h4>
           {% endif %}
@@ -37,18 +41,18 @@ class: index
     </ul>
   </div>
   <div class="span-7 border-top cell--last cell--first">
-    <h3 class="title--secondary">Kind words  <a href="/kind-words/" class="icons-link"><span class="icons">{% include icons/all.svg %}</span><span class="visually-hidden">all</span></a></h3>
-    <!-- <div class="icons mb--small">{% include icons/comment.svg %}</div> -->
+    <h3 class="title--secondary">Kind words  <a href="/kind-words/" class="icons-link"><span class="inline-icon">{% include icons/circle-arrow-right.svg %}</span><span class="visually-hidden">all</span></a></h3>
       <p class="data--quote mt--base">Kyle always puts others&rsquo; success before his own, even when he&rsquo;s buried in work—a rare and admirable quality that&rsquo;s far from easy to pull off.</p>
   </div>
 </section>
 
 <section class="border-top--large grid seven">
   <div class="span-3 row-span-3 border-right">
-    <p>At home, I&rsquo;m partner to an accomplished photographer and dad to three kids, three dogs, and two birds; it&rsquo;s a zoo. My success metrics are measured in eye rolls, fart jokes, and belly rubs. We call Southern California home but I still consider myself a New Yorker. I spend my free time reading everything from novels to comics, playing video games, watching the Yankees, and sneaking off to bike or camp in the woods. I&rsquo;ve managed to find myself taking care of a lot of plants. I love the feeling of my hands in dirt.</p>
+    <h3 class="title--secondary">At home</h3>
+    <p>I&rsquo;m partner to an accomplished photographer and dad to three kids, three dogs, and two birds; it&rsquo;s a zoo. My success metrics are measured in eye rolls, fart jokes, and belly rubs. We call Southern California home but I still consider myself a New Yorker. I spend my free time reading everything from novels to comics, playing video games, watching the Yankees, and sneaking off to bike or camp in the woods. I&rsquo;ve managed to find myself taking care of a lot of plants. I love the feeling of my hands in dirt.</p>
   </div>
   <div class="span-2 row-span-2 border-right">
-    <h2 class="title--secondary">Lists <a href="/lists" class="icons-link"><span class="icons">{% include icons/all.svg %}</span><span class="visually-hidden">all</span></a></h2>
+    <h2 class="title--secondary">Lists <a href="/lists" class="icons-link"><span class="inline-icon">{% include icons/circle-arrow-right.svg %}</span><span class="visually-hidden">all</span></a></h2>
       <ul class="circle detail mt--base">
         <li class="mb--xsmall"><a href="/lists/books">Books</a></li>
         <li class="mb--xsmall"><a href="/lists/animals">Animals I&rsquo;ve seen on the trail</a></li>
@@ -62,25 +66,24 @@ class: index
       </ul>
   </div>
   <div class="span-2">
-    <h3 class="title--secondary">House Plants</h3>
+    <h3 class="title--secondary"><span class="inline-icon">{% include icons/sprout.svg %}</span> House Plants</h3>
     <p class="data">126</p>
   </div>
   <div class="span-2 border-top">
-    <h3 class="title--secondary">Miles Biked 7.2025</h3>
+    <h3 class="title--secondary"><span class="inline-icon">{% include icons/bike.svg %}</span> Miles Biked 7.2025</h3>
     <p class="data">69.57</p>
   </div>
   <div class="span-4 border-top">
-    <!-- <h3 class="title--secondary">Current books <a href="/lists/books.html" class="icons-link"><span class="icons">{% include icons/all.svg %}</span><span class="visually-hidden">all</span></a></h3> -->
+    <!-- <h3 class="title--secondary">Current books <a href="/lists/books.html" class="icons-link"><span class="inline-icon">{% include icons/circle-arrow-right.svg %}</span><span class="visually-hidden">all</span></a></h3> -->
     <ul class="grid one-one">
       <li>
-        <span class="icons mb--base">{% include icons/book.svg %}</span> 
-        <span class="title--secondary">Reading</span>
+        <h3 class="title--secondary"><span class="inline-icon">{% include icons/book-marked.svg %}</span> Reading</h3>
         <h4 class="mb--none">Somewhere Beyond the Sea</h4>
         <p class="detail">TJ Klune</p>
       </li>
       <li>
-        <span class="icons mb--base">{% include icons/audio.svg %}</span>
-        <span class="title--secondary">Listening</span>
+        <!-- <span class="icons mb--base">{% include icons/audio.svg %}</span> -->
+        <h3 class="title--secondary"><span class="inline-icon">{% include icons/headphones.svg %}</span> Listening</h3>
         <h4 class="mb--none">Job Moves: 9 Steps for Making Progress in Your Career</h4>
         <p class="detail"> Ethan Bernstein, Michael B. Horn, Bob Moesta</p>
       </li>

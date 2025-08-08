@@ -16,14 +16,14 @@
     position: relative;
     top: 0.75rem;
     margin: 0;
-    border-color: darken($viewport-background-color, 15%);
+    border-color: $border-color--light;
 
     @media (max-width: $screen--mid) {
       display: none;
     }
 
     @media (prefers-color-scheme: dark) {
-      border-color: lighten($viewport-background-color--dark, 15%);
+      border-color: $border-color--dark;
     }
   }
 

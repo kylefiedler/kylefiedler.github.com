@@ -14,7 +14,6 @@ h1,
   color: darken($font-color--base, 15%);
   line-height: 1.2em;
   font-size: 1.125rem;
-  letter-spacing: -1px;
 
   @media (min-width: $screen--mid) {
     font-size: 1.5rem;
@@ -23,20 +22,26 @@ h1,
   @media (prefers-color-scheme: dark) {
     color: lighten($font-color--dark, 15%);
   }
+
+  em {
+    font-family: var(--font-family--mono);
+    font-style: normal;
+    letter-spacing: -2px;
+    background-color: $highlight--base;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $highlight--dark;
+  }
+  }
 }
 
 .title--secondary {
-  // color: lighten($font-color--base, 25%);
   font-size: 0.75rem;
   font-family: var(--font-family--mono);
   text-transform: uppercase;
   font-weight: normal;
   margin-bottom: var(--spacing);
   letter-spacing: 1px;
-
-  // @media (prefers-color-scheme: dark) {
-  //   color: darken($font-color--dark, 15%);
-  // }
 }
 
 .data {

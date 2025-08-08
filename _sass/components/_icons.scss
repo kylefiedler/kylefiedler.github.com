@@ -1,22 +1,30 @@
-.icons {
+.inline-icon {
   display: inline-block;
-  position: relative;
-  top: 0.25rem;
-  color: lighten($font-color--base, 50%);
+  vertical-align: text-bottom;
 
-  @media (prefers-color-scheme: dark) {
-    color: lighten($font-color--dark, 50%);
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    vertical-align: middle;
+    stroke: lighten($font-color--base, 40%);
+
+    @media (prefers-color-scheme: dark) {
+      stroke: darken($font-color--dark, 40%);
+    }
   }
 
   path {
-    stroke: lighten($font-color--base, 50%);
+    stroke: lighten($font-color--base, 40%);
 
     @media (prefers-color-scheme: dark) {
-      stroke: lighten($font-color--dark, 50%);
+      stroke: darken($font-color--dark, 40%);
     }
   }
 }
 
 .icons-link {
   text-decoration: none;
+  line-height: 1.3em;
+  vertical-align: text-bottom;
 }

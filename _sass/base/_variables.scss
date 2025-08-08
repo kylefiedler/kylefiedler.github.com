@@ -1,12 +1,12 @@
 // Colors
 $black: #111;
-$black--alt: #2c3e50;
-$white: #F4F3EC;
+$black--alt: #222;
+$white: #f2f2f2;
 $white--alt: #F6f6f6;
 
 // Font Colors
 $highlight--base: #fff6c0;
-$highlight--dark: #003a81b8;
+$highlight--dark: #2E39ED;
 $font-color--base: $black;
 $font-color--dark: $white--alt;
 $action-color: #7332ff;
@@ -16,8 +16,8 @@ $action-color--dark: #cb8fff;
 $viewport-background-color: $white;
 $viewport-background-color--dark: $black--alt;
 // Border colors
-$border-color--light: #e4e1d5;
-$border-color--dark: #2f303a;
+$border-color--light: darken($viewport-background-color, 4%);
+$border-color--dark: darken($viewport-background-color--dark, 4%);
 
 // Screen size
 $screen--small: 26rem;

@@ -84,3 +84,22 @@ footer {
     }
   }
 }
+
+.action--primary {
+  color: $action-color;
+  outline-color: $action-color !important;
+
+  @media (prefers-color-scheme: dark) {
+    color: $action-color--dark;
+    outline-color: $action-color--dark !important;
+  }
+
+  .inline-icon svg, 
+  .inline-icon path {
+    stroke: $action-color;
+
+    @media (prefers-color-scheme: dark) {
+      stroke: $action-color--dark;
+    }
+  }
+}

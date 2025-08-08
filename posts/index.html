@@ -15,7 +15,7 @@ class: posts
         <time class="detail">{{ post.date | date: '%m.%Y' }}</time>
         <hr />
         {% if post.external_url %}
-        <p><a href="{{post.external_url}}">{{ post.title }}<span class="icons">{% include icons/share.svg %} </span><span class="visually-hidden">external</span></a></p>
+        <p><a href="{{post.external_url}}">{{ post.title }}<span class="inline-icon">{% include icons/share.svg %} </span><span class="visually-hidden">external</span></a></p>
         {% else %}
         <p><a href="{{post.url}}">{{ post.title }}</a></p>
         {% endif %}
