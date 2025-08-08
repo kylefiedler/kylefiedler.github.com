@@ -2,18 +2,19 @@
   @extend .border-bottom--large;
   padding-bottom: var(--spacing--large);
 
-  h1, p {
+  p {
     max-width: 50rem;
   }
 }
 
 h1,
 .title--primary {
-  font-family: var(--font-family--heading);
-  font-weight: 500;
+  // font-family: var(--font-family--mono);
+  // font-weight: 500;
   color: darken($font-color--base, 15%);
   line-height: 1.2em;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  letter-spacing: -1px;
 
   @media (min-width: $screen--mid) {
     font-size: 1.5rem;
@@ -25,34 +26,33 @@ h1,
 }
 
 .title--secondary {
-  color: lighten($font-color--base, 25%);
-  font-size: 0.8rem;
+  // color: lighten($font-color--base, 25%);
+  font-size: 0.75rem;
   font-family: var(--font-family--mono);
   text-transform: uppercase;
   font-weight: normal;
   margin-bottom: var(--spacing);
+  letter-spacing: 1px;
+
+  // @media (prefers-color-scheme: dark) {
+  //   color: darken($font-color--dark, 15%);
+  // }
+}
+
+.data {
+  margin-top: -1.5rem;
+  font-size: 2.25rem;
+  font-family: var(--font-family--mono);
+  letter-spacing: -2px;
+  color: lighten($font-color--base, 15%);
 
   @media (prefers-color-scheme: dark) {
     color: darken($font-color--dark, 15%);
   }
 }
 
-.data {
-  margin-top: -1.5rem;
-  font-size: 2rem;
-  font-family: var(--font-family--mono);
-  letter-spacing: -2px;
-  color: lighten($font-color--base, 5%);
-
-  @media (prefers-color-scheme: dark) {
-    color: darken($font-color--dark, 5%);
-  }
-}
-
 .data--quote {
-  line-height: 1.2em;
-  font-size: 1.5rem;
-  font-family: var(--font-family--mono);
+  font-size: 1.25rem;
   color: lighten($font-color--base, 5%);
 
   @media (prefers-color-scheme: dark) {
@@ -60,7 +60,6 @@ h1,
   }
 
   @media (min-width: $screen--mid) {
-    letter-spacing: -3px;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }

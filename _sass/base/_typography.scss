@@ -1,7 +1,7 @@
 html {
-  color: lighten($font-color--base, 20%);
+  color: lighten($font-color--base, 30%);
   font-family: var(--font-family);
-  font-size: 1.25rem;
+  font-size: clamp(125%, 2.25vw, 1.5rem);
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -137,7 +137,7 @@ button {
 
 figcaption,
 .detail {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: normal;
   color: lighten($font-color--base, 35%);
 
@@ -146,6 +146,6 @@ figcaption,
   }
 
   h4 {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
   }
 }
