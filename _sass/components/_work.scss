@@ -60,6 +60,10 @@
 
   &:hover h4 {
     color: $action-color;
+
+    @media (prefers-color-scheme: dark) {
+      color: $action-color--dark;
+    }
   }
 
   img {

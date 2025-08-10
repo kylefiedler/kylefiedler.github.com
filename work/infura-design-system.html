@@ -26,26 +26,20 @@ class: work
 </div>
 
 <section class="grid seven">
-  <div class="span-3 border-right">
-    <h3 class="data--quote">The Problem</h3>
+  <div class="span-3">
+    <h3>What is Infura?</h3>
+    <p>A set of APIs and tools for developers to interact with the blockchain. Think of it as an AWS but specific for blockchain and crypto technologies.</p>
   </div>
-  <div class="span-4 mt--base">
-      <p>Infura’s design had fallen behind user expectations—and competitors. We regularly heard feedback from users that the UI felt disjointed, dated, and inconsistent. Years of fast-paced feature work had created a tangled component system. There were over 10 types of buttons used across the product, many of them one-offs. Components were inconsistently implemented in both Figma and code.</p>
-  
-      <p>The result:</p>
-      
-      <ul class="circle">
-        <li>Design and engineering were duplicating work</li>
-        <li>Shipping new features took longer than necessary</li>
-        <li>The overall experience lacked the polish users expected from a developer tool of our scale</li>
-      </ul>
+  <div class="span-3 mt--xlarge">
+    <p>Infura&rsquo;s design had fallen behind user expectations—and competitors. We regularly heard feedback from users that the UI felt disjointed, dated, and inconsistent. Years of fast-paced feature work had created a tangled component system.</p>
+    <h3>How might we consolidate, pay down debt, and update the Infura UI?</h3>
   </div>
 </section>
 
-<section class="grid seven border-top">
-<div class="span-3 border-right">
-  <h3 class="data--quote">Getting Started</h3>
-  <p>I kicked off the project by reviewing feedback already collected by our support and product teams. Using this, I wrote a proposal outlining key problems and a plan to tackle them, with clear, tangible success metrics:</p>
+<section class="grid seven">
+<div class="span-3">
+  <h3>Define the problem, set the stage for rethinking UI</h3>
+  <p>I kicked off the project by reviewing feedback already collected by our support and product teams. Using this, I wrote a product proposal outlining key problems and a plan to tackle them, with clear, tangible success metrics:</p>
   
   <ul class="circle">
     <li>Reduce time from design to production</li>
@@ -54,32 +48,39 @@ class: work
   </ul>
 </div>
 
-<div class="span-4">
+<div class="span-4 work-image--right">
   <img alt="Screenshot of the project proposal in Confluence" src="/images/infura-design-system/product-proposal.png" class="mb--base">
-  <img alt="Screenshot of the project tickets in Jira" src="/images/infura-design-system/product-project-planning.png">
 </div>
 </section>
 
-
-<section class="grid seven border-top">
-  <div class="span-4 border-right">
-      <img alt="Screenshot of Figma viaual design experimentation" src="/images/infura-design-system/visual-experimentation.png" class="mb--base">
-      <!-- <img alt="Screenshot of Figma viaual design experimentation" src="/images/infura-design-system/visual-experimentation-2.png"> -->
+<section class="grid seven">
+  <div class="span-4 work-image--left">
       <img alt="Screenshot of Figjam redesign and tasks for components" src="/images/infura-design-system/component-organization.png">
-      <!-- <img alt="Screenshot of Figjam organization of components" src="/images/infura-design-system/component-organization-2.png"> -->
   </div>
   <div class="span-3">
-    <h3 class="data--quote">Visual Exploration & Stakeholder Alignment</h3>
-    <p>I began by exploring updated visual styles for Infura’s core app screens, using recent brand design work as a starting point. After refining with feedback from the brand team and design leadership, I opened the work to broader input from the design and frontend teams.</p>
-    <p>Once we had early alignment, I broke the exploration down into core components we knew the app needed. I took inventory of the full interface and mapped components to real usage across the product. I organized this work using Atomic Design principles, to help guide structure and communication.</p>
+    <h3>Conduct inventory of existing components</h3>
+    <p>Once we had early alignment on the product proposal, I took inventory of the full interface and mapped components to real usage across the product. I organized this work using Atomic Design principles, to help guide structure and communication.</p>
   </div>
 </section>
 
-<section class="grid seven border-top">
-  <div class="span-3 border-right">
-    <h3 class="data--quote">Rebuilding the System, One Component at a Time</h3>
+<section class="grid seven">
+  <div class="span-3">
+    <h3>Visual Exploration</h3>
+    <p>Using recent brand design work as a starting point I began exploring updated visual styles for Infura&rsquo;s core screens. After refining with feedback from the brand team and design leadership, I opened the work to broader input from the design and frontend teams.</p>
+  </div>
+  <div class="span-4 work-image--right">
+      <!-- <img alt="Screenshot of Figma viaual design experimentation" src="/images/infura-design-system/visual-experimentation.png" class="mb--base"> -->
+      <img alt="Screenshot of Figma viaual design experimentation" src="/images/infura-design-system/visual-experimentation-2.png">
+  </div>
+</section>
+
+<section class="grid seven">
+  <div class="span-4 work-image--left">
+    <img alt="Screenshot of button component and it's documentation" src="/images/infura-design-system/new/button-crop.png">
+  </div>
+  <div class="span-3">
+    <h3>Rebuilding the System, One Component at a Time</h3>
     <p>For each component, I followed a full design-to-implementation lifecycle:</p>
-    
     <ul class="circle">
       <li>Update the design in Figma</li>
       <li>Implement in React Storybook</li>
@@ -87,50 +88,55 @@ class: work
     </ul>
     <p>Each step informed the others. As new edge cases emerged during integration, I revisited and refined components in Figma and Storybook. Since I was also managing the project, I had visibility into where gaps were forming—and could quickly resolve them across design and engineering.</p>
   </div>
+</section>
+
+<section class="grid one-one">
+  <div class="cell">
+    <img alt="Screenshot of action link component and it's documentation" src="/images/infura-design-system/new/semantic-state-icons.png">
+  </div>
+  <div class="cell">
+    <img alt="Screenshot of action link component and it's documentation" src="/images/infura-design-system/new/message.png">
+  </div>
+  <div class="cell">
+    <img alt="Screenshot of action link component and it's documentation" src="/images/infura-design-system/new/tag.png">
+  </div>
+  <div class="cell">
+    <img alt="Screenshot of action link component and it's documentation" src="/images/infura-design-system/new/input-combo.png">
+  </div>
+</section>
+
+<section class="grid seven">
   <div class="span-4">
-          <img alt="Screenshot of button component and it's documentation"
-            src="/images/infura-design-system/figma-system-button-2.png">
+    <!-- <img alt="Screenshot of Figma sidebar and Storybook sidebar with same component organization" src="/images/infura-design-system/figma-storybook-parity.png"> -->
+    <img alt="Screenshot of list of GitHub PRs" src="/images/infura-design-system/github-prs.png" class="mb--base">
+    <!-- <img alt="Screenshot of GitHub PR" src="/images/infura-design-system/github-pr-1.png" class="mb--base">
+    <img alt="Screenshot of GitHub PR" src="/images/infura-design-system/github-pr-2.png"> -->
+  </div>
+  <div class="span-3">
+    <h3>Shipping in Iteration, Not All at Once</h3>
+    <p>Rather than waiting for a big relaunch, we shipped components as they were completed. This meant users experienced a gradual improvement over time, never seeing a jarring change. It gave the team time to adapt to new patterns organically.</p>
+    <p>We also used each rollout as a chance to fix small UI/UX bugs that had accumulated. This not only improved the experience but clarified which components should be used where, reducing future inconsistencies.</p>
   </div>
 </section>
 
-<section class="grid one-one border-top">
-  <div class="cell">
-    <img alt="Screenshot of action link component and it's documentation"
-      src="/images/infura-design-system/figma-system-action-link.png">
-  </div>
-  <div class="cell">
-    <img alt="Screenshot of semantic icon component and it's documentation"
-      src="/images/infura-design-system/figma-system-icons.png">
-  </div>
+
+<section class="grid seven border-top">
+    <div class="span-3 row-span-2">
+      <h3>Results &amp; Impact</h3>
+      <p>This wasn&rsquo;t just a visual refresh, it rebuilt the foundation for how we shipped product at Infura. The end result: a cleaner, more unified user experience that scaled with our team and our users.</p>
+    </div>
+
+    <div class="span-2 mt--large">
+      <h4 class="data"><span class="inline-icon">{% include icons/trending-down.svg %}</span> 56%</h4> 
+      <p class="detail">Component count</p>
+    </div>
+    <div class="span-2 mt--large cell--last">
+      <h4 class="data"><span class="inline-icon">{% include icons/trending-up.svg %}</span> 53</h4> 
+      <p class="detail">UI bug tickets cleared</p>
+    </div>
+    <div class="span-2 pt--none">
+      <h4 class="data"><span class="inline-icon">{% include icons/trending-down.svg %}</span> 0</h4> 
+      <p class="detail">User complaints about design during post-rollout churn analysis</p>
+    </d>
 </section>
-
-      <section class="grid seven border-top">
-        <div class="span-4">
-          <!-- <img alt="Screenshot of Figma sidebar and Storybook sidebar with same component organization" src="/images/infura-design-system/figma-storybook-parity.png"> -->
-          <img alt="Screenshot of list of GitHub PRs" src="/images/infura-design-system/github-prs.png" class="mb--base">
-          <img alt="Screenshot of GitHub PR" src="/images/infura-design-system/github-pr-1.png" class="mb--base">
-          <img alt="Screenshot of GitHub PR" src="/images/infura-design-system/github-pr-2.png">
-        </div>
-        <div class="span-3">
-          <h3 class="data--quote">Shipping in Iteration, Not All at Once</h3>
-          <p>Rather than waiting for a big relaunch, we shipped components as they were completed. This meant users experienced a gradual improvement over time—never a jarring change—and gave the team time to adapt to new patterns organically.</p>
-          
-          <p>We also used each rollout as a chance to fix small UI/UX bugs that had accumulated. This not only improved the experience but clarified which components should be used where, reducing future inconsistencies.</p>
-          
-          <h3 class="data--quote">Results & Impact</h3>
-          
-          <p>The design system overhaul led to significant improvements across design, engineering, and user satisfaction:</p>
-          
-          <ul class="circle">
-            <li>Faster time from design to production for new UI features</li>
-            <li>Reduced component count by over 56%, improving maintainability</li>
-            <li>Fewer UI bugs, more than 53 tickets cleared, and clearer component usage across the codebase</li>
-            <li>Zero user complaints about design during post-rollout churn analysis</li>
-            <li>Improved collaboration between design and engineering through shared language and documentation</li>
-          </ul>
-          
-          <p>This wasn’t just a visual refresh, it rebuilt the foundation for how we shipped product at Infura. The end result: a cleaner, more unified user experience that scaled with our team and our users.</p>
-        </div>
-      </section>
-
 {% include work.html %}
