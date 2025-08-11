@@ -54,6 +54,11 @@
   padding: 0 !important;
 }
 
+.pv--base {
+  padding: var(--spacing) 0;
+}
+
+
 .pt--none {
   padding-top: 0 !important;
 }
