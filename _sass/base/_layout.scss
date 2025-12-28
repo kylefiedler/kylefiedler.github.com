@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  max-width: 65rem;
+  max-width: 35rem;
   padding: 2rem;
   overflow-x: hidden;
   margin: 0 auto;
@@ -27,10 +27,7 @@ body {
 
 footer {
   padding-top: var(--spacing--large);
-
-  a {
-    text-decoration: none;
-  }
+  font-size: 0.8rem;
 
   li {
     display: inline-block;

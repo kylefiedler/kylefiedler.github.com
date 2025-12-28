@@ -8,11 +8,6 @@
       margin-top: 0;
       border-top: 0;
     }
-
-    &:nth-of-type(odd) {
-      @extend .border-right;
-      padding-left: 0;
-    } 
   }
 
   li li {

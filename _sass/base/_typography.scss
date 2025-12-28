@@ -1,7 +1,7 @@
 html {
   color: lighten($font-color--base, 30%);
   font-family: var(--font-family);
-  font-size: clamp(125%, 2.25vw, 1.5rem);
+  font-size: clamp(125%, 2.25vw, 1.25rem);
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -141,7 +141,7 @@ button {
 
 figcaption,
 .detail {
-  font-size: 0.8rem;
+  // font-size: 0.8rem;
   font-weight: normal;
   color: lighten($font-color--base, 35%);
 
@@ -150,12 +150,12 @@ figcaption,
   }
 
   h4 {
-    font-size: 0.8rem;
+    // font-size: 0.8rem;
   }
 }
 
 .detail--mono {
-  font-size: 0.8rem;
+  // font-size: 0.8rem;
   font-weight: normal;
   font-family: var(--font-family--mono);
   color: lighten($font-color--base, 45%);
