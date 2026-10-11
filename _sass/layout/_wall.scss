@@ -1,26 +1,42 @@
 // Three photo columns beside the card on Split pages, held in place while the
-// card scrolls. Hidden on phones.
+// card scrolls and drifting down / up / down. On phones, one still strip above
+// the card.
+
+$wall-columns: 1.6fr 1.17fr 1fr;
 
 .wall {
+  --wall-gap: 0.5rem;
+  // Seconds to drift the width of a 1fr column; every column moves at this
+  // speed, whatever its photos' heights.
+  --wall-pace: 30s;
+
   position: sticky;
   top: 0;
   align-self: start;
   display: grid;
-  grid-template-columns: 1.6fr 1.17fr 1fr;
-  gap: 0.5rem;
+  grid-template-columns: $wall-columns;
+  gap: var(--wall-gap);
   height: 100vh;
   overflow: hidden;
 
   @media (max-width: $mobile) {
-    display: none;
+    order: -1;
+    position: static;
+    display: block;
+    height: auto;
+    padding: var(--gutter) 0 0 var(--gutter);
   }
 }
 
 .wall__column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  min-width: 0;
   padding-top: 0.3125rem;
+
+  @for $i from 1 through length($wall-columns) {
+    &:nth-child(#{$i}) {
+      --wall-share: #{nth($wall-columns, $i) / 1fr};
+    }
+  }
 
   &:nth-child(2) {
     margin-top: -4rem;
@@ -29,10 +45,89 @@
   &:nth-child(3) {
     margin-top: -2.5rem;
   }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+// The track holds two copies of the column's tiles. Each copy carries its own
+// trailing gap, so half the track is exactly one copy and -50% loops.
+// --wall-length is the copy's height in column widths, set by the include.
+.wall__track {
+  display: flex;
+  flex-direction: column;
+  animation: wall-drift linear infinite;
+  animation-duration: calc(var(--wall-length) * var(--wall-share) * var(--wall-pace));
+  will-change: transform;
+
+  .wall__column:nth-child(2) & {
+    animation-direction: reverse;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+.wall__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wall-gap);
+  padding-bottom: var(--wall-gap);
+}
+
+// Downward: start one copy up and slide to rest. Reversed, it drifts up.
+@keyframes wall-drift {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .wall__tile {
+  display: block;
   flex: none;
+  width: 100%;
+  height: auto;
   border-radius: var(--radius);
   background: var(--placeholder);
+}
+
+.wall__strip {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    gap: var(--wall-gap);
+    height: var(--strip-height);
+
+    > .wall__tile {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+// Case studies: still columns that scroll with the page, filled by the case
+// study's own media. Phones keep that media inline in the card.
+.wall--static {
+  position: relative;
+  height: auto;
+  overflow: visible;
+
+  .wall__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wall-gap);
+    margin-top: 0;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }

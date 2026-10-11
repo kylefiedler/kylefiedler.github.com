@@ -13,6 +13,7 @@ exclude:
   - README
   - node_modules
   - script
+  - test
 
 # `section` keys into _data/sections.yml. `frame` is `sheet` (full width) or
 # `split` (card beside the photo wall).

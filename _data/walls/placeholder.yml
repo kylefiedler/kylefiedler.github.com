@@ -1,0 +1,21 @@
+# Gray tiles for Split pages until a real set lands. No `src`, so each entry
+# renders as a rounded tile at its aspect ratio. Dealt round-robin, the first
+# nine reproduce the Index mockup's columns.
+- { width: 800, height: 600 }
+- { width: 800, height: 1067 }
+- { width: 800, height: 1333 }
+- { width: 800, height: 1440 }
+- { width: 800, height: 600 }
+- { width: 800, height: 1000 }
+- { width: 800, height: 600 }
+- { width: 800, height: 600 }
+- { width: 800, height: 1000 }
+- { width: 800, height: 1200 }
+- { width: 800, height: 600 }
+- { width: 800, height: 800 }
+- { width: 800, height: 1000 }
+- { width: 800, height: 1200 }
+- { width: 800, height: 600 }
+- { width: 800, height: 533 }
+- { width: 800, height: 1000 }
+- { width: 800, height: 1067 }

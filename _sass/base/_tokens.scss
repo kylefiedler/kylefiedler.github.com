@@ -30,6 +30,8 @@ $mobile: $wide - 0.01rem;
   --line-pitch: 1.625rem;
   --gutter: 1.75rem;
   --inset: 3.75rem;
+  // Height of the photo strip that replaces the wall on phones.
+  --strip-height: 8rem;
 
   @media (max-width: $mobile) {
     --rule-top: 5rem;

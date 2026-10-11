@@ -1,0 +1,5 @@
+{%- if include.photo.src %}
+<img class="wall__tile" src="{{ include.photo.src }}" alt="{{ include.alt | escape }}" width="{{ include.photo.width }}" height="{{ include.photo.height }}" loading="lazy" decoding="async">
+{%- else %}
+<div class="wall__tile" style="aspect-ratio: {{ include.photo.width }} / {{ include.photo.height }}"></div>
+{%- endif -%}
