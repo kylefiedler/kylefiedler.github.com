@@ -14,6 +14,13 @@ exclude:
   - node_modules
   - script
 
+# Long-form entries, named like posts: _journal/YYYY-MM-DD-title.md. Without a
+# filename or front-matter date, an entry is dated at build time.
+collections:
+  journal:
+    output: true
+    permalink: /journal/:title/
+
 # `section` keys into _data/sections.yml. `frame` is `sheet` (full width) or
 # `split` (card beside the photo wall).
 defaults:
@@ -27,10 +34,13 @@ defaults:
       type: posts
     values:
       section: journal
+      layout: post
   - scope:
-      path: posts
+      path: ""
+      type: journal
     values:
       section: journal
+      layout: post
   - scope:
       path: journal
     values:

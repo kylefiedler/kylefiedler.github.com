@@ -1,0 +1,37 @@
+---
+layout: default
+title: Journal
+---
+
+{% include title.html %}
+
+<div class="journal-index">
+  <section class="journal-index__entries" aria-labelledby="journal-entries">
+    <h2 class="visually-hidden" id="journal-entries">Entries</h2>
+    {%- assign entries = site.journal | sort: "date" | reverse %}
+    {%- if entries.size > 0 %}
+    <ol class="journal-entries">
+      {%- for entry in entries %}
+      <li class="journal-entry">
+        <p class="journal-entry__meta meta">
+          <time datetime="{{ entry.date | date_to_xmlschema }}" data-jitter="journal-date">{{ entry.date | date: '%m.%d.%Y' }}</time>
+          <span>{% if forloop.rindex < 10 %}0{% endif %}{{ forloop.rindex }}</span>
+        </p>
+        <h3 class="journal-entry__title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- else %}
+    <p class="meta">Nothing here yet. The first entry is still in the typewriter.</p>
+    {%- endif %}
+  </section>
+
+  <section class="journal-index__archive" aria-labelledby="blog-archive">
+    <h2 class="tertiary" id="blog-archive">Blog archive &amp; links</h2>
+    <ul class="post-links post-links--archive">
+      {%- for post in site.posts %}
+      <li>{% include post-link.html post=post %}, <time class="meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%Y' }}</time></li>
+      {%- endfor %}
+    </ul>
+  </section>
+</div>

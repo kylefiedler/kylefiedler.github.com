@@ -1,0 +1,93 @@
+// The Journal index (entries beside the blog archive) and the plain page that
+// posts and journal entries share (article beside other posts).
+
+.post-links {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.journal-index__archive,
+.post__others {
+  .tertiary {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.journal-index {
+  display: grid;
+  gap: calc(var(--space) * 2) 3.75rem;
+  margin-top: calc(var(--space) * 2);
+
+  @media (min-width: $wide) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+.journal-entries {
+  padding-left: 0;
+  list-style: none;
+}
+
+.journal-entry {
+  margin-bottom: var(--space);
+}
+
+.journal-entry__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+}
+
+.journal-entry__title {
+  margin: 0;
+  font-size: var(--size-secondary);
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// The archive runs wider than the prose measure .frame--sheet caps lists at.
+.frame--sheet ul.post-links--archive {
+  max-width: none;
+  columns: 2 16rem;
+  column-gap: 3rem;
+  font-size: var(--size-small);
+
+  li {
+    break-inside: avoid;
+  }
+}
+
+.post {
+  display: grid;
+  gap: calc(var(--space) * 2) 3.75rem;
+
+  @media (min-width: $wide) {
+    grid-template-columns: minmax(0, 38rem) minmax(0, 17rem);
+    justify-content: space-between;
+  }
+}
+
+.post__date {
+  display: block;
+  margin-bottom: var(--space);
+}
+
+.post__others {
+  font-size: var(--size-small);
+
+  @media (max-width: $mobile) {
+    padding-top: var(--space);
+    border-top: 1px dashed var(--ink-faint);
+  }
+}

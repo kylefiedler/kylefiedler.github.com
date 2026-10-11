@@ -1,25 +1,6 @@
 ---
-layout: default
-class: posts
+title: Journal
+layout: external
+external_url: /journal/
+sitemap: false
 ---
-
-<header class="header--primary">
-  <h1>Posts</h1>
-  <p>A collection of things I find interesting across the internet. Occasionally, I actually create my own content. Ok, rarely.</p>
-</header>
-
-<section class="grid seven">
-  <ul class="span-5">
-    {% for post in site.posts %}
-      <li class="time-n-title mb--base-mobile">
-        <time class="detail">{{ post.date | date: '%m.%Y' }}</time>
-        <hr />
-        {% if post.external_url %}
-        <p><a href="{{post.external_url}}">{{ post.title }}<span class="inline-icon">{% include icons/share.svg %} </span><span class="visually-hidden">external</span></a></p>
-        {% else %}
-        <p><a href="{{post.url}}">{{ post.title }}</a></p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-</section>
