@@ -2,6 +2,9 @@
 $wide: 48rem;
 $mobile: $wide - 0.01rem;
 
+// Three columns of mono text need more room than $wide gives them.
+$collage: 64rem;
+
 :root {
   --ink: #1b1b1b;
   --ink-muted: rgba(27, 27, 27, 0.55);

@@ -1,44 +1,54 @@
 ---
 layout: default
-class: testamonials
+title: Kind Words
 ---
 
-<section class="header--primary">
-  <h1><span class="inline-icon">{% include icons/heart.svg %}</span> Every once in a while I do a good enough work for folks to say <em>nice things about me.</em></h1>
-</section>
+<div class="kind-words">
+  <div class="kind-words__column">
+    {% include title.html %}
+    {% include doodle.html name="heart" top="-0.75rem" left="11rem" rotate="14" size="0.875rem" %}
 
-<section>
-    <ul>
-      <li class="mt--base">
-        <h2>Kyle demonstrated our community value by creating a space where I feel truly supported. He is consistently encouraging fruitful collaborations among designers and he genuinely cares about our personal growth and well-beings.</h2>
-      </li>
-      <li class="mt--base">
-        <h2>Kyle always puts others&rsquo; success before his own, even when he&rsquo;s buried in work—a rare and admirable quality that&rsquo;s far from easy to pull off.</h2>
-      </li>
-      <li class="border-top mt--large">
-        <h2 class="mb--none data--quote mt--base"><span class="inline-icon">{% include icons/trophy.svg %}</span> Kindness Award Winner, MetaMask Design Team 2024</h2>
-        <p class="detail mb--base">As voted by the MetaMask Design team</p>
-      </li>
-      <li class="mt--large border-top">
-        <img src="/images/kind-words/retro.png" alt="A Figjam retrospective board filled with colorful sticky notes containing supportive messages about Kyle. The notes read: Kyle keeps me sane, Great support from my manager Kyle - feel advocated for and encouraged to grow without being overly pressured, Getting great support from Kyle +1, I love Kyle too, and Can we clone Kyle? The overall tone is warm, appreciative, and celebratory of Kyle's management and mentorship.">
-      </li>
-      <li class="border-top pt--large">
-        <h3>Kyle makes me feel recognized for my efforts, which is important to me. He regularly tells me via Slack when I have done something well. This consistent recognition has been a key factor in keeping my motivation high at work.</h3>
-      </li>
-      <li class="mt--large">
-        <h2 class="data--quote mt--base">Kyle is always so humble and lends grace to everyone, very selflessly. And the best part is, he doesn't know how kind he is!! He does it without seeking recognition for his words or actions.</h2>
-      </li>
-      <li class="mt--large">
-        <h3>Kyle offers insightful feedback on our designs, the way we present our work, and how we should collaborate with each other. His feedback has been consistently valuable, and I truly appreciate all the support and guidance he provides.</h3>
-      </li>
-      <li class="border-top pt--large mt--large pb--base">
-        <img src="/images/kind-words/figjam-love.png" alt="a screenshot of slack saying: 'btw I just wanted to say i love your figjam. Its the kind of light weight planning that I wish product teams did more often, maybe it could eve become a temaplate What I especially love about this format is: Clearly defined roles, A timeline, Space for lo-fi scoping'">
-      </li>
-      <li class="border-top pt--large">
-        <h3 class="data--quote mt--base">Kyle is a great coach and mentor when reviewing projects. I like that he takes a "Socratic approach" by asking really pointed questions rather than just offering solutions</h3>
-      </li>
-      <li class="mt--base">
-        <h3>Kyle ran the most efficiant and effective design workshop I&rsquo;ve ever participated in. And it had ~40 people in it!</h3>
-      </li>
-    </ul>
-</section>
+    <blockquote class="kind-words__quote">
+      Kyle demonstrated our community value by creating a space where I feel truly supported. He is consistently encouraging fruitful collaborations among designers and he genuinely cares about our personal growth and well-beings.
+    </blockquote>
+
+    <blockquote class="kind-words__quote">
+      Kyle always puts others&rsquo; success before his own, even when he&rsquo;s buried in work—a rare and admirable quality that&rsquo;s far from easy to pull off.
+    </blockquote>
+
+    <p class="kind-words__award">Kindness Award Winner, MetaMask Design Team 2024</p>
+
+    <blockquote class="kind-words__quote kind-words__quote--bullet">
+      Kyle is a great coach and mentor when reviewing projects. I like that he takes a "Socratic approach" by asking really pointed questions rather than just offering solutions
+    </blockquote>
+
+    <blockquote class="kind-words__quote kind-words__quote--pull">
+      Kyle ran the most efficiant and effective design workshop I&rsquo;ve ever participated in. And it had ~40 people in it!
+    </blockquote>
+  </div>
+
+  <div class="kind-words__spread">
+    <figure class="kind-words__board">
+      <img src="/images/kind-words/retro.png" width="2334" height="798" alt="A Figjam retrospective board filled with colorful sticky notes containing supportive messages about Kyle. The notes read: Kyle keeps me sane, Great support from my manager Kyle - feel advocated for and encouraged to grow without being overly pressured, Getting great support from Kyle +1, I love Kyle too, and Can we clone Kyle? The overall tone is warm, appreciative, and celebratory of Kyle's management and mentorship.">
+      {% include doodle.html name="paperclip" top="-0.75rem" right="-1.375rem" size="3.25rem" %}
+    </figure>
+
+    <div class="kind-words__column">
+      <img src="/images/kind-words/figjam-love.png" width="703" height="365" alt="a screenshot of slack saying: 'btw I just wanted to say i love your figjam. Its the kind of light weight planning that I wish product teams did more often, maybe it could eve become a temaplate What I especially love about this format is: Clearly defined roles, A timeline, Space for lo-fi scoping'">
+
+      <blockquote class="kind-words__quote">
+        Kyle offers insightful feedback on our designs, the way we present our work, and how we should collaborate with each other. His feedback has been consistently valuable, and I truly appreciate all the support and guidance he provides.
+      </blockquote>
+    </div>
+
+    <div class="kind-words__column">
+      <blockquote class="kind-words__quote kind-words__quote--offset">
+        Kyle makes me feel recognized for my efforts, which is important to me. He regularly tells me via Slack when I have done something well. This consistent recognition has been a key factor in keeping my motivation high at work.
+      </blockquote>
+
+      <blockquote class="kind-words__quote kind-words__quote--pull">
+        Kyle is always so humble and lends grace to everyone, very selflessly. And the best part is, he doesn't know how kind he is!! He does it without seeking recognition for his words or actions.
+      </blockquote>
+    </div>
+  </div>
+</div>
