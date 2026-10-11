@@ -1,0 +1,84 @@
+// Kind Words: a hand-composed collage. A column of quotes sits beside a
+// spread (the retro board across the top, two columns of quotes under it).
+// Below $collage everything stacks in source order.
+
+.kind-words,
+.kind-words__column,
+.kind-words__spread {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.kind-words {
+  max-width: 38rem;
+
+  @media (min-width: $collage) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 4rem;
+    align-items: start;
+    max-width: 77rem;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+.kind-words__column {
+  position: relative;
+}
+
+.kind-words__spread {
+  @media (min-width: $collage) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    align-items: start;
+  }
+}
+
+// Narrower than the spread, leaving room for the paperclip on its corner.
+.kind-words__board {
+  position: relative;
+  margin: 0 1.5rem 0 0;
+
+  @media (min-width: $collage) {
+    grid-column: 1 / -1;
+    margin-right: 2.75rem;
+  }
+}
+
+.kind-words__quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.kind-words__quote--pull,
+.kind-words__award {
+  font-family: var(--font-serif);
+  font-size: var(--size-secondary);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.kind-words__award {
+  margin: 0;
+}
+
+// A hollow bullet hanging at the column edge.
+.kind-words__quote--bullet {
+  display: list-item;
+  margin-left: 1.25rem;
+  list-style: circle;
+}
+
+// Hand-placed stagger under the Slack screenshot.
+.kind-words__quote--offset {
+  @media (min-width: $collage) {
+    margin: 1.5rem 0 0 1.5rem;
+  }
+}
