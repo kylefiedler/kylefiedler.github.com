@@ -1,0 +1,26 @@
+# Block-level jitter slots. Elements opt in with data-jitter="<slot>"; each
+# page gets an offset within ± these ranges, seeded from its URL
+# (_includes/jitter.html). The slot list also generates the CSS hooks in
+# stylesheets/site.scss.
+#
+# x, y: max offset in px. r: max rotation in degrees.
+- slot: title
+  x: 4
+  y: 2
+  r: 0.6
+- slot: title-number
+  x: 3
+  y: 2
+  r: 0.8
+- slot: nav-slash
+  x: 1.5
+  y: 1.5
+  r: 0.9
+- slot: list-indent
+  x: 4
+  y: 1
+  r: 0.4
+- slot: journal-date
+  x: 2
+  y: 1.5
+  r: 0.6
