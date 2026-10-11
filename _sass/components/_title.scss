@@ -1,0 +1,25 @@
+// Page title with its section number resting on a dashed leader.
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title__text {
+  margin: 0;
+}
+
+.title__number {
+  flex: none;
+  min-width: 6.25rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px dashed;
+  color: var(--ink-faint);
+  font-size: var(--size-tiny);
+  line-height: 1;
+  text-align: right;
+}

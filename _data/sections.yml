@@ -1,0 +1,33 @@
+# The four site sections. `section` front matter (set by path in _config.yml)
+# picks one: it drives body[data-section] colors, the nav dropdown, the first
+# breadcrumb, and the number beside page titles.
+#
+# paper: card background. line: ruled-line texture. rule: the top rule.
+- key: index
+  label: Index
+  number: "01"
+  url: /
+  paper: "#e2ded5"
+  line: "#e6e3db"
+  rule: "#e6beb7"
+- key: journal
+  label: Journal
+  number: "02"
+  url: /posts/
+  paper: "#f1f1f1"
+  line: "#e9e9e9"
+  rule: "#f3cfcf"
+- key: lists
+  label: Lists
+  number: "03"
+  url: /lists/
+  paper: "#9ebcd7"
+  line: "#a7c2db"
+  rule: "#92a0d3"
+- key: work
+  label: Work
+  number: "04"
+  url: /work/
+  paper: "#c0a787"
+  line: "#c6b093"
+  rule: "#bf8e74"

@@ -1,8 +1,14 @@
 {% include header.html %}
 
-  <main>
+<div class="frame frame--{{ page.frame }}">
+  <div class="card">
     {% include nav.html %}
-    {{ content }}
-  </main>
+    <main class="card__body">
+      {{ content }}
+    </main>
+  </div>
+  {% if page.frame == "split" %}{% include wall.html %}{% endif %}
+</div>
 
-{% include footer.html %}
+  </body>
+</html>

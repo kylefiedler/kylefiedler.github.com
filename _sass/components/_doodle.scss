@@ -1,0 +1,15 @@
+// Hand-drawn SVGs placed by _includes/doodle.html.
+
+.doodle {
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  color: var(--ink);
+  pointer-events: none;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

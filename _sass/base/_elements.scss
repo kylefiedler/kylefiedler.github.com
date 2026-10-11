@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: var(--size-body);
+  line-height: var(--leading);
+  letter-spacing: var(--tracking);
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--size-title);
+  line-height: 1.15;
+}
+
+h2,
+h3 {
+  font-size: var(--size-secondary);
+  line-height: 1.5;
+
+  * + & {
+    margin-top: var(--space);
+  }
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
+  font: inherit;
+}
+
+p,
+ul,
+ol,
+figure,
+blockquote,
+pre {
+  margin: 0 0 var(--space);
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+li::marker {
+  font-size: 0.8em;
+}
+
+li > :last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+mark {
+  padding: 0 0.1em;
+  background: var(--highlight);
+  color: inherit;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+// Embedded videos.
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  margin-bottom: var(--space);
+  border: 0;
+  aspect-ratio: 16 / 9;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figcaption {
+  @extend .meta;
+  margin-top: 0.5rem;
+}
+
+hr {
+  margin: var(--space) 0;
+  border: 0;
+  border-top: 1px dashed var(--ink-faint);
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+}
+
+pre {
+  overflow-x: auto;
+}
+
+.tertiary {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--size-body);
+  font-weight: 400;
+  line-height: var(--leading);
+  letter-spacing: var(--tracking);
+  text-transform: uppercase;
+}
+
+.meta {
+  color: var(--ink-muted);
+  font-size: var(--size-small);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

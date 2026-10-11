@@ -1,33 +1,28 @@
-{% include header.html %}
+---
+layout: default
+---
 
-<main>
+<section class="header--primary">
+  <div class="mb--large">
+    <h1 class="mb--none">{{ page.title }}</h1>
+    <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%m.%d.%Y' }}</time>
+  </div>
+  {{ content }}
+</section>
 
-  {% include nav.html %}
-
-  <section class="header--primary">
-    <div class="mb--large">
-      <h1 class="mb--none">{{ page.title }}</h1>
-      <time pubdate="{{ page.date }}" class="detail">{{ page.date | date: '%m.%d.%Y' }}</time>
-    </div>
-    {{ content }}
-  </section>
-
-  <section class="pt--large">
-    <h2 class="title--secondary">Keep Reading <a href="/posts" class="detail">All posts</a></h2>
-    <ul>
-      {% for post in site.posts limit: 3 %}
-      <li class="time-n-title mb--base-mobile">
-        <time class="detail">{{ post.date | date: '%m.%d.%Y' }}</time>
-        <hr />
-        {% if post.external_url %}
-        <p><a href="{{post.external_url}}">{{ post.title }}</a> ↗</p>
-        {% else %}
-        <p><a href="{{post.url}}">{{ post.title }}</a></p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-</main>
-
-{% include footer.html %}
+<section class="pt--large">
+  <h2 class="title--secondary">Keep Reading <a href="/posts" class="detail">All posts</a></h2>
+  <ul>
+    {% for post in site.posts limit: 3 %}
+    <li class="time-n-title mb--base-mobile">
+      <time class="detail">{{ post.date | date: '%m.%d.%Y' }}</time>
+      <hr />
+      {% if post.external_url %}
+      <p><a href="{{post.external_url}}">{{ post.title }}</a> ↗</p>
+      {% else %}
+      <p><a href="{{post.url}}">{{ post.title }}</a></p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

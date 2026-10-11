@@ -1,0 +1,38 @@
+// Three photo columns beside the card on Split pages, held in place while the
+// card scrolls. Hidden on phones.
+
+.wall {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: grid;
+  grid-template-columns: 1.6fr 1.17fr 1fr;
+  gap: 0.5rem;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.wall__column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.3125rem;
+
+  &:nth-child(2) {
+    margin-top: -4rem;
+  }
+
+  &:nth-child(3) {
+    margin-top: -2.5rem;
+  }
+}
+
+.wall__tile {
+  flex: none;
+  border-radius: var(--radius);
+  background: var(--placeholder);
+}

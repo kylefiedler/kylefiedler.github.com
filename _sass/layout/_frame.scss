@@ -1,0 +1,99 @@
+// The index card. Sheet pages are one full-width card; Split pages put the
+// card beside the photo wall.
+
+.frame {
+  position: relative;
+  min-height: 100vh;
+
+  // Top rule: runs across the card and, on Split pages, over the wall.
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--rule-top);
+    left: var(--gutter);
+    right: 3.125rem;
+    z-index: 2;
+    height: 2px;
+    background: var(--rule);
+    pointer-events: none;
+
+    @media (max-width: $mobile) {
+      right: var(--gutter);
+    }
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  background: var(--paper);
+
+  // Ruled-line texture. Decoration only: text doesn't sit on the lines.
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--rule-top) + 1.875rem);
+    right: 0;
+    bottom: 0;
+    left: var(--gutter);
+    background: repeating-linear-gradient(to bottom, var(--line) 0 2px, transparent 2px var(--line-pitch));
+    pointer-events: none;
+  }
+}
+
+.card__body {
+  position: relative;
+  padding: 5rem 3.125rem 3.5rem var(--inset);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 2.5rem var(--inset) 3rem;
+  }
+}
+
+.frame--sheet .card__body {
+  p,
+  ul,
+  ol,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  .title {
+    max-width: 38rem;
+  }
+}
+
+.frame--split {
+  display: grid;
+  grid-template-columns: var(--card-width) minmax(0, 1fr);
+
+  .card::before {
+    right: 0.75rem;
+  }
+
+  // Short content settles at the bottom of the card; long content scrolls.
+  .card__body {
+    margin-top: auto;
+    padding-top: 3rem;
+  }
+
+  @media (max-width: $mobile) {
+    display: block;
+
+    .card::before {
+      right: 0;
+    }
+
+    .card__body {
+      margin-top: 0;
+      padding-top: 2.5rem;
+    }
+  }
+}

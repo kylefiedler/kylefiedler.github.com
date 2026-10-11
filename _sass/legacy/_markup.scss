@@ -1,0 +1,93 @@
+// Generic treatment for class names in markup that predates the index-card
+// frame, so unported pages read cleanly inside the card. Remove rules here as
+// sections are ported to the new markup.
+
+.header--primary {
+  margin-bottom: var(--space);
+}
+
+.title--primary {
+  font-family: var(--font-serif);
+  font-size: var(--size-secondary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.title--secondary {
+  @extend .tertiary;
+}
+
+.detail {
+  @extend .meta;
+}
+
+.strikethrough,
+.visited {
+  text-decoration: line-through;
+}
+
+.numbered {
+  list-style: decimal;
+}
+
+.inline-icon svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.books,
+.grid,
+.images,
+.project-specs,
+.tags,
+.work-images {
+  padding-left: 0;
+  list-style: none;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+
+// `date ------ title` rows.
+.time-n-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+
+  time {
+    flex: none;
+  }
+
+  hr {
+    flex: 1 1 1.5rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.masonry {
+  column-width: 16rem;
+  column-gap: 3rem;
+
+  > * {
+    break-inside: avoid;
+  }
+}
+
+@media (min-width: $wide) {
+  .grid,
+  .work-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space) 3rem;
+    align-items: start;
+  }
+}

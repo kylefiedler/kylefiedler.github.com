@@ -1,11 +1,49 @@
-<nav class="nav">
-  <a href="/" style="outline: none;">
+{%- assign section = site.data.sections | where: "key", page.section | first -%}
+{%- if page.url != section.url -%}
+  {%- assign slug = page.url | split: "/" | last | remove: ".html" | replace: "-", " " -%}
+  {%- assign crumb = page.crumb | default: page.title | default: slug -%}
+{%- endif -%}
+<header class="masthead">
+  <a class="masthead__logo" href="/">
     {% include icon.svg %}
     <span class="visually-hidden">Home</span>
   </a>
-  <!-- <ul>
-    <li><a href="/work/">Work</a></li>
-    <li><a href="/kind-words/">Kind Words</a></li>
-    <li><a href="/lists/values">Values</a></li>
-  </ul> -->
-</nav>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <span class="crumbs__slash" data-jitter="nav-slash" aria-hidden="true">/</span>
+    <details class="sections">
+      <summary class="crumbs__item{% unless crumb %} crumbs__item--current{% endunless %}">
+        {{ section.label }}
+        <svg class="sections__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </summary>
+      <ol class="sections__menu">
+        {%- for item in site.data.sections %}
+        <li>
+          <a href="{{ item.url }}"{% if item.key == section.key %} aria-current="true"{% endif %}>
+            <span class="sections__mark" aria-hidden="true">{% if item.key == section.key %}&gt;{% else %}/{% endif %}</span>
+            {{ item.label }}
+            <span class="sections__number">{{ item.number }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </details>
+    {%- if crumb %}
+    <span class="crumbs__slash" data-jitter="nav-slash" aria-hidden="true">/</span>
+    <span class="crumbs__item crumbs__item--current" aria-current="page">{{ crumb }}</span>
+    {%- endif %}
+  </nav>
+</header>
+<script>
+  (() => {
+    const menu = document.querySelector(".sections");
+    document.addEventListener("click", (event) => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.open) {
+        menu.open = false;
+        menu.querySelector("summary").focus();
+      }
+    });
+  })();
+</script>

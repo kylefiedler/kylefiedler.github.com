@@ -2,6 +2,23 @@
 ---
 
 @import "vendor/normalize";
-@import "base/base";
-@import "components/components";
-@import "utilities/utilities";
+@import "base/tokens";
+
+// Section colors from _data/sections.yml.
+{%- for section in site.data.sections %}
+[data-section="{{ section.key }}"] {
+  --paper: {{ section.paper }};
+  --line: {{ section.line }};
+  --rule: {{ section.rule }};
+}
+{%- endfor %}
+
+@import "base/fonts";
+@import "base/elements";
+@import "layout/frame";
+@import "layout/wall";
+@import "components/nav";
+@import "components/title";
+@import "components/doodle";
+@import "components/jitter";
+@import "legacy/markup";

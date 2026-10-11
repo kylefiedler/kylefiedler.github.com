@@ -1,0 +1,15 @@
+{%- comment -%}
+  Static gray placeholder columns for Split pages, until photo walls land.
+  Each column lists tile aspect ratios (width/height).
+{%- endcomment -%}
+{%- assign columns = "4/3 5/9 4/3|3/4 4/3 4/3 4/3|3/5 4/5 4/5" | split: "|" -%}
+<div class="wall" aria-hidden="true">
+  {%- for column in columns %}
+  <div class="wall__column">
+    {%- assign ratios = column | split: " " -%}
+    {%- for ratio in ratios %}
+    <div class="wall__tile" style="aspect-ratio: {{ ratio }}"></div>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>

@@ -12,3 +12,34 @@ sass:
 exclude:
   - README
   - node_modules
+  - script
+
+# `section` keys into _data/sections.yml. `frame` is `sheet` (full width) or
+# `split` (card beside the photo wall).
+defaults:
+  - scope:
+      path: ""
+    values:
+      section: index
+      frame: sheet
+  - scope:
+      path: ""
+      type: posts
+    values:
+      section: journal
+  - scope:
+      path: posts
+    values:
+      section: journal
+  - scope:
+      path: journal
+    values:
+      section: journal
+  - scope:
+      path: lists
+    values:
+      section: lists
+  - scope:
+      path: work
+    values:
+      section: work

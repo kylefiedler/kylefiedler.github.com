@@ -1,0 +1,9 @@
+{%- comment -%}
+  The page title with its section number on a dashed leader.
+  {% include title.html text="Lists" %} — `text` defaults to page.title.
+{%- endcomment -%}
+{%- assign section = site.data.sections | where: "key", page.section | first -%}
+<div class="title">
+  <h1 class="title__text" data-jitter="title">{{ include.text | default: page.title }}</h1>
+  <span class="title__number" data-jitter="title-number" aria-hidden="true">{{ section.number }}</span>
+</div>

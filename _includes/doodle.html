@@ -1,0 +1,17 @@
+{%- comment -%}
+  Places a hand-drawn SVG from _includes/doodles/ inside the nearest positioned
+  ancestor (the card body, by default).
+  {% include doodle.html name="sparkle" bottom="2rem" right="1.5rem" rotate="-8" size="1.5rem" %}
+  top / right / bottom / left / size take CSS lengths; rotate takes degrees.
+{%- endcomment -%}
+{%- capture style -%}
+  {%- if include.top %}top: {{ include.top }}; {% endif -%}
+  {%- if include.right %}right: {{ include.right }}; {% endif -%}
+  {%- if include.bottom %}bottom: {{ include.bottom }}; {% endif -%}
+  {%- if include.left %}left: {{ include.left }}; {% endif -%}
+  {%- if include.size %}width: {{ include.size }}; {% endif -%}
+  transform: rotate({{ include.rotate | default: 0 }}deg);
+{%- endcapture -%}
+<span class="doodle doodle--{{ include.name }}" style="{{ style }}" aria-hidden="true">
+  {%- include doodles/{{ include.name }}.svg -%}
+</span>

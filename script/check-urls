@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Fails if any HTML path in the base build (default: origin/main) is missing
+# from a build of the current working tree, uncommitted changes included.
+#
+#   script/check-urls [base-ref]
+
+set -euo pipefail
+
+base_ref="${1:-origin/main}"
+repo_root="$(git rev-parse --show-toplevel)"
+ruby_bin="${RUBY_BIN:-$HOME/.asdf/installs/ruby/3.4.5/bin}"
+[ -d "$ruby_bin" ] && export PATH="$ruby_bin:$PATH"
+
+work_dir="$(mktemp -d)"
+trap 'rm -rf "$work_dir"' EXIT
+
+build() {
+  local src="$1" dest="$2"
+  (cd "$src" && BUNDLE_GEMFILE="$repo_root/Gemfile" bundle exec jekyll build --quiet --source "$src" --destination "$dest")
+}
+
+html_paths() {
+  (cd "$1" && find . -name '*.html' | sed 's|^\./||' | sort)
+}
+
+mkdir -p "$work_dir/base-src" "$work_dir/branch-src"
+git -C "$repo_root" archive "$base_ref" | tar -x -C "$work_dir/base-src"
+rsync -a --exclude .git --exclude _site --exclude .sass-cache --exclude .jekyll-metadata \
+  "$repo_root/" "$work_dir/branch-src/"
+
+echo "Building $base_ref..."
+build "$work_dir/base-src" "$work_dir/base-site"
+echo "Building working tree..."
+build "$work_dir/branch-src" "$work_dir/branch-site"
+
+missing="$(comm -23 <(html_paths "$work_dir/base-site") <(html_paths "$work_dir/branch-site"))"
+total="$(html_paths "$work_dir/base-site" | wc -l | tr -d ' ')"
+
+if [ -n "$missing" ]; then
+  echo "Missing $(echo "$missing" | wc -l | tr -d ' ') of $total HTML paths from $base_ref:"
+  echo "$missing" | sed 's/^/  /'
+  exit 1
+fi
+
+echo "All $total HTML paths from $base_ref are present."
