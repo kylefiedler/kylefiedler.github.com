@@ -31,3 +31,18 @@ and add `wall: <set>` to the page's front matter. Fill in alt text in
 ```
 ruby test/wall_photos_test.rb
 ```
+
+Book covers
+---------------
+The Books wall shows covers of the 18 most recent books in `lists/books.html`,
+from Open Library. After adding books, run (macOS only)
+```
+script/book-covers
+```
+Books without a usable cover are skipped and reported. To use a cover Open
+Library doesn't have, or replace a bad one, commit it as
+`_book-covers/<slug>.jpg` (skipped books print the path). It wins over the
+lookup, so the wall comes out the same in any checkout. Test the script with
+```
+ruby test/book_covers_test.rb
+```
