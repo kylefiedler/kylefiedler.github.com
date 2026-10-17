@@ -1,15 +1,78 @@
 {%- comment -%}
-  Static gray placeholder columns for Split pages, until photo walls land.
-  Each column lists tile aspect ratios (width/height).
+  The photo wall on Split pages. `page.wall` names a set in _data/walls/
+  (written by script/wall-photos) and falls back to the gray placeholder set.
+  Entries without a `src` render as gray tiles.
+
+  Photos are dealt round-robin into three columns, cycling through the set
+  until every photo is used and each column is at least `column_min` of its
+  own widths tall. When the set is a multiple of 3, each pass through it
+  shifts by one photo; otherwise every column would cycle the same third.
+  The narrowest column is about 70px wide at the 768px breakpoint, so 16
+  widths outrun a 1024px-tall window plus the columns' stagger. Each column's
+  track holds two copies of its tiles, and the drift moves it by exactly one
+  copy, so the loop has no seam.
+
+  Phones get one still strip instead, cycled until it is at least `strip_min`
+  of its own heights wide, comfortably past the widest phone layout.
+
+  Screen readers get each photo's alt once: on its first appearance in the
+  columns, or in the strip on phones. Repeats and the second copy are silent,
+  and so are photos whose alt is empty.
+
+  `wall: static` renders three empty, still columns that scroll with the page,
+  for case studies to fill with their own media.
 {%- endcomment -%}
-{%- assign columns = "4/3 5/9 4/3|3/4 4/3 4/3 4/3|3/5 4/5 4/5" | split: "|" -%}
-<div class="wall" aria-hidden="true">
-  {%- for column in columns %}
-  <div class="wall__column">
-    {%- assign ratios = column | split: " " -%}
-    {%- for ratio in ratios %}
-    <div class="wall__tile" style="aspect-ratio: {{ ratio }}"></div>
-    {%- endfor %}
+{%- if page.wall == "static" -%}
+<div class="wall wall--static">
+  <div class="wall__column"></div>
+  <div class="wall__column"></div>
+  <div class="wall__column"></div>
+</div>
+{%- else -%}
+{%- assign photos = site.data.walls[page.wall] | default: site.data.walls.placeholder -%}
+{%- assign count = photos.size -%}
+{%- assign column_min = 16 -%}
+{%- assign strip_min = 8 -%}
+{%- assign bound = count | plus: 100 -%}
+{%- assign step = 0 -%}
+{%- assign thirds = count | modulo: 3 -%}
+{%- if thirds == 0 %}{% assign step = 1 %}{% endif -%}
+<div class="wall">
+  {%- for column in (0..2) %}
+  {%- assign length = 0 -%}
+  {%- capture tiles -%}
+    {%- for row in (0..bound) -%}
+      {%- assign slot = row | times: 3 | plus: column -%}
+      {%- if slot >= count and length >= column_min %}{% break %}{% endif -%}
+      {%- assign shift = slot | divided_by: count | times: step -%}
+      {%- assign index = slot | plus: shift | modulo: count -%}
+      {%- assign photo = photos[index] -%}
+      {%- assign length = photo.height | times: 1.0 | divided_by: photo.width | plus: length -%}
+      {%- assign alt = "" -%}
+      {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
+      {% include wall-tile.html photo=photo alt=alt %}
+    {%- endfor -%}
+  {%- endcapture %}
+  <div class="wall__column" style="--wall-length: {{ length | round: 3 }}">
+    <div class="wall__track">
+      <div class="wall__copy">{{ tiles }}
+      </div>
+      <div class="wall__copy" aria-hidden="true">{{ tiles }}
+      </div>
+    </div>
   </div>
   {%- endfor %}
+  <div class="wall__strip">
+    {%- assign span = 0 -%}
+    {%- for slot in (0..bound) -%}
+      {%- if slot >= count and span >= strip_min %}{% break %}{% endif -%}
+      {%- assign index = slot | modulo: count -%}
+      {%- assign photo = photos[index] -%}
+      {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}
+      {%- assign alt = "" -%}
+      {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
+      {% include wall-tile.html photo=photo alt=alt %}
+    {%- endfor %}
+  </div>
 </div>
+{%- endif -%}

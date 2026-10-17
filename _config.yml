@@ -13,6 +13,7 @@ exclude:
   - README
   - node_modules
   - script
+  - test
 
 # Long-form entries, named like posts: _journal/YYYY-MM-DD-title.md. Without a
 # filename or front-matter date, an entry is dated at build time.

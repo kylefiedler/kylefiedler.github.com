@@ -1,0 +1,101 @@
+#!/usr/bin/env ruby
+# Prepares a photo set for the wall on Split pages:
+#
+#   script/wall-photos <source-dir> <set>
+#
+# Writes WIDTH-wide JPEGs to images/wall/<set>/ and lists them in
+# _data/walls/<set>.yml. A page shows the set with `wall: <set>` in its front
+# matter. Originals stay out of the repo.
+#
+# Re-runs only convert new or changed photos, drop photos that left
+# <source-dir>, and keep the yml's order and alt text. To change WIDTH
+# (or WALL_WIDTH=<px>) for an existing set, delete images/wall/<set>/ first.
+#
+# Photos go through sRGB and BMP on the way to JPEG. That bakes in EXIF
+# rotation and strips the metadata (camera, GPS) that sips would otherwise
+# copy into the published file.
+
+require "fileutils"
+require "open3"
+require "tmpdir"
+require "yaml"
+
+WIDTH = Integer(ENV.fetch("WALL_WIDTH", 800))
+QUALITY = 80
+SRGB = "/System/Library/ColorSync/Profiles/sRGB Profile.icc"
+EXTENSIONS = %w[.jpg .jpeg .png .heic .tif .tiff].freeze
+# `placeholder` is hand-written; `static` is a wall mode, not a set.
+RESERVED = %w[placeholder static].freeze
+
+def sips(*args)
+  output, status = Open3.capture2e("sips", *args)
+  abort "sips #{args.join(' ')} failed:\n#{output}" unless status.success?
+  output
+end
+
+def dimensions(path)
+  sips("-g", "pixelWidth", "-g", "pixelHeight", path).scan(/pixel(?:Width|Height): (\d+)/).flatten.map(&:to_i)
+end
+
+def slug(name)
+  File.basename(name, ".*").downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+end
+
+abort "usage: script/wall-photos <source-dir> <set>" unless ARGV.size == 2
+source_dir, set = ARGV
+abort "set must be lowercase letters, digits, and dashes" unless set.match?(/\A[a-z0-9]+(-[a-z0-9]+)*\z/)
+abort "#{set} is reserved" if RESERVED.include?(set)
+abort "no such directory: #{source_dir}" unless Dir.exist?(source_dir)
+
+root = File.expand_path("..", __dir__)
+out_dir = File.join(root, "images", "wall", set)
+data_file = File.join(root, "_data", "walls", "#{set}.yml")
+
+sources = Dir.children(source_dir).sort.select { |name| EXTENSIONS.include?(File.extname(name).downcase) }
+abort "no photos in #{source_dir}" if sources.empty?
+by_output = sources.group_by { |name| "#{slug(name)}.jpg" }
+by_output.each do |output, names|
+  abort "#{names.first} needs letters or digits in its name" if output == ".jpg"
+  abort "#{names.join(' and ')} would both become #{output}" if names.size > 1
+end
+
+FileUtils.mkdir_p([out_dir, File.dirname(data_file)])
+
+Dir.mktmpdir do |tmp|
+  bmp = File.join(tmp, "photo.bmp")
+  jpeg = File.join(tmp, "photo.jpg")
+  by_output.each do |output, (name)|
+    source = File.join(source_dir, name)
+    dest = File.join(out_dir, output)
+    next if File.exist?(dest) && File.mtime(dest) >= File.mtime(source)
+
+    sips("--matchTo", SRGB, "-s", "format", "bmp", source, "--out", bmp)
+    resize = dimensions(bmp).first > WIDTH ? ["--resampleWidth", WIDTH.to_s] : []
+    sips(*resize, "-s", "format", "jpeg", "-s", "formatOptions", QUALITY.to_s, bmp, "--out", jpeg)
+    # Moved into place whole, so an interrupted run can't leave a partial file
+    # that later runs would skip as up to date.
+    FileUtils.mv(jpeg, dest)
+    puts "wrote images/wall/#{set}/#{output}"
+  end
+end
+
+(Dir.glob("*.jpg", base: out_dir) - by_output.keys).each do |output|
+  File.delete(File.join(out_dir, output))
+  puts "removed images/wall/#{set}/#{output}"
+end
+
+existing = File.exist?(data_file) ? YAML.safe_load(File.read(data_file)) || [] : []
+alts = existing.to_h { |photo| [photo["src"], photo["alt"]] }
+order = existing.map { |photo| photo["src"] }
+
+photos = by_output.keys.map do |output|
+  src = "/images/wall/#{set}/#{output}"
+  width, height = dimensions(File.join(out_dir, output))
+  { "src" => src, "width" => width, "height" => height, "alt" => alts[src] || "" }
+end
+photos = photos.sort_by.with_index { |photo, i| [order.index(photo["src"]) || order.size, i] }
+
+File.write(data_file, <<~YAML + photos.to_yaml.delete_prefix("---\n"))
+  # Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+YAML
+puts "wrote _data/walls/#{set}.yml (#{photos.size} photos)"
