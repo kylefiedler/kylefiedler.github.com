@@ -1,0 +1,72 @@
+// The Work index's case-study links, and the case studies themselves: old
+// portfolio markup read as plain prose on the card, its images and videos
+// moved into the static wall by _layouts/case-study.html.
+
+.work-links a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Case studies run longer than the wall's media, or shorter: start the text at
+// the top of the card rather than settling it at the bottom.
+.frame--split .card__body:has(> .case-study) {
+  margin-top: 0;
+}
+
+.case-study {
+  .grid {
+    display: block;
+  }
+
+  // Metadata as label/value rows, from the header grid (`.title--secondary`
+  // labels, `.detail` values) or a `.project-specs` list (h3 labels, p values).
+  .header--primary > .grid,
+  .project-specs {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.25rem 1rem;
+    margin: var(--space) 0;
+    padding-left: 0;
+    list-style: none;
+
+    > * {
+      display: contents;
+    }
+  }
+
+  .header--primary > .grid .title--secondary,
+  .project-specs h3 {
+    @extend .tertiary;
+    grid-column: 1;
+    color: var(--ink-muted);
+    font-size: var(--size-small);
+  }
+
+  .header--primary > .grid .detail,
+  .project-specs p {
+    grid-column: 2;
+    margin: 0;
+    padding-left: 0;
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: var(--size-small);
+    font-weight: 400;
+    line-height: var(--leading);
+    letter-spacing: var(--tracking);
+    list-style: none;
+  }
+
+  // Media still inline, on phones or without JS.
+  img,
+  video {
+    margin-bottom: var(--space);
+  }
+
+  // Emptied once the script has moved their media into the wall.
+  &--walled [data-media-only] {
+    display: none;
+  }
+}

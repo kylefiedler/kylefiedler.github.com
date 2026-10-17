@@ -1,0 +1,46 @@
+---
+layout: default
+frame: split
+wall: static
+---
+
+<div class="case-study">
+  {{ content }}
+</div>
+
+<script>
+  // While the wall shows, its columns hold the case study's images and videos,
+  // dealt in document order. Each one's place in the text is remembered, so it
+  // returns there when the wall hides (below $wide). Without JS it stays put.
+  document.addEventListener("DOMContentLoaded", () => {
+    const study = document.querySelector(".case-study");
+    const columns = document.querySelectorAll(".wall--static .wall__column");
+    const media = [...study.querySelectorAll("img, video")];
+    const homes = media.map((item) => {
+      const home = document.createComment("");
+      item.before(home);
+      return home;
+    });
+
+    // Wrappers holding only media would be empty gaps once it moves out.
+    const holdsOnlyMedia = (box) =>
+      !box.textContent.trim() &&
+      [...box.querySelectorAll("*")].every((el) => el.firstElementChild || el.matches("img, video, source"));
+    for (const home of homes) {
+      for (let box = home.parentElement; box !== study && holdsOnlyMedia(box); box = box.parentElement) {
+        box.dataset.mediaOnly = "";
+      }
+    }
+
+    const wide = matchMedia("(min-width: 48rem)");
+    const place = () => {
+      study.classList.toggle("case-study--walled", wide.matches);
+      media.forEach((item, i) => {
+        if (wide.matches) columns[i % columns.length].append(item);
+        else homes[i].after(item);
+      });
+    };
+    place();
+    wide.addEventListener("change", place);
+  });
+</script>
