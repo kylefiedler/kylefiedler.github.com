@@ -5,19 +5,21 @@
 #   script/book-covers [count]
 #
 # Reads books top-down (newest first) and takes the first `count` (default 18)
-# that have an Open Library cover, skipping and reporting the rest. Covers are
-# cached in .cache/book-covers/<slug>.jpg, then script/wall-photos writes
+# that have a cover, skipping and reporting the rest. Downloads are cached in
+# .cache/book-covers/ (gitignored), then script/wall-photos writes
 # images/wall/books/ and _data/walls/books.yml, newest first, with alt text
 # "Cover of <Title> by <Author>" (edits to it are kept). Re-run after adding
 # books: covers that fall out of the newest `count` are removed, and cached
 # covers aren't downloaded again.
 #
-# To use a different cover, or one Open Library doesn't have, save it as
-# .cache/book-covers/<slug>.jpg; the slug is the title and author, lowercased,
-# with dashes for everything else; skipped books print theirs. A replacement
-# for a cover the wall already shows is only picked up if it's newer than the
-# one in images/wall/books/, so if it keeps an older date (as Finder copies
-# do), delete that one too.
+# To use a different cover, or one Open Library doesn't have, commit it as
+# _book-covers/<slug>.jpg (Jekyll doesn't publish it). It wins over the cache
+# and the lookup, so the wall comes out the same in a fresh checkout. The slug
+# is the title and author, lowercased, with dashes for everything else;
+# skipped books print theirs. wall-photos only re-converts a cover whose source
+# is newer than the wall's copy, so after removing an override, or adding one
+# that keeps an older date (as Finder copies do), delete the book's image from
+# images/wall/books/ too.
 
 require "cgi"
 require "fileutils"
@@ -140,22 +142,27 @@ abort "usage: script/book-covers [count]" unless ARGV.size <= 1 && count&.positi
 $stdout.sync = true
 
 root = File.expand_path("..", __dir__)
+overrides = File.join(root, "_book-covers")
 cache = File.join(root, ".cache", "book-covers")
 data_file = File.join(root, "_data", "walls", "#{SET}.yml")
 FileUtils.mkdir_p(cache)
 
+# [book, cover file], newest first.
 chosen = []
 books(File.read(File.join(root, "lists", "books.html"), encoding: "UTF-8")).uniq(&:slug).each do |book|
   break if chosen.size == count
 
-  path = File.join(cache, "#{book.slug}.jpg")
-  if File.exist?(path)
-    chosen << book
-  elsif fetch_cover(book, path)
+  override = File.join(overrides, "#{book.slug}.jpg")
+  cached = File.join(cache, "#{book.slug}.jpg")
+  if File.exist?(override)
+    chosen << [book, override]
+  elsif File.exist?(cached)
+    chosen << [book, cached]
+  elsif fetch_cover(book, cached)
     puts "downloaded #{book}"
-    chosen << book
+    chosen << [book, cached]
   else
-    puts "skipped #{book}: no usable Open Library cover (save one as .cache/book-covers/#{book.slug}.jpg)"
+    puts "skipped #{book}: no usable Open Library cover (commit one as _book-covers/#{book.slug}.jpg)"
   end
 end
 abort "no covers found" if chosen.empty?
@@ -163,7 +170,7 @@ puts "only #{chosen.size} books have covers" if chosen.size < count
 
 existing = File.exist?(data_file) ? YAML.safe_load(File.read(data_file)) || [] : []
 alts = existing.to_h { |photo| [photo["src"], photo["alt"]] }
-covers = chosen.map do |book|
+covers = chosen.map do |book, _cover|
   src = "/images/wall/#{SET}/#{book.slug}.jpg"
   { "src" => src, "alt" => alts[src] || "Cover of #{book}" }
 end
@@ -171,7 +178,7 @@ end
 Dir.mktmpdir do |staging|
   sources = File.join(staging, "covers")
   FileUtils.mkdir(sources)
-  chosen.each { |book| File.symlink(File.join(cache, "#{book.slug}.jpg"), File.join(sources, "#{book.slug}.jpg")) }
+  chosen.each { |book, cover| File.symlink(cover, File.join(sources, "#{book.slug}.jpg")) }
   alts_file = File.join(staging, "alts.yml")
   File.write(alts_file, covers.to_yaml)
   system(RbConfig.ruby, File.join(__dir__, "wall-photos"), "--alts", alts_file, sources, SET) or

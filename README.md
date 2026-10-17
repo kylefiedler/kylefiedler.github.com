@@ -39,9 +39,10 @@ from Open Library. After adding books, run (macOS only)
 ```
 script/book-covers
 ```
-Books without a usable cover are skipped and reported, with the path where a
-replacement cover can be saved (`.cache/book-covers/<slug>.jpg`, gitignored).
-Test the script with
+Books without a usable cover are skipped and reported. To use a cover Open
+Library doesn't have, or replace a bad one, commit it as
+`_book-covers/<slug>.jpg` (skipped books print the path). It wins over the
+lookup, so the wall comes out the same in any checkout. Test the script with
 ```
 ruby test/book_covers_test.rb
 ```

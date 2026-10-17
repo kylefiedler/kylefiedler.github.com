@@ -75,7 +75,7 @@ class BookCoversTest < Minitest::Test
     output = run_script!("3")
 
     assert_includes output, "skipped The Confident Mind by Nate Zinsser: no usable Open Library cover " \
-      "(save one as .cache/book-covers/the-confident-mind-nate-zinsser.jpg)"
+      "(commit one as _book-covers/the-confident-mind-nate-zinsser.jpg)"
     assert_equal %w[why-we-sleep-matthew-walker.jpg kitchen-confidential-anthony-bourdain.jpg
       scythe-arc-of-a-scythe-1-shusterman-neal.jpg].sort, Dir.children(out_dir).sort
     assert_equal [
@@ -115,17 +115,22 @@ class BookCoversTest < Minitest::Test
     refute File.exist?(File.join(out_dir, "kitchen-confidential-anthony-bourdain.jpg"))
   end
 
-  def test_a_cached_cover_overrides_the_lookup
+  def test_committed_covers_win_over_the_cache_and_the_lookup
     run_script!("3")
-    write_jpeg(File.join(@root, ".cache", "book-covers", "the-confident-mind-nate-zinsser.jpg"), 400, 600)
+    overrides = File.join(@root, "_book-covers")
+    FileUtils.mkdir_p(overrides)
+    write_jpeg(File.join(overrides, "why-we-sleep-matthew-walker.jpg"), 350, 500)
+    write_jpeg(File.join(overrides, "the-confident-mind-nate-zinsser.jpg"), 400, 600)
+    # As in a fresh checkout: the committed covers, but no cache.
+    FileUtils.rm_rf(File.join(@root, ".cache"))
     @requests.clear
 
     run_script!("3")
 
-    assert_empty @requests
+    assert @requests.all? { |path| path.include?("Scythe") || path.match?(%r{/2(-L)?\.jpg}) }, @requests.inspect
     assert_equal [src("why-we-sleep-matthew-walker"), src("the-confident-mind-nate-zinsser"),
       src("scythe-arc-of-a-scythe-1-shusterman-neal")], data.map { |cover| cover["src"] }
-    assert_equal [400, 600], data[1].values_at("width", "height")
+    assert_equal [[350, 500], [400, 600]], data.first(2).map { |cover| cover.values_at("width", "height") }
   end
 
   def test_rejects_a_bad_count
