@@ -1,0 +1,22 @@
+{%- comment -%}
+  The phone version of the photo wall: one still strip under the nav, cycled
+  until it is at least `strip_min` of its own heights wide, comfortably past
+  the widest phone layout. Each photo's alt is exposed once; repeats are
+  silent.
+{%- endcomment -%}
+{%- assign photos = site.data.walls[include.wall] | default: site.data.walls.placeholder -%}
+{%- assign count = photos.size -%}
+{%- assign strip_min = 8 -%}
+{%- assign bound = count | plus: 100 -%}
+{%- assign span = 0 -%}
+<div class="wall__strip">
+  {%- for slot in (0..bound) -%}
+    {%- if slot >= count and span >= strip_min %}{% break %}{% endif -%}
+    {%- assign index = slot | modulo: count -%}
+    {%- assign photo = photos[index] -%}
+    {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}
+    {%- assign alt = "" -%}
+    {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
+    {% include wall-tile.html photo=photo alt=alt %}
+  {%- endfor %}
+</div>

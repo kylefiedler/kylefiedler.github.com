@@ -1,10 +1,12 @@
 {% include header.html %}
 {%- comment -%} A layout's own `frame` wins over the page's. {%- endcomment -%}
-{%- assign frame = layout.frame | default: page.frame %}
+{%- assign frame = layout.frame | default: page.frame -%}
+{%- assign wall = layout.wall | default: page.wall %}
 
 <div class="frame frame--{{ frame }}">
   <div class="card">
     {% include nav.html %}
+    {% if frame == "split" and wall != "static" %}{% include wall-strip.html wall=wall %}{% endif %}
     <main class="card__body">
       {{ content }}
     </main>

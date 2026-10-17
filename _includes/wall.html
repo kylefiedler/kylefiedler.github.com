@@ -4,21 +4,23 @@
   gray placeholder set.
   Entries without a `src` render as gray tiles.
 
-  Photos are dealt round-robin into three columns, cycling through the set
-  until every photo is used and each column is at least `column_min` of its
-  own widths tall. When the set is a multiple of 3, each pass through it
-  shifts by one photo; otherwise every column would cycle the same third.
-  The narrowest column is about 70px wide at the 768px breakpoint, so 16
-  widths outrun a 1024px-tall window plus the columns' stagger. Each column's
-  track holds two copies of its tiles, and the drift moves it by exactly one
-  copy, so the loop has no seam.
+  The set goes out once in a <template>; the script below deals it into
+  columns sized to the wall, so the wall adds columns as the window widens
+  (two on medium screens, up to five on very wide ones) and each column's
+  track only runs a little past the window's height. Very tall tracks are
+  costly to keep painted, and Safari leaves them blank while they drift.
 
-  Phones get one still strip instead, cycled until it is at least `strip_min`
-  of its own heights wide, comfortably past the widest phone layout.
+  Photos are dealt round-robin, cycling through the set until every photo is
+  used and each column outruns the window plus its stagger. When the set and
+  the column count share a factor, each pass through the set shifts by one
+  photo; otherwise some columns would cycle the same few. Each column's
+  track holds two copies of its tiles, and the drift moves every tile by
+  exactly one copy, so the loop has no seam. Resizing re-deals only when the column
+  count changes or a column no longer reaches the bottom of the window.
 
-  Screen readers get each photo's alt once: on its first appearance in the
-  columns, or in the strip on phones. Repeats and the second copy are silent,
-  and so are photos whose alt is empty.
+  Screen readers get each photo's alt once, on its first appearance. Repeats
+  and the second copy are silent, and so are photos whose alt is empty.
+  Phones get wall-strip.html under the nav instead.
 
   `wall: static` renders three empty, still columns that scroll with the page,
   for case studies to fill with their own media.
@@ -32,49 +34,72 @@
 </div>
 {%- else -%}
 {%- assign photos = site.data.walls[wall] | default: site.data.walls.placeholder -%}
-{%- assign count = photos.size -%}
-{%- assign column_min = 16 -%}
-{%- assign strip_min = 8 -%}
-{%- assign bound = count | plus: 100 -%}
-{%- assign step = 0 -%}
-{%- assign thirds = count | modulo: 3 -%}
-{%- if thirds == 0 %}{% assign step = 1 %}{% endif -%}
-<div class="wall">
-  {%- for column in (0..2) %}
-  {%- assign length = 0 -%}
-  {%- capture tiles -%}
-    {%- for row in (0..bound) -%}
-      {%- assign slot = row | times: 3 | plus: column -%}
-      {%- if slot >= count and length >= column_min %}{% break %}{% endif -%}
-      {%- assign shift = slot | divided_by: count | times: step -%}
-      {%- assign index = slot | plus: shift | modulo: count -%}
-      {%- assign photo = photos[index] -%}
-      {%- assign length = photo.height | times: 1.0 | divided_by: photo.width | plus: length -%}
-      {%- assign alt = "" -%}
-      {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
-      {% include wall-tile.html photo=photo alt=alt %}
-    {%- endfor -%}
-  {%- endcapture %}
-  <div class="wall__column" style="--wall-length: {{ length | round: 3 }}">
-    <div class="wall__track">
-      <div class="wall__copy">{{ tiles }}
-      </div>
-      <div class="wall__copy" aria-hidden="true">{{ tiles }}
-      </div>
-    </div>
-  </div>
-  {%- endfor %}
-  <div class="wall__strip">
-    {%- assign span = 0 -%}
-    {%- for slot in (0..bound) -%}
-      {%- if slot >= count and span >= strip_min %}{% break %}{% endif -%}
-      {%- assign index = slot | modulo: count -%}
-      {%- assign photo = photos[index] -%}
-      {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}
-      {%- assign alt = "" -%}
-      {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
-      {% include wall-tile.html photo=photo alt=alt %}
+<div class="wall wall--drift">
+  <template>
+    {%- for photo in photos %}
+    {% include wall-tile.html photo=photo alt=photo.alt %}
     {%- endfor %}
-  </div>
+  </template>
 </div>
+<script>
+  (() => {
+    const wall = document.querySelector(".wall--drift");
+    const photos = [...wall.querySelector("template").content.children];
+    // Column widths, left to right. A wall of n columns uses the first n.
+    const shares = [1.6, 1.17, 1, 1.35, 1.1];
+    // Deepest column stagger in _wall.scss, plus a little.
+    const stagger = 96;
+    const gcd = (a, b) => (b ? gcd(b, a % b) : a);
+    // About one column per 300px of wall.
+    const columnsFor = (width) => Math.min(shares.length, Math.max(2, Math.round(width / 300)));
+    let count = 0;
+
+    const deal = (width, height) => {
+      count = columnsFor(width);
+      const used = shares.slice(0, count);
+      const gap = parseFloat(getComputedStyle(wall).columnGap) || 0;
+      const unit = (width - gap * (count - 1)) / used.reduce((a, b) => a + b);
+      // Headroom so small resizes don't re-deal.
+      const reach = height * 1.25 + stagger;
+      const step = gcd(photos.length, count) > 1 ? 1 : 0;
+
+      wall.style.gridTemplateColumns = used.map((share) => `${share}fr`).join(" ");
+      wall.querySelectorAll(".wall__column").forEach((column) => column.remove());
+
+      used.forEach((share, index) => {
+        const copy = document.createElement("div");
+        copy.className = "wall__copy";
+        let length = 0;
+        for (let slot = index; slot < photos.length || length * share * unit < reach; slot += count) {
+          const tile = photos[(slot + Math.floor(slot / photos.length) * step) % photos.length].cloneNode(true);
+          if (slot >= photos.length && tile instanceof HTMLImageElement) tile.alt = "";
+          copy.append(tile);
+          length += Number(tile.dataset.ratio);
+        }
+        const echo = copy.cloneNode(true);
+        echo.setAttribute("aria-hidden", "true");
+        echo.querySelectorAll("img").forEach((img) => (img.alt = ""));
+
+        const track = document.createElement("div");
+        track.className = "wall__track";
+        track.append(copy, echo);
+        const column = document.createElement("div");
+        column.className = "wall__column";
+        column.style.setProperty("--wall-length", length.toFixed(3));
+        column.style.setProperty("--wall-share", share);
+        column.style.setProperty("--wall-tiles", copy.childElementCount);
+        column.append(track);
+        wall.append(column);
+      });
+    };
+
+    new ResizeObserver(() => {
+      const { clientWidth: width, clientHeight: height } = wall;
+      // Hidden on phones; deal once the wall shows.
+      if (!width) return;
+      const short = [...wall.querySelectorAll(".wall__copy:first-child")].some((copy) => copy.offsetHeight < height + stagger);
+      if (columnsFor(width) !== count || short) deal(width, height);
+    }).observe(wall);
+  })();
+</script>
 {%- endif -%}

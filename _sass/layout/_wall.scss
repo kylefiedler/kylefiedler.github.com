@@ -1,73 +1,82 @@
-// Three photo columns beside the card on Split pages, held in place while the
-// card scrolls and drifting down / up / down. On phones, one still strip above
-// the card.
+// Photo columns beside the card on Split pages, held in place while the card
+// scrolls and drifting down / up / down. wall.html's script deals the columns
+// and sets their widths. On phones, one still strip under the nav instead.
 
-$wall-columns: 1.6fr 1.17fr 1fr;
+:root {
+  --wall-gap: 0.5rem;
+}
 
 .wall {
-  --wall-gap: 0.5rem;
   // Seconds to drift the width of a 1fr column; every column moves at this
   // speed, whatever its photos' heights.
-  --wall-pace: 30s;
+  --wall-pace: 60s;
 
   position: sticky;
   top: 0;
   align-self: start;
   display: grid;
-  grid-template-columns: $wall-columns;
   gap: var(--wall-gap);
   height: 100vh;
   overflow: hidden;
-
-  @media (max-width: $mobile) {
-    order: -1;
-    position: static;
-    display: block;
-    height: auto;
-    padding: var(--gutter) 0 0 var(--gutter);
-  }
-}
-
-.wall__column {
-  min-width: 0;
-  padding-top: 0.3125rem;
-
-  @for $i from 1 through length($wall-columns) {
-    &:nth-child(#{$i}) {
-      --wall-share: #{nth($wall-columns, $i) / 1fr};
-    }
-  }
-
-  &:nth-child(2) {
-    margin-top: -4rem;
-  }
-
-  &:nth-child(3) {
-    margin-top: -2.5rem;
-  }
 
   @media (max-width: $mobile) {
     display: none;
   }
 }
 
+// Columns follow the wall's <template>, so they're counted by type. The
+// deepest stagger here is the script's `stagger`. Each column is its own
+// container so a track can measure its loop in column widths (cqi).
+.wall__column {
+  container-type: inline-size;
+  min-width: 0;
+  padding-top: 0.3125rem;
+
+  &:nth-of-type(2) {
+    margin-top: -4rem;
+  }
+
+  &:nth-of-type(3) {
+    margin-top: -2.5rem;
+  }
+
+  &:nth-of-type(4) {
+    margin-top: -5rem;
+  }
+
+  &:nth-of-type(5) {
+    margin-top: -1.5rem;
+  }
+}
+
 // The track holds two copies of the column's tiles. Each copy carries its own
-// trailing gap, so half the track is exactly one copy and -50% loops.
-// --wall-length is the copy's height in column widths, set by the include.
+// trailing gap, so one copy is --wall-length column widths (set by the
+// script) plus a gap per tile, and moving by that much loops.
+//
+// Each tile drifts as its own layer rather than the whole track moving as
+// one. A track is several windows tall, and Safari only paints the part of a
+// tall layer near where it sits at rest, so a moving track drifts in blank.
 .wall__track {
+  --wall-shift: calc(var(--wall-length) * 100cqi + var(--wall-tiles) * var(--wall-gap));
+
   display: flex;
   flex-direction: column;
-  animation: wall-drift linear infinite;
-  animation-duration: calc(var(--wall-length) * var(--wall-share) * var(--wall-pace));
-  will-change: transform;
 
-  .wall__column:nth-child(2) & {
+  .wall__tile {
+    animation: wall-drift linear infinite;
+    animation-duration: calc(var(--wall-length) * var(--wall-share) * var(--wall-pace));
+    will-change: transform;
+  }
+
+  .wall__column:nth-of-type(even) & .wall__tile {
     animation-direction: reverse;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    animation: none;
-    will-change: auto;
+    .wall__tile {
+      animation: none;
+      will-change: auto;
+    }
   }
 }
 
@@ -81,7 +90,7 @@ $wall-columns: 1.6fr 1.17fr 1fr;
 // Downward: start one copy up and slide to rest. Reversed, it drifts up.
 @keyframes wall-drift {
   from {
-    transform: translateY(-50%);
+    transform: translateY(calc(-1 * var(--wall-shift)));
   }
 
   to {
@@ -102,9 +111,13 @@ $wall-columns: 1.6fr 1.17fr 1fr;
   display: none;
 
   @media (max-width: $mobile) {
+    // Above the card's ruled texture.
+    position: relative;
     display: flex;
     gap: var(--wall-gap);
     height: var(--strip-height);
+    margin: 1.25rem 0 0 var(--gutter);
+    overflow: hidden;
 
     > .wall__tile {
       width: auto;
@@ -117,6 +130,7 @@ $wall-columns: 1.6fr 1.17fr 1fr;
 // study's own media. Phones keep that media inline in the card.
 .wall--static {
   position: relative;
+  grid-template-columns: 1.6fr 1.17fr 1fr;
   height: auto;
   overflow: visible;
 
@@ -130,9 +144,5 @@ $wall-columns: 1.6fr 1.17fr 1fr;
     > video {
       width: 100%;
     }
-  }
-
-  @media (max-width: $mobile) {
-    display: none;
   }
 }
