@@ -17,7 +17,7 @@ $collage: 64rem;
 
   --size-title: 2rem;
   --size-secondary: 1.25rem;
-  --size-body: 0.9375rem;
+  --size-body: 1.0625rem;
   --size-small: 0.8125rem;
   --size-tiny: 0.6875rem;
   --leading: 1.6;
@@ -28,7 +28,8 @@ $collage: 64rem;
 
   // Card geometry: the top rule sits --rule-top down; the ruled texture starts
   // just below it and runs at --line-pitch, inset --gutter from the card edge.
-  --card-width: 30.625rem;
+  // Grows with the window on large screens so lists wrap less.
+  --card-width: clamp(30.625rem, 34vw, 42rem);
   --rule-top: 6.625rem;
   --line-pitch: 1.625rem;
   --gutter: 1.75rem;
