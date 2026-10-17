@@ -87,11 +87,6 @@
   @media (max-width: $mobile) {
     grid-template-columns: minmax(0, 1fr);
 
-    // The wall's strip stacks above the card, so the rule moves down past it.
-    &:has(.wall__strip)::after {
-      top: calc(var(--rule-top) + var(--gutter) + var(--strip-height));
-    }
-
     .card::before {
       right: 0;
     }
