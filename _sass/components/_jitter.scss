@@ -1,7 +1,7 @@
 // Block-level misalignment hooks. Elements opt in with data-jitter="<slot>";
 // --jitter-<slot>-x/-y/-r are set per page elsewhere. Unset, nothing moves.
 
-$jitter-slots: title, title-number, nav-slash, list-indent;
+$jitter-slots: title, title-number, nav-slash, list-indent, journal-date;
 
 @each $slot in $jitter-slots {
   [data-jitter="#{$slot}"] {

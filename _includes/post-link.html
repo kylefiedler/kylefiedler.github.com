@@ -1,0 +1,9 @@
+{%- comment -%}
+  A post's title, linked to the post, or out to `external_url` for link posts.
+  {% include post-link.html post=post %}
+{%- endcomment -%}
+{%- if include.post.external_url -%}
+<a href="{{ include.post.external_url }}">{{ include.post.title | strip }}<span class="inline-icon">{% include icons/share.svg %}</span><span class="visually-hidden"> (external)</span></a>
+{%- else -%}
+<a href="{{ include.post.url }}">{{ include.post.title | strip }}</a>
+{%- endif -%}

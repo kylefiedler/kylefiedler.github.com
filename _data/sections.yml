@@ -13,7 +13,7 @@
 - key: journal
   label: Journal
   number: "02"
-  url: /posts/
+  url: /journal/
   paper: "#f1f1f1"
   line: "#e9e9e9"
   rule: "#f3cfcf"
