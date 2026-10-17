@@ -1,13 +1,15 @@
 {% include header.html %}
+{%- comment -%} A layout's own `frame` wins over the page's. {%- endcomment -%}
+{%- assign frame = layout.frame | default: page.frame %}
 
-<div class="frame frame--{{ page.frame }}">
+<div class="frame frame--{{ frame }}">
   <div class="card">
     {% include nav.html %}
     <main class="card__body">
       {{ content }}
     </main>
   </div>
-  {% if page.frame == "split" %}{% include wall.html %}{% endif %}
+  {% if frame == "split" %}{% include wall.html %}{% endif %}
 </div>
 
   </body>
