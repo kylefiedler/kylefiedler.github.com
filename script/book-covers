@@ -1,0 +1,186 @@
+#!/usr/bin/env ruby
+# Collects covers of the most recent books in lists/books.html for the Books
+# wall:
+#
+#   script/book-covers [count]
+#
+# Reads books top-down (newest first) and takes the first `count` (default 18)
+# that have a cover, skipping and reporting the rest. Downloads are cached in
+# .cache/book-covers/ (gitignored), then script/wall-photos writes
+# images/wall/books/ and _data/walls/books.yml, newest first, with alt text
+# "Cover of <Title> by <Author>" (edits to it are kept). Re-run after adding
+# books: covers that fall out of the newest `count` are removed, and cached
+# covers aren't downloaded again.
+#
+# To use a different cover, or one Open Library doesn't have, commit it as
+# _book-covers/<slug>.jpg (Jekyll doesn't publish it). It wins over the cache
+# and the lookup, so the wall comes out the same in a fresh checkout. The slug
+# is the title and author, lowercased, with dashes for everything else;
+# skipped books print theirs. wall-photos only re-converts a cover whose source
+# is newer than the wall's copy, so after removing an override, or adding one
+# that keeps an older date (as Finder copies do), delete the book's image from
+# images/wall/books/ too.
+
+require "cgi"
+require "fileutils"
+require "json"
+require "net/http"
+require "open3"
+require "rbconfig"
+require "tmpdir"
+require "uri"
+require "yaml"
+
+SEARCH_URL = ENV.fetch("OPEN_LIBRARY_URL", "https://openlibrary.org")
+COVERS_URL = ENV.fetch("OPEN_LIBRARY_COVERS_URL", "https://covers.openlibrary.org")
+# Open Library asks for no more than about one request a second.
+DELAY = Float(ENV.fetch("BOOK_COVERS_DELAY", 1))
+SET = "books"
+# Narrower covers blur in the wall's widest column.
+MIN_WIDTH = 250
+
+Book = Struct.new(:title, :author) do
+  def slug = "#{title} #{author}".downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
+  def to_s = "#{title} by #{author}"
+end
+
+def books(html)
+  html.scan(%r{<h4>(.*?)</h4>\s*<p>(.*?)</p>}m).map do |title, author|
+    Book.new(*[title, author].map { |text| CGI.unescapeHTML(text.gsub(/<[^>]+>/, "")).strip })
+  end
+end
+
+def throttle
+  sleep([@last_request.to_f + DELAY - Process.clock_gettime(Process::CLOCK_MONOTONIC), 0].max)
+  @last_request = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+end
+
+# Follows redirects, and retries what Open Library's servers sometimes do:
+# drop the connection, fail with a 5xx, or rate-limit with a 429.
+def get(url)
+  redirects = retries = 0
+  loop do
+    throttle
+    begin
+      response = Net::HTTP.get_response(URI(url), { "User-Agent" => "kylefiedler.com script/book-covers" })
+    rescue IOError, SystemCallError, SocketError, Timeout::Error, OpenSSL::SSL::SSLError, Net::HTTPBadResponse => error
+      failure = "failed: #{error.message}"
+    end
+    case response
+    when Net::HTTPRedirection
+      abort "too many redirects from #{url}" if (redirects += 1) > 5
+      url = URI.join(url, response["location"]).to_s
+      next
+    when Net::HTTPSuccess, Net::HTTPNotFound then return response
+    when Net::HTTPServerError, Net::HTTPTooManyRequests then failure = "returned #{response.code}"
+    when Net::HTTPResponse then abort "#{url} returned #{response.code}"
+    end
+    abort "#{url} #{failure}" if (retries += 1) > 2
+    sleep(DELAY * 5)
+  end
+end
+
+# Series suffixes like "(The Poppy War, #1)" and subtitles stop title searches
+# from matching, and author search wants one name, not "Greger, M.D." or a
+# list. Strictest query first; title and author always both apply, so a miss
+# is skipped rather than matched to some other book with the same title.
+def queries(book)
+  title = book.title.sub(/\s*\([^)]*#[^)]*\)\z/, "")
+  titles = [title, title.split(":").first.strip].uniq
+  authors = [book.author, book.author.split(",").first.strip].uniq
+  titles.product(authors)
+end
+
+def comparable(title) = title.to_s.downcase.gsub(/[^a-z0-9]/, "")
+
+# Takes the first cover, in search order, from a result with the searched
+# title (not "<Title> Cookbook") that is shaped like a cover: at least
+# MIN_WIDTH wide and no wider than 4:3. Open Library has some banners and
+# thumbnails filed as covers.
+def fetch_cover(book, dest)
+  tried = []
+  queries(book).each do |title, author|
+    query = URI.encode_www_form(title: title, author: author, limit: 5, fields: "title,cover_i")
+    response = get("#{SEARCH_URL}/search.json?#{query}")
+    next unless response.is_a?(Net::HTTPSuccess)
+
+    JSON.parse(response.body)["docs"].each do |doc|
+      id = doc["cover_i"].to_i
+      next if id <= 0 || tried.include?(id) || comparable(doc["title"]) != comparable(title)
+
+      tried << id
+      return true if download(id, dest)
+    end
+  end
+  false
+end
+
+def download(id, dest)
+  response = get("#{COVERS_URL}/b/id/#{id}-L.jpg?default=false")
+  return false unless response.is_a?(Net::HTTPSuccess)
+
+  # Moved into place whole, so an interrupted download isn't cached.
+  part = "#{dest}.part"
+  File.binwrite(part, response.body)
+  width, height = dimensions(part)
+  if width && width >= MIN_WIDTH && height * 4 >= width * 3
+    FileUtils.mv(part, dest)
+    true
+  else
+    File.delete(part)
+    false
+  end
+end
+
+def dimensions(path)
+  output, = Open3.capture2e("sips", "-g", "pixelWidth", "-g", "pixelHeight", path)
+  output.scan(/pixel(?:Width|Height): (\d+)/).flatten.map(&:to_i)
+end
+
+count = Integer(ARGV.fetch(0, 18), exception: false)
+abort "usage: script/book-covers [count]" unless ARGV.size <= 1 && count&.positive?
+$stdout.sync = true
+
+root = File.expand_path("..", __dir__)
+overrides = File.join(root, "_book-covers")
+cache = File.join(root, ".cache", "book-covers")
+data_file = File.join(root, "_data", "walls", "#{SET}.yml")
+FileUtils.mkdir_p(cache)
+
+# [book, cover file], newest first.
+chosen = []
+books(File.read(File.join(root, "lists", "books.html"), encoding: "UTF-8")).uniq(&:slug).each do |book|
+  break if chosen.size == count
+
+  override = File.join(overrides, "#{book.slug}.jpg")
+  cached = File.join(cache, "#{book.slug}.jpg")
+  if File.exist?(override)
+    chosen << [book, override]
+  elsif File.exist?(cached)
+    chosen << [book, cached]
+  elsif fetch_cover(book, cached)
+    puts "downloaded #{book}"
+    chosen << [book, cached]
+  else
+    puts "skipped #{book}: no usable Open Library cover (commit one as _book-covers/#{book.slug}.jpg)"
+  end
+end
+abort "no covers found" if chosen.empty?
+puts "only #{chosen.size} books have covers" if chosen.size < count
+
+existing = File.exist?(data_file) ? YAML.safe_load(File.read(data_file)) || [] : []
+alts = existing.to_h { |photo| [photo["src"], photo["alt"]] }
+covers = chosen.map do |book, _cover|
+  src = "/images/wall/#{SET}/#{book.slug}.jpg"
+  { "src" => src, "alt" => alts[src] || "Cover of #{book}" }
+end
+
+Dir.mktmpdir do |staging|
+  sources = File.join(staging, "covers")
+  FileUtils.mkdir(sources)
+  chosen.each { |book, cover| File.symlink(cover, File.join(sources, "#{book.slug}.jpg")) }
+  alts_file = File.join(staging, "alts.yml")
+  File.write(alts_file, covers.to_yaml)
+  system(RbConfig.ruby, File.join(__dir__, "wall-photos"), "--alts", alts_file, sources, SET) or
+    abort "script/wall-photos failed"
+end

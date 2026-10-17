@@ -8,8 +8,11 @@ require "minitest/autorun"
 require "open3"
 require "tmpdir"
 require "yaml"
+require_relative "jpeg_fixture"
 
 class WallPhotosTest < Minitest::Test
+  include JpegFixture
+
   SCRIPT = File.expand_path("../script/wall-photos", __dir__)
 
   # name => [width, height] of the source photo
@@ -76,6 +79,21 @@ class WallPhotosTest < Minitest::Test
       data.map { |photo| photo["src"] }
   end
 
+  def test_alts_file_sets_order_and_alt_text
+    run_script!
+    alts = File.join(@root, "alts.yml")
+    File.write(alts, [
+      { "src" => "/images/wall/trip/tiny.jpg", "alt" => "A small photo" },
+      { "src" => "/images/wall/trip/dog.jpg", "alt" => "A dog" }
+    ].to_yaml)
+
+    run_script!("--alts", alts)
+
+    assert_equal %w[tiny dog beach-day garden ridge].map { |name| "/images/wall/trip/#{name}.jpg" },
+      data.map { |photo| photo["src"] }
+    assert_equal ["A small photo", "A dog", "", "", ""], data.map { |photo| photo["alt"] }
+  end
+
   def test_rejects_reserved_set_names
     %w[placeholder static].each do |set|
       _output, status = Open3.capture2e("ruby", script, @source, set)
@@ -91,26 +109,8 @@ class WallPhotosTest < Minitest::Test
   def data_file = File.join(@root, "_data", "walls", "trip.yml")
   def data = YAML.safe_load(File.read(data_file))
 
-  def run_script!
-    output, status = Open3.capture2e("ruby", script, @source, "trip")
+  def run_script!(*options)
+    output, status = Open3.capture2e("ruby", script, *options, @source, "trip")
     assert status.success?, output
-  end
-
-  def dimensions(path)
-    output, = Open3.capture2e("sips", "-g", "pixelWidth", "-g", "pixelHeight", path)
-    output.scan(/pixel(?:Width|Height): (\d+)/).flatten.map(&:to_i)
-  end
-
-  # sips can't draw, so write a flat 24-bit BMP and convert it.
-  def write_jpeg(path, width, height)
-    row = ("\x60\x90\xc0".b * width).ljust((width * 3 + 3) / 4 * 4, "\0")
-    pixels = row * height
-    header = ["BM", 54 + pixels.bytesize, 0, 0, 54].pack("a2Vv2V") +
-      [40, width, height, 1, 24, 0, pixels.bytesize, 2835, 2835, 0, 0].pack("Vl<l<v2V6")
-    bmp = "#{path}.bmp"
-    File.binwrite(bmp, header + pixels)
-    _output, status = Open3.capture2e("sips", "-s", "format", "jpeg", bmp, "--out", path)
-    assert status.success?
-    File.delete(bmp)
   end
 end

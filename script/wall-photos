@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Prepares a photo set for the wall on Split pages:
 #
-#   script/wall-photos <source-dir> <set>
+#   script/wall-photos [--alts <file>] <source-dir> <set>
 #
 # Writes WIDTH-wide JPEGs to images/wall/<set>/ and lists them in
 # _data/walls/<set>.yml. A page shows the set with `wall: <set>` in its front
@@ -10,6 +10,9 @@
 # Re-runs only convert new or changed photos, drop photos that left
 # <source-dir>, and keep the yml's order and alt text. To change WIDTH
 # (or WALL_WIDTH=<px>) for an existing set, delete images/wall/<set>/ first.
+#
+# --alts takes the order and alt text from <file> instead of the yml: a list
+# of `src` and `alt`, as the yml has them. Photos it doesn't list go last.
 #
 # Photos go through sRGB and BMP on the way to JPEG. That bakes in EXIF
 # rotation and strips the metadata (camera, GPS) that sips would otherwise
@@ -41,11 +44,13 @@ def slug(name)
   File.basename(name, ".*").downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
 end
 
-abort "usage: script/wall-photos <source-dir> <set>" unless ARGV.size == 2
+alts_file = ARGV.slice!(0, 2).last if ARGV.first == "--alts"
+abort "usage: script/wall-photos [--alts <file>] <source-dir> <set>" unless ARGV.size == 2
 source_dir, set = ARGV
 abort "set must be lowercase letters, digits, and dashes" unless set.match?(/\A[a-z0-9]+(-[a-z0-9]+)*\z/)
 abort "#{set} is reserved" if RESERVED.include?(set)
 abort "no such directory: #{source_dir}" unless Dir.exist?(source_dir)
+abort "no such file: #{alts_file}" if alts_file && !File.exist?(alts_file)
 
 root = File.expand_path("..", __dir__)
 out_dir = File.join(root, "images", "wall", set)
@@ -84,7 +89,8 @@ end
   puts "removed images/wall/#{set}/#{output}"
 end
 
-existing = File.exist?(data_file) ? YAML.safe_load(File.read(data_file)) || [] : []
+order_file = alts_file || data_file
+existing = File.exist?(order_file) ? YAML.safe_load(File.read(order_file)) || [] : []
 alts = existing.to_h { |photo| [photo["src"], photo["alt"]] }
 order = existing.map { |photo| photo["src"] }
 

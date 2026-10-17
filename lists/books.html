@@ -1,14 +1,31 @@
 ---
 layout: default
+crumb: Books
+frame: split
+wall: books
 ---
 
-<header class="header--primary">
-  <h1>Books I&rsquo;ve read</h1>
-</header>
+{% include title.html text="Books I&rsquo;ve read" %}
+
+<nav class="year-jumps" aria-label="Years">
+  <a href="#y2026">2026</a>
+  <a href="#y2025">2025</a>
+  <a href="#y2024">2024</a>
+  <a href="#y2023">2023</a>
+  <a href="#y2022">2022</a>
+  <a href="#y2021">2021</a>
+  <a href="#y2020">2020</a>
+  <a href="#y2019">2019</a>
+  <a href="#y2018">2018</a>
+  <a href="#y2017">2017</a>
+  <a href="#y2016">2016</a>
+  <a href="#y2015">2015</a>
+  <a href="#y2014">2014-</a>
+</nav>
 
 <ol class="books">
   <li>
-    <h3 class="title--secondary">2026</h3>
+    <h3 class="title--secondary" id="y2026">2026</h3>
     <ul>
       <li>
         <h4>Why We Sleep</h4>
@@ -125,7 +142,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2025</h3>
+    <h3 class="title--secondary" id="y2025">2025</h3>
     <ul>
       <li>
         <h4>Alchemised</h4>
@@ -322,7 +339,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2024</h3>
+    <h3 class="title--secondary" id="y2024">2024</h3>
     <ul>
       <li>
         <h4>This is How You Lose the Time War</h4>
@@ -457,7 +474,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2023</h3>
+    <h3 class="title--secondary" id="y2023">2023</h3>
     <ul>
       <li>
         <h4>How to Do Nothing: Resisting the Attention Economy</h4>
@@ -558,7 +575,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2022</h3>
+    <h3 class="title--secondary" id="y2022">2022</h3>
     <ul>
       <li>
         <h4>Fairy Tale</h4>
@@ -757,7 +774,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2021</h3>
+    <h3 class="title--secondary" id="y2021">2021</h3>
     <ul>
       <li>
         <h4>Make Time: How to Focus on What Matters Every Day</h4>
@@ -926,7 +943,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2020</h3>
+    <h3 class="title--secondary" id="y2020">2020</h3>
     <ul>
       <li>
         <h4>Cursed</h4>
@@ -1150,7 +1167,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2019</h3>
+    <h3 class="title--secondary" id="y2019">2019</h3>
     <ul>
       <li>
         <h4>The Hazel Wood (The Hazel Wood #1)</h4>
@@ -1314,7 +1331,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2018</h3>
+    <h3 class="title--secondary" id="y2018">2018</h3>
     <ul>
       <li>
         <h4>Becoming</h4>
@@ -1398,7 +1415,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2017</h3>
+    <h3 class="title--secondary" id="y2017">2017</h3>
     <ul>
       <li>
         <h4>Oathbringer (The Stormlight Archive, #3)</h4>
@@ -1487,7 +1504,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2016</h3>
+    <h3 class="title--secondary" id="y2016">2016</h3>
     <ul>
       <li>
         <h4>Prince Caspian (Chronicles of Narnia, #4)</h4>
@@ -1696,7 +1713,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2015</h3>
+    <h3 class="title--secondary" id="y2015">2015</h3>
     <ul>
       <li>
         <h4>Delivering Happiness: A Path to Profits, Passion, and Purpose</h4>
@@ -2075,7 +2092,7 @@ layout: default
     </ul>
   </li>
   <li>
-    <h3 class="title--secondary">2014 and before</h3>
+    <h3 class="title--secondary" id="y2014">2014 and before</h3>
     <ul>
       <li>
         <h4>Harry Potter and the Deathly Hallows (Harry Potter, #7)</h4>
