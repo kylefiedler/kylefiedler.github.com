@@ -61,9 +61,12 @@
   max-width: none;
   columns: 2 16rem;
   column-gap: 3rem;
+  padding-left: 1.25em;
+  list-style: disc;
   font-size: var(--size-small);
 
   li {
+    margin-bottom: 1rem;
     break-inside: avoid;
   }
 }
