@@ -1,0 +1,73 @@
+# Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+- src: "/images/wall/books/why-we-sleep-matthew-walker.jpg"
+  width: 328
+  height: 500
+  alt: Cover of Why We Sleep by Matthew Walker
+- src: "/images/wall/books/ancillary-justice-ann-leckie.jpg"
+  width: 319
+  height: 500
+  alt: Cover of Ancillary Justice by Ann Leckie
+- src: "/images/wall/books/altered-carbon-richard-k-morgan.jpg"
+  width: 333
+  height: 500
+  alt: Cover of Altered Carbon by Richard K. Morgan
+- src: "/images/wall/books/the-art-of-mindful-living-thich-nhat-hanh.jpg"
+  width: 475
+  height: 419
+  alt: Cover of The Art of Mindful Living by Thich Nhat Hanh
+- src: "/images/wall/books/remarkably-bright-creatures-shelby-van-pelt.jpg"
+  width: 326
+  height: 500
+  alt: Cover of Remarkably Bright Creatures by Shelby Van Pelt
+- src: "/images/wall/books/the-river-peter-heller.jpg"
+  width: 333
+  height: 500
+  alt: Cover of The River by Peter Heller
+- src: "/images/wall/books/anxious-people-fredrik-backman.jpg"
+  width: 331
+  height: 500
+  alt: Cover of Anxious People by Fredrik Backman
+- src: "/images/wall/books/how-not-to-age-michael-greger-m-d.jpg"
+  width: 329
+  height: 500
+  alt: Cover of How Not to Age by Michael Greger, M.D.
+- src: "/images/wall/books/a-wild-idea-jonathan-franklin.jpg"
+  width: 330
+  height: 500
+  alt: Cover of A Wild Idea by Jonathan Franklin
+- src: "/images/wall/books/kitchen-confidential-anthony-bourdain.jpg"
+  width: 312
+  height: 475
+  alt: Cover of Kitchen Confidential by Anthony Bourdain
+- src: "/images/wall/books/where-the-deer-and-the-antelope-play-nick-offerman.jpg"
+  width: 500
+  height: 500
+  alt: Cover of Where the Deer and the Antelope Play by Nick Offerman
+- src: "/images/wall/books/the-arm-jeff-passan.jpg"
+  width: 265
+  height: 400
+  alt: Cover of The Arm by Jeff Passan
+- src: "/images/wall/books/disney-s-land-richard-snow.jpg"
+  width: 331
+  height: 500
+  alt: Cover of Disney's Land by Richard Snow
+- src: "/images/wall/books/a-knight-of-the-seven-kingdoms-george-r-r-martin.jpg"
+  width: 309
+  height: 500
+  alt: Cover of A Knight of the Seven Kingdoms by George R.R. Martin
+- src: "/images/wall/books/schindler-s-list-thomas-keneally.jpg"
+  width: 305
+  height: 500
+  alt: Cover of Schindler's List by Thomas Keneally
+- src: "/images/wall/books/meditations-for-mortals-oliver-burkeman.jpg"
+  width: 375
+  height: 500
+  alt: Cover of Meditations for Mortals by Oliver Burkeman
+- src: "/images/wall/books/zen-mind-beginner-s-mind-shunryu-suzuki.jpg"
+  width: 324
+  height: 500
+  alt: Cover of Zen Mind, Beginner's Mind by Shunryu Suzuki
+- src: "/images/wall/books/the-dog-stars-peter-heller.jpg"
+  width: 308
+  height: 500
+  alt: Cover of The Dog Stars by Peter Heller
