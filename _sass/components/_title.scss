@@ -16,7 +16,15 @@
 }
 
 .title__text {
+  position: relative;
   margin: 0;
+
+  // A doodle hung off the title's top-right, sized with the title.
+  .doodle {
+    top: -0.45em;
+    left: calc(100% + 0.95em);
+    width: 0.7em;
+  }
 }
 
 // Hand-drawn emphasis strokes off the end of a title word.
