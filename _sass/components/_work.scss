@@ -4,10 +4,6 @@
 
 .work-links a {
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 // Case studies run longer than the wall's media, or shorter: start the text at
@@ -42,7 +38,6 @@
     @extend .tertiary;
     grid-column: 1;
     color: var(--ink-muted);
-    font-size: var(--size-small);
   }
 
   .header--primary > .grid .detail,
@@ -52,7 +47,6 @@
     padding-left: 0;
     color: var(--ink);
     font-family: var(--font-mono);
-    font-size: var(--size-small);
     font-weight: 400;
     line-height: var(--leading);
     letter-spacing: var(--tracking);

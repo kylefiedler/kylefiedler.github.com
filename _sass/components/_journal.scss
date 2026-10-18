@@ -49,10 +49,6 @@
 
   a {
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -63,7 +59,6 @@
   column-gap: 3rem;
   padding-left: 1.25em;
   list-style: disc;
-  font-size: var(--size-small);
 
   li {
     margin-bottom: 1rem;
@@ -100,7 +95,6 @@
 // puts the heading on the baseline of the first paragraph's second line.
 .post__others {
   color: var(--ink-muted);
-  font-size: var(--size-small);
 
   @media (min-width: $wide) {
     // Title, date, body: the body's row.

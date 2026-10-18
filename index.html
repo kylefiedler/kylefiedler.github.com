@@ -5,8 +5,11 @@ frame: split
 wall: placeholder
 ---
 
-{% include title.html text="Hi, I&rsquo;m Kyle" %}
-{% include doodle.html name="sparkle" bottom="2.5rem" right="1rem" size="1.25rem" %}
+{%- capture hi -%}
+  Hi, I&rsquo;m Kyle<span class="title__emphasis" aria-hidden="true">{% include doodles/emphasis.svg %}</span>
+{%- endcapture -%}
+{% include title.html text=hi %}
+{% include doodle.html name="asterisk" %}
 
 <p>I&rsquo;m fairly basic, thoroughly introverted, overly sarcastic, and delightfully awkward. I use my constant curiosity to better myself as well as the <a href="/kind-words/">people around me</a>.</p>
 

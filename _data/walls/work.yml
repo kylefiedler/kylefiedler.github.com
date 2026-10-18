@@ -1,0 +1,69 @@
+# Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+- src: "/images/wall/work/infura-dashboard.jpg"
+  width: 800
+  height: 569
+  alt: Infura dashboard redesign showing endpoint usage
+- src: "/images/wall/work/ph-messaging-1.jpg"
+  width: 375
+  height: 812
+  alt: Point Health bill negotiation mobile screen
+- src: "/images/wall/work/infura-ds-buttons.jpg"
+  width: 800
+  height: 674
+  alt: Button variants from the Infura design system
+- src: "/images/wall/work/thoughtbot-brand.jpg"
+  width: 800
+  height: 600
+  alt: thoughtbot website brand exploration
+- src: "/images/wall/work/infura-all-endpoints.jpg"
+  width: 800
+  height: 682
+  alt: Infura list of all endpoints
+- src: "/images/wall/work/ph-flows.jpg"
+  width: 800
+  height: 745
+  alt: Point Health bill negotiation user flows
+- src: "/images/wall/work/infura-ds-inputs.jpg"
+  width: 800
+  height: 1505
+  alt: Input field states from the Infura design system
+- src: "/images/wall/work/thoughtbot-prismic.jpg"
+  width: 800
+  height: 483
+  alt: thoughtbot website page templates in Prismic
+- src: "/images/wall/work/ph-messaging-2.jpg"
+  width: 376
+  height: 812
+  alt: Point Health bill negotiation mobile screen
+- src: "/images/wall/work/infura-payment.jpg"
+  width: 680
+  height: 556
+  alt: Infura payment modal
+- src: "/images/wall/work/infura-ds-messages.jpg"
+  width: 800
+  height: 1058
+  alt: Message components from the Infura design system
+- src: "/images/wall/work/thoughtbot-research.jpg"
+  width: 800
+  height: 451
+  alt: Research notes for the thoughtbot website
+- src: "/images/wall/work/ph-messaging-3.jpg"
+  width: 375
+  height: 812
+  alt: Point Health bill negotiation mobile screen
+- src: "/images/wall/work/infura-active-endpoints.jpg"
+  width: 800
+  height: 569
+  alt: Infura active endpoints view
+- src: "/images/wall/work/infura-ds-icons.jpg"
+  width: 800
+  height: 895
+  alt: Semantic state icons from the Infura design system
+- src: "/images/wall/work/ph-call.jpg"
+  width: 800
+  height: 278
+  alt: Point Health call screens
+- src: "/images/wall/work/ph-messaging-4.jpg"
+  width: 376
+  height: 812
+  alt: Point Health bill negotiation mobile screen

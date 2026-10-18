@@ -1,4 +1,6 @@
-// Page title with its section number resting on a dashed leader.
+// Page title with its section number resting on a dashed leader. Each
+// section's main page sets its own leader length and number offset, so the
+// leaders read as drawn by hand rather than stamped.
 
 .title {
   display: flex;
@@ -6,15 +8,38 @@
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
+
+  // Journal's leader trails right off the title instead of the far edge.
+  [data-section="journal"] & {
+    justify-content: flex-start;
+  }
 }
 
 .title__text {
   margin: 0;
 }
 
+// Hand-drawn emphasis strokes off the end of a title word.
+.title__emphasis {
+  display: inline-block;
+  width: 0.3em;
+  margin-left: 0.04em;
+  vertical-align: 0.45em;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .title__number {
+  --leader: 6.25rem;
+  --digits-x: 0px;
+  --digits-y: 0px;
+
   flex: none;
-  min-width: 6.25rem;
+  min-width: var(--leader);
   margin-bottom: 0.5rem;
   padding-bottom: 0.125rem;
   border-bottom: 1px dashed;
@@ -22,4 +47,32 @@
   font-size: var(--size-tiny);
   line-height: 1;
   text-align: right;
+
+  [data-section="index"] & {
+    --leader: 7.5rem;
+    --digits-x: 3px;
+    --digits-y: -1px;
+  }
+
+  [data-section="journal"] & {
+    --leader: 10rem;
+    --digits-x: -23px;
+    --digits-y: 0px;
+  }
+
+  [data-section="lists"] & {
+    --leader: 8.5rem;
+    --digits-y: 17px;
+  }
+
+  [data-section="work"] & {
+    --leader: 12.5rem;
+    --digits-x: 2px;
+    --digits-y: -2px;
+  }
+}
+
+.title__digits {
+  display: inline-block;
+  transform: translate(var(--digits-x), var(--digits-y));
 }

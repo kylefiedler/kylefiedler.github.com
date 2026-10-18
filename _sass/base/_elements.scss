@@ -56,6 +56,16 @@ pre {
   margin: 0 0 var(--space);
 }
 
+// Prose paragraphs indent their first line. Classed paragraphs (meta,
+// captions, data) and paragraphs inside list items stay flush.
+p:not([class]) {
+  text-indent: 2em;
+}
+
+li p:not([class]) {
+  text-indent: 0;
+}
+
 ul,
 ol {
   padding-left: 1.5rem;
@@ -78,14 +88,34 @@ li > :last-child {
   margin-bottom: 0;
 }
 
+// Selected text inverts: off-white type on dark blue.
+::selection {
+  background: var(--selection);
+  color: var(--selection-ink);
+}
+
+// Hovered links trade the underline for the highlighter yellow, fading in
+// and back out. A spread shadow pads the highlight past the text without
+// moving anything.
 a {
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
+  background-color: transparent;
+  box-shadow: 0 0 0 0.2em transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, text-decoration-color 0.25s ease;
 
   &:hover {
-    text-decoration-thickness: 2px;
+    text-decoration-color: transparent;
+    background-color: var(--highlight);
+    box-shadow: 0 0 0 0.2em var(--highlight);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
 
@@ -157,9 +187,9 @@ pre {
   text-transform: uppercase;
 }
 
+// Secondary type: the surrounding size, just lighter.
 .meta {
   color: var(--ink-muted);
-  font-size: var(--size-small);
 }
 
 .visually-hidden {

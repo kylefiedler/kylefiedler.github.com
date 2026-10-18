@@ -13,3 +13,18 @@
     height: auto;
   }
 }
+
+// The Index asterisk stays pinned to the card's bottom-right corner while the
+// page scrolls, so it's always on screen.
+.doodle--asterisk {
+  position: fixed;
+  bottom: 2.5rem;
+  left: calc(var(--card-width) - 2.75rem);
+  z-index: 2;
+  width: 0.875rem;
+
+  @media (max-width: $mobile) {
+    left: auto;
+    right: var(--inset);
+  }
+}
