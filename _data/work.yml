@@ -1,0 +1,10 @@
+# The public case studies, in the order /work/ shows them. Drives the
+# breadcrumb dropdown on work pages. `url` matches the page's page.url.
+- label: Infura Endpoints
+  url: /work/infura-endpoints.html
+- label: Infura Design System
+  url: /work/infura-design-system.html
+- label: thoughtbot Website
+  url: /work/thoughtbot-website.html
+- label: Point Health Bill Negotiation
+  url: /work/ph-bill-negotiation.html

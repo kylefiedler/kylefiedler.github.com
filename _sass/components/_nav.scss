@@ -1,13 +1,13 @@
 // Logo plus the breadcrumb: `/ SECTION v / PAGE`. The section crumb is a
-// <details> dropdown listing all four sections.
+// <details> dropdown listing all four sections; on list and work pages the
+// page crumb is a second dropdown listing that section's pages.
 
 .masthead {
   position: relative;
   z-index: 3;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
   height: var(--rule-top);
   padding: 3.125rem 1.75rem 0 3rem;
 
@@ -36,6 +36,7 @@
 }
 
 .crumbs {
+  position: relative;
   display: flex;
   align-items: baseline;
   gap: 0.625rem;
@@ -58,7 +59,8 @@
   white-space: nowrap;
 }
 
-span.crumbs__item {
+span.crumbs__item,
+.crumbs__text {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -87,7 +89,27 @@ span.crumbs__item {
   }
 }
 
+// The page dropdown shrinks so a long crumb truncates; on phones its menu
+// hangs from the right edge of the breadcrumb so it stays on screen.
+.sections--pages {
+  min-width: 0;
+
+  > summary {
+    max-width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    position: static;
+
+    .sections__menu {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
 .sections__chevron {
+  flex: none;
   width: 0.625rem;
   height: 0.375rem;
   fill: none;
@@ -96,6 +118,77 @@ span.crumbs__item {
 
   .sections[open] & {
     transform: rotate(180deg);
+  }
+}
+
+// Hand-placed wonk: a few marks in the section menu sit a couple of pixels off.
+.sections:not(.sections--pages) {
+  > summary .sections__chevron {
+    transform: translateY(3px);
+  }
+
+  &[open] > summary .sections__chevron {
+    transform: translateY(3px) rotate(180deg);
+  }
+
+  li:nth-child(2) .sections__mark {
+    transform: translate(-4px, -3px);
+  }
+
+  li:nth-child(2) .sections__number {
+    transform: translateY(4px);
+  }
+
+  li:nth-child(3) .sections__label {
+    transform: translateX(5px);
+  }
+
+  li:nth-child(4) .sections__mark {
+    transform: translateX(-5px);
+  }
+
+  li:nth-child(4) .sections__number {
+    transform: translateY(-4px);
+  }
+}
+
+// Same wonk for the page menus, in a seven-row cycle so new pages pick it up:
+// marks and labels nudged up, down, left, right, or diagonally.
+.sections--pages {
+  li:nth-child(7n + 1) .sections__label {
+    transform: translateY(-3px);
+  }
+
+  li:nth-child(7n + 2) .sections__mark {
+    transform: translate(-4px, 3px);
+  }
+
+  li:nth-child(7n + 3) .sections__label {
+    transform: translateX(5px);
+  }
+
+  li:nth-child(7n + 4) .sections__mark {
+    transform: translateY(-4px);
+  }
+
+  li:nth-child(7n + 4) .sections__label {
+    transform: translate(3px, 2px);
+  }
+
+  li:nth-child(7n + 5) .sections__mark {
+    transform: translateX(-5px);
+  }
+
+  li:nth-child(7n + 6) .sections__label {
+    transform: translate(-3px, -3px);
+  }
+
+  li:nth-child(7n) .sections__mark {
+    transform: translate(3px, 4px);
+  }
+
+  li:nth-child(7n) .sections__label {
+    transform: translateY(3px);
   }
 }
 
@@ -122,6 +215,7 @@ span.crumbs__item {
     padding: 0.5rem 0.25rem 0.5rem 0.75rem;
     color: var(--ink);
     text-decoration: none;
+    white-space: nowrap;
 
     &:hover {
       background: rgba(0, 0, 0, 0.04);
@@ -132,10 +226,12 @@ span.crumbs__item {
     color: var(--ink-muted);
   }
 
-  @media (max-width: $mobile) {
-    left: auto;
-    right: 0;
-  }
+}
+
+.sections__mark,
+.sections__label,
+.sections__number {
+  display: inline-block;
 }
 
 .sections__mark {

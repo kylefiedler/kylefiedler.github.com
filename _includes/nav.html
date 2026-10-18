@@ -1,7 +1,9 @@
 {%- assign section = site.data.sections | where: "key", page.section | first -%}
-{%- if page.url != section.url -%}
+{%- if page.url != section.url and section.page_crumb != false -%}
   {%- assign slug = page.url | split: "/" | last | remove: ".html" | replace: "-", " " -%}
-  {%- assign crumb = page.crumb | default: page.title | default: slug -%}
+  {%- assign menu = site.data[section.menu] -%}
+  {%- assign menu_page = menu | where: "url", page.url | first -%}
+  {%- assign crumb = page.crumb | default: page.title | default: menu_page.label | default: slug -%}
 {%- endif -%}
 <header class="masthead">
   <a class="masthead__logo" href="/">
@@ -20,7 +22,7 @@
         <li>
           <a href="{{ item.url }}"{% if item.key == section.key %} aria-current="true"{% endif %}>
             <span class="sections__mark" aria-hidden="true">{% if item.key == section.key %}&gt;{% else %}/{% endif %}</span>
-            {{ item.label }}
+            <span class="sections__label">{{ item.label }}</span>
             <span class="sections__number">{{ item.number }}</span>
           </a>
         </li>
@@ -29,21 +31,49 @@
     </details>
     {%- if crumb %}
     <span class="crumbs__slash" data-jitter="nav-slash" aria-hidden="true">/</span>
+    {%- if menu %}
+    <details class="sections sections--pages">
+      <summary class="crumbs__item crumbs__item--current" aria-current="page">
+        <span class="crumbs__text">{{ crumb }}</span>
+        <svg class="sections__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
+      </summary>
+      <ol class="sections__menu">
+        {%- for item in menu %}
+        <li>
+          <a href="{{ item.url }}"{% if item.url == page.url %} aria-current="true"{% endif %}>
+            <span class="sections__mark" aria-hidden="true">{% if item.url == page.url %}&gt;{% else %}/{% endif %}</span>
+            <span class="sections__label">{{ item.label }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </details>
+    {%- else %}
     <span class="crumbs__item crumbs__item--current" aria-current="page">{{ crumb }}</span>
+    {%- endif %}
     {%- endif %}
   </nav>
 </header>
 <script>
   (() => {
-    const menu = document.querySelector(".sections");
+    const menus = [...document.querySelectorAll(".sections")];
+    menus.forEach((menu) => {
+      menu.addEventListener("toggle", () => {
+        if (menu.open) menus.forEach((other) => other !== menu && (other.open = false));
+      });
+    });
     document.addEventListener("click", (event) => {
-      if (menu.open && !menu.contains(event.target)) menu.open = false;
+      menus.forEach((menu) => {
+        if (menu.open && !menu.contains(event.target)) menu.open = false;
+      });
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && menu.open) {
+      if (event.key !== "Escape") return;
+      menus.forEach((menu) => {
+        if (!menu.open) return;
         menu.open = false;
         menu.querySelector("summary").focus();
-      }
+      });
     });
   })();
 </script>

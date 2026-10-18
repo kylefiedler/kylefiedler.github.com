@@ -77,7 +77,17 @@
 
   @media (min-width: $wide) {
     grid-template-columns: minmax(0, 38rem) minmax(0, 17rem);
-    justify-content: space-between;
+    row-gap: 0;
+
+    // The article's pieces join the grid so the other posts can share a row
+    // with the body rather than the title.
+    .post__article {
+      display: contents;
+    }
+
+    .post__article > * {
+      grid-column: 1;
+    }
   }
 }
 
@@ -86,8 +96,23 @@
   margin-bottom: var(--space);
 }
 
+// Other posts sit beside the body in the date's muted ink. One line down
+// puts the heading on the baseline of the first paragraph's second line.
 .post__others {
+  color: var(--ink-muted);
   font-size: var(--size-small);
+
+  @media (min-width: $wide) {
+    // Title, date, body: the body's row.
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: calc(var(--size-body) * var(--leading));
+  }
+
+  .tertiary,
+  a {
+    color: inherit;
+  }
 
   @media (max-width: $mobile) {
     padding-top: var(--space);

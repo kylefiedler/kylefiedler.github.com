@@ -4,9 +4,9 @@ layout: default
 
 <div class="post">
   <article class="post__article">
-    {% include title.html %}
+    {% include title.html number=false %}
     <time class="post__date meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%m.%d.%Y' }}</time>
-    {{ content }}
+    <div class="post__body">{{ content }}</div>
   </article>
 
   <aside class="post__others" aria-labelledby="other-posts">
