@@ -28,6 +28,11 @@
   flex: none;
   color: var(--ink);
 
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   svg {
     display: block;
     width: 3rem;
@@ -219,6 +224,7 @@ span.crumbs__item,
 
     &:hover {
       background: rgba(0, 0, 0, 0.04);
+      box-shadow: none;
     }
   }
 

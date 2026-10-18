@@ -4,7 +4,7 @@ layout: default
 
 <div class="post">
   <article class="post__article">
-    {% include title.html number=false %}
+    {% include title.html %}
     <time class="post__date meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%m.%d.%Y' }}</time>
     <div class="post__body">{{ content }}</div>
   </article>

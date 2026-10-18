@@ -1,0 +1,53 @@
+# Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+- src: "/images/wall/animals/img-0587.jpg"
+  width: 800
+  height: 602
+  alt: A snake stretched across a dirt trail
+- src: "/images/wall/animals/img-1180.jpg"
+  width: 800
+  height: 782
+  alt: A Steller's jay on dry grass
+- src: "/images/wall/animals/img-1190.jpg"
+  width: 800
+  height: 820
+  alt: A frog among rocks
+- src: "/images/wall/animals/img-1206.jpg"
+  width: 800
+  height: 776
+  alt: A ground squirrel on a rock
+- src: "/images/wall/animals/img-1366.jpg"
+  width: 800
+  height: 690
+  alt: A snake sliding along the edge of a trail
+- src: "/images/wall/animals/img-1412.jpg"
+  width: 800
+  height: 821
+  alt: A horned lizard camouflaged in the dirt
+- src: "/images/wall/animals/img-1923.jpg"
+  width: 800
+  height: 726
+  alt: A bear in green brush
+- src: "/images/wall/animals/img-2530.jpg"
+  width: 800
+  height: 845
+  alt: A moose among pine trees
+- src: "/images/wall/animals/img-2741.jpg"
+  width: 800
+  height: 893
+  alt: A small animal tucked into the brush
+- src: "/images/wall/animals/img-3562.jpg"
+  width: 800
+  height: 397
+  alt: Deer grazing in a field
+- src: "/images/wall/animals/img-3728.jpg"
+  width: 800
+  height: 741
+  alt: A roadrunner on gravel
+- src: "/images/wall/animals/img-3912.jpg"
+  width: 800
+  height: 758
+  alt: Mountain goats beside a trail
+- src: "/images/wall/animals/img-3925.jpg"
+  width: 800
+  height: 698
+  alt: Cows on a hillside trail

@@ -1,0 +1,41 @@
+# Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+- src: "/images/wall/stadiums/img-0225.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark outfield from the stands
+- src: "/images/wall/stadiums/img-1394.jpg"
+  width: 800
+  height: 644
+  alt: Busch Stadium with the Gateway Arch behind it
+- src: "/images/wall/stadiums/img-0583.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark under the lights at night
+- src: "/images/wall/stadiums/img-1452.jpg"
+  width: 800
+  height: 600
+  alt: Fenway Park from the stands
+- src: "/images/wall/stadiums/img-0717.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark at sunset
+- src: "/images/wall/stadiums/59147489229-0aca2ed0-0c82-41e8-a017-7e068ccaa6c0.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark from the upper deck
+- src: "/images/wall/stadiums/img-1490.jpg"
+  width: 800
+  height: 800
+  alt: A crowded ballpark on a sunny day
+- src: "/images/wall/stadiums/img-1429.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark at dusk
+- src: "/images/wall/stadiums/img-0607.jpg"
+  width: 800
+  height: 658
+  alt: A ballpark under a cloudy sky
+- src: "/images/wall/stadiums/img-1627.jpg"
+  width: 800
+  height: 600
+  alt: A ballpark from behind home plate

@@ -2,18 +2,12 @@
 # on list pages. `url` matches the page's page.url.
 - label: Books
   url: /lists/books.html
-- label: 2025 Goals
-  url: /lists/2025-goals.html
 - label: Animals
   url: /lists/animals.html
 - label: Dryer
   url: /lists/dryer.html
-- label: 2024 Goals
-  url: /lists/2024-goals.html
 - label: Values
   url: /lists/values.html
-- label: Awards
-  url: /lists/awards.html
 - label: Baseball Stadiums
   url: /lists/baseball-stadiums.html
 - label: Plants
