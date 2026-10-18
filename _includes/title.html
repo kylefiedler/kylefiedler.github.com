@@ -1,11 +1,12 @@
 {%- comment -%}
   The page title. A section's main page also gets the section number on a
   dashed leader; subpages don't.
-  {% include title.html text="Lists" %} — `text` defaults to page.title.
+  {% include title.html text="Lists" doodle="star" %} — `text` defaults to
+  page.title; `doodle` names one from _includes/doodles/ to hang off the title.
 {%- endcomment -%}
 {%- assign section = site.data.sections | where: "key", page.section | first -%}
 <div class="title">
-  <h1 class="title__text" data-jitter="title">{{ include.text | default: page.title }}</h1>
+  <h1 class="title__text" data-jitter="title">{{ include.text | default: page.title }}{% if include.doodle %}{% include doodle.html name=include.doodle %}{% endif %}</h1>
   {%- if page.url == section.url %}
   <span class="title__number" data-jitter="title-number" aria-hidden="true"><span class="title__digits">{{ section.number }}</span></span>
   {%- endif %}
