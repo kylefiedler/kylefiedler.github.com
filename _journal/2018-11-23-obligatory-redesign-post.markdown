@@ -1,4 +1,5 @@
 ---
+redirect_from: /2018/11/23/obligatory-redesign-post.html
 layout: post
 title: "Obligatory Redesign Post"
 date: "2018-11-23 16:26:03 -0600"

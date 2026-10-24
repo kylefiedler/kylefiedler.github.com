@@ -1,4 +1,5 @@
 ---
+redirect_from: /2019/06/22/context-switching-and-tension-headaches.html
 layout: post
 title: "Context Switching and Tension Headaches "
 date: "2019-06-22 14:10:13 -0500"

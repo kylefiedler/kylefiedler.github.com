@@ -1,4 +1,5 @@
 ---
+redirect_from: /2017/01/22/space-to-think.html
 layout: post
 title: "Space to think"
 date: "2017-01-22 13:21:36 -0600"

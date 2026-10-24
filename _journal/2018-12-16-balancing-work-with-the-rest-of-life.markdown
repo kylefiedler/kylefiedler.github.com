@@ -1,4 +1,5 @@
 ---
+redirect_from: /2018/12/16/balancing-work-with-the-rest-of-life.html
 layout: post
 title: "Balancing work with the rest of life"
 date: "2018-12-16 21:14:30 -0600"

@@ -1,4 +1,5 @@
 ---
+redirect_from: /2014/10/22/barrier-for-entry.html
 title:  "Increasing and decreasing my barrier for entry"
 layout: post
 ---

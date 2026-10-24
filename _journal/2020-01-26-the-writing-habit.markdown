@@ -1,4 +1,5 @@
 ---
+redirect_from: /2020/01/26/the-writing-habit.html
 layout: post
 title: "The Writing Habit"
 date: "2020-01-26 08:41:44 -0600"

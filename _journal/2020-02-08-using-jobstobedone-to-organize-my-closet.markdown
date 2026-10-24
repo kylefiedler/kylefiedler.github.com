@@ -1,4 +1,5 @@
 ---
+redirect_from: /2020/02/02/using-jobstobedone-to-organize-my-closet.html
 layout: post
 title: "Using Jobs-to-be-Done to organize my closet"
 date: "2020-02-02 20:29:08 -0600"

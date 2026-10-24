@@ -1,4 +1,5 @@
 ---
+redirect_from: /2017/02/05/the-importance-of-exercise.html
 layout: post
 title: "The Importance of Exercise"
 date: "2017-02-05 20:54:31 -0600"

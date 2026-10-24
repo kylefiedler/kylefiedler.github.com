@@ -1,4 +1,5 @@
 ---
+redirect_from: /2025/01/25/shittiest-jobs.html
 layout: post
 title: The best leaders take the shittiest jobs
 date: 2025-01-25 11:35
