@@ -1,7 +1,7 @@
 {%- comment -%}
   The photo wall on Split pages. `wall` (from the layout, else the page) names
-  a set in _data/walls/ (written by script/wall-photos) and falls back to the
-  gray placeholder set.
+  a set in _data/walls/ (written by script/wall-photos), or lists several to
+  mix; wall-set.html resolves it and falls back to the gray placeholder set.
   Entries without a `src` render as gray tiles.
 
   The set goes out once in a <template>; the script below deals it into
@@ -33,7 +33,8 @@
   <div class="wall__column"></div>
 </div>
 {%- else -%}
-{%- assign photos = site.data.walls[wall] | default: site.data.walls.placeholder -%}
+{%- include wall-set.html wall=wall limit=page.wall_limit -%}
+{%- assign photos = wall_photos -%}
 <div class="wall wall--drift">
   <template>
     {%- for photo in photos %}

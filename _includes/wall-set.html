@@ -1,0 +1,34 @@
+{%- comment -%}
+  Resolves a page's `wall` into `wall_photos` for wall.html and wall-strip.html.
+
+  `wall` names one set in _data/walls/, or lists several
+  (`wall: [books, animals]`). Several sets are dealt round-robin, one photo
+  from each in turn, and stop at `limit` (default 32) to keep the drifting
+  tracks short. Each round starts one set later than the last: wall.html deals
+  photos into columns round-robin too, so a fixed order would give each column
+  a single set whenever the column count matches the number of sets. Unknown
+  sets are skipped; with nothing left, the gray placeholder set stands in.
+{%- endcomment -%}
+{%- assign wall_names = include.wall | join: "," | split: "," -%}
+{%- assign wall_limit = include.limit | default: 32 -%}
+{%- assign wall_photos = "" | split: "" -%}
+{%- if wall_names.size == 1 -%}
+  {%- assign wall_photos = site.data.walls[wall_names.first] -%}
+{%- else -%}
+  {%- assign wall_last = wall_names.size | minus: 1 -%}
+  {%- for index in (0..wall_limit) -%}
+    {%- for turn in (0..wall_last) -%}
+      {%- assign wall_turn = turn | plus: index | modulo: wall_names.size -%}
+      {%- assign wall_name = wall_names[wall_turn] -%}
+      {%- assign wall_from = site.data.walls[wall_name] -%}
+      {%- if index < wall_from.size and wall_photos.size < wall_limit -%}
+        {%- assign wall_photo = wall_from | slice: index, 1 -%}
+        {%- assign wall_photos = wall_photos | concat: wall_photo -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if wall_photos.size >= wall_limit %}{% break %}{% endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if wall_photos == nil or wall_photos.size == 0 -%}
+  {%- assign wall_photos = site.data.walls.placeholder -%}
+{%- endif -%}

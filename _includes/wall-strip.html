@@ -4,7 +4,8 @@
   the widest phone layout. Each photo's alt is exposed once; repeats are
   silent.
 {%- endcomment -%}
-{%- assign photos = site.data.walls[include.wall] | default: site.data.walls.placeholder -%}
+{%- include wall-set.html wall=include.wall limit=page.wall_limit -%}
+{%- assign photos = wall_photos -%}
 {%- assign count = photos.size -%}
 {%- assign strip_min = 8 -%}
 {%- assign bound = count | plus: 100 -%}
