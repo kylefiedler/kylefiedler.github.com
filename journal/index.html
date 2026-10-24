@@ -14,8 +14,8 @@ title: Journal
       {%- for entry in entries %}
       <li class="journal-entry">
         <p class="journal-entry__meta meta">
-          <time datetime="{{ entry.date | date_to_xmlschema }}" data-jitter="journal-date">{{ entry.date | date: '%m.%d.%Y' }}</time>
-          <span>{% if forloop.rindex < 10 %}0{% endif %}{{ forloop.rindex }}</span>
+          <time datetime="{{ entry.date | date_to_xmlschema }}" data-jitter="journal-date">{{ entry.date | date: '%B %-d, %Y' }}</time>
+          <span class="journal-entry__number"><span class="journal-entry__digits">{% if forloop.rindex < 10 %}0{% endif %}{{ forloop.rindex }}</span></span>
         </p>
         <h3 class="journal-entry__title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
       </li>
