@@ -1,4 +1,5 @@
 ---
+redirect_from: /2015/02/22/launching-incomplete.html
 title: Launch when you aren’t ready
 layout: post
 ---

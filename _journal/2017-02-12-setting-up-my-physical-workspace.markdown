@@ -1,4 +1,5 @@
 ---
+redirect_from: /2017/02/12/setting-up-my-physical-workspace.html
 layout: post
 title: "Setting up my physical workspace"
 date: "2017-02-12 21:15:37 -0600"

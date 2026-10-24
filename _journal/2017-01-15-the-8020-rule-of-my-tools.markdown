@@ -1,4 +1,5 @@
 ---
+redirect_from: /2017/01/15/the-8020-rule-of-my-tools.html
 layout: post
 title: "The 80/20 rule of my tools"
 date: "2017-01-15 22:00:46 -0600"

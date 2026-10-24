@@ -1,4 +1,5 @@
 ---
+redirect_from: /2014/12/30/perfection-vs-iteration.html
 title: The difference between perfection and iterating
 layout: post
 ---

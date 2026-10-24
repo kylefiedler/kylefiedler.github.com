@@ -1,4 +1,5 @@
 ---
+redirect_from: /2016/03/09/getting-things-done.html
 layout: post
 title: Getting things done
 ---

@@ -1,4 +1,5 @@
 ---
+redirect_from: /2019/05/29/wisdom-in-childrens-books.html
 layout: post
 title: "Wisdom in children's books"
 date: "2019-05-29 09:22:44 -0500"

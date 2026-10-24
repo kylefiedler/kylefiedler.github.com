@@ -1,4 +1,5 @@
 ---
+redirect_from: /2018/12/10/remember-it-now.html
 layout: post
 title: "Remember It Now"
 date: "2018-12-10 19:32:06 -0600"

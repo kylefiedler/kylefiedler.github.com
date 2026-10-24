@@ -1,4 +1,5 @@
 ---
+redirect_from: /2020/02/23/the-lost-cat.html
 layout: post
 title: "The Lost Cat"
 date: "2020-02-23 14:44:18 -0600"

@@ -1,4 +1,5 @@
 ---
+redirect_from: /2025/01/05/stovetop-cooking-and-task-management.html
 layout: post
 title: Stovetop cooking and task management
 date: 2025-01-05 11:01

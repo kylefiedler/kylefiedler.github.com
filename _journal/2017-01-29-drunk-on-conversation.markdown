@@ -1,10 +1,11 @@
 ---
+redirect_from: /2017/01/29/drunk-on-conversation.html
 layout: post
 title: "Drunk on Conversation"
 date: "2017-01-29 21:05:14 -0600"
 ---
 
-I’m a self identified introvert and I really love time alone to sit and think [(or run and think)](http://kylefiedler.com/2017/01/22/space-to-think.html). As a husband, father of three and manager of designers, I don’t get nearly as much alone time as I once did. Don’t get me wrong, I love having in-depth conversation with the people that I’ve surrounded myself with. Hearing about my daughter’s day at school, going on walks with my wife and having one on ones with the Design Directors at thoughtbot are all incredibly fulfilling conversations and I don’t want them to change.
+I’m a self identified introvert and I really love time alone to sit and think [(or run and think)](/journal/space-to-think/). As a husband, father of three and manager of designers, I don’t get nearly as much alone time as I once did. Don’t get me wrong, I love having in-depth conversation with the people that I’ve surrounded myself with. Hearing about my daughter’s day at school, going on walks with my wife and having one on ones with the Design Directors at thoughtbot are all incredibly fulfilling conversations and I don’t want them to change.
 
 The issue that I keep running into is that I feel exhausted mentally after a few of these. This feeling is especially relevant after I’ve led a design sprint, which almost feels like waking up the morning after binge drinking. I head home after every day of the sprint feeling exhausted and delirious. This feeling, typical for many introverts, is called an [introvert hangover](http://introvertdear.com/news/yes-there-is-such-a-thing-as-an-introvert-hangover/) because the symptoms are sometimes so similar.
 

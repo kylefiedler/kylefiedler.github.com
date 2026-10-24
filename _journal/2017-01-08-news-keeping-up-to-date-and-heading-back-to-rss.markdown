@@ -1,4 +1,5 @@
 ---
+redirect_from: /2017/01/08/news-keeping-up-to-date-and-heading-back-to-rss.html
 layout: post
 title: "News, keeping up to date and heading back to RSS"
 date: "2017-01-08 10:21:07 -0600"

@@ -1,4 +1,5 @@
 ---
+redirect_from: /2015/07/07/three-talks.html
 layout: post
 title: Things I learned by doing 3 talks in 3 days in Chicago
 ---

@@ -4,6 +4,7 @@ description: Probably eating a taco
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 sass:
   sass_dir: _sass

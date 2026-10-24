@@ -1,4 +1,5 @@
 ---
+redirect_from: /2024/12/26/nothing-moves.html
 layout: post
 title: Nothing Moves
 date: 2024-12-26 12:59
