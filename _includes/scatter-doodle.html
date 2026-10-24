@@ -1,0 +1,16 @@
+{%- comment -%}
+  Places a doodle in its own cell of a .scatter grid:
+  {% include scatter-doodle.html name="dryer-dollar" area="dollar" place="end start" nudge="-10% 20%" rotate=4 %}
+  `area` is the drawing's name in the page's grid-template-areas
+  (_scatter.scss). `place` is where it sits in that cell (justify, then
+  align: start / center / end) and `nudge` shifts it by a share of its own
+  size, so the drawings don't line up. It's drawn at its viewBox width,
+  scaled by the window's --ink-scale and capped at the cell's width.
+{%- endcomment -%}
+{%- capture svg -%}{% include doodles/{{ include.name }}.svg %}{%- endcapture -%}
+{%- assign box = svg | split: 'viewBox="' | last | split: '"' | first | split: " " -%}
+{%- assign place = include.place | default: "center center" | split: " " -%}
+{%- assign nudge = include.nudge | default: "0 0" | split: " " -%}
+<span class="doodle doodle--{{ include.name }}" style="--area: {{ include.area }}; --native: {{ box[2] }}; --justify: {{ place[0] }}; --align: {{ place[1] }}; --nudge-x: {{ nudge[0] }}; --nudge-y: {{ nudge[1] }}; transform: rotate({{ include.rotate | default: 0 }}deg);" aria-hidden="true">
+  {{- svg -}}
+</span>

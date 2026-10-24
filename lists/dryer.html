@@ -3,21 +3,34 @@ layout: default
 crumb: Dryer
 ---
 
-<header class="header--primary">
-  <h1>Things I&rsquo;ve found in the dryer</h1>
-  <p>My kids leave a lot of weird things in their pockets and they all come out in the dryer. They&rsquo;re little suprises for me every time I do laundry.</p>
-</header>
+<div class="scatter scatter--dryer">
+  <header class="header--primary scatter__head">
+    <h1>Things I&rsquo;ve found in the dryer</h1>
+    <p>My kids leave a lot of weird things in their pockets and they all come out in the dryer. They&rsquo;re little suprises for me every time I do laundry.</p>
+  </header>
 
-<ul class="circle cell cell--first">
-  <li>Sea shells</li>
-  <li>Mulch</li>
-  <li>Gravel</li>
-  <li>Geode</li>
-  <li>Lego pieces</li>
-  <li>Loose change</li>
-  <li>Dollar bill</li>
-  <li>Camera lanyard</li>
-  <li>Switch game cartridge</li>
-  <li>Action figure</li>
-  <li>Dead insect</li>
-</ul>
+  <ul class="circle scatter__list">
+    <li>Sea shells</li>
+    <li>Mulch</li>
+    <li>Gravel</li>
+    <li>Geode</li>
+    <li>Lego pieces</li>
+    <li>Loose change</li>
+    <li>Dollar bill</li>
+    <li>Camera lanyard</li>
+    <li>Switch game cartridge</li>
+    <li>Action figure</li>
+    <li>Dead insect</li>
+  </ul>
+
+  {% include scatter-doodle.html name="dryer-coin-2" area="coin2" place="start end" nudge="12% 0" %}
+  {% include scatter-doodle.html name="dryer-lego-2" area="lego2" place="center center" %}
+  {% include scatter-doodle.html name="dryer-army-man" area="army" place="start end" %}
+  {% include scatter-doodle.html name="dryer-lego-1" area="lego1" place="start center" nudge="0 -20%" %}
+  {% include scatter-doodle.html name="dryer-dollar" area="dollar" place="center center" %}
+  {% include scatter-doodle.html name="dryer-shell" area="shell" place="center end" %}
+  {% include scatter-doodle.html name="dryer-coin" area="coin" place="center center" %}
+  {% include scatter-doodle.html name="dryer-shell-2" area="fan" place="end center" %}
+  {% include scatter-doodle.html name="dryer-cartridge" area="cart" place="end start" nudge="-10% 20%" %}
+  {% include scatter-doodle.html name="dryer-lanyard" area="lanyard" place="start center" %}
+</div>

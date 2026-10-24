@@ -1,0 +1,117 @@
+// Hand-drawn things scattered around a Sheet page's text, as on Dryer. The
+// page's content is one grid: the heading and list take their own areas and
+// each drawing gets a cell of its own (scatter-doodle.html), so as the window
+// changes every drawing moves on its own and the drawings fill whatever room
+// the text leaves. Each page lays out its areas below.
+
+.scatter {
+  // How large the drawings are drawn, against their viewBox widths.
+  --ink-scale: 0.55;
+  display: grid;
+  gap: 1.25rem 1.5rem;
+
+  @media (min-width: 34rem) {
+    --ink-scale: 0.7;
+  }
+
+  @media (min-width: $wide) {
+    --ink-scale: 0.8;
+    // Fill the window below the nav, so the drawings spread out, but not so
+    // far on tall screens that they drift apart.
+    min-height: min(calc(100vh - 13rem), 46rem);
+  }
+
+  @media (min-width: 78rem) {
+    --ink-scale: 1;
+  }
+
+  @media (min-width: 110rem) {
+    --ink-scale: 1.1;
+  }
+
+  > .doodle {
+    position: relative;
+    grid-area: var(--area);
+    justify-self: var(--justify);
+    align-self: var(--align);
+    width: min(100%, calc(var(--native) * var(--ink-scale) * 1px));
+    translate: var(--nudge-x) var(--nudge-y);
+  }
+
+  .doodle svg {
+    overflow: visible;
+  }
+
+  // Keep the drawings' pen weight at any scale.
+  path {
+    vector-effect: non-scaling-stroke;
+
+    @media (max-width: $mobile) {
+      stroke-width: 1.5;
+    }
+  }
+}
+
+.scatter__head {
+  grid-area: head;
+  margin: 0;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// With the row gap, the same space other list pages leave above a list.
+.scatter__list {
+  grid-area: list;
+  align-self: start;
+  margin: 1.75rem 0 0;
+}
+
+.scatter--dryer {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "head  head   head"
+    "list  list   list"
+    "coin2 lego2  army"
+    "lego1 dollar dollar"
+    "coin  dollar dollar"
+    "shell cart   lanyard"
+    "fan   fan    lanyard";
+
+  // Room beside the list: the small things sit next to it.
+  @media (min-width: 34rem) {
+    grid-template-columns: max-content repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "head  head   head"
+      "list  coin2  army"
+      "list  lego1  coin"
+      "lego2 dollar dollar"
+      "fan   dollar dollar"
+      "shell cart   lanyard";
+  }
+
+  @media (min-width: $wide) {
+    grid-template-columns: 17rem repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto auto 1fr;
+    grid-template-areas:
+      "head head  head   coin2"
+      "list lego2 army   coin"
+      "list lego1 dollar shell"
+      "list fan   dollar shell"
+      ".    cart  dollar lanyard";
+  }
+
+  // Beside the text. The drawing columns stop growing at their caps and the
+  // last column takes the rest, so on large screens the drawings stay
+  // together by the text instead of spreading to the window's edge.
+  @media (min-width: 78rem) {
+    grid-template-columns: 18rem 20rem minmax(0, 22rem) minmax(0, 17rem) minmax(0, 17rem) minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+      "head head  lego2  coin2 army    ."
+      "list lego1 dollar shell lanyard ."
+      "list fan   dollar shell lanyard ."
+      ".    cart  dollar coin  lanyard .";
+  }
+}
