@@ -1,84 +1,178 @@
-// Kind Words: a hand-composed collage. A column of quotes sits beside a
-// spread (the retro board across the top, two columns of quotes under it).
-// Below $collage everything stacks in source order.
-
-.kind-words,
-.kind-words__column,
-.kind-words__spread {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
+// Kind Words: a pile of paper scraps. Below $collage they stack in source
+// order; from $collage up each sits where its inline --x/--y/--w/--r put it on
+// the board, and the page script lets a mouse drag them around.
 
 .kind-words {
-  max-width: 38rem;
+  position: relative;
 
+  // The board and its scraps all measure in the page's width (cqw).
   @media (min-width: $collage) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    gap: 4rem;
-    align-items: start;
-    max-width: 77rem;
+    container-type: inline-size;
   }
 
   .title {
-    margin-bottom: 0;
+    margin-bottom: 2.5rem;
   }
 }
 
-.kind-words__column {
-  position: relative;
-}
-
-.kind-words__spread {
-  @media (min-width: $collage) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 2rem;
-    align-items: start;
-  }
-}
-
-// Narrower than the spread, leaving room for the paperclip on its corner.
-.kind-words__board {
-  position: relative;
-  margin: 0 1.5rem 0 0;
+.scraps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 34rem;
 
   @media (min-width: $collage) {
-    grid-column: 1 / -1;
-    margin-right: 2.75rem;
+    position: relative;
+    display: block;
+    max-width: none;
+    // Tall enough for the lowest scrap (--y: 50.5) at the smallest type.
+    height: 78cqw;
   }
 }
 
-.kind-words__quote {
+.scrap {
+  --paper-color: #fbfaf6;
+  --edge: none;
+  --shadow: drop-shadow(0 1px 1px rgba(27, 27, 27, 0.12)) drop-shadow(0 4px 8px rgba(27, 27, 27, 0.1));
+  position: relative;
+  isolation: isolate;
   margin: 0;
-  padding: 0;
+  padding: 1.5rem 1.625rem 1.75rem;
   border: 0;
+  font-size: var(--size-body);
+  line-height: var(--leading);
+  filter: var(--shadow);
+  transform: rotate(calc(var(--r, 0deg) * 0.5));
+
+  // The paper itself, so a torn edge clips the paper and the shadow follows it.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--paper-fill, var(--paper-color));
+    clip-path: var(--edge);
+  }
+
+  @media (min-width: $collage) {
+    position: absolute;
+    top: calc(var(--y) * 1cqw);
+    left: calc(var(--x) * 1%);
+    z-index: var(--z, auto);
+    width: calc(var(--w) * 1%);
+    // Type grows with the board, so each scrap keeps its shape and the pile
+    // its overlaps from one window width to the next.
+    padding: 1.6cqw 1.8cqw 1.9cqw;
+    font-size: clamp(0.75rem, 1.25cqw, 1.125rem);
+    transform: rotate(var(--r, 0deg));
+  }
 }
 
-.kind-words__quote--pull,
-.kind-words__award {
+.scrap--serif {
   font-family: var(--font-serif);
   font-size: var(--size-secondary);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: -0.02em;
-}
 
-.kind-words__award {
-  margin: 0;
-}
-
-// A hollow bullet hanging at the column edge.
-.kind-words__quote--bullet {
-  display: list-item;
-  margin-left: 1.25rem;
-  list-style: circle;
-}
-
-// Hand-placed stagger under the Slack screenshot.
-.kind-words__quote--offset {
   @media (min-width: $collage) {
-    margin: 1.5rem 0 0 1.5rem;
+    font-size: clamp(1rem, 1.9cqw, 1.75rem);
+  }
+}
+
+.scrap--sticky {
+  --paper-color: #f7dc6f;
+}
+
+.scrap--green {
+  --paper-color: #a6dd9b;
+}
+
+.scrap--pink {
+  --paper-color: #f3b9ad;
+}
+
+.scrap--sheet {
+  // A sheet torn off along the bottom.
+  --edge: polygon(0 0, 100% 0, 100% 94%, 92% 97%, 84% 95%, 75% 99%, 66% 96%, 57% 100%, 48% 96%, 39% 98%, 30% 95%, 21% 99%, 12% 96%, 5% 98%, 0 95%);
+  padding-bottom: 2.5rem;
+}
+
+// Lined notebook paper: blue rules, a red margin, three punched holes, and a
+// ragged top where it was torn out of the spiral.
+.scrap--notebook {
+  --paper-fill:
+    linear-gradient(to right, transparent 2.6rem, #e58a8a 2.6rem, #e58a8a 2.7rem, transparent 2.7rem),
+    repeating-linear-gradient(to bottom, transparent 0 calc(1.6em - 1px), #b9cde3 calc(1.6em - 1px) 1.6em),
+    #fbfaf6;
+  --edge: polygon(0 1.2%, 6% 0, 13% 1.5%, 21% 0.3%, 29% 1.8%, 37% 0.5%, 45% 1.6%, 53% 0, 61% 1.4%, 69% 0.4%, 77% 1.7%, 85% 0.2%, 93% 1.5%, 100% 0.5%, 100% 100%, 0 100%);
+  padding: 1.6em 1.5rem 1.6em 3.5rem;
+
+  &::before {
+    background-position: 0 0.85em;
+    // One hole, tiled down the margin three times.
+    mask: radial-gradient(circle at 1.25rem 50%, transparent 0.32rem, #000 0.36rem) 0 0 / 100% calc(100% / 3) repeat-y;
+  }
+}
+
+// An index card: one red rule along the top, faint blue lines under it.
+.scrap--card {
+  --paper-fill:
+    linear-gradient(to bottom, transparent 2.25rem, #e9a3a3 2.25rem, #e9a3a3 calc(2.25rem + 2px), transparent calc(2.25rem + 2px)),
+    repeating-linear-gradient(to bottom, transparent 0 calc(1.75rem - 1px), #cfdcea calc(1.75rem - 1px) 1.75rem) 0 2.25rem / 100% 100% no-repeat,
+    #fdfdfb;
+  padding-top: 3rem;
+}
+
+// A screenshot taped down on a white border.
+.scrap--photo {
+  padding: 0.625rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    width: 5.5rem;
+    height: 1.5rem;
+    background: rgba(240, 230, 200, 0.75);
+    transform: translateX(-50%) rotate(-3deg);
+  }
+
+  &:has(.doodle)::after {
+    display: none;
+  }
+}
+
+.scraps--draggable .scrap {
+  @media (min-width: $collage) {
+    cursor: grab;
+
+    img {
+      -webkit-user-drag: none;
+    }
+  }
+}
+
+.scrap.is-dragging {
+  --shadow: drop-shadow(0 2px 2px rgba(27, 27, 27, 0.14)) drop-shadow(0 14px 22px rgba(27, 27, 27, 0.18));
+  cursor: grabbing;
+}
+
+// The Sheet frame caps blockquotes and paragraphs at a reading width; scraps
+// set their own.
+.frame--sheet .card__body .scrap {
+  max-width: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scrap {
+    transition: filter 0.15s ease-out;
   }
 }

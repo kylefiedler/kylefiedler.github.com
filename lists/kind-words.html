@@ -4,52 +4,112 @@ title: Kind Words
 redirect_from: /kind-words/
 ---
 
-<div class="kind-words">
-  <div class="kind-words__column">
-    {% include title.html %}
-    {% include doodle.html name="heart" top="-0.75rem" left="11rem" rotate="14" size="0.875rem" %}
+{%- comment -%}
+  A pile of paper scraps. Each scrap's place on wide screens is hand-set:
+  --x and --w are shares of the board's width, --y is in board-width units
+  (so the pile keeps its shape as the window grows), --r is its tilt.
+{%- endcomment -%}
 
-    <blockquote class="kind-words__quote">
+<div class="kind-words">
+  {% include title.html %}
+  {% include doodle.html name="heart" top="-0.75rem" left="11rem" rotate="14" size="0.875rem" %}
+
+  <div class="scraps">
+    <blockquote class="scrap scrap--sticky" style="--x: 0; --y: 1; --w: 31; --r: -3deg;">
       Kyle demonstrated our community value by creating a space where I feel truly supported. He is consistently encouraging fruitful collaborations among designers and he genuinely cares about our personal growth and well-beings.
     </blockquote>
 
-    <blockquote class="kind-words__quote">
+    <blockquote class="scrap scrap--notebook" style="--x: 34; --y: 4; --w: 29; --r: 1.5deg;">
       Kyle always puts others&rsquo; success before his own, even when he&rsquo;s buried in work—a rare and admirable quality that&rsquo;s far from easy to pull off.
     </blockquote>
 
-    <p class="kind-words__award">Kindness Award Winner, MetaMask Design Team 2024</p>
+    <p class="scrap scrap--card scrap--serif" style="--x: 4; --y: 20; --w: 26; --r: 2.5deg;">
+      Kindness Award Winner, MetaMask Design Team 2024
+    </p>
 
-    <blockquote class="kind-words__quote kind-words__quote--bullet">
+    <figure class="scrap scrap--photo" style="--x: 64; --y: 1; --w: 35; --r: 1.25deg;">
+      <img src="/images/kind-words/retro.png" width="2334" height="798" alt="A Figjam retrospective board filled with colorful sticky notes containing supportive messages about Kyle. The notes read: Kyle keeps me sane, Great support from my manager Kyle - feel advocated for and encouraged to grow without being overly pressured, Getting great support from Kyle +1, I love Kyle too, and Can we clone Kyle? The overall tone is warm, appreciative, and celebratory of Kyle's management and mentorship.">
+    </figure>
+
+    <blockquote class="scrap scrap--green" style="--x: 68; --y: 13.5; --w: 27; --r: -2.25deg;">
       Kyle is a great coach and mentor when reviewing projects. I like that he takes a "Socratic approach" by asking really pointed questions rather than just offering solutions
     </blockquote>
 
-    <blockquote class="kind-words__quote kind-words__quote--pull">
+    <blockquote class="scrap scrap--sheet scrap--serif" style="--x: 31; --y: 19.5; --w: 30; --r: -1deg;">
       Kyle ran the most efficiant and effective design workshop I&rsquo;ve ever participated in. And it had ~40 people in it!
     </blockquote>
-  </div>
 
-  <div class="kind-words__spread">
-    <figure class="kind-words__board">
-      <img src="/images/kind-words/retro.png" width="2334" height="798" alt="A Figjam retrospective board filled with colorful sticky notes containing supportive messages about Kyle. The notes read: Kyle keeps me sane, Great support from my manager Kyle - feel advocated for and encouraged to grow without being overly pressured, Getting great support from Kyle +1, I love Kyle too, and Can we clone Kyle? The overall tone is warm, appreciative, and celebratory of Kyle's management and mentorship.">
-      {% include doodle.html name="paperclip" top="-0.75rem" right="-1.375rem" size="3.25rem" %}
+    <figure class="scrap scrap--photo" style="--x: 0; --y: 33.5; --w: 33; --r: -1.5deg;">
+      <img src="/images/kind-words/figjam-love.png" width="703" height="365" alt="a screenshot of slack saying: 'btw I just wanted to say i love your figjam. Its the kind of light weight planning that I wish product teams did more often, maybe it could eve become a temaplate What I especially love about this format is: Clearly defined roles, A timeline, Space for lo-fi scoping'">
+      {% include doodle.html name="paperclip" top="-1rem" right="1.5rem" rotate="8" size="2.75rem" %}
     </figure>
 
-    <div class="kind-words__column">
-      <img src="/images/kind-words/figjam-love.png" width="703" height="365" alt="a screenshot of slack saying: 'btw I just wanted to say i love your figjam. Its the kind of light weight planning that I wish product teams did more often, maybe it could eve become a temaplate What I especially love about this format is: Clearly defined roles, A timeline, Space for lo-fi scoping'">
+    <blockquote class="scrap scrap--pink" style="--x: 36; --y: 34.5; --w: 29; --r: 2deg;">
+      Kyle offers insightful feedback on our designs, the way we present our work, and how we should collaborate with each other. His feedback has been consistently valuable, and I truly appreciate all the support and guidance he provides.
+    </blockquote>
 
-      <blockquote class="kind-words__quote">
-        Kyle offers insightful feedback on our designs, the way we present our work, and how we should collaborate with each other. His feedback has been consistently valuable, and I truly appreciate all the support and guidance he provides.
-      </blockquote>
-    </div>
+    <blockquote class="scrap scrap--notebook" style="--x: 66; --y: 32; --w: 31; --r: -1.25deg;">
+      Kyle makes me feel recognized for my efforts, which is important to me. He regularly tells me via Slack when I have done something well. This consistent recognition has been a key factor in keeping my motivation high at work.
+    </blockquote>
 
-    <div class="kind-words__column">
-      <blockquote class="kind-words__quote kind-words__quote--offset">
-        Kyle makes me feel recognized for my efforts, which is important to me. He regularly tells me via Slack when I have done something well. This consistent recognition has been a key factor in keeping my motivation high at work.
-      </blockquote>
-
-      <blockquote class="kind-words__quote kind-words__quote--pull">
-        Kyle is always so humble and lends grace to everyone, very selflessly. And the best part is, he doesn't know how kind he is!! He does it without seeking recognition for his words or actions.
-      </blockquote>
-    </div>
+    <blockquote class="scrap scrap--card scrap--serif" style="--x: 2; --y: 50.5; --w: 31; --r: 1deg;">
+      Kyle is always so humble and lends grace to everyone, very selflessly. And the best part is, he doesn't know how kind he is!! He does it without seeking recognition for his words or actions.
+    </blockquote>
   </div>
 </div>
+
+<script>
+  (() => {
+    const board = document.querySelector(".scraps");
+    const threshold = 4;
+    let front = board.children.length;
+
+    const clamp = (value, max) => Math.min(Math.max(value, 0), Math.max(max, 0));
+
+    board.classList.add("scraps--draggable");
+
+    // A drag writes the same --x/--y the stylesheet places scraps with, so a
+    // moved scrap scales with the pile and is ignored once the scraps stack.
+    board.addEventListener("pointerdown", (event) => {
+      const scrap = event.target.closest(".scrap");
+      if (!scrap || event.pointerType === "touch" || event.button !== 0) return;
+      if (getComputedStyle(scrap).position !== "absolute") return;
+      event.preventDefault();
+
+      const { pointerId, clientX: startX, clientY: startY } = event;
+      const startLeft = scrap.offsetLeft;
+      const startTop = scrap.offsetTop;
+      let dragging = false;
+
+      const move = (moveEvent) => {
+        if (moveEvent.pointerId !== pointerId) return;
+        const dx = moveEvent.clientX - startX;
+        const dy = moveEvent.clientY - startY;
+        if (!dragging) {
+          if (Math.hypot(dx, dy) < threshold) return;
+          dragging = true;
+          scrap.setPointerCapture(pointerId);
+          scrap.style.setProperty("--z", ++front);
+          scrap.classList.add("is-dragging");
+        }
+        const unit = board.clientWidth / 100;
+        const left = clamp(startLeft + dx, board.clientWidth - scrap.offsetWidth);
+        const top = clamp(startTop + dy, board.clientHeight - scrap.offsetHeight);
+        scrap.style.setProperty("--x", (left / unit).toFixed(2));
+        scrap.style.setProperty("--y", (top / unit).toFixed(2));
+      };
+
+      const end = (endEvent) => {
+        if (endEvent.pointerId !== pointerId) return;
+        scrap.classList.remove("is-dragging");
+        window.removeEventListener("pointermove", move);
+        window.removeEventListener("pointerup", end);
+        window.removeEventListener("pointercancel", end);
+      };
+
+      window.addEventListener("pointermove", move);
+      window.addEventListener("pointerup", end);
+      window.addEventListener("pointercancel", end);
+    });
+  })();
+</script>
