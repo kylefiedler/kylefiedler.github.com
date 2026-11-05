@@ -10,9 +10,6 @@
     container-type: inline-size;
   }
 
-  .title {
-    margin-bottom: 2.5rem;
-  }
 }
 
 .scraps {
@@ -32,7 +29,6 @@
 
 .scrap {
   --paper-color: #fbfaf6;
-  --edge: none;
   --shadow: drop-shadow(0 1px 1px rgba(27, 27, 27, 0.12)) drop-shadow(0 4px 8px rgba(27, 27, 27, 0.1));
   position: relative;
   isolation: isolate;
@@ -44,14 +40,14 @@
   filter: var(--shadow);
   transform: rotate(calc(var(--r, 0deg) * 0.5));
 
-  // The paper itself, so a torn edge clips the paper and the shadow follows it.
+  // The paper sits behind the text so its mask (notebook holes) leaves the
+  // words alone, and the drop shadow follows the holes.
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     background: var(--paper-fill, var(--paper-color));
-    clip-path: var(--edge);
   }
 
   @media (min-width: $collage) {
@@ -68,15 +64,24 @@
   }
 }
 
-.scrap--serif {
-  font-family: var(--font-serif);
-  font-size: var(--size-secondary);
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+.scrap--hand {
+  font-family: var(--font-hand);
+  font-size: 1.375rem;
+  line-height: 1.35;
 
   @media (min-width: $collage) {
-    font-size: clamp(1rem, 1.9cqw, 1.75rem);
+    font-size: clamp(1.125rem, 1.75cqw, 1.625rem);
+  }
+}
+
+// Reenie Beanie runs small and loose, so it's set larger.
+.scrap--scrawl {
+  font-family: var(--font-scrawl);
+  font-size: 1.875rem;
+  line-height: 1.1;
+
+  @media (min-width: $collage) {
+    font-size: clamp(1.5rem, 2.5cqw, 2.375rem);
   }
 }
 
@@ -92,20 +97,12 @@
   --paper-color: #f3b9ad;
 }
 
-.scrap--sheet {
-  // A sheet torn off along the bottom.
-  --edge: polygon(0 0, 100% 0, 100% 94%, 92% 97%, 84% 95%, 75% 99%, 66% 96%, 57% 100%, 48% 96%, 39% 98%, 30% 95%, 21% 99%, 12% 96%, 5% 98%, 0 95%);
-  padding-bottom: 2.5rem;
-}
-
-// Lined notebook paper: blue rules, a red margin, three punched holes, and a
-// ragged top where it was torn out of the spiral.
+// Lined notebook paper: blue rules, a red margin, three punched holes.
 .scrap--notebook {
   --paper-fill:
     linear-gradient(to right, transparent 2.6rem, #e58a8a 2.6rem, #e58a8a 2.7rem, transparent 2.7rem),
     repeating-linear-gradient(to bottom, transparent 0 calc(1.6em - 1px), #b9cde3 calc(1.6em - 1px) 1.6em),
     #fbfaf6;
-  --edge: polygon(0 1.2%, 6% 0, 13% 1.5%, 21% 0.3%, 29% 1.8%, 37% 0.5%, 45% 1.6%, 53% 0, 61% 1.4%, 69% 0.4%, 77% 1.7%, 85% 0.2%, 93% 1.5%, 100% 0.5%, 100% 100%, 0 100%);
   padding: 1.6em 1.5rem 1.6em 3.5rem;
 
   &::before {
