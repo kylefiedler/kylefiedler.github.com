@@ -78,11 +78,21 @@
 .scrap--scrawl {
   font-family: var(--font-scrawl);
   font-size: 1.875rem;
-  line-height: 1.1;
+  line-height: 0.95;
 
   @media (min-width: $collage) {
     font-size: clamp(1.5rem, 2.5cqw, 2.375rem);
   }
+}
+
+// Hand-broken lines that drift in and out, the way handwriting does.
+.scrap__line {
+  display: block;
+
+  &:nth-child(2) { margin-left: 0.45em; }
+  &:nth-child(3) { margin-left: -0.15em; }
+  &:nth-child(4) { margin-left: 0.7em; }
+  &:nth-child(5) { margin-left: 0.25em; }
 }
 
 .scrap--sticky {
