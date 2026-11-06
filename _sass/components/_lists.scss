@@ -9,15 +9,26 @@
   }
 }
 
+// Sticky over the list, so once it's pinned (.is-stuck, set by the Books page
+// script) it needs the card's paper behind it. At rest it stays clear so the
+// ruled lines show. It bleeds out to the card's edges (the Split frame's
+// .card__body padding) so list text can't peek past either side.
 .year-jumps {
+  --bleed-left: var(--inset);
+  --bleed-right: clamp(3.125rem, 6vw, 7.5rem);
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
-  margin-bottom: calc(var(--space) * 1.5);
-  padding: 0.75rem 0;
+  margin: 0 calc(-1 * var(--bleed-right)) calc(var(--space) * 1.5) calc(-1 * var(--bleed-left));
+  padding: 0.75rem var(--bleed-right) 0.75rem var(--bleed-left);
+
+  &.is-stuck {
+    background: var(--paper);
+  }
 }
 
 .books {
