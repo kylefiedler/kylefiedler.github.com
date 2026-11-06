@@ -31,8 +31,6 @@ notes:
     </div>
     {%- endfor %}
   </div>
-
-  <button type="button" class="scraps__reset">Wipe them clean</button>
 </div>
 
 <script>
@@ -40,7 +38,6 @@ notes:
     const key = "404-notes";
     const root = document.querySelector("[data-notes]");
     const scraps = [...root.querySelectorAll("[data-note]")];
-    const start = new Map(scraps.map((scrap) => [scrap, scrap.style.cssText]));
     const field = (scrap) => scrap.querySelector("textarea");
     const coordinate = (value) => (Number.isFinite(Number.parseFloat(value)) ? String(Number.parseFloat(value)) : null);
 
@@ -83,15 +80,6 @@ notes:
     root.addEventListener("scrap:moved", (event) => {
       event.target.dataset.moved = "";
       save();
-    });
-
-    root.querySelector(".scraps__reset").addEventListener("click", () => {
-      scraps.forEach((scrap) => {
-        field(scrap).value = "";
-        scrap.style.cssText = start.get(scrap);
-        delete scrap.dataset.moved;
-      });
-      store((storage) => storage.removeItem(key));
     });
   })();
 </script>
