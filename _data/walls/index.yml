@@ -7,6 +7,10 @@
   width: 800
   height: 600
   alt: A view over the hills from a rocky summit
+- src: "/images/wall/index/pine-tree.jpg"
+  width: 800
+  height: 954
+  alt: A tall pine against a clear sky
 - src: "/images/wall/index/img-4083.jpg"
   width: 800
   height: 817
@@ -15,6 +19,10 @@
   width: 800
   height: 735
   alt: A mountain bike lying on a dirt trail
+- src: "/images/wall/index/bike-handlebars.jpg"
+  width: 800
+  height: 600
+  alt: Looking down over mountain bike handlebars on a dirt trail
 - src: "/images/wall/index/img-2972.jpg"
   width: 800
   height: 600
@@ -23,10 +31,18 @@
   width: 800
   height: 840
   alt: Three dogs on a wood floor
+- src: "/images/wall/index/dog-cream.jpg"
+  width: 800
+  height: 852
+  alt: A small cream-colored dog looking up
 - src: "/images/wall/index/img-1505.jpg"
   width: 800
   height: 1066
   alt: A creek running over rocks in the woods
+- src: "/images/wall/index/coast-road.jpg"
+  width: 800
+  height: 992
+  alt: A coastal road above the beach and surf
 - src: "/images/wall/index/img-0282.jpg"
   width: 800
   height: 602
@@ -35,6 +51,10 @@
   width: 800
   height: 600
   alt: A surfboard and wetsuit at the beach
+- src: "/images/wall/index/tonal-5-million.jpg"
+  width: 800
+  height: 800
+  alt: A Tonal badge for lifting 5 million pounds
 - src: "/images/wall/index/img-0965.jpg"
   width: 800
   height: 833
@@ -43,10 +63,18 @@
   width: 800
   height: 600
   alt: A mountain bike on a ridge trail
+- src: "/images/wall/index/foggy-valley.jpg"
+  width: 800
+  height: 948
+  alt: Morning fog drifting through a valley at sunrise
 - src: "/images/wall/index/img-0641.jpg"
   width: 800
   height: 890
   alt: A small dog resting on a bed
+- src: "/images/wall/index/bunnies.jpg"
+  width: 800
+  height: 724
+  alt: Petting a black bunny and a white bunny side by side
 - src: "/images/wall/index/img-1075.jpg"
   width: 800
   height: 759
@@ -55,6 +83,10 @@
   width: 800
   height: 600
   alt: A tent at a wooded campsite
+- src: "/images/wall/index/san-jacinto-peak.jpg"
+  width: 800
+  height: 840
+  alt: The summit sign on San Jacinto Peak, elevation 10,834 feet
 - src: "/images/wall/index/img-1681.jpg"
   width: 800
   height: 876
@@ -63,6 +95,10 @@
   width: 800
   height: 1066
   alt: A rocky lookout over a valley
+- src: "/images/wall/index/shells-in-hand.jpg"
+  width: 800
+  height: 533
+  alt: A hand holding three scallop shells
 - src: "/images/wall/index/img-0233.jpg"
   width: 800
   height: 707
@@ -71,10 +107,18 @@
   width: 800
   height: 600
   alt: A beach at low tide
+- src: "/images/wall/index/dog-doodle.jpg"
+  width: 800
+  height: 803
+  alt: A shaggy gray and white doodle up close
 - src: "/images/wall/index/img-0639.jpg"
   width: 800
   height: 638
   alt: A sleeping dog
+- src: "/images/wall/index/sandstone-bluffs.jpg"
+  width: 800
+  height: 800
+  alt: Looking up at sandstone bluffs under a cloudy sky
 - src: "/images/wall/index/img-1519.jpg"
   width: 800
   height: 1066
@@ -83,6 +127,10 @@
   width: 800
   height: 911
   alt: Soft serve in a fish-shaped cone
+- src: "/images/wall/index/tonal-2-year-streak.jpg"
+  width: 800
+  height: 800
+  alt: A Tonal badge for a two-year workout streak
 - src: "/images/wall/index/img-0539.jpg"
   width: 800
   height: 1066
@@ -91,7 +139,15 @@
   width: 800
   height: 1422
   alt: A trail through scrub hills
+- src: "/images/wall/index/shorebird.jpg"
+  width: 800
+  height: 1422
+  alt: A shorebird wading at the edge of the surf
 - src: "/images/wall/index/img-0225-copy.jpg"
   width: 800
   height: 600
   alt: A ballpark outfield from the stands
+- src: "/images/wall/index/bunny-gray.jpg"
+  width: 800
+  height: 721
+  alt: A fluffy gray and white bunny stretched out on the floor
