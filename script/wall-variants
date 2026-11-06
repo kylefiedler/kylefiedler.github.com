@@ -1,0 +1,67 @@
+#!/usr/bin/env ruby
+# Writes the smaller copies of wall photos that wall-tile.html lists in srcset:
+#
+#   script/wall-variants [<set>...]
+#
+# For each images/wall/<set>/<name>.jpg, writes 400/<name>.jpg and
+# 600/<name>.jpg under the set, skipping widths the photo doesn't exceed, and
+# removes copies whose photo is gone. With no sets, does every set.
+# script/wall-photos runs it after each import.
+#
+# Copies come from the published photo through PNG, so they carry no
+# metadata, and are encoded with mozjpeg (brew install mozjpeg, or set
+# MOZJPEG_CJPEG to its cjpeg). Re-runs only redo copies older than their photo.
+
+require "fileutils"
+require "open3"
+require "tmpdir"
+
+WIDTHS = [400, 600].freeze
+QUALITY = 82
+CJPEG = ENV.fetch("MOZJPEG_CJPEG", "/opt/homebrew/opt/mozjpeg/bin/cjpeg")
+
+def run(*command)
+  output, status = Open3.capture2e(*command)
+  abort "#{command.join(' ')} failed:\n#{output}" unless status.success?
+  output
+end
+
+def width(path)
+  Integer(run("sips", "-g", "pixelWidth", path)[/pixelWidth: (\d+)/, 1])
+end
+
+abort "mozjpeg's cjpeg not found at #{CJPEG}; brew install mozjpeg or set MOZJPEG_CJPEG" unless File.executable?(CJPEG)
+
+wall = File.join(File.expand_path("..", __dir__), "images", "wall")
+sets = ARGV.empty? ? Dir.children(wall).select { |name| File.directory?(File.join(wall, name)) }.sort : ARGV
+
+Dir.mktmpdir do |tmp|
+  png = File.join(tmp, "photo.png")
+  jpeg = File.join(tmp, "photo.jpg")
+  sets.each do |set|
+    dir = File.join(wall, set)
+    abort "no such set: images/wall/#{set}" unless Dir.exist?(dir)
+    wanted = Dir.glob("*.jpg", base: dir).sort.flat_map do |name|
+      photo = File.join(dir, name)
+      full = width(photo)
+      WIDTHS.select { |size| size < full }.map do |size|
+        output = File.join(size.to_s, name)
+        dest = File.join(dir, output)
+        FileUtils.mkdir_p(File.dirname(dest))
+        unless File.exist?(dest) && File.mtime(dest) >= File.mtime(photo)
+          run("sips", "--resampleWidth", size.to_s, "-s", "format", "png", photo, "--out", png)
+          run(CJPEG, "-quality", QUALITY.to_s, "-progressive", "-outfile", jpeg, png)
+          # Moved into place whole, like script/wall-photos does.
+          FileUtils.mv(jpeg, dest)
+          puts "wrote images/wall/#{set}/#{output}"
+        end
+        output
+      end
+    end
+
+    (Dir.glob("{#{WIDTHS.join(",")}}/*.jpg", base: dir) - wanted).each do |output|
+      File.delete(File.join(dir, output))
+      puts "removed images/wall/#{set}/#{output}"
+    end
+  end
+end

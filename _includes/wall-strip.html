@@ -10,6 +10,11 @@
   cycle the same few. Each row holds its run twice and drifts by exactly one
   run, so the loop has no seam.
 
+  Tiles are `strip_height` rem tall, matching --strip-height in _tokens.scss
+  (sizes can't read a custom property), so each photo's `sizes` is that
+  times its aspect ratio. Every tile stays lazy: the strip is hidden on wider
+  screens, and a hidden eager image still downloads.
+
   Screen readers get each photo's alt once, on its first appearance. Repeats
   and the second run are silent.
 {%- endcomment -%}
@@ -23,6 +28,7 @@
 {%- assign leftover = count | modulo: rows -%}
 {%- if rows > 1 and leftover == 0 %}{% assign step = 1 %}{% endif -%}
 {%- assign run_min = 8 -%}
+{%- assign strip_height = 8.0 -%}
 {%- assign bound = count | plus: 100 -%}
 <div class="wall__strip">
   {%- for r in (1..rows) %}
@@ -37,8 +43,9 @@
     {%- assign photo = photos[index] -%}
     {%- assign alt = "" -%}
     {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
-    {%- capture tile %}{% include wall-tile.html photo=photo alt=alt %}{% endcapture -%}
-    {%- capture quiet %}{% include wall-tile.html photo=photo alt="" %}{% endcapture -%}
+    {%- assign sizes = photo.width | times: strip_height | divided_by: photo.height | round: 2 | append: "rem" -%}
+    {%- capture tile %}{% include wall-tile.html photo=photo alt=alt sizes=sizes %}{% endcapture -%}
+    {%- capture quiet %}{% include wall-tile.html photo=photo alt="" sizes=sizes %}{% endcapture -%}
     {%- assign run = run | append: tile -%}
     {%- assign echo = echo | append: quiet -%}
     {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}

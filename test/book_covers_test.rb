@@ -1,5 +1,5 @@
 # Runs script/book-covers against a local stand-in for Open Library, in a
-# scratch copy of the repo layout. Needs macOS (sips).
+# scratch copy of the repo layout. Needs macOS (sips) and mozjpeg.
 #
 #   ruby test/book_covers_test.rb
 
@@ -16,7 +16,7 @@ require_relative "jpeg_fixture"
 class BookCoversTest < Minitest::Test
   include JpegFixture
 
-  SCRIPTS = %w[book-covers wall-photos].map { |name| File.expand_path("../script/#{name}", __dir__) }.freeze
+  SCRIPTS = %w[book-covers wall-photos wall-variants].map { |name| File.expand_path("../script/#{name}", __dir__) }.freeze
 
   # Newest first, as lists/books.html lists them.
   BOOKS = [

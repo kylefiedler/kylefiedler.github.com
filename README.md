@@ -27,9 +27,12 @@ to a folder (originals stay out of the repo), then run (macOS only, uses `sips`)
 script/wall-photos ~/path/to/photos <set>
 ```
 and add `wall: <set>` to the page's front matter. Fill in alt text in
-`_data/walls/<set>.yml`; re-runs keep it. Test the script with
+`_data/walls/<set>.yml`; re-runs keep it. It also writes the 400px and 600px
+copies the wall's srcset uses (`script/wall-variants`, needs
+`brew install mozjpeg`). Test the scripts, and that every photo has its copies, with
 ```
 ruby test/wall_photos_test.rb
+ruby test/wall_variants_test.rb
 ```
 
 Book covers
