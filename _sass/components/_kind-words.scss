@@ -188,3 +188,63 @@
     transition: filter 0.15s ease-out;
   }
 }
+
+// The 404 page's blank scraps: a shorter board, and a field on each scrap
+// that writes straight onto the paper. The paper around the field is the
+// handle to drag by.
+.scraps--notes {
+  margin-top: 2rem;
+
+  @media (min-width: $collage) {
+    // Tall enough for the lowest notes (--y: 22) with their tilt.
+    height: 48cqw;
+
+    // A wider strip above the writing on sticky notes to grab them by.
+    .scrap--hand {
+      padding-top: 3cqw;
+    }
+  }
+}
+
+.scrap__field {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  resize: none;
+  cursor: text;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.scrap:has(.scrap__field:focus-visible) {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.25rem;
+}
+
+.scrap--hand .scrap__field {
+  // Caveat runs small next to the mono body; this sets it at the size the
+  // Kind Words handwriting reads at.
+  font-size: 1.35em;
+  line-height: 1.2;
+}
+
+.scraps__reset {
+  margin-top: 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--size-small);
+  text-decoration: underline dashed;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
