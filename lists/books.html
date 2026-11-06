@@ -2535,4 +2535,11 @@ rule: "#A898B1"
     number.innerHTML = `<span class="books__digits">${count}</span><span class="visually-hidden"> books</span>`;
     year.append(number);
   });
+
+  // The 1px top margin clips the bar only while it's pinned at top: 0.
+  const jumps = document.querySelector(".year-jumps");
+  new IntersectionObserver(
+    ([entry]) => jumps.classList.toggle("is-stuck", entry.intersectionRatio < 1 && entry.boundingClientRect.top <= 0),
+    { rootMargin: "-1px 0px 0px 0px", threshold: 1 }
+  ).observe(jumps);
 </script>
