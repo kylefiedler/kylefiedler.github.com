@@ -3,8 +3,85 @@ layout: default
 title: "This is not the index card that you're looking for"
 crumb: Not found
 permalink: /404.html
+# Blank scraps for the board. x, y, w and r place them the way Kind Words
+# places its scraps.
+notes:
+  - { id: sticky, paper: sticky hand, label: Yellow sticky note, x: 1, y: 2, w: 22, r: -3deg }
+  - { id: card, paper: card, label: Index card, x: 26, y: 0, w: 31, r: 1.25deg }
+  - { id: green, paper: green hand, label: Green sticky note, x: 61, y: 3, w: 21, r: 2.5deg }
+  - { id: pink, paper: pink hand, label: Pink sticky note, x: 6, y: 21, w: 21, r: 1.75deg }
+  - { id: notebook, paper: notebook, label: Notebook page, x: 31, y: 19, w: 31, r: -1.25deg, rows: 6 }
+  - { id: sticky-2, paper: sticky hand, label: Another yellow sticky note, x: 68, y: 22, w: 21, r: -2deg }
 ---
 
 {% include title.html %}
 
 <p>Maybe you were looking for the <a href="/">index</a>, the <a href="/journal/">journal</a>, the <a href="/lists/">lists</a> or <a href="/work/">work</a>? What even were you looking for? It's not like I have a large site for you to get lost in. Whatevs.</p>
+
+{%- comment -%}
+  Blank scraps to write on and shove around. What a visitor writes, and where
+  they leave each scrap, stays in their own browser.
+{%- endcomment -%}
+<div class="kind-words" data-notes>
+  <div class="scraps scraps--notes">
+    {%- for note in page.notes %}
+    {%- assign papers = note.paper | split: " " %}
+    <div class="scrap{% for paper in papers %} scrap--{{ paper }}{% endfor %}" data-note="{{ note.id }}" style="--x: {{ note.x }}; --y: {{ note.y }}; --w: {{ note.w }}; --r: {{ note.r }};">
+      <textarea class="scrap__field" aria-label="{{ note.label }}" rows="{{ note.rows | default: 5 }}" maxlength="400"></textarea>
+    </div>
+    {%- endfor %}
+  </div>
+</div>
+
+<script>
+  (() => {
+    const key = "404-notes";
+    const root = document.querySelector("[data-notes]");
+    const scraps = [...root.querySelectorAll("[data-note]")];
+    const field = (scrap) => scrap.querySelector("textarea");
+    const coordinate = (value) => (Number.isFinite(Number.parseFloat(value)) ? String(Number.parseFloat(value)) : null);
+
+    // Private windows and blocked site data throw on storage access; the
+    // notes still work for the visit, they just aren't remembered.
+    const store = (action) => {
+      try {
+        return action(localStorage);
+      } catch {
+        return null;
+      }
+    };
+
+    // Only a dragged scrap keeps its own spot; the rest follow front matter.
+    const save = () => {
+      const notes = Object.fromEntries(scraps.map((scrap) => [scrap.dataset.note, {
+        text: field(scrap).value,
+        ...("moved" in scrap.dataset && {
+          x: scrap.style.getPropertyValue("--x"),
+          y: scrap.style.getPropertyValue("--y"),
+        }),
+      }]));
+      store((storage) => storage.setItem(key, JSON.stringify(notes)));
+    };
+
+    const saved = store((storage) => JSON.parse(storage.getItem(key))) ?? {};
+    scraps.forEach((scrap) => {
+      const note = saved[scrap.dataset.note];
+      if (!note) return;
+      field(scrap).value = note.text ?? "";
+      const x = coordinate(note.x);
+      const y = coordinate(note.y);
+      if (!x || !y) return;
+      scrap.style.setProperty("--x", x);
+      scrap.style.setProperty("--y", y);
+      scrap.dataset.moved = "";
+    });
+
+    root.addEventListener("input", save);
+    root.addEventListener("scrap:moved", (event) => {
+      event.target.dataset.moved = "";
+      save();
+    });
+  })();
+</script>
+
+{% include scrap-drag.html %}
