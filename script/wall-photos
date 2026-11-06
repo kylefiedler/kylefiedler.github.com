@@ -17,6 +17,9 @@
 # Photos go through sRGB and BMP on the way to JPEG. That bakes in EXIF
 # rotation and strips the metadata (camera, GPS) that sips would otherwise
 # copy into the published file.
+#
+# Then runs script/wall-variants for the set, which writes the smaller copies
+# (400/<name>.jpg, 600/<name>.jpg) that wall-tile.html lists in srcset.
 
 require "fileutils"
 require "open3"
@@ -88,6 +91,8 @@ end
   File.delete(File.join(out_dir, output))
   puts "removed images/wall/#{set}/#{output}"
 end
+
+system(RbConfig.ruby, File.join(__dir__, "wall-variants"), set) or abort "script/wall-variants failed"
 
 order_file = alts_file || data_file
 existing = File.exist?(order_file) ? YAML.safe_load(File.read(order_file)) || [] : []

@@ -1,6 +1,18 @@
+{%- comment -%}
+  One wall photo. Photos wider than 400px list the smaller copies that
+  script/wall-variants writes under their set (400/<name>.jpg, 600/<name>.jpg)
+  in srcset. `sizes` is the tile's rendered width; the desktop wall's script
+  sets it per column instead.
+{%- endcomment -%}
 {%- assign ratio = include.photo.height | times: 1.0 | divided_by: include.photo.width | round: 4 -%}
 {%- if include.photo.src %}
-<img class="wall__tile" src="{{ include.photo.src }}" alt="{{ include.alt | escape }}" width="{{ include.photo.width }}" height="{{ include.photo.height }}" data-ratio="{{ ratio }}" loading="lazy" decoding="async">
+{%- assign name = include.photo.src | split: "/" | last -%}
+{%- assign dir = include.photo.src | remove: name -%}
+{%- assign srcset = "" -%}
+{%- if include.photo.width > 400 -%}
+  {%- capture srcset %}{{ dir }}400/{{ name }} 400w, {% if include.photo.width > 600 %}{{ dir }}600/{{ name }} 600w, {% endif %}{{ include.photo.src }} {{ include.photo.width }}w{% endcapture -%}
+{%- endif %}
+<img class="wall__tile" src="{{ include.photo.src }}"{% if srcset != "" %} srcset="{{ srcset }}"{% if include.sizes %} sizes="{{ include.sizes }}"{% endif %}{% endif %} alt="{{ include.alt | escape }}" width="{{ include.photo.width }}" height="{{ include.photo.height }}" data-ratio="{{ ratio }}" loading="lazy" decoding="async">
 {%- else %}
 <div class="wall__tile" style="aspect-ratio: {{ include.photo.width }} / {{ include.photo.height }}" data-ratio="{{ ratio }}"></div>
 {%- endif -%}

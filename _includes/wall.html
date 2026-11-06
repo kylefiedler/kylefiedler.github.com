@@ -18,6 +18,10 @@
   exactly one copy, so the loop has no seam. Resizing re-deals only when the column
   count changes or a column no longer reaches the bottom of the window.
 
+  The top two photos of each column load at once and at high priority; the
+  rest load lazily. Each photo's `sizes` is its column's width, so it picks
+  the smallest copy that stays sharp, and resizing updates it.
+
   Screen readers get each photo's alt once, on its first appearance. Repeats
   and the second copy are silent, and so are photos whose alt is empty.
   Phones get wall-strip.html under the page content instead.
@@ -79,12 +83,20 @@
       columns = [];
 
       used.forEach((share, index) => {
+        const sizes = `${Math.ceil(share * unit)}px`;
         const copy = document.createElement("div");
         copy.className = "wall__copy";
         let length = 0;
         for (let slot = index; slot < photos.length || length * share * unit < reach; slot += count) {
           const tile = photos[(slot + Math.floor(slot / photos.length) * step) % photos.length].cloneNode(true);
-          if (slot >= photos.length && tile instanceof HTMLImageElement) tile.alt = "";
+          if (tile instanceof HTMLImageElement) {
+            tile.sizes = sizes;
+            if (slot >= photos.length) tile.alt = "";
+            if (slot < count * 2) {
+              tile.loading = "eager";
+              tile.fetchPriority = "high";
+            }
+          }
           copy.append(tile);
           length += Number(tile.dataset.ratio);
         }
@@ -100,7 +112,7 @@
         column.append(track);
         wall.append(column);
         // Odd columns drift down, even up, each starting one loop up.
-        const state = { column, copy, direction: index % 2 ? -1 : 1, pace: paces[count]?.[index] ?? 1, speed: 0, hover: null, y: 0, loop: 0 };
+        const state = { column, copy, direction: index % 2 ? -1 : 1, pace: paces[count]?.[index] ?? 1, speed: 0, hover: null, y: 0, loop: 0, sizes };
         column.addEventListener("pointermove", (event) => {
           if (event.pointerType !== "mouse") return;
           const { top, height } = wall.getBoundingClientRect();
@@ -117,7 +129,13 @@
     // px a second: a 1fr column's width every --wall-pace.
     let drift = 0;
     const measure = () => {
-      columns.forEach((state) => (state.loop = state.copy.offsetHeight));
+      columns.forEach((state) => {
+        state.loop = state.copy.offsetHeight;
+        const sizes = `${Math.ceil(state.column.getBoundingClientRect().width)}px`;
+        if (sizes === state.sizes) return;
+        state.sizes = sizes;
+        state.column.querySelectorAll("img").forEach((img) => (img.sizes = sizes));
+      });
       drift = unit / (parseFloat(getComputedStyle(wall).getPropertyValue("--wall-pace")) || 90);
     };
 

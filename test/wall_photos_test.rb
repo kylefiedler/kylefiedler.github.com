@@ -1,5 +1,5 @@
 # Runs script/wall-photos against generated photos in a scratch copy of the
-# repo layout. Needs macOS (sips).
+# repo layout. Needs macOS (sips) and mozjpeg.
 #
 #   ruby test/wall_photos_test.rb
 
@@ -13,7 +13,7 @@ require_relative "jpeg_fixture"
 class WallPhotosTest < Minitest::Test
   include JpegFixture
 
-  SCRIPT = File.expand_path("../script/wall-photos", __dir__)
+  SCRIPTS = %w[wall-photos wall-variants].map { |name| File.expand_path("../script/#{name}", __dir__) }
 
   # name => [width, height] of the source photo
   PHOTOS = {
@@ -28,7 +28,7 @@ class WallPhotosTest < Minitest::Test
     @root = Dir.mktmpdir
     @source = File.join(@root, "originals")
     FileUtils.mkdir_p([File.join(@root, "script"), @source])
-    FileUtils.cp(SCRIPT, File.join(@root, "script"))
+    FileUtils.cp(SCRIPTS, File.join(@root, "script"))
     PHOTOS.each { |name, (width, height)| write_jpeg(File.join(@source, name), width, height) }
   end
 
@@ -46,8 +46,15 @@ class WallPhotosTest < Minitest::Test
       "ridge.jpg" => [800, 300],
       "tiny.jpg" => [640, 480]
     }
-    assert_equal expected.keys, Dir.children(out_dir).sort
-    expected.each { |name, size| assert_equal size, dimensions(File.join(out_dir, name)), name }
+    copies = {
+      "400/beach-day.jpg" => [400, 300], "600/beach-day.jpg" => [600, 450],
+      "400/dog.jpg" => [400, 533], "600/dog.jpg" => [600, 799],
+      "400/garden.jpg" => [400, 400], "600/garden.jpg" => [600, 600],
+      "400/ridge.jpg" => [400, 150], "600/ridge.jpg" => [600, 225],
+      "400/tiny.jpg" => [400, 300], "600/tiny.jpg" => [600, 450]
+    }
+    assert_equal (expected.keys + copies.keys).sort, Dir.glob("**/*.jpg", base: out_dir).sort
+    expected.merge(copies).each { |name, size| assert_equal size, dimensions(File.join(out_dir, name)), name }
 
     assert_equal(expected.map do |name, (width, height)|
       { "src" => "/images/wall/trip/#{name}", "width" => width, "height" => height, "alt" => "" }
@@ -59,12 +66,12 @@ class WallPhotosTest < Minitest::Test
     edited = data.reverse
     edited.first["alt"] = "A small photo"
     File.write(data_file, edited.to_yaml)
-    mtimes = Dir.children(out_dir).to_h { |name| [name, File.mtime(File.join(out_dir, name))] }
+    mtimes = Dir.glob("**/*.jpg", base: out_dir).to_h { |name| [name, File.mtime(File.join(out_dir, name))] }
 
     run_script!
 
     assert_equal edited, data
-    assert_equal(mtimes, Dir.children(out_dir).to_h { |name| [name, File.mtime(File.join(out_dir, name))] })
+    assert_equal(mtimes, Dir.glob("**/*.jpg", base: out_dir).to_h { |name| [name, File.mtime(File.join(out_dir, name))] })
   end
 
   def test_rerun_adds_new_photos_last_and_drops_removed_ones
@@ -74,7 +81,8 @@ class WallPhotosTest < Minitest::Test
 
     run_script!
 
-    refute File.exist?(File.join(out_dir, "dog.jpg"))
+    %w[dog.jpg 400/dog.jpg 600/dog.jpg].each { |name| refute File.exist?(File.join(out_dir, name)), name }
+    assert File.exist?(File.join(out_dir, "600", "aardvark.jpg"))
     assert_equal %w[beach-day garden ridge tiny aardvark].map { |name| "/images/wall/trip/#{name}.jpg" },
       data.map { |photo| photo["src"] }
   end
@@ -92,6 +100,16 @@ class WallPhotosTest < Minitest::Test
     assert_equal %w[tiny dog beach-day garden ridge].map { |name| "/images/wall/trip/#{name}.jpg" },
       data.map { |photo| photo["src"] }
     assert_equal ["A small photo", "A dog", "", "", ""], data.map { |photo| photo["alt"] }
+  end
+
+  def test_skips_copies_as_wide_as_the_photo
+    FileUtils.rm(Dir.glob(File.join(@source, "*")))
+    write_jpeg(File.join(@source, "cover.jpg"), 500, 750)
+    write_jpeg(File.join(@source, "stamp.jpg"), 400, 400)
+
+    run_script!
+
+    assert_equal %w[400/cover.jpg cover.jpg stamp.jpg], Dir.glob("**/*.jpg", base: out_dir).sort
   end
 
   def test_rejects_reserved_set_names
