@@ -30,11 +30,36 @@
 
   // Each year is set like a page title; the page's own title is hidden.
   .books__year {
+    display: flex;
+    align-items: flex-end;
     margin-bottom: 0.5rem;
     font-size: var(--size-title);
     line-height: 1.15;
     // Clear the pinned year links.
     scroll-margin-top: 8rem;
+  }
+
+  // The year's count on a dashed leader, set like a Journal entry's number.
+  // books.html's script draws each one a little differently: where the
+  // leader starts and stops, how low it sits, and where the digits land.
+  .books__count {
+    flex: 1;
+    margin: 0 var(--count-end, 1rem) var(--count-drop, 0.4rem) var(--count-start, 1rem);
+    padding-bottom: 0.875rem;
+    border-bottom: 1px dashed var(--ink-faint);
+    color: var(--rule);
+    font-family: var(--font-mono);
+    font-size: var(--size-tiny);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: var(--tracking);
+    text-align: right;
+  }
+
+  // The digits hang a little past the leader's end.
+  .books__digits {
+    display: inline-block;
+    transform: translate(var(--digits-x, 0.75rem), var(--digits-y, 0px));
   }
 
   h4,

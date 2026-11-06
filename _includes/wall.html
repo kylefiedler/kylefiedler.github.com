@@ -57,6 +57,9 @@
     // to `rush` times its drift speed; hovering between pauses it.
     const edge = 0.3;
     const rush = 16;
+    // Each column's share of the drift speed, left to right, by column count.
+    // The columns away from the text drift slower; two-column walls don't.
+    const paces = { 3: [1, 0.4, 0.6], 4: [1, 1, 0.6, 0.6], 5: [1, 1, 1, 0.6, 0.6] };
     const still = matchMedia("(prefers-reduced-motion: reduce)");
     let count = 0;
     let unit = 0;
@@ -97,7 +100,7 @@
         column.append(track);
         wall.append(column);
         // Odd columns drift down, even up, each starting one loop up.
-        const state = { column, copy, direction: index % 2 ? -1 : 1, speed: 0, hover: null, y: 0, loop: 0 };
+        const state = { column, copy, direction: index % 2 ? -1 : 1, pace: paces[count]?.[index] ?? 1, speed: 0, hover: null, y: 0, loop: 0 };
         column.addEventListener("pointermove", (event) => {
           if (event.pointerType !== "mouse") return;
           const { top, height } = wall.getBoundingClientRect();
@@ -123,7 +126,7 @@
       const seconds = Math.min((time - last) / 1000, 0.05);
       last = time;
       columns.forEach((state) => {
-        let target = still.matches ? 0 : state.direction * drift;
+        let target = still.matches ? 0 : state.direction * state.pace * drift;
         if (state.hover !== null) {
           // Top edge scrolls up through the photos (they move down), bottom
           // edge scrolls down; the middle holds still.
