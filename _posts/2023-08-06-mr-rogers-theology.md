@@ -6,7 +6,7 @@ date: 2023-08-06 13:30
 
 I grew up watching Mr. Rogers&rsquo; and really enjoyed the overview of Mr. Rogers teachings in [The Radical Theology of Mr. Rogers](https://lifeisasacredtext.substack.com/p/the-radical-theology-of-mr-rogers#footnote-anchor-2-129387508).
 
-The final list of Mr. Rogers&rsquo; themes caught me offgaurd as they&rsquo;re not so different than [my personal values](lists/values):
+The final list of Mr. Rogers&rsquo; themes caught me offgaurd as they&rsquo;re not so different than [my personal values](/lists/values.html):
 
 > As far as I can tell, entirety of Mr. Rogers’ Neighborhood can be summed up as:
 >
