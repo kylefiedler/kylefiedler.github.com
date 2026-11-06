@@ -3,11 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+    {%- comment -%}
+      Title label mirrors the breadcrumb in nav.html. Quotes are replaced by
+      hand because titles carry HTML entities, so escape would double-encode.
+    {%- endcomment -%}
+    {%- assign head_section = site.data.sections | where: "key", page.section | first -%}
+    {%- if page.section == "work" %}{% assign head_menu = site.data.work %}{% else %}{% assign head_menu = site.data[head_section.menu] %}{% endif -%}
+    {%- assign head_menu_page = head_menu | where: "url", page.url | first -%}
+    {%- assign head_label = page.crumb | default: page.title | default: head_menu_page.label -%}
+    {%- if page.url == head_section.url %}{% assign head_label = head_label | default: head_section.label %}{% endif -%}
+    {%- if page.url == "/" or head_label == nil -%}
+      {%- assign head_label = site.title -%}
+      {%- assign head_title = site.title -%}
+    {%- else -%}
+      {%- assign head_label = head_label | strip_html | replace: '"', "&quot;" -%}
+      {%- assign head_title = head_label | append: " · " | append: site.title -%}
+    {%- endif -%}
+    {%- assign head_description = page.description | default: site.description | strip_html | replace: '"', "&quot;" -%}
+    {%- assign head_url = page.url | replace: "index.html", "" | absolute_url -%}
+    {%- if page.layout == "post" %}{% assign head_type = "article" %}{% else %}{% assign head_type = "website" %}{% endif %}
+    <meta name="description" content="{{ head_description }}">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{{ head_title }}</title>
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="canonical" href="{{ head_url }}">
+    <meta property="og:title" content="{{ head_label }}">
+    <meta property="og:description" content="{{ head_description }}">
+    <meta property="og:url" content="{{ head_url }}">
+    <meta property="og:type" content="{{ head_type }}">
+    <meta property="og:image" content="{{ page.image | default: "/images/share.png" | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@500&family=Reenie+Beanie&display=swap">

@@ -1,5 +1,5 @@
-# The public case studies, in the order /work/ shows them. Drives the
-# breadcrumb dropdown on work pages. `url` matches the page's page.url.
+# Case study labels, public ones first. _includes/header.html uses them for
+# page titles. `url` matches the page's page.url.
 - label: Infura Endpoints
   url: /work/infura-endpoints.html
 - label: Infura Design System
@@ -8,3 +8,38 @@
   url: /work/thoughtbot-website.html
 - label: Point Health Bill Negotiation
   url: /work/ph-bill-negotiation.html
+
+# Unlisted case studies: reachable by URL but not shown on /work/. Listed here
+# only so their page titles and breadcrumbs have a label.
+- label: Character Growth Card
+  url: /work/character-growth-card.html
+- label: Consensys Developer Journey
+  url: /work/consensys-developer-journey.html
+- label: Developer Portal
+  url: /work/developer-portal.html
+- label: Infura Support Flow
+  url: /work/infura-support.html
+- label: thoughtbot Institute
+  url: /work/institute.html
+- label: KOYA
+  url: /work/koya.html
+- label: Keep Ruby Weird
+  url: /work/krw.html
+- label: Management Case Studies
+  url: /work/management.html
+- label: MetaMask Interface Map
+  url: /work/metamask-alignment.html
+- label: MetaMask Design Conflicts
+  url: /work/metamask-design-conflicts.html
+- label: Ottoneu
+  url: /work/ottoneu.html
+- label: Point Health Design System
+  url: /work/ph-design-system.html
+- label: Point Health NPI Data
+  url: /work/ph-npi.html
+- label: Philly Startup Leaders
+  url: /work/psl.html
+- label: Real Simple Energy
+  url: /work/rse.html
+- label: thoughtbot Self-Evaluation
+  url: /work/self-evaluation.html
