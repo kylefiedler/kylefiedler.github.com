@@ -20,7 +20,7 @@
 
   Screen readers get each photo's alt once, on its first appearance. Repeats
   and the second copy are silent, and so are photos whose alt is empty.
-  Phones get wall-strip.html under the nav instead.
+  Phones get wall-strip.html under the page content instead.
 
   `wall: static` renders three empty, still columns that scroll with the page,
   for case studies to fill with their own media.
@@ -51,8 +51,8 @@
     // Deepest column stagger in _wall.scss, plus a little.
     const stagger = 96;
     const gcd = (a, b) => (b ? gcd(b, a % b) : a);
-    // About one column per 300px of wall.
-    const columnsFor = (width) => Math.min(shares.length, Math.max(2, Math.round(width / 300)));
+    // About one column per 360px of wall.
+    const columnsFor = (width) => Math.min(shares.length, Math.max(2, Math.round(width / 360)));
     let count = 0;
 
     const deal = (width, height) => {

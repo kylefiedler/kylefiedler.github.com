@@ -27,7 +27,7 @@ title: Journal
   </section>
 
   <section class="journal-index__archive" aria-labelledby="blog-archive">
-    <h2 class="tertiary" id="blog-archive">Blog archive &amp; links</h2>
+    <h2 class="tertiary" id="blog-archive">Links, quotes &amp; ephemera</h2>
     <ul class="post-links post-links--archive">
       {%- for post in site.posts %}
       <li>{% include post-link.html post=post %}, <time class="meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%Y' }}</time></li>

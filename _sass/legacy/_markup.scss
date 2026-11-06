@@ -90,3 +90,13 @@
     align-items: start;
   }
 }
+
+// Four across once there's room, e.g. Values. Sheet pages cap lists at a
+// reading width; this grid needs the whole card.
+@media (min-width: $collage) {
+  .grid--four,
+  .frame--sheet .card__body .grid--four {
+    max-width: none;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

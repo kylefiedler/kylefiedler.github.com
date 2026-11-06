@@ -7,7 +7,7 @@ $collage: 64rem;
 
 :root {
   --ink: #1b1b1b;
-  --ink-muted: rgba(27, 27, 27, 0.55);
+  --ink-muted: rgba(27, 27, 27, 0.73);
   --ink-faint: rgba(27, 27, 27, 0.2);
   --highlight: #f4eba5;
   --selection: #003a56;
@@ -33,7 +33,7 @@ $collage: 64rem;
   // Card geometry: the top rule sits --rule-top down; the ruled texture starts
   // just below it and runs at --line-pitch, inset --gutter from the card edge.
   // Grows with the window on large screens so lists wrap less.
-  --card-width: clamp(30.625rem, 34vw, 42rem);
+  --card-width: clamp(30.625rem, 38vw, 48rem);
   --rule-top: 6.625rem;
   --line-pitch: 1.625rem;
   --gutter: 1.75rem;

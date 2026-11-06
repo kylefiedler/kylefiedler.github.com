@@ -1,6 +1,6 @@
 // Photo columns beside the card on Split pages, held in place while the card
 // scrolls and drifting down / up / down. wall.html's script deals the columns
-// and sets their widths. On phones, one still strip under the nav instead.
+// and sets their widths. On phones, rows under the content drift sideways instead.
 
 :root {
   --wall-gap: 0.5rem;
@@ -113,16 +113,54 @@
   @media (max-width: $mobile) {
     // Above the card's ruled texture.
     position: relative;
-    display: flex;
+    display: grid;
     gap: var(--wall-gap);
-    height: var(--strip-height);
-    margin: 1.25rem 0 0 var(--gutter);
+    margin: 0 0 var(--space);
     overflow: hidden;
+  }
+}
 
-    > .wall__tile {
-      width: auto;
-      height: 100%;
-    }
+// A row holds its run twice; drifting by one run (its photos' widths at
+// --strip-height plus a gap each) loops. Odd rows drift left, even right, at
+// the wall's pace.
+.wall__row {
+  --row-shift: calc(var(--row-span) * var(--strip-height) + var(--row-tiles) * var(--wall-gap));
+
+  display: flex;
+  width: max-content;
+  height: var(--strip-height);
+  animation: strip-drift linear infinite;
+  animation-duration: calc(var(--row-span) * var(--strip-pace, 25s));
+  will-change: transform;
+
+  &:nth-child(even) {
+    animation-direction: reverse;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+.wall__run {
+  display: flex;
+  gap: var(--wall-gap);
+  padding-right: var(--wall-gap);
+
+  > .wall__tile {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@keyframes strip-drift {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--row-shift)));
   }
 }
 

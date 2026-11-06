@@ -4,6 +4,8 @@
 
 .kind-words {
   position: relative;
+  // Keep the scraps' climbing drag z-index inside the board, under the nav.
+  isolation: isolate;
 
   // The board and its scraps all measure in the page's width (cqw).
   @media (min-width: $collage) {

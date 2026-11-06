@@ -16,4 +16,11 @@
     <link rel="stylesheet" href="/stylesheets/site.css">
   </head>
 
-  <body data-section="{{ page.section }}"{% if page.class %} class="{{ page.class }}"{% endif %}>
+  {%- comment -%}
+    A page's own `paper` front matter overrides its section's colors. `line`
+    and `rule` default to a lighter and a darker shade of that paper.
+  {%- endcomment -%}
+  {%- if page.paper %}
+    {%- capture paper_style %} style="--paper: {{ page.paper }}; --line: {{ page.line | default: "color-mix(in srgb, var(--paper) 91%, white)" }}; --rule: {{ page.rule | default: "color-mix(in srgb, var(--paper) 80%, black)" }};"{% endcapture %}
+  {%- endif %}
+  <body data-section="{{ page.section }}"{% if page.class %} class="{{ page.class }}"{% endif %}{{ paper_style }}>

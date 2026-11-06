@@ -6,10 +6,10 @@
 <div class="frame frame--{{ frame }}">
   <div class="card">
     {% include nav.html %}
-    {% if frame == "split" and wall != "static" %}{% include wall-strip.html wall=wall %}{% endif %}
     <main class="card__body">
       {{ content }}
     </main>
+    {% if frame == "split" and wall != "static" %}{% include wall-strip.html wall=wall %}{% endif %}
   </div>
   {% if frame == "split" %}{% include wall.html %}{% endif %}
 </div>

@@ -23,7 +23,7 @@
   margin-top: calc(var(--space) * 2);
 
   @media (min-width: $wide) {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 4fr) minmax(0, 3fr);
   }
 }
 

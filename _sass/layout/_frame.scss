@@ -82,6 +82,8 @@
   .card__body {
     margin-top: auto;
     padding-top: 3rem;
+    // Room between the text and the wall, growing with the card.
+    padding-right: clamp(3.125rem, 6vw, 7.5rem);
   }
 
   @media (max-width: $mobile) {

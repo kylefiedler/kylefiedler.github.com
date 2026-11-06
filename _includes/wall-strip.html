@@ -1,23 +1,52 @@
 {%- comment -%}
-  The phone version of the photo wall: one still strip under the nav, cycled
-  until it is at least `strip_min` of its own heights wide, comfortably past
-  the widest phone layout. Each photo's alt is exposed once; repeats are
-  silent.
+  The phone version of the photo wall: a few rows under the page content that
+  drift sideways, alternating left and right, the way the wall's columns
+  drift up and down.
+
+  Photos are dealt round-robin into the rows, cycling through the set until
+  every photo is used and each row's run is at least `run_min` of its own
+  heights wide, comfortably past the widest phone layout. When the set and
+  the row count share a factor, each pass shifts by one photo so rows don't
+  cycle the same few. Each row holds its run twice and drifts by exactly one
+  run, so the loop has no seam.
+
+  Screen readers get each photo's alt once, on its first appearance. Repeats
+  and the second run are silent.
 {%- endcomment -%}
 {%- include wall-set.html wall=include.wall limit=page.wall_limit -%}
 {%- assign photos = wall_photos -%}
 {%- assign count = photos.size -%}
-{%- assign strip_min = 8 -%}
+{%- assign rows = 3 -%}
+{%- if count < 9 %}{% assign rows = 2 %}{% endif -%}
+{%- if count < 4 %}{% assign rows = 1 %}{% endif -%}
+{%- assign step = 0 -%}
+{%- assign leftover = count | modulo: rows -%}
+{%- if rows > 1 and leftover == 0 %}{% assign step = 1 %}{% endif -%}
+{%- assign run_min = 8 -%}
 {%- assign bound = count | plus: 100 -%}
-{%- assign span = 0 -%}
 <div class="wall__strip">
-  {%- for slot in (0..bound) -%}
-    {%- if slot >= count and span >= strip_min %}{% break %}{% endif -%}
-    {%- assign index = slot | modulo: count -%}
+  {%- for r in (1..rows) %}
+  {%- assign row = r | minus: 1 -%}
+  {%- assign run = "" -%}{%- assign echo = "" -%}
+  {%- assign span = 0 -%}{%- assign tiles = 0 -%}
+  {%- for n in (0..bound) -%}
+    {%- assign slot = n | times: rows | plus: row -%}
+    {%- if slot >= count and span >= run_min %}{% break %}{% endif -%}
+    {%- assign pass = slot | divided_by: count | times: step -%}
+    {%- assign index = slot | plus: pass | modulo: count -%}
     {%- assign photo = photos[index] -%}
-    {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}
     {%- assign alt = "" -%}
     {%- if slot < count %}{% assign alt = photo.alt %}{% endif -%}
-    {% include wall-tile.html photo=photo alt=alt %}
+    {%- capture tile %}{% include wall-tile.html photo=photo alt=alt %}{% endcapture -%}
+    {%- capture quiet %}{% include wall-tile.html photo=photo alt="" %}{% endcapture -%}
+    {%- assign run = run | append: tile -%}
+    {%- assign echo = echo | append: quiet -%}
+    {%- assign span = photo.width | times: 1.0 | divided_by: photo.height | plus: span -%}
+    {%- assign tiles = tiles | plus: 1 -%}
+  {%- endfor %}
+  <div class="wall__row" style="--row-span: {{ span | round: 3 }}; --row-tiles: {{ tiles }};">
+    <div class="wall__run">{{ run }}</div>
+    <div class="wall__run" aria-hidden="true">{{ echo }}</div>
+  </div>
   {%- endfor %}
 </div>
