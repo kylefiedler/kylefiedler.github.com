@@ -53,19 +53,27 @@
     const gcd = (a, b) => (b ? gcd(b, a % b) : a);
     // About one column per 360px of wall.
     const columnsFor = (width) => Math.min(shares.length, Math.max(2, Math.round(width / 360)));
+    // Hovering the top or bottom `edge` of the wall runs a column that way, up
+    // to `rush` times its drift speed; hovering between pauses it.
+    const edge = 0.3;
+    const rush = 16;
+    const still = matchMedia("(prefers-reduced-motion: reduce)");
     let count = 0;
+    let unit = 0;
+    let columns = [];
 
     const deal = (width, height) => {
       count = columnsFor(width);
       const used = shares.slice(0, count);
       const gap = parseFloat(getComputedStyle(wall).columnGap) || 0;
-      const unit = (width - gap * (count - 1)) / used.reduce((a, b) => a + b);
+      unit = (width - gap * (count - 1)) / used.reduce((a, b) => a + b);
       // Headroom so small resizes don't re-deal.
       const reach = height * 1.25 + stagger;
       const step = gcd(photos.length, count) > 1 ? 1 : 0;
 
       wall.style.gridTemplateColumns = used.map((share) => `${share}fr`).join(" ");
       wall.querySelectorAll(".wall__column").forEach((column) => column.remove());
+      columns = [];
 
       used.forEach((share, index) => {
         const copy = document.createElement("div");
@@ -86,20 +94,66 @@
         track.append(copy, echo);
         const column = document.createElement("div");
         column.className = "wall__column";
-        column.style.setProperty("--wall-length", length.toFixed(3));
-        column.style.setProperty("--wall-share", share);
-        column.style.setProperty("--wall-tiles", copy.childElementCount);
         column.append(track);
         wall.append(column);
+        // Odd columns drift down, even up, each starting one loop up.
+        const state = { column, copy, direction: index % 2 ? -1 : 1, speed: 0, hover: null, y: 0, loop: 0 };
+        column.addEventListener("pointermove", (event) => {
+          if (event.pointerType !== "mouse") return;
+          const { top, height } = wall.getBoundingClientRect();
+          state.hover = (event.clientY - top) / height;
+        });
+        column.addEventListener("pointerleave", () => (state.hover = null));
+        columns.push(state);
       });
+      measure();
+      columns.forEach((state) => (state.y = -state.loop));
     };
 
+    // One loop is a copy's height, its trailing gap included. Drift is in
+    // px a second: a 1fr column's width every --wall-pace.
+    let drift = 0;
+    const measure = () => {
+      columns.forEach((state) => (state.loop = state.copy.offsetHeight));
+      drift = unit / (parseFloat(getComputedStyle(wall).getPropertyValue("--wall-pace")) || 90);
+    };
+
+    let last = 0;
+    const frame = (time) => {
+      const seconds = Math.min((time - last) / 1000, 0.05);
+      last = time;
+      columns.forEach((state) => {
+        let target = still.matches ? 0 : state.direction * drift;
+        if (state.hover !== null) {
+          // Top edge scrolls up through the photos (they move down), bottom
+          // edge scrolls down; the middle holds still.
+          const top = Math.max(0, (edge - state.hover) / edge);
+          const bottom = Math.max(0, (state.hover - (1 - edge)) / edge);
+          target = (top - bottom) * drift * rush;
+        }
+        state.speed += (target - state.speed) * Math.min(1, seconds * 6);
+        if (!state.loop) return;
+        state.y += state.speed * seconds;
+        if (state.y > 0) state.y -= state.loop;
+        if (state.y < -state.loop) state.y += state.loop;
+        state.column.style.setProperty("--wall-y", `${state.y.toFixed(2)}px`);
+      });
+      requestAnimationFrame(frame);
+    };
+    requestAnimationFrame((time) => {
+      last = time;
+      frame(time);
+    });
+
     new ResizeObserver(() => {
-      const { clientWidth: width, clientHeight: height } = wall;
+      const { clientHeight: height } = wall;
+      // Columns fill the wall inside its left padding (the hover spill room).
+      const width = wall.clientWidth && wall.clientWidth - parseFloat(getComputedStyle(wall).paddingLeft);
       // Hidden on phones; deal once the wall shows.
       if (!width) return;
       const short = [...wall.querySelectorAll(".wall__copy:first-child")].some((copy) => copy.offsetHeight < height + stagger);
       if (columnsFor(width) !== count || short) deal(width, height);
+      else measure();
     }).observe(wall);
   })();
 </script>

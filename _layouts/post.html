@@ -12,9 +12,9 @@ layout: default
   <aside class="post__others" aria-labelledby="other-posts">
     <h2 class="tertiary" id="other-posts">Other blog posts</h2>
     {%- assign others = site.posts | where_exp: "post", "post.url != page.url" %}
-    <ul class="post-links">
+    <ul class="post-links post-links--archive">
       {%- for post in others limit: 8 %}
-      <li>{% include post-link.html post=post %}</li>
+      <li>{% include post-link.html post=post %}, <time class="meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%Y' }}</time></li>
       {%- endfor %}
     </ul>
     <a href="/journal/">More</a>

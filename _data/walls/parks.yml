@@ -1,0 +1,121 @@
+# Written by script/wall-photos. Fill in alt text; re-runs keep it and the order.
+- src: "/images/wall/parks/g0011134.jpg"
+  width: 800
+  height: 495
+  alt: A trail along a lake through wildflowers below rocky peaks
+- src: "/images/wall/parks/g0081372.jpg"
+  width: 800
+  height: 600
+  alt: A rocky dirt trail through ferns and pines
+- src: "/images/wall/parks/g0111473.jpg"
+  width: 800
+  height: 600
+  alt: A view over a forested valley to a mountain ridge
+- src: "/images/wall/parks/gopr1409.jpg"
+  width: 800
+  height: 600
+  alt: A turquoise lake past burned trees below a jagged peak
+- src: "/images/wall/parks/gopr1424.jpg"
+  width: 800
+  height: 600
+  alt: A waterfall spilling over red rock among pines
+- src: "/images/wall/parks/gopr1580.jpg"
+  width: 800
+  height: 600
+  alt: A stream winding through a wide grassy valley
+- src: "/images/wall/parks/gopr1691.jpg"
+  width: 800
+  height: 600
+  alt: A narrow trail through a meadow toward an aspen forest
+- src: "/images/wall/parks/img-1927.jpg"
+  width: 800
+  height: 1066
+  alt: A lake below waterfalls streaming down cliffs, framed by pines
+- src: "/images/wall/parks/img-1929.jpg"
+  width: 800
+  height: 600
+  alt: A jagged mountain above burned trees and a turquoise lake
+- src: "/images/wall/parks/img-1936.jpg"
+  width: 800
+  height: 600
+  alt: A calm lake at dusk with dark mountains on the far shore
+- src: "/images/wall/parks/img-1937.jpg"
+  width: 800
+  height: 600
+  alt: A lake with mountains beyond a pine-lined shore
+- src: "/images/wall/parks/img-1946.jpg"
+  width: 800
+  height: 600
+  alt: A shallow stream across a sagebrush valley
+- src: "/images/wall/parks/img-1952.jpg"
+  width: 800
+  height: 1066
+  alt: A Joshua tree silhouetted against a pink sunset
+- src: "/images/wall/parks/img-1953.jpg"
+  width: 800
+  height: 600
+  alt: A tall Joshua tree under streaky pink clouds
+- src: "/images/wall/parks/img-1957.jpg"
+  width: 800
+  height: 600
+  alt: Yuccas and Joshua trees across desert scrub at dusk
+- src: "/images/wall/parks/img-1962.jpg"
+  width: 800
+  height: 1066
+  alt: A low sun through haze behind Joshua trees
+- src: "/images/wall/parks/img-1964.jpg"
+  width: 800
+  height: 1066
+  alt: Stacked granite boulders under a sky crossed by contrails
+- src: "/images/wall/parks/img-1973.jpg"
+  width: 800
+  height: 600
+  alt: A trail through shrubs toward snowy, jagged peaks
+- src: "/images/wall/parks/img-1974.jpg"
+  width: 800
+  height: 600
+  alt: Desert hills and a Joshua tree silhouetted after sunset
+- src: "/images/wall/parks/img-1976.jpg"
+  width: 800
+  height: 1066
+  alt: A lone Joshua tree at dusk
+- src: "/images/wall/parks/img-1984.jpg"
+  width: 800
+  height: 1066
+  alt: Jagged peaks above a dark, rippled lake under clouds
+- src: "/images/wall/parks/img-1987.jpg"
+  width: 800
+  height: 600
+  alt: Fence posts in a grassy field before a jagged range at sunset
+- src: "/images/wall/parks/img-1989.jpg"
+  width: 800
+  height: 1066
+  alt: A Joshua tree above desert scrub on a hazy evening
+- src: "/images/wall/parks/img-3713.jpg"
+  width: 800
+  height: 600
+  alt: Dry grassland rising to a rocky desert mountain
+- src: "/images/wall/parks/img-3733.jpg"
+  width: 800
+  height: 1066
+  alt: Looking out through a narrow rock slot canyon
+- src: "/images/wall/parks/img-3735.jpg"
+  width: 800
+  height: 600
+  alt: A rocky ridge rising from desert grassland under a cloudy sky
+- src: "/images/wall/parks/img-3737.jpg"
+  width: 800
+  height: 1066
+  alt: A sunbeam over a steep scree slope
+- src: "/images/wall/parks/img-3740.jpg"
+  width: 800
+  height: 1066
+  alt: Hazy desert mountains framed by pine branches
+- src: "/images/wall/parks/img-3745.jpg"
+  width: 800
+  height: 600
+  alt: A rock spire above a scrubby canyon
+- src: "/images/wall/parks/img-3754.jpg"
+  width: 800
+  height: 600
+  alt: A dead tree on a rocky overlook above distant mountains

@@ -4,12 +4,13 @@
 
 :root {
   --wall-gap: 0.5rem;
+  --wall-spill: 1rem;
 }
 
 .wall {
   // Seconds to drift the width of a 1fr column; every column moves at this
-  // speed, whatever its photos' heights.
-  --wall-pace: 60s;
+  // speed, whatever its photos' heights. Read by wall.html's script.
+  --wall-pace: 90s;
 
   position: sticky;
   top: 0;
@@ -17,6 +18,10 @@
   display: grid;
   gap: var(--wall-gap);
   height: 100vh;
+  // Reaches back over the card's edge so a hover-zoomed photo in the first
+  // column isn't clipped, then pads its columns back into place.
+  margin-left: calc(-1 * var(--wall-spill));
+  padding-left: var(--wall-spill);
   overflow: hidden;
 
   @media (max-width: $mobile) {
@@ -25,10 +30,8 @@
 }
 
 // Columns follow the wall's <template>, so they're counted by type. The
-// deepest stagger here is the script's `stagger`. Each column is its own
-// container so a track can measure its loop in column widths (cqi).
+// deepest stagger here is the script's `stagger`.
 .wall__column {
-  container-type: inline-size;
   min-width: 0;
   padding-top: 0.3125rem;
 
@@ -49,33 +52,28 @@
   }
 }
 
-// The track holds two copies of the column's tiles. Each copy carries its own
-// trailing gap, so one copy is --wall-length column widths (set by the
-// script) plus a gap per tile, and moving by that much loops.
+// The track holds two copies of the column's tiles; wall.html's script slides
+// them by --wall-y and wraps after one copy, so the loop has no seam.
 //
-// Each tile drifts as its own layer rather than the whole track moving as
-// one. A track is several windows tall, and Safari only paints the part of a
-// tall layer near where it sits at rest, so a moving track drifts in blank.
+// Each tile moves as its own layer rather than the whole track moving as one.
+// A track is several windows tall, and Safari only paints the part of a tall
+// layer near where it sits at rest, so a moving track drifts in blank.
 .wall__track {
-  --wall-shift: calc(var(--wall-length) * 100cqi + var(--wall-tiles) * var(--wall-gap));
-
   display: flex;
   flex-direction: column;
 
   .wall__tile {
-    animation: wall-drift linear infinite;
-    animation-duration: calc(var(--wall-length) * var(--wall-share) * var(--wall-pace));
-    will-change: transform;
-  }
+    // `translate` applies after `scale`, so the hover zoom grows the photo
+    // around its own center rather than scaling its drift offset too.
+    translate: 0 var(--wall-y, 0);
+    will-change: translate, scale;
+    transition: scale 0.25s ease;
 
-  .wall__column:nth-of-type(even) & .wall__tile {
-    animation-direction: reverse;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .wall__tile {
-      animation: none;
-      will-change: auto;
+    // The photo under the mouse grows a touch, staying above its neighbors.
+    &:hover {
+      position: relative;
+      z-index: 1;
+      scale: 1.02;
     }
   }
 }
@@ -85,17 +83,6 @@
   flex-direction: column;
   gap: var(--wall-gap);
   padding-bottom: var(--wall-gap);
-}
-
-// Downward: start one copy up and slide to rest. Reversed, it drifts up.
-@keyframes wall-drift {
-  from {
-    transform: translateY(calc(-1 * var(--wall-shift)));
-  }
-
-  to {
-    transform: translateY(0);
-  }
 }
 
 .wall__tile {
@@ -130,7 +117,7 @@
   width: max-content;
   height: var(--strip-height);
   animation: strip-drift linear infinite;
-  animation-duration: calc(var(--row-span) * var(--strip-pace, 25s));
+  animation-duration: calc(var(--row-span) * var(--strip-pace, 38s));
   will-change: transform;
 
   &:nth-child(even) {
