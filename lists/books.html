@@ -6,6 +6,9 @@ wall: books
 paper: "#B6CCC7"
 rule: "#A898B1"
 ---
+{%- comment -%} Prefixes for script/bookshop-links' book and search links. {%- endcomment -%}
+{%- assign bookshop = "https://bookshop.org/a/" | append: site.bookshop.affiliate_id -%}
+{%- capture bookshop_search -%}https://bookshop.org/search?affiliate={{ site.bookshop.affiliate_id }}&amp;keywords={%- endcapture %}
 
 <h1 class="visually-hidden">Books I&rsquo;ve read</h1>
 
@@ -26,192 +29,194 @@ rule: "#A898B1"
   {% include doodle.html name="double-underline" bottom="-1rem" %}
 </nav>
 
+<p class="affiliate-note">Titles link to Bookshop.org, which shares its sales with independent bookstores. I earn a small commission when you buy through them.</p>
+
 <ol class="books">
   <li>
     <h2 class="books__year" id="y2026">2026</h2>
     <ul>
       <li>
-        <h4>Why We Sleep</h4>
+        <h4><a href="{{ bookshop }}/9781501144325">Why We Sleep</a></h4>
         <p>Matthew Walker</p>
       </li>
       <li>
-        <h4>Ancillary Justice</h4>
+        <h4><a href="{{ bookshop }}/9780316246620">Ancillary Justice</a></h4>
         <p>Ann Leckie</p>
       </li>
       <li>
-        <h4>Altered Carbon</h4>
+        <h4><a href="{{ bookshop }}/9781400101375">Altered Carbon</a></h4>
         <p>Richard K. Morgan</p>
       </li>
       <li>
-        <h4>The Art of Mindful Living</h4>
+        <h4><a href="{{ bookshop }}/9781564557988">The Art of Mindful Living</a></h4>
         <p>Thich Nhat Hanh</p>
       </li>
       <li>
-        <h4>Remarkably Bright Creatures</h4>
+        <h4><a href="{{ bookshop }}/9780063204164">Remarkably Bright Creatures</a></h4>
         <p>Shelby Van Pelt</p>
       </li>
       <li>
-        <h4>The River</h4>
+        <h4><a href="{{ bookshop }}/9780525563532">The River</a></h4>
         <p>Peter Heller</p>
       </li>
       <li>
-        <h4>Anxious People</h4>
+        <h4><a href="{{ bookshop }}/9781501160844">Anxious People</a></h4>
         <p>Fredrik Backman</p>
       </li>
       <li>
-        <h4>How Not to Age</h4>
+        <h4><a href="{{ bookshop }}/9781250796332">How Not to Age</a></h4>
         <p>Michael Greger, M.D.</p>
       </li>
       <li>
-        <h4>A Wild Idea</h4>
+        <h4><a href="{{ bookshop }}/9780062964120">A Wild Idea</a></h4>
         <p>Jonathan Franklin</p>
       </li>
       <li>
-        <h4>Kitchen Confidential</h4>
+        <h4><a href="{{ bookshop }}/9780060899226">Kitchen Confidential</a></h4>
         <p>Anthony Bourdain</p>
       </li>
       <li>
-        <h4>Where the Deer and the Antelope Play</h4>
+        <h4><a href="{{ bookshop }}/9781101984703">Where the Deer and the Antelope Play</a></h4>
         <p>Nick Offerman</p>
       </li>
       <li>
-        <h4>The Arm</h4>
+        <h4><a href="{{ bookshop }}/9781504696999">The Arm</a></h4>
         <p>Jeff Passan</p>
       </li>
       <li>
-        <h4>Disney's Land</h4>
+        <h4><a href="{{ bookshop }}/9781501190810">Disney's Land</a></h4>
         <p>Richard Snow</p>
       </li>
       <li>
-        <h4>The Confident Mind</h4>
+        <h4><a href="{{ bookshop }}/9780063014831">The Confident Mind</a></h4>
         <p>Nate Zinsser</p>
       </li>
       <li>
-        <h4>A Knight of the Seven Kingdoms</h4>
+        <h4><a href="{{ bookshop }}/9781101965887">A Knight of the Seven Kingdoms</a></h4>
         <p>George R.R. Martin</p>
       </li>
       <li>
-        <h4>Schindler's List</h4>
+        <h4><a href="{{ bookshop }}/9781982151041">Schindler's List</a></h4>
         <p>Thomas Keneally</p>
       </li>
       <li>
-        <h4>Radical Acceptance</h4>
+        <h4><a href="{{ bookshop }}/9780553380996">Radical Acceptance</a></h4>
         <p>Tara Brach</p>
       </li>
       <li>
-        <h4>Meditations for Mortals</h4>
+        <h4><a href="{{ bookshop }}/9780374611996">Meditations for Mortals</a></h4>
         <p>Oliver Burkeman</p>
       </li>
       <li>
-        <h4>Zen Mind, Beginner's Mind</h4>
+        <h4><a href="{{ bookshop }}/9781611808414">Zen Mind, Beginner's Mind</a></h4>
         <p>Shunryu Suzuki</p>
       </li>
       <li>
-        <h4>The Hidden Life of Trees</h4>
+        <h4><a href="{{ bookshop }}/9781771643771">The Hidden Life of Trees</a></h4>
         <p>Peter Wohlleben</p>
       </li>
       <li>
-        <h4>It's Only Drowning</h4>
+        <h4><a href="{{ bookshop }}/9781668035351">It's Only Drowning</a></h4>
         <p>David Litt</p>
       </li>
       <li>
-        <h4>The Dog Stars</h4>
+        <h4><a href="{{ bookshop }}/9780307950475">The Dog Stars</a></h4>
         <p>Peter Heller</p>
       </li>
       <li>
-        <h4>Bury Our Bones in Midnight Soil</h4>
+        <h4><a href="{{ bookshop }}/9781250320544">Bury Our Bones in Midnight Soil</a></h4>
         <p>V.E. Schwab</p>
       </li>
       <li>
-        <h4>Impossible Creatures</h4>
+        <h4><a href="{{ bookshop }}/9780593950616">Impossible Creatures</a></h4>
         <p>Katherine Rundell</p>
       </li>
       <li>
-        <h4>The Nickel Boys</h4>
+        <h4><a href="{{ bookshop }}/9780385537070">The Nickel Boys</a></h4>
         <p>Colson Whitehead</p>
       </li>
       <li>
-        <h4>The Bright Sword</h4>
+        <h4><a href="{{ bookshop }}/9780735224063">The Bright Sword</a></h4>
         <p>Lev Grossman</p>
       </li>
       <li>
-        <h4>Burn</h4>
+        <h4><a href="{{ bookshop }}/9780593801628">Burn</a></h4>
         <p>Peter Heller</p>
       </li>
       <li>
-        <h4>My Friends</h4>
+        <h4><a href="{{ bookshop }}/9780812985092">My Friends</a></h4>
         <p>Hisham Matar</p>
       </li>
       <li>
-        <h4>The Collapsing Empire</h4>
+        <h4><a href="{{ bookshop }}/9780765388902">The Collapsing Empire</a></h4>
         <p>John Scalzi</p>
       </li>
       <li>
-        <h4>The Art of Impossible</h4>
+        <h4><a href="{{ bookshop }}/9780062977519">The Art of Impossible</a></h4>
         <p>Steven Kotler</p>
       </li>
       <li>
-        <h4>Gnar Country</h4>
+        <h4><a href="{{ bookshop }}/9780063272903">Gnar Country</a></h4>
         <p>Steven Kotler</p>
       </li>
       <li>
-        <h4>The Mountain Is You</h4>
+        <h4><a href="{{ bookshop }}/9789355436979">The Mountain Is You</a></h4>
         <p>Brianna Wiest</p>
       </li>
       <li>
-        <h4>The Consuming Fire</h4>
+        <h4><a href="{{ bookshop }}/9780765388995">The Consuming Fire</a></h4>
         <p>John Scalzi</p>
       </li>
       <li>
-        <h4>The Will of the Many</h4>
+        <h4><a href="{{ bookshop }}/9781982141189">The Will of the Many</a></h4>
         <p>James Islington</p>
       </li>
       <li>
-        <h4>Service Model</h4>
+        <h4><a href="{{ bookshop }}/9781250290304">Service Model</a></h4>
         <p>Adrian Tchaikovsky</p>
       </li>
       <li>
-        <h4>The Strength of the Few</h4>
+        <h4><a href="{{ bookshop }}/9781982141233">The Strength of the Few</a></h4>
         <p>James Islington</p>
       </li>
       <li>
-        <h4>Breaking the Age Code</h4>
+        <h4><a href="{{ bookshop }}/9780063053182">Breaking the Age Code</a></h4>
         <p>Becca Levy</p>
       </li>
       <li>
-        <h4>Good Energy</h4>
+        <h4><a href="{{ bookshop }}/9780008604264">Good Energy</a></h4>
         <p>Casey Means</p>
       </li>
       <li>
-        <h4>The Last Emperox</h4>
+        <h4><a href="{{ bookshop }}/9780765389169">The Last Emperox</a></h4>
         <p>John Scalzi</p>
       </li>
       <li>
-        <h4>A Man Called Ove</h4>
+        <h4><a href="{{ bookshop }}/9781476738024">A Man Called Ove</a></h4>
         <p>Fredrik Backman</p>
       </li>
       <li>
-        <h4>Genius Foods</h4>
+        <h4><a href="{{ bookshop }}/9780062562876">Genius Foods</a></h4>
         <p>Max Lugavere</p>
       </li>
       <li>
-        <h4>Change Your Brain Every Day</h4>
+        <h4><a href="{{ bookshop }}/9798212410144">Change Your Brain Every Day</a></h4>
         <p>Daniel Amen</p>
       </li>
       <li>
-        <h4>How to Read Nature</h4>
+        <h4><a href="{{ bookshop }}/9781520080024">How to Read Nature</a></h4>
         <p>Tristan Gooley</p>
       </li>
       <li>
-        <h4>How to Stop Time</h4>
+        <h4><a href="{{ bookshop }}/9780525522898">How to Stop Time</a></h4>
         <p>Matt Haig</p>
       </li>
       <li>
-        <h4>Blood and Treasure</h4>
+        <h4><a href="{{ bookshop }}/9781250247155">Blood and Treasure</a></h4>
         <p>Bob Drury and Tom Clavin</p>
       </li>
       <li>
-        <h4>Leave Only Footprints</h4>
+        <h4><a href="{{ bookshop }}/9781984823557">Leave Only Footprints</a></h4>
         <p>Conor Knighton</p>
       </li>
     </ul>
@@ -220,195 +225,195 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2025">2025</h2>
     <ul>
       <li>
-        <h4>Alchemised</h4>
+        <h4><a href="{{ bookshop }}/9780593972700">Alchemised</a></h4>
         <p>SenLinYu</p>
       </li>
       <li>
-        <h4>Today Was Fun</h4>
+        <h4><a href="{{ bookshop }}/9781774585597">Today Was Fun</a></h4>
         <p>Bree Groff</p>
       </li>
       <li>
-        <h4>Why We Love Baseball</h4>
+        <h4><a href="{{ bookshop }}/9780593472682">Why We Love Baseball</a></h4>
         <p>Joe Posnanski</p>
       </li>
       <li>
-        <h4>Things Become Other Things</h4>
+        <h4><a href="{{ bookshop }}/9780593732540">Things Become Other Things</a></h4>
         <p>Craig Mod</p>
       </li>
       <li>
-        <h4>Food for Thought: Essays and Runimations</h4>
+        <h4><a href="{{ bookshop }}/9781668064214">Food for Thought: Essays and Runimations</a></h4>
         <p>Alton Brown</p>
       </li>
       <li>
-        <h4>Foundation</h4>
+        <h4><a href="{{ bookshop }}/9780553293357">Foundation</a></h4>
         <p>Issac Asimov</p>
       </li>
       <li>
-        <h4>The Body Keeps the Score</h4>
+        <h4><a href="{{ bookshop }}/9780143127741">The Body Keeps the Score</a></h4>
         <p>Bessel van der Kolk</p>
       </li>
       <li>
-        <h4>Outlive</h4>
+        <h4><a href="{{ bookshop }}/9780593236604">Outlive</a></h4>
         <p>Peter Attia, MD</p>
       </li>
       <li>
-        <h4>Wild</h4>
+        <h4><a href="{{ bookshop }}/9780307476074">Wild</a></h4>
         <p>Cheryl Strayed</p>
       </li>
       <li>
-        <h4>Beyond the Wand</h4>
+        <h4><a href="{{ bookshop }}/9781538741368">Beyond the Wand</a></h4>
         <p>Tom Felton</p>
       </li>
       <li>
-        <h4>Ultra-Processed People</h4>
+        <h4><a href="{{ bookshop }}/9781324076261">Ultra-Processed People</a></h4>
         <p>Chis van Tulleken</p> 
       </li>
       <li>
-        <h4>A Walk in the Wookds</h4>
+        <h4><a href="{{ bookshop }}/9780767902526">A Walk in the Wookds</a></h4>
         <p>Bill Bryson</p>
       </li>
       <li>
-        <h4>Hatchet</h4>
+        <h4><a href="{{ bookshop }}/9781417807260">Hatchet</a></h4>
         <p>Gary Paulsen</p>
       </li>
       <li>
-        <h4>The Bourne Identity</h4>
+        <h4><a href="{{ bookshop }}/9780553593549">The Bourne Identity</a></h4>
         <p>Robert Ludlum</p>
       </li>
       <li>
-        <h4>The Incomplete Book of Running</h4>
+        <h4><a href="{{ bookshop }}/9781451696264">The Incomplete Book of Running</a></h4>
         <p>Peter Sagal</p>
       </li>
       <li>
-        <h4>Natural Born Heroes: Mastering the Lost Secrets of Strength and Endurance</h4>
+        <h4><a href="{{ bookshop }}/9780307742223">Natural Born Heroes: Mastering the Lost Secrets of Strength and Endurance</a></h4>
         <p>Christopher McDougall</p>
       </li>
       <li>
-        <h4>We Are the Land</h4>
+        <h4><a href="{{ bookshop }}/9780520280496">We Are the Land</a></h4>
         <p>Damon B. Akins, William J. Bauer Jr.</p>
       </li>
       <li>
-        <h4>The Great Train Robbery</h4>
+        <h4><a href="{{ bookshop }}/9780804171281">The Great Train Robbery</a></h4>
         <p>Michael Crichton</p>
       </li>
       <li>
-        <h4>Cabin</h4>
+        <h4><a href="{{ bookshop }}/9781250285706">Cabin</a></h4>
         <p>Patrick Hutchinson</p>
       </li>
       <li>
-        <h4>Bad Monkey</h4>
+        <h4><a href="{{ bookshop }}/9780446556149">Bad Monkey</a></h4>
         <p>Carl Hiaasen</p>
       </li>
       <li>
-        <h4>The Coming Wave</h4>
+        <h4><a href="{{ bookshop }}/9780593593967">The Coming Wave</a></h4>
         <p>Mustafa Suleyman</p>
       </li>
       <li>
-        <h4>Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding</h4>
+        <h4><a href="{{ bookshop }}/9780525434788">Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding</a></h4>
         <p>Daniel E. Lieberman</p>
       </li>
       <li>
-        <h4>Somewhere Beyond the Sea</h4>
+        <h4><a href="{{ bookshop }}/9781250881229">Somewhere Beyond the Sea</a></h4>
         <p>TJ Klune</p>
       </li>
       <li>
-        <h4>Job Moves: 9 Steps for Making Progress in Your Career</h4>
+        <h4><a href="{{ bookshop }}/9780063283589">Job Moves: 9 Steps for Making Progress in Your Career</a></h4>
         <p>Ethan Bernstein, Michael B. Horn, Bob Moesta</p>
       </li>
       <li>
-        <h4>System Collapse</h4>
+        <h4><a href="{{ bookshop }}/9781250826985">System Collapse</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Curage to Be Disliked</h4>
+        <h4><a href="{{ bookshop }}/9781668065969">The Curage to Be Disliked</a></h4>
         <p>Ichiro Kishimi</p>
       </li>
       <li>
-        <h4>Dicipline is the Destiny</h4>
+        <h4><a href="{{ bookshop }}/9789355433534">Dicipline is the Destiny</a></h4>
         <p>Ryan Holiday</p>
       </li>
       <li>
-        <h4>Just Work</h4>
+        <h4><a href="{{ bookshop }}/9781250270740">Just Work</a></h4>
         <p>Kim Scott</p>
       </li>
       <li>
-        <h4>The Graveyard Book</h4>
+        <h4><a href="{{ bookshop }}/9780060530945">The Graveyard Book</a></h4>
         <p>Neil Gaiman</p>
       </li>
       <li>
-        <h4>Codename Nemo: The Hunt for a Nazi U-Boat and the Elusive Enigma Machine</h4>
+        <h4><a href="{{ bookshop }}/9798895150313">Codename Nemo: The Hunt for a Nazi U-Boat and the Elusive Enigma Machine</a></h4>
         <p>Charles Lachman</p>
       </li>
       <li>
-        <h4>Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance</h4>
+        <h4><a href="{{ bookshop }}/9781538502020">Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance</a></h4>
         <p>Alex Hutchinson</p>
       </li>
       <li>
-        <h4>Shadow Divers</h4>
+        <h4><a href="{{ bookshop }}/9780375760983">Shadow Divers</a></h4>
         <p>Robert Kurson</p>
       </li>
       <li>
-        <h4>Shadow Divers</h4>
+        <h4><a href="{{ bookshop }}/9780375760983">Shadow Divers</a></h4>
         <p>Robert Kurson</p>
       </li>
       <li>
-        <h4>A Walk in the Park</h4>
+        <h4><a href="{{ bookshop }}/9781501183065">A Walk in the Park</a></h4>
         <p>Kevin Fedarko</p>
       </li>
       <li>
-        <h4>Charlie Hustle</h4>
+        <h4><a href="{{ bookshop }}/9780593469392">Charlie Hustle</a></h4>
         <p>Keith O'Brien</p>
       </li>
       <li>
-        <h4>Shōgun, Part Two</h4>
+        <h4><a href="{{ bookshop }}/9798212895200">Shōgun, Part Two</a></h4>
         <p>James Clavell</p>
       </li>
       <li>
-        <h4>Shōgun, Part One</h4>
+        <h4><a href="{{ bookshop }}/9798212895194">Shōgun, Part One</a></h4>
         <p>James Clavell</p>
       </li>
       <li>
-        <h4>Every Tool's a Hammer: Life is What You Make It</h4>
+        <h4><a href="{{ bookshop }}/9781982113483">Every Tool's a Hammer: Life is What You Make It</a></h4>
         <p>Adam Savage</p>
       </li>
       <li>
-        <h4>Effortless</h4>
+        <h4><a href="{{ bookshop }}/9780593401118">Effortless</a></h4>
         <p>Greg McKeown</p>
       </li>
       <li>
-        <h4>Noise: A Flaw in Human Judgement</h4>
+        <h4><a href="{{ bookshop }}/9780316451390">Noise: A Flaw in Human Judgement</a></h4>
         <p>Daniel Kahneman</p>
       </li>
       <li>
-        <h4>Mistborn: The Hero of Ages</h4>
+        <h4><a href="{{ bookshop }}/9781250868282">Mistborn: The Hero of Ages</a></h4>
         <p>Brandon Sanderson</p>
       </li>
       <li>
-        <h4>Mistborn: The Well of Ascension</h4>
+        <h4><a href="{{ bookshop }}/9781250868282">Mistborn: The Well of Ascension</a></h4>
         <p>Brandon Sanderson</p>
       </li>
       <li>
-        <h4>Mistborn: The Final Empire</h4>
+        <h4><a href="{{ bookshop }}/9781250868282">Mistborn: The Final Empire</a></h4>
         <p>Brandon Sanderson</p>
       </li>
       <li>
-        <h4>Yes Please</h4>
+        <h4><a href="{{ bookshop }}/9780062268358">Yes Please</a></h4>
         <p>Amy Poehler</p>
       </li>
       <li>
-        <h4>1998 Yankees: The Inside Story of the Greatest Baseball Team Ever</h4>
+        <h4><a href="{{ bookshop }}/9781538722992">1998 Yankees: The Inside Story of the Greatest Baseball Team Ever</a></h4>
         <p>Jack Curry</p>
       </li>
       <li>
-        <h4>Hum</h4>
+        <h4><a href="{{ bookshop }}/9781668008843">Hum</a></h4>
         <p>Helen Phillips</p>
       </li>
       <li>
-        <h4>Tess of the Emerald Sea</h4>
+        <h4><a href="{{ bookshop }}/9781250899668">Tess of the Emerald Sea</a></h4>
         <p>Brandon Sanderson</p>
       </li>
       <li>
-        <h4>Blood Moon: An American Epic of War and Splendor in the Cherokee Nation</h4>
+        <h4><a href="{{ bookshop }}/9781501128691">Blood Moon: An American Epic of War and Splendor in the Cherokee Nation</a></h4>
         <p>John Sedgwick</p>
       </li>
     </ul>
@@ -417,133 +422,133 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2024">2024</h2>
     <ul>
       <li>
-        <h4>This is How You Lose the Time War</h4>
+        <h4><a href="{{ bookshop }}/9781534431010">This is How You Lose the Time War</a></h4>
         <p>Amal El-Mohtar, Max Gladstone</p>
       </li>
       <li>
-        <h4 class="mb--none">Slow Productivity: The Lost Art of Accomplishment Without Burnout</h4>
+        <h4 class="mb--none"><a href="{{ bookshop }}/9780593544853">Slow Productivity: The Lost Art of Accomplishment Without Burnout</a></h4>
         <p>Cal Newport</p>
       </li>
       <li>
-        <h4>So Let Them Burn</h4>
+        <h4><a href="{{ bookshop }}/9780316534734">So Let Them Burn</a></h4>
         <p>Kamilah Cole</p>
       </li>
       <li>
-        <h4>Band of Brothers: E Company, 506th Regiment, 101st Airborne from Normandy to Hitler's Eagle's Nest</h4>
+        <h4><a href="{{ bookshop }}/9780743504980">Band of Brothers: E Company, 506th Regiment, 101st Airborne from Normandy to Hitler's Eagle's Nest</a></h4>
         <p>Stephen E. Ambrose</p>
       </li>
       <li>
-        <h4>Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance</h4>
+        <h4><a href="{{ bookshop }}/9781538502020">Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance</a></h4>
         <p>Alex Hutchinson</p>
       </li>
       <li>
-        <h4>The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph</h4>
+        <h4><a href="{{ bookshop }}/9780593719916">The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph</a></h4>
         <p>Ryan Holiday</p>
       </li>
       <li>
-        <h4>Stoicism The Art of Happiness: Philosophy Works, Living a Good Life, Finding Calm and Managing Your Emotions
+        <h4><a href="{{ bookshop }}/9781694012289">Stoicism The Art of Happiness: Philosophy Works, Living a Good Life, Finding Calm and Managing Your Emotions
           in a
-          Turbulent World</h4>
+          Turbulent World</a></h4>
         <p>Brian Sandler</p>
       </li>
       <li>
-        <h4>You're Not Listening</h4>
+        <h4><a href="{{ bookshop }}/9781250297204">You're Not Listening</a></h4>
         <p>Kate Murphy</p>
       </li>
       <li>
-        <h4>Thrawn: Allicances</h4>
+        <h4><a href="{{ bookshop }}/9780525481287">Thrawn: Allicances</a></h4>
         <p>Timothy Zahn</p>
       </li>
       <li>
-        <h4>Thrawn</h4>
+        <h4><a href="{{ bookshop }}/9780525481287">Thrawn</a></h4>
         <p>Timothy Zahn</p>
       </li>
       <li>
-        <h4>The Subtle Art of Not Giving a F*uck</h4>
+        <h4><a href="{{ bookshop }}/9780062457714">The Subtle Art of Not Giving a F*uck</a></h4>
         <p>Mark Manson</p>
       </li>
       <li>
-        <h4>The Harbors of the Sun</h4>
+        <h4><a href="{{ bookshop }}/9781597808910">The Harbors of the Sun</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Edge of Worlds</h4>
+        <h4><a href="{{ bookshop }}/9781597808972">The Edge of Worlds</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Siren Depths</h4>
+        <h4><a href="{{ bookshop }}/9781597804400">The Siren Depths</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Serpent Sea</h4>
+        <h4><a href="{{ bookshop }}/9781949102291">The Serpent Sea</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Cloud Roads</h4>
+        <h4><a href="{{ bookshop }}/9781522605430">The Cloud Roads</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>The Collected Angers</h4>
+        <h4><a href="{{ bookshop }}/9780578825915">The Collected Angers</a></h4>
         <p>Mike Monterio</p>
       </li>
       <li>
-        <h4>Ruined by Design</h4>
+        <h4><a href="{{ bookshop }}/9798989358786">Ruined by Design</a></h4>
         <p>Mike Monterio</p>
       </li>
       <li>
-        <h4>The Dark Forest</h4>
+        <h4><a href="{{ bookshop }}/9780765386694">The Dark Forest</a></h4>
         <p>Cixin Liu</p>
       </li>
       <li>
-        <h4>The Three-Body Problem</h4>
+        <h4><a href="{{ bookshop }}/9780765382030">The Three-Body Problem</a></h4>
         <p>Cixin Liu</p>
       </li>
       <li>
-        <h4>These Buring Stars</h4>
+        <h4><a href="{{ bookshop }}/9780316463324">These Buring Stars</a></h4>
         <p>Bethany Jacobs</p>
       </li>
       <li>
-        <h4>He Who Drowned the World</h4>
+        <h4><a href="{{ bookshop }}/9781250621849">He Who Drowned the World</a></h4>
         <p>Shelly Parker-Chan</p>
       </li>
       <li>
-        <h4>The Atlas Six</h4>
+        <h4><a href="{{ bookshop }}/9781250854544">The Atlas Six</a></h4>
         <p>Olivie Blake</p>
       </li>
       <li>
-        <h4>Rocket Men</h4>
+        <h4><a href="{{ bookshop }}/9780812988703">Rocket Men</a></h4>
         <p>Robert Kurson</p>
       </li>
       <li>
-        <h4>The World According to Star Wars</h4>
+        <h4><a href="{{ bookshop }}/9780062484222">The World According to Star Wars</a></h4>
         <p>Cass R. Sunstein</p>
       </li>
       <li>
-        <h4>Stolen Focus</h4>
+        <h4><a href="{{ bookshop }}/9780593138526">Stolen Focus</a></h4>
         <p>Johann Hari</p>
       </li>
       <li>
-        <h4>Project Hail Mary</h4>
+        <h4><a href="{{ bookshop }}/9780593135228">Project Hail Mary</a></h4>
         <p>Andy Weir</p>
       </li>
       <li>
-        <h4>The Glass Hotel</h4>
+        <h4><a href="{{ bookshop }}/9780525596677">The Glass Hotel</a></h4>
         <p>Emily St. John Mandel</p>
       </li>
       <li>
-        <h4>Tomorrow, and Tomorrow, and Tomorrow</h4>
+        <h4><a href="{{ bookshop }}/9780593466490">Tomorrow, and Tomorrow, and Tomorrow</a></h4>
         <p>Gabrielle Zevin</p>
       </li>
       <li>
-        <h4>Sea of Tranquility</h4>
+        <h4><a href="{{ bookshop }}/9780593466735">Sea of Tranquility</a></h4>
         <p>Emily St. John Mandel</p>
       </li>
       <li>
-        <h4>Digital Minimalism</h4>
+        <h4><a href="{{ bookshop }}/9780525536512">Digital Minimalism</a></h4>
         <p>Cal Newport</p>
       </li>
       <li>
-        <h4>The Longing For Less</h4>
+        <h4><a href="{{ bookshop }}/9781639734191">The Longing For Less</a></h4>
         <p>Kyle Chayka</p>
       </li>
     </ul>
@@ -552,67 +557,67 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2023">2023</h2>
     <ul>
       <li>
-        <h4>How to Do Nothing: Resisting the Attention Economy</h4>
+        <h4><a href="{{ bookshop }}/9781612197494">How to Do Nothing: Resisting the Attention Economy</a></h4>
         <p>Jenny Odell</p>
       </li>
       <li>
-        <h4>Witch King</h4>
+        <h4><a href="{{ bookshop }}/9781250826794">Witch King</a></h4>
         <p>Martha Wells</p>
       </li>
       <li>
-        <h4>Leviathan Falls</h4>
+        <h4><a href="{{ bookshop }}/9780316332941">Leviathan Falls</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Tiamat's Wrath</h4>
+        <h4><a href="{{ bookshop }}/9780316332897">Tiamat's Wrath</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Persepolis Rising</h4>
+        <h4><a href="{{ bookshop }}/9780316332859">Persepolis Rising</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Babylons Ashes</h4>
+        <h4><a href="{{ bookshop }}/9781478965374">Babylons Ashes</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Nemesis Games</h4>
+        <h4><a href="{{ bookshop }}/9780316334716">Nemesis Games</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Cibola Burn</h4>
+        <h4><a href="{{ bookshop }}/9780316334686">Cibola Burn</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Abaddons Gate</h4>
+        <h4><a href="{{ bookshop }}/9781549153075">Abaddons Gate</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Calibans War</h4>
+        <h4><a href="{{ bookshop }}/9780316129060">Calibans War</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Leviathan Wakes</h4>
+        <h4><a href="{{ bookshop }}/9780316129084">Leviathan Wakes</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>Leviathan Wakes</h4>
+        <h4><a href="{{ bookshop }}/9780316129084">Leviathan Wakes</a></h4>
         <p>James S. A. Corey</p>
       </li>
       <li>
-        <h4>The Arrest</h4>
+        <h4><a href="{{ bookshop }}/9780062938787">The Arrest</a></h4>
         <p>Jonathan Lethem</p>
       </li>
       <li>
-        <h4>The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)</h4>
+        <h4><a href="{{ bookshop }}/9781410410184">The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)</a></h4>
         <p>Riordan, Rick</p>
       </li>
       <li>
-        <h4>Rule of Wolves</h4>
+        <h4><a href="{{ bookshop }}/9781250816511">Rule of Wolves</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
       <li>
-        <h4>King of Scars (King of Scars, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250618979">King of Scars (King of Scars, #1)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
       <li>
@@ -620,31 +625,31 @@ rule: "#A898B1"
         Burkeman, Oliver
       </li>
       <li>
-        <h4>The Toll (Arc of a Scythe, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781481497077">The Toll (Arc of a Scythe, #3)</a></h4>
         <p>Shusterman, Neal</p>
       </li>
       <li>
-        <h4>Thunderhead (Arc of a Scythe, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781442472464">Thunderhead (Arc of a Scythe, #2)</a></h4>
         <p>Shusterman, Neal</p>
       </li>
       <li>
-        <h4>Scythe (Arc of a Scythe, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781442472433">Scythe (Arc of a Scythe, #1)</a></h4>
         <p>Shusterman, Neal</p>
       </li>
       <li>
-        <h4>Champion (Legend, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780147512284">Champion (Legend, #3)</a></h4>
         <p>Lu, Marie</p>
       </li>
       <li>
-        <h4>Prodigy (Legend, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780142427552">Prodigy (Legend, #2)</a></h4>
         <p>Lu, Marie</p>
       </li>
       <li>
-        <h4>Legend (Legend, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780142422076">Legend (Legend, #1)</a></h4>
         <p>Lu, Marie</p>
       </li>
       <li>
-        <h4>Chaos Walking: The Complete Trilogy</h4>
+        <h4><a href="{{ bookshop }}/9781536207064">Chaos Walking: The Complete Trilogy</a></h4>
         <p>Ness, Patrick</p>
       </li>
     </ul>
@@ -653,197 +658,197 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2022">2022</h2>
     <ul>
       <li>
-        <h4>Fairy Tale</h4>
+        <h4><a href="{{ bookshop }}/9781668002193">Fairy Tale</a></h4>
         <p>King, Stephen</p>
       </li>
 
       <li>
-        <h4>Redwall (Redwall, #1)</h4>
+        <h4><a href="{{ bookshop }}/9798217318698">Redwall (Redwall, #1)</a></h4>
         <p>Jacques, Brian</p>
       </li>
 
       <li>
-        <h4>An Absolutely Remarkable Thing (The Carls, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781524743468">An Absolutely Remarkable Thing (The Carls, #1)</a></h4>
         <p>Green, Hank</p>
       </li>
 
       <li>
-        <h4>The Arctic Incident (Artemis Fowl, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781432875602">The Arctic Incident (Artemis Fowl, #2)</a></h4>
         <p>Colfer, Eoin</p>
       </li>
 
       <li>
-        <h4>The Last Wish (The Witcher, #0.5)</h4>
+        <h4><a href="{{ bookshop }}/9780316452465">The Last Wish (The Witcher, #0.5)</a></h4>
         <p>Sapkowski, Andrzej</p>
       </li>
 
       <li>
-        <h4>Sword of Destiny (The Witcher, #0.7)</h4>
+        <h4><a href="{{ bookshop }}/9780316452564">Sword of Destiny (The Witcher, #0.7)</a></h4>
         <p>Sapkowski, Andrzej</p>
       </li>
 
       <li>
-        <h4>Light of the Jedi (Star Wars: The High Republic)</h4>
+        <h4><a href="{{ bookshop }}/9780593157732">Light of the Jedi (Star Wars: The High Republic)</a></h4>
         <p>Soule, Charles</p>
       </li>
 
       <li>
-        <h4>Artemis Fowl (Artemis Fowl, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781368036986">Artemis Fowl (Artemis Fowl, #1)</a></h4>
         <p>Colfer, Eoin</p>
       </li>
 
       <li>
-        <h4>Rebel Sisters (War Girls, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781984835062">Rebel Sisters (War Girls, #2)</a></h4>
         <p>Onyebuchi, Tochi</p>
       </li>
 
       <li>
-        <h4>Mostly Harmless (Hitchhiker's Guide to the Galaxy, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780345418777">Mostly Harmless (Hitchhiker's Guide to the Galaxy, #5)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>Inclusive Design Communities</h4>
+        <h4><a href="{{ bookshop }}/9798991325509">Inclusive Design Communities</a></h4>
         <p>Kapila, Sameera</p>
       </li>
 
       <li>
-        <h4>So Long, and Thanks for All the Fish (The Hitchhiker's Guide to the Galaxy, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780345391834">So Long, and Thanks for All the Fish (The Hitchhiker's Guide to the Galaxy, #4)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>Dark Matter</h4>
+        <h4><a href="{{ bookshop }}/9781101904244">Dark Matter</a></h4>
         <p>Crouch, Blake</p>
       </li>
 
       <li>
-        <h4>Life, the Universe and Everything (The Hitchhiker's Guide to the Galaxy, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780345418906">Life, the Universe and Everything (The Hitchhiker's Guide to the Galaxy, #3)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>The Burning God (The Poppy War, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780062662651">The Burning God (The Poppy War, #3)</a></h4>
         <p>Kuang, R.F.</p>
       </li>
 
       <li>
-        <h4>The Restaurant at the End of the Universe (The Hitchhiker's Guide to the Galaxy, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780345391810">The Restaurant at the End of the Universe (The Hitchhiker's Guide to the Galaxy, #2)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>Recursion</h4>
+        <h4><a href="{{ bookshop }}/9781984826015">Recursion</a></h4>
         <p>Crouch, Blake</p>
       </li>
 
       <li>
-        <h4>The Dragon Republic (The Poppy War, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781982661830">The Dragon Republic (The Poppy War, #2)</a></h4>
         <p>Kuang, R.F.</p>
       </li>
 
       <li>
-        <h4>Harlem Shuffle (Ray Carney, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780525567271">Harlem Shuffle (Ray Carney, #1)</a></h4>
         <p>Whitehead, Colson</p>
       </li>
 
       <li>
-        <h4>The Poppy War (The Poppy War, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780008239824">The Poppy War (The Poppy War, #1)</a></h4>
         <p>Kuang, R.F.</p>
       </li>
 
       <li>
-        <h4>Burn</h4>
+        <h4><a href="{{ bookshop }}/9781094167534">Burn</a></h4>
         <p>Ness, Patrick</p>
       </li>
 
       <li>
-        <h4>Iron Widow (Iron Widow #1)</h4>
+        <h4><a href="{{ bookshop }}/9780735269958">Iron Widow (Iron Widow #1)</a></h4>
         <p>Zhao, Xiran Jay</p>
       </li>
 
       <li>
-        <h4>Predator's Gold (Mortal Englines Quartet #2)</h4>
+        <h4><a href="{{ bookshop }}/9780545394444">Predator's Gold (Mortal Englines Quartet #2)</a></h4>
         <p>Reeve, Philip</p>
       </li>
 
       <li>
-        <h4>Mortal Engines (The Hungry City Chronicles, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781338201123">Mortal Engines (The Hungry City Chronicles, #1)</a></h4>
         <p>Reeve, Philip</p>
       </li>
 
       <li>
-        <h4>Cytonic (Skyward, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781713664017">Cytonic (Skyward, #3)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Ring Shout</h4>
+        <h4><a href="{{ bookshop }}/9781250393814">Ring Shout</a></h4>
         <p>Clark, P. Djèlí</p>
       </li>
 
       <li>
-        <h4>There There</h4>
+        <h4><a href="{{ bookshop }}/9780525436140">There There</a></h4>
         <p>Orange, Tommy</p>
       </li>
 
       <li>
-        <h4>Breath: The New Science of a Lost Art</h4>
+        <h4><a href="{{ bookshop }}/9780735213623">Breath: The New Science of a Lost Art</a></h4>
         <p>Nestor, James</p>
       </li>
 
       <li>
-        <h4>The Best of Me</h4>
+        <h4><a href="{{ bookshop }}/9780316242400">The Best of Me</a></h4>
         <p>Sedaris, David</p>
       </li>
 
       <li>
-        <h4>She Who Became the Sun (The Radiant Emperor, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250621818">She Who Became the Sun (The Radiant Emperor, #1)</a></h4>
         <p>Parker-Chan, Shelley</p>
       </li>
 
       <li>
-        <h4>The Tipping Point: How Little Things Can Make a Big Difference</h4>
+        <h4><a href="{{ bookshop }}/9780316346627">The Tipping Point: How Little Things Can Make a Big Difference</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>Life of Pi</h4>
+        <h4><a href="{{ bookshop }}/9780156027328">Life of Pi</a></h4>
         <p>Martel, Yann</p>
       </li>
 
       <li>
-        <h4>David and Goliath: Underdogs, Misfits, and the Art of Battling Giants</h4>
+        <h4><a href="{{ bookshop }}/9780316204378">David and Goliath: Underdogs, Misfits, and the Art of Battling Giants</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>The Curious Incident of the Dog in the Night-Time</h4>
+        <h4><a href="{{ bookshop }}/9781400032716">The Curious Incident of the Dog in the Night-Time</a></h4>
         <p>Haddon, Mark</p>
       </li>
 
       <li>
-        <h4>Born to Run: A Hidden Tribe, Superathletes, and the Greatest Race the World Has Never Seen</h4>
+        <h4><a href="{{ bookshop }}/9780307279187">Born to Run: A Hidden Tribe, Superathletes, and the Greatest Race the World Has Never Seen</a></h4>
         <p>McDougall, Christopher</p>
       </li>
 
       <li>
-        <h4>Chosen Ones (The Chosen Ones, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780358451174">Chosen Ones (The Chosen Ones, #1)</a></h4>
         <p>Roth, Veronica</p>
       </li>
 
       <li>
-        <h4>The Mindbody Prescription: Healing the Body, Healing the Pain</h4>
+        <h4><a href="{{ bookshop }}/9780446675154">The Mindbody Prescription: Healing the Body, Healing the Pain</a></h4>
         <p>Sarno, John E.</p>
       </li>
 
       <li>
-        <h4>Option B: Facing Adversity, Building Resilience, and Finding Joy</h4>
+        <h4><a href="{{ bookshop }}/9781524732684">Option B: Facing Adversity, Building Resilience, and Finding Joy</a></h4>
         <p>Sandberg, Sheryl</p>
       </li>
 
       <li>
-        <h4>The Watchmaker of Filigree Street (Watchmaker of Filigree Street, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781620408346">The Watchmaker of Filigree Street (Watchmaker of Filigree Street, #1)</a></h4>
         <p>Natasha Pulley</p>
       </li>
     </ul>
@@ -852,167 +857,167 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2021">2021</h2>
     <ul>
       <li>
-        <h4>Make Time: How to Focus on What Matters Every Day</h4>
+        <h4><a href="{{ bookshop }}/9780525572428">Make Time: How to Focus on What Matters Every Day</a></h4>
         <p>Knapp, Jake</p>
       </li>
 
       <li>
-        <h4>Children of Dune (Dune, #3)</h4>
+        <h4><a href="{{ bookshop_search }}Children+of+Dune+Herbert%2C+Frank">Children of Dune (Dune, #3)</a></h4>
         <p>Herbert, Frank</p>
       </li>
 
       <li>
-        <h4>Uncanny Valley</h4>
+        <h4><a href="{{ bookshop }}/9781250785695">Uncanny Valley</a></h4>
         <p>Wiener, Anna</p>
       </li>
 
       <li>
-        <h4>The Night Country (The Hazel Wood, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250246080">The Night Country (The Hazel Wood, #2)</a></h4>
         <p>Albert, Melissa</p>
       </li>
 
       <li>
-        <h4>Dune Messiah (Dune, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780593098233">Dune Messiah (Dune, #2)</a></h4>
         <p>Herbert, Frank</p>
       </li>
 
       <li>
-        <h4>Ruin and Rising (The Shadow and Bone Trilogy, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781250063168">Ruin and Rising (The Shadow and Bone Trilogy, #3)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
 
       <li>
-        <h4>Why Fish Don’t Exist: A Story of Loss, Love, and the Hidden Order of Life</h4>
+        <h4><a href="{{ bookshop }}/9781501160349">Why Fish Don’t Exist: A Story of Loss, Love, and the Hidden Order of Life</a></h4>
         <p>Miller, Lulu</p>
       </li>
 
       <li>
-        <h4>Siege and Storm (The Shadow and Bone Trilogy, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250044433">Siege and Storm (The Shadow and Bone Trilogy, #2)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
 
       <li>
-        <h4>A Master of Djinn (Dead Djinn Universe, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250267665">A Master of Djinn (Dead Djinn Universe, #1)</a></h4>
         <p>Clark, P. Djèlí</p>
       </li>
 
       <li>
-        <h4>Shadow and Bone (The Shadow and Bone Trilogy, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780606319034">Shadow and Bone (The Shadow and Bone Trilogy, #1)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
 
       <li>
-        <h4>Crooked Kingdom (Six of Crows, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250076977">Crooked Kingdom (Six of Crows, #2)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
 
       <li>
-        <h4>Beginners: The Joy and Transformative Power of Lifelong Learning</h4>
+        <h4><a href="{{ bookshop }}/9780525432975">Beginners: The Joy and Transformative Power of Lifelong Learning</a></h4>
         <p>Vanderbilt, Tom</p>
       </li>
 
       <li>
-        <h4>Sharks in the Time of Saviors</h4>
+        <h4><a href="{{ bookshop }}/9781786896506">Sharks in the Time of Saviors</a></h4>
         <p>Washburn, Kawai Strong</p>
       </li>
 
       <li>
-        <h4>Think Again: The Power of Knowing What You Don't Know</h4>
+        <h4><a href="{{ bookshop }}/9781984878120">Think Again: The Power of Knowing What You Don't Know</a></h4>
         <p>Grant, Adam M.</p>
       </li>
 
       <li>
-        <h4>The Heartbeat of Wounded Knee: Native America from 1890 to the Present</h4>
+        <h4><a href="{{ bookshop }}/9781432864507">The Heartbeat of Wounded Knee: Native America from 1890 to the Present</a></h4>
         <p>Treuer, David</p>
       </li>
 
       <li>
-        <h4>Dune (Dune, #1)</h4>
+        <h4><a href="{{ bookshop_search }}Dune+Herbert%2C+Frank">Dune (Dune, #1)</a></h4>
         <p>Herbert, Frank</p>
       </li>
 
       <li>
-        <h4>Six of Crows (Six of Crows, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250076960">Six of Crows (Six of Crows, #1)</a></h4>
         <p>Bardugo, Leigh</p>
       </li>
 
       <li>
-        <h4>Conversational Design</h4>
+        <h4><a href="{{ bookshop }}/9781952616693">Conversational Design</a></h4>
         <p>Hall, Erika</p>
       </li>
 
       <li>
-        <h4>Empire of the Summer Moon</h4>
+        <h4><a href="{{ bookshop }}/9781416591061">Empire of the Summer Moon</a></h4>
         <p>Gwynne, S.C.</p>
       </li>
 
       <li>
-        <h4>Ready Player Two (Ready Player One, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781524761349">Ready Player Two (Ready Player One, #2)</a></h4>
         <p>Cline, Ernest</p>
       </li>
 
       <li>
-        <h4>The Stars in Our Pockets: Getting Lost and Sometimes Found in the Digital Age</h4>
+        <h4><a href="{{ bookshop }}/9780807036754">The Stars in Our Pockets: Getting Lost and Sometimes Found in the Digital Age</a></h4>
         <p>Axelrod, Howard</p>
       </li>
 
       <li>
-        <h4>Assassin's Fate (The Fitz and the Fool, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780593725481">Assassin's Fate (The Fitz and the Fool, #3)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>The Chronicles of Narnia (The Chronicles of Narnia, #1-7)</h4>
+        <h4><a href="{{ bookshop_search }}The+Chronicles+of+Narnia+Lewis%2C+C.S.">The Chronicles of Narnia (The Chronicles of Narnia, #1-7)</a></h4>
         <p>Lewis, C.S.</p>
       </li>
 
       <li>
-        <h4>Fool's Quest (The Fitz and the Fool, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780593725474">Fool's Quest (The Fitz and the Fool, #2)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>Fool's Assassin (The Fitz and the Fool, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780553392944">Fool's Assassin (The Fitz and the Fool, #1)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>Play Bigger: How Pirates, Dreamers, and Innovators Create and Dominate Markets</h4>
+        <h4><a href="{{ bookshop }}/9780062407610">Play Bigger: How Pirates, Dreamers, and Innovators Create and Dominate Markets</a></h4>
         <p>Ramadan, Al</p>
       </li>
 
       <li>
-        <h4>Children of Virtue and Vengeance (Legacy of Orïsha, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250247230">Children of Virtue and Vengeance (Legacy of Orïsha, #2)</a></h4>
         <p>Adeyemi, Tomi</p>
       </li>
 
       <li>
-        <h4>Children of Blood and Bone (Legacy of Orïsha, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250294623">Children of Blood and Bone (Legacy of Orïsha, #1)</a></h4>
         <p>Adeyemi, Tomi</p>
       </li>
 
       <li>
-        <h4>Dragon Teeth</h4>
+        <h4><a href="{{ bookshop }}/9780062473387">Dragon Teeth</a></h4>
         <p>Crichton, Michael</p>
       </li>
 
       <li>
-        <h4>Gingerbread</h4>
+        <h4><a href="{{ bookshop }}/9781594634666">Gingerbread</a></h4>
         <p>Oyeyemi, Helen</p>
       </li>
 
       <li>
-        <h4>The Shape of Design</h4>
+        <h4><a href="{{ bookshop_search }}The+Shape+of+Design+Chimero%2C+Frank">The Shape of Design</a></h4>
         <p>Chimero, Frank</p>
       </li>
 
       <li>
-        <h4>A Court of Thorns and Roses (A Court of Thorns and Roses, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781635575569">A Court of Thorns and Roses (A Court of Thorns and Roses, #1)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>A Promised Land</h4>
+        <h4><a href="{{ bookshop }}/9781524763176">A Promised Land</a></h4>
         <p>Obama, Barack</p>
       </li>
     </ul>
@@ -1021,222 +1026,222 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2020">2020</h2>
     <ul>
       <li>
-        <h4>Cursed</h4>
+        <h4><a href="{{ bookshop }}/9781534425354">Cursed</a></h4>
         <p>Wheeler, Thomas</p>
       </li>
 
       <li>
-        <h4>Network Effect (The Murderbot Diaries, #5)</h4>
+        <h4><a href="{{ bookshop }}/9781250229854">Network Effect (The Murderbot Diaries, #5)</a></h4>
         <p>Wells, Martha</p>
       </li>
 
       <li>
-        <h4>The Fellowship of the Ring (The Lord of the Rings, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780547928210">The Fellowship of the Ring (The Lord of the Rings, #1)</a></h4>
         <p>Tolkien, J.R.R.</p>
       </li>
 
       <li>
-        <h4>Between the World and Me</h4>
+        <h4><a href="{{ bookshop }}/9780812983814">Between the World and Me</a></h4>
         <p>Coates, Ta-Nehisi</p>
       </li>
 
       <li>
-        <h4>Magic for Liars</h4>
+        <h4><a href="{{ bookshop }}/9781250174628">Magic for Liars</a></h4>
         <p>Gailey, Sarah</p>
       </li>
 
       <li>
-        <h4>Ignite the Stars (Ignite the Stars, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780807536278">Ignite the Stars (Ignite the Stars, #1)</a></h4>
         <p>Milan, Maura</p>
       </li>
 
       <li>
-        <h4>War Girls (War Girls #1)</h4>
+        <h4><a href="{{ bookshop }}/9780451481696">War Girls (War Girls #1)</a></h4>
         <p>Onyebuchi, Tochi</p>
       </li>
 
       <li>
-        <h4>Demand-Side Sales 101: Stop Selling and Help Your Customers Make Progress</h4>
+        <h4><a href="{{ bookshop }}/9781544509969">Demand-Side Sales 101: Stop Selling and Help Your Customers Make Progress</a></h4>
         <p>Moesta, Bob</p>
       </li>
 
       <li>
-        <h4>Exit Strategy (The Murderbot Diaries, #4)</h4>
+        <h4><a href="{{ bookshop }}/9781250191854">Exit Strategy (The Murderbot Diaries, #4)</a></h4>
         <p>Wells, Martha</p>
       </li>
 
       <li>
-        <h4>Rogue Protocol (The Murderbot Diaries, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781250191786">Rogue Protocol (The Murderbot Diaries, #3)</a></h4>
         <p>Wells, Martha</p>
       </li>
 
       <li>
-        <h4>Artificial Condition (The Murderbot Diaries, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250186935">Artificial Condition (The Murderbot Diaries, #2)</a></h4>
         <p>Wells, Martha</p>
       </li>
 
       <li>
-        <h4>The Priory of the Orange Tree (The Roots of Chaos, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781635570304">The Priory of the Orange Tree (The Roots of Chaos, #1)</a></h4>
         <p>Shannon, Samantha</p>
       </li>
 
       <li>
-        <h4>All Systems Red (The Murderbot Diaries, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780765397539">All Systems Red (The Murderbot Diaries, #1)</a></h4>
         <p>Wells, Martha</p>
       </li>
 
       <li>
-        <h4>Mr. Penumbra's 24-Hour Bookstore (Mr. Penumbra's 24-Hour Bookstore, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780374708832">Mr. Penumbra's 24-Hour Bookstore (Mr. Penumbra's 24-Hour Bookstore, #1)</a></h4>
         <p>Sloan, Robin</p>
       </li>
 
       <li>
-        <h4>The Negro Leagues: Celebrating Baseball's Unsung Heroes</h4>
+        <h4><a href="{{ bookshop }}/9781512427530">The Negro Leagues: Celebrating Baseball's Unsung Heroes</a></h4>
         <p>Doeden, Matt</p>
       </li>
 
       <li>
-        <h4>Aurora Burning (The Aurora Cycle #2)</h4>
+        <h4><a href="{{ bookshop }}/9781524720940">Aurora Burning (The Aurora Cycle #2)</a></h4>
         <p>Kaufman, Amie</p>
       </li>
 
       <li>
-        <h4>Born a Crime: Stories from a South African Childhood</h4>
+        <h4><a href="{{ bookshop }}/9781984897534">Born a Crime: Stories from a South African Childhood</a></h4>
         <p>Noah, Trevor</p>
       </li>
 
       <li>
-        <h4>Tomorrow Will Be Different: Love, Loss, and the Fight for Trans Equality</h4>
+        <h4><a href="{{ bookshop }}/9781524761486">Tomorrow Will Be Different: Love, Loss, and the Fight for Trans Equality</a></h4>
         <p>McBride, Sarah</p>
       </li>
 
       <li>
-        <h4>Bossypants</h4>
+        <h4><a href="{{ bookshop }}/9780316056878">Bossypants</a></h4>
         <p>Fey, Tina</p>
       </li>
 
       <li>
-        <h4>Transforming the Intense Child: An Experiential Guide for Learning and Implementing the Nurtured Heart Approach</h4>
+        <h4><a href="{{ bookshop }}/9780982671481">Transforming the Intense Child: An Experiential Guide for Learning and Implementing the Nurtured Heart Approach</a></h4>
         <p>Glasser, Howard</p>
       </li>
 
       <li>
-        <h4>Cross-Cultural Design</h4>
+        <h4><a href="{{ bookshop }}/9781937557867">Cross-Cultural Design</a></h4>
         <p>Akpem, Senongo</p>
       </li>
 
       <li>
-        <h4>Tristan Strong Punches a Hole in the Sky (Tristan Strong, #1)</h4>
+        <h4><a href="{{ bookshop }}/9798855084474">Tristan Strong Punches a Hole in the Sky (Tristan Strong, #1)</a></h4>
         <p>Mbalia, Kwame</p>
       </li>
 
       <li>
-        <h4>So You Want to Talk About Race</h4>
+        <h4><a href="{{ bookshop }}/9780593314623">So You Want to Talk About Race</a></h4>
         <p>Oluo, Ijeoma</p>
       </li>
 
       <li>
-        <h4>Astrophysics for People in a Hurry</h4>
+        <h4><a href="{{ bookshop }}/9780393609394">Astrophysics for People in a Hurry</a></h4>
         <p>Tyson, Neil deGrasse</p>
       </li>
 
       <li>
-        <h4>The Stone Sky (The Broken Earth, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780316229241">The Stone Sky (The Broken Earth, #3)</a></h4>
         <p>Jemisin, N.K.</p>
       </li>
 
       <li>
-        <h4>The Obelisk Gate (The Broken Earth, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780316229265">The Obelisk Gate (The Broken Earth, #2)</a></h4>
         <p>Jemisin, N.K.</p>
       </li>
 
       <li>
-        <h4>Pet</h4>
+        <h4><a href="{{ bookshop }}/9780593175446">Pet</a></h4>
         <p>Emezi, Akwaeke</p>
       </li>
 
       <li>
-        <h4>Stamped: Racism, Antiracism, and You</h4>
+        <h4><a href="{{ bookshop }}/9798855111736">Stamped: Racism, Antiracism, and You</a></h4>
         <p>Reynolds, Jason</p>
       </li>
 
       <li>
-        <h4>Starsight (Skyward, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780399555848">Starsight (Skyward, #2)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Skyward (Skyward, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780399555800">Skyward (Skyward, #1)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Ancillary Justice (Imperial Radch, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780316246620">Ancillary Justice (Imperial Radch, #1)</a></h4>
         <p>Leckie, Ann</p>
       </li>
 
       <li>
-        <h4>Fahrenheit 451</h4>
+        <h4><a href="{{ bookshop_search }}Fahrenheit+451+Bradbury%2C+Ray">Fahrenheit 451</a></h4>
         <p>Bradbury, Ray</p>
       </li>
 
       <li>
-        <h4>Talking to Strangers: What We Should Know About the People We Don't Know</h4>
+        <h4><a href="{{ bookshop }}/9781549150333">Talking to Strangers: What We Should Know About the People We Don't Know</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts</h4>
+        <h4><a href="{{ bookshop }}/9780735216358">Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts</a></h4>
         <p>Duke, Annie</p>
       </li>
 
       <li>
-        <h4>Armada</h4>
+        <h4><a href="{{ bookshop }}/9780804137270">Armada</a></h4>
         <p>Cline, Ernest</p>
       </li>
 
       <li>
-        <h4>Thick as Thieves (The Queen's Thief, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780062568267">Thick as Thieves (The Queen's Thief, #5)</a></h4>
         <p>Turner, Megan Whalen</p>
       </li>
 
       <li>
-        <h4>Artemis</h4>
+        <h4><a href="{{ bookshop }}/9780553448146">Artemis</a></h4>
         <p>Weir, Andy</p>
       </li>
 
       <li>
-        <h4>A Conspiracy of Kings (The Queen's Thief, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780061870941">A Conspiracy of Kings (The Queen's Thief, #4)</a></h4>
         <p>Turner, Megan Whalen</p>
       </li>
 
       <li>
-        <h4>The King of Attolia (The Queen's Thief, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780061968433">The King of Attolia (The Queen's Thief, #3)</a></h4>
         <p>Turner, Megan Whalen</p>
       </li>
 
       <li>
-        <h4>How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease</h4>
+        <h4><a href="{{ bookshop }}/9781250363725">How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease</a></h4>
         <p>Greger, Michael</p>
       </li>
 
       <li>
-        <h4>The Queen of Attolia (The Queen's Thief #2)</h4>
+        <h4><a href="{{ bookshop }}/9781538428429">The Queen of Attolia (The Queen's Thief #2)</a></h4>
         <p>Turner, Megan Whalen</p>
       </li>
 
       <li>
-        <h4>The Thief (The Queen's Thief, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780062642967">The Thief (The Queen's Thief, #1)</a></h4>
         <p>Turner, Megan Whalen</p>
       </li>
 
       <li>
-        <h4>The Omnivore's Dilemma: A Natural History of Four Meals</h4>
+        <h4><a href="{{ bookshop }}/9780143038580">The Omnivore's Dilemma: A Natural History of Four Meals</a></h4>
         <p>Pollan, Michael</p>
       </li>
 
       <li>
-        <h4>The Explosive Child: A New Approach for Understanding and Parenting Easily Frustrated, Chronically Inflexible Children</h4>
+        <h4><a href="{{ bookshop }}/9780063092464">The Explosive Child: A New Approach for Understanding and Parenting Easily Frustrated, Chronically Inflexible Children</a></h4>
         <p>Greene, Ross W.</p>
       </li>
     </ul>
@@ -1245,162 +1250,162 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2019">2019</h2>
     <ul>
       <li>
-        <h4>The Hazel Wood (The Hazel Wood #1)</h4>
+        <h4><a href="{{ bookshop }}/9781427293534">The Hazel Wood (The Hazel Wood #1)</a></h4>
         <p>Albert, Melissa</p>
       </li>
 
       <li>
-        <h4>Steal Like an Artist: 10 Things Nobody Told You About Being Creative</h4>
+        <h4><a href="{{ bookshop }}/9780761169253">Steal Like an Artist: 10 Things Nobody Told You About Being Creative</a></h4>
         <p>Kleon, Austin</p>
       </li>
 
       <li>
-        <h4>The Power</h4>
+        <h4><a href="{{ bookshop }}/9780316547604">The Power</a></h4>
         <p>Alderman, Naomi</p>
       </li>
 
       <li>
-        <h4>Ready Player One (Ready Player One, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780307887436">Ready Player One (Ready Player One, #1)</a></h4>
         <p>Cline, Ernest</p>
       </li>
 
       <li>
-        <h4>Swing</h4>
+        <h4><a href="{{ bookshop }}/9780310761877">Swing</a></h4>
         <p>Alexander, Kwame</p>
       </li>
 
       <li>
-        <h4>The Year of Less: How I Stopped Shopping, Gave Away My Belongings, and Discovered Life Is Worth More Than Anything You Can Buy in a Store</h4>
+        <h4><a href="{{ bookshop }}/9781401953515">The Year of Less: How I Stopped Shopping, Gave Away My Belongings, and Discovered Life Is Worth More Than Anything You Can Buy in a Store</a></h4>
         <p>Flanders, Cait</p>
       </li>
 
       <li>
-        <h4>Outcomes Over Output: Why customer behavior is the key metric for business success</h4>
+        <h4><a href="{{ bookshop }}/9781091173262">Outcomes Over Output: Why customer behavior is the key metric for business success</a></h4>
         <p>Seiden, Josh</p>
       </li>
 
       <li>
-        <h4>Happiness: Essential Mindfulness Practices</h4>
+        <h4><a href="{{ bookshop }}/9781935209027">Happiness: Essential Mindfulness Practices</a></h4>
         <p>Thich Nhat Hanh</p>
       </li>
 
       <li>
-        <h4>Pricing Design</h4>
+        <h4><a href="{{ bookshop }}/9781962491020">Pricing Design</a></h4>
         <p>Mall, Dan</p>
       </li>
 
       <li>
-        <h4>The Miracle of Mindfulness: An Introduction to the Practice of Meditation</h4>
+        <h4><a href="{{ bookshop }}/9780807012390">The Miracle of Mindfulness: An Introduction to the Practice of Meditation</a></h4>
         <p>Thich Nhat Hanh</p>
       </li>
 
       <li>
-        <h4>Tess of the Road (Tess of the Road, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781101931318">Tess of the Road (Tess of the Road, #1)</a></h4>
         <p>Hartman, Rachel</p>
       </li>
 
       <li>
-        <h4>Station Eleven</h4>
+        <h4><a href="{{ bookshop }}/9780804172448">Station Eleven</a></h4>
         <p>Mandel, Emily St. John</p>
       </li>
 
       <li>
-        <h4>The Art of Stopping Time: Practical Mindfulness for Busy People</h4>
+        <h4><a href="{{ bookshop }}/9781623369095">The Art of Stopping Time: Practical Mindfulness for Busy People</a></h4>
         <p>Shojai, Pedram</p>
       </li>
 
       <li>
-        <h4>Aurora Rising (The Aurora Cycle, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781524720988">Aurora Rising (The Aurora Cycle, #1)</a></h4>
         <p>Kaufman, Amie</p>
       </li>
 
       <li>
-        <h4>Trail of Lightning (The Sixth World, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781534413504">Trail of Lightning (The Sixth World, #1)</a></h4>
         <p>Roanhorse, Rebecca</p>
       </li>
 
       <li>
-        <h4>The Handmaid's Tale</h4>
+        <h4><a href="{{ bookshop }}/9780385490818">The Handmaid's Tale</a></h4>
         <p>Atwood, Margaret</p>
       </li>
 
       <li>
-        <h4>Hogwarts: An Incomplete and Unreliable Guide (Pottermore Presents, #3)</h4>
+        <h4><a href="{{ bookshop_search }}Hogwarts%3A+An+Incomplete+and+Unreliable+Guide+Rowling%2C+J.K.">Hogwarts: An Incomplete and Unreliable Guide (Pottermore Presents, #3)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists (Pottermore Presents, #2)</h4>
+        <h4><a href="{{ bookshop_search }}Short+Stories+from+Hogwarts+of+Power%2C+Politics+and+Pesky+Poltergeists+Rowling%2C+J.K.">Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists (Pottermore Presents, #2)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies (Pottermore Presents, #1)</h4>
+        <h4><a href="{{ bookshop_search }}Short+Stories+from+Hogwarts+of+Heroism%2C+Hardship+and+Dangerous+Hobbies+Rowling%2C+J.K.">Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies (Pottermore Presents, #1)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Fantastic Beasts and Where to Find Them</h4>
+        <h4><a href="{{ bookshop }}/9781608879366">Fantastic Beasts and Where to Find Them</a></h4>
         <p>Scamander, Newt</p>
       </li>
 
       <li>
-        <h4>When: The Scientific Secrets of Perfect Timing</h4>
+        <h4><a href="{{ bookshop }}/9780735210622">When: The Scientific Secrets of Perfect Timing</a></h4>
         <p>Pink, Daniel H.</p>
       </li>
 
       <li>
-        <h4>10% Happier</h4>
+        <h4><a href="{{ bookshop }}/9780062265425">10% Happier</a></h4>
         <p>Harris, Dan</p>
       </li>
 
       <li>
-        <h4>Range: Why Generalists Triumph in a Specialized World</h4>
+        <h4><a href="{{ bookshop }}/9780735214484">Range: Why Generalists Triumph in a Specialized World</a></h4>
         <p>Epstein, David</p>
       </li>
 
       <li>
-        <h4>The Fifth Season (The Broken Earth, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780316229296">The Fifth Season (The Broken Earth, #1)</a></h4>
         <p>Jemisin, N.K.</p>
       </li>
 
       <li>
-        <h4>The Making of a Manager: What to Do When Everyone Looks to You</h4>
+        <h4><a href="{{ bookshop }}/9780735219564">The Making of a Manager: What to Do When Everyone Looks to You</a></h4>
         <p>Zhuo, Julie</p>
       </li>
 
       <li>
-        <h4>Simply Said: Communicating Better at Work and Beyond</h4>
+        <h4><a href="{{ bookshop }}/9781119285298">Simply Said: Communicating Better at Work and Beyond</a></h4>
         <p>Sullivan, Jay</p>
       </li>
 
       <li>
-        <h4>Kingdom of Ash (Throne of Glass, #7)</h4>
+        <h4><a href="{{ bookshop }}/9781978659070">Kingdom of Ash (Throne of Glass, #7)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>Tower of Dawn (Throne of Glass, #6)</h4>
+        <h4><a href="{{ bookshop }}/9781639731053">Tower of Dawn (Throne of Glass, #6)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>Empire of Storms (Throne of Glass, #5)</h4>
+        <h4><a href="{{ bookshop }}/9781639731039">Empire of Storms (Throne of Glass, #5)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>Queen of Shadows (Throne of Glass, #4)</h4>
+        <h4><a href="{{ bookshop }}/9781639731015">Queen of Shadows (Throne of Glass, #4)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>Crown of Midnight (Throne of Glass, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781619630628">Crown of Midnight (Throne of Glass, #2)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>Heir of Fire (Throne of Glass, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781639730995">Heir of Fire (Throne of Glass, #3)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
     </ul>
@@ -1409,82 +1414,82 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2018">2018</h2>
     <ul>
       <li>
-        <h4>Becoming</h4>
+        <h4><a href="{{ bookshop }}/9781524763145">Becoming</a></h4>
         <p>Obama, Michelle</p>
       </li>
 
       <li>
-        <h4>Circe</h4>
+        <h4><a href="{{ bookshop }}/9780316556323">Circe</a></h4>
         <p>Miller, Madeline</p>
       </li>
 
       <li>
-        <h4>Throne of Glass (Throne of Glass, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781639730957">Throne of Glass (Throne of Glass, #1)</a></h4>
         <p>Maas, Sarah J.</p>
       </li>
 
       <li>
-        <h4>The Good Neighbor: The Life and Work of Fred Rogers</h4>
+        <h4><a href="{{ bookshop }}/9781419735165">The Good Neighbor: The Life and Work of Fred Rogers</a></h4>
         <p>King, Maxwell</p>
       </li>
 
       <li>
-        <h4>Writing for Designers</h4>
+        <h4><a href="{{ bookshop }}/9781952616921">Writing for Designers</a></h4>
         <p>Kubie, Scott</p>
       </li>
 
       <li>
-        <h4>The Culture Code: The Secrets of Highly Successful Groups</h4>
+        <h4><a href="{{ bookshop }}/9780804176989">The Culture Code: The Secrets of Highly Successful Groups</a></h4>
         <p>Coyle, Daniel</p>
       </li>
 
       <li>
-        <h4>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h4>
+        <h4><a href="{{ bookshop }}/9780735211292">Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</a></h4>
         <p>Clear, James</p>
       </li>
 
       <li>
-        <h4>Strong Fathers, Strong Daughters: 10 Secrets Every Father Should Know</h4>
+        <h4><a href="{{ bookshop }}/9781621573302">Strong Fathers, Strong Daughters: 10 Secrets Every Father Should Know</a></h4>
         <p>Meeker, Meg</p>
       </li>
 
       <li>
-        <h4>Make Time: How to Focus on What Matters Every Day</h4>
+        <h4><a href="{{ bookshop }}/9780525572428">Make Time: How to Focus on What Matters Every Day</a></h4>
         <p>Knapp, Jake</p>
       </li>
 
       <li>
-        <h4>Simply Said</h4>
+        <h4><a href="{{ bookshop }}/9781119285298">Simply Said</a></h4>
         <p>Sullivan, Jay</p>
       </li>
 
       <li>
-        <h4>Shoe Dog</h4>
+        <h4><a href="{{ bookshop }}/9781501135927">Shoe Dog</a></h4>
         <p>Knight, Phil</p>
       </li>
 
       <li>
-        <h4>The Competitive Runner's Handbook: The Bestselling Guide to Running 5Ks through Marathons</h4>
+        <h4><a href="{{ bookshop }}/9780140469905">The Competitive Runner's Handbook: The Bestselling Guide to Running 5Ks through Marathons</a></h4>
         <p>Glover, Bob</p>
       </li>
 
       <li>
-        <h4>Mistborn: The Wax and Wayne Series: The Alloy of Law, Shadows of Self, The Bands of Mourning</h4>
+        <h4><a href="{{ bookshop }}/9781250868282">Mistborn: The Wax and Wayne Series: The Alloy of Law, Shadows of Self, The Bands of Mourning</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>An Everyone Culture: Becoming a Deliberately Developmental Organization</h4>
+        <h4><a href="{{ bookshop }}/9781625278623">An Everyone Culture: Becoming a Deliberately Developmental Organization</a></h4>
         <p>Kegan, Robert</p>
       </li>
 
       <li>
-        <h4>How Will You Measure Your Life?</h4>
+        <h4><a href="{{ bookshop }}/9781633692565">How Will You Measure Your Life?</a></h4>
         <p>Christensen, Clayton M.</p>
       </li>
 
       <li>
-        <h4>Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth</h4>
+        <h4><a href="{{ bookshop }}/9780060763282">Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth</a></h4>
         <p>Eker, T. Harv</p>
       </li>
     </ul>
@@ -1493,87 +1498,87 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2017">2017</h2>
     <ul>
       <li>
-        <h4>Oathbringer (The Stormlight Archive, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780765365293">Oathbringer (The Stormlight Archive, #3)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Good to Great: Why Some Companies Make the Leap...And Others Don't</h4>
+        <h4><a href="{{ bookshop }}/9780066620992">Good to Great: Why Some Companies Make the Leap...And Others Don't</a></h4>
         <p>Collins, Jim</p>
       </li>
 
       <li>
-        <h4>Confessions of a Public Speaker</h4>
+        <h4><a href="{{ bookshop }}/9781449301958">Confessions of a Public Speaker</a></h4>
         <p>Berkun, Scott</p>
       </li>
 
       <li>
-        <h4>Turn the Ship Around!: A True Story of Turning Followers into Leaders</h4>
+        <h4><a href="{{ bookshop }}/9781591846406">Turn the Ship Around!: A True Story of Turning Followers into Leaders</a></h4>
         <p>Marquet, L. David</p>
       </li>
 
       <li>
-        <h4>Thinking in Systems: A Primer</h4>
+        <h4><a href="{{ bookshop }}/9781603580557">Thinking in Systems: A Primer</a></h4>
         <p>Meadows, Donella H.</p>
       </li>
 
       <li>
-        <h4>Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</h4>
+        <h4><a href="{{ bookshop }}/9781501121777">Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</a></h4>
         <p>Knapp, Jake</p>
       </li>
 
       <li>
-        <h4>Morning Star (Red Rising, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780345539861">Morning Star (Red Rising, #3)</a></h4>
         <p>Brown, Pierce</p>
       </li>
 
       <li>
-        <h4>Rise of the DEO: Leadership by Design</h4>
+        <h4><a href="{{ bookshop_search }}Rise+of+the+DEO%3A+Leadership+by+Design+Giudice%2C+Maria">Rise of the DEO: Leadership by Design</a></h4>
         <p>Giudice, Maria</p>
       </li>
 
       <li>
-        <h4>Assassin's Quest (Farseer Trilogy, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780593722848">Assassin's Quest (Farseer Trilogy, #3)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>Royal Assassin (Farseer Trilogy, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780593722831">Royal Assassin (Farseer Trilogy, #2)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>Assassin's Apprentice (Farseer Trilogy, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780593722824">Assassin's Apprentice (Farseer Trilogy, #1)</a></h4>
         <p>Hobb, Robin</p>
       </li>
 
       <li>
-        <h4>Golden Son (Red Rising Saga, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780345539830">Golden Son (Red Rising Saga, #2)</a></h4>
         <p>Brown, Pierce</p>
       </li>
 
       <li>
-        <h4>High Output Management</h4>
+        <h4><a href="{{ bookshop }}/9780679762881">High Output Management</a></h4>
         <p>Grove, Andrew S.</p>
       </li>
 
       <li>
-        <h4>Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</h4>
+        <h4><a href="{{ bookshop }}/9781250235374">Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity</a></h4>
         <p>Scott, Kim Malone</p>
       </li>
 
       <li>
-        <h4>How I Raised Myself From Failure</h4>
+        <h4><a href="{{ bookshop }}/9780671794378">How I Raised Myself From Failure</a></h4>
         <p>Bettger, Frank</p>
       </li>
 
       <li>
-        <h4>Words of Radiance (The Stormlight Archive, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250166531">Words of Radiance (The Stormlight Archive, #2)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Thanks for the Feedback: The Science and Art of Receiving Feedback Well</h4>
+        <h4><a href="{{ bookshop }}/9780143127130">Thanks for the Feedback: The Science and Art of Receiving Feedback Well</a></h4>
         <p>Stone, Douglas</p>
       </li>
     </ul>
@@ -1582,207 +1587,207 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2016">2016</h2>
     <ul>
       <li>
-        <h4>Prince Caspian (Chronicles of Narnia, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780064409445">Prince Caspian (Chronicles of Narnia, #4)</a></h4>
         <p>Lewis, C.S.</p>
       </li>
 
       <li>
-        <h4>Red Rising (Red Rising Saga, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780345539809">Red Rising (Red Rising Saga, #1)</a></h4>
         <p>Brown, Pierce</p>
       </li>
 
       <li>
-        <h4>Jonathan Strange & Mr Norrell</h4>
+        <h4><a href="{{ bookshop }}/9781635576726">Jonathan Strange & Mr Norrell</a></h4>
         <p>Clarke, Susanna</p>
       </li>
 
       <li>
-        <h4>Competing Against Luck: The Story of Innovation and Customer Choice</h4>
+        <h4><a href="{{ bookshop }}/9780062565235">Competing Against Luck: The Story of Innovation and Customer Choice</a></h4>
         <p>Christensen, Clayton M.</p>
       </li>
 
       <li>
-        <h4>Turn the Ship Around!: A True Story of Turning Followers into Leaders</h4>
+        <h4><a href="{{ bookshop }}/9781591846406">Turn the Ship Around!: A True Story of Turning Followers into Leaders</a></h4>
         <p>Marquet, L. David</p>
       </li>
 
       <li>
-        <h4>How to Fly a Horse: The Secret History of Creation, Invention, and Discovery</h4>
+        <h4><a href="{{ bookshop }}/9780804170062">How to Fly a Horse: The Secret History of Creation, Invention, and Discovery</a></h4>
         <p>Ashton, Kevin</p>
       </li>
 
       <li>
-        <h4>The Horse and His Boy (Chronicles of Narnia, #3) (Chronicles of Narnia, #3) (Publication Order, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780064405010">The Horse and His Boy (Chronicles of Narnia, #3) (Chronicles of Narnia, #3) (Publication Order, #5)</a></h4>
         <p>Lewis, C.S.</p>
       </li>
 
       <li>
-        <h4>The Royal Ranger (Ranger's Apprentice, #12)</h4>
+        <h4><a href="{{ bookshop }}/9781524741433">The Royal Ranger (Ranger's Apprentice, #12)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Lion, the Witch and the Wardrobe (The Chronicles of Narnia, #2) (The Chronicles of Narnia, #2) (Publication Order, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780063516250">The Lion, the Witch and the Wardrobe (The Chronicles of Narnia, #2) (The Chronicles of Narnia, #2) (Publication Order, #1)</a></h4>
         <p>Lewis, C.S.</p>
       </li>
 
       <li>
-        <h4>Intercom on Product Management</h4>
+        <h4><a href="{{ bookshop_search }}Intercom+on+Product+Management+Inc%2C+Intercom">Intercom on Product Management</a></h4>
         <p>Inc, Intercom</p>
       </li>
 
       <li>
-        <h4>The Magician's Nephew (Chronicles of Narnia, #1) (Chronicles of Narnia, #1) (Publication Order, #6)</h4>
+        <h4><a href="{{ bookshop }}/9780063509306">The Magician's Nephew (Chronicles of Narnia, #1) (Chronicles of Narnia, #1) (Publication Order, #6)</a></h4>
         <p>Lewis, C.S.</p>
       </li>
 
       <li>
-        <h4>The Silmarillion</h4>
+        <h4><a href="{{ bookshop }}/9780345325815">The Silmarillion</a></h4>
         <p>Tolkien, J.R.R.</p>
       </li>
 
       <li>
-        <h4>The Kings of Clonmel (Ranger's Apprentice, #8)</h4>
+        <h4><a href="{{ bookshop }}/9780142418574">The Kings of Clonmel (Ranger's Apprentice, #8)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Wolf of Wall Street</h4>
+        <h4><a href="{{ bookshop }}/9780553384772">The Wolf of Wall Street</a></h4>
         <p>Belfort, Jordan</p>
       </li>
 
       <li>
-        <h4>How to Talk So Kids Will Listen & Listen So Kids Will Talk</h4>
+        <h4><a href="{{ bookshop }}/9781442362918">How to Talk So Kids Will Listen & Listen So Kids Will Talk</a></h4>
         <p>Faber, Adele</p>
       </li>
 
       <li>
-        <h4>The Big Short: Inside the Doomsday Machine</h4>
+        <h4><a href="{{ bookshop }}/9780393338829">The Big Short: Inside the Doomsday Machine</a></h4>
         <p>Lewis, Michael</p>
       </li>
 
       <li>
-        <h4>Station Eleven</h4>
+        <h4><a href="{{ bookshop }}/9780804172448">Station Eleven</a></h4>
         <p>Mandel, Emily St. John</p>
       </li>
 
       <li>
-        <h4>The Lost Stories (Ranger's Apprentice, #11)</h4>
+        <h4><a href="{{ bookshop }}/9780142421956">The Lost Stories (Ranger's Apprentice, #11)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Forever War</h4>
+        <h4><a href="{{ bookshop }}/9780307270344">The Forever War</a></h4>
         <p>Filkins, Dexter</p>
       </li>
 
       <li>
-        <h4>The Lost World (Jurassic Park, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780345538994">The Lost World (Jurassic Park, #2)</a></h4>
         <p>Crichton, Michael</p>
       </li>
 
       <li>
-        <h4>Jurassic Park (Jurassic Park, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780345538987">Jurassic Park (Jurassic Park, #1)</a></h4>
         <p>Crichton, Michael</p>
       </li>
 
       <li>
-        <h4>The Emperor of Nihon-Ja (Ranger's Apprentice #10)</h4>
+        <h4><a href="{{ bookshop }}/9780142418598">The Emperor of Nihon-Ja (Ranger's Apprentice #10)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>How I Raised Myself from Failure to Success in Selling</h4>
+        <h4><a href="{{ bookshop }}/9780671794378">How I Raised Myself from Failure to Success in Selling</a></h4>
         <p>Bettger, Frank</p>
       </li>
 
       <li>
-        <h4>Unbroken: A World War II Story of Survival, Resilience and Redemption</h4>
+        <h4><a href="{{ bookshop }}/9780812974492">Unbroken: A World War II Story of Survival, Resilience and Redemption</a></h4>
         <p>Hillenbrand, Laura</p>
       </li>
 
       <li>
-        <h4>Halt's Peril (Ranger's Apprentice, #9)</h4>
+        <h4><a href="{{ bookshop }}/9780142418581">Halt's Peril (Ranger's Apprentice, #9)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>Furiously Happy: A Funny Book About Horrible Things</h4>
+        <h4><a href="{{ bookshop }}/9781250077028">Furiously Happy: A Funny Book About Horrible Things</a></h4>
         <p>Lawson, Jenny</p>
       </li>
 
       <li>
-        <h4>Erak's Ransom (Ranger's Aprentice, #7)</h4>
+        <h4><a href="{{ bookshop }}/9780142415252">Erak's Ransom (Ranger's Aprentice, #7)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Siege of Macindaw (Ranger's Apprentice, #6)</h4>
+        <h4><a href="{{ bookshop }}/9780142415245">The Siege of Macindaw (Ranger's Apprentice, #6)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Sorcerer of the North (Ranger's Apprentice, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780142414293">The Sorcerer of the North (Ranger's Apprentice, #5)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>Outliers: The Story of Success</h4>
+        <h4><a href="{{ bookshop }}/9780316017930">Outliers: The Story of Success</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>Blink: The Power of Thinking Without Thinking</h4>
+        <h4><a href="{{ bookshop }}/9780316172325">Blink: The Power of Thinking Without Thinking</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</h4>
+        <h4><a href="{{ bookshop }}/9781982137274">The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change</a></h4>
         <p>Covey, Stephen R.</p>
       </li>
 
       <li>
-        <h4>Born Standing Up: A Comic's Life</h4>
+        <h4><a href="{{ bookshop }}/9781416553656">Born Standing Up: A Comic's Life</a></h4>
         <p>Martin, Steve</p>
       </li>
 
       <li>
-        <h4>The Art of Fielding</h4>
+        <h4><a href="{{ bookshop }}/9780316126670">The Art of Fielding</a></h4>
         <p>Harbach, Chad</p>
       </li>
 
       <li>
-        <h4>The Boys of Summer</h4>
+        <h4><a href="{{ bookshop }}/9780060883966">The Boys of Summer</a></h4>
         <p>Kahn, Roger</p>
       </li>
 
       <li>
-        <h4>Thirteen Reasons Why</h4>
+        <h4><a href="{{ bookshop }}/9781595141880">Thirteen Reasons Why</a></h4>
         <p>Asher, Jay</p>
       </li>
 
       <li>
-        <h4>The Battle for Skandia (Ranger's Apprentice, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780142413401">The Battle for Skandia (Ranger's Apprentice, #4)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>Designing Products People Love: How Great Designers Create Successful Products</h4>
+        <h4><a href="{{ bookshop }}/9781491923672">Designing Products People Love: How Great Designers Create Successful Products</a></h4>
         <p>Hurff, Scott</p>
       </li>
 
       <li>
-        <h4>The Icebound Land (Ranger's Apprentice, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780142410752">The Icebound Land (Ranger's Apprentice, #3)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Burning Bridge (Ranger's Apprentice, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780142408421">The Burning Bridge (Ranger's Apprentice, #2)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Force Awakens (Star Wars: Novelizations #7)</h4>
+        <h4><a href="{{ bookshop }}/9781101966990">The Force Awakens (Star Wars: Novelizations #7)</a></h4>
         <p>Foster, Alan Dean</p>
       </li>
     </ul>
@@ -1791,377 +1796,377 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2015">2015</h2>
     <ul>
       <li>
-        <h4>Delivering Happiness: A Path to Profits, Passion, and Purpose</h4>
+        <h4><a href="{{ bookshop }}/9780446576222">Delivering Happiness: A Path to Profits, Passion, and Purpose</a></h4>
         <p>Hsieh, Tony</p>
       </li>
 
       <li>
-        <h4>Deep Work: Rules for Focused Success in a Distracted World</h4>
+        <h4><a href="{{ bookshop }}/9781455586691">Deep Work: Rules for Focused Success in a Distracted World</a></h4>
         <p>Newport, Cal</p>
       </li>
 
       <li>
-        <h4>Allegiant (Divergent, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780007444120">Allegiant (Divergent, #3)</a></h4>
         <p>Roth, Veronica</p>
       </li>
 
       <li>
-        <h4>The Bands of Mourning (Mistborn, #6)</h4>
+        <h4><a href="{{ bookshop }}/9780765378583">The Bands of Mourning (Mistborn, #6)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Shadows of Self (Mistborn, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780765378569">Shadows of Self (Mistborn, #5)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>The Alloy of Law (Mistborn, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780765368546">The Alloy of Law (Mistborn, #4)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>The Hero of Ages (Mistborn, #3)</h4>
+        <h4><a href="{{ bookshop }}/9781250318626">The Hero of Ages (Mistborn, #3)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Mistborn: The Final Empire (Mistborn, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250868282">Mistborn: The Final Empire (Mistborn, #1)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>The Well of Ascension (Mistborn, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250318572">The Well of Ascension (Mistborn, #2)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>The Wise Man's Fear (The Kingkiller Chronicle, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780756407919">The Wise Man's Fear (The Kingkiller Chronicle, #2)</a></h4>
         <p>Rothfuss, Patrick</p>
       </li>
 
       <li>
-        <h4>The Slow Regard of Silent Things (The Kingkiller Chronicle, #2.5)</h4>
+        <h4><a href="{{ bookshop }}/9780756411329">The Slow Regard of Silent Things (The Kingkiller Chronicle, #2.5)</a></h4>
         <p>Rothfuss, Patrick</p>
       </li>
 
       <li>
-        <h4>Nonviolent Communication: A Language of Life: Life-Changing Tools for Healthy Relationships</h4>
+        <h4><a href="{{ bookshop }}/9781892005281">Nonviolent Communication: A Language of Life: Life-Changing Tools for Healthy Relationships</a></h4>
         <p>Rosenberg, Marshall B.</p>
       </li>
 
       <li>
-        <h4>Mastery</h4>
+        <h4><a href="{{ bookshop }}/9780143124177">Mastery</a></h4>
         <p>Greene, Robert</p>
       </li>
 
       <li>
-        <h4>Insurgent (Divergent, #2)</h4>
+        <h4><a href="{{ bookshop_search }}Insurgent+Roth%2C+Veronica">Insurgent (Divergent, #2)</a></h4>
         <p>Roth, Veronica</p>
       </li>
 
       <li>
-        <h4>The Dip: A Little Book That Teaches You When to Quit</h4>
+        <h4><a href="{{ bookshop }}/9781101216347">The Dip: A Little Book That Teaches You When to Quit</a></h4>
         <p>Godin, Seth</p>
       </li>
 
       <li>
-        <h4>American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History</h4>
+        <h4><a href="{{ bookshop }}/9780062238863">American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History</a></h4>
         <p>Kyle, Chris</p>
       </li>
 
       <li>
-        <h4>Bird by Bird</h4>
+        <h4><a href="{{ bookshop }}/9781411474147">Bird by Bird</a></h4>
         <p>Lamott, Anne</p>
       </li>
 
       <li>
-        <h4>The Way of Kings (The Stormlight Archive, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780765365279">The Way of Kings (The Stormlight Archive, #1)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>The Name of the Wind (The Kingkiller Chronicle, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780756404741">The Name of the Wind (The Kingkiller Chronicle, #1)</a></h4>
         <p>Rothfuss, Patrick</p>
       </li>
 
       <li>
-        <h4>Visual Explanations: Images and Quantities, Evidence and Narrative</h4>
+        <h4><a href="{{ bookshop_search }}Visual+Explanations%3A+Images+and+Quantities%2C+Evidence+and+Narrative+Tufte%2C+Edward+R.">Visual Explanations: Images and Quantities, Evidence and Narrative</a></h4>
         <p>Tufte, Edward R.</p>
       </li>
 
       <li>
-        <h4>The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics</h4>
+        <h4><a href="{{ bookshop }}/9781410459541">The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics</a></h4>
         <p>Brown, Daniel James</p>
       </li>
 
       <li>
-        <h4>Moneyball</h4>
+        <h4><a href="{{ bookshop }}/9780393324815">Moneyball</a></h4>
         <p>Lewis, Michael</p>
       </li>
 
       <li>
-        <h4>How to Win Friends & Influence People</h4>
+        <h4><a href="{{ bookshop }}/9780671027032">How to Win Friends & Influence People</a></h4>
         <p>Carnegie, Dale</p>
       </li>
 
       <li>
-        <h4>Never Eat Alone: And Other Secrets to Success, One Relationship at a Time</h4>
+        <h4><a href="{{ bookshop }}/9780385346658">Never Eat Alone: And Other Secrets to Success, One Relationship at a Time</a></h4>
         <p>Ferrazzi, Keith</p>
       </li>
 
       <li>
-        <h4>The Tipping Point: How Little Things Can Make a Big Difference</h4>
+        <h4><a href="{{ bookshop }}/9780316346627">The Tipping Point: How Little Things Can Make a Big Difference</a></h4>
         <p>Gladwell, Malcolm</p>
       </li>
 
       <li>
-        <h4>Rework</h4>
+        <h4><a href="{{ bookshop }}/9780307463746">Rework</a></h4>
         <p>Fried, Jason</p>
       </li>
 
       <li>
-        <h4>Information Dashboard Design: The Effective Visual Communication of Data</h4>
+        <h4><a href="{{ bookshop }}/9781938377006">Information Dashboard Design: The Effective Visual Communication of Data</a></h4>
         <p>Few, Stephen</p>
       </li>
 
       <li>
-        <h4>Designing the Obvious: A Common Sense Approach to Web Application Design</h4>
+        <h4><a href="{{ bookshop_search }}Designing+the+Obvious%3A+A+Common+Sense+Approach+to+Web+Application+Design+Hoekman+Jr%2C+Robert">Designing the Obvious: A Common Sense Approach to Web Application Design</a></h4>
         <p>Hoekman Jr, Robert</p>
       </li>
 
       <li>
-        <h4>The Martian</h4>
+        <h4><a href="{{ bookshop }}/9780553418026">The Martian</a></h4>
         <p>Weir, Andy</p>
       </li>
 
       <li>
-        <h4>The Warrior Heir (The Heir Chronicles, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781423136194">The Warrior Heir (The Heir Chronicles, #1)</a></h4>
         <p>Chima, Cinda Williams</p>
       </li>
 
       <li>
-        <h4>Divergent (Divergent, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780062352187">Divergent (Divergent, #1)</a></h4>
         <p>Roth, Veronica</p>
       </li>
 
       <li>
-        <h4>Inheritance (The Inheritance Cycle, #4)</h4>
+        <h4><a href="{{ bookshop_search }}Inheritance+Paolini%2C+Christopher">Inheritance (The Inheritance Cycle, #4)</a></h4>
         <p>Paolini, Christopher</p>
       </li>
 
       <li>
-        <h4>Brisingr (The Inheritance Cycle, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780375826740">Brisingr (The Inheritance Cycle, #3)</a></h4>
         <p>Paolini, Christopher</p>
       </li>
 
       <li>
-        <h4>I Am Legend and Other Stories</h4>
+        <h4><a href="{{ bookshop }}/9780765357151">I Am Legend and Other Stories</a></h4>
         <p>Matheson, Richard</p>
       </li>
 
       <li>
-        <h4>Flowers for Algernon</h4>
+        <h4><a href="{{ bookshop }}/9780156030304">Flowers for Algernon</a></h4>
         <p>Keyes, Daniel</p>
       </li>
 
       <li>
-        <h4>Starship Troopers</h4>
+        <h4><a href="{{ bookshop }}/9780441014101">Starship Troopers</a></h4>
         <p>Heinlein, Robert A.</p>
       </li>
 
       <li>
-        <h4>Speaker for the Dead (Ender's Saga, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780812550757">Speaker for the Dead (Ender's Saga, #2)</a></h4>
         <p>Card, Orson Scott</p>
       </li>
 
       <li>
-        <h4>The Ultimate Hitchhiker’s Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1-5)</h4>
+        <h4><a href="{{ bookshop }}/9780385365925">The Ultimate Hitchhiker’s Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1-5)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>The Ruins of Gorlan (Ranger's Apprentice, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780593692837">The Ruins of Gorlan (Ranger's Apprentice, #1)</a></h4>
         <p>Flanagan, John</p>
       </li>
 
       <li>
-        <h4>The Maze Runner (The Maze Runner, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780385737944">The Maze Runner (The Maze Runner, #1)</a></h4>
         <p>Dashner, James</p>
       </li>
 
       <li>
-        <h4>Mistborn Trilogy Boxed Set (Mistborn, #1-3)</h4>
+        <h4><a href="{{ bookshop_search }}Mistborn+Trilogy+Boxed+Set+Sanderson%2C+Brandon">Mistborn Trilogy Boxed Set (Mistborn, #1-3)</a></h4>
         <p>Sanderson, Brandon</p>
       </li>
 
       <li>
-        <h4>Eldest (The Inheritance Cycle, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780375840401">Eldest (The Inheritance Cycle, #2)</a></h4>
         <p>Paolini, Christopher</p>
       </li>
 
       <li>
-        <h4>Hand Job: A Catalog of Type</h4>
+        <h4><a href="{{ bookshop }}/9781568986265">Hand Job: A Catalog of Type</a></h4>
         <p>Perry, Mike</p>
       </li>
 
       <li>
-        <h4>CSS: The Definitive Guide</h4>
+        <h4><a href="{{ bookshop }}/9781492033394">CSS: The Definitive Guide</a></h4>
         <p>Meyer, Eric A.</p>
       </li>
 
       <li>
-        <h4>Content Strategy for the Web</h4>
+        <h4><a href="{{ bookshop }}/9780321808301">Content Strategy for the Web</a></h4>
         <p>Halvorson, Kristina</p>
       </li>
 
       <li>
-        <h4>Getting Things Done: The Art of Stress-Free Productivity</h4>
+        <h4><a href="{{ bookshop_search }}Getting+Things+Done%3A+The+Art+of+Stress-Free+Productivity+Allen%2C+David">Getting Things Done: The Art of Stress-Free Productivity</a></h4>
         <p>Allen, David</p>
       </li>
 
       <li>
-        <h4>Designing Interfaces</h4>
+        <h4><a href="{{ bookshop }}/9781492051961">Designing Interfaces</a></h4>
         <p>Tidwell, Jenifer</p>
       </li>
 
       <li>
-        <h4>Founders at Work: Stories of Startups' Early Days</h4>
+        <h4><a href="{{ bookshop }}/9781590597149">Founders at Work: Stories of Startups' Early Days</a></h4>
         <p>Livingston, Jessica</p>
       </li>
 
       <li>
-        <h4>Information Architecture for the World Wide Web: Designing Large-Scale Web Sites</h4>
+        <h4><a href="{{ bookshop_search }}Information+Architecture+for+the+World+Wide+Web%3A+Designing+Large-Scale+Web+Sites+Morville%2C+Peter">Information Architecture for the World Wide Web: Designing Large-Scale Web Sites</a></h4>
         <p>Morville, Peter</p>
       </li>
 
       <li>
-        <h4>Web Form Design: Filling in the Blanks</h4>
+        <h4><a href="{{ bookshop }}/9781933820255">Web Form Design: Filling in the Blanks</a></h4>
         <p>Wroblewski, Luke</p>
       </li>
 
       <li>
-        <h4>The Principles of Beautiful Web Design</h4>
+        <h4><a href="{{ bookshop }}/9781925836363">The Principles of Beautiful Web Design</a></h4>
         <p>Beaird, Jason</p>
       </li>
 
       <li>
-        <h4>Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</h4>
+        <h4><a href="{{ bookshop }}/9780321965516">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</a></h4>
         <p>Krug, Steve</p>
       </li>
 
       <li>
-        <h4>The Design of Everyday Things</h4>
+        <h4><a href="{{ bookshop }}/9780465050659">The Design of Everyday Things</a></h4>
         <p>Norman, Donald A.</p>
       </li>
 
       <li>
-        <h4>Detail in Typography</h4>
+        <h4><a href="{{ bookshop_search }}Detail+in+Typography+Hochuli%2C+Jost">Detail in Typography</a></h4>
         <p>Hochuli, Jost</p>
       </li>
 
       <li>
-        <h4>The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business</h4>
+        <h4><a href="{{ bookshop }}/9781633691780">The Innovator's Dilemma: The Revolutionary Book that Will Change the Way You Do Business</a></h4>
         <p>Christensen, Clayton M.</p>
       </li>
 
       <li>
-        <h4>Thinking, Fast and Slow</h4>
+        <h4><a href="{{ bookshop }}/9780374533557">Thinking, Fast and Slow</a></h4>
         <p>Kahneman, Daniel</p>
       </li>
 
       <li>
-        <h4>On Writing: A Memoir of the Craft</h4>
+        <h4><a href="{{ bookshop }}/9781982159375">On Writing: A Memoir of the Craft</a></h4>
         <p>King, Stephen</p>
       </li>
 
       <li>
-        <h4>The Lies of Locke Lamora (Gentleman Bastard, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780593725429">The Lies of Locke Lamora (Gentleman Bastard, #1)</a></h4>
         <p>Lynch, Scott</p>
       </li>
 
       <li>
-        <h4>Moonwalking with Einstein: The Art and Science of Remembering Everything</h4>
+        <h4><a href="{{ bookshop }}/9780143120537">Moonwalking with Einstein: The Art and Science of Remembering Everything</a></h4>
         <p>Foer, Joshua</p>
       </li>
 
       <li>
-        <h4>Leaders Eat Last: Why Some Teams Pull Together and Others Don't</h4>
+        <h4><a href="{{ bookshop }}/9781591848011">Leaders Eat Last: Why Some Teams Pull Together and Others Don't</a></h4>
         <p>Sinek, Simon</p>
       </li>
 
       <li>
-        <h4>Start with Why: How Great Leaders Inspire Everyone to Take Action</h4>
+        <h4><a href="{{ bookshop }}/9781591846444">Start with Why: How Great Leaders Inspire Everyone to Take Action</a></h4>
         <p>Sinek, Simon</p>
       </li>
 
       <li>
-        <h4>Creative Confidence: Unleashing the Creative Potential Within Us All</h4>
+        <h4><a href="{{ bookshop }}/9780385349369">Creative Confidence: Unleashing the Creative Potential Within Us All</a></h4>
         <p>Kelley, Thomas</p>
       </li>
 
       <li>
-        <h4>The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780593359440">The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide, #1)</a></h4>
         <p>Adams, Douglas</p>
       </li>
 
       <li>
-        <h4>I, Robot</h4>
+        <h4><a href="{{ bookshop }}/9780553382563">I, Robot</a></h4>
         <p>Asimov, Isaac</p>
       </li>
 
       <li>
-        <h4>Freakonomics: A Rogue Economist Explores the Hidden Side of Everything</h4>
+        <h4><a href="{{ bookshop }}/9780061234002">Freakonomics: A Rogue Economist Explores the Hidden Side of Everything</a></h4>
         <p>Levitt, Steven D.</p>
       </li>
 
       <li>
-        <h4>Eragon (The Inheritance Cycle, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780375826696">Eragon (The Inheritance Cycle, #1)</a></h4>
         <p>Paolini, Christopher</p>
       </li>
 
       <li>
-        <h4>Quiet: The Power of Introverts in a World That Can't Stop Talking</h4>
+        <h4><a href="{{ bookshop }}/9780307352156">Quiet: The Power of Introverts in a World That Can't Stop Talking</a></h4>
         <p>Cain, Susan</p>
       </li>
 
       <li>
-        <h4>Catch-22</h4>
+        <h4><a href="{{ bookshop }}/9781451626650">Catch-22</a></h4>
         <p>Heller, Joseph</p>
       </li>
 
       <li>
-        <h4>The Alchemist</h4>
+        <h4><a href="{{ bookshop }}/9780062315007">The Alchemist</a></h4>
         <p>Coelho, Paulo</p>
       </li>
 
       <li>
-        <h4>Seeing Is Forgetting the Name of the Thing One Sees</h4>
+        <h4><a href="{{ bookshop }}/9780520256095">Seeing Is Forgetting the Name of the Thing One Sees</a></h4>
         <p>Weschler, Lawrence</p>
       </li>
 
       <li>
-        <h4>Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</h4>
+        <h4><a href="{{ bookshop }}/9780593594643">Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</a></h4>
         <p>Catmull, Ed</p>
       </li>
 
       <li>
-        <h4>The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers</h4>
+        <h4><a href="{{ bookshop }}/9781483002897">The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers</a></h4>
         <p>Horowitz, Ben</p>
       </li>
 
       <li>
-        <h4>Traction: A Startup Guide to Getting Customers</h4>
+        <h4><a href="{{ bookshop }}/9781591848363">Traction: A Startup Guide to Getting Customers</a></h4>
         <p>Weinberg, Gabriel</p>
       </li>
 
       <li>
-        <h4>Kern and Burn: Conversations With Design Entrepreneurs: Candid conversations with 30 leading design entrepreneurs.</h4>
+        <h4><a href="{{ bookshop_search }}Kern+and+Burn%3A+Conversations+With+Design+Entrepreneurs%3A+Candid+conversations+with+30+leading+design+entrepreneurs.+Hoover%2C+Tim">Kern and Burn: Conversations With Design Entrepreneurs: Candid conversations with 30 leading design entrepreneurs.</a></h4>
         <p>Hoover, Tim</p>
       </li>
 
       <li>
-        <h4>Ender's Game (Ender's Saga, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781250773012">Ender's Game (Ender's Saga, #1)</a></h4>
         <p>Card, Orson Scott</p>
       </li>
     </ul>
@@ -2170,342 +2175,342 @@ rule: "#A898B1"
     <h2 class="books__year" id="y2014">2014 and before</h2>
     <ul>
       <li>
-        <h4>Harry Potter and the Deathly Hallows (Harry Potter, #7)</h4>
+        <h4><a href="{{ bookshop }}/9780545010221">Harry Potter and the Deathly Hallows (Harry Potter, #7)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Half-Blood Prince (Harry Potter, #6)</h4>
+        <h4><a href="{{ bookshop }}/9780545791441">Harry Potter and the Half-Blood Prince (Harry Potter, #6)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Order of the Phoenix (Harry Potter, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780545791434">Harry Potter and the Order of the Phoenix (Harry Potter, #5)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Goblet of Fire (Harry Potter, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780545791427">Harry Potter and the Goblet of Fire (Harry Potter, #4)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780439136358">Harry Potter and the Prisoner of Azkaban (Harry Potter, #3)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Chamber of Secrets (Harry Potter, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781338878936">Harry Potter and the Chamber of Secrets (Harry Potter, #2)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>Harry Potter and the Sorcerer's Stone (Harry Potter, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781338878929">Harry Potter and the Sorcerer's Stone (Harry Potter, #1)</a></h4>
         <p>Rowling, J.K.</p>
       </li>
 
       <li>
-        <h4>The da Vinci Code (Robert Langdon, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780307277671">The da Vinci Code (Robert Langdon, #2)</a></h4>
         <p>Brown, Dan</p>
       </li>
 
       <li>
-        <h4>The Amber Spyglass (His Dark Materials, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780375823350">The Amber Spyglass (His Dark Materials, #3)</a></h4>
         <p>Pullman, Philip</p>
       </li>
 
       <li>
-        <h4>The Subtle Knife (His Dark Materials, #2)</h4>
+        <h4><a href="{{ bookshop_search }}The+Subtle+Knife+Pullman%2C+Philip">The Subtle Knife (His Dark Materials, #2)</a></h4>
         <p>Pullman, Philip</p>
       </li>
 
       <li>
-        <h4>The Golden Compass (His Dark Materials, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780440418320">The Golden Compass (His Dark Materials, #1)</a></h4>
         <p>Pullman, Philip</p>
       </li>
 
       <li>
-        <h4>Confessor (Sword of Truth, #11)</h4>
+        <h4><a href="{{ bookshop }}/9781250806703">Confessor (Sword of Truth, #11)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Phantom (Sword of Truth, #10)</h4>
+        <h4><a href="{{ bookshop }}/9781250806697">Phantom (Sword of Truth, #10)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Chainfire (Sword of Truth, #9)</h4>
+        <h4><a href="{{ bookshop }}/9781250806680">Chainfire (Sword of Truth, #9)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Naked Empire (Sword of Truth, #8)</h4>
+        <h4><a href="{{ bookshop }}/9781250869319">Naked Empire (Sword of Truth, #8)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>The Pillars of Creation (Sword of Truth, #7)</h4>
+        <h4><a href="{{ bookshop }}/9781250806666">The Pillars of Creation (Sword of Truth, #7)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Faith of the Fallen (Sword of Truth, #6)</h4>
+        <h4><a href="{{ bookshop }}/9781250806659">Faith of the Fallen (Sword of Truth, #6)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Soul of the Fire (Sword of Truth, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780795346125">Soul of the Fire (Sword of Truth, #5)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Temple of the Winds (Sword of Truth, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780613224772">Temple of the Winds (Sword of Truth, #4)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Blood of the Fold (Sword of Truth, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780812551471">Blood of the Fold (Sword of Truth, #3)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Stone of Tears (Sword of Truth, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781250851413">Stone of Tears (Sword of Truth, #2)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Wizard's First Rule (Sword of Truth, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780812548051">Wizard's First Rule (Sword of Truth, #1)</a></h4>
         <p>Goodkind, Terry</p>
       </li>
 
       <li>
-        <h4>Meggs' History of Graphic Design</h4>
+        <h4><a href="{{ bookshop }}/9781119743293">Meggs' History of Graphic Design</a></h4>
         <p>Meggs, Philip B.</p>
       </li>
 
       <li>
-        <h4>Visual Grammar: A Design Handbook</h4>
+        <h4><a href="{{ bookshop }}/9781568985817">Visual Grammar: A Design Handbook</a></h4>
         <p>Leborg, Christian</p>
       </li>
 
       <li>
-        <h4>Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems</h4>
+        <h4><a href="{{ bookshop }}/9780321657299">Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems</a></h4>
         <p>Krug, Steve</p>
       </li>
 
       <li>
-        <h4>The Lean Startup</h4>
+        <h4><a href="{{ bookshop }}/9781524762407">The Lean Startup</a></h4>
         <p>Ries, Eric</p>
       </li>
 
       <li>
-        <h4>A Practical Guide to Designing for the Web</h4>
+        <h4><a href="{{ bookshop_search }}A+Practical+Guide+to+Designing+for+the+Web+Boulton%2C+Mark">A Practical Guide to Designing for the Web</a></h4>
         <p>Boulton, Mark</p>
       </li>
 
       <li>
-        <h4>Designing With Web Standards</h4>
+        <h4><a href="{{ bookshop_search }}Designing+With+Web+Standards+Zeldman%2C+Jeffrey">Designing With Web Standards</a></h4>
         <p>Zeldman, Jeffrey</p>
       </li>
 
       <li>
-        <h4>Graphic Artists Guild Handbook: Pricing & Ethical Guidelines (Graphic Artists Guild Handbook: Pricing & Ethical Guidelines)</h4>
+        <h4><a href="{{ bookshop }}/9781507206683">Graphic Artists Guild Handbook: Pricing & Ethical Guidelines (Graphic Artists Guild Handbook: Pricing & Ethical Guidelines)</a></h4>
         <p>Guild, Graphic Artists</p>
       </li>
 
       <li>
-        <h4>CSS Mastery: Advanced Web Standards Solutions</h4>
+        <h4><a href="{{ bookshop }}/9781430258636">CSS Mastery: Advanced Web Standards Solutions</a></h4>
         <p>Budd, Andy</p>
       </li>
 
       <li>
-        <h4>Hardboiled Web Design</h4>
+        <h4><a href="{{ bookshop_search }}Hardboiled+Web+Design+Clarke%2C+Andy">Hardboiled Web Design</a></h4>
         <p>Clarke, Andy</p>
       </li>
 
       <li>
-        <h4>Thinking with Type: A Critical Guide for Designers, Writers, Editors, and Students</h4>
+        <h4><a href="{{ bookshop }}/9781797226828">Thinking with Type: A Critical Guide for Designers, Writers, Editors, and Students</a></h4>
         <p>Lupton, Ellen</p>
       </li>
 
       <li>
-        <h4>Stop Stealing Sheep & Find Out How Type Works</h4>
+        <h4><a href="{{ bookshop_search }}Stop+Stealing+Sheep+%26+Find+Out+How+Type+Works+Spiekermann%2C+Erik">Stop Stealing Sheep & Find Out How Type Works</a></h4>
         <p>Spiekermann, Erik</p>
       </li>
 
       <li>
-        <h4>How to Think Like a Great Graphic Designer</h4>
+        <h4><a href="{{ bookshop }}/9781581157994">How to Think Like a Great Graphic Designer</a></h4>
         <p>Millman, Debbie</p>
       </li>
 
       <li>
-        <h4>Seventy-nine Short Essays on Design</h4>
+        <h4><a href="{{ bookshop_search }}Seventy-nine+Short+Essays+on+Design+Bierut%2C+Michael">Seventy-nine Short Essays on Design</a></h4>
         <p>Bierut, Michael</p>
       </li>
 
       <li>
-        <h4>The Design of Dissent: Socially and Politically Driven Graphics</h4>
+        <h4><a href="{{ bookshop_search }}The+Design+of+Dissent%3A+Socially+and+Politically+Driven+Graphics+Glaser%2C+Milton">The Design of Dissent: Socially and Politically Driven Graphics</a></h4>
         <p>Glaser, Milton</p>
       </li>
 
       <li>
-        <h4>Things I Have Learned In My Life So Far</h4>
+        <h4><a href="{{ bookshop_search }}Things+I+Have+Learned+In+My+Life+So+Far+Sagmeister%2C+Stefan">Things I Have Learned In My Life So Far</a></h4>
         <p>Sagmeister, Stefan</p>
       </li>
 
       <li>
-        <h4>The End of Print: The Grafik Design of David Carson</h4>
+        <h4><a href="{{ bookshop_search }}The+End+of+Print%3A+The+Grafik+Design+of+David+Carson+Blackwell%2C+Lewis">The End of Print: The Grafik Design of David Carson</a></h4>
         <p>Blackwell, Lewis</p>
       </li>
 
       <li>
-        <h4>Universal Principles of Design</h4>
+        <h4><a href="{{ bookshop }}/9780760375167">Universal Principles of Design</a></h4>
         <p>Lidwell, William</p>
       </li>
 
       <li>
-        <h4>Envisioning Information</h4>
+        <h4><a href="{{ bookshop_search }}Envisioning+Information+Tufte%2C+Edward+R.">Envisioning Information</a></h4>
         <p>Tufte, Edward R.</p>
       </li>
 
       <li>
-        <h4>The Elements of Typographic Style</h4>
+        <h4><a href="{{ bookshop_search }}The+Elements+of+Typographic+Style+Bringhurst%2C+Robert">The Elements of Typographic Style</a></h4>
         <p>Bringhurst, Robert</p>
       </li>
 
       <li>
-        <h4>Steve Jobs</h4>
+        <h4><a href="{{ bookshop }}/9781982176860">Steve Jobs</a></h4>
         <p>Isaacson, Walter</p>
       </li>
 
       <li>
-        <h4>Designing with Type: The Essential Guide to Typography</h4>
+        <h4><a href="{{ bookshop }}/9780823014132">Designing with Type: The Essential Guide to Typography</a></h4>
         <p>Craig, James</p>
       </li>
 
       <li>
-        <h4>An Essay on Typography</h4>
+        <h4><a href="{{ bookshop_search }}An+Essay+on+Typography+Gill%2C+Eric">An Essay on Typography</a></h4>
         <p>Gill, Eric</p>
       </li>
 
       <li>
-        <h4>The Complete Manual of Typography: A Guide to Setting Perfect Type</h4>
+        <h4><a href="{{ bookshop_search }}The+Complete+Manual+of+Typography%3A+A+Guide+to+Setting+Perfect+Type+Felici%2C+James">The Complete Manual of Typography: A Guide to Setting Perfect Type</a></h4>
         <p>Felici, James</p>
       </li>
 
       <li>
-        <h4>The Lord of the Rings</h4>
+        <h4><a href="{{ bookshop_search }}The+Lord+of+the+Rings+Tolkien%2C+J.R.R.">The Lord of the Rings</a></h4>
         <p>Tolkien, J.R.R.</p>
       </li>
 
       <li>
-        <h4>Mockingjay (The Hunger Games, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780545663267">Mockingjay (The Hunger Games, #3)</a></h4>
         <p>Collins, Suzanne</p>
       </li>
 
       <li>
-        <h4>Catching Fire (The Hunger Games, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780545586177">Catching Fire (The Hunger Games, #2)</a></h4>
         <p>Collins, Suzanne</p>
       </li>
 
       <li>
-        <h4>The Hunger Games (The Hunger Games, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780439023528">The Hunger Games (The Hunger Games, #1)</a></h4>
         <p>Collins, Suzanne</p>
       </li>
 
       <li>
-        <h4>The Titan’s Curse (Percy Jackson and the Olympians, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780786297016">The Titan’s Curse (Percy Jackson and the Olympians, #3)</a></h4>
         <p>Riordan, Rick</p>
       </li>
 
       <li>
-        <h4>The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)</h4>
+        <h4><a href="{{ bookshop }}/9781410410184">The Battle of the Labyrinth (Percy Jackson and the Olympians, #4)</a></h4>
         <p>Riordan, Rick</p>
       </li>
 
       <li>
-        <h4>The Last Olympian (Percy Jackson and the Olympians, #5)</h4>
+        <h4><a href="{{ bookshop }}/9781410416780">The Last Olympian (Percy Jackson and the Olympians, #5)</a></h4>
         <p>Riordan, Rick</p>
       </li>
 
       <li>
-        <h4>The Sea of Monsters (Percy Jackson and the Olympians, #2)</h4>
+        <h4><a href="{{ bookshop }}/9781368051491">The Sea of Monsters (Percy Jackson and the Olympians, #2)</a></h4>
         <p>Riordan, Rick</p>
       </li>
 
       <li>
-        <h4>The Lightning Thief (Percy Jackson and the Olympians, #1)</h4>
+        <h4><a href="{{ bookshop }}/9781368051477">The Lightning Thief (Percy Jackson and the Olympians, #1)</a></h4>
         <p>Riordan, Rick</p>
       </li>
 
       <li>
-        <h4>Making and Breaking the Grid: A Graphic Design Layout Workshop</h4>
+        <h4><a href="{{ bookshop }}/9780760381939">Making and Breaking the Grid: A Graphic Design Layout Workshop</a></h4>
         <p>Samara, Timothy</p>
       </li>
 
       <li>
-        <h4>Grid Systems: Principles of Organizing Type</h4>
+        <h4><a href="{{ bookshop }}/9781568984650">Grid Systems: Principles of Organizing Type</a></h4>
         <p>Elam, Kimberly</p>
       </li>
 
       <li>
-        <h4>Rastersysteme für die visuelle Gestaltung</h4>
+        <h4><a href="{{ bookshop }}/9783721201451">Rastersysteme für die visuelle Gestaltung</a></h4>
         <p>Muller-Brockmann, Josef</p>
       </li>
 
       <li>
-        <h4>Designing for Emotion</h4>
+        <h4><a href="{{ bookshop }}/9781952616495">Designing for Emotion</a></h4>
         <p>Walter, Aaron</p>
       </li>
 
       <li>
-        <h4>Mobile First</h4>
+        <h4><a href="{{ bookshop }}/9781952616976">Mobile First</a></h4>
         <p>Wroblewski, Luke</p>
       </li>
 
       <li>
-        <h4>HTML5 for Web Designers</h4>
+        <h4><a href="{{ bookshop_search }}HTML5+for+Web+Designers+Keith%2C+Jeremy">HTML5 for Web Designers</a></h4>
         <p>Keith, Jeremy</p>
       </li>
 
       <li>
-        <h4>Sketching User Experiences: Getting the Design Right and the Right Design</h4>
+        <h4><a href="{{ bookshop }}/9780123740373">Sketching User Experiences: Getting the Design Right and the Right Design</a></h4>
         <p>Buxton, Bill</p>
       </li>
 
       <li>
-        <h4>Responsive Web Design</h4>
+        <h4><a href="{{ bookshop_search }}Responsive+Web+Design+Marcotte%2C+Ethan">Responsive Web Design</a></h4>
         <p>Marcotte, Ethan</p>
       </li>
 
       <li>
-        <h4>The Hobbit, or There and Back Again (The Lord of the Rings, #0)</h4>
+        <h4><a href="{{ bookshop_search }}The+Hobbit%2C+or+There+and+Back+Again+Tolkien%2C+J.R.R.">The Hobbit, or There and Back Again (The Lord of the Rings, #0)</a></h4>
         <p>Tolkien, J.R.R.</p>
       </li>
 
       <li>
-        <h4>A Dance with Dragons (A Song of Ice and Fire, #5)</h4>
+        <h4><a href="{{ bookshop }}/9780553582017">A Dance with Dragons (A Song of Ice and Fire, #5)</a></h4>
         <p>Martin, George R.R.</p>
       </li>
 
       <li>
-        <h4>A Feast for Crows (A Song of Ice and Fire, #4)</h4>
+        <h4><a href="{{ bookshop }}/9780553582024">A Feast for Crows (A Song of Ice and Fire, #4)</a></h4>
         <p>Martin, George R.R.</p>
       </li>
 
       <li>
-        <h4>A Storm of Swords (A Song of Ice and Fire, #3)</h4>
+        <h4><a href="{{ bookshop }}/9780553573428">A Storm of Swords (A Song of Ice and Fire, #3)</a></h4>
         <p>Martin, George R.R.</p>
       </li>
 
       <li>
-        <h4>A Clash of Kings (A Song of Ice and Fire, #2)</h4>
+        <h4><a href="{{ bookshop }}/9780553579901">A Clash of Kings (A Song of Ice and Fire, #2)</a></h4>
         <p>Martin, George R.R.</p>
       </li>
 
       <li>
-        <h4>A Game of Thrones (A Song of Ice and Fire, #1)</h4>
+        <h4><a href="{{ bookshop }}/9780553573404">A Game of Thrones (A Song of Ice and Fire, #1)</a></h4>
         <p>Martin, George R.R.</p>
       </li>
     </ul>

@@ -1,6 +1,12 @@
 title: Kyle Fiedler
 description: Probably eating a taco
 
+# Bookshop.org affiliate links (script/bookshop-links). manager_list_url is the
+# Manager Resources list on Bookshop; the page links to it once it's set.
+bookshop:
+  affiliate_id: "130984"
+  manager_list_url: ""
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

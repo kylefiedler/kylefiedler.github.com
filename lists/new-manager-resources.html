@@ -2,6 +2,7 @@
 layout: default
 crumb: Manager resources
 ---
+{%- assign bookshop = "https://bookshop.org/a/" | append: site.bookshop.affiliate_id %}
 
 <header class="header--primary">
   <h1>New Manager Resources</h1>
@@ -13,14 +14,15 @@ crumb: Manager resources
   <div>
     <h2 class="title--secondary">Books</h2>
     <ul class="circle mb--base">
-      <li>Making of a Manager by Julie Zhou</li>
-      <li>Resilient Management by Lara Hogan</li>
-      <li>Radical Candor</li>
-      <li>Turn the Ship Around!: A True Story of Turning Followers into Leaders</li>
-      <li>Delivering Happiness: A Path to Profits, Passion, and Purpose</li>
-      <li>Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</li>
-      <li>How Will You Measure Your Life?</li>
+      <li><a href="{{ bookshop }}/9780735219564">The Making of a Manager</a> by Julie Zhuo</li>
+      <li><a href="{{ bookshop }}/9781952616648">Resilient Management</a> by Lara Hogan</li>
+      <li><a href="{{ bookshop }}/9781250235374">Radical Candor</a> by Kim Scott</li>
+      <li><a href="{{ bookshop }}/9781591846406">Turn the Ship Around!: A True Story of Turning Followers into Leaders</a> by L. David Marquet</li>
+      <li><a href="{{ bookshop }}/9780446576222">Delivering Happiness: A Path to Profits, Passion, and Purpose</a> by Tony Hsieh</li>
+      <li><a href="{{ bookshop }}/9780812993011">Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration</a> by Ed Catmull</li>
+      <li><a href="{{ bookshop }}/9780062102416">How Will You Measure Your Life?</a> by Clayton M. Christensen</li>
     </ul>
+    <p class="affiliate-note">Books link to Bookshop.org, which shares its sales with independent bookstores. I earn a small commission when you buy through them.{% if site.bookshop.manager_list_url != blank %} They&rsquo;re also <a href="{{ site.bookshop.manager_list_url }}">a list on Bookshop</a>.{% endif %}</p>
   </div>
 
   <div>

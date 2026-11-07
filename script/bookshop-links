@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+# Links each book in lists/books.html to Bookshop.org, under the affiliate ID
+# in _config.yml (bookshop.affiliate_id):
+#
+#   script/bookshop-links
+#
+# Only titles without a link are touched, so re-run it after adding books. For
+# each, it searches Open Library for the book and links its ISBN-13 to
+# {{ bookshop }}/<isbn>. A book Open Library doesn't have, or has without an
+# English-language ISBN-13, gets a Bookshop search for its title and author
+# instead ({{ bookshop_search }}), and is reported. Both prefixes are assigned
+# at the top of the page.
+#
+# To fix a link that goes to the wrong book, edit its href in the page: linked
+# titles are never looked up again. The page is saved even if the run stops
+# partway, so a re-run picks up where it left off.
+
+require_relative "open_library"
+
+# A book's ISBN-13 for Bookshop, or nil. Open Library lists every edition's
+# ISBNs, translations included, which Bookshop (US) doesn't carry, so only
+# English-language ISBNs (978-0, 978-1 and 979-8) count.
+def english_isbn(book)
+  OpenLibrary.search(book, "title,isbn").each do |doc|
+    found = Array(doc["isbn"]).find { |isbn| isbn.match?(/\A(978[01]|9798)\d{9}\z/) }
+    return found if found
+  end
+  nil
+end
+
+def search_terms(book)
+  title, author = OpenLibrary.queries(book).first
+  URI.encode_www_form_component("#{title} #{author}")
+end
+
+page = File.expand_path("../lists/books.html", __dir__)
+html = File.read(page, encoding: "UTF-8")
+# Each unlinked book entry => the same entry with its title linked.
+links = {}
+counts = Hash.new(0)
+$stdout.sync = true
+
+begin
+  html.scan(OpenLibrary::ENTRY) do
+    entry = $~
+    if entry[:title].start_with?("<a ")
+      counts[:linked] += 1
+      next
+    end
+    original = entry.to_s
+    next if links.key?(original)
+
+    book = OpenLibrary::Book.from_html(entry[:title], entry[:author])
+    href = if (isbn = english_isbn(book))
+      counts[:product] += 1
+      "{{ bookshop }}/#{isbn}"
+    else
+      counts[:search] += 1
+      puts "search link: #{book}"
+      "{{ bookshop_search }}#{search_terms(book)}"
+    end
+    links[original] = original.sub(entry[:title]) { %(<a href="#{href}">#{entry[:title]}</a>) }
+  end
+ensure
+  File.write(page, html.gsub(OpenLibrary::ENTRY) { |entry| links.fetch(entry, entry) })
+end
+
+puts "#{counts[:product]} linked to a book, #{counts[:search]} to a search, #{counts[:linked]} already linked"

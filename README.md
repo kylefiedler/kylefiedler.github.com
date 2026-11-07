@@ -49,3 +49,21 @@ lookup, so the wall comes out the same in any checkout. Test the script with
 ```
 ruby test/book_covers_test.rb
 ```
+
+Bookshop links
+---------------
+Book titles on the Books and Manager Resources lists link to Bookshop.org
+under the affiliate ID in `_config.yml` (`bookshop.affiliate_id`). After adding
+books to `lists/books.html`, run
+```
+script/bookshop-links
+```
+It links each new title to its ISBN-13 from Open Library, or to a Bookshop
+search when there isn't one (those are reported). To fix a link that goes to
+the wrong book, edit its `href`: linked titles are never looked up again.
+Manager Resources books are linked by hand. Set `bookshop.manager_list_url`
+once that list exists on Bookshop and the page links to it. Test the script
+with
+```
+ruby test/bookshop_links_test.rb
+```
