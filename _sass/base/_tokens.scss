@@ -38,6 +38,14 @@ $collage: 64rem;
   --line-pitch: 1.625rem;
   --gutter: 1.75rem;
   --inset: 3.75rem;
+  // The nav sits --nav-top down. Once the page scrolls, it rises by
+  // --nav-lift to sit --nav-squeeze from the window's top, and the rule closes
+  // up to --nav-squeeze under it: --nav-pinned down from the window's top.
+  --nav-top: 3.125rem;
+  --nav-height: 2.25rem;
+  --nav-squeeze: 0.625rem;
+  --nav-lift: calc(var(--nav-top) - var(--nav-squeeze));
+  --nav-pinned: calc(2 * var(--nav-squeeze) + var(--nav-height));
   // Height of the photo strip that replaces the wall on phones.
   --strip-height: 8rem;
 
@@ -45,5 +53,6 @@ $collage: 64rem;
     --rule-top: 5rem;
     --gutter: 0.75rem;
     --inset: 1.25rem;
+    --nav-top: 1.75rem;
   }
 }

@@ -2,25 +2,77 @@
 // <details> dropdown listing all four sections; on list and work pages the
 // page crumb is a second dropdown listing that section's pages.
 
+// Pinned while the card scrolls. Once the page has scrolled (.is-scrolled, set
+// by nav.html's script) it rises by --nav-lift so the nav sits near the top of
+// the window, and the paper band behind it and the top rule tighten up to just
+// under the nav, so nothing shows through above the rule. The band covers the
+// card only; the wall's photos stay visible beside it.
 .masthead {
-  position: relative;
+  --pad-top: var(--nav-top);
+  --pad-left: 3rem;
+  --pad-right: 1.75rem;
+  // Where the band ends and the rule sits, down from the masthead's top.
+  --band: var(--rule-top);
+
+  position: sticky;
+  top: calc(-1 * var(--nav-lift));
   z-index: 3;
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
   height: var(--rule-top);
-  padding: 3.125rem 1.75rem 0 3rem;
+  padding: var(--pad-top) var(--pad-right) 0 var(--pad-left);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 auto;
+    height: var(--band);
+    background: var(--paper);
+    transition: height 0.2s ease;
+  }
+
+  // The top rule: from the card's gutter across to the window's right side,
+  // over the wall on Split pages. Everything scrolls under it.
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--band);
+    left: var(--gutter);
+    width: calc(100vw - var(--gutter) - 3.125rem);
+    height: 2px;
+    background: var(--rule);
+    pointer-events: none;
+    transition: top 0.2s ease;
+
+    @media (max-width: $mobile) {
+      width: calc(100vw - 2 * var(--gutter));
+    }
+  }
+
+  &.is-scrolled {
+    --band: calc(var(--nav-lift) + var(--nav-pinned));
+  }
 
   @media (max-width: $mobile) {
-    padding: 1.75rem var(--inset) 0;
+    --pad-left: var(--inset);
+    --pad-right: var(--inset);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before,
+    &::after {
+      transition: none;
+    }
   }
 }
 
 .frame--sheet .masthead {
-  padding-right: 3.125rem;
+  --pad-right: 3.125rem;
 
   @media (max-width: $mobile) {
-    padding-right: var(--inset);
+    --pad-right: var(--inset);
   }
 }
 
@@ -197,8 +249,10 @@ span.crumbs__item,
   }
 }
 
+// Above the masthead's top rule, which comes later in paint order.
 .sections__menu {
   position: absolute;
+  z-index: 1;
   top: calc(100% + 0.75rem);
   left: -1.5rem;
   min-width: 10rem;

@@ -56,6 +56,12 @@
 </header>
 <script>
   (() => {
+    // Tightens the pinned nav and rule once the page has scrolled.
+    const masthead = document.querySelector(".masthead");
+    const settle = () => masthead.classList.toggle("is-scrolled", scrollY > 0);
+    addEventListener("scroll", settle, { passive: true });
+    settle();
+
     const menus = [...document.querySelectorAll(".sections")];
     menus.forEach((menu) => {
       menu.addEventListener("toggle", () => {

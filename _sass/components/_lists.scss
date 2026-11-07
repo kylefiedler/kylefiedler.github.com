@@ -9,8 +9,8 @@
   }
 }
 
-// Sticky over the list, so once it's pinned (.is-stuck, set by the Books page
-// script) it needs the card's paper behind it. At rest it stays clear so the
+// Sticky over the list, pinned just under the top rule once it has closed up, so once it's pinned
+// (.is-stuck, set by the Books page script) it needs the card's paper behind it. At rest it stays clear so the
 // ruled lines show. It bleeds out to the card's edges (the Split frame's
 // .card__body padding) so list text can't peek past either side.
 .year-jumps {
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   gap: 0.25rem 1rem;
   position: sticky;
-  top: 0;
+  top: calc(var(--nav-pinned) + 2px);
   z-index: 1;
   margin: 0 calc(-1 * var(--bleed-right)) calc(var(--space) * 1.5) calc(-1 * var(--bleed-left));
   padding: 0.75rem var(--bleed-right) 0.75rem var(--bleed-left);
@@ -47,7 +47,7 @@
     font-size: var(--size-title);
     line-height: 1.15;
     // Clear the pinned year links.
-    scroll-margin-top: 8rem;
+    scroll-margin-top: calc(var(--rule-top) + 8rem);
   }
 
   // The year's count on a dashed leader, set like a Journal entry's number.

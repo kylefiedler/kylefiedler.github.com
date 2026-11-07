@@ -2536,10 +2536,12 @@ rule: "#A898B1"
     year.append(number);
   });
 
-  // The 1px top margin clips the bar only while it's pinned at top: 0.
+  // Shrinking the root to 1px below the bar's sticky top clips the bar only
+  // while it's pinned there.
   const jumps = document.querySelector(".year-jumps");
+  const pin = parseFloat(getComputedStyle(jumps).top);
   new IntersectionObserver(
-    ([entry]) => jumps.classList.toggle("is-stuck", entry.intersectionRatio < 1 && entry.boundingClientRect.top <= 0),
-    { rootMargin: "-1px 0px 0px 0px", threshold: 1 }
+    ([entry]) => jumps.classList.toggle("is-stuck", entry.intersectionRatio < 1 && entry.boundingClientRect.top <= pin + 1),
+    { rootMargin: `-${pin + 1}px 0px 0px 0px`, threshold: 1 }
   ).observe(jumps);
 </script>
