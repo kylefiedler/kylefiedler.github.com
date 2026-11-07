@@ -16,7 +16,7 @@ require_relative "jpeg_fixture"
 class BookCoversTest < Minitest::Test
   include JpegFixture
 
-  SCRIPTS = %w[book-covers wall-photos wall-variants].map { |name| File.expand_path("../script/#{name}", __dir__) }.freeze
+  SCRIPTS = %w[book-covers open_library.rb wall-photos wall-variants].map { |name| File.expand_path("../script/#{name}", __dir__) }.freeze
 
   # Newest first, as lists/books.html lists them.
   BOOKS = [

@@ -21,77 +21,17 @@
 # that keeps an older date (as Finder copies do), delete the book's image from
 # images/wall/books/ too.
 
-require "cgi"
 require "fileutils"
-require "json"
-require "net/http"
 require "open3"
 require "rbconfig"
 require "tmpdir"
-require "uri"
 require "yaml"
+require_relative "open_library"
 
-SEARCH_URL = ENV.fetch("OPEN_LIBRARY_URL", "https://openlibrary.org")
 COVERS_URL = ENV.fetch("OPEN_LIBRARY_COVERS_URL", "https://covers.openlibrary.org")
-# Open Library asks for no more than about one request a second.
-DELAY = Float(ENV.fetch("BOOK_COVERS_DELAY", 1))
 SET = "books"
 # Narrower covers blur in the wall's widest column.
 MIN_WIDTH = 250
-
-Book = Struct.new(:title, :author) do
-  def slug = "#{title} #{author}".downcase.gsub(/[^a-z0-9]+/, "-").gsub(/\A-|-\z/, "")
-  def to_s = "#{title} by #{author}"
-end
-
-def books(html)
-  html.scan(%r{<h4>(.*?)</h4>\s*<p>(.*?)</p>}m).map do |title, author|
-    Book.new(*[title, author].map { |text| CGI.unescapeHTML(text.gsub(/<[^>]+>/, "")).strip })
-  end
-end
-
-def throttle
-  sleep([@last_request.to_f + DELAY - Process.clock_gettime(Process::CLOCK_MONOTONIC), 0].max)
-  @last_request = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-end
-
-# Follows redirects, and retries what Open Library's servers sometimes do:
-# drop the connection, fail with a 5xx, or rate-limit with a 429.
-def get(url)
-  redirects = retries = 0
-  loop do
-    throttle
-    begin
-      response = Net::HTTP.get_response(URI(url), { "User-Agent" => "kylefiedler.com script/book-covers" })
-    rescue IOError, SystemCallError, SocketError, Timeout::Error, OpenSSL::SSL::SSLError, Net::HTTPBadResponse => error
-      failure = "failed: #{error.message}"
-    end
-    case response
-    when Net::HTTPRedirection
-      abort "too many redirects from #{url}" if (redirects += 1) > 5
-      url = URI.join(url, response["location"]).to_s
-      next
-    when Net::HTTPSuccess, Net::HTTPNotFound then return response
-    when Net::HTTPServerError, Net::HTTPTooManyRequests then failure = "returned #{response.code}"
-    when Net::HTTPResponse then abort "#{url} returned #{response.code}"
-    end
-    abort "#{url} #{failure}" if (retries += 1) > 2
-    sleep(DELAY * 5)
-  end
-end
-
-# Series suffixes like "(The Poppy War, #1)" and subtitles stop title searches
-# from matching, and author search wants one name, not "Greger, M.D." or a
-# list. Strictest query first; title and author always both apply, so a miss
-# is skipped rather than matched to some other book with the same title.
-def queries(book)
-  title = book.title.sub(/\s*\([^)]*#[^)]*\)\z/, "")
-  titles = [title, title.split(":").first.strip].uniq
-  authors = [book.author, book.author.split(",").first.strip].uniq
-  titles.product(authors)
-end
-
-def comparable(title) = title.to_s.downcase.gsub(/[^a-z0-9]/, "")
 
 # Takes the first cover, in search order, from a result with the searched
 # title (not "<Title> Cookbook") that is shaped like a cover: at least
@@ -99,24 +39,18 @@ def comparable(title) = title.to_s.downcase.gsub(/[^a-z0-9]/, "")
 # thumbnails filed as covers.
 def fetch_cover(book, dest)
   tried = []
-  queries(book).each do |title, author|
-    query = URI.encode_www_form(title: title, author: author, limit: 5, fields: "title,cover_i")
-    response = get("#{SEARCH_URL}/search.json?#{query}")
-    next unless response.is_a?(Net::HTTPSuccess)
+  OpenLibrary.search(book, "title,cover_i").each do |doc|
+    id = doc["cover_i"].to_i
+    next if id <= 0 || tried.include?(id)
 
-    JSON.parse(response.body)["docs"].each do |doc|
-      id = doc["cover_i"].to_i
-      next if id <= 0 || tried.include?(id) || comparable(doc["title"]) != comparable(title)
-
-      tried << id
-      return true if download(id, dest)
-    end
+    tried << id
+    return true if download(id, dest)
   end
   false
 end
 
 def download(id, dest)
-  response = get("#{COVERS_URL}/b/id/#{id}-L.jpg?default=false")
+  response = OpenLibrary.get("#{COVERS_URL}/b/id/#{id}-L.jpg?default=false")
   return false unless response.is_a?(Net::HTTPSuccess)
 
   # Moved into place whole, so an interrupted download isn't cached.
@@ -149,7 +83,7 @@ FileUtils.mkdir_p(cache)
 
 # [book, cover file], newest first.
 chosen = []
-books(File.read(File.join(root, "lists", "books.html"), encoding: "UTF-8")).uniq(&:slug).each do |book|
+OpenLibrary.books(File.read(File.join(root, "lists", "books.html"), encoding: "UTF-8")).uniq(&:slug).each do |book|
   break if chosen.size == count
 
   override = File.join(overrides, "#{book.slug}.jpg")
