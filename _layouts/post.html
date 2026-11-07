@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<div class="post">
+{%- assign journal = false -%}
+{%- if page.collection == "journal" %}{% assign journal = true %}{% endif -%}
+<div class="post{% if journal %} post--journal{% endif %}">
   <article class="post__article">
     {% include title.html %}
     <time class="post__date meta" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%m.%d.%Y' }}</time>
     <div class="post__body">{{ content }}</div>
+    {%- if journal %}
+    <p class="post__back"><a href="/journal/">Back to Journal</a></p>
+    {%- endif %}
   </article>
 
+  {%- unless journal %}
   <aside class="post__others" aria-labelledby="other-posts">
     <h2 class="tertiary" id="other-posts">Other blog posts</h2>
     {%- assign others = site.posts | where_exp: "post", "post.url != page.url" %}
@@ -19,4 +25,5 @@ layout: default
     </ul>
     <a href="/journal/">More</a>
   </aside>
+  {%- endunless %}
 </div>

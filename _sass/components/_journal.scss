@@ -25,6 +25,18 @@
   @media (min-width: $wide) {
     grid-template-columns: minmax(0, 4fr) minmax(0, 3fr);
   }
+
+  // Once the entries reach their 38rem measure, the archive sits right
+  // beside them and stops growing, so spare room collects on the right
+  // rather than between the two.
+  @media (min-width: 77rem) {
+    grid-template-columns: minmax(0, 38rem) minmax(0, 1fr);
+  }
+}
+
+// Its two columns grow to the entries' 38rem measure, then stop.
+.journal-index__archive {
+  max-width: calc(2 * 38rem + 3rem);
 }
 
 .journal-entries {
@@ -104,6 +116,17 @@
       grid-column: 1;
     }
   }
+}
+
+// Journal entries stand alone: no other-posts column, just a way back.
+.post--journal {
+  @media (min-width: $wide) {
+    grid-template-columns: minmax(0, 38rem);
+  }
+}
+
+.post__back {
+  margin-top: calc(var(--space) * 2);
 }
 
 .post__date {

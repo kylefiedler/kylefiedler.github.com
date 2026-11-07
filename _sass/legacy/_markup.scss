@@ -91,6 +91,13 @@
   }
 }
 
+// Stacked on phones, the cells need the gap the grid gives them on wider screens.
+@media (max-width: $mobile) {
+  .grid--four > li + li {
+    margin-top: var(--space);
+  }
+}
+
 // Four across once there's room, e.g. Values. Sheet pages cap lists at a
 // reading width; this grid needs the whole card.
 @media (min-width: $collage) {

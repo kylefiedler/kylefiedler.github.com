@@ -29,6 +29,13 @@
   &.is-stuck {
     background: var(--paper);
   }
+
+  // The double underline spans the links, not the bleed, overshooting each
+  // side by a hair.
+  .doodle--double-underline {
+    left: calc(var(--bleed-left) - 0.25rem);
+    width: calc(100% - var(--bleed-left) - var(--bleed-right) + 0.5rem);
+  }
 }
 
 .books {

@@ -17,13 +17,23 @@
 .scraps {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   max-width: 34rem;
+
+  // Stacked, each scrap tucks a little under the next so their tilted
+  // corners cross.
+  > .scrap + .scrap {
+    margin-top: -0.75rem;
+  }
 
   @media (min-width: $collage) {
     position: relative;
     display: block;
     max-width: none;
+
+    > .scrap + .scrap {
+      margin-top: 0;
+    }
+
     // Tall enough for the lowest scrap (--y: 50.5) at the smallest type.
     height: 78cqw;
   }
