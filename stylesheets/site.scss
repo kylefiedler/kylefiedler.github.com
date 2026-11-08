@@ -20,6 +20,7 @@ $jitter-slots: {% for jitter in site.data.jitter %}{{ jitter.slot }}{% unless fo
 @import "layout/frame";
 @import "layout/wall";
 @import "components/nav";
+@import "components/icon";
 @import "components/title";
 @import "components/doodle";
 @import "components/journal";
