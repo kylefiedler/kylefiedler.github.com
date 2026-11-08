@@ -115,3 +115,47 @@
       ".    cart  dollar coin  lanyard .";
   }
 }
+
+// Dryer's drawings hang in the air, each drifting on its own clock.
+// dryer-tumble.html moves the drawings themselves, so the bob sits on their
+// SVGs and the two never fight.
+.scatter--dryer {
+  // The drawings' offset parent, which dryer-tumble.html measures them from.
+  position: relative;
+
+  > .doodle svg {
+    animation: doodle-bob var(--bob-time, 7s) ease-in-out var(--bob-delay, 0s) infinite alternate;
+  }
+
+  > .doodle:nth-of-type(2n) {
+    --bob-time: 5.5s;
+  }
+
+  > .doodle:nth-of-type(3n) {
+    --bob-delay: -2.5s;
+  }
+
+  > .doodle:nth-of-type(4n + 1) {
+    --bob-delay: -4s;
+  }
+
+  > .doodle:nth-of-type(5n) {
+    --bob-time: 8.5s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    > .doodle svg {
+      animation: none;
+    }
+  }
+}
+
+@keyframes doodle-bob {
+  from {
+    transform: translateY(-2px) rotate(-0.75deg);
+  }
+
+  to {
+    transform: translateY(2px) rotate(0.75deg);
+  }
+}

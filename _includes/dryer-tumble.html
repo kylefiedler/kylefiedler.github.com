@@ -1,0 +1,241 @@
+{%- comment -%}
+  Turns the Dryer page into the inside of a dryer. A click on the page's
+  .scatter (not on a link) flings every drawing out to the drum's wall, carries
+  them all the same way around it, spinning as they go, and drops each one in a
+  new spot clear of the heading, the list and the other drawings.
+
+  The drum is the window below the nav's top rule on wide screens (keep `wide`
+  in step with $wide) and the on-screen part of .scatter below that rule on
+  narrow ones, fixed when the click lands. Each
+  drawing's position blends from where it was, to the wall, to its new spot,
+  which is what makes it peel off the wall rather than turn a corner.
+
+  Drawings stay in their grid cells and move by `translate`, measured from the
+  cell (`offsetLeft`, so .scatter--dryer is their offset parent). After a
+  tumble their spots are kept as a share of .scatter, so a resize stretches
+  them and any pushed onto the text find a new spot. Reduced motion turns it
+  off.
+{%- endcomment -%}
+<script>
+  (() => {
+    const scatter = document.querySelector(".scatter--dryer");
+    const still = matchMedia("(prefers-reduced-motion: reduce)");
+    const wide = matchMedia("(min-width: 48rem)");
+    const text = [...scatter.querySelectorAll(".scatter__head, .scatter__list")];
+    const masthead = document.querySelector(".masthead");
+    const feel = {
+      duration: 3200, // ms per drawing, start to landing
+      stagger: 70, // ms between drawings leaving
+      outBy: 0.18, // share of the tumble spent reaching the wall
+      dropFrom: 0.72, // share of the tumble when it peels off toward its spot
+      laps: [0.7, 1.1], // how far round the drum each one rides
+      turns: [1.5, 2.5], // spins for a drawing 120px across
+      tilt: 15, // ± degrees it can land off its last angle
+    };
+    const textPad = 16;
+    const edge = 6;
+    const tries = 200;
+    const drawings = [...scatter.querySelectorAll(":scope > .doodle")].map((el) => ({ el, spin: 0, fx: 0, fy: 0, fw: 0, fh: 0 }));
+    let tumbled = false;
+    let tumbling = false;
+
+    const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
+    const rise = (t, from, to) => Math.min(Math.max((t - from) / (to - from), 0), 1);
+    const smooth = (t) => t * t * (3 - 2 * t);
+    const mix = (a, b, t) => a + (b - a) * t;
+    const between = ([low, high]) => low + Math.random() * (high - low);
+
+    const box = (el) => {
+      const rect = el.getBoundingClientRect();
+      const origin = scatter.getBoundingClientRect();
+      return { left: rect.left - origin.left, top: rect.top - origin.top, right: rect.right - origin.left, bottom: rect.bottom - origin.top };
+    };
+    const around = (x, y, w, h) => ({ left: x - w / 2, top: y - h / 2, right: x + w / 2, bottom: y + h / 2 });
+    const overlap = (a, b) =>
+      Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left)) *
+      Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top));
+
+    // Where the pinned nav's top rule ends, from the window's top: the
+    // drum's ceiling, so nothing tumbles out of sight behind the nav.
+    const ceiling = () => {
+      if (!masthead) return 0;
+      const rule = getComputedStyle(masthead, "::after");
+      return masthead.getBoundingClientRect().top + parseFloat(rule.top) + parseFloat(rule.height);
+    };
+
+    // The drum's wall, in .scatter's coordinates.
+    const drum = () => {
+      const origin = scatter.getBoundingClientRect();
+      const { clientWidth, clientHeight } = document.documentElement;
+      const view = { left: -origin.left, top: ceiling() - origin.top, right: clientWidth - origin.left, bottom: clientHeight - origin.top };
+      if (wide.matches) return view;
+      return { left: 0, top: Math.max(view.top, 0), right: scatter.clientWidth, bottom: Math.min(view.bottom, scatter.clientHeight) };
+    };
+
+    // The path a drawing's center can ride: the wall pulled in by `inset`,
+    // measured clockwise from its top-left corner.
+    const track = (wall, inset) => {
+      const left = wall.left + inset;
+      const top = wall.top + inset;
+      const width = Math.max(wall.right - wall.left - inset * 2, 1);
+      const height = Math.max(wall.bottom - wall.top - inset * 2, 1);
+      const lap = 2 * (width + height);
+      const at = (s) => {
+        let d = ((s % lap) + lap) % lap;
+        if (d < width) return { x: left + d, y: top };
+        d -= width;
+        if (d < height) return { x: left + width, y: top + d };
+        d -= height;
+        if (d < width) return { x: left + width - d, y: top + height };
+        return { x: left, y: top + height - (d - width) };
+      };
+      const nearest = ({ x, y }) => {
+        const dx = Math.min(Math.max(x, left), left + width) - left;
+        const dy = Math.min(Math.max(y, top), top + height) - top;
+        const sides = [
+          [dy, dx],
+          [width - dx, width + dy],
+          [height - dy, width + height + (width - dx)],
+          [dx, 2 * width + height + (height - dy)],
+        ];
+        return sides.reduce((best, side) => (side[0] < best[0] ? side : best))[1];
+      };
+      return { lap, at, nearest };
+    };
+
+    const blockedByText = () =>
+      text.map((el) => {
+        const b = box(el);
+        return { left: b.left - textPad, top: b.top - textPad, right: b.right + textPad, bottom: b.bottom + textPad };
+      });
+
+    // Rejection-samples a spot for a w×h footprint clear of `blocked` text
+    // and of `taken`, keeping the least-crowded try when none is clear.
+    const pick = (w, h, blocked, taken) => {
+      let best = null;
+      for (let i = 0; i < tries; i++) {
+        const x = w / 2 + Math.random() * Math.max(scatter.clientWidth - w, 0);
+        const y = h / 2 + Math.random() * Math.max(scatter.clientHeight - h, 0);
+        const rect = around(x, y, w, h);
+        const crowd = blocked.reduce((sum, b) => sum + overlap(rect, b) * 4, 0) + taken.reduce((sum, b) => sum + overlap(rect, b), 0);
+        if (!best || crowd < best.crowd) best = { x, y, rect, crowd };
+        if (crowd === 0) break;
+      }
+      return best;
+    };
+
+    // The box a drawing needs at its landing angle.
+    const footprint = (w, h, spin) => {
+      const angle = (spin * Math.PI) / 180;
+      const cos = Math.abs(Math.cos(angle));
+      const sin = Math.abs(Math.sin(angle));
+      return { fw: w * cos + h * sin, fh: w * sin + h * cos };
+    };
+
+    const home = (el) => ({ x: el.offsetLeft + el.offsetWidth / 2, y: el.offsetTop + el.offsetHeight / 2 });
+
+    const place = (el, origin, x, y, spin) => {
+      el.style.translate = `${(x - origin.x).toFixed(1)}px ${(y - origin.y).toFixed(1)}px`;
+      el.style.rotate = `${spin.toFixed(1)}deg`;
+    };
+
+    // Puts tumbled drawings back at their share of .scatter, re-picking any
+    // that now sit on the text.
+    const refit = () => {
+      const blocked = blockedByText();
+      const taken = [];
+      for (const d of drawings) {
+        let x = d.fx * scatter.clientWidth;
+        let y = d.fy * scatter.clientHeight;
+        let rect = around(x, y, d.fw, d.fh);
+        if (blocked.some((b) => overlap(rect, b) > 0)) {
+          ({ x, y, rect } = pick(d.fw, d.fh, blocked, taken));
+          d.fx = x / scatter.clientWidth;
+          d.fy = y / scatter.clientHeight;
+        }
+        taken.push(rect);
+        place(d.el, home(d.el), x, y, d.spin);
+      }
+    };
+
+    const tumble = () => {
+      tumbling = true;
+      const wall = drum();
+      const plans = drawings.map((d, i) => {
+        const w = d.el.offsetWidth;
+        const h = d.el.offsetHeight;
+        const now = box(d.el);
+        const start = { x: (now.left + now.right) / 2, y: (now.top + now.bottom) / 2 };
+        // Pulled in by half the diagonal, so a spinning drawing's corners, and
+        // the pen strokes past them, stay on screen.
+        const path = track(wall, Math.hypot(w, h) / 2 + edge);
+        // Small things spin more, the way a coin rattles and a shirt rolls.
+        const turns = between(feel.turns) * Math.min(Math.max(120 / Math.max(w, h), 0.6), 2);
+        const spin1 = d.spin + 360 * turns + (Math.random() * 2 - 1) * feel.tilt;
+        return {
+          d,
+          w,
+          h,
+          origin: home(d.el),
+          start,
+          path,
+          s0: path.nearest(start),
+          ride: path.lap * between(feel.laps),
+          spin1,
+          delay: i * feel.stagger,
+        };
+      });
+
+      // Big things find room first.
+      const blocked = blockedByText();
+      const taken = [];
+      for (const p of [...plans].sort((a, b) => b.w * b.h - a.w * a.h)) {
+        const { fw, fh } = footprint(p.w, p.h, p.spin1);
+        p.land = pick(fw, fh, blocked, taken);
+        taken.push(p.land.rect);
+        Object.assign(p.d, { fw, fh });
+      }
+
+      const begin = performance.now();
+      const frame = (now) => {
+        let done = true;
+        for (const p of plans) {
+          const t = Math.min(Math.max((now - begin - p.delay) / feel.duration, 0), 1);
+          if (t < 1) done = false;
+          const onWall = p.path.at(p.s0 + p.ride * ease(t));
+          const out = smooth(rise(t, 0, feel.outBy));
+          const back = smooth(rise(t, feel.dropFrom, 1));
+          const x = mix(mix(p.start.x, onWall.x, out), p.land.x, back);
+          const y = mix(mix(p.start.y, onWall.y, out), p.land.y, back);
+          place(p.d.el, p.origin, x, y, mix(p.d.spin, p.spin1, ease(t)));
+        }
+        if (!done) return requestAnimationFrame(frame);
+        for (const p of plans) {
+          Object.assign(p.d, { spin: p.spin1 % 360, fx: p.land.x / scatter.clientWidth, fy: p.land.y / scatter.clientHeight });
+        }
+        tumbled = true;
+        tumbling = false;
+        // Lands where the tumble aimed, or, if the window changed size during
+        // it, where those spots fall now.
+        refit();
+      };
+      requestAnimationFrame(frame);
+    };
+
+    scatter.addEventListener("click", (event) => {
+      if (tumbling || still.matches || event.target.closest("a")) return;
+      if (!getSelection().isCollapsed) return;
+      tumble();
+    });
+
+    let queued = false;
+    addEventListener("resize", () => {
+      if (queued || tumbling || !tumbled) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        queued = false;
+        refit();
+      });
+    });
+  })();
+</script>
