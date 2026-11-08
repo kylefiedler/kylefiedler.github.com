@@ -7,20 +7,21 @@
 
   @media (prefers-reduced-motion: no-preference) {
     animation:
-      eye-roll 40s infinite cubic-bezier(0.14, 0.9, 0.1, 1),
-      eye-blink 7s infinite;
+      eye-roll 60s infinite cubic-bezier(0.14, 0.9, 0.1, 1),
+      eye-blink 17s infinite;
   }
 }
 
+// Each glance is a quick move and a short hold, then a long rest at center.
 @keyframes eye-roll {
-  0%, 70%, 100% { translate: 0 0; }
-  10%, 15%      { translate: 2px 0; }
-  25%, 30%      { translate: -2px -2px; }
-  40%, 45%      { translate: 4px -2px; }
-  55%, 65%      { translate: -3px 1px; }
+  0%, 12%, 22%, 36%, 44%, 60%, 68%, 84%, 92%, 100% { translate: 0 0; }
+  13%, 21% { translate: 2px 0; }
+  37%, 43% { translate: -2px -2px; }
+  61%, 67% { translate: 4px -2px; }
+  85%, 91% { translate: -3px 1px; }
 }
 
 @keyframes eye-blink {
-  0%, 95%, 100% { scale: 1 1; }
-  97%           { scale: 1 0.1; }
+  0%, 98%, 100% { scale: 1 1; }
+  99%           { scale: 1 0.1; }
 }
