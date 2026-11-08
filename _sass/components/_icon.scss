@@ -1,0 +1,26 @@
+// The glasses logo's pupils (`.eye` in _includes/icon.svg) wander and blink.
+// They use separate `translate` and `scale` properties so the two loops never
+// overwrite each other's transform.
+.eye {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation:
+      eye-roll 40s infinite cubic-bezier(0.14, 0.9, 0.1, 1),
+      eye-blink 7s infinite;
+  }
+}
+
+@keyframes eye-roll {
+  0%, 70%, 100% { translate: 0 0; }
+  10%, 15%      { translate: 2px 0; }
+  25%, 30%      { translate: -2px -2px; }
+  40%, 45%      { translate: 4px -2px; }
+  55%, 65%      { translate: -3px 1px; }
+}
+
+@keyframes eye-blink {
+  0%, 95%, 100% { scale: 1 1; }
+  97%           { scale: 1 0.1; }
+}
