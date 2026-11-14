@@ -1,0 +1,60 @@
+# Stickers placed by _includes/sticker.html. Positions and sizes are in the
+# sticker's own units: every sticker is 100 wide, and (0, 0) is the body's
+# top-left corner.
+#
+#   name     include key
+#   phrase   what screen readers hear, in full
+#   shape    a file in _includes/stickers/shapes/
+#   height   default 100; rings are always 100
+#   color    paper, rose, rule or ink (see _sticker.scss); cream if left out
+#   tilt     degrees; width is rem in the flow
+#   keyline  draw the shape's thin inner outline
+#   rules    y positions of lines drawn across the sticker
+#   text     text, size, font (hand, the default, or mono), width (squeezed
+#            or stretched to exactly this), and either arc (a ring's `top`)
+#            or y with optional x (default: centered) and rotate
+#   art      drawings: file (under _includes/), x, y, w, h (default: w)
+
+- name: fishpond
+  phrase: Oh, the fishpond is fine
+  shape: tombstone
+  height: 150
+  tilt: -3
+  width: 9
+  keyline: true
+  rules: [56, 88]
+  text:
+    - { text: "Oh, the", y: 44, size: 19, width: 48 }
+    - { text: "fishpond", y: 79, size: 22, width: 72 }
+    - { text: "is", x: 17, y: 112, size: 14 }
+    - { text: "FINE", x: 57, y: 139, size: 50, width: 64 }
+
+- name: tile
+  phrase: Just polish the tile
+  shape: square
+  height: 92
+  color: paper
+  tilt: -7
+  width: 10
+  keyline: true
+  text:
+    - { text: "just", y: 27, size: 17, width: 30 }
+    - { text: "Polish", y: 56, size: 33, width: 68 }
+    - { text: "the TILE", y: 75, size: 17, width: 46 }
+  art:
+    - { file: doodles/star.svg, x: 10, y: 9, w: 11 }
+    - { file: doodles/star.svg, x: 78, y: 11, w: 10 }
+    - { file: stickers/art/tiles.svg, x: 17, y: 81, w: 66, h: 6 }
+
+- name: eat
+  phrase: When you eat, eat
+  shape: ring
+  color: rose
+  tilt: 4
+  width: 9
+  keyline: true
+  text:
+    - { arc: top, text: "WHEN YOU EAT,", size: 11.5, width: 90, font: mono }
+    - { text: "eat", y: 60, size: 34, width: 40 }
+  art:
+    - { file: doodles/star.svg, x: 45, y: 80.5, w: 10 }
