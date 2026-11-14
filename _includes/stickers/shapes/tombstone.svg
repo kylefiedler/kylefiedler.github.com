@@ -1,0 +1,8 @@
+{%- comment -%}
+  An arched top on square shoulders: a half circle the full 100 units across
+  over a rectangle running down to `h`, which should be at least 50.
+{%- endcomment -%}
+{%- assign shape_k = include.inset -%}
+{%- assign shape_ri = 50 | minus: shape_k -%}
+<path id="{{ include.id }}-body" d="M 0 {{ include.h }} V 50 A 50 50 0 0 1 100 50 V {{ include.h }} Z"/>
+<path id="{{ include.id }}-keyline" d="M {{ shape_k }} {{ include.h | minus: shape_k }} V 50 A {{ shape_ri }} {{ shape_ri }} 0 0 1 {{ 100 | minus: shape_k }} 50 V {{ include.h | minus: shape_k }} Z"/>

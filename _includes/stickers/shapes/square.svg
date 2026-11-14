@@ -1,0 +1,7 @@
+{%- comment -%}
+  A rectangle 100 units wide and `h` tall with barely softened corners; the
+  entry's tilt does the rest.
+{%- endcomment -%}
+{%- assign shape_k = include.inset -%}
+<rect id="{{ include.id }}-body" width="100" height="{{ include.h }}" rx="2"/>
+<rect id="{{ include.id }}-keyline" x="{{ shape_k }}" y="{{ shape_k }}" width="{{ 100 | minus: shape_k | minus: shape_k }}" height="{{ include.h | minus: shape_k | minus: shape_k }}" rx="1"/>

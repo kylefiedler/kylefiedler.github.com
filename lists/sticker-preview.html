@@ -1,0 +1,53 @@
+---
+layout: default
+crumb: Sticker preview
+paper: "#E3CCBA"
+rule: "#CD9494"
+sitemap: false
+---
+{%- comment -%}
+  Temporary: the look-gate stickers for KYL-126, on Things to Remember's
+  paper and over a wall photo. Deleted once the Things to Remember sheet
+  ships (KYL-127).
+{%- endcomment -%}
+
+<style>
+  .sticker-preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: none;
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sticker-preview__photo {
+    position: relative;
+    max-width: 26rem;
+  }
+
+  .sticker-preview__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<header class="header--primary">
+  <h1>Sticker preview</h1>
+</header>
+
+<ul class="sticker-preview">
+  <li>{% include sticker.html name="fishpond" %}</li>
+  <li>{% include sticker.html name="tile" %}</li>
+  <li>{% include sticker.html name="eat" %}</li>
+  <li>{% include sticker.html name="eat" width="6rem" rotate="-10" %}</li>
+</ul>
+
+<div class="sticker-preview__photo">
+  <img src="/images/wall/index/img-1219.jpg" alt="" width="800" height="600">
+  {% include sticker.html name="eat" mode="decoration" top="8%" right="8%" width="7rem" rotate="9" %}
+  {% include sticker.html name="tile" mode="decoration" bottom="10%" left="10%" width="7.5rem" %}
+</div>

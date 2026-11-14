@@ -1,0 +1,82 @@
+// Die-cut stickers placed by _includes/sticker.html. Each one is an SVG drawn
+// in its own units, so everything inside it scales with --sticker-width.
+
+.sticker {
+  --sticker-fill: color-mix(in srgb, var(--paper) 22%, white);
+  --sticker-ink: var(--ink);
+
+  display: inline-block;
+  width: var(--sticker-width);
+  max-width: 100%;
+  color: var(--sticker-ink);
+  transform: rotate(var(--sticker-tilt));
+  filter: drop-shadow(0 0.125rem 0.1875rem rgba(27, 27, 27, 0.22)) drop-shadow(0 0.0625rem 0.0625rem rgba(27, 27, 27, 0.16));
+}
+
+// The palette is mixed from the page's own colors, so stickers belong to the
+// paper they're stuck on.
+.sticker--paper {
+  --sticker-fill: color-mix(in srgb, var(--paper) 72%, white);
+}
+
+.sticker--rose {
+  --sticker-fill: color-mix(in srgb, var(--rule) 70%, white);
+}
+
+.sticker--rule {
+  --sticker-fill: var(--rule);
+}
+
+.sticker--ink {
+  --sticker-fill: var(--ink);
+  --sticker-ink: color-mix(in srgb, var(--paper) 35%, white);
+}
+
+.sticker__drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+// The white border is the body stroked (sticker.html sets the width), half
+// of it outside the body, drawn under the colored body.
+.sticker__cut {
+  fill: white;
+  stroke: white;
+  stroke-linejoin: round;
+}
+
+.sticker__body {
+  fill: var(--sticker-fill);
+}
+
+.sticker__line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+}
+
+.sticker__text {
+  fill: currentColor;
+  text-anchor: middle;
+}
+
+.sticker__text--hand {
+  font-family: var(--font-hand);
+  font-weight: 500;
+}
+
+.sticker__text--mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking);
+}
+
+.sticker__art {
+  stroke-width: 1.25;
+}
+
+.sticker--decoration {
+  position: absolute;
+  pointer-events: none;
+}

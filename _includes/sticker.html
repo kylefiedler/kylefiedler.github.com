@@ -1,0 +1,78 @@
+{%- comment -%}
+  A die-cut sticker from _data/stickers.yml, drawn as one SVG so its words,
+  ring text and drawings all scale with the outline.
+  {% include sticker.html name="eat" %}
+  {% include sticker.html name="eat" mode="decoration" top="2rem" left="40%" rotate="8" width="7rem" %}
+
+  `item` (the default) sits in the flow and carries the phrase as hidden text
+  for screen readers; the drawing itself is hidden from them. `decoration` is
+  placed inside the nearest positioned ancestor, like doodle.html, and is
+  hidden from screen readers and the pointer. `width` (a CSS length)
+  overrides the entry's width; `rotate` overrides its tilt.
+
+  Every sticker is 100 units wide and `height` tall (100 by default). Its
+  shape, from _includes/stickers/shapes/, defines `-body`, which is filled,
+  cut out in white and clips everything inside, and `-keyline`, the thin
+  inner outline. A ring also defines `-top`, the arc its ring text follows.
+  An unknown name renders nothing.
+{%- endcomment -%}
+{%- assign sticker = site.data.stickers | where: "name", include.name | first -%}
+{%- if sticker -%}
+{%- capture sticker_id %}sticker-{% increment sticker_seq %}{% endcapture -%}
+{%- assign sticker_decoration = false -%}
+{%- if include.mode == "decoration" %}{% assign sticker_decoration = true %}{% endif -%}
+{%- assign sticker_h = sticker.height | default: 100 -%}
+{%- comment -%}
+  The white cut is the body stroked twice `sticker_pad` wide, so half of it
+  falls outside the body; the viewBox leaves that much room around it.
+  `sticker_inset` is how far inside the edge the keyline runs.
+{%- endcomment -%}
+{%- assign sticker_pad = 6 -%}
+{%- assign sticker_inset = 4 -%}
+{%- capture sticker_style -%}
+  --sticker-width: {% if include.width %}{{ include.width }}{% else %}{{ sticker.width }}rem{% endif %};
+  --sticker-tilt: {{ include.rotate | default: sticker.tilt | default: 0 }}deg;
+  {%- if sticker_decoration -%}
+    {%- if include.top %} top: {{ include.top }};{% endif -%}
+    {%- if include.right %} right: {{ include.right }};{% endif -%}
+    {%- if include.bottom %} bottom: {{ include.bottom }};{% endif -%}
+    {%- if include.left %} left: {{ include.left }};{% endif -%}
+  {%- endif -%}
+{%- endcapture -%}
+<span class="sticker sticker--{% if sticker_decoration %}decoration{% else %}item{% endif %}{% if sticker.color %} sticker--{{ sticker.color }}{% endif %}" style="{{ sticker_style | strip_newlines }}"{% if sticker_decoration %} aria-hidden="true"{% endif %}>
+  <svg class="sticker__drawing" viewBox="-{{ sticker_pad }} -{{ sticker_pad }} {{ sticker_pad | times: 2 | plus: 100 }} {{ sticker_pad | times: 2 | plus: sticker_h }}" aria-hidden="true">
+    <defs>
+      {%- include stickers/shapes/{{ sticker.shape }}.svg id=sticker_id h=sticker_h inset=sticker_inset %}
+      <clipPath id="{{ sticker_id }}-clip"><use href="#{{ sticker_id }}-body"/></clipPath>
+    </defs>
+    <use class="sticker__cut" href="#{{ sticker_id }}-body" stroke-width="{{ sticker_pad | times: 2 }}"/>
+    <use class="sticker__body" href="#{{ sticker_id }}-body"/>
+    <g clip-path="url(#{{ sticker_id }}-clip)">
+      {%- for y in sticker.rules %}
+      <line class="sticker__line" x1="0" y1="{{ y }}" x2="100" y2="{{ y }}"/>
+      {%- endfor %}
+      {%- for line in sticker.text %}
+      {%- assign sticker_fit = "" -%}
+      {%- if line.width %}{% capture sticker_fit %} textLength="{{ line.width }}" lengthAdjust="spacingAndGlyphs"{% endcapture %}{% endif -%}
+      {%- if line.arc %}
+      <text class="sticker__text sticker__text--{{ line.font | default: 'hand' }}" font-size="{{ line.size }}"><textPath href="#{{ sticker_id }}-{{ line.arc }}" startOffset="50%"{{ sticker_fit }}>{{ line.text | escape }}</textPath></text>
+      {%- else %}
+      {%- assign sticker_x = line.x | default: 50 %}
+      <text class="sticker__text sticker__text--{{ line.font | default: 'hand' }}" x="{{ sticker_x }}" y="{{ line.y }}" font-size="{{ line.size }}"{{ sticker_fit }}{% if line.rotate %} transform="rotate({{ line.rotate }} {{ sticker_x }} {{ line.y }})"{% endif %}>{{ line.text | escape }}</text>
+      {%- endif %}
+      {%- endfor %}
+      {%- for art in sticker.art %}
+      <svg class="sticker__art" x="{{ art.x }}" y="{{ art.y }}" width="{{ art.w }}" height="{{ art.h | default: art.w }}" overflow="visible">{% include {{ art.file }} %}</svg>
+      {%- endfor %}
+    </g>
+    {%- if sticker.keyline %}
+    <use class="sticker__line" href="#{{ sticker_id }}-keyline"/>
+    {%- endif %}
+  </svg>
+  {%- unless sticker_decoration %}
+  <span class="visually-hidden">{{ sticker.phrase }}</span>
+  {%- endunless %}
+</span>
+{%- else -%}
+<!-- sticker "{{ include.name }}" isn't in _data/stickers.yml -->
+{%- endif -%}

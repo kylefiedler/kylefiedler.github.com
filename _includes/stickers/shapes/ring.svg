@@ -1,0 +1,10 @@
+{%- comment -%}
+  A circle the full 100 units across. `-keyline` adds a second circle inside
+  the band, and ring text follows `-top`, reading over the top of the band.
+{%- endcomment -%}
+<circle id="{{ include.id }}-body" cx="50" cy="50" r="50"/>
+<g id="{{ include.id }}-keyline">
+  <circle cx="50" cy="50" r="{{ 50 | minus: include.inset }}"/>
+  <circle cx="50" cy="50" r="28"/>
+</g>
+<path id="{{ include.id }}-top" d="M 17 50 A 33 33 0 0 1 83 50"/>
